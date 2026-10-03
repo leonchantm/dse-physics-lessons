@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 10: Conservation of Energy and Power | HKDSE Physics</title>
+<style>
+  :root{--bg:#fffaf0;--card:#fff;--ink:#111827;--muted:#374151;--blue:#1d4ed8;--blue-l:#dbeafe;--green:#166534;--green-l:#dcfce7;
+    --red:#b91c1c;--red-l:#fee2e2;--orange:#c2410c;--orange-l:#ffedd5;--purple:#6d28d9;--purple-l:#ede9fe;--yellow-l:#fef9c3;--focus:#f59e0b}
+  *{box-sizing:border-box} [hidden]{display:none!important}
+  html{font-size:20px}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Arial,"Microsoft JhengHei","PingFang TC",sans-serif;line-height:1.55}
+  a{color:var(--blue);font-weight:700}
+  header{background:var(--blue);color:#fff;padding:.6rem 1rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:space-between}
+  header h1{font-size:1.15rem;margin:0} header .zh{color:#fde68a}
+  .toggle{display:flex;align-items:center;gap:.4rem;font-size:.9rem;cursor:pointer}
+  .toggle input{width:1.3rem;height:1.3rem}
+  .progress-wrap{background:#fff;padding:.5rem 1rem;border-bottom:3px solid var(--blue-l)}
+  .progress-label{font-size:.85rem;font-weight:600;color:var(--muted);display:flex;justify-content:space-between;gap:1rem}
+  .progress{height:18px;background:#e5e7eb;border-radius:9px;overflow:hidden;margin-top:.25rem}
+  .progress>div{height:100%;background:linear-gradient(90deg,#22c55e,#16a34a);width:0;transition:width .4s}
+  main{max-width:1000px;margin:0 auto;padding:1rem}
+  .step{display:none;background:var(--card);border-radius:18px;padding:1.2rem 1.4rem;box-shadow:0 4px 14px rgba(0,0,0,.08);border:2px solid #e5e7eb}
+  .step.active{display:block;animation:fade .35s}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .step h2{font-size:1.5rem;margin:.1rem 0 .7rem;color:var(--blue);outline:none}
+  .step h3{font-size:1.15rem;margin:1rem 0 .4rem}
+  .tag{display:inline-block;font-size:.75rem;font-weight:700;padding:.15rem .6rem;border-radius:999px;background:var(--blue-l);color:var(--blue);margin-bottom:.3rem}
+  .tag.quiz{background:var(--orange-l);color:var(--orange)} .tag.sim{background:var(--purple-l);color:var(--purple)}
+  p{margin:.4rem 0} ul.simple{padding-left:1.3rem;margin:.3rem 0} ul.simple li{margin:.25rem 0}
+  .zh{color:#7c2d12;font-weight:500} body.no-zh .zh{display:none}
+  .box{border-radius:12px;padding:.7rem 1rem;margin:.7rem 0;border-left:8px solid}
+  .box.key{background:var(--blue-l);border-color:var(--blue)} .box.eg{background:var(--green-l);border-color:var(--green)}
+  .box.warn{background:var(--yellow-l);border-color:#ca8a04} .box.formula{background:var(--purple-l);border-color:var(--purple);font-size:1.1rem}
+  .box.danger{background:var(--red-l);border-color:var(--red)}
+  .box-title{font-weight:800;display:block;margin-bottom:.2rem}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:start}
+  .visual{background:#f8fafc;border:2px dashed #cbd5e1;border-radius:12px;padding:.5rem;text-align:center}
+  .visual svg{width:100%;height:auto;max-height:360px}
+  svg.fig{width:100%;max-width:460px;height:auto;display:block;margin:.4rem auto;border:2px solid #cbd5e1;border-radius:10px}
+  svg.tape{max-width:100%;border:none}
+  svg.mini{width:100%;max-width:170px;height:auto;display:block;margin:0 auto}
+  .caption{font-size:.85rem;color:var(--muted)}
+  table.t{border-collapse:collapse;width:100%;margin:.5rem 0;font-size:.95rem}
+  table.t th,table.t td{border:2px solid #cbd5e1;padding:.4rem .6rem;text-align:left;vertical-align:top}
+  table.t th{background:var(--blue-l)}
+  table.shapes td,table.shapes th{text-align:center;vertical-align:middle;padding:.3rem}
+  .table-scroll{overflow-x:auto}
+  .eq{font-family:"Cambria Math","Times New Roman",serif;font-size:1.2em;white-space:nowrap}
+  .worked ol{margin:.3rem 0;padding-left:1.4rem} .worked li{margin:.35rem 0}
+  button,.btn{font:inherit;font-size:1rem;font-weight:700;border-radius:12px;border:3px solid transparent;padding:.55rem 1.1rem;cursor:pointer;min-height:48px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
+  button:focus-visible,input:focus-visible,select:focus-visible,h2:focus-visible,a:focus-visible,summary:focus-visible,.rline:focus-visible{outline:4px solid var(--focus);outline-offset:3px}
+  .opt:focus-within{outline:4px solid var(--focus);outline-offset:3px}
+  .btn-primary{background:var(--blue);color:#fff} .btn-primary:hover{background:#1e40af}
+  .btn-secondary{background:#fff;color:var(--blue);border-color:var(--blue)}
+  .btn-hint{background:#fef3c7;color:#78350f;border-color:#f59e0b}
+  .btn-check{background:var(--green);color:#fff} .btn-retry{background:#fff;color:var(--red);border-color:var(--red)}
+  button:disabled{opacity:.45;cursor:not-allowed}
+  nav.controls{max-width:1000px;margin:0 auto;padding:0 1rem 1rem;display:flex;justify-content:space-between;gap:1rem}
+  nav.controls button{flex:1;max-width:260px;font-size:1.1rem}
+  .kbd-tip{text-align:center;font-size:.8rem;color:var(--muted);padding-bottom:1rem}
+  .q{border:3px solid #e5e7eb;border-radius:14px;padding:.8rem 1rem;margin:1rem 0;background:#fff}
+  .q.correct{border-color:#22c55e;background:#f0fdf4}
+  .q-title{font-weight:700;margin-bottom:.5rem}
+  .q-num{display:inline-block;background:var(--orange);color:#fff;border-radius:8px;padding:0 .5rem;margin-right:.4rem;font-size:.9rem}
+  .opts{display:grid;gap:.45rem} .opts.figopts{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+  .opt{display:flex;align-items:center;gap:.6rem;border:2px solid #cbd5e1;border-radius:10px;padding:.5rem .7rem;cursor:pointer;background:#fff}
+  .opt:hover{background:#f1f5f9} .opt input{width:1.3rem;height:1.3rem;flex:none}
+  .opt.right{border-color:#16a34a;background:var(--green-l)} .opt.wrong{border-color:#dc2626;background:var(--red-l)}
+  .num-row{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+  .num-row input{font:inherit;font-size:1.1rem;width:9rem;padding:.4rem .6rem;border:3px solid #94a3b8;border-radius:10px}
+  .unit{font-weight:700}
+  .q-actions{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.7rem}
+  .feedback{margin-top:.6rem;font-weight:700;border-radius:10px}
+  .feedback.ok{background:var(--green-l);color:var(--green);padding:.5rem .8rem} .feedback.bad{background:var(--red-l);color:var(--red);padding:.5rem .8rem}
+  .hint{background:#fffbeb;border:2px solid #fcd34d;border-radius:10px;padding:.45rem .8rem;margin:.35rem 0} .hint b{color:#92400e}
+  .score-pill{background:#fff;color:var(--blue);border-radius:999px;padding:.2rem .8rem;font-weight:800;font-size:.9rem}
+  .arrow-task{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
+  .arrow-task svg{width:100%;max-width:330px;height:auto;border:2px solid #cbd5e1;border-radius:10px;background:#fff;cursor:crosshair;touch-action:manipulation}
+  .arrow-btns{display:grid;grid-template-columns:repeat(3,auto);gap:.35rem}
+  .arrow-btns button{padding:.3rem .6rem;min-width:48px}
+  .arrow-status{font-weight:700;margin-top:.4rem}
+  .reveal .rline{background:#fff;border:2px solid #c4b5fd;border-radius:10px;padding:.5rem .8rem;margin:.45rem 0}
+  .reveal .rline b.n{display:inline-block;background:var(--purple);color:#fff;border-radius:6px;padding:0 .45rem;margin-right:.4rem}
+  .sim-modes{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.6rem}
+  .sim-panel{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+  .slider{background:#f8fafc;border:2px solid #cbd5e1;border-radius:12px;padding:.5rem .8rem}
+  .slider label{font-weight:700;display:flex;justify-content:space-between;gap:.5rem}
+  .slider input[type=range]{width:100%;height:2rem;accent-color:var(--blue)}
+  .sim-buttons{display:flex;flex-wrap:wrap;gap:.5rem;margin:.7rem 0;align-items:center}
+  .sim-buttons select{font:inherit;font-size:1rem;padding:.45rem;border-radius:10px;border:3px solid #94a3b8;min-height:48px}
+  canvas{width:100%;display:block;background:#fff;border:2px solid #cbd5e1;border-radius:12px}
+  .readout{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin:.7rem 0}
+  .ro{background:var(--blue-l);border-radius:10px;padding:.4rem .6rem;text-align:center}
+  .ro .lab{font-size:.75rem;font-weight:700;color:var(--muted)} .ro .val{font-size:1.2rem;font-weight:800;font-variant-numeric:tabular-nums}
+  .ro.v{background:#dcfce7} .ro.d{background:#ffedd5} .ro.a{background:var(--purple-l)} .ro.av{background:#fef9c3}
+  .graphs3{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}
+  .graphs3 h3{font-size:.95rem;margin:.2rem 0}
+  .sim-msg{font-weight:700;color:var(--purple);min-height:1.5em}
+  .panel{background:var(--purple-l);border-radius:10px;padding:.5rem .8rem;font-size:.95rem;margin:.6rem 0}
+  .panel.measure{background:#fef9c3}
+  .panel .warnline{color:var(--red);font-weight:800}
+  .stars{font-size:2.2rem;letter-spacing:.3rem}
+  .welcome-hero{text-align:center} .welcome-hero .big{font-size:3.2rem;line-height:1}
+  .lesson-link{display:flex;flex-wrap:wrap;align-items:center;gap:.8rem;background:#f0f9ff;border:3px solid #7dd3fc;border-radius:14px;padding:.7rem 1rem;margin:.8rem 0}
+  details.teacher{max-width:1000px;margin:0 auto 1.5rem;padding:0 1rem}
+  details.teacher>summary{font-weight:800;cursor:pointer;background:#fff;border:3px solid #94a3b8;border-radius:12px;padding:.6rem 1rem;min-height:48px}
+  details.teacher .tn-body{background:#fff;border:2px solid #cbd5e1;border-radius:12px;padding:.8rem 1rem;margin-top:.5rem;font-size:.85rem}
+  .home-link{color:#fff;font-size:.9rem;text-decoration:underline}
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  @media (max-width:760px){html{font-size:18px}.grid2,.sim-panel,.graphs3{grid-template-columns:1fr}.readout{grid-template-columns:repeat(2,1fr)}main{padding:.5rem}.step{padding:1rem}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<a href="#main" class="sr-only">Skip to content</a>
+<header>
+  <h1>🎢 Lesson 10: Conservation of Energy &amp; Power <span class="zh">(能量守恆和功率)</span></h1>
+  <div style="display:flex;gap:.8rem;align-items:center;flex-wrap:wrap">
+    <a href="index.html" class="home-link">🏠 All lessons</a>
+    <span class="score-pill" id="scorePill" aria-live="polite">⭐ 0 / 0</span>
+    <label class="toggle"><input type="checkbox" id="zhToggle" checked> Show 中文</label>
+  </div>
+</header>
+<div class="progress-wrap">
+  <div class="progress-label"><span id="stepLabel"></span><span id="stepName"></span></div>
+  <div class="progress" role="progressbar" aria-label="Lesson progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar"><div id="progressFill"></div></div>
+</div>
+<main id="main">
+<section class="step" data-id="welcome" data-name="Welcome">
+<div class="welcome-hero">
+  <div class="big" aria-hidden="true">🎢 🔋 💡</div>
+  <h2 tabindex="-1">Lesson 10: Conservation of Energy &amp; Power <span class="zh">(能量守恆和功率)</span></h2>
+  <p>On a roller coaster at Ocean Park, P.E. turns into K.E. and back again. Where does the energy go, and how fast can a machine transfer it?</p>
+</div>
+<table class="t" aria-label="Key words in this lesson">
+  <tr><th>Key word</th><th>Short meaning</th></tr>
+  <tr><td>law of conservation of energy <span class="zh">(能量守恆定律)</span></td><td>Energy cannot be created or destroyed.</td></tr>
+  <tr><td>mechanical energy <span class="zh">(機械能)</span></td><td>P.E. + K.E.</td></tr>
+  <tr><td>energy loss <span class="zh">(能量損失)</span></td><td>Mechanical energy changed to internal energy (heat) and sound, e.g. by friction.</td></tr>
+  <tr><td>power <span class="zh">(功率)</span>, P</td><td>Rate of energy transfer. Unit: watt (W) = J s⁻¹.</td></tr>
+</table>
+<div class="lesson-link">⬅️ Previous: <a href="lesson9-work-pe-ke.html">Lesson 9: Work, Potential Energy and Kinetic Energy</a> &nbsp;·&nbsp; ➡️ Next: <a href="lesson11-momentum-impulse.html">Lesson 11: Momentum, Impulse and Force</a> &nbsp;·&nbsp; 🏠 <a href="index.html">All lessons</a></div>
+</section>
+<section class="step" data-id="law" data-name="Conservation of Energy">
+<span class="tag">Idea 1</span>
+<h2 tabindex="-1">The law of conservation of energy</h2>
+<div class="box key"><span class="box-title">Law of conservation of energy ⭐</span>Energy can neither be created nor destroyed. It can only be <b>converted from one form to another</b> (or transferred). The <b>total energy</b> of a closed system stays constant.</div>
+<div class="grid2">
+  <div>
+    <p>A <b>closed system</b> is one where no energy enters or leaves. Examples of energy changes:</p>
+    <ul class="simple">
+      <li>💡 Lamp: electrical → light + internal energy</li>
+      <li>🏃 Runner: chemical → K.E. + internal energy</li>
+      <li>🎢 Roller coaster: P.E. ⇄ K.E. (+ internal energy and sound)</li>
+      <li>🪀 Mass bouncing on a spring: K.E. ⇄ P.E. ⇄ elastic energy in the spring</li>
+    </ul>
+  </div>
+  <div class="box formula"><span class="box-title">Mechanical energy</span>Mechanical energy = P.E. + K.E.<br>If <b>no energy is lost</b> (no friction or air resistance):<br><b>P.E. + K.E. = constant</b><br>loss in P.E. = gain in K.E.<br><b>mgh = ½mv²</b> (falling from rest)</div>
+</div>
+</section>
+<section class="step" data-id="convert" data-name="P.E. ⇄ K.E.">
+<span class="tag">Idea 2</span>
+<h2 tabindex="-1">Inter-conversion of P.E. and K.E.</h2>
+<div class="grid2">
+  <div class="visual">
+    <svg viewBox="0 0 320 210" role="img" aria-label="A roller coaster track: at the top all P.E., at the bottom all K.E., halfway half and half.">
+      <rect width="320" height="210" fill="#fff"/>
+      <path d="M10 30 C 80 30, 100 190, 160 190 S 250 90, 310 90" fill="none" stroke="#475569" stroke-width="5"/>
+      <line x1="0" y1="194" x2="320" y2="194" stroke="#111" stroke-width="2"/>
+      <circle cx="20" cy="22" r="9" fill="#2563eb"/><circle cx="160" cy="182" r="9" fill="#2563eb"/><circle cx="92" cy="110" r="9" fill="#2563eb"/>
+      <g font-size="11" font-weight="700"><rect x="30" y="10" width="40" height="10" fill="#f59e0b"/><text x="74" y="19">P.E.</text>
+      <rect x="100" y="98" width="20" height="10" fill="#f59e0b"/><rect x="120" y="98" width="20" height="10" fill="#22c55e"/><text x="143" y="107">half / half</text>
+      <rect x="140" y="140" width="40" height="10" fill="#22c55e"/><text x="184" y="149">K.E.</text></g>
+    </svg>
+    <div class="caption">No energy loss: total mechanical energy stays the same at every point.</div>
+  </div>
+  <div>
+    <div class="box formula"><span class="box-title">Speed after falling a height h (from rest, no loss)</span>mgh = ½mv² ⇒ <b>v = √(2gh)</b><br>The mass cancels: heavy and light objects reach the <b>same speed</b>.</div>
+    <div class="box eg worked"><span class="box-title">✏️ Ocean Park roller coaster (g = 9.81 m s⁻²)</span>A car starts from rest at the top and drops 40 m. Ignoring friction:<br>v = √(2 × 9.81 × 40) = <b>28.0 m s⁻¹</b> at the bottom.<br>Later it climbs a 25 m hump. Speed at the top of the hump: ½v² = 9.81 × (40 − 25) → v = <b>17.2 m s⁻¹</b>.</div>
+  </div>
+</div>
+<div class="box key"><span class="box-title">Why conservation laws are powerful</span>On a curved track the forces keep changing direction, so using Newton’s Second Law (F = ma) step by step would be very hard. With energy we only need the <b>heights</b>, not the shape of the track. The same idea works for a ball-bearing rolling down an inclined plane or a swinging pendulum.</div>
+</section>
+<section class="step" data-id="loss" data-name="Energy Loss">
+<span class="tag">Idea 3</span>
+<h2 tabindex="-1">Considering energy loss</h2>
+<p>In real life there is <b>friction</b> and <b>air resistance</b>. Mechanical energy is not conserved: some becomes internal energy (heat) and sound. The <b>total</b> energy is still conserved!</p>
+<div class="box formula"><span class="box-title">With energy loss</span>initial mechanical energy = final mechanical energy + energy lost<br>energy lost = <b>work done against friction</b> = f × s</div>
+<div class="box eg worked"><span class="box-title">✏️ A slide in a playground (g = 9.81 m s⁻²)</span>A 50 kg child starts from rest at the top of a slide 3.0 m high and 5.0 m long. Her speed at the bottom is 6.0 m s⁻¹.
+<ol><li>Loss in P.E. = mgh = 50 × 9.81 × 3.0 = 1471.5 J</li>
+<li>Gain in K.E. = ½ × 50 × 6.0² = 900 J</li>
+<li>Energy lost = 1471.5 − 900 = <b>571.5 J</b> (≈ 572 J)</li>
+<li>Average friction = work done against friction ÷ distance = 571.5 ÷ 5.0 = <b>114 N</b></li></ol></div>
+<div class="box warn"><span class="box-title">Common mistakes ⚠️</span>Saying “energy is lost so it disappears”. It is <b>not destroyed</b>: it becomes internal energy of the slide, the child and the air. Also: friction acts over the <b>length</b> of the slide (5.0 m), not its height.</div>
+<p>🧪 <b>Experiment idea:</b> roll a ball-bearing down an inclined plane and measure its speed at the bottom with a light gate. Compare ½mv² with mgh to find the energy lost.</p>
+</section>
+<section class="step" data-id="p1" data-name="Practice: Conservation">
+<span class="tag quiz">Practice 1</span>
+<h2 tabindex="-1">Practice: conservation of energy</h2>
+<div class="quiz" data-quiz="p1"></div>
+</section>
+<section class="step" data-id="sim" data-name="Simulation">
+<span class="tag sim">Try it!</span>
+<h2 tabindex="-1">Simulation: energy on a roller coaster</h2>
+<p>Release the car from rest at a chosen height on the left. The track has a 25 m hump. Watch the energy bars. Turn on friction to see energy loss.</p>
+<div class="sim-panel">
+  <div class="slider"><label for="hSl"><span>Release height H <span class="zh">(釋放高度)</span></span><span id="hSlVal"></span></label>
+    <input type="range" id="hSl" min="5" max="40" step="1" value="35"></div><div class="slider"><label for="mSl"><span>Mass of car m <span class="zh">(質量)</span></span><span id="mSlVal"></span></label>
+    <input type="range" id="mSl" min="100" max="1000" step="100" value="500"></div>
+  <div class="slider"><label for="fSl"><span>Friction force <span class="zh">(摩擦力)</span></span><span id="fSlVal"></span></label>
+    <input type="range" id="fSl" min="0" max="500" step="50" value="0"></div>
+</div>
+<div class="sim-buttons">
+  <button class="btn-primary" id="playBtn" type="button">▶ Play</button>
+  <button class="btn-secondary" id="resetBtn" type="button">↺ Reset</button>
+  <label for="speedSel" style="font-weight:700">Speed:</label>
+  <select id="speedSel"><option value="1">Normal</option><option value="0.5">Slow (½×)</option><option value="0.25">Very slow (¼×)</option></select>
+</div>
+<canvas id="animCanvas" width="900" height="360" data-fixed-h="360" aria-label="Roller coaster energy animation"></canvas>
+<div class="readout">
+  <div class="ro d"><div class="lab">Height</div><div class="val" id="roY"></div></div><div class="ro v"><div class="lab">Speed</div><div class="val" id="roV"></div></div><div class="ro a"><div class="lab">P.E.</div><div class="val" id="roPE"></div></div><div class="ro v"><div class="lab">K.E.</div><div class="val" id="roKE"></div></div>
+  <div class="ro av"><div class="lab">Energy lost (heat)</div><div class="val" id="roQ"></div></div><div class="ro d"><div class="lab">Total energy</div><div class="val" id="roTot"></div></div>
+</div>
+<p class="sim-msg" id="simMsg" role="status"></p>
+<div class="panel" id="eqPanel" aria-live="polite"></div>
+<div class="box key"><span class="box-title">Things to try</span><ul class="simple">
+  <li>Friction 0: the total stays constant, and the car always returns to the <b>same height</b>.</li>
+  <li>H = 20 m: can the car get over the 25 m hump? Why not?</li>
+  <li>Change the mass with no friction: the speed at the bottom does not change.</li>
+  <li>Turn friction on: the heat bar grows and the car never gets back to its starting height.</li></ul></div>
+</section>
+<section class="step" data-id="psim" data-name="Practice: Using the Simulation">
+<span class="tag quiz">Practice 2</span>
+<h2 tabindex="-1">Practice: predict, then check with the simulation</h2>
+<div class="quiz" data-quiz="psim"></div>
+</section>
+<section class="step" data-id="power" data-name="Power">
+<span class="tag">Idea 4</span>
+<h2 tabindex="-1">Power: the rate of energy transfer</h2>
+<div class="grid2">
+  <div>
+    <div class="box formula"><span class="box-title">Definition ⭐</span><b>P = W ÷ t</b> = energy transferred ÷ time taken<br>Unit: <b>watt (W)</b>, 1 W = 1 J s⁻¹; 1 kW = 1000 W<br>Power is a scalar.</div>
+    <div class="box formula"><span class="box-title">Moving at constant velocity</span>P = W/t = F s/t = <b>F v</b><br>(F: driving force, v: velocity)</div>
+  </div>
+  <div>
+    <div class="box eg worked"><span class="box-title">✏️ Your own power (g = 9.81 m s⁻²)</span>A 60 kg student runs up stairs 3.0 m high in 2.5 s.<br>Work done against gravity = mgh = 60 × 9.81 × 3.0 = 1766 J<br>P = 1766 ÷ 2.5 = <b>706 W</b></div>
+    <div class="box eg worked"><span class="box-title">✏️ Truck</span>A truck moves at a constant 15 m s⁻¹. The total resistive force is 3000 N, so the driving force is 3000 N.<br>P = Fv = 3000 × 15 = <b>45 000 W = 45 kW</b></div>
+  </div>
+</div>
+<div class="box eg"><span class="box-title">🧪 Experiment: output power of an electric motor</span>Use the motor to lift a mass m through a height h at steady speed. Time it with a stopwatch.<br>Output power = mgh ÷ t. e.g. 0.50 kg lifted 1.2 m in 4.0 s: P = 0.50 × 9.81 × 1.2 ÷ 4.0 = <b>1.47 W</b>.<br>Measure the electrical input power too (V × I with meters) and compare: the output is always smaller.</div>
+</section>
+<section class="step" data-id="devices" data-name="Energy Transfer Devices">
+<span class="tag">Idea 5</span>
+<h2 tabindex="-1">Energy transfer devices in daily life</h2>
+<div class="box formula"><span class="box-title">Efficiency</span>efficiency = useful energy output ÷ energy input × 100% = useful power output ÷ power input × 100%<br>No real device is 100% efficient: some energy always becomes internal energy (heat) and sound.</div>
+<table class="t" aria-label="Evaluating energy transfer devices">
+  <tr><th>Device</th><th>Energy change</th><th>Design idea using conservation of energy</th></tr>
+  <tr><td>🛗 Lift</td><td>electrical → P.E. (+ heat)</td><td>A <b>counterweight</b> moves down as the car moves up, so the motor only supplies the <b>difference</b> in P.E.</td></tr>
+  <tr><td>🚶 Escalator</td><td>electrical → P.E. of passengers</td><td>Power needed = (number of people × mgh) ÷ time + losses; slows to standby when empty.</td></tr>
+  <tr><td>🚲 Bicycle</td><td>chemical → K.E.</td><td>Smooth bearings and pumped-up tyres reduce energy wasted against friction.</td></tr>
+  <tr><td>🔌 Kettle, fan, LED lamp</td><td>electrical → internal energy / K.E. / light</td><td>Power rating (W) tells how fast energy is used; LEDs waste less as heat.</td></tr>
+  <tr><td>🚆 MTR / hybrid car</td><td>K.E. → electrical (braking)</td><td><b>Regenerative braking</b>: the motor acts as a generator, so K.E. is stored instead of being wasted as heat.</td></tr>
+</table>
+<div class="box key"><span class="box-title">🌏 Transport and the environment</span>Faster or heavier vehicles need more energy (K.E. = ½mv²) and more power to overcome air resistance. Using public transport, lighter cars, lower speeds and regenerative braking cuts energy use and pollution.</div>
+</section>
+<section class="step" data-id="p2" data-name="Practice: Power &amp; Devices">
+<span class="tag quiz">Practice 3</span>
+<h2 tabindex="-1">Practice: power and energy transfer devices</h2>
+<div class="quiz" data-quiz="p2"></div>
+</section>
+<section class="step" data-id="summary" data-name="Summary">
+<span class="tag">Well done!</span>
+<h2 tabindex="-1">🎉 Summary of Lesson 10</h2>
+<div style="text-align:center"><div class="stars" id="stars" aria-hidden="true"></div>
+  <p id="finalScore" style="font-size:1.2rem;font-weight:800"></p><p id="finalMsg"></p></div>
+<table class="t">
+  <tr><th>Idea</th><th>Remember</th></tr>
+  <tr><td>conservation of energy</td><td>energy cannot be created or destroyed; total energy of a closed system is constant</td></tr>
+  <tr><td>no energy loss</td><td>P.E. + K.E. = constant; v = √(2gh) from rest</td></tr>
+  <tr><td>with energy loss</td><td>initial M.E. = final M.E. + work done against friction</td></tr>
+  <tr><td>power</td><td>P = W/t (W = J s⁻¹); at constant velocity P = Fv</td></tr>
+  <tr><td>efficiency</td><td>useful output ÷ input × 100% (always below 100%)</td></tr>
+</table>
+<div class="lesson-link">⬅️ Previous: <a href="lesson9-work-pe-ke.html">Lesson 9: Work, Potential Energy and Kinetic Energy</a> &nbsp;·&nbsp; ➡️ Next: <a href="lesson11-momentum-impulse.html">Lesson 11: Momentum, Impulse and Force</a> &nbsp;·&nbsp; 🏠 <a href="index.html">All lessons</a></div>
+<div class="q-actions" style="justify-content:center">
+  <button class="btn-secondary" id="reviewBtn" type="button">Go to first unfinished question</button>
+  <button class="btn-retry" id="restartBtn" type="button">↺ Reset all questions</button>
+</div>
+</section>
+</main>
+<nav class="controls" aria-label="Lesson navigation">
+  <button class="btn-secondary" id="backBtn" type="button">◀ Back</button>
+  <button class="btn-primary" id="nextBtn" type="button">Next ▶</button>
+</nav>
+<div class="kbd-tip">Tip: use Tab to move, Enter/Space to press, ← → to change step.</div>
+<details class="teacher">
+<summary>👩‍🏫 Teacher notes: curriculum outcome map (click to open)</summary>
+<div class="tn-body">
+<p><b>Source:</b> HKDSE Physics Curriculum and Assessment Guide (S4–6), 2015 update — Compulsory Part, <b>II Force and Motion</b>, subtopic <b>d. Work, energy and power</b>, “Students should be able to” column, printed pages 27–28 (PDF pages 37–38). Outcome text is quoted from the guide.</p>
+<p><b>Core.</b> Nothing in this sub-topic is underlined in the guide, so all of it is in the <b>core</b> of the Compulsory Part.</p>
+<p>This sub-topic is taught in <b>Lesson 9</b> (<a href="lesson9-work-pe-ke.html">lesson9-work-pe-ke.html</a>): 11 steps; <b>Lesson 10</b> (<a href="lesson10-conservation-of-energy-power.html">lesson10-conservation-of-energy-power.html</a>): 11 steps. Links to other lessons open that file at the step.</p>
+<h3>Learning outcomes</h3>
+<div class="table-scroll"><table class="t outcomes"><tr><th>#</th><th>Topic</th><th>Learning outcome (quoted)</th><th>Where it is taught / practised</th></tr>
+<tr><td>1</td><td><i>mechanical work</i></td><td>“interpret mechanical work as a way of energy transfer”</td><td><a href="lesson9-work-pe-ke.html#step2">L9 Step 2: Work: Energy Transfer</a><br><a href="lesson9-work-pe-ke.html#step4">L9 Step 4: Practice: Work</a><br><a href="lesson9-work-pe-ke.html#step9">L9 Step 9: Simulation</a></td></tr><tr><td>2</td><td><i>mechanical work</i></td><td>“define mechanical work done W = Fs cos θ”</td><td><a href="lesson9-work-pe-ke.html#step2">L9 Step 2: Work: Energy Transfer</a><br><a href="lesson9-work-pe-ke.html#step3">L9 Step 3: W = Fs cos θ</a><br><a href="lesson9-work-pe-ke.html#step4">L9 Step 4: Practice: Work</a></td></tr><tr><td>3</td><td><i>mechanical work</i></td><td>“solve problems involving mechanical work”</td><td><a href="lesson9-work-pe-ke.html#step3">L9 Step 3: W = Fs cos θ</a><br><a href="lesson9-work-pe-ke.html#step4">L9 Step 4: Practice: Work</a><br><a href="lesson9-work-pe-ke.html#step10">L9 Step 10: Practice: Using the Simulation</a></td></tr><tr><td>4</td><td><i>gravitational potential energy (P.E.)</i></td><td>“state that gravitational potential energy is the energy possessed by an object due to its position under gravity”</td><td><a href="lesson9-work-pe-ke.html#step5">L9 Step 5: Potential Energy: P.E. = mgh</a><br><a href="lesson9-work-pe-ke.html#step8">L9 Step 8: Practice: P.E. &amp; K.E.</a></td></tr><tr><td>5</td><td><i>gravitational potential energy (P.E.)</i></td><td>“derive P.E. = mgh”</td><td><a href="lesson9-work-pe-ke.html#step5">L9 Step 5: Potential Energy: P.E. = mgh</a></td></tr><tr><td>6</td><td><i>gravitational potential energy (P.E.)</i></td><td>“solve problems involving gravitational potential energy”</td><td><a href="lesson9-work-pe-ke.html#step5">L9 Step 5: Potential Energy: P.E. = mgh</a><br><a href="lesson9-work-pe-ke.html#step7">L9 Step 7: Estimating Work and K.E.</a><br><a href="lesson9-work-pe-ke.html#step8">L9 Step 8: Practice: P.E. &amp; K.E.</a></td></tr><tr><td>7</td><td><i>kinetic energy (K.E.)</i></td><td>“state that kinetic energy is the energy possessed by an object due to its motion”</td><td><a href="lesson9-work-pe-ke.html#step6">L9 Step 6: Kinetic Energy: K.E. = ½mv²</a><br><a href="lesson9-work-pe-ke.html#step8">L9 Step 8: Practice: P.E. &amp; K.E.</a></td></tr><tr><td>8</td><td><i>kinetic energy (K.E.)</i></td><td>“derive K.E. = ½mv²”</td><td><a href="lesson9-work-pe-ke.html#step6">L9 Step 6: Kinetic Energy: K.E. = ½mv²</a><br><a href="lesson9-work-pe-ke.html#step9">L9 Step 9: Simulation</a></td></tr><tr><td>9</td><td><i>kinetic energy (K.E.)</i></td><td>“solve problems involving kinetic energy”</td><td><a href="lesson9-work-pe-ke.html#step6">L9 Step 6: Kinetic Energy: K.E. = ½mv²</a><br><a href="lesson9-work-pe-ke.html#step7">L9 Step 7: Estimating Work and K.E.</a><br><a href="lesson9-work-pe-ke.html#step8">L9 Step 8: Practice: P.E. &amp; K.E.</a><br><a href="lesson9-work-pe-ke.html#step10">L9 Step 10: Practice: Using the Simulation</a></td></tr><tr><td>10</td><td><i>law of conservation of energy in a closed system</i></td><td>“state the law of conservation of energy”</td><td><a href="#step2" data-step="2">L10 Step 2: Conservation of Energy</a><br><a href="#step5" data-step="5">L10 Step 5: Practice: Conservation</a></td></tr><tr><td>11</td><td><i>law of conservation of energy in a closed system</i></td><td>“discuss the inter-conversion of P.E. and K.E. with consideration of energy loss”</td><td><a href="#step3" data-step="3">L10 Step 3: P.E. ⇄ K.E.</a><br><a href="#step4" data-step="4">L10 Step 4: Energy Loss</a><br><a href="#step6" data-step="6">L10 Step 6: Simulation</a><br><a href="#step7" data-step="7">L10 Step 7: Practice: Using the Simulation</a></td></tr><tr><td>12</td><td><i>law of conservation of energy in a closed system</i></td><td>“solve problems involving conservation of energy”</td><td><a href="#step3" data-step="3">L10 Step 3: P.E. ⇄ K.E.</a><br><a href="#step4" data-step="4">L10 Step 4: Energy Loss</a><br><a href="#step5" data-step="5">L10 Step 5: Practice: Conservation</a><br><a href="#step7" data-step="7">L10 Step 7: Practice: Using the Simulation</a></td></tr><tr><td>13</td><td><i>power</i></td><td>“define power as the rate of energy transfer”</td><td><a href="#step8" data-step="8">L10 Step 8: Power</a><br><a href="#step10" data-step="10">L10 Step 10: Practice: Power &amp; Devices</a></td></tr><tr><td>14</td><td><i>power</i></td><td>“apply P = W/t to solve problems”</td><td><a href="#step8" data-step="8">L10 Step 8: Power</a><br><a href="#step9" data-step="9">L10 Step 9: Energy Transfer Devices</a><br><a href="#step10" data-step="10">L10 Step 10: Practice: Power &amp; Devices</a></td></tr></table></div>
+<h3>Suggested learning &amp; teaching activities used</h3>
+<div class="table-scroll"><table class="t activities"><tr><th>#</th><th>Activity (from the guide, pp.29–32)</th><th>Where</th></tr>
+<tr><td>1</td><td>Performing experiments on energy (e.g. rolling a ball-bearing down an inclined plane, dropping a mass attached to a spring)</td><td><a href="#step3" data-step="3">L10 Step 3: P.E. ⇄ K.E.</a><br><a href="#step4" data-step="4">L10 Step 4: Energy Loss</a></td></tr><tr><td>2</td><td>Performing experiments to investigate the relationships among mechanical energy, work and power</td><td><a href="lesson9-work-pe-ke.html#step9">L9 Step 9: Simulation</a><br><a href="#step8" data-step="8">L10 Step 8: Power</a></td></tr><tr><td>3</td><td>Determining the output power of an electric motor by measuring the rate of energy transfer</td><td><a href="#step8" data-step="8">L10 Step 8: Power</a></td></tr><tr><td>4</td><td>Estimating the work required for various tasks, such as lifting a book, stretching a spring and climbing Lantau Peak</td><td><a href="lesson9-work-pe-ke.html#step7">L9 Step 7: Estimating Work and K.E.</a><br><a href="lesson9-work-pe-ke.html#step8">L9 Step 8: Practice: P.E. &amp; K.E.</a></td></tr><tr><td>5</td><td>Estimating the K.E. of various moving objects such as a speeding car, a sprinter and an air molecule</td><td><a href="lesson9-work-pe-ke.html#step7">L9 Step 7: Estimating Work and K.E.</a><br><a href="lesson9-work-pe-ke.html#step8">L9 Step 8: Practice: P.E. &amp; K.E.</a></td></tr><tr><td>6</td><td>Investigating the application of conservation principles in designing energy transfer devices</td><td><a href="#step9" data-step="9">L10 Step 9: Energy Transfer Devices</a></td></tr><tr><td>7</td><td>Evaluating the design of energy transfer devices, such as household appliances, lifts, escalators and bicycles</td><td><a href="#step9" data-step="9">L10 Step 9: Energy Transfer Devices</a><br><a href="#step10" data-step="10">L10 Step 10: Practice: Power &amp; Devices</a></td></tr><tr><td>8</td><td>Increasing awareness of the power and elegance of the conservation laws by contrasting with Newton’s Second Law</td><td><a href="#step3" data-step="3">L10 Step 3: P.E. ⇄ K.E.</a></td></tr><tr><td>9</td><td>Using Ocean Park Hong Kong as a large laboratory (roller coaster energy changes)</td><td><a href="#step3" data-step="3">L10 Step 3: P.E. ⇄ K.E.</a><br><a href="#step6" data-step="6">L10 Step 6: Simulation</a></td></tr><tr><td>10</td><td>V&amp;A / STSE: environmental implications of transport; reducing energy consumption</td><td><a href="#step9" data-step="9">L10 Step 9: Energy Transfer Devices</a></td></tr></table></div>
+<p><b>Judgement calls:</b> P = Fv is shown as a direct consequence of P = W/t (W = Fs, v = s/t), as in the teacher’s notes. Efficiency (useful output ÷ input) is used only to support the guide activity “evaluating the design of energy transfer devices”. The roller-coaster simulation uses a constant friction force (no μ). When friction is on, the cart is shown resting at the lowest point once its remaining mechanical energy above that point is used up (a simplification).</p>
+</div></details>
+<script>
+
+var SVGNS = "http://www.w3.org/2000/svg";
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;"); }
+function fnPts(f, x0, x1, n){ n = n || 40; var p = []; for (var i = 0; i <= n; i++){ var x = x0 + (x1-x0)*i/n; p.push([x, f(x)]); } return p; }
+function numLabel(v){ var s = Math.abs(v - Math.round(v)) < 1e-9 ? String(Math.round(v)) : String(+v.toFixed(2)); return s.replace("-", "−"); }
+function graphSVG(g){
+  var mini = !!g.mini, W = g.w || (mini ? 160 : 440), H = g.h || (mini ? 110 : 290);
+  var P = mini ? {l:18, r:8, t:16, b:10} : {l:58, r:16, t:16, b:50};
+  var pw = W-P.l-P.r, ph = H-P.t-P.b, xmin = g.xmin || 0, i, x, y;
+  function X(v){ return P.l + pw*(v-xmin)/(g.xmax-xmin); }
+  function Y(v){ return P.t + ph*(g.ymax-v)/(g.ymax-g.ymin); }
+  var o = '<svg xmlns="'+SVGNS+'" viewBox="0 0 '+W+' '+H+'" class="'+(mini?"mini":"fig")+'" role="img" aria-label="'+esc(g.alt||"graph")+'">';
+  o += '<rect x="0" y="0" width="'+W+'" height="'+H+'" fill="#fff"/>';
+  if (!mini){
+    for (i = 0; ; i++){ x = xmin + i*g.xstep; if (x > g.xmax+1e-9) break;
+      o += '<line x1="'+X(x)+'" y1="'+P.t+'" x2="'+X(x)+'" y2="'+(H-P.b)+'" stroke="#e2e8f0" stroke-width="1.5"/>';
+      o += '<text x="'+X(x)+'" y="'+(H-P.b+18)+'" font-size="14" text-anchor="middle" fill="#111">'+numLabel(x)+'</text>'; }
+    for (i = 0; ; i++){ y = g.ymin + i*g.ystep; if (y > g.ymax+1e-9) break;
+      o += '<line x1="'+P.l+'" y1="'+Y(y)+'" x2="'+(W-P.r)+'" y2="'+Y(y)+'" stroke="#e2e8f0" stroke-width="1.5"/>';
+      o += '<text x="'+(P.l-7)+'" y="'+(Y(y)+5)+'" font-size="14" text-anchor="end" fill="#111">'+numLabel(y)+'</text>'; }
+    o += '<text x="'+(P.l+pw/2)+'" y="'+(H-10)+'" font-size="15" font-weight="700" text-anchor="middle">'+esc(g.xlab||"t / s")+'</text>';
+    o += '<text transform="translate(16 '+(P.t+ph/2)+') rotate(-90)" font-size="15" font-weight="700" text-anchor="middle">'+esc(g.ylab||"")+'</text>';
+  }
+  var y0 = Math.min(Math.max(0, g.ymin), g.ymax);
+  if (g.shade) g.shade.forEach(function(sh){
+    o += '<polygon points="'+sh.pts.map(function(p){return X(p[0]).toFixed(1)+","+Y(p[1]).toFixed(1);}).join(" ")+'" fill="'+(sh.color||"#93c5fd")+'" fill-opacity="0.45"/>'; });
+  o += '<line x1="'+X(xmin)+'" y1="'+P.t+'" x2="'+X(xmin)+'" y2="'+(H-P.b)+'" stroke="#111" stroke-width="2"/>';
+  o += '<line x1="'+P.l+'" y1="'+Y(y0)+'" x2="'+(W-P.r)+'" y2="'+Y(y0)+'" stroke="#111" stroke-width="2"/>';
+  if (mini){
+    o += '<text x="'+(P.l+4)+'" y="'+(P.t-3)+'" font-size="13" font-weight="700">'+esc(g.ylab||"")+'</text>';
+    o += '<text x="'+(W-P.r)+'" y="'+(Y(y0)-4)+'" font-size="13" font-weight="700" text-anchor="end">t</text>';
+  }
+  (g.lines||[]).forEach(function(L){
+    o += '<polyline points="'+L.pts.map(function(p){return X(p[0]).toFixed(1)+","+Y(p[1]).toFixed(1);}).join(" ")+'" fill="none" stroke="'+(L.color||"#1d4ed8")+'" stroke-width="'+(mini?3.5:3.5)+'" stroke-linejoin="round" stroke-linecap="round"'+(L.dash?' stroke-dasharray="7 5"':'')+'/>'; });
+  (g.dots||[]).forEach(function(p){ o += '<circle cx="'+X(p[0])+'" cy="'+Y(p[1])+'" r="4.5" fill="#b91c1c"/>'; });
+  return o + '</svg>';
+}
+function tapeSVG(t){
+  var s = t.pxPerCm || 12, L = t.length, W = L*s + 40, H = (t.marks ? 112 : 70) + (t.note ? 22 : 0), top = t.note ? 22 : 0, o;
+  o = '<svg xmlns="'+SVGNS+'" viewBox="0 0 '+W+' '+H+'" class="fig tape" role="img" aria-label="'+esc(t.alt||"ticker tape")+'">';
+  if (t.note) o += '<text x="12" y="16" font-size="15" font-weight="700" fill="#374151">'+esc(t.note)+'</text>';
+  o += '<rect x="10" y="'+(top+14)+'" width="'+(L*s+20)+'" height="38" fill="#fef9c3" stroke="#a16207" stroke-width="2"/>';
+  t.dots.forEach(function(d){ o += '<circle cx="'+(20+d*s)+'" cy="'+(top+33)+'" r="4" fill="#111"/>'; });
+  (t.marks||[]).forEach(function(m){
+    var x1 = 20 + t.dots[m.from]*s, x2 = 20 + t.dots[m.to]*s, yy = top + 64;
+    o += '<path d="M'+x1+' '+(yy-6)+' V'+yy+' H'+x2+' V'+(yy-6)+'" fill="none" stroke="#1d4ed8" stroke-width="2.5"/>';
+    o += '<text x="'+((x1+x2)/2)+'" y="'+(yy+22)+'" font-size="15" font-weight="700" fill="#1d4ed8" text-anchor="middle">'+esc(m.label)+'</text>'; });
+  return o + '</svg>';
+}
+
+
+function kSetup(c){
+  var dpr = window.devicePixelRatio || 1, w = c.clientWidth || +c.getAttribute("data-w") || c.width;
+  if (!c.getAttribute("data-w")) c.setAttribute("data-w", c.width);
+  if (!c.getAttribute("data-ratio")) c.setAttribute("data-ratio", c.height/c.width);
+  var h = c.getAttribute("data-fixed-h") ? +c.getAttribute("data-fixed-h") : Math.round(w * +c.getAttribute("data-ratio"));
+  c.width = Math.round(w*dpr); c.height = Math.round(h*dpr); c.style.height = h + "px";
+  var ctx = c.getContext("2d"); ctx.setTransform(dpr, 0, 0, dpr, 0, 0); return {ctx:ctx, w:w, h:h};
+}
+function kFmt(n, d){ if (d == null) d = 1; var s = (+n).toFixed(d); if (/^-0\.?0*$/.test(s)) s = s.slice(1); return s.replace("-", "−"); }
+function kArrow(ctx, x1, y1, x2, y2, col, w, label, lx, ly){
+  var L = Math.hypot(x2-x1, y2-y1); if (L < 1) return;
+  var ang = Math.atan2(y2-y1, x2-x1), hl = Math.min(13, 5 + w*1.6, L*0.6);
+  ctx.strokeStyle = col; ctx.fillStyle = col; ctx.lineWidth = w; ctx.setLineDash([]);
+  ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2-Math.cos(ang)*hl*0.8, y2-Math.sin(ang)*hl*0.8); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(x2, y2); ctx.lineTo(x2-hl*Math.cos(ang-0.45), y2-hl*Math.sin(ang-0.45)); ctx.lineTo(x2-hl*Math.cos(ang+0.45), y2-hl*Math.sin(ang+0.45)); ctx.closePath(); ctx.fill();
+  if (label){ ctx.font = "bold 13px Arial"; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(label, lx != null ? lx : x2 + 14*Math.cos(ang), ly != null ? ly : y2 + 14*Math.sin(ang) - 6); }
+}
+function kNice(lo, hi, tgt){
+  lo = Math.min(0, lo); hi = Math.max(0, hi); if (hi - lo < 1e-9){ hi = 1; }
+  var raw = (hi-lo)/(tgt||5), mag = Math.pow(10, Math.floor(Math.log(raw)/Math.LN10)), st = mag;
+  [1,2,2.5,5,10].some(function(m){ st = m*mag; return st >= raw - 1e-12; });
+  return {lo:Math.floor(lo/st + 1e-9)*st, hi:Math.ceil(hi/st - 1e-9)*st, step:st};
+}
+/* draw axes on a canvas setup object g; returns mapping functions */
+function kAxes(g, xr, yr, xlab, ylab){
+  var ctx = g.ctx, W = g.w, H = g.h, Pd = {l:50, r:12, t:12, b:38}, pw = W-Pd.l-Pd.r, ph = H-Pd.t-Pd.b, i, x, y;
+  var xlo = xr.lo || 0;
+  function X(v){ return Pd.l + pw*(v-xlo)/(xr.hi-xlo); } function Y(v){ return Pd.t + ph*(yr.hi-v)/(yr.hi-yr.lo); }
+  ctx.clearRect(0, 0, W, H); ctx.font = "11px Arial"; ctx.lineWidth = 1; ctx.strokeStyle = "#e5e7eb"; ctx.fillStyle = "#374151"; ctx.setLineDash([]);
+  ctx.textAlign = "right"; ctx.textBaseline = "middle";
+  for (i = 0; ; i++){ y = yr.lo + i*yr.step; if (y > yr.hi+1e-9) break; ctx.beginPath(); ctx.moveTo(Pd.l, Y(y)); ctx.lineTo(W-Pd.r, Y(y)); ctx.stroke(); ctx.fillText(numLabel(+y.toFixed(6)), Pd.l-4, Y(y)); }
+  ctx.textAlign = "center"; ctx.textBaseline = "top";
+  for (i = 0; ; i++){ x = xlo + i*xr.step; if (x > xr.hi+1e-9) break; ctx.beginPath(); ctx.moveTo(X(x), Pd.t); ctx.lineTo(X(x), H-Pd.b); ctx.stroke(); ctx.fillText(numLabel(+x.toFixed(6)), X(x), H-Pd.b+3); }
+  ctx.strokeStyle = "#111827"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(X(xlo), Pd.t); ctx.lineTo(X(xlo), H-Pd.b); ctx.stroke();
+  var y0 = Math.min(Math.max(0, yr.lo), yr.hi); ctx.beginPath(); ctx.moveTo(Pd.l, Y(y0)); ctx.lineTo(W-Pd.r, Y(y0)); ctx.stroke();
+  ctx.font = "bold 12px Arial"; ctx.fillStyle = "#111827"; ctx.fillText(xlab, Pd.l+pw/2, H-17);
+  ctx.save(); ctx.translate(11, Pd.t+ph/2); ctx.rotate(-Math.PI/2); ctx.textBaseline = "middle"; ctx.fillText(ylab, 0, 0); ctx.restore();
+  return {ctx:ctx, X:X, Y:Y, y0:Y(y0), W:W, H:H, Pd:Pd};
+}
+function kLine(G, pts, col, w, dash){
+  var ctx = G.ctx; if (!pts.length) return; ctx.strokeStyle = col; ctx.lineWidth = w || 3; ctx.setLineDash(dash ? [6,4] : []); ctx.beginPath();
+  pts.forEach(function(p, i){ var x = G.X(p[0]), y = G.Y(p[1]); if (i) ctx.lineTo(x, y); else ctx.moveTo(x, y); }); ctx.stroke(); ctx.setLineDash([]);
+}
+function kDot(G, x, y, col, r){ var ctx = G.ctx; ctx.fillStyle = col; ctx.beginPath(); ctx.arc(G.X(x), G.Y(y), r || 5, 0, 7); ctx.fill(); }
+/* animation clock: onTick(dt) returns false to stop */
+function kClock(onTick, onStop){
+  var running = false, last = null, raf = null;
+  function frame(ts){ if (!running) return; if (last === null) last = ts; var dt = Math.min(0.1, (ts-last)/1000); last = ts;
+    var sp = document.getElementById("speedSel"); if (sp) dt *= parseFloat(sp.value);
+    if (onTick(dt) === false){ running = false; if (onStop) onStop(true); return; } raf = requestAnimationFrame(frame); }
+  return {start:function(){ if (running) return; running = true; last = null; raf = requestAnimationFrame(frame); },
+          stop:function(){ var was = running; running = false; if (raf) cancelAnimationFrame(raf); if (was && onStop) onStop(false); },
+          running:function(){ return running; }};
+}
+function kBind(ids, fn){ ids.forEach(function(i){ var e = document.getElementById(i); if (e) e.addEventListener(e.type === "checkbox" || e.tagName === "SELECT" || e.type === "radio" ? "change" : "input", fn); }); }
+function kVal(id){ var e = document.getElementById(id); return e.type === "checkbox" ? e.checked : +e.value; }
+function kSet(id, v){ var e = document.getElementById(id); if (!e) return; if (e.type === "checkbox") e.checked = !!v; else e.value = v; }
+function kText(id, t){ var e = document.getElementById(id); if (e) e.textContent = t; }
+function kHTML(id, t){ var e = document.getElementById(id); if (e) e.innerHTML = t; }
+
+var Q = {
+p1:[
+ {type:"mc", text:"Which statement is the law of conservation of energy?", options:["Energy can be created but not destroyed.","Energy cannot be created or destroyed; it can only change from one form to another.","Mechanical energy is always constant.","Energy is lost when friction acts."], answer:1,
+  hints:["Mechanical energy can change when friction acts — but what about <b>total</b> energy?",""], explain:"Energy cannot be created or destroyed, only converted."},
+ {type:"num", text:"A ball is dropped from rest from a height of <b>5.0 m</b>. Ignoring air resistance, find its speed just before it hits the ground. (g = 9.81 m/s²)", answer:9.905, unit:"m/s",
+  hints:["mgh = ½mv² → v = √(2gh)","√(2 × 9.81 × 5)"], explain:"v = 9.90 m s⁻¹."},
+ {type:"num", text:"A roller coaster car starts from rest and drops <b>45 m</b>. Ignoring friction, find its speed at the bottom. (g = 10 m/s²)", answer:30, unit:"m/s",
+  hints:["v = √(2gh)","√900"], explain:"30 m s⁻¹."},
+ {type:"mc", text:"A 1 kg ball and a 5 kg ball are dropped from the same height (no air resistance). Just before landing, the 5 kg ball has…", options:["the same speed and the same K.E.","the same speed and 5 times the K.E.","5 times the speed","1/5 of the speed"], answer:1,
+  hints:["v = √(2gh) does not depend on m.","K.E. = mgh depends on m."], explain:"Same speed, but 5 times the K.E. (and it lost 5 times the P.E.)."},
+ {type:"num", text:"A pendulum bob passes its lowest point at <b>2.0 m/s</b>. How high above the lowest point does it rise? (g = 10 m/s², no energy loss)", answer:0.2, unit:"m",
+  hints:["½mv² = mgh → h = v² ÷ (2g)","4 ÷ 20"], explain:"h = 0.2 m."},
+ {type:"num", text:"A <b>30 kg</b> child slides from rest down a slide <b>2.0 m</b> high and reaches <b>5.0 m/s</b> at the bottom. Find the energy lost. (g = 10 m/s²)", answer:225, unit:"J",
+  hints:["Loss in P.E. = 30 × 10 × 2 = 600 J; gain in K.E. = ½ × 30 × 25 = 375 J","Energy lost = 600 − 375"], explain:"225 J (work done against friction)."},
+ {type:"mc", text:"In the question above, where does the ‘lost’ energy go?", options:["It is destroyed.","Mainly internal energy (heat) of the slide, child and air, and some sound","It becomes P.E. again","It becomes the child’s mass"], answer:1,
+  hints:["Energy cannot be destroyed.",""], explain:"Mostly internal energy (heat) and a little sound."}
+],
+psim:[
+ {type:"num", text:"Friction 0, H = <b>30 m</b>. Predict the car’s speed at the lowest point of the track (height 0). (g = 9.81 m/s²)", answer:24.26, unit:"m/s",
+  hints:["½mv² = mgH","v = √(2 × 9.81 × 30)"], explain:"24.3 m s⁻¹ for any mass."},
+ {type:"mc", text:"Friction 0, H = <b>20 m</b>. What happens at the 25 m hump?", options:["It just gets over","It goes over fast","It cannot get over; it rolls back","It stops on top"], answer:2,
+  hints:["Without energy loss, how high can the car rise?","Only back to 20 m."], explain:"It can only rise to 20 m, so it rolls back."},
+ {type:"num", text:"With friction on, a <b>500 kg</b> car released from <b>30 m</b> has a speed of <b>20 m/s</b> at the lowest point. Find the energy lost. (g = 9.81 m/s²)", answer:47150, unit:"J",
+  hints:["Loss in P.E. = 500 × 9.81 × 30 = 147 150 J","Gain in K.E. = ½ × 500 × 400 = 100 000 J"], explain:"47 150 J ≈ 4.7 × 10⁴ J."}
+],
+p2:[
+ {type:"num", text:"A motor does <b>600 J</b> of work in <b>5 s</b>. Find its power.", answer:120, unit:"W",
+  hints:["P = W ÷ t",""], explain:"120 W."},
+ {type:"num", text:"A <b>50 kg</b> student runs up stairs of height <b>4.0 m</b> in <b>5.0 s</b>. Find her power against gravity. (g = 10 m/s²)", answer:400, unit:"W",
+  hints:["W = mgh = 50 × 10 × 4 = 2000 J","P = 2000 ÷ 5"], explain:"400 W."},
+ {type:"num", text:"A <b>2 kW</b> kettle is switched on for <b>3 minutes</b>. How much energy does it use (in J)?", answer:360000, unit:"J",
+  hints:["E = P × t, t in seconds","2000 × 180"], explain:"360 000 J = 3.6 × 10⁵ J."},
+ {type:"num", text:"A car moves at a constant <b>20 m/s</b>. The total resistive force is <b>800 N</b>. Find the power of its engine.", answer:16000, unit:"W",
+  hints:["Constant velocity → driving force = resistive force = 800 N","P = Fv = 800 × 20"], explain:"16 000 W = 16 kW."},
+ {type:"num", text:"A motor uses <b>200 J</b> of electrical energy to lift a <b>4 kg</b> load by <b>4 m</b>. Find its efficiency in %. (g = 10 m/s²)", answer:80, unit:"%",
+  hints:["Useful output = mgh = 4 × 10 × 4 = 160 J","Efficiency = 160 ÷ 200 × 100%"], explain:"80%."},
+ {type:"mc", text:"Why does a lift have a <b>counterweight</b>?", options:["To make the lift heavier and safer","So the motor only needs to supply the difference in P.E. between car and counterweight","To increase friction","To store K.E. in the cable"], answer:1,
+  hints:["As the car goes up, the counterweight goes down.","The counterweight’s loss in P.E. helps raise the car."], explain:"It reduces the energy (and power) the motor must supply."},
+ {type:"mc", text:"Regenerative braking in an MTR train mainly converts…", options:["P.E. into K.E.","K.E. into electrical energy","electrical energy into K.E.","heat into K.E."], answer:1,
+  hints:["The motor works as a generator when braking.",""], explain:"K.E. → electrical energy, which can be reused."}
+]};
+
+function makeSim(){
+  var G = 9.81, XMAX = 140, N = 1400, track = [], P = {}, l = 0, dir = 1, heat = 0, E0 = 0, done = false, why = "", t = 0, clock, cv = document.getElementById("animCanvas");
+  function yOf(x){ if (x <= 40) return 20 + 20*Math.cos(Math.PI*x/40); if (x <= 70) return 12.5 - 12.5*Math.cos(Math.PI*(x - 40)/30); if (x <= 100) return 12.5 + 12.5*Math.cos(Math.PI*(x - 70)/30); return 20 - 20*Math.cos(Math.PI*(x - 100)/40); }
+  (function(){ var L = 0, px = 0, py = yOf(0); for (var i = 0; i <= N; i++){ var x = XMAX*i/N, y = yOf(x); L += Math.hypot(x - px, y - py); track.push({x:x, y:y, L:L}); px = x; py = y; } })();
+  function at(L){ if (L <= 0) return track[0]; var lo = 0, hi = N; while (hi - lo > 1){ var md = (lo + hi) >> 1; if (track[md].L < L) lo = md; else hi = md; } var a = track[lo], b = track[hi], f = (L - a.L)/((b.L - a.L) || 1); return {x:a.x + f*(b.x - a.x), y:a.y + f*(b.y - a.y), L:L}; }
+  function read(){ P.H = kVal("hSl"); P.m = kVal("mSl"); P.f = kVal("fSl"); kText("hSlVal", P.H + " m"); kText("mSlVal", P.m + " kg"); kText("fSlVal", P.f + " N"); }
+  function startL(){ var x = 40*Math.acos((P.H - 20)/20)/Math.PI; for (var i = 0; i < N; i++) if (track[i].x >= x) return track[i].L; return 0; }
+  function ke(){ return E0 - P.m*G*at(l).y - heat; }
+  function reset(){ if (clock) clock.stop(); read(); l = startL(); dir = 1; heat = 0; t = 0; done = false; why = ""; E0 = P.m*G*at(l).y; kText("simMsg", "Ready. The car starts from rest at " + P.H + " m. Press ▶ Play."); update(); draw(); }
+  function step(dt){ var sub = 40, h = dt/sub; for (var i = 0; i < sub && !done; i++){
+      var k = ke(), v = Math.sqrt(Math.max(0, 2*k/P.m)), vv = Math.max(v, 0.3), nl = l + dir*vv*h, nk = E0 - P.m*G*at(nl).y - heat - P.f*vv*h;
+      if (nl <= 0 || nl >= track[N].L){ dir = -dir; continue; }
+      if (nk < 0){ dir = -dir; if (P.f > 0 && E0 - heat - P.m*G*0 < 0.002*E0 + 1){ done = true; why = "rest"; } continue; }
+      l = nl; heat += P.f*vv*h; t += h; }
+    if (P.f > 0 && !done && E0 - heat < 0.003*E0 + 1){ done = true; why = "rest"; }
+    if (done){ heat = E0; l = track.reduce(function(b, p){ return p.y < b.y || (p.y === b.y && Math.abs(p.L - l) < Math.abs(b.L - l)) ? p : b; }, track[0]).L; heat = E0 - P.m*G*at(l).y; } }
+  function update(){ var p = at(l), k = Math.max(0, ke()), v = Math.sqrt(2*k/P.m), pe = P.m*G*p.y;
+    kText("roY", kFmt(p.y, 2) + " m"); kText("roV", kFmt(v, 2) + " m/s"); kText("roPE", kFmt(pe/1000, 1) + " kJ"); kText("roKE", kFmt(k/1000, 1) + " kJ"); kText("roQ", kFmt(heat/1000, 1) + " kJ"); kText("roTot", kFmt((pe + k + heat)/1000, 1) + " kJ");
+    kHTML("eqPanel", "Start: P.E. = mgH = " + P.m + " × 9.81 × " + P.H + " = <b>" + kFmt(E0/1000, 2) + " kJ</b>, K.E. = 0.<br>Now: P.E. + K.E. + energy lost = " + kFmt(pe/1000, 2) + " + " + kFmt(k/1000, 2) + " + " + kFmt(heat/1000, 2) + " = <b>" + kFmt((pe + k + heat)/1000, 2) + " kJ</b> — total energy is conserved." + (P.f === 0 ? "<br>No friction: v = √(2g(H − h)) = √(2 × 9.81 × " + kFmt(P.H - p.y, 2) + ") = " + kFmt(Math.sqrt(2*G*Math.max(0, P.H - p.y)), 2) + " m/s" : "")); }
+  function draw(){
+    var g = kSetup(cv), ctx = g.ctx, W = g.w, H = g.h, bw = 250, PX = W - bw, L = 40, B = 30, sc = Math.min((PX - L - 20)/XMAX, (H - B - 20)/42), X = function(x){ return L + x*sc; }, Y = function(y){ return H - B - y*sc; };
+    ctx.clearRect(0, 0, W, H); ctx.fillStyle = "#e0f2fe"; ctx.fillRect(0, 0, PX, H);
+    ctx.fillStyle = "#111"; ctx.font = "11px Arial"; ctx.textAlign = "right"; for (var yy = 0; yy <= 40; yy += 10){ ctx.fillText(yy + " m", L - 4, Y(yy) + 4); ctx.strokeStyle = "#bae6fd"; ctx.beginPath(); ctx.moveTo(L, Y(yy)); ctx.lineTo(PX - 10, Y(yy)); ctx.stroke(); }
+    ctx.strokeStyle = "#475569"; ctx.lineWidth = 6; ctx.beginPath(); track.forEach(function(p, i){ if (i) ctx.lineTo(X(p.x), Y(p.y)); else ctx.moveTo(X(p.x), Y(p.y)); }); ctx.stroke();
+    ctx.strokeStyle = "#ef4444"; ctx.lineWidth = 1.5; ctx.setLineDash([6,4]); ctx.beginPath(); ctx.moveTo(L, Y(P.H)); ctx.lineTo(PX - 10, Y(P.H)); ctx.stroke(); ctx.setLineDash([]); ctx.fillStyle = "#ef4444"; ctx.textAlign = "left"; ctx.fillText("release height", PX - 95, Y(P.H) - 4);
+    var p = at(l); ctx.fillStyle = "#2563eb"; ctx.beginPath(); ctx.arc(X(p.x), Y(p.y) - 11, 11, 0, 7); ctx.fill(); ctx.fillStyle = "#fff"; ctx.font = "bold 11px Arial"; ctx.textAlign = "center"; ctx.fillText("🎢", X(p.x), Y(p.y) - 7);
+    var k = Math.max(0, ke()), pe = P.m*G*p.y, items = [["P.E.", pe, "#f59e0b"], ["K.E.", k, "#22c55e"], ["Heat", heat, "#a855f7"], ["Total", pe + k + heat, "#64748b"]];
+    ctx.font = "bold 12px Arial"; items.forEach(function(it, i){ var x = PX + 15 + i*58, hh = 250*it[1]/(E0 || 1); ctx.fillStyle = "#e5e7eb"; ctx.fillRect(x, 290 - 250, 44, 250); ctx.fillStyle = it[2]; ctx.fillRect(x, 290 - hh, 44, hh); ctx.fillStyle = "#111"; ctx.fillText(it[0], x + 22, 308); ctx.fillText(kFmt(it[1]/1000, 0) + " kJ", x + 22, 326); });
+    ctx.fillText("Energy bars", PX + 125, 26);
+  }
+  clock = kClock(function(dt){ step(dt); update(); draw(); if (done){ kText("simMsg", "🛑 The car has come to rest: all its mechanical energy above the lowest point has become heat."); return false; } },
+    function(fin){ document.getElementById("playBtn").textContent = "▶ Play"; if (!fin) kText("simMsg", "Paused."); });
+  document.getElementById("playBtn").addEventListener("click", function(){ if (clock.running()) clock.stop(); else { if (done) reset(); this.textContent = "⏸ Pause"; kText("simMsg", "Running…"); clock.start(); } });
+  document.getElementById("resetBtn").addEventListener("click", reset);
+  kBind(["hSl","mSl","fSl"], reset);
+  return {reset:reset, draw:draw, resize:function(){}, pause:function(){ clock.stop(); },
+    set:function(o){ if (o.H != null) kSet("hSl", o.H); if (o.m != null) kSet("mSl", o.m); if (o.f != null) kSet("fSl", o.f); reset(); },
+    jumpTo:function(T){ clock.stop(); reset(); var n = 0; while (t < T && !done && n < 200000){ step(0.02); n++; } update(); draw(); },
+    run:function(T, cb){ var n = 0, r = {maxX:0, minY:99, vBottom:0, maxYright:0}; reset(); while (t < T && !done && n < 200000){ step(0.01); n++; var p = at(l); r.maxX = Math.max(r.maxX, p.x); if (p.y < 0.05) r.vBottom = Math.max(r.vBottom, Math.sqrt(Math.max(0, 2*ke()/P.m))); if (p.x > 100) r.maxYright = Math.max(r.maxYright, p.y); } r.done = done; r.heat = heat; update(); draw(); return r; },
+    state:function(){ var p = at(l), k = Math.max(0, ke()); return {x:p.x, y:p.y, ke:k, pe:P.m*G*p.y, heat:heat, E0:E0, total:P.m*G*p.y + k + heat, t:t, done:done, v:Math.sqrt(2*k/P.m)}; }};
+}
+var LESSON = {quizzes:Q, figs:{}, makeSim:makeSim, demo:{set:{H:35, m:500, f:0}, t:3.2}};
+
+
+(function(){
+"use strict";
+var QUIZZES = LESSON.quizzes, FIGS = LESSON.figs || {};
+var PRAISE = ["Great job! 🎉","Excellent! ⭐","Well done! 👍","You got it! 💪","Super! 🌟","Correct! Keep going! 🚀"];
+var TRYAGAIN = ["Not quite. That's OK — try again! 🙂","Good try! Look at the hint below.","Almost! Check your working and try again.","Mistakes help us learn. Try once more! 💪"];
+function rand(a){ return a[Math.floor(Math.random()*a.length)]; }
+function el(tag, attrs, html){ var e = document.createElement(tag); if (attrs) for (var k in attrs) e.setAttribute(k, attrs[k]); if (html != null) e.innerHTML = html; return e; }
+function parseNum(str){
+  if (str == null) return NaN;
+  str = String(str).trim().replace(/[−–—]/g,"-").replace(/,/g,"").replace(/\s+/g,"");
+  str = str.replace(/(kgm\/s|kgms-1|kgms⁻¹|Ns|Nm|rad\/s|rads-1|rads⁻¹|N\/kg|Nkg-1|Nkg⁻¹|m\/s²|m\/s\^?2|ms-2|ms⁻²|m\/s|ms-1|ms⁻¹|kg|g|J|W|N|m|s|°|%)$/,"");
+  var sup = {"⁰":"0","¹":"1","²":"2","³":"3","⁴":"4","⁵":"5","⁶":"6","⁷":"7","⁸":"8","⁹":"9","⁻":"-"};
+  str = str.replace(/[×xX*]10(\^?)([-+]?\d+|[⁻⁰¹²³⁴⁵⁶⁷⁸⁹]+)$/, function(m0, c, e){ return "e" + e.replace(/[⁻⁰¹²³⁴⁵⁶⁷⁸⁹]/g, function(ch){ return sup[ch]; }); });
+  if (!/^[-+]?(\d+\.?\d*|\.\d+)(e[-+]?\d+)?$/i.test(str)) return NaN;
+  return parseFloat(str);
+}
+function figHTML(f){ return f.type === "tape" ? tapeSVG(f) : graphSVG(f); }
+document.querySelectorAll("[data-fig]").forEach(function(d){ var f = FIGS[d.getAttribute("data-fig")]; if (f) d.innerHTML = figHTML(f); });
+
+/* step-by-step reveal blocks */
+document.querySelectorAll(".reveal").forEach(function(r){
+  var lines = r.querySelectorAll(".rline"), n = 1, nb = r.querySelector(".reveal-next"), ab = r.querySelector(".reveal-all");
+  lines.forEach(function(l){ l.setAttribute("tabindex","-1"); });
+  function show(){ lines.forEach(function(l, i){ l.hidden = i >= n; });
+    nb.disabled = ab.disabled = n >= lines.length;
+    nb.textContent = n >= lines.length ? "All lines shown ✓" : "Show next line ▼ (" + (n+1) + " of " + lines.length + ")"; }
+  nb.addEventListener("click", function(){ n++; show(); lines[n-1].focus(); });
+  ab.addEventListener("click", function(){ n = lines.length; show(); });
+  show();
+});
+
+/* ===== arrow (vector drawing) task ===== */
+function buildArrow(box, q, id, onEnter){
+  var N = q.grid || 5, c = 30, S = 2*N*c + 40, O = S/2, tip = {x:0, y:0};
+  var wrap = el("div", {"class":"arrow-task"});
+  var svg = document.createElementNS(SVGNS, "svg");
+  svg.setAttribute("viewBox", "0 0 "+S+" "+S); svg.setAttribute("role","img");
+  var side = el("div");
+  var btns = el("div", {"class":"arrow-btns", role:"group", "aria-label":"Move the arrow tip"});
+  [["",""],["↑ N","0,1"],["",""],["← W","-1,0"],["Clear","c"],["E →","1,0"],["",""],["↓ S","0,-1"],["",""]].forEach(function(b){
+    if (!b[0]){ btns.appendChild(el("span")); return; }
+    var bt = el("button", {type:"button", "class":"btn-secondary"}, b[0]);
+    bt.setAttribute("aria-label", b[1] === "c" ? "Clear arrow" : "Move tip one square " + ({"0,1":"north","-1,0":"west","1,0":"east","0,-1":"south"})[b[1]]);
+    bt.addEventListener("click", function(){ if (b[1] === "c"){ tip.x = 0; tip.y = 0; } else { var d = b[1].split(","); tip.x = Math.max(-N, Math.min(N, tip.x + +d[0])); tip.y = Math.max(-N, Math.min(N, tip.y + +d[1])); } render(); });
+    btns.appendChild(bt); });
+  var status = el("div", {"class":"arrow-status", "aria-live":"polite"});
+  side.appendChild(el("div", {"class":"caption"}, "Scale: <b>" + q.scale + "</b>. Use the buttons or click a grid point."));
+  side.appendChild(btns); side.appendChild(status);
+  wrap.appendChild(svg); wrap.appendChild(side);
+  svg.addEventListener("click", function(e){
+    var r = svg.getBoundingClientRect(), px = (e.clientX - r.left) * S / r.width, py = (e.clientY - r.top) * S / r.height;
+    tip.x = Math.max(-N, Math.min(N, Math.round((px - O)/c))); tip.y = Math.max(-N, Math.min(N, Math.round((O - py)/c))); render(); });
+  function dirWord(){ var p = []; if (tip.y) p.push(Math.abs(tip.y) + " square" + (Math.abs(tip.y)>1?"s ":" ") + (tip.y>0?"north":"south")); if (tip.x) p.push(Math.abs(tip.x) + " square" + (Math.abs(tip.x)>1?"s ":" ") + (tip.x>0?"east":"west")); return p.length ? p.join(" and ") : "no arrow yet"; }
+  function render(){
+    var o = '<rect width="'+S+'" height="'+S+'" fill="#fff"/>';
+    for (var i = -N; i <= N; i++){ o += '<line x1="'+(O+i*c)+'" y1="20" x2="'+(O+i*c)+'" y2="'+(S-20)+'" stroke="#e2e8f0" stroke-width="1.5"/><line x1="20" y1="'+(O+i*c)+'" x2="'+(S-20)+'" y2="'+(O+i*c)+'" stroke="#e2e8f0" stroke-width="1.5"/>'; }
+    o += '<text x="'+O+'" y="15" font-size="14" font-weight="700" text-anchor="middle">N ↑</text>';
+    o += '<defs><marker id="'+id+'-m" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b91c1c"/></marker></defs>';
+    if (tip.x || tip.y) o += '<line x1="'+O+'" y1="'+O+'" x2="'+(O+tip.x*c)+'" y2="'+(O-tip.y*c)+'" stroke="#b91c1c" stroke-width="5" marker-end="url(#'+id+'-m)"/>';
+    o += '<circle cx="'+O+'" cy="'+O+'" r="6" fill="#1d4ed8"/><text x="'+(O+8)+'" y="'+(O+20)+'" font-size="13" fill="#1d4ed8" font-weight="700">start</text>';
+    svg.innerHTML = o;
+    svg.setAttribute("aria-label", "Arrow drawing grid. Your arrow: " + dirWord());
+    status.textContent = "Your arrow: " + dirWord() + ".";
+  }
+  render();
+  return {el:wrap, get:function(){ return {x:tip.x, y:tip.y}; }, set:function(x,y){ tip.x = x; tip.y = y; render(); }, reset:function(){ tip.x = 0; tip.y = 0; render(); },
+          disable:function(d){ btns.querySelectorAll("button").forEach(function(b){ b.disabled = d; }); svg.style.pointerEvents = d ? "none" : ""; }};
+}
+
+/* ===== quizzes ===== */
+var qState = {}, allQ = [], qCounter = 0;
+document.querySelectorAll(".quiz").forEach(function(container){
+  (QUIZZES[container.getAttribute("data-quiz")] || []).forEach(function(q, i){
+    var id = "q" + (++qCounter); allQ.push(id); qState[id] = {done:false, firstTry:true};
+    var box = el("div", {"class":"q", id:id, role:"group", "aria-labelledby":id+"-t"});
+    box.appendChild(el("div", {"class":"q-title", id:id+"-t"}, '<span class="q-num">Q' + (i+1) + '</span>' + q.text));
+    if (q.fig) box.appendChild(el("div", null, figHTML(q.fig)));
+    var arrowUI = null, inputWrap;
+    if (q.type === "mc"){
+      inputWrap = el("div", {"class":"opts" + (q.optFigs ? " figopts" : ""), role:"radiogroup", "aria-label":"Choices"});
+      q.options.forEach(function(opt, j){
+        var lab = el("label", {"class":"opt"}), r = el("input", {type:"radio", name:id+"-r", value:String(j)});
+        lab.appendChild(r);
+        lab.appendChild(el("span", null, String.fromCharCode(65+j) + ". " + opt + (q.optFigs ? graphSVG(q.optFigs[j]) : "")));
+        inputWrap.appendChild(lab); });
+    } else if (q.type === "num"){
+      inputWrap = el("div", {"class":"num-row"});
+      var inp = el("input", {type:"text", inputmode:"decimal", autocomplete:"off", "aria-label":"Your answer in " + q.unit, placeholder:"answer"});
+      inp.addEventListener("keydown", function(e){ if (e.key === "Enter"){ e.preventDefault(); check(); } });
+      inputWrap.appendChild(inp);
+      inputWrap.appendChild(el("span", {"class":"unit"}, q.unit.replace("m/s²","m s⁻²").replace("m/s","m s⁻¹")));
+    } else if (q.type === "arrow"){
+      arrowUI = buildArrow(box, q, id); inputWrap = arrowUI.el;
+    }
+    box.appendChild(inputWrap);
+    var actions = el("div", {"class":"q-actions"});
+    var bCheck = el("button", {"class":"btn-check", type:"button"}, "✔ Check");
+    var bHint = el("button", {"class":"btn-hint", type:"button"}, "💡 Hint");
+    var bRetry = el("button", {"class":"btn-retry", type:"button"}, "↺ Try again"); bRetry.hidden = true;
+    actions.appendChild(bCheck); actions.appendChild(bHint); actions.appendChild(bRetry); box.appendChild(actions);
+    var fb = el("div", {"class":"feedback", role:"status", "aria-live":"polite"}), hints = el("div", {"class":"hints", "aria-live":"polite"});
+    box.appendChild(fb); box.appendChild(hints); container.appendChild(box);
+    var hintIdx = 0;
+    function evaluate(){
+      if (q.type === "mc"){
+        var c = box.querySelector("input[type=radio]:checked");
+        if (!c) return {invalid:"Please choose an answer first."};
+        var v = parseInt(c.value, 10), ok = v === q.answer;
+        box.querySelectorAll(".opt")[v].classList.add(ok ? "right" : "wrong");
+        return {ok:ok};
+      }
+      if (q.type === "num"){
+        var raw = box.querySelector("input[type=text]").value, n = parseNum(raw);
+        if (isNaN(n)) return {invalid:"Please type a number (e.g. 12 or -3.5)."};
+        var ok2 = Math.abs(n - q.answer) <= Math.max(q.tol || 0.01, Math.abs(q.answer)*0.01), extra = "";
+        if (!ok2 && Math.abs(Math.abs(n) - Math.abs(q.answer)) <= Math.max(q.tol||0.01, Math.abs(q.answer)*0.01) && q.answer !== 0) extra = " Check the <b>sign</b> (+ or −).";
+        return {ok:ok2, extra:extra};
+      }
+      var p = arrowUI.get(), T = q.target;
+      if (!p.x && !p.y) return {invalid:"Please draw your arrow first (use the buttons or click the grid)."};
+      var ok3 = p.x === T[0] && p.y === T[1], ex = "";
+      if (!ok3){
+        var sameDir = (p.x*T[1] - p.y*T[0] === 0) && (p.x*T[0] + p.y*T[1] > 0);
+        ex = sameDir ? " The direction is right. Check the <b>length</b> using the scale." : " Check the <b>direction</b>.";
+      }
+      return {ok:ok3, extra:ex};
+    }
+    function check(){
+      if (qState[id].done) return;
+      box.querySelectorAll(".opt").forEach(function(o){ o.classList.remove("right","wrong"); });
+      var r = evaluate();
+      if (r.invalid){ fb.className = "feedback bad"; fb.textContent = r.invalid; return; }
+      if (r.ok){
+        qState[id].done = true; box.classList.add("correct");
+        fb.className = "feedback ok"; fb.innerHTML = rand(PRAISE) + " " + q.explain;
+        bCheck.disabled = bHint.disabled = true; bRetry.hidden = false; bRetry.textContent = "↺ Do it again";
+        box.querySelectorAll("input").forEach(function(x){ x.disabled = true; }); if (arrowUI) arrowUI.disable(true);
+      } else {
+        qState[id].firstTry = false; fb.className = "feedback bad"; fb.innerHTML = rand(TRYAGAIN) + (r.extra || "");
+        bRetry.hidden = false; bRetry.textContent = "↺ Clear and try again";
+        if (hintIdx === 0) showHint();
+      }
+      updateScore();
+    }
+    function showHint(){
+      if (hintIdx >= q.hints.length) return;
+      hints.appendChild(el("div", {"class":"hint"}, "<b>Hint " + (hintIdx+1) + " of " + q.hints.length + ":</b> " + q.hints[hintIdx]));
+      hintIdx++;
+      if (hintIdx >= q.hints.length){ bHint.disabled = true; bHint.textContent = "💡 No more hints"; }
+      else bHint.textContent = "💡 Next hint (" + (hintIdx+1) + "/" + q.hints.length + ")";
+    }
+    function retry(silent){
+      if (qState[id].done) qState[id].firstTry = false;
+      qState[id].done = false; box.classList.remove("correct");
+      fb.className = "feedback"; fb.textContent = ""; hints.innerHTML = ""; hintIdx = 0;
+      bCheck.disabled = bHint.disabled = false; bHint.textContent = "💡 Hint"; bRetry.hidden = true;
+      box.querySelectorAll("input").forEach(function(x){ x.disabled = false; if (x.type === "radio") x.checked = false; else x.value = ""; });
+      box.querySelectorAll(".opt").forEach(function(o){ o.classList.remove("right","wrong"); });
+      if (arrowUI){ arrowUI.disable(false); arrowUI.reset(); }
+      if (!silent){ var f = box.querySelector("input,button"); if (f) f.focus(); }
+      updateScore();
+    }
+    bCheck.addEventListener("click", check); bHint.addEventListener("click", showHint); bRetry.addEventListener("click", function(){ retry(false); });
+    box._api = {check:check, retry:retry, showHint:showHint, q:q, arrow:arrowUI};
+  });
+});
+function updateScore(){ var d = allQ.filter(function(id){ return qState[id].done; }).length; document.getElementById("scorePill").textContent = "⭐ " + d + " / " + allQ.length; }
+
+/* ===== navigation ===== */
+var steps = Array.prototype.slice.call(document.querySelectorAll(".step")), cur = 0, sim = null;
+var backBtn = document.getElementById("backBtn"), nextBtn = document.getElementById("nextBtn");
+function go(i, noFocus){
+  if (i < 0 || i >= steps.length) return;
+  steps[cur].classList.remove("active"); cur = i; var s = steps[cur]; s.classList.add("active");
+  var pct = Math.round(cur/(steps.length-1)*100);
+  document.getElementById("progressFill").style.width = pct + "%";
+  var pb = document.getElementById("progressBar"); pb.setAttribute("aria-valuenow", pct); pb.setAttribute("aria-valuetext", "Step " + (cur+1) + " of " + steps.length);
+  document.getElementById("stepLabel").textContent = "Step " + (cur+1) + " of " + steps.length;
+  document.getElementById("stepName").textContent = s.getAttribute("data-name");
+  backBtn.disabled = cur === 0; nextBtn.disabled = cur === steps.length-1;
+  nextBtn.textContent = cur === steps.length-2 ? "Finish ▶" : "Next ▶";
+  if (sim){ if (s.querySelector("#animCanvas")){ sim.resize(); sim.draw(); } else sim.pause(); }
+  if (s.getAttribute("data-id") === "summary") showSummary();
+  window.scrollTo(0, 0);
+  if (!noFocus){ var h = s.querySelector("h2"); if (h) h.focus({preventScroll:true}); }
+  try { history.replaceState(null, "", "#step" + (cur+1)); } catch(e){}
+}
+backBtn.addEventListener("click", function(){ go(cur-1); });
+nextBtn.addEventListener("click", function(){ go(cur+1); });
+document.addEventListener("keydown", function(e){
+  var tag = e.target && e.target.tagName;
+  if (tag === "INPUT" || tag === "SELECT" || tag === "TEXTAREA" || e.altKey || e.ctrlKey || e.metaKey) return;
+  if (e.key === "ArrowRight"){ go(cur+1); e.preventDefault(); } else if (e.key === "ArrowLeft"){ go(cur-1); e.preventDefault(); }
+});
+document.addEventListener("click", function(e){
+  var a = e.target.closest && e.target.closest("a[data-step]");
+  if (a){ e.preventDefault(); go(parseInt(a.getAttribute("data-step"),10)-1); }
+});
+document.getElementById("zhToggle").addEventListener("change", function(){ document.body.classList.toggle("no-zh", !this.checked); });
+function showSummary(){
+  var done = allQ.filter(function(id){ return qState[id].done; }).length, first = allQ.filter(function(id){ return qState[id].done && qState[id].firstTry; }).length;
+  var n = allQ.length, f = done/n, st = f >= 0.9 ? 3 : f >= 0.6 ? 2 : f > 0 ? 1 : 0;
+  document.getElementById("stars").textContent = "⭐".repeat(st) + "☆".repeat(3-st);
+  document.getElementById("finalScore").textContent = "You answered " + done + " of " + n + " questions correctly (" + first + " on the first try).";
+  document.getElementById("finalMsg").textContent = f === 1 ? "Amazing! You finished every question! 🚀" : f >= 0.6 ? "Great work! Go back and finish the rest — you can do it! 💪" : "Good start! Every step counts. Go back, use the hints and try again. 🙂";
+}
+document.getElementById("reviewBtn").addEventListener("click", function(){
+  for (var i = 0; i < allQ.length; i++) if (!qState[allQ[i]].done){
+    var box = document.getElementById(allQ[i]); go(steps.indexOf(box.closest(".step")), true);
+    var f = box.querySelector("input,button"); if (f) f.focus(); box.scrollIntoView({block:"center"}); return; }
+  document.getElementById("finalMsg").textContent = "You have finished every question! 🎉";
+});
+document.getElementById("restartBtn").addEventListener("click", function(){
+  allQ.forEach(function(id){ document.getElementById(id)._api.retry(true); qState[id].firstTry = true; });
+  updateScore(); showSummary(); this.focus();
+});
+
+/* ===== simulation ===== */
+sim = LESSON.makeSim ? LESSON.makeSim() : (function(){
+  var SC = LESSON.sim, G = 9.81, K = 0.02, TRACK = 150, TMAX = 15, DT = 0.01;
+  function $(id){ return document.getElementById(id); }
+  if (!$("animCanvas")) return null;
+  var mode = "h", P = {u:5, a:1, vu:15, h0:0, drag:false};
+  var traj = [], tEnd = 0, why = "", analytic = true, t = 0, running = false, last = null, raf = null, R = null, measure = "none";
+  var cv = {anim:$("animCanvas"), s:$("stCanvas"), v:$("vtCanvas"), a:$("atCanvas")};
+  function fmt(n, d){ if (d == null) d = 1; var s = n.toFixed(d); if (/^-0\.?0*$/.test(s)) s = s.slice(1); return s.replace("-", "−"); }
+  function U(){ return mode === "h" ? P.u : P.vu; }
+  function A(){ return mode === "h" ? P.a : -G; }
+  function acc(v){ return -G - K*v*Math.abs(v); }
+  function roots(a, b, c){ if (Math.abs(a) < 1e-12) return Math.abs(b) < 1e-12 ? [] : [-c/b]; var D = b*b - 4*a*c; if (D < 0) return []; var q = Math.sqrt(D); return [(-b+q)/(2*a), (-b-q)/(2*a)]; }
+  function sx(tt){ return U()*tt + 0.5*A()*tt*tt; }
+  function pathLen(t1, t2){ var u = U(), a = A(); if (a !== 0){ var tp = -u/a; if (tp > t1 && tp < t2) return Math.abs(sx(tp)-sx(t1)) + Math.abs(sx(t2)-sx(tp)); } return Math.abs(sx(t2)-sx(t1)); }
+  function stateAt(tt){
+    if (analytic) return {t:tt, s:sx(tt), v:U()+A()*tt, a:A(), d:pathLen(0, tt)};
+    if (tt <= 0) return traj[0]; if (tt >= tEnd) return traj[traj.length-1];
+    var lo = 0, hi = traj.length-1; while (hi-lo > 1){ var m = (lo+hi) >> 1; if (traj[m].t <= tt) lo = m; else hi = m; }
+    var p = traj[lo], q = traj[hi], f = (tt-p.t)/((q.t-p.t) || 1);
+    return {t:tt, s:p.s+f*(q.s-p.s), v:p.v+f*(q.v-p.v), a:p.a+f*(q.a-p.a), d:p.d+f*(q.d-p.d)};
+  }
+  function compute(){
+    traj = []; analytic = !(mode === "v" && P.drag); why = "";
+    var u = U(), a = A(), best = TMAX, i;
+    if (analytic){
+      why = "time";
+      var cand = function(rs, w){ rs.forEach(function(r){ if (r > 1e-6 && r < best){ best = r; why = w; } }); };
+      if (mode === "h"){ if (u <= 0 && a <= 0){ best = 0; why = "still"; } else { cand(roots(0.5*a, u, -TRACK), "end"); cand(roots(0.5*a, u, 0), "start"); } }
+      else { if (u <= 0 && P.h0 <= 0){ best = 0; why = "still"; } else cand(roots(0.5*a, u, P.h0), "ground"); }
+      tEnd = best;
+      var n = Math.floor(tEnd/DT + 1e-9); for (i = 0; i <= n; i++) traj.push(stateAt(i*DT));
+      if (tEnd - n*DT > 1e-9) traj.push(stateAt(tEnd));
+    } else {
+      var s = 0, v = u, d = 0, tt = 0, h = 0.0005, k = 0;
+      if (u <= 0 && P.h0 <= 0){ tEnd = 0; why = "still"; traj.push({t:0,s:0,v:0,a:acc(0),d:0}); }
+      else { traj.push({t:0, s:0, v:v, a:acc(v), d:0});
+        while (true){
+          var k1v = acc(v), k1s = v, k2v = acc(v+0.5*h*k1v), k2s = v+0.5*h*k1v, k3v = acc(v+0.5*h*k2v), k3s = v+0.5*h*k2v, k4v = acc(v+h*k3v), k4s = v+h*k3v;
+          var s2 = s + h*(k1s+2*k2s+2*k3s+k4s)/6, v2 = v + h*(k1v+2*k2v+2*k3v+k4v)/6;
+          if (P.h0 + s2 < 0){ var f = (P.h0+s)/(s-s2), te = tt+f*h, ve = v+f*(v2-v); d += Math.abs(-P.h0-s); traj.push({t:te, s:-P.h0, v:ve, a:acc(ve), d:d}); tEnd = te; why = "ground"; break; }
+          d += Math.abs(s2-s); s = s2; v = v2; tt += h; k++;
+          if (k % 20 === 0) traj.push({t:tt, s:s, v:v, a:acc(v), d:d});
+          if (tt >= TMAX - 1e-9){ if (k % 20) traj.push({t:tt, s:s, v:v, a:acc(v), d:d}); tEnd = tt; why = "time"; break; }
+        } }
+    }
+    function nice(lo, hi, tgt){
+      lo = Math.min(0, lo); hi = Math.max(0, hi); if (hi - lo < 1e-9){ hi = 1; lo = -1; }
+      var raw = (hi-lo)/(tgt||5), mag = Math.pow(10, Math.floor(Math.log(raw)/Math.LN10)), st = mag;
+      [1,2,2.5,5,10].some(function(m){ st = m*mag; return st >= raw - 1e-12; });
+      return {lo:Math.floor(lo/st + 1e-9)*st, hi:Math.ceil(hi/st - 1e-9)*st, step:st};
+    }
+    function mm(key){ var lo = Infinity, hi = -Infinity; traj.forEach(function(p){ lo = Math.min(lo, p[key]); hi = Math.max(hi, p[key]); }); return [lo, hi]; }
+    var ms = mm("s"), mv = mm("v"), ma = mm("a"), hmax = 0;
+    traj.forEach(function(p){ hmax = Math.max(hmax, P.h0 + p.s); });
+    R = {t:nice(0, Math.max(tEnd, 1), 5), s:nice(ms[0], ms[1]*1.05, 5), v:nice(mv[0]*1.05, mv[1]*1.05, 5), a:nice(ma[0]*1.1, ma[1]*1.1, 4), h:nice(0, Math.max(10, hmax*1.08), 5)};
+  }
+  function readUI(){
+    P.u = +$("uSlider").value; P.a = +$("aSlider").value;
+    $("uVal").textContent = fmt(P.u, 0) + " m/s"; $("aVal").textContent = fmt(P.a, 1) + " m/s²";
+    $("uSlider").setAttribute("aria-valuetext", P.u + " metres per second"); $("aSlider").setAttribute("aria-valuetext", P.a + " metres per second squared");
+    if ($("vuSlider")){ P.vu = +$("vuSlider").value; P.h0 = +$("h0Slider").value; P.drag = $("dragBox") ? $("dragBox").checked : false;
+      $("vuVal").textContent = fmt(P.vu, 0) + " m/s"; $("h0Val").textContent = fmt(P.h0, 0) + " m";
+      $("vuSlider").setAttribute("aria-valuetext", P.vu + " metres per second upward"); $("h0Slider").setAttribute("aria-valuetext", P.h0 + " metres"); }
+  }
+  function reset(){
+    pause(); readUI(); compute(); t = 0;
+    $("hControls").hidden = mode !== "h"; if ($("vControls")) $("vControls").hidden = mode !== "v";
+    $("roHbox").style.display = mode === "v" ? "" : "none";
+    $("simMsg").textContent = why === "still" ? (mode === "h" ? "The car will not move forward. Choose u > 0 or a > 0." : "Choose an upward speed or a starting height.") : "Ready. Press ▶ Play.";
+    update(); draw();
+  }
+  function finishMsg(){
+    return why === "end" ? "🏁 The car reached the end of the 150 m track." : why === "start" ? "↩ The car came back to the start line (s = 0)." :
+           why === "ground" ? "⬇ The ball hit the ground." : "⏱ Time is up (" + TMAX + " s).";
+  }
+  function frame(ts){
+    if (!running) return;
+    if (last === null) last = ts;
+    var dt = Math.min(0.1, (ts-last)/1000) * parseFloat($("speedSel").value); last = ts;
+    t += dt; if (t >= tEnd){ t = tEnd; running = false; $("playBtn").textContent = "▶ Play"; $("simMsg").textContent = finishMsg(); }
+    update(); draw();
+    if (running) raf = requestAnimationFrame(frame);
+  }
+  function play(){
+    if (tEnd === 0){ return; }
+    if (t >= tEnd - 1e-9) t = 0;
+    running = true; last = null; $("playBtn").textContent = "⏸ Pause"; $("simMsg").textContent = "Running…";
+    raf = requestAnimationFrame(frame);
+  }
+  function pause(){
+    if (running){ running = false; $("playBtn").textContent = "▶ Play"; $("simMsg").textContent = "Paused at t = " + fmt(t) + " s. Try the 📐 Measure tool!"; }
+    if (raf) cancelAnimationFrame(raf);
+  }
+  function update(){
+    var st = stateAt(t);
+    $("roT").textContent = fmt(t) + " s"; $("roS").textContent = fmt(st.s) + " m"; $("roD").textContent = fmt(st.d) + " m";
+    $("roH").textContent = fmt(P.h0 + st.s) + " m";
+    $("roV").textContent = fmt(st.v) + " m/s"; $("roSp").textContent = fmt(Math.abs(st.v)) + " m/s";
+    $("roAv").textContent = t > 0.005 ? fmt(st.s/t) + " m/s" : "—";
+    $("roA").textContent = fmt(st.a, 2) + " m/s²";
+    $("measureOut").innerHTML = measureText(st);
+    $("eqPanel").innerHTML = SC.eq === "four" ? eqFour(st) : eqBasic(st);
+  }
+  function eqBasic(st){
+    var o = "<b>Average velocity</b> = s ÷ t = " + (t > 0.005 ? fmt(st.s) + " m ÷ " + fmt(t) + " s = <b>" + fmt(st.s/t) + " m/s</b>" : "— (press Play)") + "<br>";
+    if (P.a === 0) o += "<b>Uniform motion</b> (a = 0): s = vt = (" + fmt(P.u,0) + ")(" + fmt(t) + ") = <b>" + fmt(P.u*t) + " m</b> ✓ matches the displacement. Instantaneous velocity = average velocity.";
+    else o += "The velocity is changing (a ≠ 0), so the <b>instantaneous</b> velocity (" + fmt(st.v) + " m/s) is <b>not</b> the same as the average velocity. (Equations for this are in Lesson 2.)";
+    return o;
+  }
+  function eqFour(st){
+    var u = U(), a = A(), v = st.v, s = st.s, T = t;
+    function fp(n, d){ var x = fmt(n, d); return n < -0.0005 ? "(" + x + ")" : x; }
+    var o = "<b>The four equations at t = " + fmt(T) + " s</b> (u = " + fmt(u,1) + " m/s, a = " + fmt(a,2) + " m/s²; up/right = +):<br>";
+    if (!analytic) o += '<span class="warnline">⚠ Air resistance is ON, so the acceleration is NOT constant. The equations (using a = −9.81) no longer match the simulation — compare the numbers!</span><br>';
+    o += "① v = u + at = " + fmt(u,1) + " + (" + fmt(a,2) + ")(" + fmt(T) + ") = <b>" + fmt(u+a*T) + " m/s</b> &nbsp;[simulation v = " + fmt(v) + "]<br>";
+    o += "② s = ½(u + v)t = ½(" + fmt(u,1) + " + " + fp(v) + ")(" + fmt(T) + ") = <b>" + fmt(0.5*(u+v)*T) + " m</b> &nbsp;[simulation s = " + fmt(s) + "]<br>";
+    o += "③ s = ut + ½at² = (" + fmt(u,1) + ")(" + fmt(T) + ") + ½(" + fmt(a,2) + ")(" + fmt(T) + ")² = <b>" + fmt(u*T+0.5*a*T*T) + " m</b><br>";
+    o += "④ v² = u² + 2as: u² + 2as = " + fp(u,1) + "² + 2(" + fmt(a,2) + ")(" + fmt(s) + ") = <b>" + fmt(u*u+2*a*s) + "</b> &nbsp;and v² = " + fp(v) + "² = <b>" + fmt(v*v) + "</b> (m²/s²)";
+    return o;
+  }
+  function measureText(st){
+    if (measure === "none") return "📐 Choose a <b>Measure</b> option to find a gradient or an area on the graphs.";
+    if (t < 0.05) return "📐 Press ▶ Play (then ⏸ Pause) so there is a graph to measure.";
+    var tg = tangent(measure === "sgrad" ? "s" : "v", st);
+    if (measure === "sgrad") return "📐 <b>Gradient of the s–t graph</b> at t = " + fmt(t) + " s (tangent line): Δs ÷ Δt = " + fmt(tg.dy) + " m ÷ " + fmt(tg.dx) + " s = <b>" + fmt(tg.dy/tg.dx) + " m/s</b>. This is the <b>instantaneous velocity</b> (readout: " + fmt(st.v) + " m/s) ✓";
+    if (measure === "vgrad") return "📐 <b>Gradient of the v–t graph</b> at t = " + fmt(t) + " s: Δv ÷ Δt = " + fmt(tg.dy) + " m/s ÷ " + fmt(tg.dx) + " s = <b>" + fmt(tg.dy/tg.dx, 2) + " m/s²</b>. This is the <b>acceleration</b> (readout: " + fmt(st.a, 2) + " m/s²) ✓";
+    var above = (st.d + st.s)/2, below = (st.d - st.s)/2;
+    return "📐 <b>Area under the v–t graph</b> from 0 to " + fmt(t) + " s: area above the axis = " + fmt(above) + " m" + (below > 0.05 ? ", area below the axis = " + fmt(below) + " m.<br>Displacement = above − below = <b>" + fmt(st.s) + " m</b> ✓ &nbsp; Distance = above + below = <b>" + fmt(st.d) + " m</b> ✓" : ".<br>Displacement = area = <b>" + fmt(st.s) + " m</b> ✓ (same as the readout)");
+  }
+  function tangent(key, st){
+    var m = key === "s" ? st.v : st.a, y = st[key], t1 = Math.max(0, t-1), t2 = Math.min(R.t.hi, t+1);
+    return {t1:t1, t2:t2, y1:y+m*(t1-t), y2:y+m*(t2-t), dx:t2-t1, dy:m*(t2-t1)};
+  }
+  function setupCanvas(c){
+    var dpr = window.devicePixelRatio || 1, w = c.clientWidth || c.width;
+    if (!c.getAttribute("data-ratio")) c.setAttribute("data-ratio", c.height/c.width);
+    var h = c.getAttribute("data-fixed-h") ? +c.getAttribute("data-fixed-h") : Math.round(w * +c.getAttribute("data-ratio"));
+    c.width = Math.round(w*dpr); c.height = Math.round(h*dpr); c.style.height = h + "px";
+    var ctx = c.getContext("2d"); ctx.setTransform(dpr, 0, 0, dpr, 0, 0); return {ctx:ctx, w:w, h:h};
+  }
+  function resize(){ for (var k in cv) cv[k]._g = setupCanvas(cv[k]); }
+  function arrow(ctx, x1, y1, x2, y2, col, w){
+    var ang = Math.atan2(y2-y1, x2-x1), hl = 11; ctx.strokeStyle = col; ctx.fillStyle = col; ctx.lineWidth = w;
+    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2-Math.cos(ang)*hl*0.8, y2-Math.sin(ang)*hl*0.8); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(x2, y2); ctx.lineTo(x2-hl*Math.cos(ang-0.5), y2-hl*Math.sin(ang-0.5)); ctx.lineTo(x2-hl*Math.cos(ang+0.5), y2-hl*Math.sin(ang+0.5)); ctx.closePath(); ctx.fill();
+  }
+  function rr(ctx, x, y, w, h, r){ ctx.beginPath(); ctx.moveTo(x+r, y); ctx.arcTo(x+w, y, x+w, y+h, r); ctx.arcTo(x+w, y+h, x, y+h, r); ctx.arcTo(x, y+h, x, y, r); ctx.arcTo(x, y, x+w, y, r); ctx.closePath(); }
+  function drawAnim(){
+    var g = cv.anim._g || (cv.anim._g = setupCanvas(cv.anim)), ctx = g.ctx, W = g.w, H = g.h, st = stateAt(t);
+    ctx.clearRect(0, 0, W, H); ctx.textBaseline = "alphabetic";
+    if (mode === "h"){
+      var L = 34, Rr = W-34, ry = 150;
+      ctx.fillStyle = "#e2e8f0"; ctx.fillRect(L-10, ry-4, Rr-L+20, 22); ctx.fillStyle = "#475569"; ctx.fillRect(L-10, ry+14, Rr-L+20, 4);
+      ctx.font = "bold 13px Arial"; ctx.textAlign = "center"; ctx.fillStyle = "#111827";
+      for (var m = 0; m <= TRACK; m += 25){ var px = L + (Rr-L)*m/TRACK; ctx.fillRect(px-1, ry+18, 2, 8); ctx.fillText(m + " m", px, ry+42); }
+      ctx.fillStyle = "#16a34a"; ctx.fillRect(L-2, ry-44, 4, 44); ctx.fillStyle = "#dc2626"; ctx.fillRect(Rr-2, ry-44, 4, 44);
+      var cx = L + (Rr-L)*Math.max(0, Math.min(TRACK, st.s))/TRACK, face = st.v < 0 ? -1 : 1;
+      if (st.s > 0.5){ arrow(ctx, L, ry+62, cx, ry+62, "#1d4ed8", 3); ctx.fillStyle = "#1d4ed8"; ctx.font = "bold 13px Arial"; ctx.fillText("s = " + fmt(st.s) + " m", (L+cx)/2, ry+80); }
+      ctx.save(); ctx.translate(cx, ry-4); ctx.scale(face, 1);
+      ctx.fillStyle = "#2563eb"; rr(ctx, -26, -24, 52, 18, 5); ctx.fill(); ctx.fillStyle = "#1d4ed8"; rr(ctx, -14, -36, 26, 14, 5); ctx.fill();
+      ctx.fillStyle = "#bfdbfe"; ctx.fillRect(-10, -33, 9, 9); ctx.fillRect(1, -33, 8, 9); ctx.fillStyle = "#facc15"; ctx.fillRect(22, -20, 4, 5);
+      ctx.fillStyle = "#111827"; ctx.beginPath(); ctx.arc(-14, -5, 6, 0, 7); ctx.arc(14, -5, 6, 0, 7); ctx.fill(); ctx.restore();
+      if (Math.abs(st.v) > 0.05){ var len = Math.max(14, Math.min(170, Math.abs(st.v)*4.5))*(st.v > 0 ? 1 : -1);
+        arrow(ctx, cx, ry-62, cx+len, ry-62, "#16a34a", 5); ctx.fillStyle = "#166534"; ctx.font = "bold 14px Arial"; ctx.textAlign = "center";
+        ctx.fillText("instantaneous v = " + fmt(st.v) + " m/s", Math.min(W-110, Math.max(110, cx+len/2)), ry-74); }
+      if (Math.abs(st.a) > 0.01){ var la = st.a*14; arrow(ctx, cx, ry-100, cx+la, ry-100, "#7c3aed", 4); ctx.fillStyle = "#6d28d9"; ctx.font = "bold 13px Arial"; ctx.textAlign = la > 0 ? "left" : "right"; ctx.fillText("a = " + fmt(st.a,1) + " m/s²", cx+la+(la > 0 ? 6 : -6), ry-96); }
+    } else {
+      var gy = H-26, top = 22, sc = (gy-top)/R.h.hi, narrow = W < 560, bx = narrow ? Math.max(165, W*0.5) : Math.min(W*0.5, 260), hgt = P.h0 + st.s;
+      ctx.fillStyle = "#86efac"; ctx.fillRect(0, gy, W, H-gy); ctx.fillStyle = "#166534"; ctx.fillRect(0, gy, W, 3);
+      ctx.font = "12px Arial"; ctx.textAlign = "right"; ctx.fillStyle = "#111";
+      for (var hh = 0; hh <= R.h.hi + 1e-9; hh += R.h.step){ var yy = gy - hh*sc; ctx.fillRect(44, yy, 8, 2); ctx.fillText(numLabel(hh) + " m", 40, yy+4); }
+      ctx.fillRect(52, top, 2, gy-top);
+      if (P.h0 > 0){ var bt = gy - P.h0*sc; ctx.fillStyle = "#94a3b8"; ctx.fillRect(bx-110, bt, 90, gy-bt); ctx.fillStyle = "#e0f2fe";
+        for (var wy = bt+8; wy < gy-12; wy += 18) for (var wx = bx-102; wx < bx-30; wx += 20) ctx.fillRect(wx, wy, 10, 9);
+        ctx.fillStyle = "#334155"; ctx.font = "bold 12px Arial"; ctx.textAlign = "center"; ctx.fillText("high-rise", bx-65, bt-6); }
+      ctx.strokeStyle = "#cbd5e1"; ctx.setLineDash([4, 4]); ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(bx, gy); ctx.lineTo(bx, top); ctx.stroke(); ctx.setLineDash([]);
+      var by = gy - hgt*sc - 11;
+      ctx.fillStyle = "#dc2626"; ctx.beginPath(); ctx.arc(bx, by, 11, 0, 7); ctx.fill(); ctx.strokeStyle = "#7f1d1d"; ctx.lineWidth = 2; ctx.stroke();
+      if (Math.abs(st.v) > 0.05){ var lv = Math.max(14, Math.min(90, Math.abs(st.v)*3))*(st.v > 0 ? -1 : 1);
+        arrow(ctx, bx+28, by, bx+28, by+lv, "#16a34a", 5); ctx.fillStyle = "#166534"; ctx.font = "bold 14px Arial"; ctx.textAlign = "left"; ctx.fillText((narrow ? "v = " : "instantaneous v = ") + fmt(st.v) + " m/s", bx+40, Math.max(16, by-4)); }
+      var lA = Math.min(70, Math.abs(st.a)*3.5); arrow(ctx, bx-28, by, bx-28, by + (st.a < 0 ? lA : -lA), "#7c3aed", 4);
+      ctx.fillStyle = "#6d28d9"; ctx.font = "bold 13px Arial"; ctx.textAlign = "right"; ctx.fillText((narrow ? "a=" : "a = ") + fmt(st.a, narrow ? 1 : 2) + (narrow ? "" : " m/s²"), bx-38, Math.min(gy-6, by+18));
+      if (analytic && P.vu > 0 && Math.abs(st.v) < 0.35 && t > 0.05){ ctx.fillStyle = "#b91c1c"; ctx.font = "bold 15px Arial"; ctx.textAlign = "left"; if (narrow){ ctx.textAlign = "left"; ctx.font = "bold 13px Arial"; ctx.fillText("Top: v = 0, a = −9.81!", 60, 34); } else ctx.fillText("At the top: v = 0 but a is still −9.81 m/s²!", bx+40, Math.max(36, by+22)); }
+      ctx.fillStyle = "#111"; ctx.font = "bold 13px Arial"; ctx.textAlign = "right"; ctx.fillText(P.drag ? "Air resistance ON" : "No air resistance", W-10, 18);
+    }
+  }
+  function axes(c, xr, yr, ylab){
+    var g = c._g || (c._g = setupCanvas(c)), ctx = g.ctx, W = g.w, H = g.h, Pd = {l:46, r:10, t:10, b:38};
+    var pw = W-Pd.l-Pd.r, ph = H-Pd.t-Pd.b;
+    function X(v){ return Pd.l + pw*v/xr.hi; } function Y(v){ return Pd.t + ph*(yr.hi-v)/(yr.hi-yr.lo); }
+    ctx.clearRect(0, 0, W, H); ctx.font = "11px Arial"; ctx.lineWidth = 1; ctx.strokeStyle = "#e5e7eb"; ctx.fillStyle = "#374151";
+    ctx.textAlign = "right"; ctx.textBaseline = "middle";
+    for (var i = 0; ; i++){ var y = yr.lo + i*yr.step; if (y > yr.hi+1e-9) break; ctx.beginPath(); ctx.moveTo(Pd.l, Y(y)); ctx.lineTo(W-Pd.r, Y(y)); ctx.stroke(); ctx.fillText(numLabel(y), Pd.l-4, Y(y)); }
+    ctx.textAlign = "center"; ctx.textBaseline = "top";
+    for (i = 0; ; i++){ var x = i*xr.step; if (x > xr.hi+1e-9) break; ctx.beginPath(); ctx.moveTo(X(x), Pd.t); ctx.lineTo(X(x), H-Pd.b); ctx.stroke(); ctx.fillText(numLabel(x), X(x), H-Pd.b+3); }
+    ctx.strokeStyle = "#111827"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(Pd.l, Pd.t); ctx.lineTo(Pd.l, H-Pd.b); ctx.stroke();
+    var y0 = Math.min(Math.max(0, yr.lo), yr.hi); ctx.beginPath(); ctx.moveTo(Pd.l, Y(y0)); ctx.lineTo(W-Pd.r, Y(y0)); ctx.stroke();
+    ctx.font = "bold 12px Arial"; ctx.fillStyle = "#111827"; ctx.fillText("t / s", Pd.l+pw/2, H-17);
+    ctx.save(); ctx.translate(11, Pd.t+ph/2); ctx.rotate(-Math.PI/2); ctx.textBaseline = "middle"; ctx.fillText(ylab, 0, 0); ctx.restore();
+    return {ctx:ctx, X:X, Y:Y, y0:Y(y0), Pd:Pd, W:W, H:H};
+  }
+  function pts(key){ var out = []; for (var i = 0; i < traj.length && traj[i].t <= t + 1e-9; i++) out.push(traj[i]); out.push(stateAt(t)); return out; }
+  function plot(Gr, key, col){
+    var ctx = Gr.ctx, p = pts(key); ctx.strokeStyle = col; ctx.lineWidth = 3; ctx.beginPath();
+    p.forEach(function(q, i){ var x = Gr.X(q.t), y = Gr.Y(q[key]); if (i) ctx.lineTo(x, y); else ctx.moveTo(x, y); }); ctx.stroke();
+    var lp = p[p.length-1]; ctx.fillStyle = col; ctx.beginPath(); ctx.arc(Gr.X(lp.t), Gr.Y(lp[key]), 5, 0, 7); ctx.fill();
+  }
+  function drawTangent(Gr, key, st){
+    var tg = tangent(key, st), ctx = Gr.ctx;
+    ctx.strokeStyle = "#c2410c"; ctx.lineWidth = 2.5; ctx.setLineDash([6, 4]); ctx.beginPath(); ctx.moveTo(Gr.X(tg.t1), Gr.Y(tg.y1)); ctx.lineTo(Gr.X(tg.t2), Gr.Y(tg.y2)); ctx.stroke(); ctx.setLineDash([]);
+    ctx.strokeStyle = "#7c3aed"; ctx.lineWidth = 2.5; ctx.beginPath(); ctx.moveTo(Gr.X(tg.t1), Gr.Y(tg.y1)); ctx.lineTo(Gr.X(tg.t2), Gr.Y(tg.y1)); ctx.lineTo(Gr.X(tg.t2), Gr.Y(tg.y2)); ctx.stroke();
+    ctx.fillStyle = "#6d28d9"; ctx.font = "bold 11px Arial"; ctx.textAlign = "center"; ctx.textBaseline = "top";
+    ctx.fillText("Δt = " + fmt(tg.dx), Gr.X((tg.t1+tg.t2)/2), Gr.Y(tg.y1) + (tg.dy >= 0 ? 3 : -15));
+    ctx.textAlign = "left"; ctx.textBaseline = "middle"; ctx.fillText("Δ" + (key === "s" ? "s" : "v") + " = " + fmt(tg.dy), Math.min(Gr.X(tg.t2)+3, Gr.W-60), Gr.Y((tg.y1+tg.y2)/2));
+  }
+  function shadeArea(Gr){
+    var ctx = Gr.ctx, p = pts("v"); if (p.length < 2) return;
+    function poly(){ ctx.beginPath(); ctx.moveTo(Gr.X(p[0].t), Gr.y0); p.forEach(function(q){ ctx.lineTo(Gr.X(q.t), Gr.Y(q.v)); }); ctx.lineTo(Gr.X(p[p.length-1].t), Gr.y0); ctx.closePath(); }
+    ctx.save(); ctx.beginPath(); ctx.rect(0, 0, Gr.W, Gr.y0); ctx.clip(); poly(); ctx.fillStyle = "rgba(59,130,246,0.35)"; ctx.fill(); ctx.restore();
+    ctx.save(); ctx.beginPath(); ctx.rect(0, Gr.y0, Gr.W, Gr.H); ctx.clip(); poly(); ctx.fillStyle = "rgba(239,68,68,0.35)"; ctx.fill(); ctx.restore();
+  }
+  function drawGraphs(){
+    var st = stateAt(t);
+    var G1 = axes(cv.s, R.t, R.s, "s / m"); if (measure === "sgrad" && t >= 0.05) drawTangent(G1, "s", st); plot(G1, "s", "#1d4ed8");
+    var G2 = axes(cv.v, R.t, R.v, "v / m s⁻¹"); if (measure === "area" && t >= 0.05) shadeArea(G2); if (measure === "vgrad" && t >= 0.05) drawTangent(G2, "v", st); plot(G2, "v", "#16a34a");
+    var G3 = axes(cv.a, R.t, R.a, "a / m s⁻²"); plot(G3, "a", "#7c3aed");
+  }
+  function draw(){ drawAnim(); drawGraphs(); }
+  ["uSlider","aSlider","vuSlider","h0Slider"].forEach(function(i){ if ($(i)) $(i).addEventListener("input", reset); });
+  if ($("dragBox")) $("dragBox").addEventListener("change", reset);
+  document.querySelectorAll("input[name=simMode]").forEach(function(r){ r.addEventListener("change", function(){ mode = this.value; reset(); }); });
+  $("playBtn").addEventListener("click", function(){ running ? pause() : play(); });
+  $("resetBtn").addEventListener("click", reset);
+  $("measureSel").addEventListener("change", function(){ measure = this.value; update(); draw(); });
+  window.addEventListener("resize", function(){ resize(); draw(); });
+  return {reset:reset, draw:draw, resize:resize, pause:pause, play:play,
+    jumpTo:function(T){ pause(); t = Math.max(0, Math.min(T, tEnd)); if (t >= tEnd && tEnd > 0) $("simMsg").textContent = finishMsg(); else $("simMsg").textContent = "Paused at t = " + fmt(t) + " s."; update(); draw(); },
+    set:function(o){ if (o.mode){ mode = o.mode; var r = document.querySelector("input[name=simMode][value=" + o.mode + "]"); if (r) r.checked = true; }
+      if (o.u != null) $("uSlider").value = o.u; if (o.a != null) $("aSlider").value = o.a;
+      if (o.vu != null) $("vuSlider").value = o.vu; if (o.h0 != null) $("h0Slider").value = o.h0; if (o.drag != null && $("dragBox")) $("dragBox").checked = o.drag;
+      if (o.measure){ measure = o.measure; $("measureSel").value = o.measure; } reset(); },
+    state:function(){ var s = stateAt(t); return {t:t, s:s.s, v:s.v, a:s.a, d:s.d, h:P.h0+s.s, tEnd:tEnd, why:why, mode:mode, maxH:Math.max.apply(null, traj.map(function(p){ return P.h0+p.s; }))}; },
+    texts:function(){ return {measure:$("measureOut").textContent, eq:$("eqPanel").textContent}; }};
+})();
+
+/* ===== init ===== */
+updateScore();
+if (sim) sim.reset();
+var startHash = location.hash, mh = /#step(\d+)/.exec(startHash);
+go(mh ? Math.min(steps.length-1, Math.max(0, parseInt(mh[1],10)-1)) : 0, true);
+if (/demo/.test(startHash) && sim && LESSON.demo && steps[cur].querySelector("#animCanvas")){ sim.set(LESSON.demo.set); sim.jumpTo(LESSON.demo.t); }
+window.__lesson = {go:go, sim:sim, qState:qState, allQ:allQ, parseNum:parseNum, steps:steps};
+})();
+
+</script>
+</body>
+</html>

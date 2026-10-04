@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lesson 1.4a: Change of State and Latent Heat | HKDSE Physics</title>
+<title>Lesson 3.5: Reflection of Light and Plane Mirrors | HKDSE Physics</title>
 <style>
   :root{--bg:#fffaf0;--card:#fff;--ink:#111827;--muted:#374151;--blue:#1d4ed8;--blue-l:#dbeafe;--green:#166534;--green-l:#dcfce7;
     --red:#b91c1c;--red-l:#fee2e2;--orange:#c2410c;--orange-l:#ffedd5;--purple:#6d28d9;--purple-l:#ede9fe;--yellow-l:#fef9c3;--focus:#f59e0b}
@@ -115,7 +115,7 @@
 <body>
 <a href="#main" class="sr-only">Skip to content</a>
 <header>
-  <h1>🧊 Lesson 1.4a: Change of State &amp; Latent Heat <span class="zh">(物態的改變和潛熱)</span></h1>
+  <h1>🪞 Lesson 3.5: Reflection of Light and Plane Mirrors <span class="zh">(光的反射與平面鏡)</span></h1>
   <div style="display:flex;gap:.8rem;align-items:center;flex-wrap:wrap">
     <a href="index.html" class="home-link">🏠 All lessons</a>
     <span class="score-pill" id="scorePill" aria-live="polite">⭐ 0 / 0</span>
@@ -129,183 +129,135 @@
 <main id="main">
 <section class="step" data-id="welcome" data-name="Welcome">
 <div class="welcome-hero">
-  <div class="big" aria-hidden="true">🧊 💧 ♨️ 🥤</div>
-  <h2 tabindex="-1">Lesson 1.4a: Change of State and Latent Heat <span class="zh">(物態的改變和潛熱)</span></h2>
-  <p>Put a thermometer in a glass of iced lemon tea: it stays near 0 °C until the ice is gone, even though the tea is absorbing energy from the warm air. Where does that energy go?</p>
+  <div class="big" aria-hidden="true">🪞 💡 👀 🔦</div>
+  <h2 tabindex="-1">Lesson 3.5: Reflection of Light and Plane Mirrors <span class="zh">(光的反射與平面鏡)</span></h2>
+  <p>You see this page because light from it enters your eyes. In this lesson you learn how light reflects, why your image in a mirror seems to be behind the glass, and how to draw ray diagrams for mirrors.</p>
 </div>
 <table class="t" aria-label="Key words in this lesson">
   <tr><th>Key word</th><th>Short meaning</th></tr>
-  <tr><td>melting / freezing <span class="zh">(熔解 / 凝固)</span></td><td>solid ⇄ liquid at the melting point</td></tr>
-  <tr><td>boiling / condensation <span class="zh">(沸騰 / 凝結)</span></td><td>liquid ⇄ gas at the boiling point</td></tr>
-  <tr><td>latent heat <span class="zh">(潛熱)</span></td><td>Energy transferred during a change of state without a change in temperature.</td></tr>
-  <tr><td>specific latent heat ℓ <span class="zh">(比潛熱)</span></td><td>Energy to change the state of 1 kg without temperature change.</td></tr>
+  <tr><td>luminous object <span class="zh">(發光體)</span></td><td>Gives out its own light (Sun, bulb, candle flame).</td></tr>
+  <tr><td>normal <span class="zh">(法線)</span></td><td>Line perpendicular to the surface at the point where the ray hits it.</td></tr>
+  <tr><td>angle of incidence / reflection <span class="zh">(入射角 / 反射角)</span></td><td>Angles between the normal and the incident / reflected ray.</td></tr>
+  <tr><td>real / virtual image <span class="zh">(實像 / 虛像)</span></td><td>Light really passes through it (can be caught on a screen) / light only seems to come from it.</td></tr>
+  <tr><td>laterally inverted <span class="zh">(左右倒轉)</span></td><td>Left and right are swapped.</td></tr>
 </table>
-<div class="box key"><span class="box-title">Constants used</span>c(water) = 4200 J kg⁻¹ °C⁻¹ · c(ice) = 2100 J kg⁻¹ °C⁻¹ · ℓ<sub>f</sub>(ice) = 3.34 × 10⁵ J kg⁻¹ · ℓ<sub>v</sub>(water) = 2.26 × 10⁶ J kg⁻¹</div>
-<div class="lesson-link">⬅️ Previous: <a href="1-3-specific-heat-capacity.html">Lesson 1.3: Heat Capacity and Specific Heat Capacity</a> &nbsp;·&nbsp; ➡️ Next: <a href="1-4b-evaporation.html">Lesson 1.4b: Evaporation</a> &nbsp;·&nbsp; 🏠 <a href="index.html">All lessons</a></div>
+<div class="lesson-link">⬅️ Previous: <a href="3-4-stationary-waves.html">Lesson 3.4: Stationary Waves</a> &nbsp;·&nbsp; ➡️ Next: <a href="3-6a-refraction-of-light.html">Lesson 3.6a: Refraction of Light</a> &nbsp;·&nbsp; 🏠 <a href="index.html">All lessons</a></div>
 </section>
-<section class="step" data-id="states" data-name="States of Matter">
+<section class="step" data-id="rays" data-name="Light Rays and the Laws of Reflection">
 <span class="tag">Idea 1</span>
-<h2 tabindex="-1">Three states of matter</h2>
+<h2 tabindex="-1">Light rays and the laws of reflection</h2>
 <div class="grid2">
   <div>
-    <p>Matter exists in three states: <b>solid</b>, <b>liquid</b> and <b>gas</b>. Heating or cooling can change the state.</p>
-    <table class="t"><tr><th>Change</th><th>Name</th><th>Happens at</th></tr>
-      <tr><td>solid → liquid</td><td>melting (fusion)</td><td rowspan="2">melting point (= freezing point)</td></tr>
-      <tr><td>liquid → solid</td><td>freezing (solidification)</td></tr>
-      <tr><td>liquid → gas</td><td>boiling (vaporization)</td><td rowspan="2">boiling point</td></tr>
-      <tr><td>gas → liquid</td><td>condensation</td></tr></table>
-    <p>At standard atmospheric pressure pure water melts at <b>0 °C</b> and boils at <b>100 °C</b>.</p>
+    <ul class="simple"><li><b>Luminous</b> objects give out light; <b>non-luminous</b> objects (the Moon, a book, people) are seen because they <b>reflect</b> light into our eyes.</li><li>Light travels in <b>straight lines</b>. A <b>ray</b> is a straight line with an arrow; a beam can be parallel, diverging or converging.</li></ul>
+    <div class="box formula"><span class="box-title">⭐ Laws of reflection</span>1. The angle of incidence equals the angle of reflection: <b>i = r</b>.<br>2. The incident ray, the reflected ray and the normal all lie in the <b>same plane</b>.<br>Angles are measured from the <b>normal</b>, not from the mirror.</div>
   </div>
-  <div class="box key"><span class="box-title">Reading melting and boiling points ⭐</span>A substance is a <b>solid</b> below its melting point, a <b>liquid</b> between its melting and boiling points, and a <b>gas</b> above its boiling point.<br><br>Example: ethanol melts at −114 °C and boils at 78 °C, so at room temperature (25 °C) it is a <b>liquid</b>.</div>
+  <div>
+    <div class="box key"><span class="box-title">Regular vs diffuse reflection</span><b>Regular</b>: a smooth flat surface (mirror, calm water) reflects a parallel beam as a parallel beam ⇒ clear image.<br><b>Diffuse</b>: a rough surface (paper, wall, blackboard) scatters the light in many directions ⇒ no image, but the surface can be seen from everywhere.<br>Every single ray still obeys the laws of reflection in both cases.</div>
+    <div class="box warn"><span class="box-title">Common mistake ⚠️</span>If a ray makes 35° with the <i>mirror</i>, the angle of incidence is 90° − 35° = 55°.</div>
+  </div>
 </div>
 </section>
-<section class="step" data-id="curve" data-name="Heating &amp; Cooling Curves">
+<section class="step" data-id="image" data-name="Images in a Plane Mirror">
 <span class="tag">Idea 2</span>
-<h2 tabindex="-1">Cooling curves: finding the melting point</h2>
+<h2 tabindex="-1">The image formed by a plane mirror</h2>
 <div class="grid2">
   <div>
-    <div class="box eg"><span class="box-title">🔬 Experiment: cooling curve of octadecan-1-ol</span>Melt the solid in a boiling tube in a hot water bath. Remove the bath and let the liquid cool in air, recording the temperature every 30 s until it reaches about 30 °C. Plot temperature against time.</div>
-    <ul class="simple"><li><b>AB</b>: liquid cooling — temperature falls.</li><li><b>BC</b>: <b>flat</b> — the liquid is <b>freezing</b>; solid and liquid exist together. The constant temperature is the <b>melting (freezing) point</b> (about 58 °C). It is still losing energy to the air: it gives out <b>latent heat</b>.</li><li><b>CD</b>: solid cooling towards room temperature.</li></ul>
+    <p>Rays from the object reflect off the mirror into the eye. The brain assumes light travels in straight lines, so the light <b>seems</b> to come from a point behind the mirror: the <b>image</b>. No light really goes there, so it is a <b>virtual</b> image (drawn dashed).</p>
+    <div class="box key"><span class="box-title">Nature of the image ⭐</span><ul class="simple"><li><b>virtual</b> (cannot be caught on a screen)</li><li><b>erect</b> (upright)</li><li><b>same size</b> as the object</li><li><b>laterally inverted</b></li><li>as far behind the mirror as the object is in front: <b>v = u</b>, on the normal through the object</li></ul></div>
   </div>
-  <div class="visual">
-    <svg viewBox="0 0 300 210" role="img" aria-label="Cooling curve: temperature falls (AB), stays flat at the freezing point (BC), then falls again towards room temperature (CD).">
-      <rect width="300" height="210" fill="#fff"/><line x1="40" y1="180" x2="290" y2="180" stroke="#111" stroke-width="2"/><line x1="40" y1="180" x2="40" y2="15" stroke="#111" stroke-width="2"/>
-      <path d="M45 30 Q75 75 100 95 L190 95 Q220 140 285 160" fill="none" stroke="#dc2626" stroke-width="3"/>
-      <line x1="40" y1="95" x2="100" y2="95" stroke="#64748b" stroke-dasharray="4 3"/><text x="36" y="99" font-size="10" text-anchor="end">58 °C</text>
-      <text x="48" y="28" font-size="12" font-weight="800">A</text><text x="98" y="88" font-size="12" font-weight="800">B</text><text x="188" y="88" font-size="12" font-weight="800">C</text><text x="280" y="152" font-size="12" font-weight="800">D</text>
-      <text x="145" y="112" font-size="11" text-anchor="middle">freezing: liquid + solid</text>
-      <text x="165" y="198" font-size="11" text-anchor="middle">time</text><text x="14" y="100" font-size="11" transform="rotate(-90 14 100)" text-anchor="middle">temperature</text>
-    </svg>
-  </div>
-</div>
-<div class="box key"><span class="box-title">Heating curve of ice at constant power</span>A heating curve is the reverse: the temperature rises, stays flat while the ice <b>melts</b> (0 °C), rises again, then stays flat while the water <b>boils</b> (100 °C). The simulation draws one for you.</div>
-</section>
-<section class="step" data-id="latent" data-name="Latent Heat &amp; Molecules">
-<span class="tag">Idea 3</span>
-<h2 tabindex="-1">Latent heat: where does the energy go?</h2>
-<div class="grid2">
-  <div>
-    <div class="box key"><span class="box-title">Latent heat ⭐</span><b>Latent heat</b> is the energy transferred during a <b>change of state without a change in temperature</b>. It is <b>absorbed</b> during melting and boiling and <b>released</b> during freezing and condensation.</div>
-    <div class="box key"><span class="box-title">Molecular interpretation ⭐</span><ul class="simple"><li>When the temperature rises, the energy absorbed increases the <b>K.E.</b> of the molecules.</li><li>During melting or boiling the temperature (and so the average K.E.) stays the same: the latent heat increases the <b>P.E.</b> of the molecules — it is used to <b>overcome the attractive forces</b> between them and <b>increase their separation</b>.</li><li>Boiling separates the molecules completely, so ℓ<sub>v</sub> is much bigger than ℓ<sub>f</sub>.</li></ul></div>
-  </div>
-  <div>
-    <div class="box warn"><span class="box-title">Exam wording ⚠️</span><ul class="simple"><li>“The energy is used to vaporize the water.” ✗ Not enough marks. Say: “the energy is absorbed as <b>latent heat</b>, which <b>increases the potential energy</b> of the molecules (separation increases) while the K.E. and temperature stay constant.”</li><li>“During freezing the substance does not lose energy because its temperature is constant.” ✗ It <b>releases latent heat</b>; the P.E. of its molecules decreases.</li></ul></div>
-    <div class="box eg"><span class="box-title">♨️ Why steam scalds more</span>Steam at 100 °C first <b>condenses</b> on your skin, releasing 2.26 × 10⁶ J per kg, and then the hot water cools. So steam burns are worse than burns from boiling water at the same temperature.</div>
+  <div><svg viewBox="0 0 400 230" role="img" aria-label="Ray diagram: an object arrow in front of a plane mirror, its virtual image the same distance behind, and two rays reflected to the eye. Dashed lines are virtual rays."><rect width="400" height="230" fill="#fff"/><line x1="200" y1="30" x2="200" y2="200" stroke="#0369a1" stroke-width="5"/><line x1="202" y1="40" x2="210" y2="32" stroke="#0369a1"/><line x1="202" y1="52" x2="210" y2="44" stroke="#0369a1"/><line x1="202" y1="64" x2="210" y2="56" stroke="#0369a1"/><line x1="202" y1="76" x2="210" y2="68" stroke="#0369a1"/><line x1="202" y1="88" x2="210" y2="80" stroke="#0369a1"/><line x1="202" y1="100" x2="210" y2="92" stroke="#0369a1"/><line x1="202" y1="112" x2="210" y2="104" stroke="#0369a1"/><line x1="202" y1="124" x2="210" y2="116" stroke="#0369a1"/><line x1="202" y1="136" x2="210" y2="128" stroke="#0369a1"/><line x1="202" y1="148" x2="210" y2="140" stroke="#0369a1"/><line x1="202" y1="160" x2="210" y2="152" stroke="#0369a1"/><line x1="202" y1="172" x2="210" y2="164" stroke="#0369a1"/><line x1="202" y1="184" x2="210" y2="176" stroke="#0369a1"/><line x1="202" y1="196" x2="210" y2="188" stroke="#0369a1"/><line x1="120" y1="200" x2="120" y2="120" stroke="#111" stroke-width="3"/><polygon points="114,130 120,120 126,130" fill="#111"/><text x="110" y="114" font-size="13" font-weight="700" text-anchor="end">O</text><line x1="280" y1="200" x2="280" y2="120" stroke="#111" stroke-width="2.5" stroke-dasharray="6 4"/><polygon points="274,130 280,120 286,130" fill="none" stroke="#111"/><text x="288" y="114" font-size="13" font-weight="700">I</text><line x1="280" y1="120" x2="200" y2="110.0" stroke="#dc2626" stroke-dasharray="5 4"/><line x1="120" y1="120" x2="200" y2="110.0" stroke="#dc2626" stroke-width="2"/><line x1="200" y1="110.0" x2="40" y2="90" stroke="#dc2626" stroke-width="2"/><line x1="280" y1="200" x2="200" y2="163.3" stroke="#dc2626" stroke-dasharray="5 4"/><line x1="120" y1="200" x2="200" y2="163.3" stroke="#dc2626" stroke-width="2"/><line x1="200" y1="163.3" x2="40" y2="90" stroke="#dc2626" stroke-width="2"/><circle cx="40" cy="90" r="9" fill="#fff" stroke="#111" stroke-width="2"/><circle cx="43" cy="90" r="3.5" fill="#111"/><text x="40" y="76" font-size="11" text-anchor="middle">eye</text><line x1="120" y1="212" x2="200" y2="212" stroke="#16a34a"/><text x="160.0" y="225" font-size="11" text-anchor="middle" fill="#16a34a">u</text><line x1="200" y1="212" x2="280" y2="212" stroke="#16a34a"/><text x="240.0" y="225" font-size="11" text-anchor="middle" fill="#16a34a">v = u</text></svg>
+    <div class="box formula"><span class="box-title">Drawing a ray diagram ⭐</span>1. Locate the image I (same distance behind, on the normal).<br>2. Draw <b>dashed</b> lines from I to the mirror, aimed at the eye.<br>3. Draw <b>solid</b> rays from those points on the mirror to the eye, with arrows.<br>4. Draw <b>solid</b> rays from the object O to the same points on the mirror.</div>
   </div>
 </div>
 </section>
-<section class="step" data-id="p1" data-name="Practice: States &amp; Latent Heat">
+<section class="step" data-id="p1" data-name="Practice: Reflection and Images">
 <span class="tag quiz">Practice 1</span>
-<h2 tabindex="-1">Practice: states of matter and latent heat</h2>
+<h2 tabindex="-1">Practice: reflection and images</h2>
 <div class="quiz" data-quiz="p1"></div>
 </section>
-<section class="step" data-id="spec" data-name="Specific Latent Heat">
-<span class="tag">Idea 4</span>
-<h2 tabindex="-1">Specific latent heat</h2>
+<section class="step" data-id="sim" data-name="Simulation">
+<span class="tag sim">Try it!</span>
+<h2 tabindex="-1">Simulation: plane-mirror ray diagrams</h2>
+<p>The mirror is on a wall (blue line). Solid red lines are real rays; dashed lines are virtual rays from the image. Move the object, the eye and the mirror, check a full-length mirror, or put an object between two mirrors.</p>
+<div class="sim-panel">
+  <div role="radiogroup" aria-label="Mode" style="display:flex;flex-direction:column;gap:.5rem">
+    <label class="opt"><input type="radio" name="pmMode" value="obj" checked> Object and eye</label>
+    <label class="opt"><input type="radio" name="pmMode" value="body"> Seeing your whole body</label>
+    <label class="opt"><input type="radio" name="pmMode" value="two"> Two mirrors at an angle</label>
+    <label class="opt" id="thWrap">Angle between mirrors: <select id="thSel"><option value="90">90°</option><option value="60">60°</option><option value="45">45°</option><option value="36">36°</option><option value="30">30°</option></select></label>
+  </div>
+  <div><div id="objSl"><div class="slider"><label for="uSl"><span>Object distance u</span><span id="uSlVal"></span></label>
+    <input type="range" id="uSl" min="0.3" max="2.5" step="0.1" value="1.2"></div><div class="slider"><label for="exSl"><span>Eye distance from mirror</span><span id="exSlVal"></span></label>
+    <input type="range" id="exSl" min="0.3" max="2.8" step="0.1" value="2.0"></div><div class="slider"><label for="eySl"><span>Eye height</span><span id="eySlVal"></span></label>
+    <input type="range" id="eySl" min="0.3" max="2.0" step="0.05" value="1.5"></div></div>
+  <div id="bodySl"><div class="slider"><label for="dSl"><span>Distance from mirror</span><span id="dSlVal"></span></label>
+    <input type="range" id="dSl" min="0.3" max="2.5" step="0.1" value="1.0"></div><div class="slider"><label for="hSl"><span>Height of person</span><span id="hSlVal"></span></label>
+    <input type="range" id="hSl" min="1.4" max="1.9" step="0.02" value="1.8"></div></div>
+  <div id="mirSl"><div class="slider"><label for="mbSl"><span>Bottom of mirror above floor</span><span id="mbSlVal"></span></label>
+    <input type="range" id="mbSl" min="0" max="1.5" step="0.05" value="0.6"></div><div class="slider"><label for="mlSl"><span>Length of mirror</span><span id="mlSlVal"></span></label>
+    <input type="range" id="mlSl" min="0.1" max="2.0" step="0.05" value="1.0"></div></div>
+  <div id="twoSl"><div class="slider"><label for="pSl"><span>Object position between mirrors</span><span id="pSlVal"></span></label>
+    <input type="range" id="pSl" min="0.1" max="0.9" step="0.05" value="0.4"></div></div></div>
+</div>
+<canvas id="animCanvas" width="900" height="420" data-fixed-h="420" aria-label="Side view of a plane mirror with an object, its image and rays to an eye; or top view of two mirrors and their images"></canvas>
+<div class="readout">
+  <div class="ro v"><div class="lab">Object / image</div><div class="val" id="roA"></div></div><div class="ro a"><div class="lab">Angles at the mirror</div><div class="val" id="roB"></div></div><div class="ro d"><div class="lab">Mirror needed</div><div class="val" id="roC"></div></div><div class="ro av"><div class="lab">Can the eye see it?</div><div class="val" id="roD"></div></div>
+</div>
+<p class="sim-msg" id="simMsg" role="status"></p>
+<div class="box key"><span class="box-title">Things to try</span><ul class="simple">
+  <li>Move the eye. Does the image move? Does the point where the ray hits the mirror move?</li>
+  <li>Whole body: find the shortest mirror that still shows your whole body. Then step back — do you see more?</li>
+  <li>Two mirrors: count the images for each angle and compare with 360°/θ − 1.</li></ul></div>
+</section>
+<section class="step" data-id="psim" data-name="Practice: Using the Simulation">
+<span class="tag quiz">Practice 2</span>
+<h2 tabindex="-1">Practice: predict, then check with the simulation</h2>
+<div class="quiz" data-quiz="psim"></div>
+</section>
+<section class="step" data-id="apps" data-name="Applications">
+<span class="tag">Idea 3</span>
+<h2 tabindex="-1">Mirror applications and favourite exam set-ups</h2>
 <div class="grid2">
   <div>
-    <div class="box formula"><span class="box-title">Definitions ⭐</span>Specific latent heat of <b>fusion</b>: <b>ℓ<sub>f</sub> = E/m</b> (guide: Q/m) — energy to change 1 kg of solid to liquid at its melting point.<br>Specific latent heat of <b>vaporization</b>: <b>ℓ<sub>v</sub> = E/m</b> — energy to change 1 kg of liquid to gas at its boiling point.<br>So <b>E = mℓ</b>. Unit: <b>J kg⁻¹</b>.</div>
-    <p>For water: ℓ<sub>f</sub> = 3.34 × 10⁵ J kg⁻¹, ℓ<sub>v</sub> = 2.26 × 10⁶ J kg⁻¹. In general ℓ<sub>v</sub> ≫ ℓ<sub>f</sub> ≫ c (for the same substance).</p>
+    <div class="box key"><span class="box-title">Full-length mirror ⭐</span>To see your whole body you need a mirror at least <b>half your height</b>, with its bottom at <b>half your eye height</b>. This does <b>not</b> depend on how far you stand from the mirror (similar triangles).</div>
+    <div class="box key"><span class="box-title">Rotating a mirror</span>If the incident ray is fixed and the mirror turns through θ, the reflected ray turns through <b>2θ</b>.</div>
+    <div class="box key"><span class="box-title">Moving mirror or moving person</span>You walk towards a fixed mirror at v: your image moves towards the mirror at v, so it approaches <b>you</b> at 2v. If the <b>mirror</b> moves away at v, your image moves away from you (and from the ground) at <b>2v</b>.</div>
   </div>
-  <div class="box key"><span class="box-title">Reading a heating curve (constant power P) ⭐</span><ul class="simple"><li>Sloping parts: Pt = mcΔT ⇒ gradient = P/(mc). <b>Steeper → smaller c</b>.</li><li>Flat parts: Pt = mℓ ⇒ <b>longer flat part → larger ℓ</b>.</li></ul>For water the boiling plateau is about <b>6.8 times</b> as long as the melting plateau (2.26 × 10⁶ ÷ 3.34 × 10⁵).</div>
+  <div>
+    <div class="box eg"><span class="box-title">🔭 Periscope</span>Two parallel plane mirrors at 45° to the tube. Light reflects twice. Final image: <b>virtual, erect, same size, not laterally inverted</b> (two lateral inversions cancel), and farther away by the length of the tube.</div>
+    <div class="box eg"><span class="box-title">Two mirrors at an angle θ</span>Images of images form. Number of images <b>n = 360°/θ − 1</b> (when 360°/θ is a whole even number): 90° → 3, 60° → 5. Parallel mirrors (θ → 0, e.g. in a lift) give a very large number of images.</div>
+    <div class="box warn"><span class="box-title">Common mistake ⚠️</span>A clock seen in a mirror reading 3:00 actually shows 9:00 (lateral inversion).</div>
+  </div>
 </div>
 </section>
 <section class="step" data-id="worked" data-name="Worked Examples">
 <span class="tag">Worked examples</span>
-<h2 tabindex="-1">Solving latent heat problems</h2>
-<div class="box key"><span class="box-title">Strategy ⭐</span>Split the process into stages. Each <b>temperature change</b> uses mcΔT; each <b>change of state</b> uses mℓ. Add the stages. Then use E = Pt or energy lost = energy gained.</div>
+<h2 tabindex="-1">Plane-mirror calculations</h2>
 <div class="grid2">
-  <div class="box eg worked"><span class="box-title">✏️ Example 1: ice at 0 °C → steam at 100 °C (1 kg)</span>melt: 1 × 3.34 × 10⁵ = 334 000 J<br>heat water: 1 × 4200 × 100 = 420 000 J<br>boil: 1 × 2.26 × 10⁶ = 2 260 000 J<br>total = <b>3.01 × 10⁶ J</b> — boiling needs by far the most energy.</div>
-  <div class="box eg worked"><span class="box-title">✏️ Example 2: making ice</span>0.40 kg of water at 30 °C is put in a freezer that removes energy at 200 W. How long until it is all ice at 0 °C?<br>cool to 0 °C: 0.40 × 4200 × 30 = 50 400 J<br>freeze: 0.40 × 3.34 × 10⁵ = 133 600 J<br>E = 184 000 J ⇒ t = 184 000 ÷ 200 = <b>920 s</b></div>
+  <div class="box eg worked"><span class="box-title">✏️ Example 1: smallest full-length mirror</span>Mandy is 1.70 m tall and her eyes are 1.60 m above the floor. She stands 0.8 m from a wall mirror.<br>Ray from the image of her feet to her eye meets the mirror halfway up: bottom of mirror = 1.60 ÷ 2 = <b>0.80 m</b> above the floor.<br>Ray from the image of the top of her head: top of mirror = (1.70 + 1.60) ÷ 2 = 1.65 m.<br>Minimum length = 1.65 − 0.80 = <b>0.85 m</b> = half her height. Her distance (0.8 m) does not matter.</div>
+  <div class="box eg worked"><span class="box-title">✏️ Example 2: moving images</span>Ken stands 3.0 m in front of a mirror.<br>(a) Distance to his image = 3.0 + 3.0 = <b>6.0 m</b>.<br>(b) He walks towards the mirror at 1.5 m s⁻¹. His image moves towards the mirror at 1.5 m s⁻¹, so it approaches Ken at <b>3.0 m s⁻¹</b>.<br>(c) Instead, the mirror moves away from Ken at 0.5 m s⁻¹: his image moves away at <b>1.0 m s⁻¹</b> (relative to the ground).</div>
 </div>
-<div class="box eg worked"><span class="box-title">✏️ Example 3: boiling away</span>A 1200 W kettle has just brought 0.80 kg of water to the boil. Assuming no loss, how much water is left after a further 3 minutes of boiling?<br>Energy = 1200 × 180 = 216 000 J ⇒ mass boiled away = 216 000 ÷ 2.26 × 10⁶ = 0.0956 kg ⇒ <b>0.704 kg</b> left. (Units check: J ÷ J kg⁻¹ = kg ✓)</div>
 </section>
-<section class="step" data-id="p2" data-name="Practice: Specific Latent Heat">
-<span class="tag quiz">Practice 2</span>
-<h2 tabindex="-1">Practice: specific latent heat calculations</h2>
-<div class="quiz" data-quiz="p2"></div>
-</section>
-<section class="step" data-id="sim" data-name="Simulation">
-<span class="tag sim">Try it!</span>
-<h2 tabindex="-1">Simulation: heating curve of ice</h2>
-<p>A heater of constant power heats ice until it becomes steam (no energy loss). Watch the temperature–time graph and the molecules. (1 s on screen ≈ 40 s.)</p>
-<div class="sim-panel">
-  <div class="slider"><label for="mSl"><span>Mass of ice m <span class="zh">(質量)</span></span><span id="mSlVal"></span></label>
-    <input type="range" id="mSl" min="0.1" max="0.5" step="0.05" value="0.2"></div><div class="slider"><label for="pSl"><span>Heater power P <span class="zh">(功率)</span></span><span id="pSlVal"></span></label>
-    <input type="range" id="pSl" min="200" max="1000" step="50" value="500"></div>
-  <div class="slider"><label for="t0Sl"><span>Starting temperature of the ice <span class="zh">(初溫)</span></span><span id="t0SlVal"></span></label>
-    <input type="range" id="t0Sl" min="-30" max="0" step="1" value="-20"></div>
-</div>
-<div class="sim-buttons">
-  <button class="btn-primary" id="playBtn" type="button">▶ Play</button>
-  <button class="btn-secondary" id="resetBtn" type="button">↺ Reset</button>
-  <label for="speedSel" style="font-weight:700">Speed:</label>
-  <select id="speedSel"><option value="1">Normal</option><option value="0.5">Slow (½×)</option><option value="0.25">Very slow (¼×)</option></select>
-</div>
-<canvas id="animCanvas" width="900" height="400" data-fixed-h="400" aria-label="Molecule picture and temperature-time graph of ice being heated to steam"></canvas>
-<div class="readout">
-  <div class="ro d"><div class="lab">Temperature</div><div class="val" id="roT"></div></div><div class="ro a"><div class="lab">Energy supplied E = Pt</div><div class="val" id="roE"></div></div><div class="ro v"><div class="lab">State now</div><div class="val" id="roState"></div></div><div class="ro av"><div class="lab">ice / water / steam (kg)</div><div class="val" id="roMass"></div></div>
-</div>
-<p class="sim-msg" id="simMsg" role="status"></p>
-<div class="panel" id="eqPanel" aria-live="polite"></div>
-<div class="box key"><span class="box-title">Things to try</span><ul class="simple">
-  <li>Measure the length of the melting and boiling plateaus. Their ratio is ℓ<sub>v</sub> : ℓ<sub>f</sub> ≈ 6.8.</li>
-  <li>Which sloping part is steepest? (ice and steam have c = 2100, water 4200)</li>
-  <li>Double the power: every stage takes half as long.</li></ul></div>
-</section>
-<section class="step" data-id="psim" data-name="Practice: Using the Simulation">
+<section class="step" data-id="p2" data-name="Practice: DSE-style Questions">
 <span class="tag quiz">Practice 3</span>
-<h2 tabindex="-1">Practice: predict, then check with the simulation</h2>
-<div class="quiz" data-quiz="psim"></div>
-</section>
-<section class="step" data-id="expt" data-name="Experiments: Measuring ℓ">
-<span class="tag">Experiment</span>
-<h2 tabindex="-1">Measuring specific latent heats</h2>
-<div class="grid2">
-  <div>
-    <div class="box eg"><span class="box-title">🔬 ℓ<sub>f</sub> of ice (with a control)</span>Two funnels hold equal amounts of <b>crushed ice</b> at 0 °C, each with an immersion heater; only heater A is switched on (joulemeter). Wait until the drip rates are equal (ice at 0 °C), empty the beakers, then heat A for a few minutes. Collect the water from both.<br>ℓ<sub>f</sub> = E ÷ (m<sub>A</sub> − m<sub>B</sub>)<br><b>Set B (control)</b> measures the ice melted by energy from the <b>surroundings</b>. <b>Crushed</b> ice gives good thermal contact.</div>
-    <div class="box eg worked"><span class="box-title">✏️ Sample results</span>E = 19 440 J; water collected: A 0.078 kg, B 0.020 kg<br>ℓ<sub>f</sub> = 19 440 ÷ 0.058 = <b>3.35 × 10⁵ J kg⁻¹</b></div>
-    <p class="caption">Other methods in the guide: heating an ice–water mixture in a domestic electric boiler or a composite (insulated) container, or using an ice calorimeter.</p>
-  </div>
-  <div>
-    <div class="box eg"><span class="box-title">🔬 ℓ<sub>v</sub> of water (balance method)</span>Heat water in a beaker on an electronic balance with an immersion heater. When it boils steadily, start the joulemeter and record the balance reading; stop after several minutes.<br>ℓ<sub>v</sub> = E ÷ (mass boiled away). <b>Do not use a lid</b> (steam would condense and drip back).</div>
-    <div class="box warn"><span class="box-title">Higher or lower than the true value? ⭐</span><table class="t"><tr><th>Error</th><th>Effect on ℓ<sub>v</sub></th></tr>
-      <tr><td>heat lost to the surroundings</td><td>E too big for the mass boiled → <b>higher</b></td></tr>
-      <tr><td>steam condenses and drips back</td><td>mass loss too small → <b>higher</b></td></tr>
-      <tr><td>water splashes out</td><td>mass loss too big → <b>lower</b></td></tr>
-      <tr><td>(ℓ<sub>f</sub>) no control set, heat from surroundings melts ice</td><td>mass melted too big → <b>lower</b></td></tr></table></div>
-  </div>
-</div>
-</section>
-<section class="step" data-id="mix" data-name="Mixtures with Ice">
-<span class="tag">Idea 5</span>
-<h2 tabindex="-1">Mixtures involving a change of state</h2>
-<div class="grid2">
-  <div class="box eg worked"><span class="box-title">✏️ Iced lemon tea</span>0.25 kg of tea (c = 4200 J kg⁻¹ °C⁻¹) at 80 °C. Least mass m of ice at 0 °C to cool it to 10 °C:<br>energy released by tea = energy to melt ice + warm the melted ice to 10 °C<br>0.25 × 4200 × 70 = m(3.34 × 10⁵ + 4200 × 10)<br>73 500 = 376 000 m ⇒ m = <b>0.195 kg</b><br><br><b>If 0.30 kg of ice is added instead:</b> cooling the tea to 0 °C releases 0.25 × 4200 × 80 = 84 000 J, but melting all the ice needs 0.30 × 3.34 × 10⁵ = 100 200 J. Not enough! Final state: <b>ice and water at 0 °C</b> (84 000 ÷ 3.34 × 10⁵ = 0.251 kg of ice melts).</div>
-  <div>
-    <div class="box eg"><span class="box-title">🏆 Class competition: closest to 4 °C</span>How much ice should you add to a 0.33 kg can of soft drink at 28 °C to get exactly 4 °C? (Treat the drink as water.)<br>0.33 × 4200 × 24 = m(3.34 × 10⁵ + 4200 × 4) ⇒ m ≈ <b>0.095 kg</b>.<br>Then test it! Real results differ: the cup and the air also exchange energy, and ice straight from a freezer is below 0 °C (it must be warmed to 0 °C first, so less ice is needed).</div>
-    <div class="box warn"><span class="box-title">Common mistakes ⚠️</span><ul class="simple"><li>Forgetting that melted ice must also be <b>warmed</b> from 0 °C to the final temperature.</li><li>Assuming all the ice melts — always <b>check</b> whether there is enough energy first.</li></ul></div>
-  </div>
-</div>
-</section>
-<section class="step" data-id="p3" data-name="Practice: Experiments &amp; Mixtures">
-<span class="tag quiz">Practice 4</span>
-<h2 tabindex="-1">Practice: experiments and mixtures (DSE style)</h2>
-<div class="quiz" data-quiz="p3"></div>
+<h2 tabindex="-1">Practice: plane mirrors (DSE style)</h2>
+<div class="quiz" data-quiz="p2"></div>
 </section>
 <section class="step" data-id="summary" data-name="Summary">
 <span class="tag">Well done!</span>
-<h2 tabindex="-1">🎉 Summary of Lesson 1.4a</h2>
+<h2 tabindex="-1">🎉 Summary of Lesson 3.5</h2>
 <div style="text-align:center"><div class="stars" id="stars" aria-hidden="true"></div>
   <p id="finalScore" style="font-size:1.2rem;font-weight:800"></p><p id="finalMsg"></p></div>
 <table class="t">
-  <tr><th>Idea</th><th>Equation / fact</th><th>Remember</th></tr>
-  <tr><td>change of state</td><td>flat part of heating/cooling curve</td><td>temperature constant at melting / boiling point</td></tr>
-  <tr><td>latent heat</td><td>—</td><td>changes the <b>P.E.</b> of molecules, not the K.E.</td></tr>
-  <tr><td>specific latent heat</td><td>E = mℓ<sub>f</sub>, E = mℓ<sub>v</sub></td><td>J kg⁻¹; ℓ<sub>f</sub> = 3.34 × 10⁵, ℓ<sub>v</sub> = 2.26 × 10⁶ (water)</td></tr>
-  <tr><td>problems</td><td>add mcΔT and mℓ stages</td><td>check whether all the ice melts</td></tr>
+  <tr><th>Idea</th><th>Key point</th></tr>
+  <tr><td>laws of reflection</td><td>i = r (from the normal); rays and normal in one plane</td></tr>
+  <tr><td>plane-mirror image</td><td>virtual, erect, same size, laterally inverted, v = u</td></tr>
+  <tr><td>ray diagram</td><td>start from the image: dashed to mirror, solid to eye, solid from object</td></tr>
+  <tr><td>full-length mirror</td><td>≥ half your height; bottom at half eye height</td></tr>
+  <tr><td>extras</td><td>rotate mirror θ → ray turns 2θ; two mirrors: 360°/θ − 1 images</td></tr>
 </table>
-<div class="lesson-link">⬅️ Previous: <a href="1-3-specific-heat-capacity.html">Lesson 1.3: Heat Capacity and Specific Heat Capacity</a> &nbsp;·&nbsp; ➡️ Next: <a href="1-4b-evaporation.html">Lesson 1.4b: Evaporation</a> &nbsp;·&nbsp; 🏠 <a href="index.html">All lessons</a></div>
+<p>Next: refraction of light.</p>
+<div class="lesson-link">⬅️ Previous: <a href="3-4-stationary-waves.html">Lesson 3.4: Stationary Waves</a> &nbsp;·&nbsp; ➡️ Next: <a href="3-6a-refraction-of-light.html">Lesson 3.6a: Refraction of Light</a> &nbsp;·&nbsp; 🏠 <a href="index.html">All lessons</a></div>
 <div class="q-actions" style="justify-content:center">
   <button class="btn-secondary" id="reviewBtn" type="button">Go to first unfinished question</button>
   <button class="btn-retry" id="restartBtn" type="button">↺ Reset all questions</button>
@@ -320,16 +272,16 @@
 <details class="teacher">
 <summary>👩‍🏫 Teacher notes: curriculum outcome map (click to open)</summary>
 <div class="tn-body">
-<p><b>Source:</b> HKDSE Physics Curriculum and Assessment Guide (S4–6), 2015 update — Compulsory Part, <b>I Heat and Gases</b>, subtopic <b>c. Change of state</b>, “Students should be able to” column, printed page 20 (PDF page 30). Outcome text is quoted from the guide.</p>
-<p><b>Core.</b> Nothing in this sub-topic is underlined in the guide, so all of it is in the <b>core</b> of the Compulsory Part.</p>
-<p>This sub-topic is taught in <b>Lesson 1.4a</b> (<a href="1-4a-latent-heat.html">1-4a-latent-heat.html</a>): 14 steps; <b>Lesson 1.4b</b> (<a href="1-4b-evaporation.html">1-4b-evaporation.html</a>): 11 steps. Links to other lessons open that file at the step.</p>
+<p><b>Source:</b> HKDSE Physics Curriculum and Assessment Guide (S4–6), 2015 update — Compulsory Part, <b>III Wave Motion</b>, subtopic <b>b. Light</b>, “Students should be able to” column, printed pages 35–36 (PDF pages 45–46). Outcome text is quoted from the guide.</p>
+<p class="box warn" style="margin:.5rem 0"><b>Mostly core, partly extension.</b> 3 outcome(s) in this sub-topic are <u>underlined</u> in the guide (“Note: The underlined text represents the extension component”, printed p.36); they are tagged <b>Extension (underlined)</b> in the table below. Everything else is <b>core</b>.</p>
+<p>This sub-topic is taught in <b>Lesson 3.5</b> (<a href="3-5-reflection-of-light.html">3-5-reflection-of-light.html</a>): 10 steps; <b>Lesson 3.6a</b> (<a href="3-6a-refraction-of-light.html">3-6a-refraction-of-light.html</a>): 11 steps; <b>Lesson 3.6b</b> (<a href="3-6b-total-internal-reflection.html">3-6b-total-internal-reflection.html</a>): 10 steps; <b>Lesson 3.7a</b> (<a href="3-7a-lenses-ray-diagrams.html">3-7a-lenses-ray-diagrams.html</a>): 11 steps; <b>Lesson 3.7b</b> (<a href="3-7b-lens-formula.html">3-7b-lens-formula.html</a>): 11 steps; <b>Lesson 3.8a</b> (<a href="3-8a-em-spectrum-light-waves.html">3-8a-em-spectrum-light-waves.html</a>): 10 steps; <b>Lesson 3.8b</b> (<a href="3-8b-double-slit.html">3-8b-double-slit.html</a>): 11 steps; <b>Lesson 3.8c</b> (<a href="3-8c-diffraction-grating.html">3-8c-diffraction-grating.html</a>): 11 steps. Links to other lessons open that file at the step.</p>
 <h3>Learning outcomes</h3>
 <div class="table-scroll"><table class="t outcomes"><tr><th>#</th><th>Topic</th><th>Learning outcome (quoted)</th><th>Where it is taught / practised</th></tr>
-<tr><td>1</td><td><i>melting and freezing, boiling and condensing</i></td><td>“state the three states of matter”</td><td><a href="#step2" data-step="2">L1.4a Step 2: States of Matter</a><br><a href="#step5" data-step="5">L1.4a Step 5: Practice: States &amp; Latent Heat</a></td></tr><tr><td>2</td><td><i>melting and freezing, boiling and condensing</i></td><td>“determine the melting point and boiling point”</td><td><a href="#step2" data-step="2">L1.4a Step 2: States of Matter</a><br><a href="#step3" data-step="3">L1.4a Step 3: Heating &amp; Cooling Curves</a><br><a href="#step9" data-step="9">L1.4a Step 9: Simulation</a><br><a href="#step5" data-step="5">L1.4a Step 5: Practice: States &amp; Latent Heat</a></td></tr><tr><td>3</td><td><i>latent heat</i></td><td>“realise latent heat as the energy transferred during the change of state without temperature change”</td><td><a href="#step3" data-step="3">L1.4a Step 3: Heating &amp; Cooling Curves</a><br><a href="#step4" data-step="4">L1.4a Step 4: Latent Heat &amp; Molecules</a><br><a href="#step9" data-step="9">L1.4a Step 9: Simulation</a><br><a href="#step5" data-step="5">L1.4a Step 5: Practice: States &amp; Latent Heat</a></td></tr><tr><td>4</td><td><i>latent heat</i></td><td>“interpret latent heat in terms of the change of potential energy of the molecules during a change of state”</td><td><a href="#step4" data-step="4">L1.4a Step 4: Latent Heat &amp; Molecules</a><br><a href="#step5" data-step="5">L1.4a Step 5: Practice: States &amp; Latent Heat</a></td></tr><tr><td>5</td><td><i>latent heat</i></td><td>“define specific latent heat of fusion as ℓf = Q/m”</td><td><a href="#step6" data-step="6">L1.4a Step 6: Specific Latent Heat</a><br><a href="#step8" data-step="8">L1.4a Step 8: Practice: Specific Latent Heat</a></td></tr><tr><td>6</td><td><i>latent heat</i></td><td>“define specific latent heat of vaporization as ℓv = Q/m”</td><td><a href="#step6" data-step="6">L1.4a Step 6: Specific Latent Heat</a><br><a href="#step8" data-step="8">L1.4a Step 8: Practice: Specific Latent Heat</a></td></tr><tr><td>7</td><td><i>latent heat</i></td><td>“solve problems involving latent heat”</td><td><a href="#step7" data-step="7">L1.4a Step 7: Worked Examples</a><br><a href="#step8" data-step="8">L1.4a Step 8: Practice: Specific Latent Heat</a><br><a href="#step10" data-step="10">L1.4a Step 10: Practice: Using the Simulation</a><br><a href="#step12" data-step="12">L1.4a Step 12: Mixtures with Ice</a><br><a href="#step13" data-step="13">L1.4a Step 13: Practice: Experiments &amp; Mixtures</a><br><a href="1-4b-evaporation.html#step9">L1.4b Step 9: Worked Example: Sweating</a><br><a href="1-4b-evaporation.html#step10">L1.4b Step 10: Practice: Factors &amp; Calculations</a></td></tr><tr><td>8</td><td><i>evaporation</i></td><td>“realise the occurrence of evaporation below boiling point”</td><td><a href="1-4b-evaporation.html#step2">L1.4b Step 2: Evaporation vs Boiling</a><br><a href="1-4b-evaporation.html#step5">L1.4b Step 5: Practice: Evaporation</a></td></tr><tr><td>9</td><td><i>evaporation</i></td><td>“explain the cooling effect of evaporation”</td><td><a href="1-4b-evaporation.html#step3">L1.4b Step 3: Molecular Explanation</a><br><a href="1-4b-evaporation.html#step4">L1.4b Step 4: Cooling Effect</a><br><a href="1-4b-evaporation.html#step7">L1.4b Step 7: Simulation</a><br><a href="1-4b-evaporation.html#step5">L1.4b Step 5: Practice: Evaporation</a></td></tr><tr><td>10</td><td><i>evaporation</i></td><td>“discuss the factors affecting rate of evaporation”</td><td><a href="1-4b-evaporation.html#step6">L1.4b Step 6: Factors Affecting the Rate</a><br><a href="1-4b-evaporation.html#step7">L1.4b Step 7: Simulation</a><br><a href="1-4b-evaporation.html#step8">L1.4b Step 8: Practice: Using the Simulation</a><br><a href="1-4b-evaporation.html#step10">L1.4b Step 10: Practice: Factors &amp; Calculations</a></td></tr><tr><td>11</td><td><i>evaporation</i></td><td>“explain evaporation in terms of molecular motion”</td><td><a href="1-4b-evaporation.html#step3">L1.4b Step 3: Molecular Explanation</a><br><a href="1-4b-evaporation.html#step7">L1.4b Step 7: Simulation</a><br><a href="1-4b-evaporation.html#step5">L1.4b Step 5: Practice: Evaporation</a></td></tr></table></div>
+<tr><td>1</td><td><i>light in electromagnetic spectrum</i></td><td>“state that the speed of light and electromagnetic waves in a vacuum is 3.0 × 10⁸ m s⁻¹”</td><td><a href="3-8a-em-spectrum-light-waves.html#step2">L3.8a Step 2: Light is an EM Wave</a><br><a href="3-8a-em-spectrum-light-waves.html#step3">L3.8a Step 3: The EM Spectrum</a><br><a href="3-8a-em-spectrum-light-waves.html#step4">L3.8a Step 4: Practice: Light and the Spectrum</a></td></tr><tr><td>2</td><td><i>light in electromagnetic spectrum</i></td><td>“state the range of wavelengths for visible light”</td><td><a href="3-8a-em-spectrum-light-waves.html#step3">L3.8a Step 3: The EM Spectrum</a><br><a href="3-8a-em-spectrum-light-waves.html#step6">L3.8a Step 6: Simulation</a><br><a href="3-8a-em-spectrum-light-waves.html#step4">L3.8a Step 4: Practice: Light and the Spectrum</a></td></tr><tr><td>3</td><td><i>light in electromagnetic spectrum</i></td><td>“state the relative positions of visible light and other parts of the electromagnetic spectrum”</td><td><a href="3-8a-em-spectrum-light-waves.html#step3">L3.8a Step 3: The EM Spectrum</a><br><a href="3-8a-em-spectrum-light-waves.html#step6">L3.8a Step 6: Simulation</a><br><a href="3-8a-em-spectrum-light-waves.html#step7">L3.8a Step 7: Practice: Using the Simulation</a><br><a href="3-8a-em-spectrum-light-waves.html#step4">L3.8a Step 4: Practice: Light and the Spectrum</a></td></tr><tr><td>4</td><td><i>reflection of light</i></td><td>“state the laws of reflection”</td><td><a href="#step2" data-step="2">L3.5 Step 2: Light Rays and the Laws of Reflection</a><br><a href="#step4" data-step="4">L3.5 Step 4: Practice: Reflection and Images</a></td></tr><tr><td>5</td><td><i>reflection of light</i></td><td>“construct images formed by a plane mirror graphically”</td><td><a href="#step3" data-step="3">L3.5 Step 3: Images in a Plane Mirror</a><br><a href="#step5" data-step="5">L3.5 Step 5: Simulation</a><br><a href="#step6" data-step="6">L3.5 Step 6: Practice: Using the Simulation</a><br><a href="#step7" data-step="7">L3.5 Step 7: Applications</a><br><a href="#step8" data-step="8">L3.5 Step 8: Worked Examples</a><br><a href="#step9" data-step="9">L3.5 Step 9: Practice: DSE-style Questions</a></td></tr><tr><td>6</td><td><i>refraction of light</i></td><td>“examine the laws of refraction”</td><td><a href="3-6a-refraction-of-light.html#step3">L3.6a Step 3: Laws of Refraction and Refractive Index</a><br><a href="3-6a-refraction-of-light.html#step5">L3.6a Step 5: Experiment: Verifying Snell’s Law</a><br><a href="3-6a-refraction-of-light.html#step6">L3.6a Step 6: Simulation</a><br><a href="3-6a-refraction-of-light.html#step7">L3.6a Step 7: Practice: Using the Simulation</a></td></tr><tr><td>7</td><td><i>refraction of light</i></td><td>“sketch the path of a ray refracted at a boundary”</td><td><a href="3-6a-refraction-of-light.html#step2">L3.6a Step 2: Why Light Bends</a><br><a href="3-6a-refraction-of-light.html#step6">L3.6a Step 6: Simulation</a><br><a href="3-6a-refraction-of-light.html#step4">L3.6a Step 4: Practice: Refractive Index</a><br><a href="3-6a-refraction-of-light.html#step8">L3.6a Step 8: Apparent Depth, Blocks and Dispersion</a></td></tr><tr><td>8</td><td><i>refraction of light</i></td><td>“realise n = sin i / sin r as the refractive index of a medium”</td><td><a href="3-6a-refraction-of-light.html#step3">L3.6a Step 3: Laws of Refraction and Refractive Index</a><br><a href="3-6a-refraction-of-light.html#step5">L3.6a Step 5: Experiment: Verifying Snell’s Law</a><br><a href="3-6a-refraction-of-light.html#step4">L3.6a Step 4: Practice: Refractive Index</a></td></tr><tr><td>9</td><td><i>refraction of light</i></td><td>“solve problems involving refraction at a boundary”</td><td><a href="3-6a-refraction-of-light.html#step9">L3.6a Step 9: Worked Examples</a><br><a href="3-6a-refraction-of-light.html#step7">L3.6a Step 7: Practice: Using the Simulation</a><br><a href="3-6a-refraction-of-light.html#step10">L3.6a Step 10: Practice: DSE-style Questions</a></td></tr><tr><td>10</td><td><i>total internal reflection</i></td><td>“examine the conditions for total internal reflection”</td><td><a href="3-6b-total-internal-reflection.html#step2">L3.6b Step 2: Total Internal Reflection</a><br><a href="3-6b-total-internal-reflection.html#step5">L3.6b Step 5: Simulation</a><br><a href="3-6b-total-internal-reflection.html#step4">L3.6b Step 4: Practice: Critical Angle</a></td></tr><tr><td>11</td><td><i>total internal reflection</i></td><td>“solve problems involving total internal reflection at a boundary”</td><td><a href="3-6b-total-internal-reflection.html#step3">L3.6b Step 3: The Critical Angle</a><br><a href="3-6b-total-internal-reflection.html#step6">L3.6b Step 6: Practice: Using the Simulation</a><br><a href="3-6b-total-internal-reflection.html#step8">L3.6b Step 8: Worked Examples</a><br><a href="3-6b-total-internal-reflection.html#step9">L3.6b Step 9: Practice: DSE-style Questions</a></td></tr><tr><td>12</td><td><i>formation of images by lenses</i></td><td>“construct images formed by converging and diverging lenses graphically”</td><td><a href="3-7a-lenses-ray-diagrams.html#step3">L3.7a Step 3: Construction Rules</a><br><a href="3-7a-lenses-ray-diagrams.html#step5">L3.7a Step 5: Images by a Convex Lens</a><br><a href="3-7a-lenses-ray-diagrams.html#step6">L3.7a Step 6: Images by a Concave Lens</a><br><a href="3-7a-lenses-ray-diagrams.html#step7">L3.7a Step 7: Simulation</a><br><a href="3-7a-lenses-ray-diagrams.html#step8">L3.7a Step 8: Practice: Using the Simulation</a></td></tr><tr><td>13</td><td><i>formation of images by lenses</i></td><td>“distinguish between real and virtual images”</td><td><a href="#step3" data-step="3">L3.5 Step 3: Images in a Plane Mirror</a><br><a href="3-7a-lenses-ray-diagrams.html#step5">L3.7a Step 5: Images by a Convex Lens</a><br><a href="3-7a-lenses-ray-diagrams.html#step4">L3.7a Step 4: Practice: Lens Basics</a><br><a href="3-7a-lenses-ray-diagrams.html#step10">L3.7a Step 10: Practice: DSE-style Questions</a></td></tr><tr><td>14</td><td><i>formation of images by lenses</i></td><td>“apply 1/u + 1/v = 1/f to solve problems for a single thin lens (using the convention “REAL is positive”)” <span class="tag quiz">Extension (underlined)</span></td><td><a href="3-7b-lens-formula.html#step2">L3.7b Step 2: The Lens Formula</a><br><a href="3-7b-lens-formula.html#step3">L3.7b Step 3: Worked Examples</a><br><a href="3-7b-lens-formula.html#step5">L3.7b Step 5: Formula + Magnification</a><br><a href="3-7b-lens-formula.html#step6">L3.7b Step 6: Simulation</a><br><a href="3-7b-lens-formula.html#step7">L3.7b Step 7: Practice: Using the Simulation</a><br><a href="3-7b-lens-formula.html#step4">L3.7b Step 4: Practice: Using the Formula</a><br><a href="3-7b-lens-formula.html#step10">L3.7b Step 10: Practice: DSE-style Questions</a></td></tr><tr><td>15</td><td><i>wave nature of light</i></td><td>“point out light as an example of transverse wave”</td><td><a href="3-8a-em-spectrum-light-waves.html#step2">L3.8a Step 2: Light is an EM Wave</a><br><a href="3-8a-em-spectrum-light-waves.html#step4">L3.8a Step 4: Practice: Light and the Spectrum</a></td></tr><tr><td>16</td><td><i>wave nature of light</i></td><td>“realise diffraction and interference as evidences for the wave nature of light”</td><td><a href="3-8a-em-spectrum-light-waves.html#step8">L3.8a Step 8: Diffraction of Light</a><br><a href="3-8a-em-spectrum-light-waves.html#step9">L3.8a Step 9: Practice: DSE-style Questions</a><br><a href="3-8b-double-slit.html#step2">L3.8b Step 2: The Experiment</a></td></tr><tr><td>17</td><td><i>wave nature of light</i></td><td>“examine the interference patterns in the Young’s double slit experiment”</td><td><a href="3-8b-double-slit.html#step2">L3.8b Step 2: The Experiment</a><br><a href="3-8b-double-slit.html#step3">L3.8b Step 3: Conditions and Path Difference</a><br><a href="3-8b-double-slit.html#step7">L3.8b Step 7: Simulation</a><br><a href="3-8b-double-slit.html#step4">L3.8b Step 4: Practice: The Pattern</a></td></tr><tr><td>18</td><td><i>wave nature of light</i></td><td>“apply Δy = λD/a to solve problems” <span class="tag quiz">Extension (underlined)</span></td><td><a href="3-8b-double-slit.html#step5">L3.8b Step 5: Δy = λD/a</a><br><a href="3-8b-double-slit.html#step6">L3.8b Step 6: Worked Examples</a><br><a href="3-8b-double-slit.html#step8">L3.8b Step 8: Practice: Using the Simulation</a><br><a href="3-8b-double-slit.html#step10">L3.8b Step 10: Practice: DSE-style Questions</a></td></tr><tr><td>19</td><td><i>wave nature of light</i></td><td>“examine the interference patterns in the plane transmission grating”</td><td><a href="3-8c-diffraction-grating.html#step2">L3.8c Step 2: The Grating Pattern</a><br><a href="3-8c-diffraction-grating.html#step6">L3.8c Step 6: Simulation</a><br><a href="3-8c-diffraction-grating.html#step5">L3.8c Step 5: Maximum Order and Spectra</a><br><a href="3-8c-diffraction-grating.html#step4">L3.8c Step 4: Practice: Gratings</a></td></tr><tr><td>20</td><td><i>wave nature of light</i></td><td>“apply d sin θ = nλ to solve problems” <span class="tag quiz">Extension (underlined)</span></td><td><a href="3-8c-diffraction-grating.html#step3">L3.8c Step 3: d sin θ = nλ</a><br><a href="3-8c-diffraction-grating.html#step8">L3.8c Step 8: Worked Examples</a><br><a href="3-8c-diffraction-grating.html#step7">L3.8c Step 7: Practice: Using the Simulation</a><br><a href="3-8c-diffraction-grating.html#step10">L3.8c Step 10: Practice: DSE-style Questions</a></td></tr></table></div>
 <h3>Suggested learning &amp; teaching activities used</h3>
-<div class="table-scroll"><table class="t activities"><tr><th>#</th><th>Activity (from the guide, pp.21–23, incl. Values &amp; Attitudes and STSE)</th><th>Where</th></tr>
-<tr><td>1</td><td>Performing experiments to determine latent heat</td><td><a href="#step11" data-step="11">L1.4a Step 11: Experiments: Measuring ℓ</a><br><a href="#step13" data-step="13">L1.4a Step 13: Practice: Experiments &amp; Mixtures</a></td></tr><tr><td>2</td><td>Measuring the specific latent heat of fusion of water (e.g. using a domestic electric boiler, heating an ice-water mixture in a composite container, or using an ice calorimeter)</td><td><a href="#step11" data-step="11">L1.4a Step 11: Experiments: Measuring ℓ</a></td></tr><tr><td>3</td><td>Performing experiments to study the cooling curve of a substance and determine its melting point</td><td><a href="#step3" data-step="3">L1.4a Step 3: Heating &amp; Cooling Curves</a><br><a href="#step9" data-step="9">L1.4a Step 9: Simulation</a></td></tr><tr><td>4</td><td>Challenging preconceived ideas on energy transfer through competitions (e.g. attaining a temperature closest to 4 °C by mixing a soft drink with ice)</td><td><a href="#step12" data-step="12">L1.4a Step 12: Mixtures with Ice</a></td></tr><tr><td>5</td><td>Using dimension analysis to check the results of mathematical solutions</td><td><a href="#step7" data-step="7">L1.4a Step 7: Worked Examples</a></td></tr><tr><td>6</td><td>Determining factors affecting the rate of evaporation</td><td><a href="1-4b-evaporation.html#step6">L1.4b Step 6: Factors Affecting the Rate</a><br><a href="1-4b-evaporation.html#step7">L1.4b Step 7: Simulation</a></td></tr><tr><td>7</td><td>Reading articles on heat stroke and discussing heat stroke precautions and care</td><td><a href="1-4b-evaporation.html#step4">L1.4b Step 4: Cooling Effect</a></td></tr></table></div>
-<p><b>Notes alignment:</b> follows Heat notes Chapter 4 §4.1–4.5 (cooling curve of octadecan-1-ol, KE/PE interpretation, E<sub>f</sub> = mℓ<sub>f</sub>, E<sub>v</sub> = mℓ<sub>v</sub>, ℓ<sub>f</sub> = 3.34 × 10⁵ J kg⁻¹, ℓ<sub>v</sub> = 2.26 × 10⁶ J kg⁻¹, c(ice) = c(steam) = 2100 J kg⁻¹ °C⁻¹, control set-up for ℓ<sub>f</sub>, balance method for ℓ<sub>v</sub>, slopes of heating curves). Evaporation (§4.6–4.7) is Lesson 1.4b. <b>Left out:</b> plasma (“further information” in the notes) and kilowatt-hour-meter revolutions (a joulemeter is used instead). <b>Exam emphasis:</b> mixtures with ice, power × time with latent heat, error-direction questions, “latent heat increases the P.E. of molecules” wording. <b>Simulation model:</b> ice heated at constant power with no energy loss; the temperature and the amounts of each state are computed exactly from the energy supplied E = Pt.</p>
+<div class="table-scroll"><table class="t activities"><tr><th>#</th><th>Activity (from the guide, pp.37–39, incl. Values &amp; Attitudes and STSE)</th><th>Where</th></tr>
+<tr><td>1</td><td>Estimating the wavelength of light by using double slit or plane transmission grating</td><td><a href="3-8b-double-slit.html#step9">L3.8b Step 9: Experiments</a><br><a href="3-8c-diffraction-grating.html#step9">L3.8c Step 9: Experiment</a></td></tr><tr><td>2</td><td>Estimating the wavelength of microwaves by using double slit</td><td><a href="3-8b-double-slit.html#step9">L3.8b Step 9: Experiments</a></td></tr><tr><td>3</td><td>Demonstrating interference patterns in soap film</td><td><a href="3-8b-double-slit.html#step9">L3.8b Step 9: Experiments</a></td></tr><tr><td>4</td><td>Determining the effects of wavelength, slit separation or screen distance on an interference pattern in an experiment by using double slit</td><td><a href="3-8b-double-slit.html#step5">L3.8b Step 5: Δy = λD/a</a><br><a href="3-8b-double-slit.html#step7">L3.8b Step 7: Simulation</a><br><a href="3-8b-double-slit.html#step8">L3.8b Step 8: Practice: Using the Simulation</a></td></tr><tr><td>5</td><td>Measuring the focal lengths of lenses</td><td><a href="3-7a-lenses-ray-diagrams.html#step9">L3.7a Step 9: Optical Instruments and Measuring f</a><br><a href="3-7b-lens-formula.html#step9">L3.7b Step 9: Experiment</a></td></tr><tr><td>6</td><td>Locating real and virtual images in lenses by using ray boxes and ray tracing</td><td><a href="3-7a-lenses-ray-diagrams.html#step3">L3.7a Step 3: Construction Rules</a><br><a href="3-7a-lenses-ray-diagrams.html#step7">L3.7a Step 7: Simulation</a></td></tr><tr><td>7</td><td>Using ray diagrams to predict the nature and position of an image in an optical device</td><td><a href="#step7" data-step="7">L3.5 Step 7: Applications</a><br><a href="3-7a-lenses-ray-diagrams.html#step9">L3.7a Step 9: Optical Instruments and Measuring f</a><br><a href="3-7a-lenses-ray-diagrams.html#step8">L3.7a Step 8: Practice: Using the Simulation</a></td></tr><tr><td>8</td><td>Searching for information on the development of physics of light</td><td><a href="3-8a-em-spectrum-light-waves.html#step2">L3.8a Step 2: Light is an EM Wave</a></td></tr><tr><td>9</td><td>Discussing some everyday uses and effects of electromagnetic radiation</td><td><a href="3-8a-em-spectrum-light-waves.html#step5">L3.8a Step 5: Uses and Hazards</a></td></tr><tr><td>10</td><td>Carrying out an experiment to verify Snell’s law</td><td><a href="3-6a-refraction-of-light.html#step5">L3.6a Step 5: Experiment: Verifying Snell’s Law</a><br><a href="3-6a-refraction-of-light.html#step6">L3.6a Step 6: Simulation</a></td></tr><tr><td>11</td><td>Determining the refractive index of glass or perspex</td><td><a href="3-6a-refraction-of-light.html#step5">L3.6a Step 5: Experiment: Verifying Snell’s Law</a><br><a href="3-6a-refraction-of-light.html#step7">L3.6a Step 7: Practice: Using the Simulation</a></td></tr><tr><td>12</td><td>Determining the conditions for total internal reflection to occur</td><td><a href="3-6b-total-internal-reflection.html#step2">L3.6b Step 2: Total Internal Reflection</a><br><a href="3-6b-total-internal-reflection.html#step5">L3.6b Step 5: Simulation</a></td></tr><tr><td>13</td><td>Values &amp; attitudes / STSE: proper use of microwave ovens; mobile-phone microwave radiation; UV and the ozone layer; impact of EM waves on telecommunications</td><td><a href="3-8a-em-spectrum-light-waves.html#step5">L3.8a Step 5: Uses and Hazards</a></td></tr></table></div>
+<p><b>Notes alignment:</b> Wave notes Chapter 5 (§5.1 luminous/non-luminous; §5.2 rays and beams; §5.3 laws of reflection; §5.4 regular and diffuse reflection; §5.5–5.6 images, real/virtual, nature of an image; §5.7 plane-mirror image; §5.8 ray diagrams incl. full-length mirror, rotating mirror, moving mirror; §5.9 periscope; §5.10 multiple reflection, n = 360°/θ − 1). <b>Kept as judgement calls</b> (not named in the guide but applications of “construct images formed by a plane mirror graphically”): the full-length mirror (h/2), rotating mirror (reflected ray turns 2θ), image speed, periscope and the number of images between two mirrors (Paper 1A 2025 Q13 on images in plane mirrors scored only about 25%). <b>Exam emphasis:</b> ray diagrams must start from the <i>image</i>: draw dashed lines from the image to the mirror and solid rays from the mirror to the eye, then solid rays from the object to the same points on the mirror, with arrows. <b>Simulation model:</b> mirror on the line x = 0; image of a point (x, y) at (−x, y); the ray reaching the eye meets the mirror where the image–eye line crosses x = 0, and is visible only if that point lies on the mirror. Two-mirror images are the orbit of the object under reflections in the two mirror lines (dihedral group), giving 360°/θ − 1 images when 360°/θ is an even integer.</p>
 </div></details>
 <script>
 
@@ -445,109 +397,121 @@ function kHTML(id, t){ var e = document.getElementById(id); if (e) e.innerHTML =
 
 var Q = {
 p1:[
- {type:"mc", text:"Which substance is a <b>liquid</b> at room temperature (about 20 °C)?", options:["P: melting point 30 °C, boiling point 300 °C","Q: melting point −95 °C, boiling point 56 °C","R: melting point −210 °C, boiling point −196 °C","S: melting point 80 °C, boiling point 218 °C"], answer:1,
-  hints:["A liquid is between its melting point and boiling point.",""], explain:"Only Q has melting point < 20 °C < boiling point."},
- {type:"mc", text:"On the cooling curve of a liquid, the temperature stays constant for a while. During this time the substance is…", options:["freezing and releasing latent heat","not losing any energy","boiling","absorbing latent heat from the air"], answer:0,
-  hints:["It is still cooler air around it…",""], explain:"It is freezing; it keeps losing energy (latent heat) to the air while the temperature stays at the freezing point."},
- {type:"mc", text:"While ice melts at 0 °C, the energy absorbed…", options:["increases the potential energy of the molecules","increases the average kinetic energy of the molecules","increases the temperature of the ice","is destroyed"], answer:0,
-  hints:["The temperature does not change.",""], explain:"Constant temperature → constant average K.E.; the energy increases the P.E. (molecules move further apart)."},
- {type:"mc", text:"The cooling curve of a substance has a flat part PQ. Which statements about PQ are correct?<br>(1) The substance does not lose energy to the surroundings.<br>(2) The substance releases latent heat.<br>(3) The average potential energy of the molecules decreases.", options:["(1) only","(3) only","(1) and (2) only","(2) and (3) only"], answer:3,
-  hints:["Cooling curve → the substance is losing energy all the time.",""], explain:"(2) and (3). It releases latent heat, so the P.E. of its molecules decreases at constant temperature."},
- {type:"mc", text:"When water at 100 °C boils and becomes steam at 100 °C, the molecules’…", options:["potential energy increases","average kinetic energy increases","potential energy decreases","kinetic and potential energy both stay the same"], answer:0,
-  hints:["Same temperature → same average K.E.",""], explain:"The latent heat increases the P.E. as the molecules separate."},
- {type:"mc", text:"A solid is heated at constant power until it melts and then becomes a hot liquid. On its heating curve, the solid part is steeper than the liquid part. This shows that…", options:["the specific heat capacity of the solid is smaller than that of the liquid","the specific heat capacity of the solid is larger","the solid has a larger latent heat","the liquid has a lower melting point"], answer:0,
-  hints:["Gradient = P/(mc).",""], explain:"Same P and m: steeper gradient → smaller c."}
-],
-p2:[
- {type:"num", text:"How much energy is needed to melt <b>0.50 kg</b> of ice at 0 °C?", answer:167000, unit:"J",
-  hints:["E = mℓ<sub>f</sub>",""], explain:"E = 0.50 × 3.34 × 10⁵ = 1.67 × 10⁵ J."},
- {type:"num", text:"How much energy is needed to change <b>0.40 kg</b> of boiling water at 100 °C into steam?", answer:904000, unit:"J",
-  hints:["E = mℓ<sub>v</sub>",""], explain:"E = 0.40 × 2.26 × 10⁶ = 9.04 × 10⁵ J."},
- {type:"num", text:"A 42 W heating coil keeps a liquid boiling in an insulated vessel. The liquid boils away at <b>2.0 × 10⁻⁵ kg s⁻¹</b>. Find its specific latent heat of vaporization.", answer:2.1e6, unit:"J/kg",
-  hints:["In 1 s: 42 J boils 2.0 × 10⁻⁵ kg.","ℓ<sub>v</sub> = P ÷ (rate of mass loss)"], explain:"ℓ<sub>v</sub> = 42 ÷ 2.0 × 10⁻⁵ = 2.1 × 10⁶ J kg⁻¹."},
- {type:"num", text:"A 1200 W kettle contains boiling water. How long does it take to boil away <b>0.30 kg</b> of it (no energy loss)?", answer:565, unit:"s",
-  hints:["Pt = mℓ<sub>v</sub>",""], explain:"t = 0.30 × 2.26 × 10⁶ ÷ 1200 = 565 s."},
- {type:"num", text:"How much energy must be removed from <b>0.40 kg</b> of water at <b>30 °C</b> to turn it into ice at 0 °C?", answer:184000, unit:"J",
-  hints:["Two stages: cool to 0 °C (mcΔT), then freeze (mℓ<sub>f</sub>).",""], explain:"50 400 + 133 600 = 1.84 × 10⁵ J."},
- {type:"num", text:"An immersion heater takes <b>7.0 min</b> to heat some water from 30 °C to 100 °C. How many <b>minutes</b> will it take to boil all of the water away? (Assume no energy loss.)", answer:53.81, unit:"min",
-  hints:["Same P: time ∝ energy. Compare mℓ<sub>v</sub> with mcΔT.","t = 7.0 × 2.26 × 10⁶ ÷ (4200 × 70)"], explain:"Ratio = 2.26 × 10⁶ ÷ 294 000 = 7.69, so t = 7.0 × 7.69 = 53.8 min."},
- {type:"mc", text:"Burns from steam at 100 °C are usually more serious than burns from the same mass of boiling water at 100 °C because steam…", options:["releases latent heat when it condenses on the skin","has a higher temperature","has a higher specific heat capacity","moves faster"], answer:0,
-  hints:["What happens when steam touches the cooler skin?",""], explain:"Steam condenses, releasing 2.26 × 10⁶ J kg⁻¹ before cooling like the water."}
+ {type:"mc", text:"Which of the following is a <b>non-luminous</b> object?", options:["the Moon","the Sun","a lit candle flame","a glowing light bulb"], answer:0,
+  hints:["Does it give out its own light?",""], explain:"The Moon reflects sunlight."},
+ {type:"num", text:"A ray strikes a plane mirror with an angle of incidence of 35°. Find the angle between the <b>reflected ray and the mirror surface</b>.", answer:55, unit:"°",
+  hints:["r = 35° from the normal.","Normal ⊥ mirror"], explain:"r = 35°, so the angle with the mirror is 90° − 35° = 55°."},
+ {type:"mc", text:"Which surface(s) give <b>diffuse</b> reflection?<br>(1) a page of a book &nbsp; (2) a polished silver spoon &nbsp; (3) a painted wall", options:["(1) and (3) only","(1) and (2) only","(2) and (3) only","(1), (2) and (3)"], answer:0,
+  hints:["Rough surfaces scatter light.",""], explain:"Paper and walls are rough; the polished spoon gives regular reflection."},
+ {type:"mc", text:"In diffuse reflection, …", options:["each ray still obeys the laws of reflection","the laws of reflection are not obeyed","no light is reflected","the angle of reflection is always 0°"], answer:0,
+  hints:["The normals point in different directions.",""], explain:"Every ray obeys i = r; the surface normals differ, so rays scatter."},
+ {type:"mc", text:"Which describes the image formed by a plane mirror?", options:["virtual, erect, same size, laterally inverted","real, inverted, same size","virtual, inverted, diminished","real, erect, magnified"], answer:0,
+  hints:["Can it be caught on a screen?",""], explain:"Plane-mirror images are virtual, erect, same size and laterally inverted."},
+ {type:"num", text:"Amy stands 1.5 m in front of a plane mirror. How far is she from her image?", answer:3, unit:"m",
+  hints:["v = u",""], explain:"1.5 + 1.5 = 3.0 m."},
+ {type:"mc", text:"The word on the front of an ambulance is printed back to front because…", options:["a driver in front sees it in the rear-view mirror, which laterally inverts it","mirrors turn images upside down","it looks better","mirror images are real"], answer:0,
+  hints:["Lateral inversion.",""], explain:"Seen in a mirror, the reversed letters read correctly."}
 ],
 psim:[
- {type:"num", text:"0.20 kg of ice at −20 °C, P = 500 W. Predict the time before the ice <b>starts</b> to melt.", answer:16.8, unit:"s",
-  hints:["E = mcΔT = 0.20 × 2100 × 20","t = E/P"], explain:"8400 J ÷ 500 W = 16.8 s."},
- {type:"num", text:"How long does the <b>melting</b> stage last?", answer:133.6, unit:"s",
-  hints:["t = mℓ<sub>f</sub>/P",""], explain:"0.20 × 3.34 × 10⁵ ÷ 500 = 133.6 s."},
- {type:"num", text:"How long does the <b>boiling</b> stage last?", answer:904, unit:"s",
-  hints:["t = mℓ<sub>v</sub>/P",""], explain:"0.20 × 2.26 × 10⁶ ÷ 500 = 904 s."},
- {type:"num", text:"What mass of water is left after it has been boiling for <b>300 s</b>?", answer:0.1336, unit:"kg", tol:0.0015,
-  hints:["Mass boiled = Pt/ℓ<sub>v</sub> = 500 × 300 ÷ 2.26 × 10⁶",""], explain:"0.20 − 0.0664 = 0.134 kg."}
+ {type:"num", text:"Object-and-eye mode: set u = 1.2 m. How far behind the mirror is the image?", answer:1.2, unit:"m",
+  hints:["Read the Object / image box.",""], explain:"v = u = 1.2 m."},
+ {type:"mc", text:"Move the eye up and down. What happens?", options:["The image stays in the same place; the point where the ray hits the mirror moves.","The image moves with the eye.","The image becomes larger.","The angle of incidence stops being equal to the angle of reflection."], answer:0,
+  hints:["Watch the dashed arrow.",""], explain:"The image depends only on the object and the mirror."},
+ {type:"num", text:"Whole-body mode, person 1.80 m tall. Find the shortest mirror length that shows the whole body.", answer:0.9, unit:"m", tol:0.03,
+  hints:["Adjust the bottom and the length of the mirror.","Half the height"], explain:"Minimum length = 1.80 ÷ 2 = 0.90 m."},
+ {type:"num", text:"For that 1.80 m person (eyes 1.70 m above the floor), how high above the floor must the bottom of the shortest mirror be?", answer:0.85, unit:"m", tol:0.03,
+  hints:["Half the eye height.",""], explain:"1.70 ÷ 2 = 0.85 m."},
+ {type:"mc", text:"With the shortest mirror set up, move the person farther from the mirror. Can the whole body still be seen?", options:["yes","no, more mirror is needed","no, less mirror is needed","only if the mirror is moved up"], answer:0,
+  hints:["Try it.",""], explain:"The required mirror does not depend on the distance."},
+ {type:"num", text:"Two-mirror mode, θ = 60°. How many images are formed?", answer:5, unit:"",
+  hints:["Count the dashed objects.","360/60 − 1"], explain:"360/60 − 1 = 5."},
+ {type:"num", text:"Predict the number of images for θ = 45°, then check.", answer:7, unit:"",
+  hints:["360/45 − 1",""], explain:"8 − 1 = 7 images."}
 ],
-p3:[
- {type:"num", text:"In the funnel experiment, E = 19 440 J; water collected: set A 0.078 kg, set B (control) 0.020 kg. Find ℓ<sub>f</sub>.", answer:335172, unit:"J/kg",
-  hints:["ℓ<sub>f</sub> = E/(m<sub>A</sub> − m<sub>B</sub>)",""], explain:"19 440 ÷ 0.058 = 3.35 × 10⁵ J kg⁻¹."},
- {type:"mc", text:"In the ℓ<sub>f</sub> experiment, what is the purpose of set B (heater switched off)?", options:["To find the mass of ice melted by energy from the surroundings","To check the heater","To keep the ice at 0 °C","To measure the room temperature"], answer:0,
-  hints:["What else melts the ice besides the heater?",""], explain:"Set B is the control: subtracting m<sub>B</sub> removes the ice melted by the surroundings."},
- {type:"mc", text:"In the ℓ<sub>v</sub> experiment (beaker on a balance), which error makes the result <b>smaller</b> than the true value?", options:["Energy is lost to the surroundings.","Water splashes out of the beaker.","Steam condenses on the heater and drips back.","The beaker is not insulated."], answer:1,
-  hints:["ℓ<sub>v</sub> = E/Δm. What makes Δm too large?",""], explain:"Splashing makes the measured mass loss too large, so E/Δm is too small. The other errors make ℓ<sub>v</sub> too large."},
- {type:"num", text:"Find the least mass of ice at 0 °C needed to cool 0.30 kg of water from 30 °C to 5 °C.", answer:0.08873, unit:"kg", tol:0.0009,
-  hints:["0.30 × 4200 × 25 = m(3.34 × 10⁵ + 4200 × 5)",""], explain:"m = 31 500 ÷ 355 000 = 0.0887 kg."},
- {type:"mc", text:"0.10 kg of ice at 0 °C is put into 0.20 kg of water at 20 °C in an insulated cup. The final contents are…", options:["water at a temperature above 0 °C","ice and water at 0 °C","water at exactly 0 °C with no ice","ice only"], answer:1,
-  hints:["Energy released by the water cooling to 0 °C = 0.20 × 4200 × 20.","Energy to melt all the ice = 0.10 × 3.34 × 10⁵."], explain:"16 800 J < 33 400 J, so only about half the ice melts: ice and water at 0 °C."},
- {type:"num", text:"0.25 kg of tea at 80 °C is cooled with 0.30 kg of ice at 0 °C. What mass of ice melts?", answer:0.2515, unit:"kg", tol:0.0025,
-  hints:["The tea can cool only to 0 °C: 0.25 × 4200 × 80 J.","Mass melted = that energy ÷ ℓ<sub>f</sub>"], explain:"84 000 ÷ 3.34 × 10⁵ = 0.251 kg (0.049 kg of ice remains)."}
+p2:[
+ {type:"num", text:"Tom stands 1.5 m in front of a plane mirror. Jerry stands 1.0 m directly behind Tom (farther from the mirror). Find the distance between Tom and the image of Jerry.", answer:4, unit:"m",
+  hints:["Jerry is 2.5 m from the mirror.","Image of Jerry is 2.5 m behind the mirror."], explain:"1.5 + 2.5 = 4.0 m."},
+ {type:"num", text:"A ray of light is fixed. The plane mirror it strikes is rotated through 15°. Through what angle does the reflected ray turn?", answer:30, unit:"°",
+  hints:["Both i and r change by 15°.",""], explain:"The reflected ray turns through 2 × 15° = 30°."},
+ {type:"num", text:"A girl walks towards a fixed plane mirror at 1.2 m s⁻¹. At what speed does her image approach <b>her</b>?", answer:2.4, unit:"m s⁻¹",
+  hints:["Image moves towards the mirror at 1.2 m s⁻¹ too.",""], explain:"Relative speed = 1.2 + 1.2 = 2.4 m s⁻¹."},
+ {type:"num", text:"A man stands still. The plane mirror in front of him moves away from him at 0.5 m s⁻¹. Find the speed of his image relative to the ground.", answer:1, unit:"m s⁻¹",
+  hints:["If the mirror moves x, the image moves 2x.",""], explain:"Image speed = 2 × 0.5 = 1.0 m s⁻¹, away from him."},
+ {type:"num", text:"A boy 1.60 m tall has his eyes 1.50 m above the floor. Find the minimum length of a vertical wall mirror in which he can see his whole body.", answer:0.8, unit:"m", tol:0.01,
+  hints:["Half his height.",""], explain:"1.60 ÷ 2 = 0.80 m."},
+ {type:"num", text:"For the boy in the previous question, how high above the floor should the bottom of this mirror be?", answer:0.75, unit:"m", tol:0.01,
+  hints:["Half his eye height.",""], explain:"1.50 ÷ 2 = 0.75 m (the top is then at 1.55 m)."},
+ {type:"mc", text:"The final image seen through a simple periscope (two parallel plane mirrors) is…", options:["virtual, erect, same size, not laterally inverted","real, inverted, same size","virtual, erect, laterally inverted","virtual, inverted, diminished"], answer:0,
+  hints:["Two reflections: two lateral inversions.",""], explain:"Two lateral inversions cancel; the image is virtual, erect and the same size."},
+ {type:"mc", text:"A small coin is placed between two plane mirrors inclined at 30°. How many images of the coin are formed?", options:["11","12","10","6"], answer:0,
+  hints:["n = 360°/θ − 1",""], explain:"360/30 − 1 = 11."},
+ {type:"mc", text:"A clock seen in a plane mirror appears to show 2:00. What is the actual time? (The clock face has no numbers.)", options:["10:00","2:00","8:00","4:00"], answer:0,
+  hints:["Mirror the hands left–right.",""], explain:"The hour hand appears at the 2 position; laterally inverted, it really points to 10."}
 ]};
 
 function makeSim(){
-  var cv = document.getElementById("animCanvas"), CI = 2100, CW = 4200, CSt = 2100, LF = 3.34e5, LV = 2.26e6, TMAX = 120, P = {}, t = 0, hist = [], clock, rng = 3;
-  function rnd(){ rng = (rng*16807) % 2147483647; return rng/2147483647; }
-  var mol = []; for (var i = 0; i < 36; i++) mol.push({gx:i%6, gy:Math.floor(i/6), x:rnd(), y:rnd(), a:rnd()*6.28});
-  function read(){ P.m = kVal("mSl"); P.P = kVal("pSl"); P.T0 = kVal("t0Sl"); kText("mSlVal", kFmt(P.m, 2) + " kg"); kText("pSlVal", P.P + " W"); kText("t0SlVal", P.T0 + " °C"); }
-  function stages(){ var m = P.m; return [m*CI*(0 - P.T0), m*LF, m*CW*100, m*LV, m*CSt*(TMAX - 100)]; }
-  function tEnd(){ return stages().reduce(function(a, b){ return a + b; }, 0)/P.P; }
-  function at(E){ var s = stages(), m = P.m, e = E;
-    if (e <= s[0]) return {T:P.T0 + e/(m*CI), ice:m, water:0, steam:0, st:"solid (ice) warming"}; e -= s[0];
-    if (e <= s[1]){ var f = e/LF; return {T:0, ice:m - f, water:f, steam:0, st:"melting at 0 °C"}; } e -= s[1];
-    if (e <= s[2]) return {T:e/(m*CW), ice:0, water:m, steam:0, st:"liquid (water) warming"}; e -= s[2];
-    if (e <= s[3]){ var g = e/LV; return {T:100, ice:0, water:m - g, steam:g, st:"boiling at 100 °C"}; } e -= s[3];
-    return {T:Math.min(TMAX, 100 + e/(m*CSt)), ice:0, water:0, steam:m, st:"gas (steam) warming"}; }
-  function reset(){ if (clock) clock.stop(); read(); t = 0; hist = [[0, P.T0]]; update(); draw(); kText("simMsg", "Ready. Press ▶ Play to switch on the heater."); }
-  function adv(dt){ var n = Math.max(1, Math.ceil(dt/2)), h = dt/n; for (var i = 0; i < n; i++){ t = Math.min(tEnd(), t + h); hist.push([t, at(P.P*t).T]); if (t >= tEnd()) break; } }
-  function update(){ var E = P.P*t, s = at(E), st = stages(), tm = [st[0]/P.P, st[1]/P.P, st[2]/P.P, st[3]/P.P];
-    kText("roT", kFmt(s.T, 1) + " °C"); kText("roE", Math.round(E).toLocaleString("en") + " J"); kText("roState", s.st); kText("roMass", kFmt(s.ice, 3) + " / " + kFmt(s.water, 3) + " / " + kFmt(s.steam, 3));
-    kHTML("eqPanel", "Stage times (E/P): ice warms " + kFmt(tm[0], 1) + " s (mcΔT) · melts <b>" + kFmt(tm[1], 1) + " s</b> (mℓ<sub>f</sub>) · water warms " + kFmt(tm[2], 1) + " s · boils <b>" + kFmt(tm[3], 1) + " s</b> (mℓ<sub>v</sub>)<br>Boiling plateau ÷ melting plateau = ℓ<sub>v</sub>/ℓ<sub>f</sub> = " + kFmt(LV/LF, 2)); }
+  var cv = document.getElementById("animCanvas"), P = {};
+  function rv(n){ var r = document.querySelector('input[name="' + n + '"]:checked'); return r ? r.value : null; }
+  function read(){ P.mode = rv("pmMode") || "obj"; P.u = kVal("uSl"); P.ex = kVal("exSl"); P.ey = kVal("eySl"); P.d = kVal("dSl"); P.h = kVal("hSl"); P.mb = kVal("mbSl"); P.ml = kVal("mlSl"); P.th = +document.getElementById("thSel").value; P.p = kVal("pSl");
+    kText("uSlVal", kFmt(P.u, 1) + " m"); kText("exSlVal", kFmt(P.ex, 1) + " m"); kText("eySlVal", kFmt(P.ey, 2) + " m"); kText("dSlVal", kFmt(P.d, 1) + " m"); kText("hSlVal", kFmt(P.h, 2) + " m"); kText("mbSlVal", kFmt(P.mb, 2) + " m"); kText("mlSlVal", kFmt(P.ml, 2) + " m"); kText("pSlVal", Math.round(P.p*100) + "%");
+    var show = function(id, on){ document.getElementById(id).style.display = on ? "" : "none"; };
+    show("objSl", P.mode === "obj"); show("bodySl", P.mode === "body"); show("mirSl", P.mode !== "two"); show("twoSl", P.mode === "two"); show("thWrap", P.mode === "two"); }
+  var OH = 0.6; // object (vase) height in obj mode
+  function hit(I, E){ var t = (0 - I[0])/(E[0] - I[0]); return I[1] + t*(E[1] - I[1]); }
+  function onMirror(y){ return y >= P.mb - 1e-9 && y <= P.mb + P.ml + 1e-9; }
+  function geom(){ var O, E; if (P.mode === "body"){ O = [[-P.d, P.h], [-P.d, 0]]; E = [-P.d, P.h - 0.1]; } else { O = [[-P.u, OH], [-P.u, 0]]; E = [-P.ex, P.ey]; }
+    var I = O.map(function(p){ return [-p[0], p[1]]; }), M = I.map(function(p){ return hit(p, E); }); return {O:O, I:I, E:E, M:M, vis:M.map(onMirror)}; }
+  function angles(O, E, ym){ var i = Math.atan2(Math.abs(ym - O[1]), Math.abs(O[0]))*180/Math.PI, r = Math.atan2(Math.abs(E[1] - ym), Math.abs(E[0]))*180/Math.PI; return [i, r]; }
+  function reflectPt(p, a){ var c = Math.cos(2*a), s = Math.sin(2*a); return [c*p[0] + s*p[1], s*p[0] - c*p[1]]; }
+  function images(th, frac){ var a = th*Math.PI/180, phi = a*frac, O = [Math.cos(phi), Math.sin(phi)], pts = [O], q = [O], k;
+    while (q.length && pts.length < 80){ var p = q.shift(); [0, a].forEach(function(al){ var r = reflectPt(p, al); for (k = 0; k < pts.length; k++) if (Math.hypot(pts[k][0] - r[0], pts[k][1] - r[1]) < 1e-6) return; pts.push(r); q.push(r); }); }
+    return pts.slice(1); }
   function draw(){
-    var g = kSetup(cv), ctx = g.ctx, W = g.w, H = g.h, lw = Math.min(300, W*0.34), s = at(P.P*t), m = P.m;
-    ctx.clearRect(0, 0, W, H); ctx.fillStyle = "#fff"; ctx.fillRect(0, 0, W, H);
-    var bx = 30, by = 60, bw = lw - 60, bh = 260; ctx.strokeStyle = "#334155"; ctx.lineWidth = 3; ctx.strokeRect(bx, by, bw, bh);
-    var fi = s.ice/m, fw = s.water/m, fs = s.steam/m;
-    mol.forEach(function(p, i){ var u = i/mol.length, x, y, phase = u < fi ? "ice" : (u < fi + fw ? "water" : "steam");
-      if (phase === "ice"){ x = bx + 40 + p.gx*((bw - 80)/5) + (rnd() - 0.5)*3; y = by + bh - 30 - p.gy*18 + (rnd() - 0.5)*3; ctx.fillStyle = "#38bdf8"; }
-      else if (phase === "water"){ x = bx + 20 + p.x*(bw - 40); y = by + bh - 20 - p.y*110; ctx.fillStyle = "#2563eb"; }
-      else { x = bx + 10 + p.x*(bw - 20); y = by + 10 + p.y*(bh - 20); ctx.fillStyle = "#94a3b8"; }
-      ctx.beginPath(); ctx.arc(x, y, 6, 0, 7); ctx.fill(); });
-    ctx.fillStyle = t > 0 && t < tEnd() ? "#ef4444" : "#64748b"; ctx.fillRect(bx + bw/2 - 30, by + bh + 8, 60, 10);
-    ctx.fillStyle = "#111"; ctx.font = "bold 12px Arial"; ctx.textAlign = "center"; ctx.fillText(s.st, bx + bw/2, by - 12); ctx.font = "11px Arial"; ctx.fillText("heater " + P.P + " W", bx + bw/2, by + bh + 32);
-    ctx.save(); ctx.translate(lw + 10, 0); var Gx = {ctx:ctx, w:W - lw - 10, h:H}, xr = kNice(0, tEnd(), 6);
-    var A = kAxes(Gx, xr, {lo:-40, hi:130, step:20}, "time / s", "temperature / °C");
-    kLine(A, hist, "#dc2626", 3); var st = stages(), c0 = st[0]/P.P, c1 = c0 + st[1]/P.P, c2 = c1 + st[2]/P.P, c3 = c2 + st[3]/P.P;
-    ctx.fillStyle = "#475569"; ctx.font = "11px Arial"; ctx.textAlign = "center";
-    if (t >= c1) ctx.fillText("melting", A.X((c0 + c1)/2), A.Y(0) - 8); if (t >= c3) ctx.fillText("boiling", A.X((c2 + c3)/2), A.Y(100) - 8);
-    ctx.restore();
+    var g = kSetup(cv), ctx = g.ctx, W = g.w, H = g.h; ctx.clearRect(0, 0, W, H); ctx.fillStyle = "#fff"; ctx.fillRect(0, 0, W, H);
+    if (P.mode === "two"){
+      var cx = W/2, cy = H - 40, R = Math.min(W/2 - 20, H - 70), a = P.th*Math.PI/180, ims = images(P.th, P.p), ph = a*P.p, rr = R*0.55;
+      ctx.strokeStyle = "#0369a1"; ctx.lineWidth = 5; ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(cx + R, cy); ctx.moveTo(cx, cy); ctx.lineTo(cx + R*Math.cos(a), cy - R*Math.sin(a)); ctx.stroke();
+      ctx.strokeStyle = "#cbd5e1"; ctx.lineWidth = 1; ctx.setLineDash([3, 4]); ctx.beginPath(); ctx.arc(cx, cy, rr, 0, 7); ctx.stroke(); ctx.setLineDash([]);
+      ctx.fillStyle = "#111"; ctx.font = "bold 13px Arial"; ctx.textAlign = "center"; ctx.fillText("θ = " + P.th + "°", cx + 50*Math.cos(a/2), cy - 50*Math.sin(a/2) + 4);
+      ims.forEach(function(p, n){ var X = cx + rr*p[0], Y = cy - rr*p[1]; ctx.strokeStyle = "#7c3aed"; ctx.setLineDash([4, 3]); ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(X, Y, 10, 0, 7); ctx.stroke(); ctx.setLineDash([]); ctx.fillStyle = "#6d28d9"; ctx.font = "bold 11px Arial"; ctx.fillText("I" + (n + 1), X, Y + 4); });
+      ctx.fillStyle = "#dc2626"; ctx.beginPath(); ctx.arc(cx + rr*Math.cos(ph), cy - rr*Math.sin(ph), 10, 0, 7); ctx.fill(); ctx.fillStyle = "#fff"; ctx.font = "bold 11px Arial"; ctx.fillText("O", cx + rr*Math.cos(ph), cy - rr*Math.sin(ph) + 4);
+      ctx.fillStyle = "#111"; ctx.textAlign = "left"; ctx.font = "12px Arial"; ctx.fillText("Top view. Red: object O. Dashed purple: images (images of images included).", 10, 18);
+      kText("roA", ims.length + " images"); kText("roB", "360°/θ − 1 = " + (360/P.th - 1)); kText("roC", "mirrors at " + P.th + "°"); kText("roD", "all images lie on a circle centred where the mirrors meet");
+      return; }
+    var x0 = W/2, sx = (W/2 - 20)/3, yF = H - 40, sy = Math.min(sx, (H - 70)/2.2); function X(x){ return x0 + x*sx; } function Y(y){ return yF - y*sy; }
+    ctx.fillStyle = "#e5e7eb"; ctx.fillRect(0, yF, W, H - yF); ctx.fillStyle = "#f1f5f9"; ctx.fillRect(x0, 0, W - x0, yF); ctx.fillStyle = "#94a3b8"; ctx.font = "12px Arial"; ctx.textAlign = "center"; ctx.fillText("behind the mirror (no light here)", X(1.5), 18); ctx.fillText("floor", 40, yF + 16);
+    ctx.strokeStyle = "#0369a1"; ctx.lineWidth = 6; ctx.beginPath(); ctx.moveTo(X(0), Y(P.mb)); ctx.lineTo(X(0), Y(P.mb + P.ml)); ctx.stroke();
+    var G = geom();
+    function person(x, h, dashed, flip){ ctx.save(); ctx.strokeStyle = "#111"; ctx.lineWidth = 3; if (dashed){ ctx.setLineDash([6, 4]); ctx.strokeStyle = "#475569"; ctx.lineWidth = 2; }
+      var hr = 0.11*sy, top = Y(h); ctx.beginPath(); ctx.arc(X(x), top + hr, hr, 0, 7); ctx.moveTo(X(x), top + 2*hr); ctx.lineTo(X(x), Y(h*0.47)); ctx.lineTo(X(x) - 0.12*sx, Y(0)); ctx.moveTo(X(x), Y(h*0.47)); ctx.lineTo(X(x) + 0.12*sx, Y(0)); ctx.moveTo(X(x) - 0.2*sx, Y(h*0.72)); ctx.lineTo(X(x) + 0.2*sx, Y(h*0.72)); ctx.stroke(); ctx.restore(); }
+    function arrowObj(x, h, dashed){ ctx.save(); ctx.strokeStyle = dashed ? "#475569" : "#111"; ctx.lineWidth = dashed ? 2.5 : 4; if (dashed) ctx.setLineDash([6, 4]); ctx.beginPath(); ctx.moveTo(X(x), Y(0)); ctx.lineTo(X(x), Y(h)); ctx.stroke(); ctx.setLineDash([]); ctx.beginPath(); ctx.moveTo(X(x) - 8, Y(h) + 12); ctx.lineTo(X(x), Y(h)); ctx.lineTo(X(x) + 8, Y(h) + 12); ctx.stroke(); ctx.restore(); }
+    if (P.mode === "body"){ person(G.O[0][0], P.h, false); person(G.I[0][0], P.h, true); } else { arrowObj(G.O[0][0], OH, false); arrowObj(G.I[0][0], OH, true); }
+    ctx.fillStyle = "#111"; ctx.font = "bold 13px Arial"; ctx.fillText("O", X(G.O[0][0]) - 16, Y(G.O[0][1]) + 6); ctx.fillText("I", X(G.I[0][0]) + 14, Y(G.I[0][1]) + 6);
+    G.I.forEach(function(Ip, k){ var ym = G.M[k], vis = G.vis[k], col = vis ? "#dc2626" : "#f59e0b";
+      ctx.strokeStyle = col; ctx.lineWidth = 1.5; ctx.setLineDash([5, 4]); ctx.beginPath(); ctx.moveTo(X(Ip[0]), Y(Ip[1])); ctx.lineTo(X(0), Y(ym)); ctx.stroke(); ctx.setLineDash([]);
+      if (vis){ ctx.lineWidth = 2.2; kArrow(ctx, X(G.O[k][0]), Y(G.O[k][1]), X(0), Y(ym), col, 2.2); kArrow(ctx, X(0), Y(ym), X(G.E[0]), Y(G.E[1]), col, 2.2); }
+      else { ctx.strokeStyle = col; ctx.setLineDash([2, 4]); ctx.beginPath(); ctx.moveTo(X(0), Y(ym)); ctx.lineTo(X(G.E[0]), Y(G.E[1])); ctx.stroke(); ctx.setLineDash([]); ctx.fillStyle = "#b45309"; ctx.font = "11px Arial"; ctx.fillText("misses the mirror", X(0) + 60, Y(ym) + 4); }
+      ctx.strokeStyle = "#94a3b8"; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(X(-0.35), Y(ym)); ctx.lineTo(X(0), Y(ym)); ctx.stroke(); });
+    ctx.fillStyle = "#fff"; ctx.strokeStyle = "#111"; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(X(G.E[0]), Y(G.E[1]), 8, 0, 7); ctx.fill(); ctx.stroke(); ctx.fillStyle = "#111"; ctx.beginPath(); ctx.arc(X(G.E[0]) + 3, Y(G.E[1]), 3, 0, 7); ctx.fill();
+    if (P.mode === "obj"){ ctx.font = "11px Arial"; ctx.fillText("eye", X(G.E[0]), Y(G.E[1]) - 13); }
+    ctx.strokeStyle = "#111"; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(10, yF); ctx.lineTo(W - 10, yF); ctx.stroke();
+    var an = angles(G.O[0], G.E, G.M[0]);
+    kText("roA", "object " + kFmt(-G.O[0][0], 1) + " m in front, image " + kFmt(G.I[0][0], 1) + " m behind");
+    kText("roB", "top ray: i = " + kFmt(an[0], 1) + "°, r = " + kFmt(an[1], 1) + "°");
+    if (P.mode === "body"){ var e = P.h - 0.1; kText("roC", "from " + kFmt(e/2, 2) + " m to " + kFmt((P.h + e)/2, 2) + " m: length " + kFmt(P.h/2, 2) + " m"); }
+    else kText("roC", "top ray hits at " + kFmt(G.M[0], 2) + " m, bottom ray at " + kFmt(G.M[1], 2) + " m");
+    kText("roD", G.vis[0] && G.vis[1] ? "yes: the whole image" : G.vis[0] || G.vis[1] ? "only part of the image" : "no");
   }
-  function jig(){ mol.forEach(function(p){ p.a += (rnd() - 0.5)*2; p.x = Math.min(1, Math.max(0, p.x + Math.cos(p.a)*0.02)); p.y = Math.min(1, Math.max(0, p.y + Math.sin(p.a)*0.02)); }); }
-  clock = kClock(function(dt){ adv(dt*40); jig(); update(); draw(); if (t >= tEnd()){ kText("simMsg", "Finished: all steam at 120 °C."); return false; } },
-    function(fin){ document.getElementById("playBtn").textContent = "▶ Play"; if (!fin) kText("simMsg", "Paused."); });
-  document.getElementById("playBtn").addEventListener("click", function(){ if (clock.running()) clock.stop(); else { if (t >= tEnd()) reset(); this.textContent = "⏸ Pause"; kText("simMsg", "Heating…"); clock.start(); } });
-  document.getElementById("resetBtn").addEventListener("click", reset);
-  kBind(["mSl","pSl","t0Sl"], reset);
-  return {reset:reset, draw:draw, resize:function(){}, pause:function(){ clock.stop(); },
-    set:function(o){ if (o.m != null) kSet("mSl", o.m); if (o.P != null) kSet("pSl", o.P); if (o.T0 != null) kSet("t0Sl", o.T0); reset(); },
-    jumpTo:function(T){ clock.stop(); reset(); adv(T); update(); draw(); },
-    state:function(){ var s = at(P.P*t); s.t = t; s.tEnd = tEnd(); s.stages = stages().map(function(e){ return e/P.P; }); return s; }};
+  function reset(){ read(); draw(); kText("simMsg", "Use the sliders; the diagram updates at once."); }
+  kBind(["uSl","exSl","eySl","dSl","hSl","mbSl","mlSl","thSel","pSl"], function(){ read(); draw(); });
+  [].forEach.call(document.querySelectorAll('input[name="pmMode"]'), function(r){ r.addEventListener("change", function(){ read(); draw(); }); });
+  return {reset:reset, draw:draw, resize:function(){}, pause:function(){},
+    set:function(o){ if (o.mode){ var r = document.querySelector('input[name="pmMode"][value="' + o.mode + '"]'); if (r) r.checked = true; }
+      ["u","ex","ey","d","h","mb","ml","p"].forEach(function(k){ if (o[k] != null) kSet(k + "Sl", o[k]); }); if (o.th) document.getElementById("thSel").value = String(o.th); reset(); },
+    jumpTo:function(){ draw(); },
+    state:function(){ return {mode:P.mode, geom:geom(), angles:angles, images:images, h:P.h}; }};
 }
-var LESSON = {quizzes:Q, figs:{}, makeSim:makeSim, demo:{set:{m:0.2, P:500, T0:-20}, t:700}};
+var LESSON = {quizzes:Q, figs:{}, makeSim:makeSim, demo:{set:{mode:"obj", u:1.2, ex:2.0, ey:1.5, mb:0.2, ml:1.2}, t:0}};
 
 
 (function(){

@@ -26,7 +26,7 @@
   .step h2{font-size:1.5rem;margin:.1rem 0 .7rem;color:var(--blue);outline:none}
   .step h3{font-size:1.15rem;margin:1rem 0 .4rem}
   .tag{display:inline-block;font-size:.75rem;font-weight:700;padding:.15rem .6rem;border-radius:999px;background:var(--blue-l);color:var(--blue);margin-bottom:.3rem}
-  .tag.quiz{background:var(--orange-l);color:var(--orange)} .tag.sim{background:var(--purple-l);color:var(--purple)}
+  .tag.quiz{background:var(--orange-l);color:var(--orange)} .tag.sim{background:var(--purple-l);color:var(--purple)}.tag.ext{background:#fef3c7;color:#92400e}
   p{margin:.4rem 0} ul.simple{padding-left:1.3rem;margin:.3rem 0} ul.simple li{margin:.25rem 0}
   .zh{color:#7c2d12;font-weight:500} body.no-zh .zh{display:none}
   .box{border-radius:12px;padding:.7rem 1rem;margin:.7rem 0;border-left:8px solid}
@@ -569,7 +569,7 @@ function el(tag, attrs, html){ var e = document.createElement(tag); if (attrs) f
 function parseNum(str){
   if (str == null) return NaN;
   str = String(str).trim().replace(/[−–—]/g,"-").replace(/,/g,"").replace(/\s+/g,"");
-  str = str.replace(/(J\/\(kg°C\)|J\/kg°C|J\/kg\/°C|Jkg-1°C-1|Jkg⁻¹°C⁻¹|J\/\(kgK\)|J\/kgK|Jkg-1K-1|Jkg⁻¹K⁻¹|J\/kg|Jkg-1|Jkg⁻¹|J\/°C|J°C-1|J°C⁻¹|J\/K|JK-1|JK⁻¹|J\/mol|kPa|Pa|mol|cm³|cm3|m³|m3|mL|min|Ω|cm|kg\/s|°C|℃|K|kgm\/s|kgms-1|kgms⁻¹|Ns|Nm|rad\/s|rads-1|rads⁻¹|N\/kg|Nkg-1|Nkg⁻¹|m\/s²|m\/s\^?2|ms-2|ms⁻²|m\/s|ms-1|ms⁻¹|kg|g|J|W|N|m|s|°|%)$/,"");
+  str = str.replace(/(J\/\(kg°C\)|J\/kg°C|J\/kg\/°C|Jkg-1°C-1|Jkg⁻¹°C⁻¹|J\/\(kgK\)|J\/kgK|Jkg-1K-1|Jkg⁻¹K⁻¹|J\/kg|Jkg-1|Jkg⁻¹|J\/°C|J°C-1|J°C⁻¹|J\/K|JK-1|JK⁻¹|J\/mol|Hz|nm|mm|μm|dB|kPa|Pa|mol|cm³|cm3|m³|m3|mL|min|Ω|cm|kg\/s|°C|℃|K|kgm\/s|kgms-1|kgms⁻¹|Ns|Nm|rad\/s|rads-1|rads⁻¹|N\/kg|Nkg-1|Nkg⁻¹|m\/s²|m\/s\^?2|ms-2|ms⁻²|m\/s|ms-1|ms⁻¹|kg|g|J|W|N|m|s|°|%)$/,"");
   var sup = {"⁰":"0","¹":"1","²":"2","³":"3","⁴":"4","⁵":"5","⁶":"6","⁷":"7","⁸":"8","⁹":"9","⁻":"-"};
   str = str.replace(/[×xX*]10(\^?)([-+]?\d+|[⁻⁰¹²³⁴⁵⁶⁷⁸⁹]+)$/, function(m0, c, e){ return "e" + e.replace(/[⁻⁰¹²³⁴⁵⁶⁷⁸⁹]/g, function(ch){ return sup[ch]; }); });
   if (!/^[-+]?(\d+\.?\d*|\.\d+)(e[-+]?\d+)?$/i.test(str)) return NaN;

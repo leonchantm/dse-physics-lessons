@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lesson 1.4a: Change of State and Latent Heat | HKDSE Physics</title>
+<title>Lesson 3.8b: Young’s Double-slit Experiment | HKDSE Physics</title>
 <style>
   :root{--bg:#fffaf0;--card:#fff;--ink:#111827;--muted:#374151;--blue:#1d4ed8;--blue-l:#dbeafe;--green:#166534;--green-l:#dcfce7;
     --red:#b91c1c;--red-l:#fee2e2;--orange:#c2410c;--orange-l:#ffedd5;--purple:#6d28d9;--purple-l:#ede9fe;--yellow-l:#fef9c3;--focus:#f59e0b}
@@ -115,7 +115,7 @@
 <body>
 <a href="#main" class="sr-only">Skip to content</a>
 <header>
-  <h1>🧊 Lesson 1.4a: Change of State &amp; Latent Heat <span class="zh">(物態的改變和潛熱)</span></h1>
+  <h1>〰️ Lesson 3.8b: Young’s Double-slit Experiment <span class="zh">(楊氏雙縫實驗)</span></h1>
   <div style="display:flex;gap:.8rem;align-items:center;flex-wrap:wrap">
     <a href="index.html" class="home-link">🏠 All lessons</a>
     <span class="score-pill" id="scorePill" aria-live="polite">⭐ 0 / 0</span>
@@ -129,183 +129,141 @@
 <main id="main">
 <section class="step" data-id="welcome" data-name="Welcome">
 <div class="welcome-hero">
-  <div class="big" aria-hidden="true">🧊 💧 ♨️ 🥤</div>
-  <h2 tabindex="-1">Lesson 1.4a: Change of State and Latent Heat <span class="zh">(物態的改變和潛熱)</span></h2>
-  <p>Put a thermometer in a glass of iced lemon tea: it stays near 0 °C until the ice is gone, even though the tea is absorbing energy from the warm air. Where does that energy go?</p>
+  <div class="big" aria-hidden="true">〰️ 🔦 ▮▯▮▯</div>
+  <h2 tabindex="-1">Lesson 3.8b: Young’s Double-slit Experiment <span class="zh">(楊氏雙縫實驗)</span></h2>
+  <p>In 1802 Thomas Young shone light through two narrow slits and saw bright and dark bands. Only waves can do that. You will explain the pattern, predict how it changes, and calculate the fringe separation.</p>
 </div>
+<div class="box warn"><span class="box-title">📌 Extension component</span>The fringe-separation formula <u>Δy = λD/a</u> is underlined in the C&amp;A Guide: using it to solve problems belongs to the <b>extension</b> part of the Compulsory Part. Describing the interference pattern is core.</div>
 <table class="t" aria-label="Key words in this lesson">
   <tr><th>Key word</th><th>Short meaning</th></tr>
-  <tr><td>melting / freezing <span class="zh">(熔解 / 凝固)</span></td><td>solid ⇄ liquid at the melting point</td></tr>
-  <tr><td>boiling / condensation <span class="zh">(沸騰 / 凝結)</span></td><td>liquid ⇄ gas at the boiling point</td></tr>
-  <tr><td>latent heat <span class="zh">(潛熱)</span></td><td>Energy transferred during a change of state without a change in temperature.</td></tr>
-  <tr><td>specific latent heat ℓ <span class="zh">(比潛熱)</span></td><td>Energy to change the state of 1 kg without temperature change.</td></tr>
+  <tr><td>bright / dark fringe <span class="zh">(光紋 / 暗紋)</span></td><td>Constructive / destructive interference of light from the two slits.</td></tr>
+  <tr><td>path difference <span class="zh">(程差)</span></td><td>Difference in distance from the two slits to a point on the screen.</td></tr>
+  <tr><td>fringe separation Δy <span class="zh">(條紋間距)</span></td><td>Distance between neighbouring bright (or dark) fringes.</td></tr>
+  <tr><td>slit separation a <span class="zh">(雙縫間距)</span></td><td>Distance between the centres of the two slits.</td></tr>
 </table>
-<div class="box key"><span class="box-title">Constants used</span>c(water) = 4200 J kg⁻¹ °C⁻¹ · c(ice) = 2100 J kg⁻¹ °C⁻¹ · ℓ<sub>f</sub>(ice) = 3.34 × 10⁵ J kg⁻¹ · ℓ<sub>v</sub>(water) = 2.26 × 10⁶ J kg⁻¹</div>
-<div class="lesson-link">⬅️ Previous: <a href="1-3-specific-heat-capacity.html">Lesson 1.3: Heat Capacity and Specific Heat Capacity</a> &nbsp;·&nbsp; ➡️ Next: <a href="1-4b-evaporation.html">Lesson 1.4b: Evaporation</a> &nbsp;·&nbsp; 🏠 <a href="index.html">All lessons</a></div>
+<div class="lesson-link">⬅️ Previous: <a href="3-8a-em-spectrum-light-waves.html">Lesson 3.8a: Light as an Electromagnetic Wave</a> &nbsp;·&nbsp; ➡️ Next: <a href="3-8c-diffraction-grating.html">Lesson 3.8c: The Diffraction Grating</a> &nbsp;·&nbsp; 🏠 <a href="index.html">All lessons</a></div>
 </section>
-<section class="step" data-id="states" data-name="States of Matter">
+<section class="step" data-id="young" data-name="The Experiment">
 <span class="tag">Idea 1</span>
-<h2 tabindex="-1">Three states of matter</h2>
+<h2 tabindex="-1">Young’s double-slit experiment</h2>
 <div class="grid2">
+  <div><svg viewBox='0 0 420 170' role='img' aria-label='Young double-slit set-up: a laser shines on two narrow slits a apart; bright and dark fringes form on a screen a distance D away'><rect width='420' height='170' fill='#fff'/><rect x='10' y='72' width='50' height='22' rx='4' fill='#334155'/><text x='35' y='112' font-size='11' text-anchor='middle'>laser</text><line x1='60' y1='83' x2='130' y2='83' stroke='#dc2626' stroke-width='3'/><rect x='130' y='20' width='6' height='52' fill='#111'/><rect x='130' y='78' width='6' height='10' fill='#111'/><rect x='130' y='94' width='6' height='56' fill='#111'/><text x='133' y='14' font-size='11' text-anchor='middle'>double slit</text><text x='120' y='88' font-size='11' text-anchor='end'>a</text><path d='M136,75 m0,0 a40,40 0 0,1 0,0' stroke='none'/><path d='M136,75 m0,0 a80,80 0 0,1 0,0' stroke='none'/><path d='M136,75 m0,0 a120,120 0 0,1 0,0' stroke='none'/><path d='M136,75 m0,0 a160,160 0 0,1 0,0' stroke='none'/><path d='M136,75 m0,0 a200,200 0 0,1 0,0' stroke='none'/><path d='M136,75 m0,0 a240,240 0 0,1 0,0' stroke='none'/><path d='M161.4,59.1 A30,30 0 0,1 161.4,90.9' fill='none' stroke='#fca5a5' stroke-width='1'/><path d='M186.9,43.2 A60,60 0 0,1 186.9,106.8' fill='none' stroke='#fca5a5' stroke-width='1'/><path d='M212.3,27.3 A90,90 0 0,1 212.3,122.7' fill='none' stroke='#fca5a5' stroke-width='1'/><path d='M237.8,11.4 A120,120 0 0,1 237.8,138.6' fill='none' stroke='#fca5a5' stroke-width='1'/><path d='M263.2,-4.5 A150,150 0 0,1 263.2,154.5' fill='none' stroke='#fca5a5' stroke-width='1'/><path d='M288.6,-20.4 A180,180 0 0,1 288.6,170.4' fill='none' stroke='#fca5a5' stroke-width='1'/><path d='M314.1,-36.3 A210,210 0 0,1 314.1,186.3' fill='none' stroke='#fca5a5' stroke-width='1'/><path d='M339.5,-52.2 A240,240 0 0,1 339.5,202.2' fill='none' stroke='#fca5a5' stroke-width='1'/><path d='M161.4,75.1 A30,30 0 0,1 161.4,106.9' fill='none' stroke='#fca5a5' stroke-width='1'/><path d='M186.9,59.2 A60,60 0 0,1 186.9,122.8' fill='none' stroke='#fca5a5' stroke-width='1'/><path d='M212.3,43.3 A90,90 0 0,1 212.3,138.7' fill='none' stroke='#fca5a5' stroke-width='1'/><path d='M237.8,27.4 A120,120 0 0,1 237.8,154.6' fill='none' stroke='#fca5a5' stroke-width='1'/><path d='M263.2,11.5 A150,150 0 0,1 263.2,170.5' fill='none' stroke='#fca5a5' stroke-width='1'/><path d='M288.6,-4.4 A180,180 0 0,1 288.6,186.4' fill='none' stroke='#fca5a5' stroke-width='1'/><path d='M314.1,-20.3 A210,210 0 0,1 314.1,202.3' fill='none' stroke='#fca5a5' stroke-width='1'/><path d='M339.5,-36.2 A240,240 0 0,1 339.5,218.2' fill='none' stroke='#fca5a5' stroke-width='1'/><rect x='380' y='15' width='8' height='140' fill='#e2e8f0' stroke='#64748b'/><rect x='380' y='19' width='8' height='8' fill='#dc2626'/><rect x='380' y='34' width='8' height='8' fill='#dc2626'/><rect x='380' y='49' width='8' height='8' fill='#dc2626'/><rect x='380' y='64' width='8' height='8' fill='#dc2626'/><rect x='380' y='79' width='8' height='8' fill='#dc2626'/><rect x='380' y='94' width='8' height='8' fill='#dc2626'/><rect x='380' y='109' width='8' height='8' fill='#dc2626'/><rect x='380' y='124' width='8' height='8' fill='#dc2626'/><rect x='380' y='139' width='8' height='8' fill='#dc2626'/><text x='395' y='87' font-size='10'>n = 0</text><text x='395' y='72' font-size='10'>1</text><text x='395' y='57' font-size='10'>2</text><line x1='136' y1='162' x2='380' y2='162' stroke='#16a34a' marker-start='url(#a1)' marker-end='url(#a1)'/><text x='258' y='158' font-size='11' text-anchor='middle' fill='#16a34a'>D</text><defs><marker id='a1' markerWidth='8' markerHeight='8' refX='4' refY='4' orient='auto-start-reverse'><path d='M0,1 L7,4 L0,7 z' fill='#16a34a'/></marker></defs><text x='370' y='12' font-size='10' text-anchor='end'>screen</text></svg></div>
   <div>
-    <p>Matter exists in three states: <b>solid</b>, <b>liquid</b> and <b>gas</b>. Heating or cooling can change the state.</p>
-    <table class="t"><tr><th>Change</th><th>Name</th><th>Happens at</th></tr>
-      <tr><td>solid → liquid</td><td>melting (fusion)</td><td rowspan="2">melting point (= freezing point)</td></tr>
-      <tr><td>liquid → solid</td><td>freezing (solidification)</td></tr>
-      <tr><td>liquid → gas</td><td>boiling (vaporization)</td><td rowspan="2">boiling point</td></tr>
-      <tr><td>gas → liquid</td><td>condensation</td></tr></table>
-    <p>At standard atmospheric pressure pure water melts at <b>0 °C</b> and boils at <b>100 °C</b>.</p>
+    <ul class="simple"><li>Monochromatic light (e.g. a laser) falls on two narrow slits close together.</li><li>Each slit <b>diffracts</b> the light, so the two spreading waves <b>overlap</b>.</li><li>The two slits are lit by the same source, so they act as <b>coherent</b> sources.</li><li>Where the waves meet in phase → <b>constructive</b> → <b>bright fringe</b>; in antiphase → <b>destructive</b> → <b>dark fringe</b>.</li><li>Result: equally spaced bright and dark fringes. The central fringe (zeroth order) is the brightest; then 1st order, 2nd order… on each side.</li></ul>
+    <div class="box key"><span class="box-title">Evidence for waves ⭐</span>Particles would just make two bright lines. The fringe pattern needs both <b>diffraction</b> and <b>interference</b>, so it shows light is a wave.</div>
   </div>
-  <div class="box key"><span class="box-title">Reading melting and boiling points ⭐</span>A substance is a <b>solid</b> below its melting point, a <b>liquid</b> between its melting and boiling points, and a <b>gas</b> above its boiling point.<br><br>Example: ethanol melts at −114 °C and boils at 78 °C, so at room temperature (25 °C) it is a <b>liquid</b>.</div>
 </div>
 </section>
-<section class="step" data-id="curve" data-name="Heating &amp; Cooling Curves">
+<section class="step" data-id="cond" data-name="Conditions and Path Difference">
 <span class="tag">Idea 2</span>
-<h2 tabindex="-1">Cooling curves: finding the melting point</h2>
+<h2 tabindex="-1">Path difference and what the pattern depends on</h2>
 <div class="grid2">
   <div>
-    <div class="box eg"><span class="box-title">🔬 Experiment: cooling curve of octadecan-1-ol</span>Melt the solid in a boiling tube in a hot water bath. Remove the bath and let the liquid cool in air, recording the temperature every 30 s until it reaches about 30 °C. Plot temperature against time.</div>
-    <ul class="simple"><li><b>AB</b>: liquid cooling — temperature falls.</li><li><b>BC</b>: <b>flat</b> — the liquid is <b>freezing</b>; solid and liquid exist together. The constant temperature is the <b>melting (freezing) point</b> (about 58 °C). It is still losing energy to the air: it gives out <b>latent heat</b>.</li><li><b>CD</b>: solid cooling towards room temperature.</li></ul>
-  </div>
-  <div class="visual">
-    <svg viewBox="0 0 300 210" role="img" aria-label="Cooling curve: temperature falls (AB), stays flat at the freezing point (BC), then falls again towards room temperature (CD).">
-      <rect width="300" height="210" fill="#fff"/><line x1="40" y1="180" x2="290" y2="180" stroke="#111" stroke-width="2"/><line x1="40" y1="180" x2="40" y2="15" stroke="#111" stroke-width="2"/>
-      <path d="M45 30 Q75 75 100 95 L190 95 Q220 140 285 160" fill="none" stroke="#dc2626" stroke-width="3"/>
-      <line x1="40" y1="95" x2="100" y2="95" stroke="#64748b" stroke-dasharray="4 3"/><text x="36" y="99" font-size="10" text-anchor="end">58 °C</text>
-      <text x="48" y="28" font-size="12" font-weight="800">A</text><text x="98" y="88" font-size="12" font-weight="800">B</text><text x="188" y="88" font-size="12" font-weight="800">C</text><text x="280" y="152" font-size="12" font-weight="800">D</text>
-      <text x="145" y="112" font-size="11" text-anchor="middle">freezing: liquid + solid</text>
-      <text x="165" y="198" font-size="11" text-anchor="middle">time</text><text x="14" y="100" font-size="11" transform="rotate(-90 14 100)" text-anchor="middle">temperature</text>
-    </svg>
-  </div>
-</div>
-<div class="box key"><span class="box-title">Heating curve of ice at constant power</span>A heating curve is the reverse: the temperature rises, stays flat while the ice <b>melts</b> (0 °C), rises again, then stays flat while the water <b>boils</b> (100 °C). The simulation draws one for you.</div>
-</section>
-<section class="step" data-id="latent" data-name="Latent Heat &amp; Molecules">
-<span class="tag">Idea 3</span>
-<h2 tabindex="-1">Latent heat: where does the energy go?</h2>
-<div class="grid2">
-  <div>
-    <div class="box key"><span class="box-title">Latent heat ⭐</span><b>Latent heat</b> is the energy transferred during a <b>change of state without a change in temperature</b>. It is <b>absorbed</b> during melting and boiling and <b>released</b> during freezing and condensation.</div>
-    <div class="box key"><span class="box-title">Molecular interpretation ⭐</span><ul class="simple"><li>When the temperature rises, the energy absorbed increases the <b>K.E.</b> of the molecules.</li><li>During melting or boiling the temperature (and so the average K.E.) stays the same: the latent heat increases the <b>P.E.</b> of the molecules — it is used to <b>overcome the attractive forces</b> between them and <b>increase their separation</b>.</li><li>Boiling separates the molecules completely, so ℓ<sub>v</sub> is much bigger than ℓ<sub>f</sub>.</li></ul></div>
+    <div class="box formula"><span class="box-title">Path difference (as for water waves)</span>Bright fringe: path difference = <b>nλ</b> (n = 0, 1, 2 …)<br>Dark fringe: path difference = <b>(n + ½)λ</b><br>e.g. 1st dark fringe: ½λ; 2nd order bright fringe: 2λ.</div>
+    <div class="box key"><span class="box-title">Conditions for a clear pattern</span><ul class="simple"><li>Coherent sources: one source split by two slits (or a laser).</li><li>Slits narrow, so the light spreads and overlaps.</li><li>Slits close together and the screen far away (D ≫ a), so the fringes are far enough apart to see.</li><li>Monochromatic light gives many sharp fringes.</li></ul></div>
   </div>
   <div>
-    <div class="box warn"><span class="box-title">Exam wording ⚠️</span><ul class="simple"><li>“The energy is used to vaporize the water.” ✗ Not enough marks. Say: “the energy is absorbed as <b>latent heat</b>, which <b>increases the potential energy</b> of the molecules (separation increases) while the K.E. and temperature stay constant.”</li><li>“During freezing the substance does not lose energy because its temperature is constant.” ✗ It <b>releases latent heat</b>; the P.E. of its molecules decreases.</li></ul></div>
-    <div class="box eg"><span class="box-title">♨️ Why steam scalds more</span>Steam at 100 °C first <b>condenses</b> on your skin, releasing 2.26 × 10⁶ J per kg, and then the hot water cools. So steam burns are worse than burns from boiling water at the same temperature.</div>
+    <div class="box key"><span class="box-title">Fringes are farther apart when… ⭐</span><ul class="simple"><li>the <b>wavelength is longer</b> (red &gt; green &gt; blue);</li><li>the <b>slit separation is smaller</b>;</li><li>the <b>screen is farther away</b>.</li></ul>Moving the lamp/laser closer to the slits does <b>not</b> change the spacing (only the brightness).</div>
+    <div class="box eg"><span class="box-title">White light</span>The central fringe is <b>white</b> (path difference 0 for every colour). The other fringes are coloured spectra, <b>violet/blue on the inside, red on the outside</b>; after a few orders the colours overlap and wash out.</div>
   </div>
 </div>
 </section>
-<section class="step" data-id="p1" data-name="Practice: States &amp; Latent Heat">
+<section class="step" data-id="p1" data-name="Practice: The Pattern">
 <span class="tag quiz">Practice 1</span>
-<h2 tabindex="-1">Practice: states of matter and latent heat</h2>
+<h2 tabindex="-1">Practice: interference of light</h2>
 <div class="quiz" data-quiz="p1"></div>
 </section>
-<section class="step" data-id="spec" data-name="Specific Latent Heat">
-<span class="tag">Idea 4</span>
-<h2 tabindex="-1">Specific latent heat</h2>
+<section class="step" data-id="formula" data-name="Δy = λD/a">
+<span class="tag">Idea 3</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">The fringe-separation formula</h2>
 <div class="grid2">
   <div>
-    <div class="box formula"><span class="box-title">Definitions ⭐</span>Specific latent heat of <b>fusion</b>: <b>ℓ<sub>f</sub> = E/m</b> (guide: Q/m) — energy to change 1 kg of solid to liquid at its melting point.<br>Specific latent heat of <b>vaporization</b>: <b>ℓ<sub>v</sub> = E/m</b> — energy to change 1 kg of liquid to gas at its boiling point.<br>So <b>E = mℓ</b>. Unit: <b>J kg⁻¹</b>.</div>
-    <p>For water: ℓ<sub>f</sub> = 3.34 × 10⁵ J kg⁻¹, ℓ<sub>v</sub> = 2.26 × 10⁶ J kg⁻¹. In general ℓ<sub>v</sub> ≫ ℓ<sub>f</sub> ≫ c (for the same substance).</p>
+    <div class="box formula"><span class="box-title">Fringe separation (D ≫ a)</span><b style="font-size:1.3rem">Δy = λD / a</b><br>Δy = distance between neighbouring bright (or dark) fringes<br>λ = wavelength, D = slit-to-screen distance, a = slit separation (all in m)</div>
+    <div class="box key"><span class="box-title">Distance of the nth bright fringe from the centre</span>yₙ = nΔy = nλD/a</div>
   </div>
-  <div class="box key"><span class="box-title">Reading a heating curve (constant power P) ⭐</span><ul class="simple"><li>Sloping parts: Pt = mcΔT ⇒ gradient = P/(mc). <b>Steeper → smaller c</b>.</li><li>Flat parts: Pt = mℓ ⇒ <b>longer flat part → larger ℓ</b>.</li></ul>For water the boiling plateau is about <b>6.8 times</b> as long as the melting plateau (2.26 × 10⁶ ÷ 3.34 × 10⁵).</div>
+  <div>
+    <div class="box warn"><span class="box-title">Counting trap ⚠️</span><b>N bright fringes</b> span <b>N − 1</b> spacings. “7 bright fringes cover 18 mm” ⇒ Δy = 18/6 = 3.0 mm. “First to fifth dark fringe” = 4 spacings.</div>
+    <div class="box warn"><span class="box-title">Units ⚠️</span>Convert nm (10⁻⁹ m) and mm (10⁻³ m) before substituting. Always give a unit in the answer.</div>
+  </div>
 </div>
 </section>
 <section class="step" data-id="worked" data-name="Worked Examples">
-<span class="tag">Worked examples</span>
-<h2 tabindex="-1">Solving latent heat problems</h2>
-<div class="box key"><span class="box-title">Strategy ⭐</span>Split the process into stages. Each <b>temperature change</b> uses mcΔT; each <b>change of state</b> uses mℓ. Add the stages. Then use E = Pt or energy lost = energy gained.</div>
+<span class="tag">Worked examples</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Worked examples</h2>
 <div class="grid2">
-  <div class="box eg worked"><span class="box-title">✏️ Example 1: ice at 0 °C → steam at 100 °C (1 kg)</span>melt: 1 × 3.34 × 10⁵ = 334 000 J<br>heat water: 1 × 4200 × 100 = 420 000 J<br>boil: 1 × 2.26 × 10⁶ = 2 260 000 J<br>total = <b>3.01 × 10⁶ J</b> — boiling needs by far the most energy.</div>
-  <div class="box eg worked"><span class="box-title">✏️ Example 2: making ice</span>0.40 kg of water at 30 °C is put in a freezer that removes energy at 200 W. How long until it is all ice at 0 °C?<br>cool to 0 °C: 0.40 × 4200 × 30 = 50 400 J<br>freeze: 0.40 × 3.34 × 10⁵ = 133 600 J<br>E = 184 000 J ⇒ t = 184 000 ÷ 200 = <b>920 s</b></div>
+  <div class="box eg"><span class="box-title">Example 1: find the slit separation</span>Light of wavelength 600 nm is used with a screen 1.5 m from the slits. Seven bright fringes span 18.0 mm. Find a.<br>Δy = 18.0/6 = 3.00 mm (1M for “6 spacings”)<br>a = λD/Δy = (600 × 10⁻⁹)(1.5)/(3.00 × 10⁻³) (1M)<br>a = <b>3.0 × 10⁻⁴ m = 0.30 mm</b> (1A)</div>
+  <div class="box eg"><span class="box-title">Example 2: change the colour</span>Same slits and screen, now red light of 650 nm.<br>Δy = (650 × 10⁻⁹)(1.5)/(3.0 × 10⁻⁴) = <b>3.25 mm</b>: fringes farther apart.</div>
+  <div class="box eg"><span class="box-title">Example 3: white light</span>White light (400–700 nm), a = 0.20 mm, D = 2.0 m. Width of the 2nd-order spectrum?<br>y₂ = 2λD/a: red 2(700 × 10⁻⁹)(2.0)/(2.0 × 10⁻⁴) = 14 mm; violet 8.0 mm<br>width = 14 − 8.0 = <b>6.0 mm</b>.</div>
+  <div class="box eg"><span class="box-title">Example 4: path difference</span>λ = 500 nm. At P the path difference is 1250 nm = 2.5λ ⇒ <b>dark fringe</b> (the 3rd dark fringe from the centre: ½λ, 1½λ, 2½λ).</div>
 </div>
-<div class="box eg worked"><span class="box-title">✏️ Example 3: boiling away</span>A 1200 W kettle has just brought 0.80 kg of water to the boil. Assuming no loss, how much water is left after a further 3 minutes of boiling?<br>Energy = 1200 × 180 = 216 000 J ⇒ mass boiled away = 216 000 ÷ 2.26 × 10⁶ = 0.0956 kg ⇒ <b>0.704 kg</b> left. (Units check: J ÷ J kg⁻¹ = kg ✓)</div>
-</section>
-<section class="step" data-id="p2" data-name="Practice: Specific Latent Heat">
-<span class="tag quiz">Practice 2</span>
-<h2 tabindex="-1">Practice: specific latent heat calculations</h2>
-<div class="quiz" data-quiz="p2"></div>
 </section>
 <section class="step" data-id="sim" data-name="Simulation">
-<span class="tag sim">Try it!</span>
-<h2 tabindex="-1">Simulation: heating curve of ice</h2>
-<p>A heater of constant power heats ice until it becomes steam (no energy loss). Watch the temperature–time graph and the molecules. (1 s on screen ≈ 40 s.)</p>
+<span class="tag sim">Try it!</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Simulation: Young’s double slit</h2>
+<p>Change the wavelength, slit separation a and screen distance D. The top strip shows the fringes on the screen; the graph shows the brightness. The ruler is in mm.</p>
 <div class="sim-panel">
-  <div class="slider"><label for="mSl"><span>Mass of ice m <span class="zh">(質量)</span></span><span id="mSlVal"></span></label>
-    <input type="range" id="mSl" min="0.1" max="0.5" step="0.05" value="0.2"></div><div class="slider"><label for="pSl"><span>Heater power P <span class="zh">(功率)</span></span><span id="pSlVal"></span></label>
-    <input type="range" id="pSl" min="200" max="1000" step="50" value="500"></div>
-  <div class="slider"><label for="t0Sl"><span>Starting temperature of the ice <span class="zh">(初溫)</span></span><span id="t0SlVal"></span></label>
-    <input type="range" id="t0Sl" min="-30" max="0" step="1" value="-20"></div>
+  <div style="display:flex;flex-direction:column;gap:.5rem">
+    <label class="opt"><input type="checkbox" id="whiteChk"> Use white light (400–700 nm)</label>
+    <label class="opt"><input type="checkbox" id="oneChk"> Cover one slit</label>
+  </div>
+  <div><div class="slider"><label for="lamSl"><span>Wavelength λ <span class="zh">(波長)</span></span><span id="lamSlVal"></span></label>
+    <input type="range" id="lamSl" min="400" max="700" step="10" value="600"></div><div class="slider"><label for="aSl"><span>Slit separation a <span class="zh">(雙縫間距)</span></span><span id="aSlVal"></span></label>
+    <input type="range" id="aSl" min="0.1" max="1.0" step="0.05" value="0.3"></div><div class="slider"><label for="dSl"><span>Screen distance D</span><span id="dSlVal"></span></label>
+    <input type="range" id="dSl" min="0.5" max="3.0" step="0.1" value="1.5"></div></div>
 </div>
-<div class="sim-buttons">
-  <button class="btn-primary" id="playBtn" type="button">▶ Play</button>
-  <button class="btn-secondary" id="resetBtn" type="button">↺ Reset</button>
-  <label for="speedSel" style="font-weight:700">Speed:</label>
-  <select id="speedSel"><option value="1">Normal</option><option value="0.5">Slow (½×)</option><option value="0.25">Very slow (¼×)</option></select>
-</div>
-<canvas id="animCanvas" width="900" height="400" data-fixed-h="400" aria-label="Molecule picture and temperature-time graph of ice being heated to steam"></canvas>
+<canvas id="animCanvas" width="900" height="300" data-fixed-h="300" aria-label="Interference fringes on a screen from a double slit and a graph of brightness against position"></canvas>
 <div class="readout">
-  <div class="ro d"><div class="lab">Temperature</div><div class="val" id="roT"></div></div><div class="ro a"><div class="lab">Energy supplied E = Pt</div><div class="val" id="roE"></div></div><div class="ro v"><div class="lab">State now</div><div class="val" id="roState"></div></div><div class="ro av"><div class="lab">ice / water / steam (kg)</div><div class="val" id="roMass"></div></div>
+  <div class="ro v"><div class="lab">Fringe separation Δy = λD/a</div><div class="val" id="roA"></div></div><div class="ro a"><div class="lab">Bright fringes in ±15 mm</div><div class="val" id="roB"></div></div><div class="ro d"><div class="lab">Light</div><div class="val" id="roC"></div></div><div class="ro av"><div class="lab">Path difference at y = 6 mm</div><div class="val" id="roD"></div></div>
 </div>
 <p class="sim-msg" id="simMsg" role="status"></p>
-<div class="panel" id="eqPanel" aria-live="polite"></div>
 <div class="box key"><span class="box-title">Things to try</span><ul class="simple">
-  <li>Measure the length of the melting and boiling plateaus. Their ratio is ℓ<sub>v</sub> : ℓ<sub>f</sub> ≈ 6.8.</li>
-  <li>Which sloping part is steepest? (ice and steam have c = 2100, water 4200)</li>
-  <li>Double the power: every stage takes half as long.</li></ul></div>
+  <li>Double D. What happens to Δy? Then double a.</li>
+  <li>Change from blue (450 nm) to red (650 nm) light.</li>
+  <li>Tick white light: what colour is the central fringe? Which colour is on the outside of each spectrum?</li>
+  <li>Cover one slit: what is left?</li></ul></div>
 </section>
 <section class="step" data-id="psim" data-name="Practice: Using the Simulation">
-<span class="tag quiz">Practice 3</span>
-<h2 tabindex="-1">Practice: predict, then check with the simulation</h2>
+<span class="tag quiz">Practice 2</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Practice: predict, then check</h2>
 <div class="quiz" data-quiz="psim"></div>
 </section>
-<section class="step" data-id="expt" data-name="Experiments: Measuring ℓ">
+<section class="step" data-id="expt" data-name="Experiments">
 <span class="tag">Experiment</span>
-<h2 tabindex="-1">Measuring specific latent heats</h2>
+<h2 tabindex="-1">Experiments with double slits</h2>
 <div class="grid2">
+  <div class="box eg"><span class="box-title">🔬 Estimating the wavelength of light (procedure)</span><ol class="simple">
+    <li>Shine a laser normally onto a double slit of known slit separation a.</li>
+    <li>Measure the slit-to-screen distance D with a metre rule or tape (D of a few metres).</li>
+    <li>Measure the distance across as many bright fringes as possible (e.g. 10 spacings) and divide to get Δy.</li>
+    <li>Repeat for several values of D.</li>
+    <li>Plot Δy against D: a straight line through the origin with slope λ/a; λ = slope × a.</li></ol>
+    <p>Measuring across many fringes reduces the percentage error. Never look into the laser beam.</p></div>
   <div>
-    <div class="box eg"><span class="box-title">🔬 ℓ<sub>f</sub> of ice (with a control)</span>Two funnels hold equal amounts of <b>crushed ice</b> at 0 °C, each with an immersion heater; only heater A is switched on (joulemeter). Wait until the drip rates are equal (ice at 0 °C), empty the beakers, then heat A for a few minutes. Collect the water from both.<br>ℓ<sub>f</sub> = E ÷ (m<sub>A</sub> − m<sub>B</sub>)<br><b>Set B (control)</b> measures the ice melted by energy from the <b>surroundings</b>. <b>Crushed</b> ice gives good thermal contact.</div>
-    <div class="box eg worked"><span class="box-title">✏️ Sample results</span>E = 19 440 J; water collected: A 0.078 kg, B 0.020 kg<br>ℓ<sub>f</sub> = 19 440 ÷ 0.058 = <b>3.35 × 10⁵ J kg⁻¹</b></div>
-    <p class="caption">Other methods in the guide: heating an ice–water mixture in a domestic electric boiler or a composite (insulated) container, or using an ice calorimeter.</p>
-  </div>
-  <div>
-    <div class="box eg"><span class="box-title">🔬 ℓ<sub>v</sub> of water (balance method)</span>Heat water in a beaker on an electronic balance with an immersion heater. When it boils steadily, start the joulemeter and record the balance reading; stop after several minutes.<br>ℓ<sub>v</sub> = E ÷ (mass boiled away). <b>Do not use a lid</b> (steam would condense and drip back).</div>
-    <div class="box warn"><span class="box-title">Higher or lower than the true value? ⭐</span><table class="t"><tr><th>Error</th><th>Effect on ℓ<sub>v</sub></th></tr>
-      <tr><td>heat lost to the surroundings</td><td>E too big for the mass boiled → <b>higher</b></td></tr>
-      <tr><td>steam condenses and drips back</td><td>mass loss too small → <b>higher</b></td></tr>
-      <tr><td>water splashes out</td><td>mass loss too big → <b>lower</b></td></tr>
-      <tr><td>(ℓ<sub>f</sub>) no control set, heat from surroundings melts ice</td><td>mass melted too big → <b>lower</b></td></tr></table></div>
+    <div class="box eg"><span class="box-title">📡 Microwaves (λ ≈ 3 cm)</span>A microwave transmitter, a metal double slit and a detector moved along a line show maxima and minima. Because λ is much larger, the pattern is spread out and easy to measure; the same path-difference rules apply.</div>
+    <div class="box eg"><span class="box-title">🫧 Soap film</span>Light reflected from the front and back surfaces of a thin soap film interferes. Different thicknesses favour different colours, giving coloured bands that move as the film drains.</div>
   </div>
 </div>
 </section>
-<section class="step" data-id="mix" data-name="Mixtures with Ice">
-<span class="tag">Idea 5</span>
-<h2 tabindex="-1">Mixtures involving a change of state</h2>
-<div class="grid2">
-  <div class="box eg worked"><span class="box-title">✏️ Iced lemon tea</span>0.25 kg of tea (c = 4200 J kg⁻¹ °C⁻¹) at 80 °C. Least mass m of ice at 0 °C to cool it to 10 °C:<br>energy released by tea = energy to melt ice + warm the melted ice to 10 °C<br>0.25 × 4200 × 70 = m(3.34 × 10⁵ + 4200 × 10)<br>73 500 = 376 000 m ⇒ m = <b>0.195 kg</b><br><br><b>If 0.30 kg of ice is added instead:</b> cooling the tea to 0 °C releases 0.25 × 4200 × 80 = 84 000 J, but melting all the ice needs 0.30 × 3.34 × 10⁵ = 100 200 J. Not enough! Final state: <b>ice and water at 0 °C</b> (84 000 ÷ 3.34 × 10⁵ = 0.251 kg of ice melts).</div>
-  <div>
-    <div class="box eg"><span class="box-title">🏆 Class competition: closest to 4 °C</span>How much ice should you add to a 0.33 kg can of soft drink at 28 °C to get exactly 4 °C? (Treat the drink as water.)<br>0.33 × 4200 × 24 = m(3.34 × 10⁵ + 4200 × 4) ⇒ m ≈ <b>0.095 kg</b>.<br>Then test it! Real results differ: the cup and the air also exchange energy, and ice straight from a freezer is below 0 °C (it must be warmed to 0 °C first, so less ice is needed).</div>
-    <div class="box warn"><span class="box-title">Common mistakes ⚠️</span><ul class="simple"><li>Forgetting that melted ice must also be <b>warmed</b> from 0 °C to the final temperature.</li><li>Assuming all the ice melts — always <b>check</b> whether there is enough energy first.</li></ul></div>
-  </div>
-</div>
-</section>
-<section class="step" data-id="p3" data-name="Practice: Experiments &amp; Mixtures">
-<span class="tag quiz">Practice 4</span>
-<h2 tabindex="-1">Practice: experiments and mixtures (DSE style)</h2>
-<div class="quiz" data-quiz="p3"></div>
+<section class="step" data-id="p2" data-name="Practice: DSE-style Questions">
+<span class="tag quiz">Practice 3</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Practice: double slit (DSE style)</h2>
+<div class="quiz" data-quiz="p2"></div>
 </section>
 <section class="step" data-id="summary" data-name="Summary">
 <span class="tag">Well done!</span>
-<h2 tabindex="-1">🎉 Summary of Lesson 1.4a</h2>
+<h2 tabindex="-1">🎉 Summary of Lesson 3.8b</h2>
 <div style="text-align:center"><div class="stars" id="stars" aria-hidden="true"></div>
   <p id="finalScore" style="font-size:1.2rem;font-weight:800"></p><p id="finalMsg"></p></div>
 <table class="t">
-  <tr><th>Idea</th><th>Equation / fact</th><th>Remember</th></tr>
-  <tr><td>change of state</td><td>flat part of heating/cooling curve</td><td>temperature constant at melting / boiling point</td></tr>
-  <tr><td>latent heat</td><td>—</td><td>changes the <b>P.E.</b> of molecules, not the K.E.</td></tr>
-  <tr><td>specific latent heat</td><td>E = mℓ<sub>f</sub>, E = mℓ<sub>v</sub></td><td>J kg⁻¹; ℓ<sub>f</sub> = 3.34 × 10⁵, ℓ<sub>v</sub> = 2.26 × 10⁶ (water)</td></tr>
-  <tr><td>problems</td><td>add mcΔT and mℓ stages</td><td>check whether all the ice melts</td></tr>
+  <tr><th>Idea</th><th>Key point</th></tr>
+  <tr><td>pattern</td><td>equally spaced bright/dark fringes; central fringe brightest</td></tr>
+  <tr><td>path difference</td><td>bright nλ; dark (n + ½)λ</td></tr>
+  <tr><td>Δy = λD/a (Extension)</td><td>larger for longer λ, larger D, smaller a</td></tr>
+  <tr><td>counting</td><td>N bright fringes ⇒ N − 1 spacings</td></tr>
+  <tr><td>white light</td><td>white centre; coloured fringes, red outside</td></tr>
 </table>
-<div class="lesson-link">⬅️ Previous: <a href="1-3-specific-heat-capacity.html">Lesson 1.3: Heat Capacity and Specific Heat Capacity</a> &nbsp;·&nbsp; ➡️ Next: <a href="1-4b-evaporation.html">Lesson 1.4b: Evaporation</a> &nbsp;·&nbsp; 🏠 <a href="index.html">All lessons</a></div>
+<p>Next: the diffraction grating.</p>
+<div class="lesson-link">⬅️ Previous: <a href="3-8a-em-spectrum-light-waves.html">Lesson 3.8a: Light as an Electromagnetic Wave</a> &nbsp;·&nbsp; ➡️ Next: <a href="3-8c-diffraction-grating.html">Lesson 3.8c: The Diffraction Grating</a> &nbsp;·&nbsp; 🏠 <a href="index.html">All lessons</a></div>
 <div class="q-actions" style="justify-content:center">
   <button class="btn-secondary" id="reviewBtn" type="button">Go to first unfinished question</button>
   <button class="btn-retry" id="restartBtn" type="button">↺ Reset all questions</button>
@@ -320,16 +278,16 @@
 <details class="teacher">
 <summary>👩‍🏫 Teacher notes: curriculum outcome map (click to open)</summary>
 <div class="tn-body">
-<p><b>Source:</b> HKDSE Physics Curriculum and Assessment Guide (S4–6), 2015 update — Compulsory Part, <b>I Heat and Gases</b>, subtopic <b>c. Change of state</b>, “Students should be able to” column, printed page 20 (PDF page 30). Outcome text is quoted from the guide.</p>
-<p><b>Core.</b> Nothing in this sub-topic is underlined in the guide, so all of it is in the <b>core</b> of the Compulsory Part.</p>
-<p>This sub-topic is taught in <b>Lesson 1.4a</b> (<a href="1-4a-latent-heat.html">1-4a-latent-heat.html</a>): 14 steps; <b>Lesson 1.4b</b> (<a href="1-4b-evaporation.html">1-4b-evaporation.html</a>): 11 steps. Links to other lessons open that file at the step.</p>
+<p><b>Source:</b> HKDSE Physics Curriculum and Assessment Guide (S4–6), 2015 update — Compulsory Part, <b>III Wave Motion</b>, subtopic <b>b. Light</b>, “Students should be able to” column, printed pages 35–36 (PDF pages 45–46). Outcome text is quoted from the guide.</p>
+<p class="box warn" style="margin:.5rem 0"><b>Mostly core, partly extension.</b> 3 outcome(s) in this sub-topic are <u>underlined</u> in the guide (“Note: The underlined text represents the extension component”, printed p.36); they are tagged <b>Extension (underlined)</b> in the table below. Everything else is <b>core</b>.</p>
+<p>This sub-topic is taught in <b>Lesson 3.5</b> (<a href="3-5-reflection-of-light.html">3-5-reflection-of-light.html</a>): 10 steps; <b>Lesson 3.6a</b> (<a href="3-6a-refraction-of-light.html">3-6a-refraction-of-light.html</a>): 11 steps; <b>Lesson 3.6b</b> (<a href="3-6b-total-internal-reflection.html">3-6b-total-internal-reflection.html</a>): 10 steps; <b>Lesson 3.7a</b> (<a href="3-7a-lenses-ray-diagrams.html">3-7a-lenses-ray-diagrams.html</a>): 11 steps; <b>Lesson 3.7b</b> (<a href="3-7b-lens-formula.html">3-7b-lens-formula.html</a>): 11 steps; <b>Lesson 3.8a</b> (<a href="3-8a-em-spectrum-light-waves.html">3-8a-em-spectrum-light-waves.html</a>): 10 steps; <b>Lesson 3.8b</b> (<a href="3-8b-double-slit.html">3-8b-double-slit.html</a>): 11 steps; <b>Lesson 3.8c</b> (<a href="3-8c-diffraction-grating.html">3-8c-diffraction-grating.html</a>): 11 steps. Links to other lessons open that file at the step.</p>
 <h3>Learning outcomes</h3>
 <div class="table-scroll"><table class="t outcomes"><tr><th>#</th><th>Topic</th><th>Learning outcome (quoted)</th><th>Where it is taught / practised</th></tr>
-<tr><td>1</td><td><i>melting and freezing, boiling and condensing</i></td><td>“state the three states of matter”</td><td><a href="#step2" data-step="2">L1.4a Step 2: States of Matter</a><br><a href="#step5" data-step="5">L1.4a Step 5: Practice: States &amp; Latent Heat</a></td></tr><tr><td>2</td><td><i>melting and freezing, boiling and condensing</i></td><td>“determine the melting point and boiling point”</td><td><a href="#step2" data-step="2">L1.4a Step 2: States of Matter</a><br><a href="#step3" data-step="3">L1.4a Step 3: Heating &amp; Cooling Curves</a><br><a href="#step9" data-step="9">L1.4a Step 9: Simulation</a><br><a href="#step5" data-step="5">L1.4a Step 5: Practice: States &amp; Latent Heat</a></td></tr><tr><td>3</td><td><i>latent heat</i></td><td>“realise latent heat as the energy transferred during the change of state without temperature change”</td><td><a href="#step3" data-step="3">L1.4a Step 3: Heating &amp; Cooling Curves</a><br><a href="#step4" data-step="4">L1.4a Step 4: Latent Heat &amp; Molecules</a><br><a href="#step9" data-step="9">L1.4a Step 9: Simulation</a><br><a href="#step5" data-step="5">L1.4a Step 5: Practice: States &amp; Latent Heat</a></td></tr><tr><td>4</td><td><i>latent heat</i></td><td>“interpret latent heat in terms of the change of potential energy of the molecules during a change of state”</td><td><a href="#step4" data-step="4">L1.4a Step 4: Latent Heat &amp; Molecules</a><br><a href="#step5" data-step="5">L1.4a Step 5: Practice: States &amp; Latent Heat</a></td></tr><tr><td>5</td><td><i>latent heat</i></td><td>“define specific latent heat of fusion as ℓf = Q/m”</td><td><a href="#step6" data-step="6">L1.4a Step 6: Specific Latent Heat</a><br><a href="#step8" data-step="8">L1.4a Step 8: Practice: Specific Latent Heat</a></td></tr><tr><td>6</td><td><i>latent heat</i></td><td>“define specific latent heat of vaporization as ℓv = Q/m”</td><td><a href="#step6" data-step="6">L1.4a Step 6: Specific Latent Heat</a><br><a href="#step8" data-step="8">L1.4a Step 8: Practice: Specific Latent Heat</a></td></tr><tr><td>7</td><td><i>latent heat</i></td><td>“solve problems involving latent heat”</td><td><a href="#step7" data-step="7">L1.4a Step 7: Worked Examples</a><br><a href="#step8" data-step="8">L1.4a Step 8: Practice: Specific Latent Heat</a><br><a href="#step10" data-step="10">L1.4a Step 10: Practice: Using the Simulation</a><br><a href="#step12" data-step="12">L1.4a Step 12: Mixtures with Ice</a><br><a href="#step13" data-step="13">L1.4a Step 13: Practice: Experiments &amp; Mixtures</a><br><a href="1-4b-evaporation.html#step9">L1.4b Step 9: Worked Example: Sweating</a><br><a href="1-4b-evaporation.html#step10">L1.4b Step 10: Practice: Factors &amp; Calculations</a></td></tr><tr><td>8</td><td><i>evaporation</i></td><td>“realise the occurrence of evaporation below boiling point”</td><td><a href="1-4b-evaporation.html#step2">L1.4b Step 2: Evaporation vs Boiling</a><br><a href="1-4b-evaporation.html#step5">L1.4b Step 5: Practice: Evaporation</a></td></tr><tr><td>9</td><td><i>evaporation</i></td><td>“explain the cooling effect of evaporation”</td><td><a href="1-4b-evaporation.html#step3">L1.4b Step 3: Molecular Explanation</a><br><a href="1-4b-evaporation.html#step4">L1.4b Step 4: Cooling Effect</a><br><a href="1-4b-evaporation.html#step7">L1.4b Step 7: Simulation</a><br><a href="1-4b-evaporation.html#step5">L1.4b Step 5: Practice: Evaporation</a></td></tr><tr><td>10</td><td><i>evaporation</i></td><td>“discuss the factors affecting rate of evaporation”</td><td><a href="1-4b-evaporation.html#step6">L1.4b Step 6: Factors Affecting the Rate</a><br><a href="1-4b-evaporation.html#step7">L1.4b Step 7: Simulation</a><br><a href="1-4b-evaporation.html#step8">L1.4b Step 8: Practice: Using the Simulation</a><br><a href="1-4b-evaporation.html#step10">L1.4b Step 10: Practice: Factors &amp; Calculations</a></td></tr><tr><td>11</td><td><i>evaporation</i></td><td>“explain evaporation in terms of molecular motion”</td><td><a href="1-4b-evaporation.html#step3">L1.4b Step 3: Molecular Explanation</a><br><a href="1-4b-evaporation.html#step7">L1.4b Step 7: Simulation</a><br><a href="1-4b-evaporation.html#step5">L1.4b Step 5: Practice: Evaporation</a></td></tr></table></div>
+<tr><td>1</td><td><i>light in electromagnetic spectrum</i></td><td>“state that the speed of light and electromagnetic waves in a vacuum is 3.0 × 10⁸ m s⁻¹”</td><td><a href="3-8a-em-spectrum-light-waves.html#step2">L3.8a Step 2: Light is an EM Wave</a><br><a href="3-8a-em-spectrum-light-waves.html#step3">L3.8a Step 3: The EM Spectrum</a><br><a href="3-8a-em-spectrum-light-waves.html#step4">L3.8a Step 4: Practice: Light and the Spectrum</a></td></tr><tr><td>2</td><td><i>light in electromagnetic spectrum</i></td><td>“state the range of wavelengths for visible light”</td><td><a href="3-8a-em-spectrum-light-waves.html#step3">L3.8a Step 3: The EM Spectrum</a><br><a href="3-8a-em-spectrum-light-waves.html#step6">L3.8a Step 6: Simulation</a><br><a href="3-8a-em-spectrum-light-waves.html#step4">L3.8a Step 4: Practice: Light and the Spectrum</a></td></tr><tr><td>3</td><td><i>light in electromagnetic spectrum</i></td><td>“state the relative positions of visible light and other parts of the electromagnetic spectrum”</td><td><a href="3-8a-em-spectrum-light-waves.html#step3">L3.8a Step 3: The EM Spectrum</a><br><a href="3-8a-em-spectrum-light-waves.html#step6">L3.8a Step 6: Simulation</a><br><a href="3-8a-em-spectrum-light-waves.html#step7">L3.8a Step 7: Practice: Using the Simulation</a><br><a href="3-8a-em-spectrum-light-waves.html#step4">L3.8a Step 4: Practice: Light and the Spectrum</a></td></tr><tr><td>4</td><td><i>reflection of light</i></td><td>“state the laws of reflection”</td><td><a href="3-5-reflection-of-light.html#step2">L3.5 Step 2: Light Rays and the Laws of Reflection</a><br><a href="3-5-reflection-of-light.html#step4">L3.5 Step 4: Practice: Reflection and Images</a></td></tr><tr><td>5</td><td><i>reflection of light</i></td><td>“construct images formed by a plane mirror graphically”</td><td><a href="3-5-reflection-of-light.html#step3">L3.5 Step 3: Images in a Plane Mirror</a><br><a href="3-5-reflection-of-light.html#step5">L3.5 Step 5: Simulation</a><br><a href="3-5-reflection-of-light.html#step6">L3.5 Step 6: Practice: Using the Simulation</a><br><a href="3-5-reflection-of-light.html#step7">L3.5 Step 7: Applications</a><br><a href="3-5-reflection-of-light.html#step8">L3.5 Step 8: Worked Examples</a><br><a href="3-5-reflection-of-light.html#step9">L3.5 Step 9: Practice: DSE-style Questions</a></td></tr><tr><td>6</td><td><i>refraction of light</i></td><td>“examine the laws of refraction”</td><td><a href="3-6a-refraction-of-light.html#step3">L3.6a Step 3: Laws of Refraction and Refractive Index</a><br><a href="3-6a-refraction-of-light.html#step5">L3.6a Step 5: Experiment: Verifying Snell’s Law</a><br><a href="3-6a-refraction-of-light.html#step6">L3.6a Step 6: Simulation</a><br><a href="3-6a-refraction-of-light.html#step7">L3.6a Step 7: Practice: Using the Simulation</a></td></tr><tr><td>7</td><td><i>refraction of light</i></td><td>“sketch the path of a ray refracted at a boundary”</td><td><a href="3-6a-refraction-of-light.html#step2">L3.6a Step 2: Why Light Bends</a><br><a href="3-6a-refraction-of-light.html#step6">L3.6a Step 6: Simulation</a><br><a href="3-6a-refraction-of-light.html#step4">L3.6a Step 4: Practice: Refractive Index</a><br><a href="3-6a-refraction-of-light.html#step8">L3.6a Step 8: Apparent Depth, Blocks and Dispersion</a></td></tr><tr><td>8</td><td><i>refraction of light</i></td><td>“realise n = sin i / sin r as the refractive index of a medium”</td><td><a href="3-6a-refraction-of-light.html#step3">L3.6a Step 3: Laws of Refraction and Refractive Index</a><br><a href="3-6a-refraction-of-light.html#step5">L3.6a Step 5: Experiment: Verifying Snell’s Law</a><br><a href="3-6a-refraction-of-light.html#step4">L3.6a Step 4: Practice: Refractive Index</a></td></tr><tr><td>9</td><td><i>refraction of light</i></td><td>“solve problems involving refraction at a boundary”</td><td><a href="3-6a-refraction-of-light.html#step9">L3.6a Step 9: Worked Examples</a><br><a href="3-6a-refraction-of-light.html#step7">L3.6a Step 7: Practice: Using the Simulation</a><br><a href="3-6a-refraction-of-light.html#step10">L3.6a Step 10: Practice: DSE-style Questions</a></td></tr><tr><td>10</td><td><i>total internal reflection</i></td><td>“examine the conditions for total internal reflection”</td><td><a href="3-6b-total-internal-reflection.html#step2">L3.6b Step 2: Total Internal Reflection</a><br><a href="3-6b-total-internal-reflection.html#step5">L3.6b Step 5: Simulation</a><br><a href="3-6b-total-internal-reflection.html#step4">L3.6b Step 4: Practice: Critical Angle</a></td></tr><tr><td>11</td><td><i>total internal reflection</i></td><td>“solve problems involving total internal reflection at a boundary”</td><td><a href="3-6b-total-internal-reflection.html#step3">L3.6b Step 3: The Critical Angle</a><br><a href="3-6b-total-internal-reflection.html#step6">L3.6b Step 6: Practice: Using the Simulation</a><br><a href="3-6b-total-internal-reflection.html#step8">L3.6b Step 8: Worked Examples</a><br><a href="3-6b-total-internal-reflection.html#step9">L3.6b Step 9: Practice: DSE-style Questions</a></td></tr><tr><td>12</td><td><i>formation of images by lenses</i></td><td>“construct images formed by converging and diverging lenses graphically”</td><td><a href="3-7a-lenses-ray-diagrams.html#step3">L3.7a Step 3: Construction Rules</a><br><a href="3-7a-lenses-ray-diagrams.html#step5">L3.7a Step 5: Images by a Convex Lens</a><br><a href="3-7a-lenses-ray-diagrams.html#step6">L3.7a Step 6: Images by a Concave Lens</a><br><a href="3-7a-lenses-ray-diagrams.html#step7">L3.7a Step 7: Simulation</a><br><a href="3-7a-lenses-ray-diagrams.html#step8">L3.7a Step 8: Practice: Using the Simulation</a></td></tr><tr><td>13</td><td><i>formation of images by lenses</i></td><td>“distinguish between real and virtual images”</td><td><a href="3-5-reflection-of-light.html#step3">L3.5 Step 3: Images in a Plane Mirror</a><br><a href="3-7a-lenses-ray-diagrams.html#step5">L3.7a Step 5: Images by a Convex Lens</a><br><a href="3-7a-lenses-ray-diagrams.html#step4">L3.7a Step 4: Practice: Lens Basics</a><br><a href="3-7a-lenses-ray-diagrams.html#step10">L3.7a Step 10: Practice: DSE-style Questions</a></td></tr><tr><td>14</td><td><i>formation of images by lenses</i></td><td>“apply 1/u + 1/v = 1/f to solve problems for a single thin lens (using the convention “REAL is positive”)” <span class="tag quiz">Extension (underlined)</span></td><td><a href="3-7b-lens-formula.html#step2">L3.7b Step 2: The Lens Formula</a><br><a href="3-7b-lens-formula.html#step3">L3.7b Step 3: Worked Examples</a><br><a href="3-7b-lens-formula.html#step5">L3.7b Step 5: Formula + Magnification</a><br><a href="3-7b-lens-formula.html#step6">L3.7b Step 6: Simulation</a><br><a href="3-7b-lens-formula.html#step7">L3.7b Step 7: Practice: Using the Simulation</a><br><a href="3-7b-lens-formula.html#step4">L3.7b Step 4: Practice: Using the Formula</a><br><a href="3-7b-lens-formula.html#step10">L3.7b Step 10: Practice: DSE-style Questions</a></td></tr><tr><td>15</td><td><i>wave nature of light</i></td><td>“point out light as an example of transverse wave”</td><td><a href="3-8a-em-spectrum-light-waves.html#step2">L3.8a Step 2: Light is an EM Wave</a><br><a href="3-8a-em-spectrum-light-waves.html#step4">L3.8a Step 4: Practice: Light and the Spectrum</a></td></tr><tr><td>16</td><td><i>wave nature of light</i></td><td>“realise diffraction and interference as evidences for the wave nature of light”</td><td><a href="3-8a-em-spectrum-light-waves.html#step8">L3.8a Step 8: Diffraction of Light</a><br><a href="3-8a-em-spectrum-light-waves.html#step9">L3.8a Step 9: Practice: DSE-style Questions</a><br><a href="#step2" data-step="2">L3.8b Step 2: The Experiment</a></td></tr><tr><td>17</td><td><i>wave nature of light</i></td><td>“examine the interference patterns in the Young’s double slit experiment”</td><td><a href="#step2" data-step="2">L3.8b Step 2: The Experiment</a><br><a href="#step3" data-step="3">L3.8b Step 3: Conditions and Path Difference</a><br><a href="#step7" data-step="7">L3.8b Step 7: Simulation</a><br><a href="#step4" data-step="4">L3.8b Step 4: Practice: The Pattern</a></td></tr><tr><td>18</td><td><i>wave nature of light</i></td><td>“apply Δy = λD/a to solve problems” <span class="tag quiz">Extension (underlined)</span></td><td><a href="#step5" data-step="5">L3.8b Step 5: Δy = λD/a</a><br><a href="#step6" data-step="6">L3.8b Step 6: Worked Examples</a><br><a href="#step8" data-step="8">L3.8b Step 8: Practice: Using the Simulation</a><br><a href="#step10" data-step="10">L3.8b Step 10: Practice: DSE-style Questions</a></td></tr><tr><td>19</td><td><i>wave nature of light</i></td><td>“examine the interference patterns in the plane transmission grating”</td><td><a href="3-8c-diffraction-grating.html#step2">L3.8c Step 2: The Grating Pattern</a><br><a href="3-8c-diffraction-grating.html#step6">L3.8c Step 6: Simulation</a><br><a href="3-8c-diffraction-grating.html#step5">L3.8c Step 5: Maximum Order and Spectra</a><br><a href="3-8c-diffraction-grating.html#step4">L3.8c Step 4: Practice: Gratings</a></td></tr><tr><td>20</td><td><i>wave nature of light</i></td><td>“apply d sin θ = nλ to solve problems” <span class="tag quiz">Extension (underlined)</span></td><td><a href="3-8c-diffraction-grating.html#step3">L3.8c Step 3: d sin θ = nλ</a><br><a href="3-8c-diffraction-grating.html#step8">L3.8c Step 8: Worked Examples</a><br><a href="3-8c-diffraction-grating.html#step7">L3.8c Step 7: Practice: Using the Simulation</a><br><a href="3-8c-diffraction-grating.html#step10">L3.8c Step 10: Practice: DSE-style Questions</a></td></tr></table></div>
 <h3>Suggested learning &amp; teaching activities used</h3>
-<div class="table-scroll"><table class="t activities"><tr><th>#</th><th>Activity (from the guide, pp.21–23, incl. Values &amp; Attitudes and STSE)</th><th>Where</th></tr>
-<tr><td>1</td><td>Performing experiments to determine latent heat</td><td><a href="#step11" data-step="11">L1.4a Step 11: Experiments: Measuring ℓ</a><br><a href="#step13" data-step="13">L1.4a Step 13: Practice: Experiments &amp; Mixtures</a></td></tr><tr><td>2</td><td>Measuring the specific latent heat of fusion of water (e.g. using a domestic electric boiler, heating an ice-water mixture in a composite container, or using an ice calorimeter)</td><td><a href="#step11" data-step="11">L1.4a Step 11: Experiments: Measuring ℓ</a></td></tr><tr><td>3</td><td>Performing experiments to study the cooling curve of a substance and determine its melting point</td><td><a href="#step3" data-step="3">L1.4a Step 3: Heating &amp; Cooling Curves</a><br><a href="#step9" data-step="9">L1.4a Step 9: Simulation</a></td></tr><tr><td>4</td><td>Challenging preconceived ideas on energy transfer through competitions (e.g. attaining a temperature closest to 4 °C by mixing a soft drink with ice)</td><td><a href="#step12" data-step="12">L1.4a Step 12: Mixtures with Ice</a></td></tr><tr><td>5</td><td>Using dimension analysis to check the results of mathematical solutions</td><td><a href="#step7" data-step="7">L1.4a Step 7: Worked Examples</a></td></tr><tr><td>6</td><td>Determining factors affecting the rate of evaporation</td><td><a href="1-4b-evaporation.html#step6">L1.4b Step 6: Factors Affecting the Rate</a><br><a href="1-4b-evaporation.html#step7">L1.4b Step 7: Simulation</a></td></tr><tr><td>7</td><td>Reading articles on heat stroke and discussing heat stroke precautions and care</td><td><a href="1-4b-evaporation.html#step4">L1.4b Step 4: Cooling Effect</a></td></tr></table></div>
-<p><b>Notes alignment:</b> follows Heat notes Chapter 4 §4.1–4.5 (cooling curve of octadecan-1-ol, KE/PE interpretation, E<sub>f</sub> = mℓ<sub>f</sub>, E<sub>v</sub> = mℓ<sub>v</sub>, ℓ<sub>f</sub> = 3.34 × 10⁵ J kg⁻¹, ℓ<sub>v</sub> = 2.26 × 10⁶ J kg⁻¹, c(ice) = c(steam) = 2100 J kg⁻¹ °C⁻¹, control set-up for ℓ<sub>f</sub>, balance method for ℓ<sub>v</sub>, slopes of heating curves). Evaporation (§4.6–4.7) is Lesson 1.4b. <b>Left out:</b> plasma (“further information” in the notes) and kilowatt-hour-meter revolutions (a joulemeter is used instead). <b>Exam emphasis:</b> mixtures with ice, power × time with latent heat, error-direction questions, “latent heat increases the P.E. of molecules” wording. <b>Simulation model:</b> ice heated at constant power with no energy loss; the temperature and the amounts of each state are computed exactly from the energy supplied E = Pt.</p>
+<div class="table-scroll"><table class="t activities"><tr><th>#</th><th>Activity (from the guide, pp.37–39, incl. Values &amp; Attitudes and STSE)</th><th>Where</th></tr>
+<tr><td>1</td><td>Estimating the wavelength of light by using double slit or plane transmission grating</td><td><a href="#step9" data-step="9">L3.8b Step 9: Experiments</a><br><a href="3-8c-diffraction-grating.html#step9">L3.8c Step 9: Experiment</a></td></tr><tr><td>2</td><td>Estimating the wavelength of microwaves by using double slit</td><td><a href="#step9" data-step="9">L3.8b Step 9: Experiments</a></td></tr><tr><td>3</td><td>Demonstrating interference patterns in soap film</td><td><a href="#step9" data-step="9">L3.8b Step 9: Experiments</a></td></tr><tr><td>4</td><td>Determining the effects of wavelength, slit separation or screen distance on an interference pattern in an experiment by using double slit</td><td><a href="#step5" data-step="5">L3.8b Step 5: Δy = λD/a</a><br><a href="#step7" data-step="7">L3.8b Step 7: Simulation</a><br><a href="#step8" data-step="8">L3.8b Step 8: Practice: Using the Simulation</a></td></tr><tr><td>5</td><td>Measuring the focal lengths of lenses</td><td><a href="3-7a-lenses-ray-diagrams.html#step9">L3.7a Step 9: Optical Instruments and Measuring f</a><br><a href="3-7b-lens-formula.html#step9">L3.7b Step 9: Experiment</a></td></tr><tr><td>6</td><td>Locating real and virtual images in lenses by using ray boxes and ray tracing</td><td><a href="3-7a-lenses-ray-diagrams.html#step3">L3.7a Step 3: Construction Rules</a><br><a href="3-7a-lenses-ray-diagrams.html#step7">L3.7a Step 7: Simulation</a></td></tr><tr><td>7</td><td>Using ray diagrams to predict the nature and position of an image in an optical device</td><td><a href="3-5-reflection-of-light.html#step7">L3.5 Step 7: Applications</a><br><a href="3-7a-lenses-ray-diagrams.html#step9">L3.7a Step 9: Optical Instruments and Measuring f</a><br><a href="3-7a-lenses-ray-diagrams.html#step8">L3.7a Step 8: Practice: Using the Simulation</a></td></tr><tr><td>8</td><td>Searching for information on the development of physics of light</td><td><a href="3-8a-em-spectrum-light-waves.html#step2">L3.8a Step 2: Light is an EM Wave</a></td></tr><tr><td>9</td><td>Discussing some everyday uses and effects of electromagnetic radiation</td><td><a href="3-8a-em-spectrum-light-waves.html#step5">L3.8a Step 5: Uses and Hazards</a></td></tr><tr><td>10</td><td>Carrying out an experiment to verify Snell’s law</td><td><a href="3-6a-refraction-of-light.html#step5">L3.6a Step 5: Experiment: Verifying Snell’s Law</a><br><a href="3-6a-refraction-of-light.html#step6">L3.6a Step 6: Simulation</a></td></tr><tr><td>11</td><td>Determining the refractive index of glass or perspex</td><td><a href="3-6a-refraction-of-light.html#step5">L3.6a Step 5: Experiment: Verifying Snell’s Law</a><br><a href="3-6a-refraction-of-light.html#step7">L3.6a Step 7: Practice: Using the Simulation</a></td></tr><tr><td>12</td><td>Determining the conditions for total internal reflection to occur</td><td><a href="3-6b-total-internal-reflection.html#step2">L3.6b Step 2: Total Internal Reflection</a><br><a href="3-6b-total-internal-reflection.html#step5">L3.6b Step 5: Simulation</a></td></tr><tr><td>13</td><td>Values &amp; attitudes / STSE: proper use of microwave ovens; mobile-phone microwave radiation; UV and the ozone layer; impact of EM waves on telecommunications</td><td><a href="3-8a-em-spectrum-light-waves.html#step5">L3.8a Step 5: Uses and Hazards</a></td></tr></table></div>
+<p><b>Notes alignment:</b> Wave notes Chapter 8 §8.7 (Young’s double slit: set-up, bright/dark fringes as constructive/destructive interference, order of fringes, effect of λ and slit separation, Δy = λD/a for D ≫ a, worked examples incl. white light). <b>Extension:</b> only “apply Δy = λD/a to solve problems” is underlined in the C&amp;A Guide, so the formula, its worked examples and its calculation questions carry the Extension label; examining the interference pattern (qualitative) is core. <b>Left out:</b> the derivation of Δy = λD/a (marked “Out Syl.” in the notes). <b>Exam emphasis:</b> counting fringe spacings (n bright fringes span n − 1 spacings), path difference nλ / (n + ½)λ, what changes Δy and what does not (moving the source, slit width), white-light fringes, and comparing the double slit with the grating (Paper 1A 2025 Q18 answered correctly by only 37%). <b>Simulation model:</b> intensity = cos²(π a y/λD) × single-slit envelope (slit width 0.05 mm); maxima at y = nλD/a are checked in the selftest. White light is the sum of seven wavelengths (400–700 nm).</p>
 </div></details>
 <script>
 
@@ -445,109 +403,87 @@ function kHTML(id, t){ var e = document.getElementById(id); if (e) e.innerHTML =
 
 var Q = {
 p1:[
- {type:"mc", text:"Which substance is a <b>liquid</b> at room temperature (about 20 °C)?", options:["P: melting point 30 °C, boiling point 300 °C","Q: melting point −95 °C, boiling point 56 °C","R: melting point −210 °C, boiling point −196 °C","S: melting point 80 °C, boiling point 218 °C"], answer:1,
-  hints:["A liquid is between its melting point and boiling point.",""], explain:"Only Q has melting point < 20 °C < boiling point."},
- {type:"mc", text:"On the cooling curve of a liquid, the temperature stays constant for a while. During this time the substance is…", options:["freezing and releasing latent heat","not losing any energy","boiling","absorbing latent heat from the air"], answer:0,
-  hints:["It is still cooler air around it…",""], explain:"It is freezing; it keeps losing energy (latent heat) to the air while the temperature stays at the freezing point."},
- {type:"mc", text:"While ice melts at 0 °C, the energy absorbed…", options:["increases the potential energy of the molecules","increases the average kinetic energy of the molecules","increases the temperature of the ice","is destroyed"], answer:0,
-  hints:["The temperature does not change.",""], explain:"Constant temperature → constant average K.E.; the energy increases the P.E. (molecules move further apart)."},
- {type:"mc", text:"The cooling curve of a substance has a flat part PQ. Which statements about PQ are correct?<br>(1) The substance does not lose energy to the surroundings.<br>(2) The substance releases latent heat.<br>(3) The average potential energy of the molecules decreases.", options:["(1) only","(3) only","(1) and (2) only","(2) and (3) only"], answer:3,
-  hints:["Cooling curve → the substance is losing energy all the time.",""], explain:"(2) and (3). It releases latent heat, so the P.E. of its molecules decreases at constant temperature."},
- {type:"mc", text:"When water at 100 °C boils and becomes steam at 100 °C, the molecules’…", options:["potential energy increases","average kinetic energy increases","potential energy decreases","kinetic and potential energy both stay the same"], answer:0,
-  hints:["Same temperature → same average K.E.",""], explain:"The latent heat increases the P.E. as the molecules separate."},
- {type:"mc", text:"A solid is heated at constant power until it melts and then becomes a hot liquid. On its heating curve, the solid part is steeper than the liquid part. This shows that…", options:["the specific heat capacity of the solid is smaller than that of the liquid","the specific heat capacity of the solid is larger","the solid has a larger latent heat","the liquid has a lower melting point"], answer:0,
-  hints:["Gradient = P/(mc).",""], explain:"Same P and m: steeper gradient → smaller c."}
-],
-p2:[
- {type:"num", text:"How much energy is needed to melt <b>0.50 kg</b> of ice at 0 °C?", answer:167000, unit:"J",
-  hints:["E = mℓ<sub>f</sub>",""], explain:"E = 0.50 × 3.34 × 10⁵ = 1.67 × 10⁵ J."},
- {type:"num", text:"How much energy is needed to change <b>0.40 kg</b> of boiling water at 100 °C into steam?", answer:904000, unit:"J",
-  hints:["E = mℓ<sub>v</sub>",""], explain:"E = 0.40 × 2.26 × 10⁶ = 9.04 × 10⁵ J."},
- {type:"num", text:"A 42 W heating coil keeps a liquid boiling in an insulated vessel. The liquid boils away at <b>2.0 × 10⁻⁵ kg s⁻¹</b>. Find its specific latent heat of vaporization.", answer:2.1e6, unit:"J/kg",
-  hints:["In 1 s: 42 J boils 2.0 × 10⁻⁵ kg.","ℓ<sub>v</sub> = P ÷ (rate of mass loss)"], explain:"ℓ<sub>v</sub> = 42 ÷ 2.0 × 10⁻⁵ = 2.1 × 10⁶ J kg⁻¹."},
- {type:"num", text:"A 1200 W kettle contains boiling water. How long does it take to boil away <b>0.30 kg</b> of it (no energy loss)?", answer:565, unit:"s",
-  hints:["Pt = mℓ<sub>v</sub>",""], explain:"t = 0.30 × 2.26 × 10⁶ ÷ 1200 = 565 s."},
- {type:"num", text:"How much energy must be removed from <b>0.40 kg</b> of water at <b>30 °C</b> to turn it into ice at 0 °C?", answer:184000, unit:"J",
-  hints:["Two stages: cool to 0 °C (mcΔT), then freeze (mℓ<sub>f</sub>).",""], explain:"50 400 + 133 600 = 1.84 × 10⁵ J."},
- {type:"num", text:"An immersion heater takes <b>7.0 min</b> to heat some water from 30 °C to 100 °C. How many <b>minutes</b> will it take to boil all of the water away? (Assume no energy loss.)", answer:53.81, unit:"min",
-  hints:["Same P: time ∝ energy. Compare mℓ<sub>v</sub> with mcΔT.","t = 7.0 × 2.26 × 10⁶ ÷ (4200 × 70)"], explain:"Ratio = 2.26 × 10⁶ ÷ 294 000 = 7.69, so t = 7.0 × 7.69 = 53.8 min."},
- {type:"mc", text:"Burns from steam at 100 °C are usually more serious than burns from the same mass of boiling water at 100 °C because steam…", options:["releases latent heat when it condenses on the skin","has a higher temperature","has a higher specific heat capacity","moves faster"], answer:0,
-  hints:["What happens when steam touches the cooler skin?",""], explain:"Steam condenses, releasing 2.26 × 10⁶ J kg⁻¹ before cooling like the water."}
+ {type:"mc", text:"In Young’s experiment, a bright fringe is formed where light from the two slits…", options:["arrives in phase (constructive interference)","arrives in antiphase","is reflected","is refracted"], answer:0,
+  hints:["",""], explain:"Constructive interference ⇒ bright fringe."},
+ {type:"mc", text:"Why must the two slits be lit by the same source?", options:["so that they are coherent","so that the light is brighter","so that the light travels faster","so that there is no diffraction"], answer:0,
+  hints:["Constant phase difference.",""], explain:"Light from one source split in two keeps a constant phase difference: coherent sources."},
+ {type:"mc", text:"The path difference at a point on the screen is 2λ. The point is…", options:["the 2nd-order bright fringe","the 2nd dark fringe","the central bright fringe","the 1st dark fringe"], answer:0,
+  hints:["nλ ⇒ bright, order n.",""], explain:"Path difference 2λ ⇒ 2nd-order bright fringe."},
+ {type:"mc", text:"Which change makes the fringes <b>closer together</b>?", options:["using slits with a larger separation","using red light instead of green light","moving the screen farther away","moving the laser farther from the slits"], answer:0,
+  hints:["Fringes spread more with longer λ, larger D, smaller a.",""], explain:"Larger a ⇒ smaller fringe separation. Moving the laser has no effect."},
+ {type:"mc", text:"White light is used. The central fringe is…", options:["white","red","violet","dark"], answer:0,
+  hints:["Path difference zero for every colour.",""], explain:"All colours interfere constructively at the centre ⇒ white."},
+ {type:"mc", text:"With white light, the first-order fringe on each side is a spectrum. Which colour is nearest the central fringe?", options:["violet/blue","red","green","yellow"], answer:0,
+  hints:["Shorter λ ⇒ smaller y.",""], explain:"y ∝ λ, so violet is on the inside and red on the outside."},
+ {type:"mc", text:"Which statement explains why the double-slit pattern is evidence that light is a wave?", options:["Only waves can diffract and interfere to give bright and dark fringes.","Light travels in straight lines through the slits.","Light carries energy to the screen.","Light is reflected by the screen."], answer:0,
+  hints:["",""], explain:"Diffraction + interference are wave properties."}
 ],
 psim:[
- {type:"num", text:"0.20 kg of ice at −20 °C, P = 500 W. Predict the time before the ice <b>starts</b> to melt.", answer:16.8, unit:"s",
-  hints:["E = mcΔT = 0.20 × 2100 × 20","t = E/P"], explain:"8400 J ÷ 500 W = 16.8 s."},
- {type:"num", text:"How long does the <b>melting</b> stage last?", answer:133.6, unit:"s",
-  hints:["t = mℓ<sub>f</sub>/P",""], explain:"0.20 × 3.34 × 10⁵ ÷ 500 = 133.6 s."},
- {type:"num", text:"How long does the <b>boiling</b> stage last?", answer:904, unit:"s",
-  hints:["t = mℓ<sub>v</sub>/P",""], explain:"0.20 × 2.26 × 10⁶ ÷ 500 = 904 s."},
- {type:"num", text:"What mass of water is left after it has been boiling for <b>300 s</b>?", answer:0.1336, unit:"kg", tol:0.0015,
-  hints:["Mass boiled = Pt/ℓ<sub>v</sub> = 500 × 300 ÷ 2.26 × 10⁶",""], explain:"0.20 − 0.0664 = 0.134 kg."}
+ {type:"num", text:"Set λ = 600 nm, a = 0.30 mm, D = 1.5 m. Find the fringe separation in mm.", answer:3, unit:"mm",
+  hints:["Δy = λD/a",""], explain:"Δy = (600 × 10⁻⁹)(1.5)/(3.0 × 10⁻⁴) = 3.0 × 10⁻³ m."},
+ {type:"num", text:"Keep λ and a, and set D = 3.0 m. Find Δy (mm).", answer:6, unit:"mm",
+  hints:["Δy ∝ D",""], explain:"Doubling D doubles Δy: 6.0 mm."},
+ {type:"num", text:"Back to D = 1.5 m; set a = 0.60 mm. Find Δy (mm).", answer:1.5, unit:"mm",
+  hints:["Δy ∝ 1/a",""], explain:"Doubling a halves Δy: 1.5 mm."},
+ {type:"mc", text:"Cover one slit. The screen shows…", options:["a single bright central band with faint side bands (diffraction only), no closely spaced fringes","the same fringes, half as bright","no light at all","fringes twice as close"], answer:0,
+  hints:["Interference needs two sources.",""], explain:"With one slit there is no two-source interference; only the single-slit diffraction pattern remains."},
+ {type:"num", text:"λ = 600 nm. At y = 6 mm the path difference shown is 1200 nm (with a = 0.30 mm, D = 1.5 m). How many wavelengths is that?", answer:2, unit:"",
+  hints:["1200/600",""], explain:"2λ ⇒ the 2nd-order bright fringe (y = 2Δy = 6 mm)."}
 ],
-p3:[
- {type:"num", text:"In the funnel experiment, E = 19 440 J; water collected: set A 0.078 kg, set B (control) 0.020 kg. Find ℓ<sub>f</sub>.", answer:335172, unit:"J/kg",
-  hints:["ℓ<sub>f</sub> = E/(m<sub>A</sub> − m<sub>B</sub>)",""], explain:"19 440 ÷ 0.058 = 3.35 × 10⁵ J kg⁻¹."},
- {type:"mc", text:"In the ℓ<sub>f</sub> experiment, what is the purpose of set B (heater switched off)?", options:["To find the mass of ice melted by energy from the surroundings","To check the heater","To keep the ice at 0 °C","To measure the room temperature"], answer:0,
-  hints:["What else melts the ice besides the heater?",""], explain:"Set B is the control: subtracting m<sub>B</sub> removes the ice melted by the surroundings."},
- {type:"mc", text:"In the ℓ<sub>v</sub> experiment (beaker on a balance), which error makes the result <b>smaller</b> than the true value?", options:["Energy is lost to the surroundings.","Water splashes out of the beaker.","Steam condenses on the heater and drips back.","The beaker is not insulated."], answer:1,
-  hints:["ℓ<sub>v</sub> = E/Δm. What makes Δm too large?",""], explain:"Splashing makes the measured mass loss too large, so E/Δm is too small. The other errors make ℓ<sub>v</sub> too large."},
- {type:"num", text:"Find the least mass of ice at 0 °C needed to cool 0.30 kg of water from 30 °C to 5 °C.", answer:0.08873, unit:"kg", tol:0.0009,
-  hints:["0.30 × 4200 × 25 = m(3.34 × 10⁵ + 4200 × 5)",""], explain:"m = 31 500 ÷ 355 000 = 0.0887 kg."},
- {type:"mc", text:"0.10 kg of ice at 0 °C is put into 0.20 kg of water at 20 °C in an insulated cup. The final contents are…", options:["water at a temperature above 0 °C","ice and water at 0 °C","water at exactly 0 °C with no ice","ice only"], answer:1,
-  hints:["Energy released by the water cooling to 0 °C = 0.20 × 4200 × 20.","Energy to melt all the ice = 0.10 × 3.34 × 10⁵."], explain:"16 800 J < 33 400 J, so only about half the ice melts: ice and water at 0 °C."},
- {type:"num", text:"0.25 kg of tea at 80 °C is cooled with 0.30 kg of ice at 0 °C. What mass of ice melts?", answer:0.2515, unit:"kg", tol:0.0025,
-  hints:["The tea can cool only to 0 °C: 0.25 × 4200 × 80 J.","Mass melted = that energy ÷ ℓ<sub>f</sub>"], explain:"84 000 ÷ 3.34 × 10⁵ = 0.251 kg (0.049 kg of ice remains)."}
+p2:[
+ {type:"num", text:"Light of wavelength 550 nm passes through two slits 0.25 mm apart. The screen is 2.0 m away. Find the fringe separation in mm.", answer:4.4, unit:"mm",
+  hints:["Δy = λD/a","(550 × 10⁻⁹)(2.0)/(0.25 × 10⁻³)"], explain:"Δy = 4.4 × 10⁻³ m = 4.4 mm."},
+ {type:"num", text:"In a double-slit experiment, 5 bright fringes span 12.0 mm. The screen is 1.2 m from slits 0.20 mm apart. Find the wavelength in nm.", answer:500, unit:"nm",
+  hints:["5 bright fringes = 4 spacings.","λ = aΔy/D"], explain:"Δy = 3.0 mm; λ = (0.20 × 10⁻³)(3.0 × 10⁻³)/1.2 = 5.0 × 10⁻⁷ m = 500 nm."},
+ {type:"num", text:"Light of 600 nm is viewed 1.0 m from a double slit. The distance between the first and fifth dark fringes is 6.0 mm. Find the slit separation in mm.", answer:0.4, unit:"mm",
+  hints:["1st to 5th dark = 4 spacings.","a = λD/Δy"], explain:"Δy = 1.5 mm; a = (600 × 10⁻⁹)(1.0)/(1.5 × 10⁻³) = 4.0 × 10⁻⁴ m = 0.40 mm."},
+ {type:"num", text:"White light of 400–700 nm passes through slits 0.30 mm apart onto a screen 1.5 m away. Find the width of the first-order spectrum (in mm).", answer:1.5, unit:"mm",
+  hints:["y₁ = λD/a for each end.","3.5 mm − 2.0 mm"], explain:"y(red) = 3.5 mm, y(violet) = 2.0 mm ⇒ width 1.5 mm."},
+ {type:"mc", text:"Light of wavelength 400 nm is used. The path difference from the two slits to point P is 3000 nm. Which is correct?<br>(1) P is a dark fringe.<br>(2) P becomes a bright fringe if light of wavelength 500 nm is used.<br>(3) The fringe separation increases if the light source is moved closer to the slits.", options:["(1) and (2) only","(1) only","(2) and (3) only","(1), (2) and (3)"], answer:0,
+  hints:["3000/400 = 7.5; 3000/500 = 6.","Does the source position affect Δy?"], explain:"7.5λ ⇒ dark; 6λ ⇒ bright; Δy = λD/a does not depend on the source position."},
+ {type:"mc", text:"The whole double-slit apparatus is placed under water (refractive index 1.33). The fringe separation…", options:["decreases","increases","stays the same","becomes zero"], answer:0,
+  hints:["λ in water = λ/n",""], explain:"The wavelength in water is shorter, so Δy = λD/a decreases."},
+ {type:"mc", text:"A microwave transmitter (λ = 3.0 cm) sends waves through two gaps. A detector is at a point where the path difference is 4.5 cm. The detector reading is…", options:["a minimum","a maximum","the same as with one gap","zero for all positions"], answer:0,
+  hints:["4.5/3.0 = 1.5",""], explain:"Path difference 1.5λ ⇒ destructive ⇒ minimum."},
+ {type:"mc", text:"To estimate the wavelength more accurately, a student should…", options:["measure across many fringe spacings and divide","measure one fringe spacing with a metre rule","move the laser closer to the slits","use slits with a very large separation"], answer:0,
+  hints:["Reduce the percentage error.",""], explain:"Measuring across many fringes reduces the percentage error in Δy."}
 ]};
 
 function makeSim(){
-  var cv = document.getElementById("animCanvas"), CI = 2100, CW = 4200, CSt = 2100, LF = 3.34e5, LV = 2.26e6, TMAX = 120, P = {}, t = 0, hist = [], clock, rng = 3;
-  function rnd(){ rng = (rng*16807) % 2147483647; return rng/2147483647; }
-  var mol = []; for (var i = 0; i < 36; i++) mol.push({gx:i%6, gy:Math.floor(i/6), x:rnd(), y:rnd(), a:rnd()*6.28});
-  function read(){ P.m = kVal("mSl"); P.P = kVal("pSl"); P.T0 = kVal("t0Sl"); kText("mSlVal", kFmt(P.m, 2) + " kg"); kText("pSlVal", P.P + " W"); kText("t0SlVal", P.T0 + " °C"); }
-  function stages(){ var m = P.m; return [m*CI*(0 - P.T0), m*LF, m*CW*100, m*LV, m*CSt*(TMAX - 100)]; }
-  function tEnd(){ return stages().reduce(function(a, b){ return a + b; }, 0)/P.P; }
-  function at(E){ var s = stages(), m = P.m, e = E;
-    if (e <= s[0]) return {T:P.T0 + e/(m*CI), ice:m, water:0, steam:0, st:"solid (ice) warming"}; e -= s[0];
-    if (e <= s[1]){ var f = e/LF; return {T:0, ice:m - f, water:f, steam:0, st:"melting at 0 °C"}; } e -= s[1];
-    if (e <= s[2]) return {T:e/(m*CW), ice:0, water:m, steam:0, st:"liquid (water) warming"}; e -= s[2];
-    if (e <= s[3]){ var g = e/LV; return {T:100, ice:0, water:m - g, steam:g, st:"boiling at 100 °C"}; } e -= s[3];
-    return {T:Math.min(TMAX, 100 + e/(m*CSt)), ice:0, water:0, steam:m, st:"gas (steam) warming"}; }
-  function reset(){ if (clock) clock.stop(); read(); t = 0; hist = [[0, P.T0]]; update(); draw(); kText("simMsg", "Ready. Press ▶ Play to switch on the heater."); }
-  function adv(dt){ var n = Math.max(1, Math.ceil(dt/2)), h = dt/n; for (var i = 0; i < n; i++){ t = Math.min(tEnd(), t + h); hist.push([t, at(P.P*t).T]); if (t >= tEnd()) break; } }
-  function update(){ var E = P.P*t, s = at(E), st = stages(), tm = [st[0]/P.P, st[1]/P.P, st[2]/P.P, st[3]/P.P];
-    kText("roT", kFmt(s.T, 1) + " °C"); kText("roE", Math.round(E).toLocaleString("en") + " J"); kText("roState", s.st); kText("roMass", kFmt(s.ice, 3) + " / " + kFmt(s.water, 3) + " / " + kFmt(s.steam, 3));
-    kHTML("eqPanel", "Stage times (E/P): ice warms " + kFmt(tm[0], 1) + " s (mcΔT) · melts <b>" + kFmt(tm[1], 1) + " s</b> (mℓ<sub>f</sub>) · water warms " + kFmt(tm[2], 1) + " s · boils <b>" + kFmt(tm[3], 1) + " s</b> (mℓ<sub>v</sub>)<br>Boiling plateau ÷ melting plateau = ℓ<sub>v</sub>/ℓ<sub>f</sub> = " + kFmt(LV/LF, 2)); }
-  function draw(){
-    var g = kSetup(cv), ctx = g.ctx, W = g.w, H = g.h, lw = Math.min(300, W*0.34), s = at(P.P*t), m = P.m;
+  var cv = document.getElementById("animCanvas"), P = {}, WSLIT = 0.05e-3, YR = 0.015;
+  var WL = [[410, [0.55, 0, 1]], [450, [0.15, 0.1, 1]], [490, [0, 0.8, 1]], [540, [0.1, 1, 0.1]], [580, [1, 0.95, 0]], [620, [1, 0.45, 0]], [680, [1, 0, 0]]];
+  function rgb(nm){ var r = 0, g = 0, b = 0;
+    if (nm < 440){ r = (440 - nm)/60; b = 1; } else if (nm < 490){ g = (nm - 440)/50; b = 1; } else if (nm < 510){ g = 1; b = (510 - nm)/20; } else if (nm < 580){ r = (nm - 510)/70; g = 1; } else if (nm < 645){ r = 1; g = (645 - nm)/65; } else r = 1; return [r, g, b]; }
+  function I(y, lam, a, D, one){ var s = y/Math.hypot(y, D), b = Math.PI*WSLIT*s/lam, env = Math.abs(b) < 1e-9 ? 1 : Math.pow(Math.sin(b)/b, 2); if (one) return env/4; var c = Math.cos(Math.PI*a*s/lam); return c*c*env; }
+  function read(){ P.lam = kVal("lamSl")*1e-9; P.a = kVal("aSl")*1e-3; P.D = kVal("dSl"); P.white = kVal("whiteChk"); P.one = kVal("oneChk"); P.dy = P.lam*P.D/P.a;
+    kText("lamSlVal", kVal("lamSl") + " nm"); kText("aSlVal", kFmt(kVal("aSl"), 2) + " mm"); kText("dSlVal", kFmt(P.D, 1) + " m"); }
+  function colourAt(y){ if (!P.white){ var c = rgb(P.lam*1e9), v = I(y, P.lam, P.a, P.D, P.one); return [c[0]*v, c[1]*v, c[2]*v]; }
+    var s = [0, 0, 0]; WL.forEach(function(w){ var v = I(y, w[0]*1e-9, P.a, P.D, P.one); s[0] += w[1][0]*v; s[1] += w[1][1]*v; s[2] += w[1][2]*v; }); return [s[0]/2.8, s[1]/2.8, s[2]/2.4]; }
+  function update(){ kText("roA", P.white ? "depends on colour: " + kFmt(400e-9*P.D/P.a*1000, 2) + "–" + kFmt(700e-9*P.D/P.a*1000, 2) + " mm" : kFmt(P.dy*1000, 2) + " mm");
+    kText("roB", P.one ? "no two-slit fringes (one slit)" : P.white ? "white centre, coloured spectra" : String(2*Math.floor(YR/P.dy + 1e-9) + 1));
+    kText("roC", P.white ? "white light 400–700 nm" : kFmt(P.lam*1e9, 0) + " nm (monochromatic)");
+    var pd = P.a*0.006/Math.hypot(0.006, P.D); kText("roD", P.one ? "—" : kFmt(pd*1e9, 0) + " nm" + (P.white ? "" : " = " + kFmt(pd/P.lam, 2) + "λ")); }
+  function draw(){ var g = kSetup(cv), ctx = g.ctx, W = g.w, H = g.h, x0 = 40, sw = W - 80, i;
     ctx.clearRect(0, 0, W, H); ctx.fillStyle = "#fff"; ctx.fillRect(0, 0, W, H);
-    var bx = 30, by = 60, bw = lw - 60, bh = 260; ctx.strokeStyle = "#334155"; ctx.lineWidth = 3; ctx.strokeRect(bx, by, bw, bh);
-    var fi = s.ice/m, fw = s.water/m, fs = s.steam/m;
-    mol.forEach(function(p, i){ var u = i/mol.length, x, y, phase = u < fi ? "ice" : (u < fi + fw ? "water" : "steam");
-      if (phase === "ice"){ x = bx + 40 + p.gx*((bw - 80)/5) + (rnd() - 0.5)*3; y = by + bh - 30 - p.gy*18 + (rnd() - 0.5)*3; ctx.fillStyle = "#38bdf8"; }
-      else if (phase === "water"){ x = bx + 20 + p.x*(bw - 40); y = by + bh - 20 - p.y*110; ctx.fillStyle = "#2563eb"; }
-      else { x = bx + 10 + p.x*(bw - 20); y = by + 10 + p.y*(bh - 20); ctx.fillStyle = "#94a3b8"; }
-      ctx.beginPath(); ctx.arc(x, y, 6, 0, 7); ctx.fill(); });
-    ctx.fillStyle = t > 0 && t < tEnd() ? "#ef4444" : "#64748b"; ctx.fillRect(bx + bw/2 - 30, by + bh + 8, 60, 10);
-    ctx.fillStyle = "#111"; ctx.font = "bold 12px Arial"; ctx.textAlign = "center"; ctx.fillText(s.st, bx + bw/2, by - 12); ctx.font = "11px Arial"; ctx.fillText("heater " + P.P + " W", bx + bw/2, by + bh + 32);
-    ctx.save(); ctx.translate(lw + 10, 0); var Gx = {ctx:ctx, w:W - lw - 10, h:H}, xr = kNice(0, tEnd(), 6);
-    var A = kAxes(Gx, xr, {lo:-40, hi:130, step:20}, "time / s", "temperature / °C");
-    kLine(A, hist, "#dc2626", 3); var st = stages(), c0 = st[0]/P.P, c1 = c0 + st[1]/P.P, c2 = c1 + st[2]/P.P, c3 = c2 + st[3]/P.P;
-    ctx.fillStyle = "#475569"; ctx.font = "11px Arial"; ctx.textAlign = "center";
-    if (t >= c1) ctx.fillText("melting", A.X((c0 + c1)/2), A.Y(0) - 8); if (t >= c3) ctx.fillText("boiling", A.X((c2 + c3)/2), A.Y(100) - 8);
-    ctx.restore();
+    var Y0 = 24, Hh = 70; ctx.fillStyle = "#0f172a"; ctx.fillRect(x0, Y0, sw, Hh);
+    for (i = 0; i < sw; i++){ var y = (i - sw/2)/(sw/2)*YR, c = colourAt(y); ctx.fillStyle = "rgb(" + [0, 1, 2].map(function(k){ return Math.round(255*Math.min(1, Math.pow(Math.max(0, c[k]), 0.6))); }) + ")"; ctx.fillRect(x0 + i, Y0, 1.5, Hh); }
+    ctx.fillStyle = "#111"; ctx.font = "bold 12px Arial"; ctx.textAlign = "center"; ctx.fillText("screen (centre = zeroth order)", W/2, 16);
+    var ry = Y0 + Hh + 4; ctx.strokeStyle = "#111"; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(x0, ry); ctx.lineTo(x0 + sw, ry); ctx.stroke(); ctx.font = "10px Arial";
+    for (i = -15; i <= 15; i++){ var xr = x0 + sw/2 + i/15*sw/2; ctx.beginPath(); ctx.moveTo(xr, ry); ctx.lineTo(xr, ry + (i % 5 === 0 ? 9 : 5)); ctx.stroke(); if (i % 5 === 0) ctx.fillText(i + " mm", xr, ry + 19); }
+    var gy = H - 30, gh = 140; ctx.strokeStyle = "#111"; ctx.beginPath(); ctx.moveTo(x0, gy); ctx.lineTo(x0 + sw, gy); ctx.stroke();
+    var lc = P.white ? [0.3, 0.3, 0.3] : rgb(P.lam*1e9); ctx.strokeStyle = "rgb(" + lc.map(function(v){ return Math.round(200*v); }) + ")"; ctx.lineWidth = 2; ctx.beginPath();
+    for (i = 0; i <= sw; i++){ var y2 = (i - sw/2)/(sw/2)*YR, v; if (P.white){ v = 0; WL.forEach(function(w){ v += I(y2, w[0]*1e-9, P.a, P.D, P.one); }); v /= 7; } else v = I(y2, P.lam, P.a, P.D, P.one); if (i) ctx.lineTo(x0 + i, gy - gh*v); else ctx.moveTo(x0 + i, gy - gh*v); } ctx.stroke();
+    if (!P.white && !P.one && P.dy*1000 > 1.2){ ctx.fillStyle = "#15803d"; ctx.font = "bold 11px Arial"; var xa = x0 + sw/2, xb = x0 + sw/2 + P.dy/YR*sw/2; if (xb < x0 + sw){ kArrow(ctx, xa, gy + 12, xb, gy + 12, "#15803d", 1.5); ctx.fillText("Δy", (xa + xb)/2, gy + 24); } }
+    ctx.fillStyle = "#64748b"; ctx.font = "11px Arial"; ctx.textAlign = "left"; ctx.fillText("brightness", x0 + 2, gy - gh - 4);
   }
-  function jig(){ mol.forEach(function(p){ p.a += (rnd() - 0.5)*2; p.x = Math.min(1, Math.max(0, p.x + Math.cos(p.a)*0.02)); p.y = Math.min(1, Math.max(0, p.y + Math.sin(p.a)*0.02)); }); }
-  clock = kClock(function(dt){ adv(dt*40); jig(); update(); draw(); if (t >= tEnd()){ kText("simMsg", "Finished: all steam at 120 °C."); return false; } },
-    function(fin){ document.getElementById("playBtn").textContent = "▶ Play"; if (!fin) kText("simMsg", "Paused."); });
-  document.getElementById("playBtn").addEventListener("click", function(){ if (clock.running()) clock.stop(); else { if (t >= tEnd()) reset(); this.textContent = "⏸ Pause"; kText("simMsg", "Heating…"); clock.start(); } });
-  document.getElementById("resetBtn").addEventListener("click", reset);
-  kBind(["mSl","pSl","t0Sl"], reset);
-  return {reset:reset, draw:draw, resize:function(){}, pause:function(){ clock.stop(); },
-    set:function(o){ if (o.m != null) kSet("mSl", o.m); if (o.P != null) kSet("pSl", o.P); if (o.T0 != null) kSet("t0Sl", o.T0); reset(); },
-    jumpTo:function(T){ clock.stop(); reset(); adv(T); update(); draw(); },
-    state:function(){ var s = at(P.P*t); s.t = t; s.tEnd = tEnd(); s.stages = stages().map(function(e){ return e/P.P; }); return s; }};
+  function reset(){ read(); update(); draw(); kText("simMsg", "Change λ, a and D and watch the fringe separation."); }
+  kBind(["lamSl", "aSl", "dSl", "whiteChk", "oneChk"], function(){ read(); update(); draw(); });
+  return {reset:reset, draw:draw, resize:function(){}, pause:function(){},
+    set:function(o){ if (o.lam != null) kSet("lamSl", o.lam); if (o.a != null) kSet("aSl", o.a); if (o.D != null) kSet("dSl", o.D); if (o.white != null) kSet("whiteChk", o.white); if (o.one != null) kSet("oneChk", o.one); reset(); },
+    jumpTo:function(){ draw(); },
+    state:function(){ return {lam:P.lam, a:P.a, D:P.D, dy:P.dy, I:I, colourAt:colourAt}; }};
 }
-var LESSON = {quizzes:Q, figs:{}, makeSim:makeSim, demo:{set:{m:0.2, P:500, T0:-20}, t:700}};
+var LESSON = {quizzes:Q, figs:{}, makeSim:makeSim, demo:{set:{lam:600, a:0.30, D:1.5, white:false, one:false}, t:0}};
 
 
 (function(){

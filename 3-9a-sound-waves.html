@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lesson 1.4a: Change of State and Latent Heat | HKDSE Physics</title>
+<title>Lesson 3.9a: Sound Waves | HKDSE Physics</title>
 <style>
   :root{--bg:#fffaf0;--card:#fff;--ink:#111827;--muted:#374151;--blue:#1d4ed8;--blue-l:#dbeafe;--green:#166534;--green-l:#dcfce7;
     --red:#b91c1c;--red-l:#fee2e2;--orange:#c2410c;--orange-l:#ffedd5;--purple:#6d28d9;--purple-l:#ede9fe;--yellow-l:#fef9c3;--focus:#f59e0b}
@@ -115,7 +115,7 @@
 <body>
 <a href="#main" class="sr-only">Skip to content</a>
 <header>
-  <h1>🧊 Lesson 1.4a: Change of State &amp; Latent Heat <span class="zh">(物態的改變和潛熱)</span></h1>
+  <h1>🔊 Lesson 3.9a: Sound Waves <span class="zh">(聲波)</span></h1>
   <div style="display:flex;gap:.8rem;align-items:center;flex-wrap:wrap">
     <a href="index.html" class="home-link">🏠 All lessons</a>
     <span class="score-pill" id="scorePill" aria-live="polite">⭐ 0 / 0</span>
@@ -129,112 +129,84 @@
 <main id="main">
 <section class="step" data-id="welcome" data-name="Welcome">
 <div class="welcome-hero">
-  <div class="big" aria-hidden="true">🧊 💧 ♨️ 🥤</div>
-  <h2 tabindex="-1">Lesson 1.4a: Change of State and Latent Heat <span class="zh">(物態的改變和潛熱)</span></h2>
-  <p>Put a thermometer in a glass of iced lemon tea: it stays near 0 °C until the ice is gone, even though the tea is absorbing energy from the warm air. Where does that energy go?</p>
+  <div class="big" aria-hidden="true">🔊 🦇 🌊 🔔</div>
+  <h2 tabindex="-1">Lesson 3.9a: Sound Waves <span class="zh">(聲波)</span></h2>
+  <p>Sound is a wave you can’t see. You will find out what kind of wave it is, why it needs a medium, which frequencies we can hear, and how sound reflects, refracts, diffracts and interferes like other waves.</p>
 </div>
 <table class="t" aria-label="Key words in this lesson">
   <tr><th>Key word</th><th>Short meaning</th></tr>
-  <tr><td>melting / freezing <span class="zh">(熔解 / 凝固)</span></td><td>solid ⇄ liquid at the melting point</td></tr>
-  <tr><td>boiling / condensation <span class="zh">(沸騰 / 凝結)</span></td><td>liquid ⇄ gas at the boiling point</td></tr>
-  <tr><td>latent heat <span class="zh">(潛熱)</span></td><td>Energy transferred during a change of state without a change in temperature.</td></tr>
-  <tr><td>specific latent heat ℓ <span class="zh">(比潛熱)</span></td><td>Energy to change the state of 1 kg without temperature change.</td></tr>
+  <tr><td>longitudinal wave <span class="zh">(縱波)</span></td><td>Particles vibrate parallel to the direction of travel.</td></tr>
+  <tr><td>compression / rarefaction <span class="zh">(密部 / 疏部)</span></td><td>Regions where the particles are close together / far apart.</td></tr>
+  <tr><td>audible frequency range <span class="zh">(可聽頻率範圍)</span></td><td>About 20 Hz to 20 kHz for humans.</td></tr>
+  <tr><td>ultrasound <span class="zh">(超聲波)</span></td><td>Sound above 20 kHz.</td></tr>
+  <tr><td>echo <span class="zh">(回聲)</span></td><td>Reflected sound.</td></tr>
 </table>
-<div class="box key"><span class="box-title">Constants used</span>c(water) = 4200 J kg⁻¹ °C⁻¹ · c(ice) = 2100 J kg⁻¹ °C⁻¹ · ℓ<sub>f</sub>(ice) = 3.34 × 10⁵ J kg⁻¹ · ℓ<sub>v</sub>(water) = 2.26 × 10⁶ J kg⁻¹</div>
-<div class="lesson-link">⬅️ Previous: <a href="1-3-specific-heat-capacity.html">Lesson 1.3: Heat Capacity and Specific Heat Capacity</a> &nbsp;·&nbsp; ➡️ Next: <a href="1-4b-evaporation.html">Lesson 1.4b: Evaporation</a> &nbsp;·&nbsp; 🏠 <a href="index.html">All lessons</a></div>
+<div class="lesson-link">⬅️ Previous: <a href="3-8c-diffraction-grating.html">Lesson 3.8c: The Diffraction Grating</a> &nbsp;·&nbsp; ➡️ Next: <a href="3-9b-musical-notes-noise.html">Lesson 3.9b: Musical Notes and Noise</a> &nbsp;·&nbsp; 🏠 <a href="index.html">All lessons</a></div>
 </section>
-<section class="step" data-id="states" data-name="States of Matter">
+<section class="step" data-id="nature" data-name="Sound is a Longitudinal Wave">
 <span class="tag">Idea 1</span>
-<h2 tabindex="-1">Three states of matter</h2>
+<h2 tabindex="-1">What is sound?</h2>
 <div class="grid2">
-  <div>
-    <p>Matter exists in three states: <b>solid</b>, <b>liquid</b> and <b>gas</b>. Heating or cooling can change the state.</p>
-    <table class="t"><tr><th>Change</th><th>Name</th><th>Happens at</th></tr>
-      <tr><td>solid → liquid</td><td>melting (fusion)</td><td rowspan="2">melting point (= freezing point)</td></tr>
-      <tr><td>liquid → solid</td><td>freezing (solidification)</td></tr>
-      <tr><td>liquid → gas</td><td>boiling (vaporization)</td><td rowspan="2">boiling point</td></tr>
-      <tr><td>gas → liquid</td><td>condensation</td></tr></table>
-    <p>At standard atmospheric pressure pure water melts at <b>0 °C</b> and boils at <b>100 °C</b>.</p>
+  <div><svg viewBox='0 0 420 120' role='img' aria-label='Loudspeaker producing compressions and rarefactions in the air'><rect width='420' height='120' fill='#fff'/><path d='M10,45 L28,45 L45,25 L45,95 L28,75 L10,75 Z' fill='#334155'/><line x1='55.0' y1='25' x2='55.0' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='58.4' y1='25' x2='58.4' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='62.0' y1='25' x2='62.0' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='65.8' y1='25' x2='65.8' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='69.8' y1='25' x2='69.8' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='74.2' y1='25' x2='74.2' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='79.0' y1='25' x2='79.0' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='84.2' y1='25' x2='84.2' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='89.8' y1='25' x2='89.8' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='95.8' y1='25' x2='95.8' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='102.0' y1='25' x2='102.0' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='108.4' y1='25' x2='108.4' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='115.0' y1='25' x2='115.0' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='121.6' y1='25' x2='121.6' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='128.0' y1='25' x2='128.0' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='134.2' y1='25' x2='134.2' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='140.2' y1='25' x2='140.2' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='145.8' y1='25' x2='145.8' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='151.0' y1='25' x2='151.0' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='155.8' y1='25' x2='155.8' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='160.2' y1='25' x2='160.2' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='164.2' y1='25' x2='164.2' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='168.0' y1='25' x2='168.0' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='171.6' y1='25' x2='171.6' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='175.0' y1='25' x2='175.0' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='178.4' y1='25' x2='178.4' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='182.0' y1='25' x2='182.0' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='185.8' y1='25' x2='185.8' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='189.8' y1='25' x2='189.8' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='194.2' y1='25' x2='194.2' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='199.0' y1='25' x2='199.0' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='204.2' y1='25' x2='204.2' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='209.8' y1='25' x2='209.8' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='215.8' y1='25' x2='215.8' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='222.0' y1='25' x2='222.0' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='228.4' y1='25' x2='228.4' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='235.0' y1='25' x2='235.0' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='241.6' y1='25' x2='241.6' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='248.0' y1='25' x2='248.0' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='254.2' y1='25' x2='254.2' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='260.2' y1='25' x2='260.2' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='265.8' y1='25' x2='265.8' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='271.0' y1='25' x2='271.0' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='275.8' y1='25' x2='275.8' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='280.2' y1='25' x2='280.2' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='284.2' y1='25' x2='284.2' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='288.0' y1='25' x2='288.0' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='291.6' y1='25' x2='291.6' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='295.0' y1='25' x2='295.0' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='298.4' y1='25' x2='298.4' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='302.0' y1='25' x2='302.0' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='305.8' y1='25' x2='305.8' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='309.8' y1='25' x2='309.8' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='314.2' y1='25' x2='314.2' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='319.0' y1='25' x2='319.0' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='324.2' y1='25' x2='324.2' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='329.8' y1='25' x2='329.8' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='335.8' y1='25' x2='335.8' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='342.0' y1='25' x2='342.0' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='348.4' y1='25' x2='348.4' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='355.0' y1='25' x2='355.0' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='361.6' y1='25' x2='361.6' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='368.0' y1='25' x2='368.0' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='374.2' y1='25' x2='374.2' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='380.2' y1='25' x2='380.2' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='385.8' y1='25' x2='385.8' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='391.0' y1='25' x2='391.0' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='395.8' y1='25' x2='395.8' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='400.2' y1='25' x2='400.2' y2='95' stroke='#2563eb' stroke-width='1.2'/><line x1='404.2' y1='25' x2='404.2' y2='95' stroke='#2563eb' stroke-width='1.2'/><text x='85' y='112' font-size='11' text-anchor='middle' font-weight='700'>C</text><text x='85' y='112' font-size='11' text-anchor='middle' font-weight='700'>R</text><text x='205' y='112' font-size='11' text-anchor='middle' font-weight='700'>C</text><text x='205' y='112' font-size='11' text-anchor='middle' font-weight='700'>R</text><text x='325' y='112' font-size='11' text-anchor='middle' font-weight='700'>C</text><text x='325' y='112' font-size='11' text-anchor='middle' font-weight='700'>R</text><text x='240' y='16' font-size='11' text-anchor='middle'>C = compression (particles close), R = rarefaction (far apart)</text></svg>
+    <ul class="simple"><li>A vibrating source (loudspeaker cone, tuning fork, vocal cords) pushes and pulls the air.</li><li>Cone moves out → particles pushed together → <b>compression</b>; cone moves in → particles spread → <b>rarefaction</b>.</li><li>The air particles vibrate <b>back and forth along</b> the direction of travel: sound is a <b>longitudinal</b> wave. A candle flame in front of a loudspeaker flickers to and fro, not up and down.</li></ul>
   </div>
-  <div class="box key"><span class="box-title">Reading melting and boiling points ⭐</span>A substance is a <b>solid</b> below its melting point, a <b>liquid</b> between its melting and boiling points, and a <b>gas</b> above its boiling point.<br><br>Example: ethanol melts at −114 °C and boils at 78 °C, so at room temperature (25 °C) it is a <b>liquid</b>.</div>
+  <div>
+    <div class="box key"><span class="box-title">Sound needs a medium ⭐</span>Sound is a <b>mechanical</b> wave: it is passed on by particles. It <b>cannot travel through a vacuum</b>. Bell-jar experiment: as the air is pumped out, the ringing bell becomes fainter, though you can still see the hammer striking.</div>
+    <table class="t"><tr><th>Medium</th><th>Speed of sound / m s⁻¹</th></tr><tr><td>air (20 °C)</td><td>≈ 340</td></tr><tr><td>water</td><td>≈ 1500</td></tr><tr><td>aluminium</td><td>≈ 6400</td></tr></table>
+    <p>In general sound is fastest in solids, slower in liquids and slowest in gases; in air it is faster when warmer.</p>
+  </div>
 </div>
 </section>
-<section class="step" data-id="curve" data-name="Heating &amp; Cooling Curves">
+<section class="step" data-id="audible" data-name="Audible Range and Ultrasound">
 <span class="tag">Idea 2</span>
-<h2 tabindex="-1">Cooling curves: finding the melting point</h2>
+<h2 tabindex="-1">Audible sound and ultrasound</h2>
 <div class="grid2">
   <div>
-    <div class="box eg"><span class="box-title">🔬 Experiment: cooling curve of octadecan-1-ol</span>Melt the solid in a boiling tube in a hot water bath. Remove the bath and let the liquid cool in air, recording the temperature every 30 s until it reaches about 30 °C. Plot temperature against time.</div>
-    <ul class="simple"><li><b>AB</b>: liquid cooling — temperature falls.</li><li><b>BC</b>: <b>flat</b> — the liquid is <b>freezing</b>; solid and liquid exist together. The constant temperature is the <b>melting (freezing) point</b> (about 58 °C). It is still losing energy to the air: it gives out <b>latent heat</b>.</li><li><b>CD</b>: solid cooling towards room temperature.</li></ul>
-  </div>
-  <div class="visual">
-    <svg viewBox="0 0 300 210" role="img" aria-label="Cooling curve: temperature falls (AB), stays flat at the freezing point (BC), then falls again towards room temperature (CD).">
-      <rect width="300" height="210" fill="#fff"/><line x1="40" y1="180" x2="290" y2="180" stroke="#111" stroke-width="2"/><line x1="40" y1="180" x2="40" y2="15" stroke="#111" stroke-width="2"/>
-      <path d="M45 30 Q75 75 100 95 L190 95 Q220 140 285 160" fill="none" stroke="#dc2626" stroke-width="3"/>
-      <line x1="40" y1="95" x2="100" y2="95" stroke="#64748b" stroke-dasharray="4 3"/><text x="36" y="99" font-size="10" text-anchor="end">58 °C</text>
-      <text x="48" y="28" font-size="12" font-weight="800">A</text><text x="98" y="88" font-size="12" font-weight="800">B</text><text x="188" y="88" font-size="12" font-weight="800">C</text><text x="280" y="152" font-size="12" font-weight="800">D</text>
-      <text x="145" y="112" font-size="11" text-anchor="middle">freezing: liquid + solid</text>
-      <text x="165" y="198" font-size="11" text-anchor="middle">time</text><text x="14" y="100" font-size="11" transform="rotate(-90 14 100)" text-anchor="middle">temperature</text>
-    </svg>
-  </div>
-</div>
-<div class="box key"><span class="box-title">Heating curve of ice at constant power</span>A heating curve is the reverse: the temperature rises, stays flat while the ice <b>melts</b> (0 °C), rises again, then stays flat while the water <b>boils</b> (100 °C). The simulation draws one for you.</div>
-</section>
-<section class="step" data-id="latent" data-name="Latent Heat &amp; Molecules">
-<span class="tag">Idea 3</span>
-<h2 tabindex="-1">Latent heat: where does the energy go?</h2>
-<div class="grid2">
-  <div>
-    <div class="box key"><span class="box-title">Latent heat ⭐</span><b>Latent heat</b> is the energy transferred during a <b>change of state without a change in temperature</b>. It is <b>absorbed</b> during melting and boiling and <b>released</b> during freezing and condensation.</div>
-    <div class="box key"><span class="box-title">Molecular interpretation ⭐</span><ul class="simple"><li>When the temperature rises, the energy absorbed increases the <b>K.E.</b> of the molecules.</li><li>During melting or boiling the temperature (and so the average K.E.) stays the same: the latent heat increases the <b>P.E.</b> of the molecules — it is used to <b>overcome the attractive forces</b> between them and <b>increase their separation</b>.</li><li>Boiling separates the molecules completely, so ℓ<sub>v</sub> is much bigger than ℓ<sub>f</sub>.</li></ul></div>
+    <div class="box formula"><span class="box-title">Audible frequency range</span>Humans hear about <b>20 Hz to 20 kHz</b>. The range differs between people; the upper limit falls with age. You can find your own range with a signal generator and a loudspeaker, slowly raising the frequency until you can no longer hear it.</div>
+    <div class="box eg"><span class="box-title">Wavelengths in air (v = 340 m s⁻¹)</span>20 Hz: λ = 340/20 = 17 m<br>20 kHz: λ = 340/20 000 = 0.017 m = 1.7 cm<br>So sound wavelengths are similar in size to everyday objects.</div>
   </div>
   <div>
-    <div class="box warn"><span class="box-title">Exam wording ⚠️</span><ul class="simple"><li>“The energy is used to vaporize the water.” ✗ Not enough marks. Say: “the energy is absorbed as <b>latent heat</b>, which <b>increases the potential energy</b> of the molecules (separation increases) while the K.E. and temperature stay constant.”</li><li>“During freezing the substance does not lose energy because its temperature is constant.” ✗ It <b>releases latent heat</b>; the P.E. of its molecules decreases.</li></ul></div>
-    <div class="box eg"><span class="box-title">♨️ Why steam scalds more</span>Steam at 100 °C first <b>condenses</b> on your skin, releasing 2.26 × 10⁶ J per kg, and then the hot water cools. So steam burns are worse than burns from boiling water at the same temperature.</div>
+    <div class="box key"><span class="box-title">Ultrasound (&gt; 20 kHz) ⭐</span>Too high for humans to hear, but many animals (dogs, bats, dolphins) can. Uses:<ul class="simple"><li><b>Sonar</b>: measure sea depth or find fish by timing echoes.</li><li><b>Medical scanning</b>: imaging a foetus or organs (safer than X-rays).</li><li><b>Industry</b>: detecting cracks/flaws in metal; ultrasonic cleaning.</li></ul></div>
+    <div class="box warn"><span class="box-title">Don’t confuse ⚠️</span>Ultrasound is a sound wave (longitudinal, needs a medium). Ultraviolet is an EM wave.</div>
   </div>
 </div>
 </section>
-<section class="step" data-id="p1" data-name="Practice: States &amp; Latent Heat">
+<section class="step" data-id="p1" data-name="Practice: Nature of Sound">
 <span class="tag quiz">Practice 1</span>
-<h2 tabindex="-1">Practice: states of matter and latent heat</h2>
+<h2 tabindex="-1">Practice: sound as a wave</h2>
 <div class="quiz" data-quiz="p1"></div>
 </section>
-<section class="step" data-id="spec" data-name="Specific Latent Heat">
-<span class="tag">Idea 4</span>
-<h2 tabindex="-1">Specific latent heat</h2>
+<section class="step" data-id="props" data-name="Wave Properties of Sound">
+<span class="tag">Idea 3</span>
+<h2 tabindex="-1">Sound reflects, refracts, diffracts and interferes</h2>
 <div class="grid2">
   <div>
-    <div class="box formula"><span class="box-title">Definitions ⭐</span>Specific latent heat of <b>fusion</b>: <b>ℓ<sub>f</sub> = E/m</b> (guide: Q/m) — energy to change 1 kg of solid to liquid at its melting point.<br>Specific latent heat of <b>vaporization</b>: <b>ℓ<sub>v</sub> = E/m</b> — energy to change 1 kg of liquid to gas at its boiling point.<br>So <b>E = mℓ</b>. Unit: <b>J kg⁻¹</b>.</div>
-    <p>For water: ℓ<sub>f</sub> = 3.34 × 10⁵ J kg⁻¹, ℓ<sub>v</sub> = 2.26 × 10⁶ J kg⁻¹. In general ℓ<sub>v</sub> ≫ ℓ<sub>f</sub> ≫ c (for the same substance).</p>
+    <div class="box eg"><span class="box-title">Reflection: echoes</span>Echo distance: the sound goes there <b>and back</b>, so <b>2d = vt</b>. Used in sonar and in measuring the speed of sound. Concert halls use soft materials to reduce unwanted echoes.</div>
+    <div class="box eg"><span class="box-title">Refraction</span>Sound changes speed (and direction) in air layers at different temperatures. At night the air near the ground is cooler, so sound bends <b>back towards the ground</b> and distant sounds are heard more clearly. Frequency stays the same; λ changes with speed.</div>
   </div>
-  <div class="box key"><span class="box-title">Reading a heating curve (constant power P) ⭐</span><ul class="simple"><li>Sloping parts: Pt = mcΔT ⇒ gradient = P/(mc). <b>Steeper → smaller c</b>.</li><li>Flat parts: Pt = mℓ ⇒ <b>longer flat part → larger ℓ</b>.</li></ul>For water the boiling plateau is about <b>6.8 times</b> as long as the melting plateau (2.26 × 10⁶ ÷ 3.34 × 10⁵).</div>
+  <div>
+    <div class="box eg"><span class="box-title">Diffraction</span>Sound wavelengths (cm to m) are similar to doorways and gaps between buildings, so sound <b>bends round corners</b>. You can hear people in a corridor before you see them: light (λ ≈ 5 × 10⁻⁷ m) hardly diffracts there.</div>
+    <div class="box eg"><span class="box-title">Interference</span>Two loudspeakers driven by the same signal generator are coherent. Walking across in front of them you hear loud and soft positions: path difference nλ → loud; (n + ½)λ → soft. Noise-cancelling headphones add an antiphase sound to cancel noise.</div>
+  </div>
 </div>
-</section>
-<section class="step" data-id="worked" data-name="Worked Examples">
-<span class="tag">Worked examples</span>
-<h2 tabindex="-1">Solving latent heat problems</h2>
-<div class="box key"><span class="box-title">Strategy ⭐</span>Split the process into stages. Each <b>temperature change</b> uses mcΔT; each <b>change of state</b> uses mℓ. Add the stages. Then use E = Pt or energy lost = energy gained.</div>
-<div class="grid2">
-  <div class="box eg worked"><span class="box-title">✏️ Example 1: ice at 0 °C → steam at 100 °C (1 kg)</span>melt: 1 × 3.34 × 10⁵ = 334 000 J<br>heat water: 1 × 4200 × 100 = 420 000 J<br>boil: 1 × 2.26 × 10⁶ = 2 260 000 J<br>total = <b>3.01 × 10⁶ J</b> — boiling needs by far the most energy.</div>
-  <div class="box eg worked"><span class="box-title">✏️ Example 2: making ice</span>0.40 kg of water at 30 °C is put in a freezer that removes energy at 200 W. How long until it is all ice at 0 °C?<br>cool to 0 °C: 0.40 × 4200 × 30 = 50 400 J<br>freeze: 0.40 × 3.34 × 10⁵ = 133 600 J<br>E = 184 000 J ⇒ t = 184 000 ÷ 200 = <b>920 s</b></div>
-</div>
-<div class="box eg worked"><span class="box-title">✏️ Example 3: boiling away</span>A 1200 W kettle has just brought 0.80 kg of water to the boil. Assuming no loss, how much water is left after a further 3 minutes of boiling?<br>Energy = 1200 × 180 = 216 000 J ⇒ mass boiled away = 216 000 ÷ 2.26 × 10⁶ = 0.0956 kg ⇒ <b>0.704 kg</b> left. (Units check: J ÷ J kg⁻¹ = kg ✓)</div>
-</section>
-<section class="step" data-id="p2" data-name="Practice: Specific Latent Heat">
-<span class="tag quiz">Practice 2</span>
-<h2 tabindex="-1">Practice: specific latent heat calculations</h2>
-<div class="quiz" data-quiz="p2"></div>
 </section>
 <section class="step" data-id="sim" data-name="Simulation">
 <span class="tag sim">Try it!</span>
-<h2 tabindex="-1">Simulation: heating curve of ice</h2>
-<p>A heater of constant power heats ice until it becomes steam (no energy loss). Watch the temperature–time graph and the molecules. (1 s on screen ≈ 40 s.)</p>
+<h2 tabindex="-1">Simulation: sound in a medium, and echoes</h2>
+<p><b>Particles</b> mode: each line is a layer of particles in front of a loudspeaker (slow motion). <b>Echo</b> mode: a clap travels to a wall and back; record the echo times for different distances.</p>
 <div class="sim-panel">
-  <div class="slider"><label for="mSl"><span>Mass of ice m <span class="zh">(質量)</span></span><span id="mSlVal"></span></label>
-    <input type="range" id="mSl" min="0.1" max="0.5" step="0.05" value="0.2"></div><div class="slider"><label for="pSl"><span>Heater power P <span class="zh">(功率)</span></span><span id="pSlVal"></span></label>
-    <input type="range" id="pSl" min="200" max="1000" step="50" value="500"></div>
-  <div class="slider"><label for="t0Sl"><span>Starting temperature of the ice <span class="zh">(初溫)</span></span><span id="t0SlVal"></span></label>
-    <input type="range" id="t0Sl" min="-30" max="0" step="1" value="-20"></div>
+  <div style="display:flex;flex-direction:column;gap:.5rem">
+    <div role="radiogroup" aria-label="Mode" style="display:flex;flex-direction:column;gap:.4rem">
+      <label class="opt"><input type="radio" name="sdMode" value="part" checked> Particles (compressions and rarefactions)</label>
+      <label class="opt"><input type="radio" name="sdMode" value="echo"> Echo (measure the speed of sound)</label>
+    </div>
+    <label for="medSel" style="font-weight:700">Medium:</label>
+    <select id="medSel" style="font-size:1rem;padding:.45rem;border-radius:8px;border:2px solid #94a3b8"><option value="340">air (340 m s⁻¹)</option><option value="1500">water (1500 m s⁻¹)</option><option value="6420">aluminium (6420 m s⁻¹)</option><option value="0">vacuum</option></select>
+  </div>
+  <div><div class="slider"><label for="fSl"><span>Frequency f (particles mode) <span class="zh">(頻率)</span></span><span id="fSlVal"></span></label>
+    <input type="range" id="fSl" min="100" max="2000" step="10" value="500"></div><div class="slider"><label for="dSl"><span>Distance to wall d (echo mode)</span><span id="dSlVal"></span></label>
+    <input type="range" id="dSl" min="20" max="200" step="5" value="85"></div>
+  <div class="sim-buttons" style="margin-top:.4rem"><button class="btn-secondary" id="recBtn" type="button">Record echo (t, 2d)</button><button class="btn-secondary" id="clrBtn" type="button">Clear</button></div></div>
 </div>
 <div class="sim-buttons">
   <button class="btn-primary" id="playBtn" type="button">▶ Play</button>
@@ -242,70 +214,68 @@
   <label for="speedSel" style="font-weight:700">Speed:</label>
   <select id="speedSel"><option value="1">Normal</option><option value="0.5">Slow (½×)</option><option value="0.25">Very slow (¼×)</option></select>
 </div>
-<canvas id="animCanvas" width="900" height="400" data-fixed-h="400" aria-label="Molecule picture and temperature-time graph of ice being heated to steam"></canvas>
+<canvas id="animCanvas" width="900" height="320" data-fixed-h="320" aria-label="Layers of air particles vibrating back and forth to form compressions and rarefactions, or a sound pulse reflecting from a wall with a graph of 2d against echo time"></canvas>
 <div class="readout">
-  <div class="ro d"><div class="lab">Temperature</div><div class="val" id="roT"></div></div><div class="ro a"><div class="lab">Energy supplied E = Pt</div><div class="val" id="roE"></div></div><div class="ro v"><div class="lab">State now</div><div class="val" id="roState"></div></div><div class="ro av"><div class="lab">ice / water / steam (kg)</div><div class="val" id="roMass"></div></div>
+  <div class="ro v"><div class="lab">Speed v</div><div class="val" id="roA"></div></div><div class="ro a"><div class="lab">Wavelength λ = v/f</div><div class="val" id="roB"></div></div><div class="ro d"><div class="lab">Echo time t = 2d/v</div><div class="val" id="roC"></div></div><div class="ro av"><div class="lab">Graph</div><div class="val" id="roD"></div></div>
 </div>
 <p class="sim-msg" id="simMsg" role="status"></p>
-<div class="panel" id="eqPanel" aria-live="polite"></div>
 <div class="box key"><span class="box-title">Things to try</span><ul class="simple">
-  <li>Measure the length of the melting and boiling plateaus. Their ratio is ℓ<sub>v</sub> : ℓ<sub>f</sub> ≈ 6.8.</li>
-  <li>Which sloping part is steepest? (ice and steam have c = 2100, water 4200)</li>
-  <li>Double the power: every stage takes half as long.</li></ul></div>
+  <li>Particles mode: double the frequency. What happens to the distance between compressions?</li>
+  <li>Change the medium from air to water at the same frequency. What changes, what stays the same?</li>
+  <li>Choose vacuum. What happens?</li>
+  <li>Echo mode: record echo times for 4–5 distances. What does the slope of the 2d–t graph give?</li></ul></div>
 </section>
 <section class="step" data-id="psim" data-name="Practice: Using the Simulation">
-<span class="tag quiz">Practice 3</span>
-<h2 tabindex="-1">Practice: predict, then check with the simulation</h2>
+<span class="tag quiz">Practice 2</span>
+<h2 tabindex="-1">Practice: predict, then check</h2>
 <div class="quiz" data-quiz="psim"></div>
 </section>
-<section class="step" data-id="expt" data-name="Experiments: Measuring ℓ">
-<span class="tag">Experiment</span>
-<h2 tabindex="-1">Measuring specific latent heats</h2>
-<div class="grid2">
-  <div>
-    <div class="box eg"><span class="box-title">🔬 ℓ<sub>f</sub> of ice (with a control)</span>Two funnels hold equal amounts of <b>crushed ice</b> at 0 °C, each with an immersion heater; only heater A is switched on (joulemeter). Wait until the drip rates are equal (ice at 0 °C), empty the beakers, then heat A for a few minutes. Collect the water from both.<br>ℓ<sub>f</sub> = E ÷ (m<sub>A</sub> − m<sub>B</sub>)<br><b>Set B (control)</b> measures the ice melted by energy from the <b>surroundings</b>. <b>Crushed</b> ice gives good thermal contact.</div>
-    <div class="box eg worked"><span class="box-title">✏️ Sample results</span>E = 19 440 J; water collected: A 0.078 kg, B 0.020 kg<br>ℓ<sub>f</sub> = 19 440 ÷ 0.058 = <b>3.35 × 10⁵ J kg⁻¹</b></div>
-    <p class="caption">Other methods in the guide: heating an ice–water mixture in a domestic electric boiler or a composite (insulated) container, or using an ice calorimeter.</p>
-  </div>
-  <div>
-    <div class="box eg"><span class="box-title">🔬 ℓ<sub>v</sub> of water (balance method)</span>Heat water in a beaker on an electronic balance with an immersion heater. When it boils steadily, start the joulemeter and record the balance reading; stop after several minutes.<br>ℓ<sub>v</sub> = E ÷ (mass boiled away). <b>Do not use a lid</b> (steam would condense and drip back).</div>
-    <div class="box warn"><span class="box-title">Higher or lower than the true value? ⭐</span><table class="t"><tr><th>Error</th><th>Effect on ℓ<sub>v</sub></th></tr>
-      <tr><td>heat lost to the surroundings</td><td>E too big for the mass boiled → <b>higher</b></td></tr>
-      <tr><td>steam condenses and drips back</td><td>mass loss too small → <b>higher</b></td></tr>
-      <tr><td>water splashes out</td><td>mass loss too big → <b>lower</b></td></tr>
-      <tr><td>(ℓ<sub>f</sub>) no control set, heat from surroundings melts ice</td><td>mass melted too big → <b>lower</b></td></tr></table></div>
-  </div>
-</div>
+<section class="step" data-id="compare" data-name="Sound vs Light">
+<span class="tag">Idea 4</span>
+<h2 tabindex="-1">Comparing sound waves and light waves</h2>
+<table class="t">
+  <tr><th></th><th>Light</th><th>Sound</th></tr>
+  <tr><td>type of wave</td><td>electromagnetic, <b>transverse</b></td><td>mechanical, <b>longitudinal</b></td></tr>
+  <tr><td>medium</td><td>not needed (travels through a vacuum)</td><td><b>needed</b> (cannot travel through a vacuum)</td></tr>
+  <tr><td>speed</td><td>3 × 10⁸ m s⁻¹ in a vacuum; slower in water and glass</td><td>≈ 340 m s⁻¹ in air; <b>faster</b> in liquids and solids</td></tr>
+  <tr><td>gas → liquid</td><td>slows down, bends towards the normal</td><td>speeds up, bends away from the normal</td></tr>
+  <tr><td>wavelength</td><td>400–700 nm: much smaller than everyday objects</td><td>≈ 2 cm to 17 m: similar to everyday objects</td></tr>
+  <tr><td>diffraction in daily life</td><td>hardly noticed</td><td>easily noticed (round corners)</td></tr>
+  <tr><td>common properties</td><td colspan="2" style="text-align:center">both show reflection, refraction, diffraction and interference; both obey v = fλ</td></tr>
+</table>
+<div class="box key"><span class="box-title">Thunder and lightning ⭐</span>Light arrives almost instantly; sound takes about 3 s per km. A 6 s gap means the storm is about 340 × 6 ≈ 2 km away.</div>
 </section>
-<section class="step" data-id="mix" data-name="Mixtures with Ice">
-<span class="tag">Idea 5</span>
-<h2 tabindex="-1">Mixtures involving a change of state</h2>
+<section class="step" data-id="worked" data-name="Worked Examples">
+<span class="tag">Worked examples</span>
+<h2 tabindex="-1">Worked examples</h2>
 <div class="grid2">
-  <div class="box eg worked"><span class="box-title">✏️ Iced lemon tea</span>0.25 kg of tea (c = 4200 J kg⁻¹ °C⁻¹) at 80 °C. Least mass m of ice at 0 °C to cool it to 10 °C:<br>energy released by tea = energy to melt ice + warm the melted ice to 10 °C<br>0.25 × 4200 × 70 = m(3.34 × 10⁵ + 4200 × 10)<br>73 500 = 376 000 m ⇒ m = <b>0.195 kg</b><br><br><b>If 0.30 kg of ice is added instead:</b> cooling the tea to 0 °C releases 0.25 × 4200 × 80 = 84 000 J, but melting all the ice needs 0.30 × 3.34 × 10⁵ = 100 200 J. Not enough! Final state: <b>ice and water at 0 °C</b> (84 000 ÷ 3.34 × 10⁵ = 0.251 kg of ice melts).</div>
-  <div>
-    <div class="box eg"><span class="box-title">🏆 Class competition: closest to 4 °C</span>How much ice should you add to a 0.33 kg can of soft drink at 28 °C to get exactly 4 °C? (Treat the drink as water.)<br>0.33 × 4200 × 24 = m(3.34 × 10⁵ + 4200 × 4) ⇒ m ≈ <b>0.095 kg</b>.<br>Then test it! Real results differ: the cup and the air also exchange energy, and ice straight from a freezer is below 0 °C (it must be warmed to 0 °C first, so less ice is needed).</div>
-    <div class="box warn"><span class="box-title">Common mistakes ⚠️</span><ul class="simple"><li>Forgetting that melted ice must also be <b>warmed</b> from 0 °C to the final temperature.</li><li>Assuming all the ice melts — always <b>check</b> whether there is enough energy first.</li></ul></div>
-  </div>
+  <div class="box eg"><span class="box-title">Example 1: echo</span>A girl shouts towards a cliff and hears the echo 0.80 s later (v = 340 m s⁻¹). Distance to the cliff?<br>2d = vt (1M) ⇒ d = (340)(0.80)/2 = <b>136 m</b> (1A)</div>
+  <div class="box eg"><span class="box-title">Example 2: sonar</span>A ship sends 40 kHz ultrasound down; the echo returns after 2.0 s (v = 1500 m s⁻¹ in sea water).<br>depth = (1500)(2.0)/2 = <b>1500 m</b>; λ = v/f = 1500/40 000 = <b>0.0375 m</b>.</div>
+  <div class="box eg"><span class="box-title">Example 3: change of medium</span>Sound of wavelength 25 cm in air (340 m s⁻¹) enters a liquid where its wavelength is 1.0 m.<br>f = 340/0.25 = 1360 Hz (unchanged) ⇒ v = fλ = 1360 × 1.0 = <b>1360 m s⁻¹</b>.</div>
+  <div class="box eg"><span class="box-title">Example 4: speed of sound by clapping (experiment)</span>Stand 50 m from a wall and clap so that each clap coincides with the echo of the previous one. Time 21 claps (20 intervals) = 6.0 s.<br>t = 0.30 s for 2 × 50 m ⇒ v = 100/0.30 = <b>333 m s⁻¹</b>. Timing many intervals reduces the reaction-time error.</div>
 </div>
+<div class="box warn"><span class="box-title">Graphs in speed-of-sound experiments ⚠️</span>Plot 2d (y) against t (x): a straight line <b>through the origin</b> shows 2d ∝ t, and slope = v. A straight line that does not pass through the origin is only “linearly increasing”, not “directly proportional”: say which one the data show.</div>
 </section>
-<section class="step" data-id="p3" data-name="Practice: Experiments &amp; Mixtures">
-<span class="tag quiz">Practice 4</span>
-<h2 tabindex="-1">Practice: experiments and mixtures (DSE style)</h2>
-<div class="quiz" data-quiz="p3"></div>
+<section class="step" data-id="p2" data-name="Practice: DSE-style Questions">
+<span class="tag quiz">Practice 3</span>
+<h2 tabindex="-1">Practice: sound waves (DSE style)</h2>
+<div class="quiz" data-quiz="p2"></div>
 </section>
 <section class="step" data-id="summary" data-name="Summary">
 <span class="tag">Well done!</span>
-<h2 tabindex="-1">🎉 Summary of Lesson 1.4a</h2>
+<h2 tabindex="-1">🎉 Summary of Lesson 3.9a</h2>
 <div style="text-align:center"><div class="stars" id="stars" aria-hidden="true"></div>
   <p id="finalScore" style="font-size:1.2rem;font-weight:800"></p><p id="finalMsg"></p></div>
 <table class="t">
-  <tr><th>Idea</th><th>Equation / fact</th><th>Remember</th></tr>
-  <tr><td>change of state</td><td>flat part of heating/cooling curve</td><td>temperature constant at melting / boiling point</td></tr>
-  <tr><td>latent heat</td><td>—</td><td>changes the <b>P.E.</b> of molecules, not the K.E.</td></tr>
-  <tr><td>specific latent heat</td><td>E = mℓ<sub>f</sub>, E = mℓ<sub>v</sub></td><td>J kg⁻¹; ℓ<sub>f</sub> = 3.34 × 10⁵, ℓ<sub>v</sub> = 2.26 × 10⁶ (water)</td></tr>
-  <tr><td>problems</td><td>add mcΔT and mℓ stages</td><td>check whether all the ice melts</td></tr>
+  <tr><th>Idea</th><th>Key point</th></tr>
+  <tr><td>nature</td><td>longitudinal mechanical wave; compressions and rarefactions; needs a medium</td></tr>
+  <tr><td>speed</td><td>air ≈ 340 m s⁻¹; faster in liquids and solids</td></tr>
+  <tr><td>audible range</td><td>20 Hz – 20 kHz; ultrasound above 20 kHz (sonar, scanning)</td></tr>
+  <tr><td>wave properties</td><td>reflection (echo: 2d = vt), refraction, diffraction, interference</td></tr>
+  <tr><td>vs light</td><td>light: transverse EM, no medium, 3 × 10⁸ m s⁻¹</td></tr>
 </table>
-<div class="lesson-link">⬅️ Previous: <a href="1-3-specific-heat-capacity.html">Lesson 1.3: Heat Capacity and Specific Heat Capacity</a> &nbsp;·&nbsp; ➡️ Next: <a href="1-4b-evaporation.html">Lesson 1.4b: Evaporation</a> &nbsp;·&nbsp; 🏠 <a href="index.html">All lessons</a></div>
+<p>Next: musical notes, the CRO and noise.</p>
+<div class="lesson-link">⬅️ Previous: <a href="3-8c-diffraction-grating.html">Lesson 3.8c: The Diffraction Grating</a> &nbsp;·&nbsp; ➡️ Next: <a href="3-9b-musical-notes-noise.html">Lesson 3.9b: Musical Notes and Noise</a> &nbsp;·&nbsp; 🏠 <a href="index.html">All lessons</a></div>
 <div class="q-actions" style="justify-content:center">
   <button class="btn-secondary" id="reviewBtn" type="button">Go to first unfinished question</button>
   <button class="btn-retry" id="restartBtn" type="button">↺ Reset all questions</button>
@@ -320,16 +290,16 @@
 <details class="teacher">
 <summary>👩‍🏫 Teacher notes: curriculum outcome map (click to open)</summary>
 <div class="tn-body">
-<p><b>Source:</b> HKDSE Physics Curriculum and Assessment Guide (S4–6), 2015 update — Compulsory Part, <b>I Heat and Gases</b>, subtopic <b>c. Change of state</b>, “Students should be able to” column, printed page 20 (PDF page 30). Outcome text is quoted from the guide.</p>
+<p><b>Source:</b> HKDSE Physics Curriculum and Assessment Guide (S4–6), 2015 update — Compulsory Part, <b>III Wave Motion</b>, subtopic <b>c. Sound</b>, “Students should be able to” column, printed page 36 (PDF page 46). Outcome text is quoted from the guide.</p>
 <p><b>Core.</b> Nothing in this sub-topic is underlined in the guide, so all of it is in the <b>core</b> of the Compulsory Part.</p>
-<p>This sub-topic is taught in <b>Lesson 1.4a</b> (<a href="1-4a-latent-heat.html">1-4a-latent-heat.html</a>): 14 steps; <b>Lesson 1.4b</b> (<a href="1-4b-evaporation.html">1-4b-evaporation.html</a>): 11 steps. Links to other lessons open that file at the step.</p>
+<p>This sub-topic is taught in <b>Lesson 3.9a</b> (<a href="3-9a-sound-waves.html">3-9a-sound-waves.html</a>): 11 steps; <b>Lesson 3.9b</b> (<a href="3-9b-musical-notes-noise.html">3-9b-musical-notes-noise.html</a>): 10 steps. Links to other lessons open that file at the step.</p>
 <h3>Learning outcomes</h3>
 <div class="table-scroll"><table class="t outcomes"><tr><th>#</th><th>Topic</th><th>Learning outcome (quoted)</th><th>Where it is taught / practised</th></tr>
-<tr><td>1</td><td><i>melting and freezing, boiling and condensing</i></td><td>“state the three states of matter”</td><td><a href="#step2" data-step="2">L1.4a Step 2: States of Matter</a><br><a href="#step5" data-step="5">L1.4a Step 5: Practice: States &amp; Latent Heat</a></td></tr><tr><td>2</td><td><i>melting and freezing, boiling and condensing</i></td><td>“determine the melting point and boiling point”</td><td><a href="#step2" data-step="2">L1.4a Step 2: States of Matter</a><br><a href="#step3" data-step="3">L1.4a Step 3: Heating &amp; Cooling Curves</a><br><a href="#step9" data-step="9">L1.4a Step 9: Simulation</a><br><a href="#step5" data-step="5">L1.4a Step 5: Practice: States &amp; Latent Heat</a></td></tr><tr><td>3</td><td><i>latent heat</i></td><td>“realise latent heat as the energy transferred during the change of state without temperature change”</td><td><a href="#step3" data-step="3">L1.4a Step 3: Heating &amp; Cooling Curves</a><br><a href="#step4" data-step="4">L1.4a Step 4: Latent Heat &amp; Molecules</a><br><a href="#step9" data-step="9">L1.4a Step 9: Simulation</a><br><a href="#step5" data-step="5">L1.4a Step 5: Practice: States &amp; Latent Heat</a></td></tr><tr><td>4</td><td><i>latent heat</i></td><td>“interpret latent heat in terms of the change of potential energy of the molecules during a change of state”</td><td><a href="#step4" data-step="4">L1.4a Step 4: Latent Heat &amp; Molecules</a><br><a href="#step5" data-step="5">L1.4a Step 5: Practice: States &amp; Latent Heat</a></td></tr><tr><td>5</td><td><i>latent heat</i></td><td>“define specific latent heat of fusion as ℓf = Q/m”</td><td><a href="#step6" data-step="6">L1.4a Step 6: Specific Latent Heat</a><br><a href="#step8" data-step="8">L1.4a Step 8: Practice: Specific Latent Heat</a></td></tr><tr><td>6</td><td><i>latent heat</i></td><td>“define specific latent heat of vaporization as ℓv = Q/m”</td><td><a href="#step6" data-step="6">L1.4a Step 6: Specific Latent Heat</a><br><a href="#step8" data-step="8">L1.4a Step 8: Practice: Specific Latent Heat</a></td></tr><tr><td>7</td><td><i>latent heat</i></td><td>“solve problems involving latent heat”</td><td><a href="#step7" data-step="7">L1.4a Step 7: Worked Examples</a><br><a href="#step8" data-step="8">L1.4a Step 8: Practice: Specific Latent Heat</a><br><a href="#step10" data-step="10">L1.4a Step 10: Practice: Using the Simulation</a><br><a href="#step12" data-step="12">L1.4a Step 12: Mixtures with Ice</a><br><a href="#step13" data-step="13">L1.4a Step 13: Practice: Experiments &amp; Mixtures</a><br><a href="1-4b-evaporation.html#step9">L1.4b Step 9: Worked Example: Sweating</a><br><a href="1-4b-evaporation.html#step10">L1.4b Step 10: Practice: Factors &amp; Calculations</a></td></tr><tr><td>8</td><td><i>evaporation</i></td><td>“realise the occurrence of evaporation below boiling point”</td><td><a href="1-4b-evaporation.html#step2">L1.4b Step 2: Evaporation vs Boiling</a><br><a href="1-4b-evaporation.html#step5">L1.4b Step 5: Practice: Evaporation</a></td></tr><tr><td>9</td><td><i>evaporation</i></td><td>“explain the cooling effect of evaporation”</td><td><a href="1-4b-evaporation.html#step3">L1.4b Step 3: Molecular Explanation</a><br><a href="1-4b-evaporation.html#step4">L1.4b Step 4: Cooling Effect</a><br><a href="1-4b-evaporation.html#step7">L1.4b Step 7: Simulation</a><br><a href="1-4b-evaporation.html#step5">L1.4b Step 5: Practice: Evaporation</a></td></tr><tr><td>10</td><td><i>evaporation</i></td><td>“discuss the factors affecting rate of evaporation”</td><td><a href="1-4b-evaporation.html#step6">L1.4b Step 6: Factors Affecting the Rate</a><br><a href="1-4b-evaporation.html#step7">L1.4b Step 7: Simulation</a><br><a href="1-4b-evaporation.html#step8">L1.4b Step 8: Practice: Using the Simulation</a><br><a href="1-4b-evaporation.html#step10">L1.4b Step 10: Practice: Factors &amp; Calculations</a></td></tr><tr><td>11</td><td><i>evaporation</i></td><td>“explain evaporation in terms of molecular motion”</td><td><a href="1-4b-evaporation.html#step3">L1.4b Step 3: Molecular Explanation</a><br><a href="1-4b-evaporation.html#step7">L1.4b Step 7: Simulation</a><br><a href="1-4b-evaporation.html#step5">L1.4b Step 5: Practice: Evaporation</a></td></tr></table></div>
+<tr><td>1</td><td><i>wave nature of sound</i></td><td>“realise sound as an example of longitudinal waves”</td><td><a href="#step2" data-step="2">L3.9a Step 2: Sound is a Longitudinal Wave</a><br><a href="#step6" data-step="6">L3.9a Step 6: Simulation</a><br><a href="#step4" data-step="4">L3.9a Step 4: Practice: Nature of Sound</a></td></tr><tr><td>2</td><td><i>wave nature of sound</i></td><td>“realise that sound can exhibit reflection, refraction, diffraction and interference”</td><td><a href="#step5" data-step="5">L3.9a Step 5: Wave Properties of Sound</a><br><a href="#step10" data-step="10">L3.9a Step 10: Practice: DSE-style Questions</a></td></tr><tr><td>3</td><td><i>wave nature of sound</i></td><td>“realise the need for a medium for sound transmission”</td><td><a href="#step2" data-step="2">L3.9a Step 2: Sound is a Longitudinal Wave</a><br><a href="#step6" data-step="6">L3.9a Step 6: Simulation</a><br><a href="#step4" data-step="4">L3.9a Step 4: Practice: Nature of Sound</a></td></tr><tr><td>4</td><td><i>wave nature of sound</i></td><td>“compare the general properties of sound waves and those of light waves”</td><td><a href="#step8" data-step="8">L3.9a Step 8: Sound vs Light</a><br><a href="#step10" data-step="10">L3.9a Step 10: Practice: DSE-style Questions</a></td></tr><tr><td>5</td><td><i>audible frequency range</i></td><td>“determine the audible frequency range”</td><td><a href="#step3" data-step="3">L3.9a Step 3: Audible Range and Ultrasound</a><br><a href="#step4" data-step="4">L3.9a Step 4: Practice: Nature of Sound</a></td></tr><tr><td>6</td><td><i>audible frequency range</i></td><td>“examine the existence of ultrasound beyond the audible frequency range”</td><td><a href="#step3" data-step="3">L3.9a Step 3: Audible Range and Ultrasound</a><br><a href="#step4" data-step="4">L3.9a Step 4: Practice: Nature of Sound</a><br><a href="#step7" data-step="7">L3.9a Step 7: Practice: Using the Simulation</a></td></tr><tr><td>7</td><td><i>musical notes</i></td><td>“compare musical notes using pitch, loudness and quality”</td><td><a href="3-9b-musical-notes-noise.html#step3">L3.9b Step 3: Pitch, Loudness, Quality</a><br><a href="3-9b-musical-notes-noise.html#step5">L3.9b Step 5: Simulation</a><br><a href="3-9b-musical-notes-noise.html#step4">L3.9b Step 4: Practice: Notes and the CRO</a><br><a href="3-9b-musical-notes-noise.html#step6">L3.9b Step 6: Practice: Using the Simulation</a></td></tr><tr><td>8</td><td><i>musical notes</i></td><td>“relate frequency and amplitude with the pitch and loudness of a note respectively”</td><td><a href="3-9b-musical-notes-noise.html#step2">L3.9b Step 2: Seeing Sound on a CRO</a><br><a href="3-9b-musical-notes-noise.html#step3">L3.9b Step 3: Pitch, Loudness, Quality</a><br><a href="3-9b-musical-notes-noise.html#step5">L3.9b Step 5: Simulation</a><br><a href="3-9b-musical-notes-noise.html#step6">L3.9b Step 6: Practice: Using the Simulation</a></td></tr><tr><td>9</td><td><i>noise</i></td><td>“represent sound intensity level using the unit decibel”</td><td><a href="3-9b-musical-notes-noise.html#step7">L3.9b Step 7: Sound Intensity Level</a><br><a href="3-9b-musical-notes-noise.html#step9">L3.9b Step 9: Practice: DSE-style Questions</a></td></tr><tr><td>10</td><td><i>noise</i></td><td>“discuss the effects of noise pollution and the importance of acoustic protection”</td><td><a href="3-9b-musical-notes-noise.html#step8">L3.9b Step 8: Noise Pollution</a><br><a href="3-9b-musical-notes-noise.html#step9">L3.9b Step 9: Practice: DSE-style Questions</a></td></tr></table></div>
 <h3>Suggested learning &amp; teaching activities used</h3>
-<div class="table-scroll"><table class="t activities"><tr><th>#</th><th>Activity (from the guide, pp.21–23, incl. Values &amp; Attitudes and STSE)</th><th>Where</th></tr>
-<tr><td>1</td><td>Performing experiments to determine latent heat</td><td><a href="#step11" data-step="11">L1.4a Step 11: Experiments: Measuring ℓ</a><br><a href="#step13" data-step="13">L1.4a Step 13: Practice: Experiments &amp; Mixtures</a></td></tr><tr><td>2</td><td>Measuring the specific latent heat of fusion of water (e.g. using a domestic electric boiler, heating an ice-water mixture in a composite container, or using an ice calorimeter)</td><td><a href="#step11" data-step="11">L1.4a Step 11: Experiments: Measuring ℓ</a></td></tr><tr><td>3</td><td>Performing experiments to study the cooling curve of a substance and determine its melting point</td><td><a href="#step3" data-step="3">L1.4a Step 3: Heating &amp; Cooling Curves</a><br><a href="#step9" data-step="9">L1.4a Step 9: Simulation</a></td></tr><tr><td>4</td><td>Challenging preconceived ideas on energy transfer through competitions (e.g. attaining a temperature closest to 4 °C by mixing a soft drink with ice)</td><td><a href="#step12" data-step="12">L1.4a Step 12: Mixtures with Ice</a></td></tr><tr><td>5</td><td>Using dimension analysis to check the results of mathematical solutions</td><td><a href="#step7" data-step="7">L1.4a Step 7: Worked Examples</a></td></tr><tr><td>6</td><td>Determining factors affecting the rate of evaporation</td><td><a href="1-4b-evaporation.html#step6">L1.4b Step 6: Factors Affecting the Rate</a><br><a href="1-4b-evaporation.html#step7">L1.4b Step 7: Simulation</a></td></tr><tr><td>7</td><td>Reading articles on heat stroke and discussing heat stroke precautions and care</td><td><a href="1-4b-evaporation.html#step4">L1.4b Step 4: Cooling Effect</a></td></tr></table></div>
-<p><b>Notes alignment:</b> follows Heat notes Chapter 4 §4.1–4.5 (cooling curve of octadecan-1-ol, KE/PE interpretation, E<sub>f</sub> = mℓ<sub>f</sub>, E<sub>v</sub> = mℓ<sub>v</sub>, ℓ<sub>f</sub> = 3.34 × 10⁵ J kg⁻¹, ℓ<sub>v</sub> = 2.26 × 10⁶ J kg⁻¹, c(ice) = c(steam) = 2100 J kg⁻¹ °C⁻¹, control set-up for ℓ<sub>f</sub>, balance method for ℓ<sub>v</sub>, slopes of heating curves). Evaporation (§4.6–4.7) is Lesson 1.4b. <b>Left out:</b> plasma (“further information” in the notes) and kilowatt-hour-meter revolutions (a joulemeter is used instead). <b>Exam emphasis:</b> mixtures with ice, power × time with latent heat, error-direction questions, “latent heat increases the P.E. of molecules” wording. <b>Simulation model:</b> ice heated at constant power with no energy loss; the temperature and the amounts of each state are computed exactly from the energy supplied E = Pt.</p>
+<div class="table-scroll"><table class="t activities"><tr><th>#</th><th>Activity (from the guide, pp.37–39, incl. Values &amp; Attitudes and STSE)</th><th>Where</th></tr>
+<tr><td>1</td><td>Investigating the relationship between the frequency and wavelength of a sound wave</td><td><a href="#step6" data-step="6">L3.9a Step 6: Simulation</a><br><a href="#step9" data-step="9">L3.9a Step 9: Worked Examples</a></td></tr><tr><td>2</td><td>Identifying the differences between sounds in terms of loudness, pitch and quality</td><td><a href="3-9b-musical-notes-noise.html#step3">L3.9b Step 3: Pitch, Loudness, Quality</a><br><a href="3-9b-musical-notes-noise.html#step5">L3.9b Step 5: Simulation</a></td></tr><tr><td>3</td><td>Values &amp; attitudes / STSE: health hazards of prolonged exposure to extreme noise; reducing noise disturbance to neighbours; noise pollution in the local context</td><td><a href="3-9b-musical-notes-noise.html#step8">L3.9b Step 8: Noise Pollution</a></td></tr></table></div>
+<p><b>Notes alignment:</b> Wave notes Chapter 9 §9.1 (sound as longitudinal mechanical waves; needs a medium; speeds in different media), §9.2 (audible range 20 Hz–20 kHz, ultrasound and its uses: sonar, medical scanning, flaw detection, cleaning), §9.4 (reflection/echo, refraction by temperature layers, diffraction, interference incl. two-loudspeaker set-up and noise cancelling) and §9.6 (comparison of light and sound). The CRO (§9.3) and musical notes/noise (§9.5, 9.7–9.9) are Lesson 3.9b. <b>Exam emphasis:</b> echo calculations (distance = vt/2), measuring the speed of sound (Paper 1B 2020 Q6, 2024 Q7: “linearly increasing” is not the same as “directly proportional”; a straight line must pass through the origin for proportionality), λ = v/f with frequency unchanged across media, two-loudspeaker interference using path difference, ultrasound and total internal reflection context (Paper 1A 2025 Q20). <b>Simulation model:</b> longitudinal displacement s = A sin(ωt − kx) of particle layers, λ = v/f (motion shown in slow motion); echo time t = 2d/v; the 2d–t graph has slope v (selftest). Speeds: air 340 m s⁻¹ (notes: 343 m s⁻¹ at 20 °C; 340 used in DSE questions), water 1500, aluminium 6420.</p>
 </div></details>
 <script>
 
@@ -445,109 +415,104 @@ function kHTML(id, t){ var e = document.getElementById(id); if (e) e.innerHTML =
 
 var Q = {
 p1:[
- {type:"mc", text:"Which substance is a <b>liquid</b> at room temperature (about 20 °C)?", options:["P: melting point 30 °C, boiling point 300 °C","Q: melting point −95 °C, boiling point 56 °C","R: melting point −210 °C, boiling point −196 °C","S: melting point 80 °C, boiling point 218 °C"], answer:1,
-  hints:["A liquid is between its melting point and boiling point.",""], explain:"Only Q has melting point < 20 °C < boiling point."},
- {type:"mc", text:"On the cooling curve of a liquid, the temperature stays constant for a while. During this time the substance is…", options:["freezing and releasing latent heat","not losing any energy","boiling","absorbing latent heat from the air"], answer:0,
-  hints:["It is still cooler air around it…",""], explain:"It is freezing; it keeps losing energy (latent heat) to the air while the temperature stays at the freezing point."},
- {type:"mc", text:"While ice melts at 0 °C, the energy absorbed…", options:["increases the potential energy of the molecules","increases the average kinetic energy of the molecules","increases the temperature of the ice","is destroyed"], answer:0,
-  hints:["The temperature does not change.",""], explain:"Constant temperature → constant average K.E.; the energy increases the P.E. (molecules move further apart)."},
- {type:"mc", text:"The cooling curve of a substance has a flat part PQ. Which statements about PQ are correct?<br>(1) The substance does not lose energy to the surroundings.<br>(2) The substance releases latent heat.<br>(3) The average potential energy of the molecules decreases.", options:["(1) only","(3) only","(1) and (2) only","(2) and (3) only"], answer:3,
-  hints:["Cooling curve → the substance is losing energy all the time.",""], explain:"(2) and (3). It releases latent heat, so the P.E. of its molecules decreases at constant temperature."},
- {type:"mc", text:"When water at 100 °C boils and becomes steam at 100 °C, the molecules’…", options:["potential energy increases","average kinetic energy increases","potential energy decreases","kinetic and potential energy both stay the same"], answer:0,
-  hints:["Same temperature → same average K.E.",""], explain:"The latent heat increases the P.E. as the molecules separate."},
- {type:"mc", text:"A solid is heated at constant power until it melts and then becomes a hot liquid. On its heating curve, the solid part is steeper than the liquid part. This shows that…", options:["the specific heat capacity of the solid is smaller than that of the liquid","the specific heat capacity of the solid is larger","the solid has a larger latent heat","the liquid has a lower melting point"], answer:0,
-  hints:["Gradient = P/(mc).",""], explain:"Same P and m: steeper gradient → smaller c."}
-],
-p2:[
- {type:"num", text:"How much energy is needed to melt <b>0.50 kg</b> of ice at 0 °C?", answer:167000, unit:"J",
-  hints:["E = mℓ<sub>f</sub>",""], explain:"E = 0.50 × 3.34 × 10⁵ = 1.67 × 10⁵ J."},
- {type:"num", text:"How much energy is needed to change <b>0.40 kg</b> of boiling water at 100 °C into steam?", answer:904000, unit:"J",
-  hints:["E = mℓ<sub>v</sub>",""], explain:"E = 0.40 × 2.26 × 10⁶ = 9.04 × 10⁵ J."},
- {type:"num", text:"A 42 W heating coil keeps a liquid boiling in an insulated vessel. The liquid boils away at <b>2.0 × 10⁻⁵ kg s⁻¹</b>. Find its specific latent heat of vaporization.", answer:2.1e6, unit:"J/kg",
-  hints:["In 1 s: 42 J boils 2.0 × 10⁻⁵ kg.","ℓ<sub>v</sub> = P ÷ (rate of mass loss)"], explain:"ℓ<sub>v</sub> = 42 ÷ 2.0 × 10⁻⁵ = 2.1 × 10⁶ J kg⁻¹."},
- {type:"num", text:"A 1200 W kettle contains boiling water. How long does it take to boil away <b>0.30 kg</b> of it (no energy loss)?", answer:565, unit:"s",
-  hints:["Pt = mℓ<sub>v</sub>",""], explain:"t = 0.30 × 2.26 × 10⁶ ÷ 1200 = 565 s."},
- {type:"num", text:"How much energy must be removed from <b>0.40 kg</b> of water at <b>30 °C</b> to turn it into ice at 0 °C?", answer:184000, unit:"J",
-  hints:["Two stages: cool to 0 °C (mcΔT), then freeze (mℓ<sub>f</sub>).",""], explain:"50 400 + 133 600 = 1.84 × 10⁵ J."},
- {type:"num", text:"An immersion heater takes <b>7.0 min</b> to heat some water from 30 °C to 100 °C. How many <b>minutes</b> will it take to boil all of the water away? (Assume no energy loss.)", answer:53.81, unit:"min",
-  hints:["Same P: time ∝ energy. Compare mℓ<sub>v</sub> with mcΔT.","t = 7.0 × 2.26 × 10⁶ ÷ (4200 × 70)"], explain:"Ratio = 2.26 × 10⁶ ÷ 294 000 = 7.69, so t = 7.0 × 7.69 = 53.8 min."},
- {type:"mc", text:"Burns from steam at 100 °C are usually more serious than burns from the same mass of boiling water at 100 °C because steam…", options:["releases latent heat when it condenses on the skin","has a higher temperature","has a higher specific heat capacity","moves faster"], answer:0,
-  hints:["What happens when steam touches the cooler skin?",""], explain:"Steam condenses, releasing 2.26 × 10⁶ J kg⁻¹ before cooling like the water."}
+ {type:"mc", text:"Which statements about sound waves are correct?<br>(1) Sound waves are longitudinal.<br>(2) Sound waves are electromagnetic waves.<br>(3) Sound waves cannot travel in a vacuum.", options:["(1) and (3) only","(1) only","(2) only","(1), (2) and (3)"], answer:0,
+  hints:["Sound is a mechanical wave.",""], explain:"Sound is a longitudinal mechanical wave and needs a medium."},
+ {type:"mc", text:"A lit candle is placed in front of a loudspeaker playing a loud low note. The flame…", options:["moves to and fro towards and away from the speaker","moves up and down","stays still","moves away from the speaker steadily"], answer:0,
+  hints:["Longitudinal.",""], explain:"Air particles vibrate along the direction of travel."},
+ {type:"mc", text:"Air is pumped out of a bell jar containing a ringing electric bell. What is observed?", options:["The sound becomes fainter but the bell can still be seen striking.","The sound becomes louder.","The bell can no longer be seen.","Nothing changes."], answer:0,
+  hints:["Light needs no medium; sound does.",""], explain:"Sound needs a medium; light passes through the vacuum."},
+ {type:"mc", text:"The audible frequency range of a young person is about…", options:["20 Hz to 20 kHz","2 Hz to 2 kHz","20 kHz to 200 kHz","200 Hz to 200 kHz"], answer:0,
+  hints:["",""], explain:"About 20 Hz – 20 kHz."},
+ {type:"mc", text:"Which statement about ultrasound is <b>incorrect</b>?", options:["It can travel through a vacuum.","Its frequency is above 20 kHz.","It is a longitudinal wave.","It is used to scan a foetus."], answer:0,
+  hints:["It is sound.",""], explain:"Ultrasound is sound, so it cannot travel through a vacuum."},
+ {type:"num", text:"A boy can hear sounds from 30 Hz to 16 500 Hz. The speed of sound is 330 m s⁻¹. Find the shortest wavelength he can hear.", answer:0.02, unit:"m", tol:0.01,
+  hints:["Shortest λ ⇔ highest f.","λ = 330/16 500"], explain:"λ = 0.020 m."},
+ {type:"mc", text:"In which medium does sound travel fastest?", options:["steel","water","air","vacuum"], answer:0,
+  hints:["Solids > liquids > gases.",""], explain:"Generally fastest in solids; it cannot travel in a vacuum."}
 ],
 psim:[
- {type:"num", text:"0.20 kg of ice at −20 °C, P = 500 W. Predict the time before the ice <b>starts</b> to melt.", answer:16.8, unit:"s",
-  hints:["E = mcΔT = 0.20 × 2100 × 20","t = E/P"], explain:"8400 J ÷ 500 W = 16.8 s."},
- {type:"num", text:"How long does the <b>melting</b> stage last?", answer:133.6, unit:"s",
-  hints:["t = mℓ<sub>f</sub>/P",""], explain:"0.20 × 3.34 × 10⁵ ÷ 500 = 133.6 s."},
- {type:"num", text:"How long does the <b>boiling</b> stage last?", answer:904, unit:"s",
-  hints:["t = mℓ<sub>v</sub>/P",""], explain:"0.20 × 2.26 × 10⁶ ÷ 500 = 904 s."},
- {type:"num", text:"What mass of water is left after it has been boiling for <b>300 s</b>?", answer:0.1336, unit:"kg", tol:0.0015,
-  hints:["Mass boiled = Pt/ℓ<sub>v</sub> = 500 × 300 ÷ 2.26 × 10⁶",""], explain:"0.20 − 0.0664 = 0.134 kg."}
+ {type:"num", text:"Particles mode, air (340 m s⁻¹), f = 500 Hz. Find the wavelength.", answer:0.68, unit:"m",
+  hints:["λ = v/f",""], explain:"λ = 340/500 = 0.68 m: the distance between neighbouring compressions."},
+ {type:"num", text:"Keep f = 500 Hz and change to water (1500 m s⁻¹). Find the new wavelength.", answer:3, unit:"m",
+  hints:["Frequency is set by the source.",""], explain:"λ = 1500/500 = 3.0 m."},
+ {type:"mc", text:"When the sound passes from air into water, which quantity stays the same?", options:["frequency","speed","wavelength","all three change"], answer:0,
+  hints:["",""], explain:"Frequency is fixed by the source; speed and wavelength increase."},
+ {type:"num", text:"Echo mode in air: the wall is 85 m away. Find the echo time.", answer:0.5, unit:"s",
+  hints:["t = 2d/v",""], explain:"t = 170/340 = 0.50 s."},
+ {type:"mc", text:"Choose vacuum. What happens?", options:["No sound wave is passed on, because there are no particles.","The sound travels at 3 × 10⁸ m s⁻¹.","The wavelength becomes very short.","The sound is louder."], answer:0,
+  hints:["",""], explain:"Sound needs a medium."},
+ {type:"mc", text:"In echo mode you record several distances. The graph of 2d against t is a straight line through the origin. Its slope is…", options:["the speed of sound","the frequency","the wavelength","1/(speed of sound)"], answer:0,
+  hints:["2d = vt",""], explain:"Slope = 2d/t = v."}
 ],
-p3:[
- {type:"num", text:"In the funnel experiment, E = 19 440 J; water collected: set A 0.078 kg, set B (control) 0.020 kg. Find ℓ<sub>f</sub>.", answer:335172, unit:"J/kg",
-  hints:["ℓ<sub>f</sub> = E/(m<sub>A</sub> − m<sub>B</sub>)",""], explain:"19 440 ÷ 0.058 = 3.35 × 10⁵ J kg⁻¹."},
- {type:"mc", text:"In the ℓ<sub>f</sub> experiment, what is the purpose of set B (heater switched off)?", options:["To find the mass of ice melted by energy from the surroundings","To check the heater","To keep the ice at 0 °C","To measure the room temperature"], answer:0,
-  hints:["What else melts the ice besides the heater?",""], explain:"Set B is the control: subtracting m<sub>B</sub> removes the ice melted by the surroundings."},
- {type:"mc", text:"In the ℓ<sub>v</sub> experiment (beaker on a balance), which error makes the result <b>smaller</b> than the true value?", options:["Energy is lost to the surroundings.","Water splashes out of the beaker.","Steam condenses on the heater and drips back.","The beaker is not insulated."], answer:1,
-  hints:["ℓ<sub>v</sub> = E/Δm. What makes Δm too large?",""], explain:"Splashing makes the measured mass loss too large, so E/Δm is too small. The other errors make ℓ<sub>v</sub> too large."},
- {type:"num", text:"Find the least mass of ice at 0 °C needed to cool 0.30 kg of water from 30 °C to 5 °C.", answer:0.08873, unit:"kg", tol:0.0009,
-  hints:["0.30 × 4200 × 25 = m(3.34 × 10⁵ + 4200 × 5)",""], explain:"m = 31 500 ÷ 355 000 = 0.0887 kg."},
- {type:"mc", text:"0.10 kg of ice at 0 °C is put into 0.20 kg of water at 20 °C in an insulated cup. The final contents are…", options:["water at a temperature above 0 °C","ice and water at 0 °C","water at exactly 0 °C with no ice","ice only"], answer:1,
-  hints:["Energy released by the water cooling to 0 °C = 0.20 × 4200 × 20.","Energy to melt all the ice = 0.10 × 3.34 × 10⁵."], explain:"16 800 J < 33 400 J, so only about half the ice melts: ice and water at 0 °C."},
- {type:"num", text:"0.25 kg of tea at 80 °C is cooled with 0.30 kg of ice at 0 °C. What mass of ice melts?", answer:0.2515, unit:"kg", tol:0.0025,
-  hints:["The tea can cool only to 0 °C: 0.25 × 4200 × 80 J.","Mass melted = that energy ÷ ℓ<sub>f</sub>"], explain:"84 000 ÷ 3.34 × 10⁵ = 0.251 kg (0.049 kg of ice remains)."}
+p2:[
+ {type:"num", text:"A man shouts towards a cliff and hears the echo after 0.80 s. Speed of sound = 340 m s⁻¹. How far away is the cliff?", answer:136, unit:"m",
+  hints:["The sound goes there and back.","d = vt/2"], explain:"d = 340 × 0.80/2 = 136 m."},
+ {type:"num", text:"A ship’s sonar sends 40 kHz pulses downward. The echo returns 2.0 s later. Speed of sound in sea water = 1500 m s⁻¹. Find the depth of the sea.", answer:1500, unit:"m",
+  hints:["depth = vt/2",""], explain:"(1500)(2.0)/2 = 1500 m."},
+ {type:"num", text:"Find the wavelength of the sonar pulses in the previous question (in cm).", answer:3.75, unit:"cm",
+  hints:["λ = v/f",""], explain:"λ = 1500/40 000 = 0.0375 m = 3.75 cm."},
+ {type:"num", text:"A sound has wavelength 25 cm in air (speed 340 m s⁻¹). In another medium its wavelength is 1.0 m. Find its speed in that medium.", answer:1360, unit:"m s⁻¹",
+  hints:["f stays the same: 1360 Hz.",""], explain:"v = 1360 × 1.0 = 1360 m s⁻¹."},
+ {type:"mc", text:"Two loudspeakers connected to the same signal generator emit 1000 Hz sound in phase (v = 340 m s⁻¹). At point P the path difference is 0.85 m. At P the sound is…", options:["soft (destructive interference)","loud (constructive interference)","loud only for one speaker","impossible to tell"], answer:0,
+  hints:["λ = 0.34 m; 0.85/0.34 = ?",""], explain:"0.85 m = 2.5λ ⇒ destructive ⇒ soft."},
+ {type:"mc", text:"You can hear a person talking round a corner but cannot see them. This is because…", options:["sound waves have wavelengths comparable to the doorway, so they diffract much more than light","sound travels faster than light","light cannot be reflected","sound is a transverse wave"], answer:0,
+  hints:["Compare λ with the gap size.",""], explain:"λ(sound) ~ 1 m ≈ door width; λ(light) ≈ 5 × 10⁻⁷ m."},
+ {type:"mc", text:"A sound wave travels from water into air. Which statements are correct?<br>(1) Its wavelength decreases.<br>(2) Its frequency is unchanged.<br>(3) It bends away from the normal.", options:["(1) and (2) only","(2) only","(2) and (3) only","(1), (2) and (3)"], answer:0,
+  hints:["Sound is slower in air.",""], explain:"Slower in air ⇒ λ decreases and the wave bends towards the normal; f unchanged."},
+ {type:"mc", text:"In an echo experiment a student plots 2d against t. The best-fit line is straight but cuts the t-axis at t = 0.05 s. Which conclusion is correct?", options:["2d increases linearly with t, but the data do not show direct proportion; there is a systematic timing error (e.g. reaction time).","2d is directly proportional to t.","The speed of sound is 0.05 m s⁻¹.","The slope cannot be used to find the speed."], answer:0,
+  hints:["Direct proportion needs a line through the origin.",""], explain:"A straight line not through the origin shows a linear relation with an offset (systematic error); the slope still gives v."},
+ {type:"num", text:"A student 50 m from a wall claps so that each clap coincides with the echo of the previous one. 20 intervals take 6.0 s. Find the speed of sound.", answer:333, unit:"m s⁻¹", tol:0.01,
+  hints:["One interval = 0.30 s for 100 m.",""], explain:"v = 100/0.30 = 333 m s⁻¹."}
 ]};
 
 function makeSim(){
-  var cv = document.getElementById("animCanvas"), CI = 2100, CW = 4200, CSt = 2100, LF = 3.34e5, LV = 2.26e6, TMAX = 120, P = {}, t = 0, hist = [], clock, rng = 3;
-  function rnd(){ rng = (rng*16807) % 2147483647; return rng/2147483647; }
-  var mol = []; for (var i = 0; i < 36; i++) mol.push({gx:i%6, gy:Math.floor(i/6), x:rnd(), y:rnd(), a:rnd()*6.28});
-  function read(){ P.m = kVal("mSl"); P.P = kVal("pSl"); P.T0 = kVal("t0Sl"); kText("mSlVal", kFmt(P.m, 2) + " kg"); kText("pSlVal", P.P + " W"); kText("t0SlVal", P.T0 + " °C"); }
-  function stages(){ var m = P.m; return [m*CI*(0 - P.T0), m*LF, m*CW*100, m*LV, m*CSt*(TMAX - 100)]; }
-  function tEnd(){ return stages().reduce(function(a, b){ return a + b; }, 0)/P.P; }
-  function at(E){ var s = stages(), m = P.m, e = E;
-    if (e <= s[0]) return {T:P.T0 + e/(m*CI), ice:m, water:0, steam:0, st:"solid (ice) warming"}; e -= s[0];
-    if (e <= s[1]){ var f = e/LF; return {T:0, ice:m - f, water:f, steam:0, st:"melting at 0 °C"}; } e -= s[1];
-    if (e <= s[2]) return {T:e/(m*CW), ice:0, water:m, steam:0, st:"liquid (water) warming"}; e -= s[2];
-    if (e <= s[3]){ var g = e/LV; return {T:100, ice:0, water:m - g, steam:g, st:"boiling at 100 °C"}; } e -= s[3];
-    return {T:Math.min(TMAX, 100 + e/(m*CSt)), ice:0, water:0, steam:m, st:"gas (steam) warming"}; }
-  function reset(){ if (clock) clock.stop(); read(); t = 0; hist = [[0, P.T0]]; update(); draw(); kText("simMsg", "Ready. Press ▶ Play to switch on the heater."); }
-  function adv(dt){ var n = Math.max(1, Math.ceil(dt/2)), h = dt/n; for (var i = 0; i < n; i++){ t = Math.min(tEnd(), t + h); hist.push([t, at(P.P*t).T]); if (t >= tEnd()) break; } }
-  function update(){ var E = P.P*t, s = at(E), st = stages(), tm = [st[0]/P.P, st[1]/P.P, st[2]/P.P, st[3]/P.P];
-    kText("roT", kFmt(s.T, 1) + " °C"); kText("roE", Math.round(E).toLocaleString("en") + " J"); kText("roState", s.st); kText("roMass", kFmt(s.ice, 3) + " / " + kFmt(s.water, 3) + " / " + kFmt(s.steam, 3));
-    kHTML("eqPanel", "Stage times (E/P): ice warms " + kFmt(tm[0], 1) + " s (mcΔT) · melts <b>" + kFmt(tm[1], 1) + " s</b> (mℓ<sub>f</sub>) · water warms " + kFmt(tm[2], 1) + " s · boils <b>" + kFmt(tm[3], 1) + " s</b> (mℓ<sub>v</sub>)<br>Boiling plateau ÷ melting plateau = ℓ<sub>v</sub>/ℓ<sub>f</sub> = " + kFmt(LV/LF, 2)); }
-  function draw(){
-    var g = kSetup(cv), ctx = g.ctx, W = g.w, H = g.h, lw = Math.min(300, W*0.34), s = at(P.P*t), m = P.m;
+  var cv = document.getElementById("animCanvas"), P = {}, t = 0, clock, rec = [], WIN = 4.0, A = 0.06;
+  function read(){ var r = document.querySelector('input[name="sdMode"]:checked'); P.mode = r ? r.value : "part"; P.v = +document.getElementById("medSel").value; P.f = kVal("fSl"); P.d = kVal("dSl");
+    P.lam = P.v > 0 ? P.v/P.f : null; P.te = P.v > 0 ? 2*P.d/P.v : null; kText("fSlVal", P.f + " Hz"); kText("dSlVal", P.d + " m"); }
+  function disp(x, tt){ return P.v > 0 ? A*P.lam/0.68*0.5*Math.sin(2*Math.PI*(tt - x/P.lam)) : 0; } // display amplitude (m), tt in display cycles
+  function fit(){ if (rec.length < 2) return null; var n = rec.length, sx = 0, sy = 0, sxx = 0, sxy = 0; rec.forEach(function(p){ sx += p[0]; sy += p[1]; sxx += p[0]*p[0]; sxy += p[0]*p[1]; }); var m = (n*sxy - sx*sy)/(n*sxx - sx*sx); return {m:m, c:(sy - m*sx)/n}; }
+  function update(){ kText("roA", P.v > 0 ? P.v + " m s⁻¹" : "no sound (no medium)"); kText("roB", P.v > 0 ? kFmt(P.lam, 3) + " m (f = " + P.f + " Hz)" : "—");
+    kText("roC", P.v > 0 ? kFmt(P.te, 3) + " s for d = " + P.d + " m" : "—"); var F = fit(); kText("roD", F ? "slope of 2d–t = " + kFmt(F.m, 0) + " m s⁻¹ (" + rec.length + " points)" : rec.length + " point(s) recorded"); }
+  function draw(){ var g = kSetup(cv), ctx = g.ctx, W = g.w, H = g.h, i;
     ctx.clearRect(0, 0, W, H); ctx.fillStyle = "#fff"; ctx.fillRect(0, 0, W, H);
-    var bx = 30, by = 60, bw = lw - 60, bh = 260; ctx.strokeStyle = "#334155"; ctx.lineWidth = 3; ctx.strokeRect(bx, by, bw, bh);
-    var fi = s.ice/m, fw = s.water/m, fs = s.steam/m;
-    mol.forEach(function(p, i){ var u = i/mol.length, x, y, phase = u < fi ? "ice" : (u < fi + fw ? "water" : "steam");
-      if (phase === "ice"){ x = bx + 40 + p.gx*((bw - 80)/5) + (rnd() - 0.5)*3; y = by + bh - 30 - p.gy*18 + (rnd() - 0.5)*3; ctx.fillStyle = "#38bdf8"; }
-      else if (phase === "water"){ x = bx + 20 + p.x*(bw - 40); y = by + bh - 20 - p.y*110; ctx.fillStyle = "#2563eb"; }
-      else { x = bx + 10 + p.x*(bw - 20); y = by + 10 + p.y*(bh - 20); ctx.fillStyle = "#94a3b8"; }
-      ctx.beginPath(); ctx.arc(x, y, 6, 0, 7); ctx.fill(); });
-    ctx.fillStyle = t > 0 && t < tEnd() ? "#ef4444" : "#64748b"; ctx.fillRect(bx + bw/2 - 30, by + bh + 8, 60, 10);
-    ctx.fillStyle = "#111"; ctx.font = "bold 12px Arial"; ctx.textAlign = "center"; ctx.fillText(s.st, bx + bw/2, by - 12); ctx.font = "11px Arial"; ctx.fillText("heater " + P.P + " W", bx + bw/2, by + bh + 32);
-    ctx.save(); ctx.translate(lw + 10, 0); var Gx = {ctx:ctx, w:W - lw - 10, h:H}, xr = kNice(0, tEnd(), 6);
-    var A = kAxes(Gx, xr, {lo:-40, hi:130, step:20}, "time / s", "temperature / °C");
-    kLine(A, hist, "#dc2626", 3); var st = stages(), c0 = st[0]/P.P, c1 = c0 + st[1]/P.P, c2 = c1 + st[2]/P.P, c3 = c2 + st[3]/P.P;
-    ctx.fillStyle = "#475569"; ctx.font = "11px Arial"; ctx.textAlign = "center";
-    if (t >= c1) ctx.fillText("melting", A.X((c0 + c1)/2), A.Y(0) - 8); if (t >= c3) ctx.fillText("boiling", A.X((c2 + c3)/2), A.Y(100) - 8);
-    ctx.restore();
+    if (P.mode === "part"){ var x0 = 90, x1 = W - 20, sx = (x1 - x0)/WIN, yt = 40, yb = 220;
+      var cone = disp(0, t)*sx; ctx.fillStyle = "#334155"; ctx.beginPath(); ctx.moveTo(20, 110); ctx.lineTo(45, 110); ctx.lineTo(70 + cone, 60); ctx.lineTo(70 + cone, 200); ctx.lineTo(45, 150); ctx.lineTo(20, 150); ctx.closePath(); ctx.fill();
+      if (P.v === 0){ ctx.fillStyle = "#b91c1c"; ctx.font = "bold 15px Arial"; ctx.textAlign = "center"; ctx.fillText("Vacuum: no particles, so no sound wave is passed on.", (x0 + x1)/2, 130); }
+      else { ctx.strokeStyle = "#2563eb"; ctx.lineWidth = 1.5; var N = 110; for (i = 0; i < N; i++){ var xe = (i + 0.5)*WIN/N, xx = x0 + (xe + disp(xe, t))*sx; ctx.beginPath(); ctx.moveTo(xx, yt); ctx.lineTo(xx, yb); ctx.stroke(); }
+        ctx.strokeStyle = "#dc2626"; ctx.lineWidth = 3; var xm = 1.0*WIN/4, xr = x0 + (xm + disp(xm, t))*sx; ctx.beginPath(); ctx.moveTo(xr, yt - 6); ctx.lineTo(xr, yb + 6); ctx.stroke(); ctx.fillStyle = "#dc2626"; ctx.font = "11px Arial"; ctx.textAlign = "center"; ctx.fillText("one layer: moves back and forth", xr, yb + 20);
+        if (P.lam < WIN*0.9){ // compressions where ds/dx is most negative: x = (t + n)λ; rarefactions half a wavelength further
+          for (var n = -2; n < 40; n++){ var xcmp = ((t % 1) + n)*P.lam; if (xcmp > 0.05 && xcmp < WIN - 0.05){ ctx.fillStyle = "#111"; ctx.font = "bold 12px Arial"; ctx.fillText("C", x0 + xcmp*sx, yt - 8); } var xrar = ((t % 1) + n + 0.5)*P.lam; if (xrar > 0.05 && xrar < WIN - 0.05){ ctx.fillStyle = "#64748b"; ctx.fillText("R", x0 + xrar*sx, yt - 8); } }
+          var xa = x0 + 0.2*sx, xb = xa + P.lam*sx; if (xb < x1){ kArrow(ctx, xa, yb + 40, xb, yb + 40, "#15803d", 1.5); kArrow(ctx, xb, yb + 40, xa, yb + 40, "#15803d", 1.5); ctx.fillStyle = "#15803d"; ctx.fillText("λ = " + kFmt(P.lam, 2) + " m", (xa + xb)/2, yb + 56); } }
+        else { ctx.fillStyle = "#15803d"; ctx.font = "12px Arial"; ctx.textAlign = "center"; ctx.fillText("λ = " + kFmt(P.lam, 2) + " m is longer than the 4 m window shown", (x0 + x1)/2, yb + 50); } }
+      ctx.fillStyle = "#64748b"; ctx.font = "11px Arial"; ctx.textAlign = "left"; ctx.fillText("window 4.0 m wide · motion in slow motion · C = compression, R = rarefaction", 10, H - 8); }
+    else { var gx = 10, gw = W*0.55, wx = gx + gw - 20, px = gx + 30, yy = 120, sc = (wx - px)/200;
+      var wpos = px + P.d*sc; ctx.strokeStyle = "#111"; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(px, yy - 30, 7, 0, 7); ctx.moveTo(px, yy - 23); ctx.lineTo(px, yy + 5); ctx.moveTo(px - 10, yy - 12); ctx.lineTo(px + 10, yy - 12); ctx.moveTo(px, yy + 5); ctx.lineTo(px - 8, yy + 25); ctx.moveTo(px, yy + 5); ctx.lineTo(px + 8, yy + 25); ctx.stroke();
+      ctx.fillStyle = "#64748b"; ctx.fillRect(wpos, 30, 14, 180); ctx.fillStyle = "#111"; ctx.font = "11px Arial"; ctx.textAlign = "center"; ctx.fillText("wall", wpos + 7, 224);
+      ctx.strokeStyle = "#111"; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(px, 240); ctx.lineTo(wpos, 240); ctx.stroke(); ctx.fillText("d = " + P.d + " m", (px + wpos)/2, 254);
+      if (P.v > 0){ var tt = t*P.te/1.5, s = P.v*tt, pos = s <= P.d ? s : 2*P.d - s; if (s < 2*P.d){ ctx.strokeStyle = s <= P.d ? "#dc2626" : "#2563eb"; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(px + pos*sc, yy, 14, -1.1 + (s > P.d ? Math.PI : 0), 1.1 + (s > P.d ? Math.PI : 0)); ctx.stroke(); }
+        ctx.fillStyle = "#111"; ctx.font = "bold 13px Arial"; ctx.textAlign = "left"; ctx.fillText("stopwatch: " + kFmt(Math.min(tt, P.te), 3) + " s" + (s >= 2*P.d ? "  (echo heard)" : ""), gx + 10, 22); }
+      else { ctx.fillStyle = "#b91c1c"; ctx.font = "bold 13px Arial"; ctx.textAlign = "left"; ctx.fillText("Vacuum: no echo, no sound.", gx + 10, 22); }
+      ctx.save(); ctx.translate(gx + gw + 10, 0); var ax = kAxes({ctx:ctx, w:W - gw - 20, h:H}, {lo:0, hi:1.4, step:0.2}, {lo:0, hi:450, step:50}, "echo time t / s", "2d / m");
+      rec.forEach(function(p){ ctx.fillStyle = "#2563eb"; ctx.beginPath(); ctx.arc(ax.X(p[0]), ax.Y(p[1]), 4.5, 0, 7); ctx.fill(); });
+      var F = fit(); if (F){ var te2 = Math.min(1.4, (450 - F.c)/F.m); ctx.strokeStyle = "#16a34a"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(ax.X(0), ax.Y(F.c)); ctx.lineTo(ax.X(te2), ax.Y(F.c + F.m*te2)); ctx.stroke(); ctx.fillStyle = "#15803d"; ctx.font = "bold 12px Arial"; ctx.textAlign = "left"; ctx.fillText("slope = " + kFmt(F.m, 0) + " m s⁻¹", ax.X(0.05), ax.Y(420)); }
+      ctx.restore(); }
   }
-  function jig(){ mol.forEach(function(p){ p.a += (rnd() - 0.5)*2; p.x = Math.min(1, Math.max(0, p.x + Math.cos(p.a)*0.02)); p.y = Math.min(1, Math.max(0, p.y + Math.sin(p.a)*0.02)); }); }
-  clock = kClock(function(dt){ adv(dt*40); jig(); update(); draw(); if (t >= tEnd()){ kText("simMsg", "Finished: all steam at 120 °C."); return false; } },
-    function(fin){ document.getElementById("playBtn").textContent = "▶ Play"; if (!fin) kText("simMsg", "Paused."); });
-  document.getElementById("playBtn").addEventListener("click", function(){ if (clock.running()) clock.stop(); else { if (t >= tEnd()) reset(); this.textContent = "⏸ Pause"; kText("simMsg", "Heating…"); clock.start(); } });
-  document.getElementById("resetBtn").addEventListener("click", reset);
-  kBind(["mSl","pSl","t0Sl"], reset);
+  function reset(){ t = 0; read(); update(); draw(); kText("simMsg", P.mode === "part" ? "Press ▶ Play to see the particles vibrate." : "Press ▶ Play to send a clap; then Record the echo time."); }
+  clock = kClock(function(dt){ t += dt; if (P.mode === "echo" && t > 1.6){ t = 1.6; draw(); return false; } draw(); }, function(){ document.getElementById("playBtn").textContent = "▶ Play"; });
+  document.getElementById("playBtn").addEventListener("click", function(){ if (clock.running()) clock.stop(); else { if (P.mode === "echo") t = 0; this.textContent = "⏸ Pause"; clock.start(); } });
+  document.getElementById("resetBtn").addEventListener("click", function(){ clock.stop(); reset(); });
+  document.getElementById("recBtn").addEventListener("click", function(){ read(); if (P.v === 0){ kText("simMsg", "No echo in a vacuum."); return; } rec.push([P.te, 2*P.d]); update(); draw(); kText("simMsg", "Recorded t = " + kFmt(P.te, 3) + " s, 2d = " + 2*P.d + " m."); });
+  document.getElementById("clrBtn").addEventListener("click", function(){ rec = []; update(); draw(); });
+  kBind(["fSl", "dSl"], function(){ read(); update(); draw(); });
+  document.getElementById("medSel").addEventListener("change", function(){ rec = []; read(); update(); draw(); });
+  [].forEach.call(document.querySelectorAll('input[name="sdMode"]'), function(r){ r.addEventListener("change", function(){ clock.stop(); reset(); }); });
   return {reset:reset, draw:draw, resize:function(){}, pause:function(){ clock.stop(); },
-    set:function(o){ if (o.m != null) kSet("mSl", o.m); if (o.P != null) kSet("pSl", o.P); if (o.T0 != null) kSet("t0Sl", o.T0); reset(); },
-    jumpTo:function(T){ clock.stop(); reset(); adv(T); update(); draw(); },
-    state:function(){ var s = at(P.P*t); s.t = t; s.tEnd = tEnd(); s.stages = stages().map(function(e){ return e/P.P; }); return s; }};
+    set:function(o){ if (o.mode){ var r = document.querySelector('input[name="sdMode"][value="' + o.mode + '"]'); if (r) r.checked = true; } if (o.v != null) document.getElementById("medSel").value = String(o.v); if (o.f != null) kSet("fSl", o.f); if (o.clear) rec = [];
+      if (o.record){ read(); o.record.forEach(function(d){ rec.push([2*d/P.v, 2*d]); }); } if (o.d != null) kSet("dSl", o.d); reset(); },
+    jumpTo:function(T){ clock.stop(); t = T; draw(); kText("simMsg", "Paused."); },
+    state:function(){ return {mode:P.mode, v:P.v, f:P.f, lam:P.lam, d:P.d, te:P.te, rec:rec.slice(), fit:fit(), disp:disp}; }};
 }
-var LESSON = {quizzes:Q, figs:{}, makeSim:makeSim, demo:{set:{m:0.2, P:500, T0:-20}, t:700}};
+var LESSON = {quizzes:Q, figs:{}, makeSim:makeSim, demo:{set:{mode:"part", v:340, f:500}, t:0.3}};
 
 
 (function(){

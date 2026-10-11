@@ -1,0 +1,578 @@
+{
+  "course": {
+    "title": "HKDSE Physics",
+    "titleZh": "香港中學文憑物理",
+    "subtitle": "Interactive lessons for slow learners"
+  },
+  "units": [
+    {
+      "id": "heat-gases",
+      "topic": 1,
+      "title": "Heat and Gases",
+      "titleZh": "熱和氣體",
+      "icon": "🔥",
+      "about": "Temperature, heat transfer, specific heat capacity, latent heat, evaporation, and the gas laws. Lesson numbers follow your Heat notes chapters.",
+      "groups": [
+        {
+          "id": "1-1",
+          "chapter": "1.1",
+          "title": "Temperature, heat and internal energy",
+          "titleZh": "溫度、熱和內能",
+          "lessons": [
+            {
+              "id": "1-1-temperature-heat-internal-energy",
+              "file": "1-1-temperature-heat-internal-energy.html",
+              "number": "1.1",
+              "title": "Temperature, Heat and Internal Energy",
+              "steps": 11,
+              "guide": "a. Temperature, heat and internal energy",
+              "level": "Core",
+              "topic": 1
+            }
+          ]
+        },
+        {
+          "id": "1-2",
+          "chapter": "1.2",
+          "title": "Heat transfer",
+          "titleZh": "熱傳遞",
+          "lessons": [
+            {
+              "id": "1-2-heat-transfer-processes",
+              "file": "1-2-heat-transfer-processes.html",
+              "number": "1.2",
+              "title": "Heat Transfer Processes",
+              "steps": 10,
+              "guide": "b. Transfer processes",
+              "level": "Core",
+              "topic": 1
+            }
+          ]
+        },
+        {
+          "id": "1-3",
+          "chapter": "1.3",
+          "title": "Specific heat capacity",
+          "titleZh": "比熱容",
+          "lessons": [
+            {
+              "id": "1-3-specific-heat-capacity",
+              "file": "1-3-specific-heat-capacity.html",
+              "number": "1.3",
+              "title": "Heat Capacity and Specific Heat Capacity",
+              "steps": 13,
+              "guide": "a. Temperature, heat and internal energy",
+              "level": "Core",
+              "topic": 1
+            }
+          ]
+        },
+        {
+          "id": "1-4",
+          "chapter": "1.4",
+          "title": "Change of state",
+          "titleZh": "物態變化",
+          "lessons": [
+            {
+              "id": "1-4a-latent-heat",
+              "file": "1-4a-latent-heat.html",
+              "number": "1.4a",
+              "title": "Change of State and Latent Heat",
+              "steps": 14,
+              "guide": "c. Change of state",
+              "level": "Core",
+              "topic": 1
+            },
+            {
+              "id": "1-4b-evaporation",
+              "file": "1-4b-evaporation.html",
+              "number": "1.4b",
+              "title": "Evaporation",
+              "steps": 11,
+              "guide": "c. Change of state",
+              "level": "Core",
+              "topic": 1
+            }
+          ]
+        },
+        {
+          "id": "1-5",
+          "chapter": "1.5",
+          "title": "Gases",
+          "titleZh": "氣體",
+          "lessons": [
+            {
+              "id": "1-5a-gas-laws",
+              "file": "1-5a-gas-laws.html",
+              "number": "1.5a",
+              "title": "Gas Pressure and the Gas Laws",
+              "steps": 13,
+              "guide": "d. Gases",
+              "level": "Extension",
+              "topic": 1
+            },
+            {
+              "id": "1-5b-kinetic-theory",
+              "file": "1-5b-kinetic-theory.html",
+              "number": "1.5b",
+              "title": "Kinetic Theory of Gases",
+              "steps": 13,
+              "guide": "d. Gases",
+              "level": "Extension",
+              "topic": 1
+            }
+          ]
+        }
+      ],
+      "lessonCount": 7
+    },
+    {
+      "id": "force-motion",
+      "topic": 2,
+      "title": "Force and Motion",
+      "titleZh": "力和運動",
+      "icon": "⚙️",
+      "about": "Kinematics, Newton’s laws, moments, energy, momentum, projectile motion, circular motion and gravitation. Lesson numbers follow your Mechanics notes chapters.",
+      "groups": [
+        {
+          "id": "2-1",
+          "chapter": "2.1",
+          "title": "Kinematics",
+          "titleZh": "運動學",
+          "lessons": [
+            {
+              "id": "2-1a-describing-motion",
+              "file": "2-1a-describing-motion.html",
+              "number": "2.1a",
+              "title": "Describing Motion",
+              "steps": 15,
+              "guide": "a. Position and movement",
+              "level": "Core",
+              "topic": 2
+            },
+            {
+              "id": "2-1b-acceleration-free-fall",
+              "file": "2-1b-acceleration-free-fall.html",
+              "number": "2.1b",
+              "title": "Acceleration and Free Fall",
+              "steps": 15,
+              "guide": "a. Position and movement",
+              "level": "Core",
+              "topic": 2
+            }
+          ]
+        },
+        {
+          "id": "2-2",
+          "chapter": "2.2",
+          "title": "Force and Newton’s laws",
+          "titleZh": "力和牛頓定律",
+          "lessons": [
+            {
+              "id": "2-2a-inertia-first-law-friction",
+              "file": "2-2a-inertia-first-law-friction.html",
+              "number": "2.2a",
+              "title": "Inertia, Newton's First Law and Friction",
+              "steps": 10,
+              "guide": "b. Force and motion",
+              "level": "Core",
+              "topic": 2
+            },
+            {
+              "id": "2-2b-adding-resolving-forces",
+              "file": "2-2b-adding-resolving-forces.html",
+              "number": "2.2b",
+              "title": "Adding and Resolving Forces",
+              "steps": 10,
+              "guide": "b. Force and motion",
+              "level": "Core",
+              "topic": 2
+            },
+            {
+              "id": "2-2c-second-law-mass-weight",
+              "file": "2-2c-second-law-mass-weight.html",
+              "number": "2.2c",
+              "title": "Newton's Second Law, Mass and Weight",
+              "steps": 14,
+              "guide": "b. Force and motion",
+              "level": "Core",
+              "topic": 2
+            },
+            {
+              "id": "2-2d-third-law",
+              "file": "2-2d-third-law.html",
+              "number": "2.2d",
+              "title": "Newton's Third Law",
+              "steps": 9,
+              "guide": "b. Force and motion",
+              "level": "Core",
+              "topic": 2
+            }
+          ]
+        },
+        {
+          "id": "2-3",
+          "chapter": "2.3",
+          "title": "Moments and equilibrium",
+          "titleZh": "力矩和平衡",
+          "lessons": [
+            {
+              "id": "2-3-moments-equilibrium",
+              "file": "2-3-moments-equilibrium.html",
+              "number": "2.3",
+              "title": "Moments, Equilibrium and Centre of Gravity",
+              "steps": 11,
+              "guide": "b. Force and motion",
+              "level": "Core",
+              "topic": 2
+            }
+          ]
+        },
+        {
+          "id": "2-4",
+          "chapter": "2.4",
+          "title": "Work, energy and power",
+          "titleZh": "功、能量和功率",
+          "lessons": [
+            {
+              "id": "2-4a-work-pe-ke",
+              "file": "2-4a-work-pe-ke.html",
+              "number": "2.4a",
+              "title": "Work, Potential Energy and Kinetic Energy",
+              "steps": 11,
+              "guide": "d. Work, energy and power",
+              "level": "Core",
+              "topic": 2
+            },
+            {
+              "id": "2-4b-conservation-of-energy-power",
+              "file": "2-4b-conservation-of-energy-power.html",
+              "number": "2.4b",
+              "title": "Conservation of Energy and Power",
+              "steps": 11,
+              "guide": "d. Work, energy and power",
+              "level": "Core",
+              "topic": 2
+            }
+          ]
+        },
+        {
+          "id": "2-5",
+          "chapter": "2.5",
+          "title": "Momentum",
+          "titleZh": "動量",
+          "lessons": [
+            {
+              "id": "2-5a-momentum-impulse",
+              "file": "2-5a-momentum-impulse.html",
+              "number": "2.5a",
+              "title": "Momentum, Impulse and Force",
+              "steps": 11,
+              "guide": "e. Momentum",
+              "level": "Core",
+              "topic": 2
+            },
+            {
+              "id": "2-5b-conservation-of-momentum",
+              "file": "2-5b-conservation-of-momentum.html",
+              "number": "2.5b",
+              "title": "Conservation of Momentum and Collisions",
+              "steps": 11,
+              "guide": "e. Momentum",
+              "level": "Core",
+              "topic": 2
+            }
+          ]
+        },
+        {
+          "id": "2-6",
+          "chapter": "2.6",
+          "title": "Projectile motion",
+          "titleZh": "拋射運動",
+          "lessons": [
+            {
+              "id": "2-6-projectile-motion",
+              "file": "2-6-projectile-motion.html",
+              "number": "2.6",
+              "title": "Projectile Motion",
+              "steps": 10,
+              "guide": "c. Projectile motion",
+              "level": "Extension",
+              "topic": 2
+            }
+          ]
+        },
+        {
+          "id": "2-7",
+          "chapter": "2.7",
+          "title": "Uniform circular motion",
+          "titleZh": "勻速圓周運動",
+          "lessons": [
+            {
+              "id": "2-7-uniform-circular-motion",
+              "file": "2-7-uniform-circular-motion.html",
+              "number": "2.7",
+              "title": "Uniform Circular Motion",
+              "steps": 11,
+              "guide": "f. Uniform circular motion",
+              "level": "Extension",
+              "topic": 2
+            }
+          ]
+        },
+        {
+          "id": "2-8",
+          "chapter": "2.8",
+          "title": "Gravitation",
+          "titleZh": "萬有引力",
+          "lessons": [
+            {
+              "id": "2-8-gravitation",
+              "file": "2-8-gravitation.html",
+              "number": "2.8",
+              "title": "Gravitation",
+              "steps": 11,
+              "guide": "g. Gravitation",
+              "level": "Extension",
+              "topic": 2
+            }
+          ]
+        }
+      ],
+      "lessonCount": 14
+    },
+    {
+      "id": "wave-motion",
+      "topic": 3,
+      "title": "Wave Motion",
+      "titleZh": "波動",
+      "icon": "🌊",
+      "about": "Waves, light (reflection, refraction, lenses, interference) and sound. Lesson numbers follow your Wave notes chapters. Extension items from the C&A Guide are labelled inside lessons.",
+      "groups": [
+        {
+          "id": "3-1",
+          "chapter": "3.1",
+          "title": "Nature of waves",
+          "titleZh": "波的本質",
+          "lessons": [
+            {
+              "id": "3-1a-describing-waves",
+              "file": "3-1a-describing-waves.html",
+              "number": "3.1a",
+              "title": "Describing Waves",
+              "steps": 12,
+              "guide": "a. Nature and properties of waves",
+              "level": "Core",
+              "topic": 3
+            },
+            {
+              "id": "3-1b-wave-graphs-longitudinal",
+              "file": "3-1b-wave-graphs-longitudinal.html",
+              "number": "3.1b",
+              "title": "Particle Motion, Phase and Wave Graphs",
+              "steps": 12,
+              "guide": "a. Nature and properties of waves",
+              "level": "Core",
+              "topic": 3
+            }
+          ]
+        },
+        {
+          "id": "3-2",
+          "chapter": "3.2",
+          "title": "Wave behaviour",
+          "titleZh": "波的行為",
+          "lessons": [
+            {
+              "id": "3-2-reflection-refraction-diffraction",
+              "file": "3-2-reflection-refraction-diffraction.html",
+              "number": "3.2",
+              "title": "Reflection, Refraction and Diffraction of Waves",
+              "steps": 10,
+              "guide": "a. Nature and properties of waves",
+              "level": "Core",
+              "topic": 3
+            }
+          ]
+        },
+        {
+          "id": "3-3",
+          "chapter": "3.3",
+          "title": "Interference",
+          "titleZh": "干涉",
+          "lessons": [
+            {
+              "id": "3-3-interference",
+              "file": "3-3-interference.html",
+              "number": "3.3",
+              "title": "Superposition and Interference",
+              "steps": 11,
+              "guide": "a. Nature and properties of waves",
+              "level": "Core",
+              "topic": 3
+            }
+          ]
+        },
+        {
+          "id": "3-4",
+          "chapter": "3.4",
+          "title": "Stationary waves",
+          "titleZh": "駐波",
+          "lessons": [
+            {
+              "id": "3-4-stationary-waves",
+              "file": "3-4-stationary-waves.html",
+              "number": "3.4",
+              "title": "Stationary Waves",
+              "steps": 10,
+              "guide": "a. Nature and properties of waves",
+              "level": "Core",
+              "topic": 3
+            }
+          ]
+        },
+        {
+          "id": "3-5",
+          "chapter": "3.5",
+          "title": "Reflection of light",
+          "titleZh": "光的反射",
+          "lessons": [
+            {
+              "id": "3-5-reflection-of-light",
+              "file": "3-5-reflection-of-light.html",
+              "number": "3.5",
+              "title": "Reflection of Light and Plane Mirrors",
+              "steps": 10,
+              "guide": "b. Light",
+              "level": "Core",
+              "topic": 3
+            }
+          ]
+        },
+        {
+          "id": "3-6",
+          "chapter": "3.6",
+          "title": "Refraction of light",
+          "titleZh": "光的折射",
+          "lessons": [
+            {
+              "id": "3-6a-refraction-of-light",
+              "file": "3-6a-refraction-of-light.html",
+              "number": "3.6a",
+              "title": "Refraction of Light",
+              "steps": 11,
+              "guide": "b. Light",
+              "level": "Core",
+              "topic": 3
+            },
+            {
+              "id": "3-6b-total-internal-reflection",
+              "file": "3-6b-total-internal-reflection.html",
+              "number": "3.6b",
+              "title": "Total Internal Reflection",
+              "steps": 10,
+              "guide": "b. Light",
+              "level": "Core",
+              "topic": 3
+            }
+          ]
+        },
+        {
+          "id": "3-7",
+          "chapter": "3.7",
+          "title": "Lenses",
+          "titleZh": "透鏡",
+          "lessons": [
+            {
+              "id": "3-7a-lenses-ray-diagrams",
+              "file": "3-7a-lenses-ray-diagrams.html",
+              "number": "3.7a",
+              "title": "Lenses and Ray Diagrams",
+              "steps": 11,
+              "guide": "b. Light",
+              "level": "Core",
+              "topic": 3
+            },
+            {
+              "id": "3-7b-lens-formula",
+              "file": "3-7b-lens-formula.html",
+              "number": "3.7b",
+              "title": "The Lens Formula",
+              "steps": 11,
+              "guide": "b. Light",
+              "level": "Core + Extension",
+              "topic": 3
+            }
+          ]
+        },
+        {
+          "id": "3-8",
+          "chapter": "3.8",
+          "title": "Light as a wave",
+          "titleZh": "光的波動性質",
+          "lessons": [
+            {
+              "id": "3-8a-em-spectrum-light-waves",
+              "file": "3-8a-em-spectrum-light-waves.html",
+              "number": "3.8a",
+              "title": "Light as an Electromagnetic Wave",
+              "steps": 10,
+              "guide": "b. Light",
+              "level": "Core",
+              "topic": 3
+            },
+            {
+              "id": "3-8b-double-slit",
+              "file": "3-8b-double-slit.html",
+              "number": "3.8b",
+              "title": "Young’s Double-slit Experiment",
+              "steps": 11,
+              "guide": "b. Light",
+              "level": "Core + Extension",
+              "topic": 3
+            },
+            {
+              "id": "3-8c-diffraction-grating",
+              "file": "3-8c-diffraction-grating.html",
+              "number": "3.8c",
+              "title": "The Diffraction Grating",
+              "steps": 11,
+              "guide": "b. Light",
+              "level": "Core + Extension",
+              "topic": 3
+            }
+          ]
+        },
+        {
+          "id": "3-9",
+          "chapter": "3.9",
+          "title": "Sound",
+          "titleZh": "聲音",
+          "lessons": [
+            {
+              "id": "3-9a-sound-waves",
+              "file": "3-9a-sound-waves.html",
+              "number": "3.9a",
+              "title": "Sound Waves",
+              "steps": 11,
+              "guide": "c. Sound",
+              "level": "Core",
+              "topic": 3
+            },
+            {
+              "id": "3-9b-musical-notes-noise",
+              "file": "3-9b-musical-notes-noise.html",
+              "number": "3.9b",
+              "title": "Musical Notes and Noise",
+              "steps": 10,
+              "guide": "c. Sound",
+              "level": "Core",
+              "topic": 3
+            }
+          ]
+        }
+      ],
+      "lessonCount": 15
+    }
+  ]
+}

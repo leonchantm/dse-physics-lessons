@@ -1,118 +1,277 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HKDSE Physics: interactive lessons</title><style>
-  :root{--bg:#fffaf0;--card:#fff;--ink:#111827;--muted:#374151;--blue:#1d4ed8;--blue-l:#dbeafe;--green:#166534;--green-l:#dcfce7;
-    --red:#b91c1c;--red-l:#fee2e2;--orange:#c2410c;--orange-l:#ffedd5;--purple:#6d28d9;--purple-l:#ede9fe;--yellow-l:#fef9c3;--focus:#f59e0b}
-  *{box-sizing:border-box} [hidden]{display:none!important}
-  html{font-size:20px}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Arial,"Microsoft JhengHei","PingFang TC",sans-serif;line-height:1.55}
-  a{color:var(--blue);font-weight:700}
-  header{background:var(--blue);color:#fff;padding:.6rem 1rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:space-between}
-  header h1{font-size:1.15rem;margin:0} header .zh{color:#fde68a}
-  .toggle{display:flex;align-items:center;gap:.4rem;font-size:.9rem;cursor:pointer}
-  .toggle input{width:1.3rem;height:1.3rem}
-  .progress-wrap{background:#fff;padding:.5rem 1rem;border-bottom:3px solid var(--blue-l)}
-  .progress-label{font-size:.85rem;font-weight:600;color:var(--muted);display:flex;justify-content:space-between;gap:1rem}
-  .progress{height:18px;background:#e5e7eb;border-radius:9px;overflow:hidden;margin-top:.25rem}
-  .progress>div{height:100%;background:linear-gradient(90deg,#22c55e,#16a34a);width:0;transition:width .4s}
-  main{max-width:1000px;margin:0 auto;padding:1rem}
-  .step{display:none;background:var(--card);border-radius:18px;padding:1.2rem 1.4rem;box-shadow:0 4px 14px rgba(0,0,0,.08);border:2px solid #e5e7eb}
-  .step.active{display:block;animation:fade .35s}
-  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-  .step h2{font-size:1.5rem;margin:.1rem 0 .7rem;color:var(--blue);outline:none}
-  .step h3{font-size:1.15rem;margin:1rem 0 .4rem}
-  .tag{display:inline-block;font-size:.75rem;font-weight:700;padding:.15rem .6rem;border-radius:999px;background:var(--blue-l);color:var(--blue);margin-bottom:.3rem}
-  .tag.quiz{background:var(--orange-l);color:var(--orange)} .tag.sim{background:var(--purple-l);color:var(--purple)}.tag.ext{background:#fef3c7;color:#92400e}
-  p{margin:.4rem 0} ul.simple{padding-left:1.3rem;margin:.3rem 0} ul.simple li{margin:.25rem 0}
-  .zh{color:#7c2d12;font-weight:500} body.no-zh .zh{display:none}
-  .box{border-radius:12px;padding:.7rem 1rem;margin:.7rem 0;border-left:8px solid}
-  .box.key{background:var(--blue-l);border-color:var(--blue)} .box.eg{background:var(--green-l);border-color:var(--green)}
-  .box.warn{background:var(--yellow-l);border-color:#ca8a04} .box.formula{background:var(--purple-l);border-color:var(--purple);font-size:1.1rem}
-  .box.danger{background:var(--red-l);border-color:var(--red)}
-  .box-title{font-weight:800;display:block;margin-bottom:.2rem}
-  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:start}
-  .visual{background:#f8fafc;border:2px dashed #cbd5e1;border-radius:12px;padding:.5rem;text-align:center}
-  .visual svg{width:100%;height:auto;max-height:360px}
-  svg.fig{width:100%;max-width:460px;height:auto;display:block;margin:.4rem auto;border:2px solid #cbd5e1;border-radius:10px}
-  svg.tape{max-width:100%;border:none}
-  svg.mini{width:100%;max-width:170px;height:auto;display:block;margin:0 auto}
-  .caption{font-size:.85rem;color:var(--muted)}
-  table.t{border-collapse:collapse;width:100%;margin:.5rem 0;font-size:.95rem}
-  table.t th,table.t td{border:2px solid #cbd5e1;padding:.4rem .6rem;text-align:left;vertical-align:top}
-  table.t th{background:var(--blue-l)}
-  table.shapes td,table.shapes th{text-align:center;vertical-align:middle;padding:.3rem}
-  .table-scroll{overflow-x:auto}
-  .eq{font-family:"Cambria Math","Times New Roman",serif;font-size:1.2em;white-space:nowrap}
-  .worked ol{margin:.3rem 0;padding-left:1.4rem} .worked li{margin:.35rem 0}
-  button,.btn{font:inherit;font-size:1rem;font-weight:700;border-radius:12px;border:3px solid transparent;padding:.55rem 1.1rem;cursor:pointer;min-height:48px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
-  button:focus-visible,input:focus-visible,select:focus-visible,h2:focus-visible,a:focus-visible,summary:focus-visible,.rline:focus-visible{outline:4px solid var(--focus);outline-offset:3px}
-  .opt:focus-within{outline:4px solid var(--focus);outline-offset:3px}
-  .btn-primary{background:var(--blue);color:#fff} .btn-primary:hover{background:#1e40af}
-  .btn-secondary{background:#fff;color:var(--blue);border-color:var(--blue)}
-  .btn-hint{background:#fef3c7;color:#78350f;border-color:#f59e0b}
-  .btn-check{background:var(--green);color:#fff} .btn-retry{background:#fff;color:var(--red);border-color:var(--red)}
-  button:disabled{opacity:.45;cursor:not-allowed}
-  nav.controls{max-width:1000px;margin:0 auto;padding:0 1rem 1rem;display:flex;justify-content:space-between;gap:1rem}
-  nav.controls button{flex:1;max-width:260px;font-size:1.1rem}
-  .kbd-tip{text-align:center;font-size:.8rem;color:var(--muted);padding-bottom:1rem}
-  .q{border:3px solid #e5e7eb;border-radius:14px;padding:.8rem 1rem;margin:1rem 0;background:#fff}
-  .q.correct{border-color:#22c55e;background:#f0fdf4}
-  .q-title{font-weight:700;margin-bottom:.5rem}
-  .q-num{display:inline-block;background:var(--orange);color:#fff;border-radius:8px;padding:0 .5rem;margin-right:.4rem;font-size:.9rem}
-  .opts{display:grid;gap:.45rem} .opts.figopts{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
-  .opt{display:flex;align-items:center;gap:.6rem;border:2px solid #cbd5e1;border-radius:10px;padding:.5rem .7rem;cursor:pointer;background:#fff}
-  .opt:hover{background:#f1f5f9} .opt input{width:1.3rem;height:1.3rem;flex:none}
-  .opt.right{border-color:#16a34a;background:var(--green-l)} .opt.wrong{border-color:#dc2626;background:var(--red-l)}
-  .num-row{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
-  .num-row input{font:inherit;font-size:1.1rem;width:9rem;padding:.4rem .6rem;border:3px solid #94a3b8;border-radius:10px}
-  .unit{font-weight:700}
-  .q-actions{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.7rem}
-  .feedback{margin-top:.6rem;font-weight:700;border-radius:10px}
-  .feedback.ok{background:var(--green-l);color:var(--green);padding:.5rem .8rem} .feedback.bad{background:var(--red-l);color:var(--red);padding:.5rem .8rem}
-  .hint{background:#fffbeb;border:2px solid #fcd34d;border-radius:10px;padding:.45rem .8rem;margin:.35rem 0} .hint b{color:#92400e}
-  .score-pill{background:#fff;color:var(--blue);border-radius:999px;padding:.2rem .8rem;font-weight:800;font-size:.9rem}
-  .arrow-task{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
-  .arrow-task svg{width:100%;max-width:330px;height:auto;border:2px solid #cbd5e1;border-radius:10px;background:#fff;cursor:crosshair;touch-action:manipulation}
-  .arrow-btns{display:grid;grid-template-columns:repeat(3,auto);gap:.35rem}
-  .arrow-btns button{padding:.3rem .6rem;min-width:48px}
-  .arrow-status{font-weight:700;margin-top:.4rem}
-  .reveal .rline{background:#fff;border:2px solid #c4b5fd;border-radius:10px;padding:.5rem .8rem;margin:.45rem 0}
-  .reveal .rline b.n{display:inline-block;background:var(--purple);color:#fff;border-radius:6px;padding:0 .45rem;margin-right:.4rem}
-  .sim-modes{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.6rem}
-  .sim-panel{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
-  .slider{background:#f8fafc;border:2px solid #cbd5e1;border-radius:12px;padding:.5rem .8rem}
-  .slider label{font-weight:700;display:flex;justify-content:space-between;gap:.5rem}
-  .slider input[type=range]{width:100%;height:2rem;accent-color:var(--blue)}
-  .sim-buttons{display:flex;flex-wrap:wrap;gap:.5rem;margin:.7rem 0;align-items:center}
-  .sim-buttons select{font:inherit;font-size:1rem;padding:.45rem;border-radius:10px;border:3px solid #94a3b8;min-height:48px}
-  canvas{width:100%;display:block;background:#fff;border:2px solid #cbd5e1;border-radius:12px}
-  .readout{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin:.7rem 0}
-  .ro{background:var(--blue-l);border-radius:10px;padding:.4rem .6rem;text-align:center}
-  .ro .lab{font-size:.75rem;font-weight:700;color:var(--muted)} .ro .val{font-size:1.2rem;font-weight:800;font-variant-numeric:tabular-nums}
-  .ro.v{background:#dcfce7} .ro.d{background:#ffedd5} .ro.a{background:var(--purple-l)} .ro.av{background:#fef9c3}
-  .graphs3{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}
-  .graphs3 h3{font-size:.95rem;margin:.2rem 0}
-  .sim-msg{font-weight:700;color:var(--purple);min-height:1.5em}
-  .panel{background:var(--purple-l);border-radius:10px;padding:.5rem .8rem;font-size:.95rem;margin:.6rem 0}
-  .panel.measure{background:#fef9c3}
-  .panel .warnline{color:var(--red);font-weight:800}
-  .stars{font-size:2.2rem;letter-spacing:.3rem}
-  .welcome-hero{text-align:center} .welcome-hero .big{font-size:3.2rem;line-height:1}
-  .lesson-link{display:flex;flex-wrap:wrap;align-items:center;gap:.8rem;background:#f0f9ff;border:3px solid #7dd3fc;border-radius:14px;padding:.7rem 1rem;margin:.8rem 0}
-  details.teacher{max-width:1000px;margin:0 auto 1.5rem;padding:0 1rem}
-  details.teacher>summary{font-weight:800;cursor:pointer;background:#fff;border:3px solid #94a3b8;border-radius:12px;padding:.6rem 1rem;min-height:48px}
-  details.teacher .tn-body{background:#fff;border:2px solid #cbd5e1;border-radius:12px;padding:.8rem 1rem;margin-top:.5rem;font-size:.85rem}
-  .home-link{color:#fff;font-size:.9rem;text-decoration:underline}
-  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-  @media (max-width:760px){html{font-size:18px}.grid2,.sim-panel,.graphs3{grid-template-columns:1fr}.readout{grid-template-columns:repeat(2,1fr)}main{padding:.5rem}.step{padding:1rem}}
-  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-</style></head>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HKDSE Physics: interactive lessons</title>
+<style>
+:root{
+  --bg:#f7f8fa; --card:#fff; --ink:#21242c; --muted:#5b6170; --line:#e3e5ea;
+  --blue:#1865f2; --blue-d:#0a2a66; --blue-l:#eef3fe; --blue-mid:#d6e4ff;
+  --green:#186d32; --yellow:#ffbe26; --orange:#e3780c; --purple:#7f3f98;
+  --sidebar-w:280px; --top-h:56px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{font-size:16px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Arial,"Microsoft JhengHei","PingFang TC",sans-serif;line-height:1.5}
+a{color:var(--blue);text-decoration:none;font-weight:600}
+a:hover{text-decoration:underline}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+
+/* Top bar */
+.topbar{position:sticky;top:0;z-index:20;height:var(--top-h);background:var(--blue-d);color:#fff;display:flex;align-items:center;gap:1rem;padding:0 1rem}
+.topbar .brand{font-weight:800;font-size:1.05rem;white-space:nowrap}
+.topbar .brand span{color:#fde68a;font-weight:600;font-size:.85rem;margin-left:.4rem}
+.topbar .spacer{flex:1}
+.topbar .toggle{display:flex;align-items:center;gap:.4rem;font-size:.9rem;cursor:pointer;user-select:none}
+.topbar .toggle input{width:1.15rem;height:1.15rem}
+.menu-btn{display:none;background:transparent;border:2px solid #fff;color:#fff;border-radius:8px;padding:.35rem .7rem;font:inherit;font-weight:700;cursor:pointer}
+
+/* Layout */
+.layout{display:grid;grid-template-columns:var(--sidebar-w) 1fr;min-height:calc(100vh - var(--top-h))}
+.sidebar{background:var(--card);border-right:1px solid var(--line);padding:1.25rem 0 2rem;position:sticky;top:var(--top-h);height:calc(100vh - var(--top-h));overflow:auto}
+.side-head{padding:0 1.1rem 1rem;border-bottom:1px solid var(--line);margin-bottom:.4rem}
+.side-head .course-icon{width:44px;height:44px;border-radius:50%;background:#12a377;color:#fff;display:grid;place-items:center;font-size:1.4rem;margin-bottom:.55rem}
+.side-head h1{font-size:1.05rem;margin:0 0 .15rem;line-height:1.25}
+.side-head .meta{font-size:.72rem;letter-spacing:.06em;color:var(--muted);font-weight:700;text-transform:uppercase}
+.unit-nav{list-style:none;margin:0;padding:.4rem 0}
+.unit-nav button{width:100%;text-align:left;background:transparent;border:0;border-left:4px solid transparent;padding:.7rem 1.1rem .7rem .9rem;cursor:pointer;font:inherit;color:var(--ink);display:grid;gap:.1rem}
+.unit-nav button:hover{background:#f4f6fb}
+.unit-nav button.active{background:var(--blue-l);border-left-color:var(--blue);color:var(--blue)}
+.unit-nav .unum{font-size:.75rem;color:var(--muted);font-weight:700}
+.unit-nav button.active .unum{color:var(--blue)}
+.unit-nav .utitle{font-size:.95rem;font-weight:700}
+.zh{color:#7c2d12;font-weight:500} body.no-zh .zh{display:none}
+
+.main{padding:1.4rem 1.6rem 3rem;max-width:920px}
+.crumbs{font-size:.85rem;margin:0 0 .7rem;color:var(--muted)}
+.crumbs a{font-weight:600}
+.unit-title{font-size:1.85rem;margin:0 0 .25rem;line-height:1.2}
+.unit-sub{color:var(--muted);font-size:.95rem;margin:0 0 1rem}
+
+.legend{display:flex;flex-wrap:wrap;gap:.7rem 1.1rem;align-items:center;font-size:.8rem;color:var(--muted);margin-bottom:1rem}
+.legend .item{display:inline-flex;align-items:center;gap:.35rem}
+.dot{width:14px;height:14px;border-radius:3px;border:2px solid #a1a6b4;background:#fff;display:inline-block}
+.dot.done{background:var(--purple);border-color:var(--purple)}
+.dot.started{background:var(--yellow);border-color:var(--yellow)}
+.dot.ext{border-color:var(--orange);background:#fff7ed}
+.prog-row{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:1.2rem}
+.prog-row .tick{width:18px;height:18px;border-radius:4px;border:2px solid #c5c9d3;background:#fff}
+.prog-row .tick.started{background:var(--yellow);border-color:#e0a800}
+.prog-row .tick.done{background:var(--purple);border-color:var(--purple)}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.25rem;margin-bottom:1.1rem;box-shadow:0 1px 2px rgba(33,36,44,.04)}
+.card h2{font-size:1.05rem;margin:0 0 .4rem}
+.card p{margin:.35rem 0;color:var(--muted);font-size:.95rem}
+.card .about-body{color:var(--ink)}
+
+.section{margin:1.6rem 0 0}
+.section h3{font-size:1.25rem;margin:0 0 .25rem}
+.section .sec-desc{color:var(--muted);font-size:.9rem;margin:0 0 .8rem}
+
+.learn-grid{display:grid;grid-template-columns:1.2fr .9fr;gap:1rem;align-items:start}
+.learn-list{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.learn-list a{display:flex;align-items:flex-start;gap:.7rem;padding:.65rem .55rem;border-radius:10px;color:var(--ink);font-weight:600}
+.learn-list a:hover{background:var(--blue-l);text-decoration:none}
+.learn-list .ico{flex:none;width:28px;height:28px;border-radius:6px;border:2px solid #c5c9d3;display:grid;place-items:center;font-size:.85rem;background:#fff;color:var(--blue)}
+.learn-list a.started .ico{background:var(--yellow);border-color:#e0a800;color:#5b4100}
+.learn-list a.done .ico{background:var(--purple);border-color:var(--purple);color:#fff}
+.learn-list .meta{font-size:.78rem;color:var(--muted);font-weight:500;margin-top:.1rem}
+.tag{display:inline-block;font-size:.7rem;font-weight:700;padding:.1rem .45rem;border-radius:999px;background:var(--blue-l);color:var(--blue);margin-left:.3rem}
+.tag.ext{background:#fff7ed;color:var(--orange)}
+
+.practice{border:1px solid var(--line);border-radius:12px;padding:1rem;background:#fafbfc}
+.practice .lab{font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:800;margin-bottom:.35rem}
+.practice h4{margin:0 0 .35rem;font-size:1rem}
+.practice p{margin:0 0 .8rem;font-size:.9rem;color:var(--muted)}
+.practice .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--blue);color:#fff;border:0;border-radius:999px;padding:.55rem 1.2rem;font:inherit;font-weight:700;cursor:pointer;min-height:42px;text-decoration:none}
+.practice .btn:hover{background:#0f4cc9;text-decoration:none}
+.practice .status{float:right;font-size:.75rem;color:var(--muted);font-weight:700}
+
+.loading,.error{padding:2rem;color:var(--muted)}
+.error{color:#b91c1c}
+
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr}
+  .sidebar{position:fixed;left:0;top:var(--top-h);width:min(320px,86vw);z-index:15;transform:translateX(-105%);transition:transform .2s;box-shadow:4px 0 20px rgba(0,0,0,.15)}
+  body.nav-open .sidebar{transform:none}
+  .menu-btn{display:inline-block}
+  .learn-grid{grid-template-columns:1fr}
+  .main{padding:1rem}
+  .unit-title{font-size:1.5rem}
+  .backdrop{display:none;position:fixed;inset:var(--top-h) 0 0 0;background:rgba(0,0,0,.35);z-index:14}
+  body.nav-open .backdrop{display:block}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
 <body>
-<header><h1>📚 HKDSE Physics — interactive lessons</h1>
-<label class="toggle"><input type="checkbox" id="zhToggle" checked> Show 中文</label></header>
-<main id="main">
-<div class="box key"><span class="box-title">Interactive lessons, in syllabus order</span>Lesson numbers follow the chapters of the class notes (e.g. Lesson 1.3 = Heat notes Chapter 3; Lesson 2.6 = Mechanics notes Chapter 6; Lesson 3.6a = Wave notes Chapter 6). Work through each topic from top to bottom. Each lesson has explanations, a simulation and practice questions with hints. The tags show the C&amp;A Guide sub-topic; <b>Extension</b> means the content is underlined in the guide (extension part of the Compulsory Part); <b>Core + Extension</b> means the lesson is mainly core but includes an underlined item, which is labelled inside the lesson.</div>
-<section class="step active" style="margin-bottom:1rem"><h2>🔥 Topic I Heat and Gases <span class="zh">(熱和氣體)</span></h2><ul class="opts" style="list-style:none;padding:0;margin:0"><li class="opt" style="display:block"><a href="1-1-temperature-heat-internal-energy.html">Lesson 1.1: Temperature, Heat and Internal Energy</a> <span class="caption">— 11 steps</span><br><span class="tag">a. Temperature, heat and internal energy · Core</span></li><li class="opt" style="display:block"><a href="1-2-heat-transfer-processes.html">Lesson 1.2: Heat Transfer Processes</a> <span class="caption">— 10 steps</span><br><span class="tag">b. Transfer processes · Core</span></li><li class="opt" style="display:block"><a href="1-3-specific-heat-capacity.html">Lesson 1.3: Heat Capacity and Specific Heat Capacity</a> <span class="caption">— 13 steps</span><br><span class="tag">a. Temperature, heat and internal energy · Core</span></li><li class="opt" style="display:block"><a href="1-4a-latent-heat.html">Lesson 1.4a: Change of State and Latent Heat</a> <span class="caption">— 14 steps</span><br><span class="tag">c. Change of state · Core</span></li><li class="opt" style="display:block"><a href="1-4b-evaporation.html">Lesson 1.4b: Evaporation</a> <span class="caption">— 11 steps</span><br><span class="tag">c. Change of state · Core</span></li><li class="opt" style="display:block"><a href="1-5a-gas-laws.html">Lesson 1.5a: Gas Pressure and the Gas Laws</a> <span class="caption">— 13 steps</span><br><span class="tag quiz">d. Gases · Extension</span></li><li class="opt" style="display:block"><a href="1-5b-kinetic-theory.html">Lesson 1.5b: Kinetic Theory of Gases</a> <span class="caption">— 13 steps</span><br><span class="tag quiz">d. Gases · Extension</span></li></ul></section><section class="step active" style="margin-bottom:1rem"><h2>⚙️ Topic II Force and Motion <span class="zh">(力和運動)</span></h2><ul class="opts" style="list-style:none;padding:0;margin:0"><li class="opt" style="display:block"><a href="2-1a-describing-motion.html">Lesson 2.1a: Describing Motion</a> <span class="caption">— 15 steps</span><br><span class="tag">a. Position and movement · Core</span></li><li class="opt" style="display:block"><a href="2-1b-acceleration-free-fall.html">Lesson 2.1b: Acceleration and Free Fall</a> <span class="caption">— 15 steps</span><br><span class="tag">a. Position and movement · Core</span></li><li class="opt" style="display:block"><a href="2-2a-inertia-first-law-friction.html">Lesson 2.2a: Inertia, Newton&#x27;s First Law and Friction</a> <span class="caption">— 10 steps</span><br><span class="tag">b. Force and motion · Core</span></li><li class="opt" style="display:block"><a href="2-2b-adding-resolving-forces.html">Lesson 2.2b: Adding and Resolving Forces</a> <span class="caption">— 10 steps</span><br><span class="tag">b. Force and motion · Core</span></li><li class="opt" style="display:block"><a href="2-2c-second-law-mass-weight.html">Lesson 2.2c: Newton&#x27;s Second Law, Mass and Weight</a> <span class="caption">— 14 steps</span><br><span class="tag">b. Force and motion · Core</span></li><li class="opt" style="display:block"><a href="2-2d-third-law.html">Lesson 2.2d: Newton&#x27;s Third Law</a> <span class="caption">— 9 steps</span><br><span class="tag">b. Force and motion · Core</span></li><li class="opt" style="display:block"><a href="2-3-moments-equilibrium.html">Lesson 2.3: Moments, Equilibrium and Centre of Gravity</a> <span class="caption">— 11 steps</span><br><span class="tag">b. Force and motion · Core</span></li><li class="opt" style="display:block"><a href="2-4a-work-pe-ke.html">Lesson 2.4a: Work, Potential Energy and Kinetic Energy</a> <span class="caption">— 11 steps</span><br><span class="tag">d. Work, energy and power · Core</span></li><li class="opt" style="display:block"><a href="2-4b-conservation-of-energy-power.html">Lesson 2.4b: Conservation of Energy and Power</a> <span class="caption">— 11 steps</span><br><span class="tag">d. Work, energy and power · Core</span></li><li class="opt" style="display:block"><a href="2-5a-momentum-impulse.html">Lesson 2.5a: Momentum, Impulse and Force</a> <span class="caption">— 11 steps</span><br><span class="tag">e. Momentum · Core</span></li><li class="opt" style="display:block"><a href="2-5b-conservation-of-momentum.html">Lesson 2.5b: Conservation of Momentum and Collisions</a> <span class="caption">— 11 steps</span><br><span class="tag">e. Momentum · Core</span></li><li class="opt" style="display:block"><a href="2-6-projectile-motion.html">Lesson 2.6: Projectile Motion</a> <span class="caption">— 10 steps</span><br><span class="tag quiz">c. Projectile motion · Extension</span></li><li class="opt" style="display:block"><a href="2-7-uniform-circular-motion.html">Lesson 2.7: Uniform Circular Motion</a> <span class="caption">— 11 steps</span><br><span class="tag quiz">f. Uniform circular motion · Extension</span></li><li class="opt" style="display:block"><a href="2-8-gravitation.html">Lesson 2.8: Gravitation</a> <span class="caption">— 11 steps</span><br><span class="tag quiz">g. Gravitation · Extension</span></li></ul></section><section class="step active" style="margin-bottom:1rem"><h2>🌊 Topic III Wave Motion <span class="zh">(波動)</span></h2><ul class="opts" style="list-style:none;padding:0;margin:0"><li class="opt" style="display:block"><a href="3-1a-describing-waves.html">Lesson 3.1a: Describing Waves</a> <span class="caption">— 12 steps</span><br><span class="tag">a. Nature and properties of waves · Core</span></li><li class="opt" style="display:block"><a href="3-1b-wave-graphs-longitudinal.html">Lesson 3.1b: Particle Motion, Phase and Wave Graphs</a> <span class="caption">— 12 steps</span><br><span class="tag">a. Nature and properties of waves · Core</span></li><li class="opt" style="display:block"><a href="3-2-reflection-refraction-diffraction.html">Lesson 3.2: Reflection, Refraction and Diffraction of Waves</a> <span class="caption">— 10 steps</span><br><span class="tag">a. Nature and properties of waves · Core</span></li><li class="opt" style="display:block"><a href="3-3-interference.html">Lesson 3.3: Superposition and Interference</a> <span class="caption">— 11 steps</span><br><span class="tag">a. Nature and properties of waves · Core</span></li><li class="opt" style="display:block"><a href="3-4-stationary-waves.html">Lesson 3.4: Stationary Waves</a> <span class="caption">— 10 steps</span><br><span class="tag">a. Nature and properties of waves · Core</span></li><li class="opt" style="display:block"><a href="3-5-reflection-of-light.html">Lesson 3.5: Reflection of Light and Plane Mirrors</a> <span class="caption">— 10 steps</span><br><span class="tag">b. Light · Core</span></li><li class="opt" style="display:block"><a href="3-6a-refraction-of-light.html">Lesson 3.6a: Refraction of Light</a> <span class="caption">— 11 steps</span><br><span class="tag">b. Light · Core</span></li><li class="opt" style="display:block"><a href="3-6b-total-internal-reflection.html">Lesson 3.6b: Total Internal Reflection</a> <span class="caption">— 10 steps</span><br><span class="tag">b. Light · Core</span></li><li class="opt" style="display:block"><a href="3-7a-lenses-ray-diagrams.html">Lesson 3.7a: Lenses and Ray Diagrams</a> <span class="caption">— 11 steps</span><br><span class="tag">b. Light · Core</span></li><li class="opt" style="display:block"><a href="3-7b-lens-formula.html">Lesson 3.7b: The Lens Formula</a> <span class="caption">— 11 steps</span><br><span class="tag quiz">b. Light · Core + Extension</span></li><li class="opt" style="display:block"><a href="3-8a-em-spectrum-light-waves.html">Lesson 3.8a: Light as an Electromagnetic Wave</a> <span class="caption">— 10 steps</span><br><span class="tag">b. Light · Core</span></li><li class="opt" style="display:block"><a href="3-8b-double-slit.html">Lesson 3.8b: Young’s Double-slit Experiment</a> <span class="caption">— 11 steps</span><br><span class="tag quiz">b. Light · Core + Extension</span></li><li class="opt" style="display:block"><a href="3-8c-diffraction-grating.html">Lesson 3.8c: The Diffraction Grating</a> <span class="caption">— 11 steps</span><br><span class="tag quiz">b. Light · Core + Extension</span></li><li class="opt" style="display:block"><a href="3-9a-sound-waves.html">Lesson 3.9a: Sound Waves</a> <span class="caption">— 11 steps</span><br><span class="tag">c. Sound · Core</span></li><li class="opt" style="display:block"><a href="3-9b-musical-notes-noise.html">Lesson 3.9b: Musical Notes and Noise</a> <span class="caption">— 10 steps</span><br><span class="tag">c. Sound · Core</span></li></ul></section>
-</main>
-<script>document.getElementById("zhToggle").addEventListener("change",function(){document.body.classList.toggle("no-zh",!this.checked);});</script>
-</body></html>
+<header class="topbar">
+  <button type="button" class="menu-btn" id="menuBtn" aria-label="Open unit list">Units</button>
+  <div class="brand">HKDSE Physics <span class="zh">香港中學文憑物理</span></div>
+  <div class="spacer"></div>
+  <label class="toggle"><input type="checkbox" id="zhToggle" checked> Show 中文</label>
+</header>
+<div class="backdrop" id="backdrop" hidden></div>
+<div class="layout">
+  <aside class="sidebar" id="sidebar" aria-label="Course units">
+    <div class="side-head">
+      <div class="course-icon" aria-hidden="true">Φ</div>
+      <h1>HKDSE Physics</h1>
+      <div class="meta" id="unitCount">Loading…</div>
+    </div>
+    <ul class="unit-nav" id="unitNav"></ul>
+  </aside>
+  <main class="main" id="main">
+    <p class="loading" id="loading">Loading lessons…</p>
+  </main>
+</div>
+<script>
+(function(){
+  var STORE_KEY = 'hkdse-physics-progress-v1';
+  var data = null;
+  var activeId = null;
+
+  function loadProgress(){
+    try { return JSON.parse(localStorage.getItem(STORE_KEY) || '{}'); }
+    catch(e){ return {}; }
+  }
+  function saveProgress(p){ localStorage.setItem(STORE_KEY, JSON.stringify(p)); }
+  function statusOf(id){
+    var p = loadProgress()[id];
+    return p || 'new';
+  }
+  function markStarted(id){
+    var all = loadProgress();
+    if (all[id] !== 'done') { all[id] = 'started'; saveProgress(all); }
+  }
+
+  document.getElementById('zhToggle').addEventListener('change', function(){
+    document.body.classList.toggle('no-zh', !this.checked);
+  });
+
+  var menuBtn = document.getElementById('menuBtn');
+  var backdrop = document.getElementById('backdrop');
+  function closeNav(){ document.body.classList.remove('nav-open'); backdrop.hidden = true; }
+  function openNav(){ document.body.classList.add('nav-open'); backdrop.hidden = false; }
+  menuBtn.addEventListener('click', function(){
+    if (document.body.classList.contains('nav-open')) closeNav(); else openNav();
+  });
+  backdrop.addEventListener('click', closeNav);
+
+  function esc(s){
+    return String(s).replace(/[&<>"']/g, function(c){
+      return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c];
+    });
+  }
+
+  function renderNav(){
+    var nav = document.getElementById('unitNav');
+    document.getElementById('unitCount').textContent = data.units.length + ' UNITS';
+    nav.innerHTML = data.units.map(function(u, i){
+      var active = u.id === activeId ? ' active' : '';
+      return '<li><button type="button" class="'+active.trim()+'" data-unit="'+esc(u.id)+'" aria-current="'+(u.id===activeId?'page':'false')+'">'
+        + '<span class="unum">Unit '+(i+1)+'</span>'
+        + '<span class="utitle">'+esc(u.title)+' <span class="zh">('+esc(u.titleZh)+')</span></span>'
+        + '</button></li>';
+    }).join('');
+    nav.querySelectorAll('button').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        activeId = btn.getAttribute('data-unit');
+        history.replaceState(null, '', '#'+activeId);
+        renderNav();
+        renderMain();
+        closeNav();
+        window.scrollTo(0,0);
+      });
+    });
+  }
+
+  function levelClass(level){
+    return /Extension/i.test(level) ? 'ext' : '';
+  }
+
+  function renderMain(){
+    var u = data.units.find(function(x){ return x.id === activeId; }) || data.units[0];
+    activeId = u.id;
+    var ui = data.units.indexOf(u) + 1;
+    var lessonsFlat = [];
+    u.groups.forEach(function(g){ g.lessons.forEach(function(L){ lessonsFlat.push(L); }); });
+
+    var ticks = lessonsFlat.map(function(L){
+      var st = statusOf(L.id);
+      return '<span class="tick '+esc(st==='done'?'done':st==='started'?'started':'')+'" title="'+esc(L.number+' '+L.title)+'"></span>';
+    }).join('');
+
+    var groupsHtml = u.groups.map(function(g){
+      var first = g.lessons[0];
+      var list = g.lessons.map(function(L){
+        var st = statusOf(L.id);
+        var cls = st === 'done' ? 'done' : st === 'started' ? 'started' : '';
+        var icon = st === 'done' ? '✓' : '▶';
+        var lvl = levelClass(L.level);
+        return '<li><a class="'+cls+'" href="'+esc(L.file)+'" data-id="'+esc(L.id)+'">'
+          + '<span class="ico" aria-hidden="true">'+icon+'</span>'
+          + '<span><span>Lesson '+esc(L.number)+': '+esc(L.title)+'</span>'
+          + (lvl ? ' <span class="tag ext">'+esc(L.level)+'</span>' : '')
+          + '<div class="meta">'+L.steps+' steps · '+esc(L.guide)+'</div></span></a></li>';
+      }).join('');
+      return '<section class="section">'
+        + '<h3>'+esc(g.title)+' <span class="zh">('+esc(g.titleZh)+')</span></h3>'
+        + '<p class="sec-desc">Chapter '+esc(g.chapter)+' of the class notes</p>'
+        + '<div class="learn-grid">'
+        + '<div><div class="lab" style="font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:800;margin-bottom:.35rem">Learn</div>'
+        + '<ul class="learn-list">'+list+'</ul></div>'
+        + '<aside class="practice">'
+        + '<span class="status">'+(statusOf(first.id)==='new'?'Not started':statusOf(first.id)==='started'?'In progress':'Done')+'</span>'
+        + '<div class="lab">Practice</div>'
+        + '<h4>Start: Lesson '+esc(first.number)+'</h4>'
+        + '<p>Open the first lesson in this section. Each lesson has a simulation and questions with hints.</p>'
+        + '<a class="btn" href="'+esc(first.file)+'" data-id="'+esc(first.id)+'">Start</a>'
+        + '</aside></div></section>';
+    }).join('');
+
+    document.getElementById('main').innerHTML =
+      '<nav class="crumbs"><a href="#">HKDSE Physics</a> › Unit '+ui+'</nav>'
+      + '<h2 class="unit-title">Unit '+ui+': '+esc(u.title)+' <span class="zh">('+esc(u.titleZh)+')</span></h2>'
+      + '<p class="unit-sub">'+u.lessonCount+' lessons</p>'
+      + '<div class="legend">'
+      + '<span class="item"><span class="dot"></span> Not started</span>'
+      + '<span class="item"><span class="dot started"></span> In progress</span>'
+      + '<span class="item"><span class="dot done"></span> Done</span>'
+      + '<span class="item"><span class="dot ext"></span> Has Extension</span>'
+      + '</div>'
+      + '<div class="prog-row" aria-label="Lesson progress">'+ticks+'</div>'
+      + '<div class="card"><h2>About this unit</h2><p class="about-body">'+esc(u.about)+'</p>'
+      + '<p>Lesson numbers follow your class notes. <b>Extension</b> means content underlined in the C&amp;A Guide.</p></div>'
+      + groupsHtml;
+
+    document.querySelectorAll('a[data-id]').forEach(function(a){
+      a.addEventListener('click', function(){ markStarted(a.getAttribute('data-id')); });
+    });
+  }
+
+  // Allow lessons to mark done via ?done=id or localStorage from lesson pages later
+  window.HKDSEProgress = {
+    markDone: function(id){ var all=loadProgress(); all[id]='done'; saveProgress(all); },
+    markStarted: markStarted
+  };
+
+  fetch('lessons.json', {cache:'no-store'})
+    .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function(j){
+      data = j;
+      var hash = (location.hash || '').replace(/^#/, '');
+      activeId = data.units.some(function(u){ return u.id === hash; }) ? hash : data.units[0].id;
+      document.getElementById('loading') && document.getElementById('loading').remove();
+      renderNav();
+      renderMain();
+    })
+    .catch(function(err){
+      document.getElementById('main').innerHTML = '<p class="error">Could not load lessons.json ('+esc(err.message)+').</p>';
+    });
+})();
+</script>
+</body>
+</html>

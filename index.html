@@ -7,7 +7,7 @@
 <style>
 :root{
   --bg:#f7f8fa; --card:#fff; --ink:#21242c; --muted:#5b6170; --line:#e3e5ea;
-  --blue:#1865f2; --blue-d:#0a2a66; --blue-l:#eef3fe; --blue-mid:#d6e4ff;
+  --blue:#1865f2; --blue-d:#0a2a66; --blue-l:#eef3fe;
   --green:#186d32; --yellow:#ffbe26; --orange:#e3780c; --purple:#7f3f98;
   --sidebar-w:280px; --top-h:56px;
 }
@@ -19,7 +19,6 @@ a{color:var(--blue);text-decoration:none;font-weight:600}
 a:hover{text-decoration:underline}
 button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
 
-/* Top bar */
 .topbar{position:sticky;top:0;z-index:20;height:var(--top-h);background:var(--blue-d);color:#fff;display:flex;align-items:center;gap:1rem;padding:0 1rem}
 .topbar .brand{font-weight:800;font-size:1.05rem;white-space:nowrap}
 .topbar .brand span{color:#fde68a;font-weight:600;font-size:.85rem;margin-left:.4rem}
@@ -28,7 +27,6 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var
 .topbar .toggle input{width:1.15rem;height:1.15rem}
 .menu-btn{display:none;background:transparent;border:2px solid #fff;color:#fff;border-radius:8px;padding:.35rem .7rem;font:inherit;font-weight:700;cursor:pointer}
 
-/* Layout */
 .layout{display:grid;grid-template-columns:var(--sidebar-w) 1fr;min-height:calc(100vh - var(--top-h))}
 .sidebar{background:var(--card);border-right:1px solid var(--line);padding:1.25rem 0 2rem;position:sticky;top:var(--top-h);height:calc(100vh - var(--top-h));overflow:auto}
 .side-head{padding:0 1.1rem 1rem;border-bottom:1px solid var(--line);margin-bottom:.4rem}
@@ -44,9 +42,8 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var
 .unit-nav .utitle{font-size:.95rem;font-weight:700}
 .zh{color:#7c2d12;font-weight:500} body.no-zh .zh{display:none}
 
-.main{padding:1.4rem 1.6rem 3rem;max-width:920px}
+.main{padding:1.4rem 1.6rem 3rem;max-width:960px}
 .crumbs{font-size:.85rem;margin:0 0 .7rem;color:var(--muted)}
-.crumbs a{font-weight:600}
 .unit-title{font-size:1.85rem;margin:0 0 .25rem;line-height:1.2}
 .unit-sub{color:var(--muted);font-size:.95rem;margin:0 0 1rem}
 
@@ -62,14 +59,15 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var
 .prog-row .tick.done{background:var(--purple);border-color:var(--purple)}
 
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.25rem;margin-bottom:1.1rem;box-shadow:0 1px 2px rgba(33,36,44,.04)}
-.card h2{font-size:1.05rem;margin:0 0 .4rem}
-.card p{margin:.35rem 0;color:var(--muted);font-size:.95rem}
+.card h2{font-size:1.15rem;margin:0 0 .55rem}
+.card h3{font-size:1rem;margin:0 0 .5rem}
+.card p{margin:.4rem 0;color:var(--muted);font-size:.95rem}
 .card .about-body{color:var(--ink)}
+.card .src{font-size:.8rem;color:var(--muted)}
 
 .section{margin:1.6rem 0 0}
 .section h3{font-size:1.25rem;margin:0 0 .25rem}
 .section .sec-desc{color:var(--muted);font-size:.9rem;margin:0 0 .8rem}
-
 .learn-grid{display:grid;grid-template-columns:1.2fr .9fr;gap:1rem;align-items:start}
 .learn-list{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
 .learn-list a{display:flex;align-items:flex-start;gap:.7rem;padding:.65rem .55rem;border-radius:10px;color:var(--ink);font-weight:600}
@@ -80,7 +78,6 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var
 .learn-list .meta{font-size:.78rem;color:var(--muted);font-weight:500;margin-top:.1rem}
 .tag{display:inline-block;font-size:.7rem;font-weight:700;padding:.1rem .45rem;border-radius:999px;background:var(--blue-l);color:var(--blue);margin-left:.3rem}
 .tag.ext{background:#fff7ed;color:var(--orange)}
-
 .practice{border:1px solid var(--line);border-radius:12px;padding:1rem;background:#fafbfc}
 .practice .lab{font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:800;margin-bottom:.35rem}
 .practice h4{margin:0 0 .35rem;font-size:1rem}
@@ -88,6 +85,22 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var
 .practice .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--blue);color:#fff;border:0;border-radius:999px;padding:.55rem 1.2rem;font:inherit;font-weight:700;cursor:pointer;min-height:42px;text-decoration:none}
 .practice .btn:hover{background:#0f4cc9;text-decoration:none}
 .practice .status{float:right;font-size:.75rem;color:var(--muted);font-weight:700}
+
+.chart-wrap{overflow-x:auto;margin:.6rem 0 1rem}
+canvas.chart{display:block;width:100%;max-width:880px;height:280px;background:#fff;border:1px solid var(--line);border-radius:10px}
+.table-scroll{overflow-x:auto}
+table.data{border-collapse:collapse;width:100%;font-size:.85rem;min-width:520px}
+table.data th,table.data td{border:1px solid var(--line);padding:.4rem .5rem;text-align:center}
+table.data th{background:var(--blue-l);color:var(--blue-d);font-weight:700}
+table.data td.y{font-weight:700;text-align:left;white-space:nowrap}
+table.data .spec{color:var(--orange);font-size:.75rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:.5rem 0 0}
+.chip{display:inline-flex;align-items:center;gap:.35rem;font-size:.78rem;color:var(--muted)}
+.chip i{width:12px;height:12px;border-radius:2px;display:inline-block}
+.cta-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.8rem}
+.cta{display:inline-flex;align-items:center;background:var(--blue);color:#fff!important;border-radius:999px;padding:.55rem 1.15rem;font-weight:700;text-decoration:none}
+.cta:hover{background:#0f4cc9;text-decoration:none}
+.cta.sec{background:#fff;color:var(--blue)!important;border:2px solid var(--blue)}
 
 .loading,.error{padding:2rem;color:var(--muted)}
 .error{color:#b91c1c}
@@ -108,14 +121,14 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var
 </head>
 <body>
 <header class="topbar">
-  <button type="button" class="menu-btn" id="menuBtn" aria-label="Open unit list">Units</button>
+  <button type="button" class="menu-btn" id="menuBtn" aria-label="Open unit list">Menu</button>
   <div class="brand">HKDSE Physics <span class="zh">香港中學文憑物理</span></div>
   <div class="spacer"></div>
   <label class="toggle"><input type="checkbox" id="zhToggle" checked> Show 中文</label>
 </header>
 <div class="backdrop" id="backdrop" hidden></div>
 <div class="layout">
-  <aside class="sidebar" id="sidebar" aria-label="Course units">
+  <aside class="sidebar" id="sidebar" aria-label="Course navigation">
     <div class="side-head">
       <div class="course-icon" aria-hidden="true">Φ</div>
       <h1>HKDSE Physics</h1>
@@ -123,154 +136,304 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var
     </div>
     <ul class="unit-nav" id="unitNav"></ul>
   </aside>
-  <main class="main" id="main">
-    <p class="loading" id="loading">Loading lessons…</p>
-  </main>
+  <main class="main" id="main"><p class="loading" id="loading">Loading…</p></main>
 </div>
 <script>
 (function(){
   var STORE_KEY = 'hkdse-physics-progress-v1';
-  var data = null;
-  var activeId = null;
+  var data = null, home = null, activeId = 'home';
+  var TOPIC_ORDER = [];
+  var TOPIC_COLORS = {};
 
-  function loadProgress(){
-    try { return JSON.parse(localStorage.getItem(STORE_KEY) || '{}'); }
-    catch(e){ return {}; }
-  }
+  function loadProgress(){ try { return JSON.parse(localStorage.getItem(STORE_KEY)||'{}'); } catch(e){ return {}; } }
   function saveProgress(p){ localStorage.setItem(STORE_KEY, JSON.stringify(p)); }
-  function statusOf(id){
-    var p = loadProgress()[id];
-    return p || 'new';
-  }
-  function markStarted(id){
-    var all = loadProgress();
-    if (all[id] !== 'done') { all[id] = 'started'; saveProgress(all); }
-  }
+  function statusOf(id){ return loadProgress()[id] || 'new'; }
+  function markStarted(id){ var all=loadProgress(); if(all[id]!=='done'){ all[id]='started'; saveProgress(all);} }
 
   document.getElementById('zhToggle').addEventListener('change', function(){
     document.body.classList.toggle('no-zh', !this.checked);
   });
-
-  var menuBtn = document.getElementById('menuBtn');
   var backdrop = document.getElementById('backdrop');
   function closeNav(){ document.body.classList.remove('nav-open'); backdrop.hidden = true; }
   function openNav(){ document.body.classList.add('nav-open'); backdrop.hidden = false; }
-  menuBtn.addEventListener('click', function(){
+  document.getElementById('menuBtn').addEventListener('click', function(){
     if (document.body.classList.contains('nav-open')) closeNav(); else openNav();
   });
   backdrop.addEventListener('click', closeNav);
 
   function esc(s){
-    return String(s).replace(/[&<>"']/g, function(c){
+    return String(s==null?'':s).replace(/[&<>"']/g, function(c){
       return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c];
     });
   }
 
+  function select(id){
+    activeId = id;
+    history.replaceState(null, '', '#'+id);
+    renderNav();
+    renderMain();
+    closeNav();
+    window.scrollTo(0,0);
+  }
+
   function renderNav(){
     var nav = document.getElementById('unitNav');
-    document.getElementById('unitCount').textContent = data.units.length + ' UNITS';
-    nav.innerHTML = data.units.map(function(u, i){
-      var active = u.id === activeId ? ' active' : '';
-      return '<li><button type="button" class="'+active.trim()+'" data-unit="'+esc(u.id)+'" aria-current="'+(u.id===activeId?'page':'false')+'">'
-        + '<span class="unum">Unit '+(i+1)+'</span>'
-        + '<span class="utitle">'+esc(u.title)+' <span class="zh">('+esc(u.titleZh)+')</span></span>'
+    document.getElementById('unitCount').textContent = (1 + data.units.length) + ' SECTIONS';
+    var items = [{id:'home', unum:'Home', utitle:'Course home', utitleZh:'課程首頁'}].concat(
+      data.units.map(function(u,i){ return {id:u.id, unum:'Unit '+(i+1), utitle:u.title, utitleZh:u.titleZh}; })
+    );
+    nav.innerHTML = items.map(function(it){
+      var active = it.id === activeId ? ' active' : '';
+      return '<li><button type="button" class="'+active.trim()+'" data-id="'+esc(it.id)+'" aria-current="'+(it.id===activeId?'page':'false')+'">'
+        + '<span class="unum">'+esc(it.unum)+'</span>'
+        + '<span class="utitle">'+esc(it.utitle)+' <span class="zh">('+esc(it.utitleZh)+')</span></span>'
         + '</button></li>';
     }).join('');
     nav.querySelectorAll('button').forEach(function(btn){
-      btn.addEventListener('click', function(){
-        activeId = btn.getAttribute('data-unit');
-        history.replaceState(null, '', '#'+activeId);
-        renderNav();
-        renderMain();
-        closeNav();
-        window.scrollTo(0,0);
+      btn.addEventListener('click', function(){ select(btn.getAttribute('data-id')); });
+    });
+  }
+
+  function levelClass(level){ return /Extension/i.test(level||'') ? 'ext' : ''; }
+
+  function drawStackedBars(canvas, years, seriesKeys, getValues, colors, yLabel){
+    var dpr = window.devicePixelRatio || 1;
+    var cssW = canvas.clientWidth || 840;
+    var cssH = 280;
+    canvas.width = Math.floor(cssW * dpr);
+    canvas.height = Math.floor(cssH * dpr);
+    var ctx = canvas.getContext('2d');
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    var pad = {l:44, r:16, t:16, b:40};
+    var W = cssW, H = cssH;
+    var plotW = W - pad.l - pad.r, plotH = H - pad.t - pad.b;
+    ctx.clearRect(0,0,W,H);
+    ctx.fillStyle = '#fff'; ctx.fillRect(0,0,W,H);
+    var stacks = years.map(function(y){ return getValues(y); });
+    var max = 0;
+    stacks.forEach(function(st){
+      var s = seriesKeys.reduce(function(a,k){ return a + (st[k]||0); }, 0);
+      if (s > max) max = s;
+    });
+    if (max < 1) max = 1;
+    // grid
+    ctx.strokeStyle = '#e3e5ea'; ctx.fillStyle = '#5b6170'; ctx.font = '11px Segoe UI, Arial, sans-serif';
+    ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
+    for (var g=0; g<=4; g++){
+      var v = max * g / 4;
+      var yy = pad.t + plotH - (plotH * g / 4);
+      ctx.beginPath(); ctx.moveTo(pad.l, yy); ctx.lineTo(W-pad.r, yy); ctx.stroke();
+      ctx.fillText(String(Math.round(v)), pad.l - 6, yy);
+    }
+    ctx.save(); ctx.translate(14, pad.t + plotH/2); ctx.rotate(-Math.PI/2);
+    ctx.textAlign = 'center'; ctx.fillText(yLabel, 0, 0); ctx.restore();
+    var n = years.length;
+    var gap = 6;
+    var barW = Math.max(8, (plotW / n) - gap);
+    years.forEach(function(year, i){
+      var st = stacks[i];
+      var x = pad.l + i * (plotW / n) + ((plotW / n) - barW) / 2;
+      var y0 = pad.t + plotH;
+      seriesKeys.forEach(function(k){
+        var val = st[k] || 0;
+        var h = plotH * (val / max);
+        y0 -= h;
+        ctx.fillStyle = colors[k] || '#888';
+        ctx.fillRect(x, y0, barW, h);
+      });
+      ctx.fillStyle = '#5b6170'; ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+      ctx.fillText(String(year).slice(2), x + barW/2, pad.t + plotH + 8);
+    });
+  }
+
+  function renderHome(){
+    if (!home) {
+      document.getElementById('main').innerHTML = '<p class="error">Could not load home-data.json</p>';
+      return;
+    }
+    var intro = home.intro;
+    var chips = TOPIC_ORDER.map(function(t){
+      return '<span class="chip"><i style="background:'+esc(TOPIC_COLORS[t]||'#888')+'"></i>'+esc(t)+'</span>';
+    }).join('');
+
+    // cutoff table (recent years first)
+    var yearsCut = home.cutoff.years.slice().sort(function(a,b){ return b.year - a.year; });
+    var gradeKeys = ['5**','5*','5','4','3'];
+    var cutRows = yearsCut.map(function(y){
+      return '<tr><td class="y">'+y.year+'</td>' + gradeKeys.map(function(g){
+        var cell = y.grades[g];
+        if (!cell || cell.percent == null) return '<td>—</td>';
+        return '<td>'+cell.percent+'%'+(cell.speculated?' <span class="spec">*</span>':'')+'</td>';
+      }).join('') + '</tr>';
+    }).join('');
+
+    document.getElementById('main').innerHTML =
+      '<nav class="crumbs">HKDSE Physics › Home</nav>'
+      + '<h2 class="unit-title">'+esc(intro.title)+' <span class="zh">('+esc(intro.titleZh)+')</span></h2>'
+      + '<p class="unit-sub">Interactive lessons · exam overview</p>'
+      + '<div class="card"><h2>About this course <span class="zh">（關於本課程）</span></h2>'
+      + intro.body.map(function(p,i){ return '<p class="about-body">'+esc(p)+' <span class="zh">'+esc(intro.bodyZh[i]||'')+'</span></p>'; }).join('')
+      + '<div class="cta-row"><a class="cta" href="#heat-gases" data-go="heat-gases">Start Unit 1: Heat and Gases</a>'
+      + '<a class="cta sec" href="#force-motion" data-go="force-motion">Unit 2: Force and Motion</a></div></div>'
+      + '<div class="card"><h2>Grade cut-off (% of full mark) <span class="zh">（等級臨界分％）</span></h2>'
+      + '<p>'+esc(home.cutoff.note)+'</p>'
+      + '<div class="chart-wrap"><canvas class="chart" id="cutoffChart" aria-label="Cut-off percentage chart"></canvas></div>'
+      + '<div class="table-scroll"><table class="data"><thead><tr><th>Year</th><th>5**</th><th>5*</th><th>5</th><th>4</th><th>3</th></tr></thead><tbody>'
+      + cutRows + '</tbody></table></div>'
+      + '<p class="src">'+esc(home.source)+'</p></div>'
+      + '<div class="card"><h2>Past paper topic distribution <span class="zh">（歷屆題目分佈）</span></h2>'
+      + '<h3>Paper 1A — number of MC questions</h3>'
+      + '<div class="chips">'+chips+'</div>'
+      + '<div class="chart-wrap"><canvas class="chart" id="p1aChart" aria-label="Paper 1A topic distribution"></canvas></div>'
+      + '<h3>Paper 1B — marks (out of 84)</h3>'
+      + '<div class="chart-wrap"><canvas class="chart" id="p1bChart" aria-label="Paper 1B topic distribution"></canvas></div>'
+      + '<p class="src">Built from PP distribution.xlsx in Resources for students/HKDSE. Optics is shown separately from Wave Motion for clarity.</p></div>';
+
+    document.querySelectorAll('[data-go]').forEach(function(a){
+      a.addEventListener('click', function(e){ e.preventDefault(); select(a.getAttribute('data-go')); });
+    });
+
+    // charts
+    requestAnimationFrame(function(){
+      var cutCanvas = document.getElementById('cutoffChart');
+      var chron = home.cutoff.years.slice().sort(function(a,b){ return a.year - b.year; });
+      var gOrder = ['3','4','5','5*','5**'];
+      var gColors = {'3':'#94a3b8','4':'#38bdf8','5':'#1865f2','5*':'#7f3f98','5**':'#be123c'};
+drawCutoffLines(cutCanvas, chron, gOrder, gColors);
+
+      var p1a = home.distribution.paper1A.years;
+      drawStackedBars(document.getElementById('p1aChart'), p1a, TOPIC_ORDER, function(y){ return y.byTopic; }, TOPIC_COLORS, 'Questions');
+      var p1b = home.distribution.paper1B.years;
+      drawStackedBars(document.getElementById('p1bChart'), p1b, TOPIC_ORDER, function(y){ return y.byTopic; }, TOPIC_COLORS, 'Marks');
+    });
+  }
+
+  function drawCutoffLines(canvas, years, keys, colors){
+    var dpr = window.devicePixelRatio || 1;
+    var cssW = canvas.clientWidth || 840, cssH = 280;
+    canvas.width = Math.floor(cssW*dpr); canvas.height = Math.floor(cssH*dpr);
+    var ctx = canvas.getContext('2d'); ctx.setTransform(dpr,0,0,dpr,0,0);
+    var pad = {l:44,r:16,t:28,b:40};
+    var W=cssW,H=cssH, plotW=W-pad.l-pad.r, plotH=H-pad.t-pad.b;
+    ctx.fillStyle='#fff'; ctx.fillRect(0,0,W,H);
+    ctx.strokeStyle='#e3e5ea'; ctx.fillStyle='#5b6170'; ctx.font='11px Segoe UI, Arial, sans-serif';
+    ctx.textAlign='right'; ctx.textBaseline='middle';
+    for (var g=0;g<=5;g++){
+      var v = 40 + g*12;
+      var yy = pad.t + plotH - plotH*((v-40)/60);
+      ctx.beginPath(); ctx.moveTo(pad.l,yy); ctx.lineTo(W-pad.r,yy); ctx.stroke();
+      ctx.fillText(v+'%', pad.l-6, yy);
+    }
+    ctx.save(); ctx.translate(14, pad.t+plotH/2); ctx.rotate(-Math.PI/2);
+    ctx.textAlign='center'; ctx.fillText('Cut-off %',0,0); ctx.restore();
+    var n = years.length;
+    years.forEach(function(y,i){
+      var x = pad.l + (i+0.5)*(plotW/n);
+      ctx.fillStyle='#5b6170'; ctx.textAlign='center'; ctx.textBaseline='top';
+      ctx.fillText(String(y.year).slice(2), x, pad.t+plotH+8);
+    });
+    var lx = pad.l, ly = 12;
+    ctx.textAlign='left'; ctx.textBaseline='middle';
+    keys.forEach(function(k){
+      ctx.fillStyle=colors[k]; ctx.fillRect(lx, ly-4, 10, 8);
+      ctx.fillStyle='#5b6170'; ctx.fillText(k, lx+14, ly);
+      lx += ctx.measureText(k).width + 28;
+    });
+    keys.forEach(function(k){
+      ctx.strokeStyle=colors[k]; ctx.fillStyle=colors[k]; ctx.lineWidth=2.5; ctx.beginPath();
+      var first=true;
+      years.forEach(function(y,i){
+        var cell=y.grades[k]; if(!cell||cell.percent==null){ first=true; return; }
+        var x=pad.l+(i+0.5)*(plotW/n);
+        var pct=Math.min(100,Math.max(40,cell.percent));
+        var yy=pad.t+plotH-plotH*((pct-40)/60);
+        if(first){ ctx.moveTo(x,yy); first=false; } else ctx.lineTo(x,yy);
+      });
+      ctx.stroke();
+      years.forEach(function(y,i){
+        var cell=y.grades[k]; if(!cell||cell.percent==null) return;
+        var x=pad.l+(i+0.5)*(plotW/n);
+        var pct=Math.min(100,Math.max(40,cell.percent));
+        var yy=pad.t+plotH-plotH*((pct-40)/60);
+        ctx.beginPath(); ctx.arc(x,yy,3.2,0,Math.PI*2); ctx.fill();
       });
     });
   }
 
-  function levelClass(level){
-    return /Extension/i.test(level) ? 'ext' : '';
-  }
-
-  function renderMain(){
+  function renderUnit(){
     var u = data.units.find(function(x){ return x.id === activeId; }) || data.units[0];
     activeId = u.id;
     var ui = data.units.indexOf(u) + 1;
     var lessonsFlat = [];
     u.groups.forEach(function(g){ g.lessons.forEach(function(L){ lessonsFlat.push(L); }); });
-
     var ticks = lessonsFlat.map(function(L){
       var st = statusOf(L.id);
-      return '<span class="tick '+esc(st==='done'?'done':st==='started'?'started':'')+'" title="'+esc(L.number+' '+L.title)+'"></span>';
+      return '<span class="tick '+(st==='done'?'done':st==='started'?'started':'')+'" title="'+esc(L.number+' '+L.title)+'"></span>';
     }).join('');
-
     var groupsHtml = u.groups.map(function(g){
       var first = g.lessons[0];
       var list = g.lessons.map(function(L){
         var st = statusOf(L.id);
-        var cls = st === 'done' ? 'done' : st === 'started' ? 'started' : '';
-        var icon = st === 'done' ? '✓' : '▶';
+        var cls = st==='done'?'done':st==='started'?'started':'';
+        var icon = st==='done'?'✓':'▶';
         var lvl = levelClass(L.level);
-        return '<li><a class="'+cls+'" href="'+esc(L.file)+'" data-id="'+esc(L.id)+'">'
+        return '<li><a class="'+cls+'" href="'+esc(L.file)+'" data-lid="'+esc(L.id)+'">'
           + '<span class="ico" aria-hidden="true">'+icon+'</span>'
           + '<span><span>Lesson '+esc(L.number)+': '+esc(L.title)+'</span>'
-          + (lvl ? ' <span class="tag ext">'+esc(L.level)+'</span>' : '')
+          + (lvl?' <span class="tag ext">'+esc(L.level)+'</span>':'')
           + '<div class="meta">'+L.steps+' steps · '+esc(L.guide)+'</div></span></a></li>';
       }).join('');
-      return '<section class="section">'
-        + '<h3>'+esc(g.title)+' <span class="zh">('+esc(g.titleZh)+')</span></h3>'
+      var st0 = statusOf(first.id);
+      return '<section class="section"><h3>'+esc(g.title)+' <span class="zh">('+esc(g.titleZh)+')</span></h3>'
         + '<p class="sec-desc">Chapter '+esc(g.chapter)+' of the class notes</p>'
-        + '<div class="learn-grid">'
-        + '<div><div class="lab" style="font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:800;margin-bottom:.35rem">Learn</div>'
+        + '<div class="learn-grid"><div><div style="font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:800;margin-bottom:.35rem">Learn</div>'
         + '<ul class="learn-list">'+list+'</ul></div>'
-        + '<aside class="practice">'
-        + '<span class="status">'+(statusOf(first.id)==='new'?'Not started':statusOf(first.id)==='started'?'In progress':'Done')+'</span>'
-        + '<div class="lab">Practice</div>'
-        + '<h4>Start: Lesson '+esc(first.number)+'</h4>'
+        + '<aside class="practice"><span class="status">'+(st0==='new'?'Not started':st0==='started'?'In progress':'Done')+'</span>'
+        + '<div class="lab">Practice</div><h4>Start: Lesson '+esc(first.number)+'</h4>'
         + '<p>Open the first lesson in this section. Each lesson has a simulation and questions with hints.</p>'
-        + '<a class="btn" href="'+esc(first.file)+'" data-id="'+esc(first.id)+'">Start</a>'
-        + '</aside></div></section>';
+        + '<a class="btn" href="'+esc(first.file)+'" data-lid="'+esc(first.id)+'">Start</a></aside></div></section>';
     }).join('');
-
     document.getElementById('main').innerHTML =
-      '<nav class="crumbs"><a href="#">HKDSE Physics</a> › Unit '+ui+'</nav>'
+      '<nav class="crumbs"><a href="#home" data-go="home">HKDSE Physics</a> › Unit '+ui+'</nav>'
       + '<h2 class="unit-title">Unit '+ui+': '+esc(u.title)+' <span class="zh">('+esc(u.titleZh)+')</span></h2>'
       + '<p class="unit-sub">'+u.lessonCount+' lessons</p>'
-      + '<div class="legend">'
-      + '<span class="item"><span class="dot"></span> Not started</span>'
+      + '<div class="legend"><span class="item"><span class="dot"></span> Not started</span>'
       + '<span class="item"><span class="dot started"></span> In progress</span>'
       + '<span class="item"><span class="dot done"></span> Done</span>'
-      + '<span class="item"><span class="dot ext"></span> Has Extension</span>'
-      + '</div>'
-      + '<div class="prog-row" aria-label="Lesson progress">'+ticks+'</div>'
+      + '<span class="item"><span class="dot ext"></span> Has Extension</span></div>'
+      + '<div class="prog-row">'+ticks+'</div>'
       + '<div class="card"><h2>About this unit</h2><p class="about-body">'+esc(u.about)+'</p>'
       + '<p>Lesson numbers follow your class notes. <b>Extension</b> means content underlined in the C&amp;A Guide.</p></div>'
       + groupsHtml;
-
-    document.querySelectorAll('a[data-id]').forEach(function(a){
-      a.addEventListener('click', function(){ markStarted(a.getAttribute('data-id')); });
+    document.querySelectorAll('[data-go]').forEach(function(a){
+      a.addEventListener('click', function(e){ e.preventDefault(); select(a.getAttribute('data-go')); });
+    });
+    document.querySelectorAll('a[data-lid]').forEach(function(a){
+      a.addEventListener('click', function(){ markStarted(a.getAttribute('data-lid')); });
     });
   }
 
-  // Allow lessons to mark done via ?done=id or localStorage from lesson pages later
-  window.HKDSEProgress = {
-    markDone: function(id){ var all=loadProgress(); all[id]='done'; saveProgress(all); },
-    markStarted: markStarted
-  };
+  function renderMain(){
+    if (activeId === 'home') renderHome(); else renderUnit();
+  }
 
-  fetch('lessons.json', {cache:'no-store'})
-    .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
-    .then(function(j){
-      data = j;
-      var hash = (location.hash || '').replace(/^#/, '');
-      activeId = data.units.some(function(u){ return u.id === hash; }) ? hash : data.units[0].id;
-      document.getElementById('loading') && document.getElementById('loading').remove();
-      renderNav();
-      renderMain();
-    })
-    .catch(function(err){
-      document.getElementById('main').innerHTML = '<p class="error">Could not load lessons.json ('+esc(err.message)+').</p>';
-    });
+  Promise.all([
+    fetch('lessons.json', {cache:'no-store'}).then(function(r){ if(!r.ok) throw new Error('lessons '+r.status); return r.json(); }),
+    fetch('home-data.json', {cache:'no-store'}).then(function(r){ if(!r.ok) throw new Error('home '+r.status); return r.json(); })
+  ]).then(function(arr){
+    data = arr[0]; home = arr[1];
+    TOPIC_ORDER = home.topicOrder || [];
+    TOPIC_COLORS = home.topicColors || {};
+    var hash = (location.hash||'').replace(/^#/,'');
+    var ok = hash==='home' || data.units.some(function(u){ return u.id===hash; });
+    activeId = ok ? hash : 'home';
+    var loading = document.getElementById('loading'); if (loading) loading.remove();
+    renderNav(); renderMain();
+  }).catch(function(err){
+    document.getElementById('main').innerHTML = '<p class="error">Could not load course data ('+esc(err.message)+').</p>';
+  });
+
+  window.HKDSEProgress = { markDone:function(id){ var a=loadProgress(); a[id]='done'; saveProgress(a); }, markStarted:markStarted };
 })();
 </script>
 </body>

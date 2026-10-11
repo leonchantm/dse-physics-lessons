@@ -1,0 +1,3374 @@
+{
+  "source": "Teacher materials in Google Drive: Resources for students/HKDSE (Cut-off score.xlsx, PP distribution.xlsx, PP distribution (Paper2).xlsx). Cut-off marks marked * are speculated (from DSE00 / 小卒論壇).",
+  "intro": {
+    "title": "HKDSE Physics",
+    "titleZh": "香港中學文憑考試 物理",
+    "body": [
+      "This course covers the Compulsory Part of HKDSE Physics: Heat and Gases, Force and Motion, Wave Motion, Electricity and Magnetism, and Radioactivity.",
+      "Lessons use short English sentences, Traditional Chinese key terms, step-by-step practice with hints, and interactive simulations — designed for students who need more time and practice.",
+      "The public exam has Paper 1 (compulsory: multiple-choice + structured) and Paper 2 (elective). Aim for steady practice by topic; use the charts below to see what each year emphasises."
+    ],
+    "bodyZh": [
+      "本課程涵蓋 HKDSE 物理必修部分：熱和氣體、力和運動、波動、電和磁、放射性。",
+      "課文用短句英文、關鍵詞附繁體中文、逐步提示練習同互動模擬，適合需要多練習嘅同學。",
+      "公開試有卷一（必修：多項選擇＋結構題）同卷二（選修）。跟住課題穩步練習；下面圖表顯示每年題目分佈。"
+    ]
+  },
+  "cutoff": {
+    "note": "Approximate grade cut-off as % of full mark (and raw mark). Values with * are speculated.",
+    "years": [
+      {
+        "year": 2012,
+        "fullMarkNote": "500(%)",
+        "grades": {
+          "5**": {
+            "mark": 443,
+            "percent": 89,
+            "speculated": false
+          },
+          "5*": {
+            "mark": 415,
+            "percent": 83,
+            "speculated": false
+          },
+          "5": {
+            "mark": 376,
+            "percent": 75,
+            "speculated": false
+          },
+          "4": {
+            "mark": 340,
+            "percent": 68,
+            "speculated": false
+          },
+          "3": {
+            "mark": 284,
+            "percent": 57,
+            "speculated": false
+          }
+        }
+      },
+      {
+        "year": 2013,
+        "fullMarkNote": "500(%)",
+        "grades": {
+          "5**": {
+            "mark": 423,
+            "percent": 85,
+            "speculated": false
+          },
+          "5*": {
+            "mark": 392,
+            "percent": 78,
+            "speculated": false
+          },
+          "5": {
+            "mark": 326,
+            "percent": 65,
+            "speculated": false
+          },
+          "4": {
+            "mark": 261,
+            "percent": 52,
+            "speculated": false
+          },
+          "3": {
+            "mark": 245,
+            "percent": 49,
+            "speculated": true
+          }
+        }
+      },
+      {
+        "year": 2014,
+        "fullMarkNote": "499(%)",
+        "grades": {
+          "5**": {
+            "mark": 435,
+            "percent": 87,
+            "speculated": false
+          },
+          "5*": {
+            "mark": 400,
+            "percent": 80,
+            "speculated": false
+          },
+          "5": {
+            "mark": 356,
+            "percent": 71,
+            "speculated": false
+          },
+          "4": {
+            "mark": 302,
+            "percent": 61,
+            "speculated": false
+          },
+          "3": {
+            "mark": 277,
+            "percent": 56,
+            "speculated": false
+          }
+        }
+      },
+      {
+        "year": 2015,
+        "fullMarkNote": "500(%)",
+        "grades": {
+          "5**": {
+            "mark": 429,
+            "percent": 86,
+            "speculated": false
+          },
+          "5*": {
+            "mark": 401,
+            "percent": 80,
+            "speculated": false
+          },
+          "5": {
+            "mark": 357,
+            "percent": 71,
+            "speculated": false
+          },
+          "4": {
+            "mark": 300,
+            "percent": 60,
+            "speculated": false
+          },
+          "3": {
+            "mark": 279,
+            "percent": 56,
+            "speculated": false
+          }
+        }
+      },
+      {
+        "year": 2016,
+        "fullMarkNote": "500(%)",
+        "grades": {
+          "5**": {
+            "mark": 435,
+            "percent": 87,
+            "speculated": false
+          },
+          "5*": {
+            "mark": 398,
+            "percent": 80,
+            "speculated": false
+          },
+          "5": {
+            "mark": 350,
+            "percent": 70,
+            "speculated": false
+          },
+          "4": {
+            "mark": 270,
+            "percent": 54,
+            "speculated": false
+          },
+          "3": {
+            "mark": 241,
+            "percent": 48,
+            "speculated": false
+          }
+        }
+      },
+      {
+        "year": 2017,
+        "fullMarkNote": "499(%)",
+        "grades": {
+          "5**": {
+            "mark": 450,
+            "percent": 90,
+            "speculated": false
+          },
+          "5*": {
+            "mark": 414,
+            "percent": 83,
+            "speculated": false
+          },
+          "5": {
+            "mark": 390,
+            "percent": 78,
+            "speculated": false
+          },
+          "4": {
+            "mark": 330,
+            "percent": 67,
+            "speculated": false
+          },
+          "3": {
+            "mark": 274,
+            "percent": 55,
+            "speculated": true
+          }
+        }
+      },
+      {
+        "year": 2018,
+        "fullMarkNote": "499(%)",
+        "grades": {
+          "5**": {
+            "mark": 430,
+            "percent": 86,
+            "speculated": false
+          },
+          "5*": {
+            "mark": 391,
+            "percent": 78,
+            "speculated": false
+          },
+          "5": {
+            "mark": 345,
+            "percent": 70,
+            "speculated": false
+          },
+          "4": {
+            "mark": 300,
+            "percent": 60,
+            "speculated": false
+          },
+          "3": {
+            "mark": 250,
+            "percent": 50,
+            "speculated": true
+          }
+        }
+      },
+      {
+        "year": 2019,
+        "fullMarkNote": "499(%)",
+        "grades": {
+          "5**": {
+            "mark": 444,
+            "percent": 89,
+            "speculated": false
+          },
+          "5*": {
+            "mark": 413,
+            "percent": 83,
+            "speculated": false
+          },
+          "5": {
+            "mark": 359,
+            "percent": 72,
+            "speculated": false
+          },
+          "4": {
+            "mark": 325,
+            "percent": 65,
+            "speculated": false
+          },
+          "3": {
+            "mark": 264,
+            "percent": 53,
+            "speculated": true
+          }
+        }
+      },
+      {
+        "year": 2020,
+        "fullMarkNote": "500(%)",
+        "grades": {
+          "5**": {
+            "mark": 438,
+            "percent": 88,
+            "speculated": false
+          },
+          "5*": {
+            "mark": 400,
+            "percent": 80,
+            "speculated": false
+          },
+          "5": {
+            "mark": 352,
+            "percent": 70,
+            "speculated": false
+          },
+          "4": {
+            "mark": 288,
+            "percent": 58,
+            "speculated": false
+          },
+          "3": {
+            "mark": 250,
+            "percent": 50,
+            "speculated": true
+          }
+        }
+      },
+      {
+        "year": 2021,
+        "fullMarkNote": "186(%)",
+        "grades": {
+          "5**": {
+            "mark": 167,
+            "percent": 90,
+            "speculated": false
+          },
+          "5*": {
+            "mark": 150,
+            "percent": 81,
+            "speculated": false
+          },
+          "5": {
+            "mark": 126,
+            "percent": 68,
+            "speculated": false
+          },
+          "4": {
+            "mark": 95,
+            "percent": 51,
+            "speculated": true
+          },
+          "3": {
+            "mark": 79,
+            "percent": 42,
+            "speculated": false
+          }
+        }
+      },
+      {
+        "year": 2022,
+        "fullMarkNote": "203(%)",
+        "grades": {
+          "5**": {
+            "mark": 172,
+            "percent": 85,
+            "speculated": false
+          },
+          "5*": {
+            "mark": 155,
+            "percent": 76,
+            "speculated": false
+          },
+          "5": {
+            "mark": 137,
+            "percent": 68,
+            "speculated": false
+          },
+          "4": {
+            "mark": 96,
+            "percent": 47,
+            "speculated": true
+          },
+          "3": null
+        }
+      },
+      {
+        "year": 2023,
+        "fullMarkNote": "179(%)",
+        "grades": {
+          "5**": {
+            "mark": 165,
+            "percent": 92,
+            "speculated": false
+          },
+          "5*": {
+            "mark": 152,
+            "percent": 85,
+            "speculated": false
+          },
+          "5": {
+            "mark": 132,
+            "percent": 74,
+            "speculated": false
+          },
+          "4": {
+            "mark": 109,
+            "percent": 61,
+            "speculated": false
+          },
+          "3": {
+            "mark": 80,
+            "percent": 45,
+            "speculated": false
+          }
+        }
+      },
+      {
+        "year": 2024,
+        "fullMarkNote": "500(%)",
+        "grades": {
+          "5**": {
+            "mark": 460,
+            "percent": 92,
+            "speculated": false
+          },
+          "5*": {
+            "mark": 425,
+            "percent": 85,
+            "speculated": false
+          },
+          "5": {
+            "mark": 370,
+            "percent": 74,
+            "speculated": false
+          },
+          "4": {
+            "mark": 322,
+            "percent": 64,
+            "speculated": false
+          },
+          "3": {
+            "mark": 280,
+            "percent": 56,
+            "speculated": false
+          }
+        }
+      },
+      {
+        "year": 2025,
+        "fullMarkNote": "501(%)",
+        "grades": {
+          "5**": {
+            "mark": 467,
+            "percent": 93,
+            "speculated": false
+          },
+          "5*": {
+            "mark": 435,
+            "percent": 87,
+            "speculated": false
+          },
+          "5": {
+            "mark": 395,
+            "percent": 79,
+            "speculated": false
+          },
+          "4": {
+            "mark": 316,
+            "percent": 63,
+            "speculated": false
+          },
+          "3": {
+            "mark": 304,
+            "percent": 61,
+            "speculated": false
+          }
+        }
+      },
+      {
+        "year": 2026,
+        "fullMarkNote": "501(%)",
+        "grades": {
+          "5**": {
+            "mark": 447,
+            "percent": 89,
+            "speculated": false
+          },
+          "5*": {
+            "mark": 409,
+            "percent": 82,
+            "speculated": false
+          },
+          "5": {
+            "mark": 356,
+            "percent": 71,
+            "speculated": false
+          },
+          "4": {
+            "mark": 298,
+            "percent": 59,
+            "speculated": false
+          },
+          "3": {
+            "mark": 233,
+            "percent": 47,
+            "speculated": false
+          }
+        }
+      }
+    ]
+  },
+  "distribution": {
+    "paper1A": {
+      "unit": "questions",
+      "years": [
+        {
+          "year": 2012,
+          "byTopic": {
+            "Heat and Gases": 4,
+            "Force and Motion": 9,
+            "Wave Motion": 7,
+            "Optics": 2,
+            "Electricity and Magnetism": 9,
+            "Radioactivity": 3
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "count": 3,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "count": 1,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "count": 5,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B3": {
+              "name": "Moment",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B4": {
+              "name": "Projectile motion",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B6": {
+              "name": "Gravitation",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature of waves",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C2": {
+              "name": "Phenomena of Waves",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C3": {
+              "name": "Stationary waves",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C4": {
+              "name": "Light wave",
+              "count": 1,
+              "broad": "Optics"
+            },
+            "C5": {
+              "name": "EM waves and Sound",
+              "count": 4,
+              "broad": "Wave Motion"
+            },
+            "C6": {
+              "name": "Ray optics",
+              "count": 1,
+              "broad": "Optics"
+            },
+            "D1": {
+              "name": "Electrostatics",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "count": 3,
+              "broad": "Electricity and Magnetism"
+            },
+            "D3": {
+              "name": "Domestic electricity",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D4": {
+              "name": "EM",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "count": 3,
+              "broad": "Radioactivity"
+            }
+          },
+          "total": 34
+        },
+        {
+          "year": 2013,
+          "byTopic": {
+            "Heat and Gases": 4,
+            "Force and Motion": 11,
+            "Wave Motion": 4,
+            "Optics": 4,
+            "Electricity and Magnetism": 10,
+            "Radioactivity": 3
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "count": 2,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "count": 2,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "count": 5,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "count": 2,
+              "broad": "Force and Motion"
+            },
+            "B3": {
+              "name": "Moment",
+              "count": 2,
+              "broad": "Force and Motion"
+            },
+            "B4": {
+              "name": "Projectile motion",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B6": {
+              "name": "Gravitation",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature of waves",
+              "count": 2,
+              "broad": "Wave Motion"
+            },
+            "C2": {
+              "name": "Phenomena of Waves",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C3": {
+              "name": "Stationary waves",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C4": {
+              "name": "Light wave",
+              "count": 1,
+              "broad": "Optics"
+            },
+            "C6": {
+              "name": "Ray optics",
+              "count": 3,
+              "broad": "Optics"
+            },
+            "D1": {
+              "name": "Electrostatics",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "count": 3,
+              "broad": "Electricity and Magnetism"
+            },
+            "D3": {
+              "name": "Domestic electricity",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D4": {
+              "name": "EM",
+              "count": 3,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "count": 3,
+              "broad": "Radioactivity"
+            }
+          },
+          "total": 36
+        },
+        {
+          "year": 2014,
+          "byTopic": {
+            "Heat and Gases": 2,
+            "Force and Motion": 10,
+            "Wave Motion": 6,
+            "Optics": 1,
+            "Electricity and Magnetism": 9,
+            "Radioactivity": 3
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "count": 2,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "count": 5,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B3": {
+              "name": "Moment",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B4": {
+              "name": "Projectile motion",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B6": {
+              "name": "Gravitation",
+              "count": 2,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature of waves",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C2": {
+              "name": "Phenomena of Waves",
+              "count": 2,
+              "broad": "Wave Motion"
+            },
+            "C5": {
+              "name": "EM waves and Sound",
+              "count": 3,
+              "broad": "Wave Motion"
+            },
+            "C6": {
+              "name": "Ray optics",
+              "count": 1,
+              "broad": "Optics"
+            },
+            "D1": {
+              "name": "Electrostatics",
+              "count": 3,
+              "broad": "Electricity and Magnetism"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D3": {
+              "name": "Domestic electricity",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D4": {
+              "name": "EM",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "count": 3,
+              "broad": "Radioactivity"
+            }
+          },
+          "total": 31
+        },
+        {
+          "year": 2015,
+          "byTopic": {
+            "Heat and Gases": 3,
+            "Force and Motion": 8,
+            "Wave Motion": 6,
+            "Optics": 3,
+            "Electricity and Magnetism": 7,
+            "Radioactivity": 3
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "count": 3,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "count": 5,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B5": {
+              "name": "Circular motion",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B6": {
+              "name": "Gravitation",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature of waves",
+              "count": 2,
+              "broad": "Wave Motion"
+            },
+            "C2": {
+              "name": "Phenomena of Waves",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C3": {
+              "name": "Stationary waves",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C4": {
+              "name": "Light wave",
+              "count": 1,
+              "broad": "Optics"
+            },
+            "C5": {
+              "name": "EM waves and Sound",
+              "count": 2,
+              "broad": "Wave Motion"
+            },
+            "C6": {
+              "name": "Ray optics",
+              "count": 2,
+              "broad": "Optics"
+            },
+            "D1": {
+              "name": "Electrostatics",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D3": {
+              "name": "Domestic electricity",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "count": 3,
+              "broad": "Radioactivity"
+            }
+          },
+          "total": 30
+        },
+        {
+          "year": 2016,
+          "byTopic": {
+            "Heat and Gases": 3,
+            "Force and Motion": 11,
+            "Wave Motion": 6,
+            "Optics": 3,
+            "Electricity and Magnetism": 8,
+            "Radioactivity": 2
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "count": 2,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "count": 1,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "count": 4,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "count": 2,
+              "broad": "Force and Motion"
+            },
+            "B3": {
+              "name": "Moment",
+              "count": 2,
+              "broad": "Force and Motion"
+            },
+            "B4": {
+              "name": "Projectile motion",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B5": {
+              "name": "Circular motion",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B6": {
+              "name": "Gravitation",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature of waves",
+              "count": 2,
+              "broad": "Wave Motion"
+            },
+            "C2": {
+              "name": "Phenomena of Waves",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C3": {
+              "name": "Stationary waves",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C5": {
+              "name": "EM waves and Sound",
+              "count": 2,
+              "broad": "Wave Motion"
+            },
+            "C6": {
+              "name": "Ray optics",
+              "count": 3,
+              "broad": "Optics"
+            },
+            "D1": {
+              "name": "Electrostatics",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "count": 3,
+              "broad": "Electricity and Magnetism"
+            },
+            "D3": {
+              "name": "Domestic electricity",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D6": {
+              "name": "Transformer",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "count": 2,
+              "broad": "Radioactivity"
+            }
+          },
+          "total": 33
+        },
+        {
+          "year": 2017,
+          "byTopic": {
+            "Heat and Gases": 4,
+            "Force and Motion": 9,
+            "Wave Motion": 6,
+            "Optics": 2,
+            "Electricity and Magnetism": 9,
+            "Radioactivity": 3
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "count": 3,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "count": 1,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "count": 3,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "count": 3,
+              "broad": "Force and Motion"
+            },
+            "B3": {
+              "name": "Moment",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B4": {
+              "name": "Projectile motion",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B6": {
+              "name": "Gravitation",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature of waves",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C2": {
+              "name": "Phenomena of Waves",
+              "count": 2,
+              "broad": "Wave Motion"
+            },
+            "C4": {
+              "name": "Light wave",
+              "count": 1,
+              "broad": "Optics"
+            },
+            "C5": {
+              "name": "EM waves and Sound",
+              "count": 3,
+              "broad": "Wave Motion"
+            },
+            "C6": {
+              "name": "Ray optics",
+              "count": 1,
+              "broad": "Optics"
+            },
+            "D1": {
+              "name": "Electrostatics",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D3": {
+              "name": "Domestic electricity",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D4": {
+              "name": "EM",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D6": {
+              "name": "Transformer",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "count": 3,
+              "broad": "Radioactivity"
+            }
+          },
+          "total": 33
+        },
+        {
+          "year": 2018,
+          "byTopic": {
+            "Heat and Gases": 4,
+            "Force and Motion": 9,
+            "Wave Motion": 5,
+            "Optics": 3,
+            "Electricity and Magnetism": 9,
+            "Radioactivity": 3
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "count": 3,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "count": 1,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "count": 6,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B3": {
+              "name": "Moment",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B6": {
+              "name": "Gravitation",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature of waves",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C2": {
+              "name": "Phenomena of Waves",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C3": {
+              "name": "Stationary waves",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C5": {
+              "name": "EM waves and Sound",
+              "count": 2,
+              "broad": "Wave Motion"
+            },
+            "C6": {
+              "name": "Ray optics",
+              "count": 3,
+              "broad": "Optics"
+            },
+            "D1": {
+              "name": "Electrostatics",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "count": 3,
+              "broad": "Electricity and Magnetism"
+            },
+            "D3": {
+              "name": "Domestic electricity",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D4": {
+              "name": "EM",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D6": {
+              "name": "Transformer",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "count": 3,
+              "broad": "Radioactivity"
+            }
+          },
+          "total": 33
+        },
+        {
+          "year": 2019,
+          "byTopic": {
+            "Heat and Gases": 3,
+            "Force and Motion": 10,
+            "Wave Motion": 7,
+            "Optics": 2,
+            "Electricity and Magnetism": 8,
+            "Radioactivity": 3
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "count": 2,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "count": 1,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "count": 3,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "count": 3,
+              "broad": "Force and Motion"
+            },
+            "B3": {
+              "name": "Moment",
+              "count": 2,
+              "broad": "Force and Motion"
+            },
+            "B4": {
+              "name": "Projectile motion",
+              "count": 2,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature of waves",
+              "count": 2,
+              "broad": "Wave Motion"
+            },
+            "C2": {
+              "name": "Phenomena of Waves",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C4": {
+              "name": "Light wave",
+              "count": 1,
+              "broad": "Optics"
+            },
+            "C5": {
+              "name": "EM waves and Sound",
+              "count": 4,
+              "broad": "Wave Motion"
+            },
+            "C6": {
+              "name": "Ray optics",
+              "count": 1,
+              "broad": "Optics"
+            },
+            "D1": {
+              "name": "Electrostatics",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D3": {
+              "name": "Domestic electricity",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D4": {
+              "name": "EM",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D6": {
+              "name": "Transformer",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "count": 3,
+              "broad": "Radioactivity"
+            }
+          },
+          "total": 33
+        },
+        {
+          "year": 2020,
+          "byTopic": {
+            "Heat and Gases": 3,
+            "Force and Motion": 7,
+            "Wave Motion": 5,
+            "Optics": 6,
+            "Electricity and Magnetism": 8,
+            "Radioactivity": 4
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "count": 2,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "count": 1,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "count": 3,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B3": {
+              "name": "Moment",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B5": {
+              "name": "Circular motion",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B6": {
+              "name": "Gravitation",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature of waves",
+              "count": 3,
+              "broad": "Wave Motion"
+            },
+            "C4": {
+              "name": "Light wave",
+              "count": 2,
+              "broad": "Optics"
+            },
+            "C5": {
+              "name": "EM waves and Sound",
+              "count": 2,
+              "broad": "Wave Motion"
+            },
+            "C6": {
+              "name": "Ray optics",
+              "count": 4,
+              "broad": "Optics"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D3": {
+              "name": "Domestic electricity",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D4": {
+              "name": "EM",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D6": {
+              "name": "Transformer",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "count": 4,
+              "broad": "Radioactivity"
+            }
+          },
+          "total": 33
+        },
+        {
+          "year": 2021,
+          "byTopic": {
+            "Heat and Gases": 3,
+            "Force and Motion": 6,
+            "Wave Motion": 7,
+            "Optics": 4,
+            "Electricity and Magnetism": 10,
+            "Radioactivity": 3
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "count": 2,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "count": 1,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "count": 3,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "count": 2,
+              "broad": "Force and Motion"
+            },
+            "B5": {
+              "name": "Circular motion",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature of waves",
+              "count": 3,
+              "broad": "Wave Motion"
+            },
+            "C2": {
+              "name": "Phenomena of Waves",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C3": {
+              "name": "Stationary waves",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C4": {
+              "name": "Light wave",
+              "count": 2,
+              "broad": "Optics"
+            },
+            "C5": {
+              "name": "EM waves and Sound",
+              "count": 2,
+              "broad": "Wave Motion"
+            },
+            "C6": {
+              "name": "Ray optics",
+              "count": 2,
+              "broad": "Optics"
+            },
+            "D1": {
+              "name": "Electrostatics",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "count": 3,
+              "broad": "Electricity and Magnetism"
+            },
+            "D3": {
+              "name": "Domestic electricity",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D4": {
+              "name": "EM",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D6": {
+              "name": "Transformer",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "count": 3,
+              "broad": "Radioactivity"
+            }
+          },
+          "total": 33
+        },
+        {
+          "year": 2022,
+          "byTopic": {
+            "Heat and Gases": 3,
+            "Force and Motion": 11,
+            "Wave Motion": 5,
+            "Optics": 3,
+            "Electricity and Magnetism": 8,
+            "Radioactivity": 3
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "count": 2,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "count": 1,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "count": 4,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "count": 4,
+              "broad": "Force and Motion"
+            },
+            "B4": {
+              "name": "Projectile motion",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B5": {
+              "name": "Circular motion",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B6": {
+              "name": "Gravitation",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature of waves",
+              "count": 2,
+              "broad": "Wave Motion"
+            },
+            "C2": {
+              "name": "Phenomena of Waves",
+              "count": 2,
+              "broad": "Wave Motion"
+            },
+            "C4": {
+              "name": "Light wave",
+              "count": 1,
+              "broad": "Optics"
+            },
+            "C5": {
+              "name": "EM waves and Sound",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C6": {
+              "name": "Ray optics",
+              "count": 2,
+              "broad": "Optics"
+            },
+            "D1": {
+              "name": "Electrostatics",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D3": {
+              "name": "Domestic electricity",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D4": {
+              "name": "EM",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "count": 3,
+              "broad": "Radioactivity"
+            }
+          },
+          "total": 33
+        },
+        {
+          "year": 2023,
+          "byTopic": {
+            "Heat and Gases": 3,
+            "Force and Motion": 10,
+            "Wave Motion": 4,
+            "Optics": 5,
+            "Electricity and Magnetism": 8,
+            "Radioactivity": 3
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "count": 2,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "count": 1,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "count": 5,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "count": 3,
+              "broad": "Force and Motion"
+            },
+            "B3": {
+              "name": "Moment",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B4": {
+              "name": "Projectile motion",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature of waves",
+              "count": 2,
+              "broad": "Wave Motion"
+            },
+            "C4": {
+              "name": "Light wave",
+              "count": 2,
+              "broad": "Optics"
+            },
+            "C5": {
+              "name": "EM waves and Sound",
+              "count": 2,
+              "broad": "Wave Motion"
+            },
+            "C6": {
+              "name": "Ray optics",
+              "count": 3,
+              "broad": "Optics"
+            },
+            "D1": {
+              "name": "Electrostatics",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D3": {
+              "name": "Domestic electricity",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D4": {
+              "name": "EM",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D6": {
+              "name": "Transformer",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "count": 3,
+              "broad": "Radioactivity"
+            }
+          },
+          "total": 33
+        },
+        {
+          "year": 2024,
+          "byTopic": {
+            "Heat and Gases": 3,
+            "Force and Motion": 10,
+            "Wave Motion": 6,
+            "Optics": 3,
+            "Electricity and Magnetism": 9,
+            "Radioactivity": 2
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "count": 2,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "count": 1,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "count": 5,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "count": 2,
+              "broad": "Force and Motion"
+            },
+            "B3": {
+              "name": "Moment",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B5": {
+              "name": "Circular motion",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B6": {
+              "name": "Gravitation",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature of waves",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C2": {
+              "name": "Phenomena of Waves",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C3": {
+              "name": "Stationary waves",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C5": {
+              "name": "EM waves and Sound",
+              "count": 3,
+              "broad": "Wave Motion"
+            },
+            "C6": {
+              "name": "Ray optics",
+              "count": 3,
+              "broad": "Optics"
+            },
+            "D1": {
+              "name": "Electrostatics",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D3": {
+              "name": "Domestic electricity",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D4": {
+              "name": "EM",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D6": {
+              "name": "Transformer",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "count": 2,
+              "broad": "Radioactivity"
+            }
+          },
+          "total": 33
+        },
+        {
+          "year": 2025,
+          "byTopic": {
+            "Heat and Gases": 3,
+            "Force and Motion": 9,
+            "Wave Motion": 4,
+            "Optics": 5,
+            "Electricity and Magnetism": 9,
+            "Radioactivity": 3
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "count": 2,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "count": 1,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "count": 3,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "count": 2,
+              "broad": "Force and Motion"
+            },
+            "B3": {
+              "name": "Moment",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B4": {
+              "name": "Projectile motion",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B5": {
+              "name": "Circular motion",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B6": {
+              "name": "Gravitation",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature of waves",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C2": {
+              "name": "Phenomena of Waves",
+              "count": 2,
+              "broad": "Wave Motion"
+            },
+            "C4": {
+              "name": "Light wave",
+              "count": 2,
+              "broad": "Optics"
+            },
+            "C5": {
+              "name": "EM waves and Sound",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C6": {
+              "name": "Ray optics",
+              "count": 3,
+              "broad": "Optics"
+            },
+            "D1": {
+              "name": "Electrostatics",
+              "count": 3,
+              "broad": "Electricity and Magnetism"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D3": {
+              "name": "Domestic electricity",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D4": {
+              "name": "EM",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "count": 3,
+              "broad": "Radioactivity"
+            }
+          },
+          "total": 33
+        },
+        {
+          "year": 2026,
+          "byTopic": {
+            "Heat and Gases": 3,
+            "Force and Motion": 9,
+            "Wave Motion": 4,
+            "Optics": 4,
+            "Electricity and Magnetism": 11,
+            "Radioactivity": 2
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "count": 3,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "count": 4,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "count": 2,
+              "broad": "Force and Motion"
+            },
+            "B3": {
+              "name": "Moment",
+              "count": 1,
+              "broad": "Force and Motion"
+            },
+            "B6": {
+              "name": "Gravitation",
+              "count": 2,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature of waves",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C2": {
+              "name": "Phenomena of Waves",
+              "count": 2,
+              "broad": "Wave Motion"
+            },
+            "C3": {
+              "name": "Stationary waves",
+              "count": 1,
+              "broad": "Wave Motion"
+            },
+            "C4": {
+              "name": "Light wave",
+              "count": 1,
+              "broad": "Optics"
+            },
+            "C6": {
+              "name": "Ray optics",
+              "count": 3,
+              "broad": "Optics"
+            },
+            "D1": {
+              "name": "Electrostatics",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "count": 3,
+              "broad": "Electricity and Magnetism"
+            },
+            "D3": {
+              "name": "Domestic electricity",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D4": {
+              "name": "EM",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "count": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D6": {
+              "name": "Transformer",
+              "count": 1,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "count": 2,
+              "broad": "Radioactivity"
+            }
+          },
+          "total": 33
+        }
+      ]
+    },
+    "paper1B": {
+      "unit": "marks",
+      "fullMarks": 84,
+      "years": [
+        {
+          "year": 2012,
+          "byTopic": {
+            "Heat and Gases": 11,
+            "Force and Motion": 26,
+            "Wave Motion": 6,
+            "Optics": 12,
+            "Electricity and Magnetism": 22,
+            "Radioactivity": 7
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "marks": 7,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "marks": 4,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "marks": 2,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "marks": 13,
+              "broad": "Force and Motion"
+            },
+            "B4": {
+              "name": "Projectile motion",
+              "marks": 4,
+              "broad": "Force and Motion"
+            },
+            "B5": {
+              "name": "Circular motion",
+              "marks": 7,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature and Phenomena of waves",
+              "marks": 6,
+              "broad": "Wave Motion"
+            },
+            "C4": {
+              "name": "Wave nature of Light",
+              "marks": 2,
+              "broad": "Optics"
+            },
+            "C5": {
+              "name": "Ray optics",
+              "marks": 10,
+              "broad": "Optics"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "marks": 8,
+              "broad": "Electricity and Magnetism"
+            },
+            "D3": {
+              "name": "Domestic electricity",
+              "marks": 4,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "marks": 7,
+              "broad": "Electricity and Magnetism"
+            },
+            "D6": {
+              "name": "Transformer",
+              "marks": 3,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "marks": 7,
+              "broad": "Radioactivity"
+            }
+          }
+        },
+        {
+          "year": 2013,
+          "byTopic": {
+            "Heat and Gases": 12,
+            "Force and Motion": 22,
+            "Wave Motion": 10,
+            "Optics": 9,
+            "Electricity and Magnetism": 25,
+            "Radioactivity": 6
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "marks": 12,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "marks": 5,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "marks": 17,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature and Phenomena of waves",
+              "marks": 8,
+              "broad": "Wave Motion"
+            },
+            "C3": {
+              "name": "EM waves and Sound",
+              "marks": 2,
+              "broad": "Wave Motion"
+            },
+            "C5": {
+              "name": "Ray optics",
+              "marks": 9,
+              "broad": "Optics"
+            },
+            "D1": {
+              "name": "Electrostatics",
+              "marks": 7,
+              "broad": "Electricity and Magnetism"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "marks": 11,
+              "broad": "Electricity and Magnetism"
+            },
+            "D4": {
+              "name": "EM",
+              "marks": 7,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "marks": 6,
+              "broad": "Radioactivity"
+            }
+          }
+        },
+        {
+          "year": 2014,
+          "byTopic": {
+            "Heat and Gases": 13,
+            "Force and Motion": 21,
+            "Optics": 22,
+            "Electricity and Magnetism": 20,
+            "Radioactivity": 8
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "marks": 7,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "marks": 6,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "marks": 19,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "marks": 2,
+              "broad": "Force and Motion"
+            },
+            "C4": {
+              "name": "Wave nature of Light",
+              "marks": 7,
+              "broad": "Optics"
+            },
+            "C5": {
+              "name": "Ray optics",
+              "marks": 15,
+              "broad": "Optics"
+            },
+            "D3": {
+              "name": "Domestic electricity",
+              "marks": 12,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "marks": 8,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "marks": 8,
+              "broad": "Radioactivity"
+            }
+          }
+        },
+        {
+          "year": 2015,
+          "byTopic": {
+            "Heat and Gases": 11,
+            "Force and Motion": 26,
+            "Wave Motion": 6,
+            "Optics": 12,
+            "Electricity and Magnetism": 22,
+            "Radioactivity": 7
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "marks": 5,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "marks": 6,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "marks": 17,
+              "broad": "Force and Motion"
+            },
+            "B4": {
+              "name": "Projectile motion",
+              "marks": 9,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature and Phenomena of waves",
+              "marks": 6,
+              "broad": "Wave Motion"
+            },
+            "C4": {
+              "name": "Wave nature of Light",
+              "marks": 4,
+              "broad": "Optics"
+            },
+            "C5": {
+              "name": "Ray optics",
+              "marks": 8,
+              "broad": "Optics"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "marks": 10,
+              "broad": "Electricity and Magnetism"
+            },
+            "D4": {
+              "name": "EM",
+              "marks": 9,
+              "broad": "Electricity and Magnetism"
+            },
+            "D6": {
+              "name": "Transformer",
+              "marks": 3,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "marks": 7,
+              "broad": "Radioactivity"
+            }
+          }
+        },
+        {
+          "year": 2016,
+          "byTopic": {
+            "Heat and Gases": 15,
+            "Force and Motion": 20,
+            "Optics": 21,
+            "Electricity and Magnetism": 20,
+            "Radioactivity": 8
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "marks": 8,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "marks": 7,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "marks": 9,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "marks": 11,
+              "broad": "Force and Motion"
+            },
+            "C4": {
+              "name": "Wave nature of Light",
+              "marks": 10,
+              "broad": "Optics"
+            },
+            "C5": {
+              "name": "Ray optics",
+              "marks": 11,
+              "broad": "Optics"
+            },
+            "D1": {
+              "name": "Electrostatics",
+              "marks": 3,
+              "broad": "Electricity and Magnetism"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "marks": 9,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "marks": 8,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "marks": 8,
+              "broad": "Radioactivity"
+            }
+          }
+        },
+        {
+          "year": 2017,
+          "byTopic": {
+            "Heat and Gases": 11,
+            "Force and Motion": 23,
+            "Wave Motion": 10,
+            "Optics": 11,
+            "Electricity and Magnetism": 22,
+            "Radioactivity": 7
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "marks": 7,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "marks": 4,
+              "broad": "Heat and Gases"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "marks": 5,
+              "broad": "Force and Motion"
+            },
+            "B4": {
+              "name": "Projectile motion",
+              "marks": 10,
+              "broad": "Force and Motion"
+            },
+            "B5": {
+              "name": "Circular motion",
+              "marks": 8,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature and Phenomena of waves",
+              "marks": 10,
+              "broad": "Wave Motion"
+            },
+            "C5": {
+              "name": "Ray optics",
+              "marks": 11,
+              "broad": "Optics"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "marks": 12,
+              "broad": "Electricity and Magnetism"
+            },
+            "D4": {
+              "name": "EM",
+              "marks": 10,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "marks": 7,
+              "broad": "Radioactivity"
+            }
+          }
+        },
+        {
+          "year": 2018,
+          "byTopic": {
+            "Heat and Gases": 11,
+            "Force and Motion": 25,
+            "Wave Motion": 4,
+            "Optics": 15,
+            "Electricity and Magnetism": 21,
+            "Radioactivity": 8
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "marks": 5,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "marks": 6,
+              "broad": "Heat and Gases"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "marks": 10,
+              "broad": "Force and Motion"
+            },
+            "B3": {
+              "name": "Moment",
+              "marks": 9,
+              "broad": "Force and Motion"
+            },
+            "B4": {
+              "name": "Projectile motion",
+              "marks": 6,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature and Phenomena of waves",
+              "marks": 4,
+              "broad": "Wave Motion"
+            },
+            "C4": {
+              "name": "Wave nature of Light",
+              "marks": 5,
+              "broad": "Optics"
+            },
+            "C5": {
+              "name": "Ray optics",
+              "marks": 10,
+              "broad": "Optics"
+            },
+            "D3": {
+              "name": "Domestic electricity",
+              "marks": 9,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "marks": 12,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "marks": 8,
+              "broad": "Radioactivity"
+            }
+          }
+        },
+        {
+          "year": 2019,
+          "byTopic": {
+            "Heat and Gases": 15,
+            "Force and Motion": 21,
+            "Wave Motion": 7,
+            "Optics": 9,
+            "Electricity and Magnetism": 25,
+            "Radioactivity": 7
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "marks": 7,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "marks": 8,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "marks": 7,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "marks": 4,
+              "broad": "Force and Motion"
+            },
+            "B5": {
+              "name": "Circular motion",
+              "marks": 6,
+              "broad": "Force and Motion"
+            },
+            "B6": {
+              "name": "Gravitation",
+              "marks": 4,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature and Phenomena of waves",
+              "marks": 7,
+              "broad": "Wave Motion"
+            },
+            "C5": {
+              "name": "Ray optics",
+              "marks": 9,
+              "broad": "Optics"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "marks": 7,
+              "broad": "Electricity and Magnetism"
+            },
+            "D3": {
+              "name": "Domestic electricity",
+              "marks": 8,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "marks": 10,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "marks": 7,
+              "broad": "Radioactivity"
+            }
+          }
+        },
+        {
+          "year": 2020,
+          "byTopic": {
+            "Heat and Gases": 14,
+            "Force and Motion": 25,
+            "Wave Motion": 6,
+            "Optics": 9,
+            "Electricity and Magnetism": 25,
+            "Radioactivity": 5
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "marks": 8,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "marks": 6,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "marks": 8,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "marks": 14,
+              "broad": "Force and Motion"
+            },
+            "B4": {
+              "name": "Projectile motion",
+              "marks": 3,
+              "broad": "Force and Motion"
+            },
+            "C3": {
+              "name": "EM waves and Sound",
+              "marks": 6,
+              "broad": "Wave Motion"
+            },
+            "C5": {
+              "name": "Ray optics",
+              "marks": 9,
+              "broad": "Optics"
+            },
+            "D1": {
+              "name": "Electrostatics",
+              "marks": 8,
+              "broad": "Electricity and Magnetism"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "marks": 9,
+              "broad": "Electricity and Magnetism"
+            },
+            "D3": {
+              "name": "Domestic electricity",
+              "marks": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D4": {
+              "name": "EM",
+              "marks": 6,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "marks": 5,
+              "broad": "Radioactivity"
+            }
+          }
+        },
+        {
+          "year": 2021,
+          "byTopic": {
+            "Heat and Gases": 15,
+            "Force and Motion": 28,
+            "Wave Motion": 9,
+            "Optics": 7,
+            "Electricity and Magnetism": 20,
+            "Radioactivity": 5
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "marks": 8,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "marks": 7,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "marks": 10,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "marks": 4,
+              "broad": "Force and Motion"
+            },
+            "B4": {
+              "name": "Projectile motion",
+              "marks": 9,
+              "broad": "Force and Motion"
+            },
+            "B6": {
+              "name": "Gravitation",
+              "marks": 5,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature and Phenomena of waves",
+              "marks": 5,
+              "broad": "Wave Motion"
+            },
+            "C3": {
+              "name": "EM waves and Sound",
+              "marks": 4,
+              "broad": "Wave Motion"
+            },
+            "C5": {
+              "name": "Ray optics",
+              "marks": 7,
+              "broad": "Optics"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "marks": 10,
+              "broad": "Electricity and Magnetism"
+            },
+            "D3": {
+              "name": "Domestic electricity",
+              "marks": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "marks": 8,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "marks": 5,
+              "broad": "Radioactivity"
+            }
+          }
+        },
+        {
+          "year": 2022,
+          "byTopic": {
+            "Heat and Gases": 18,
+            "Force and Motion": 18,
+            "Wave Motion": 9,
+            "Optics": 8,
+            "Electricity and Magnetism": 25,
+            "Radioactivity": 6
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "marks": 8,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "marks": 10,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "marks": 6,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "marks": 6,
+              "broad": "Force and Motion"
+            },
+            "B5": {
+              "name": "Circular motion",
+              "marks": 6,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature and Phenomena of waves",
+              "marks": 9,
+              "broad": "Wave Motion"
+            },
+            "C5": {
+              "name": "Ray optics",
+              "marks": 8,
+              "broad": "Optics"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "marks": 10,
+              "broad": "Electricity and Magnetism"
+            },
+            "D4": {
+              "name": "EM",
+              "marks": 9,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "marks": 6,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "marks": 6,
+              "broad": "Radioactivity"
+            }
+          }
+        },
+        {
+          "year": 2023,
+          "byTopic": {
+            "Heat and Gases": 16,
+            "Force and Motion": 25,
+            "Wave Motion": 8,
+            "Optics": 9,
+            "Electricity and Magnetism": 19,
+            "Radioactivity": 7
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "marks": 8,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "marks": 8,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "marks": 12,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "marks": 3,
+              "broad": "Force and Motion"
+            },
+            "B5": {
+              "name": "Circular motion",
+              "marks": 10,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature and Phenomena of waves",
+              "marks": 8,
+              "broad": "Wave Motion"
+            },
+            "C5": {
+              "name": "Ray optics",
+              "marks": 9,
+              "broad": "Optics"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "marks": 8,
+              "broad": "Electricity and Magnetism"
+            },
+            "D4": {
+              "name": "EM",
+              "marks": 11,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "marks": 7,
+              "broad": "Radioactivity"
+            }
+          }
+        },
+        {
+          "year": 2024,
+          "byTopic": {
+            "Heat and Gases": 12,
+            "Force and Motion": 22,
+            "Wave Motion": 10,
+            "Optics": 11,
+            "Electricity and Magnetism": 21,
+            "Radioactivity": 8
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "marks": 6,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "marks": 6,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "marks": 2,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "marks": 12,
+              "broad": "Force and Motion"
+            },
+            "B4": {
+              "name": "Projectile motion",
+              "marks": 2,
+              "broad": "Force and Motion"
+            },
+            "B5": {
+              "name": "Circular motion",
+              "marks": 6,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature and Phenomena of waves",
+              "marks": 4,
+              "broad": "Wave Motion"
+            },
+            "C3": {
+              "name": "EM waves and Sound",
+              "marks": 6,
+              "broad": "Wave Motion"
+            },
+            "C4": {
+              "name": "Wave nature of Light",
+              "marks": 5,
+              "broad": "Optics"
+            },
+            "C5": {
+              "name": "Ray optics",
+              "marks": 6,
+              "broad": "Optics"
+            },
+            "D1": {
+              "name": "Electrostatics",
+              "marks": 6,
+              "broad": "Electricity and Magnetism"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "marks": 7,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "marks": 8,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "marks": 8,
+              "broad": "Radioactivity"
+            }
+          }
+        },
+        {
+          "year": 2025,
+          "byTopic": {
+            "Heat and Gases": 11,
+            "Force and Motion": 20,
+            "Wave Motion": 12,
+            "Optics": 8,
+            "Electricity and Magnetism": 28,
+            "Radioactivity": 5
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "marks": 5,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "marks": 6,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "marks": 6,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "marks": 6,
+              "broad": "Force and Motion"
+            },
+            "B4": {
+              "name": "Projectile motion",
+              "marks": 4,
+              "broad": "Force and Motion"
+            },
+            "B5": {
+              "name": "Circular motion",
+              "marks": 4,
+              "broad": "Force and Motion"
+            },
+            "C2": {
+              "name": "Stationary waves",
+              "marks": 12,
+              "broad": "Wave Motion"
+            },
+            "C5": {
+              "name": "Ray optics",
+              "marks": 8,
+              "broad": "Optics"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "marks": 12,
+              "broad": "Electricity and Magnetism"
+            },
+            "D4": {
+              "name": "EM",
+              "marks": 4,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "marks": 6,
+              "broad": "Electricity and Magnetism"
+            },
+            "D6": {
+              "name": "Transformer",
+              "marks": 6,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "marks": 5,
+              "broad": "Radioactivity"
+            }
+          }
+        },
+        {
+          "year": 2026,
+          "byTopic": {
+            "Heat and Gases": 11,
+            "Force and Motion": 23,
+            "Wave Motion": 12,
+            "Optics": 11,
+            "Electricity and Magnetism": 18,
+            "Radioactivity": 9
+          },
+          "bySubtopic": {
+            "A1": {
+              "name": "Heat",
+              "marks": 5,
+              "broad": "Heat and Gases"
+            },
+            "A2": {
+              "name": "Gases",
+              "marks": 6,
+              "broad": "Heat and Gases"
+            },
+            "B1": {
+              "name": "Force and motion",
+              "marks": 7,
+              "broad": "Force and Motion"
+            },
+            "B2": {
+              "name": "Energy and momentum",
+              "marks": 5,
+              "broad": "Force and Motion"
+            },
+            "B3": {
+              "name": "Moment",
+              "marks": 2,
+              "broad": "Force and Motion"
+            },
+            "B4": {
+              "name": "Projectile motion",
+              "marks": 6,
+              "broad": "Force and Motion"
+            },
+            "B5": {
+              "name": "Circular motion",
+              "marks": 3,
+              "broad": "Force and Motion"
+            },
+            "C1": {
+              "name": "Nature and Phenomena of waves",
+              "marks": 7,
+              "broad": "Wave Motion"
+            },
+            "C3": {
+              "name": "EM waves and Sound",
+              "marks": 5,
+              "broad": "Wave Motion"
+            },
+            "C5": {
+              "name": "Ray optics",
+              "marks": 11,
+              "broad": "Optics"
+            },
+            "D1": {
+              "name": "Electrostatics",
+              "marks": 5,
+              "broad": "Electricity and Magnetism"
+            },
+            "D2": {
+              "name": "Electric circuit",
+              "marks": 2,
+              "broad": "Electricity and Magnetism"
+            },
+            "D3": {
+              "name": "Domestic electricity",
+              "marks": 6,
+              "broad": "Electricity and Magnetism"
+            },
+            "D5": {
+              "name": "EM induction",
+              "marks": 5,
+              "broad": "Electricity and Magnetism"
+            },
+            "E": {
+              "name": "Radioactivity",
+              "marks": 9,
+              "broad": "Radioactivity"
+            }
+          }
+        }
+      ]
+    },
+    "paper2": {
+      "E2": [
+        {
+          "year": 2012,
+          "topics": {
+            "Photoelectric effect": null,
+            "Atomic model": "Bohr's model",
+            "Nanotechnology": null
+          }
+        },
+        {
+          "year": 2013,
+          "topics": {
+            "Photoelectric effect": "Photoelectric effect",
+            "Atomic model": null,
+            "Nanotechnology": null
+          }
+        },
+        {
+          "year": 2014,
+          "topics": {
+            "Photoelectric effect": null,
+            "Atomic model": null,
+            "Nanotechnology": "TEM + STM"
+          }
+        },
+        {
+          "year": 2015,
+          "topics": {
+            "Photoelectric effect": null,
+            "Atomic model": "Bohr's model",
+            "Nanotechnology": null
+          }
+        },
+        {
+          "year": 2016,
+          "topics": {
+            "Photoelectric effect": "Photoelectric effect",
+            "Atomic model": null,
+            "Nanotechnology": null
+          }
+        },
+        {
+          "year": 2017,
+          "topics": {
+            "Photoelectric effect": null,
+            "Atomic model": "Bohr's model + Line spectrum",
+            "Nanotechnology": null
+          }
+        },
+        {
+          "year": 2018,
+          "topics": {
+            "Photoelectric effect": "Photoelectric effect",
+            "Atomic model": null,
+            "Nanotechnology": null
+          }
+        },
+        {
+          "year": 2019,
+          "topics": {
+            "Photoelectric effect": null,
+            "Atomic model": "Bohr's model",
+            "Nanotechnology": null
+          }
+        },
+        {
+          "year": 2020,
+          "topics": {
+            "Photoelectric effect": "Photoelectric effect",
+            "Atomic model": null,
+            "Nanotechnology": null
+          }
+        },
+        {
+          "year": 2021,
+          "topics": {
+            "Photoelectric effect": null,
+            "Atomic model": "Line spectrum",
+            "Nanotechnology": null
+          }
+        },
+        {
+          "year": 2022,
+          "topics": {
+            "Photoelectric effect": "Photoelectric effect",
+            "Atomic model": null,
+            "Nanotechnology": null
+          }
+        },
+        {
+          "year": 2023,
+          "topics": {
+            "Photoelectric effect": null,
+            "Atomic model": "Bohr's model + Line spectrum",
+            "Nanotechnology": null
+          }
+        },
+        {
+          "year": 2024,
+          "topics": {
+            "Photoelectric effect": null,
+            "Atomic model": "Bohr's model",
+            "Nanotechnology": null
+          }
+        },
+        {
+          "year": 2025,
+          "topics": {
+            "Photoelectric effect": "Photoelectric effect",
+            "Atomic model": "Bohr's model",
+            "Nanotechnology": null
+          }
+        }
+      ],
+      "E3": [
+        {
+          "year": 2012,
+          "topics": {
+            "Lighting": null,
+            "Moving heat": null,
+            "Transportation and Building": null,
+            "Source of Energy": "Solar power"
+          }
+        },
+        {
+          "year": 2013,
+          "topics": {
+            "Lighting": "Illuminance",
+            "Moving heat": "Air-con",
+            "Transportation and Building": null,
+            "Source of Energy": null
+          }
+        },
+        {
+          "year": 2014,
+          "topics": {
+            "Lighting": null,
+            "Moving heat": null,
+            "Transportation and Building": "Electric vehicles",
+            "Source of Energy": null
+          }
+        },
+        {
+          "year": 2015,
+          "topics": {
+            "Lighting": null,
+            "Moving heat": "Air-con",
+            "Transportation and Building": null,
+            "Source of Energy": null
+          }
+        },
+        {
+          "year": 2016,
+          "topics": {
+            "Lighting": null,
+            "Moving heat": null,
+            "Transportation and Building": null,
+            "Source of Energy": "Hydroelectric + Wind power"
+          }
+        },
+        {
+          "year": 2017,
+          "topics": {
+            "Lighting": null,
+            "Moving heat": "Air-con",
+            "Transportation and Building": null,
+            "Source of Energy": null
+          }
+        },
+        {
+          "year": 2018,
+          "topics": {
+            "Lighting": "Illuminance",
+            "Moving heat": null,
+            "Transportation and Building": null,
+            "Source of Energy": null
+          }
+        },
+        {
+          "year": 2019,
+          "topics": {
+            "Lighting": null,
+            "Moving heat": null,
+            "Transportation and Building": null,
+            "Source of Energy": "Solar power"
+          }
+        },
+        {
+          "year": 2020,
+          "topics": {
+            "Lighting": null,
+            "Moving heat": null,
+            "Transportation and Building": null,
+            "Source of Energy": "Nuclear power"
+          }
+        },
+        {
+          "year": 2021,
+          "topics": {
+            "Lighting": null,
+            "Moving heat": null,
+            "Transportation and Building": "Electric vehicles",
+            "Source of Energy": null
+          }
+        },
+        {
+          "year": 2022,
+          "topics": {
+            "Lighting": null,
+            "Moving heat": null,
+            "Transportation and Building": null,
+            "Source of Energy": "Solar power"
+          }
+        },
+        {
+          "year": 2023,
+          "topics": {
+            "Lighting": null,
+            "Moving heat": "Air-con",
+            "Transportation and Building": null,
+            "Source of Energy": null
+          }
+        },
+        {
+          "year": 2024,
+          "topics": {
+            "Lighting": "Illuminance",
+            "Moving heat": null,
+            "Transportation and Building": null,
+            "Source of Energy": "Solar power"
+          }
+        },
+        {
+          "year": 2025,
+          "topics": {
+            "Lighting": "Types of Lamp",
+            "Moving heat": "Air-con",
+            "Transportation and Building": "U-value",
+            "Source of Energy": null
+          }
+        }
+      ]
+    }
+  },
+  "topicOrder": [
+    "Heat and Gases",
+    "Force and Motion",
+    "Wave Motion",
+    "Optics",
+    "Electricity and Magnetism",
+    "Radioactivity"
+  ],
+  "topicColors": {
+    "Heat and Gases": "#e3780c",
+    "Force and Motion": "#1865f2",
+    "Wave Motion": "#12a377",
+    "Optics": "#7f3f98",
+    "Electricity and Magnetism": "#be123c",
+    "Radioactivity": "#5b6170"
+  }
+}

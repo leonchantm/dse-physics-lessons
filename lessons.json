@@ -790,6 +790,101 @@
         }
       ],
       "lessonCount": 15
+    },
+    {
+      "id": "radioactivity",
+      "topic": 5,
+      "title": "Radioactivity and Nuclear Energy",
+      "titleZh": "放射性與核能",
+      "icon": "☢️",
+      "about": "X-rays and nuclear radiation, atomic model and decay equations, half-life and safety, exponential decay (extension), fission and fusion, and mass–energy (extension). Lesson numbers follow your Radioactivity notes chapters.",
+      "groups": [
+        {
+          "id": "5-1",
+          "chapter": "5.1",
+          "title": "Radiation and radioactivity",
+          "titleZh": "輻射與放射性",
+          "lessons": [
+            {
+              "id": "5-1a-radiation-types-detection",
+              "file": "5-1a-radiation-types-detection.html",
+              "number": "5.1a",
+              "title": "Radiation Types and Detection",
+              "steps": 11,
+              "guide": "a. Radiation and Radioactivity",
+              "level": "Core",
+              "topic": 5
+            },
+            {
+              "id": "5-1b-atomic-model-decay-equations",
+              "file": "5-1b-atomic-model-decay-equations.html",
+              "number": "5.1b",
+              "title": "Atomic Model and Decay Equations",
+              "steps": 14,
+              "guide": "b. Atomic model",
+              "level": "Core",
+              "topic": 5
+            }
+          ]
+        },
+        {
+          "id": "5-2",
+          "chapter": "5.2",
+          "title": "Rate of decay",
+          "titleZh": "衰變率",
+          "lessons": [
+            {
+              "id": "5-2a-half-life-activity-safety",
+              "file": "5-2a-half-life-activity-safety.html",
+              "number": "5.2a",
+              "title": "Half-life, Activity and Safety",
+              "steps": 14,
+              "guide": "a. Radiation and Radioactivity",
+              "level": "Core",
+              "topic": 5
+            },
+            {
+              "id": "5-2b-exponential-decay-law",
+              "file": "5-2b-exponential-decay-law.html",
+              "number": "5.2b",
+              "title": "Exponential Decay Law",
+              "steps": 9,
+              "guide": "a. Radiation and Radioactivity",
+              "level": "Extension",
+              "topic": 5
+            }
+          ]
+        },
+        {
+          "id": "5-3",
+          "chapter": "5.3",
+          "title": "Nuclear energy",
+          "titleZh": "核能",
+          "lessons": [
+            {
+              "id": "5-3a-fission-fusion",
+              "file": "5-3a-fission-fusion.html",
+              "number": "5.3a",
+              "title": "Nuclear Fission and Fusion",
+              "steps": 11,
+              "guide": "c. Nuclear energy",
+              "level": "Core",
+              "topic": 5
+            },
+            {
+              "id": "5-3b-mass-energy",
+              "file": "5-3b-mass-energy.html",
+              "number": "5.3b",
+              "title": "Mass–Energy Relationship",
+              "steps": 10,
+              "guide": "c. Nuclear energy",
+              "level": "Extension",
+              "topic": 5
+            }
+          ]
+        }
+      ],
+      "lessonCount": 6
     }
   ]
 }

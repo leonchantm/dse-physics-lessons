@@ -210,6 +210,10 @@ table.data .spec{color:var(--orange);font-size:.75rem}
     ctx.clearRect(0,0,W,H);
     ctx.fillStyle = '#fff'; ctx.fillRect(0,0,W,H);
     var stacks = years.map(function(y){ return getValues(y); });
+    var labels = years.map(function(y){
+      if (y && typeof y === 'object' && y.year != null) return String(y.year);
+      return String(y);
+    });
     var max = 0;
     stacks.forEach(function(st){
       var s = seriesKeys.reduce(function(a,k){ return a + (st[k]||0); }, 0);
@@ -242,7 +246,8 @@ table.data .spec{color:var(--orange);font-size:.75rem}
         ctx.fillRect(x, y0, barW, h);
       });
       ctx.fillStyle = '#5b6170'; ctx.textAlign = 'center'; ctx.textBaseline = 'top';
-      ctx.fillText(String(year).slice(2), x + barW/2, pad.t + plotH + 8);
+      var lab = labels[i];
+      ctx.fillText(lab.length === 4 ? lab.slice(2) : lab, x + barW/2, pad.t + plotH + 8);
     });
   }
 

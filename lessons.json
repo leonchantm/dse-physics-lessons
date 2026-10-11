@@ -573,6 +573,223 @@
         }
       ],
       "lessonCount": 15
+    },
+    {
+      "id": "electricity-magnetism",
+      "topic": 4,
+      "title": "Electricity and Magnetism",
+      "titleZh": "電和磁",
+      "icon": "⚡",
+      "about": "Electrostatics, circuits, domestic electricity, electromagnetism, induction, a.c., transformers and HV transmission. Lesson numbers follow your E&M notes chapters. Extension items from the C&A Guide are labelled inside lessons.",
+      "groups": [
+        {
+          "id": "4-1",
+          "chapter": "4.1",
+          "title": "Electrostatics",
+          "titleZh": "靜電學",
+          "lessons": [
+            {
+              "id": "4-1-electrostatics",
+              "file": "4-1-electrostatics.html",
+              "number": "4.1",
+              "title": "Electrostatics",
+              "steps": 10,
+              "guide": "a. Electrostatics",
+              "level": "Core",
+              "topic": 4
+            }
+          ]
+        },
+        {
+          "id": "4-2",
+          "chapter": "4.2",
+          "title": "Electric force and field",
+          "titleZh": "電場",
+          "lessons": [
+            {
+              "id": "4-2a-coulombs-law",
+              "file": "4-2a-coulombs-law.html",
+              "number": "4.2a",
+              "title": "Coulomb's Law",
+              "steps": 8,
+              "guide": "a. Electrostatics",
+              "level": "Extension",
+              "topic": 4
+            },
+            {
+              "id": "4-2b-electric-field",
+              "file": "4-2b-electric-field.html",
+              "number": "4.2b",
+              "title": "Electric Field",
+              "steps": 12,
+              "guide": "a. Electrostatics",
+              "level": "Core + Extension",
+              "topic": 4
+            }
+          ]
+        },
+        {
+          "id": "4-3",
+          "chapter": "4.3",
+          "title": "Electric circuits",
+          "titleZh": "電路",
+          "lessons": [
+            {
+              "id": "4-3a-current-emf-resistance",
+              "file": "4-3a-current-emf-resistance.html",
+              "number": "4.3a",
+              "title": "Current, e.m.f. and Resistance",
+              "steps": 17,
+              "guide": "b. Circuits and domestic electricity",
+              "level": "Core",
+              "topic": 4
+            },
+            {
+              "id": "4-3b-series-parallel-circuits",
+              "file": "4-3b-series-parallel-circuits.html",
+              "number": "4.3b",
+              "title": "Series and Parallel Circuits",
+              "steps": 13,
+              "guide": "b. Circuits and domestic electricity",
+              "level": "Core",
+              "topic": 4
+            },
+            {
+              "id": "4-3c-electrical-power",
+              "file": "4-3c-electrical-power.html",
+              "number": "4.3c",
+              "title": "Electrical Power",
+              "steps": 9,
+              "guide": "b. Circuits and domestic electricity",
+              "level": "Core",
+              "topic": 4
+            }
+          ]
+        },
+        {
+          "id": "4-4",
+          "chapter": "4.4",
+          "title": "Domestic electricity",
+          "titleZh": "家用電",
+          "lessons": [
+            {
+              "id": "4-4-domestic-electricity",
+              "file": "4-4-domestic-electricity.html",
+              "number": "4.4",
+              "title": "Domestic Electricity",
+              "steps": 12,
+              "guide": "b. Circuits and domestic electricity",
+              "level": "Core",
+              "topic": 4
+            }
+          ]
+        },
+        {
+          "id": "4-5",
+          "chapter": "4.5",
+          "title": "Electromagnetism",
+          "titleZh": "電磁",
+          "lessons": [
+            {
+              "id": "4-5a-magnetic-fields",
+              "file": "4-5a-magnetic-fields.html",
+              "number": "4.5a",
+              "title": "Magnetic Fields and Currents",
+              "steps": 15,
+              "guide": "c. Electromagnetism",
+              "level": "Core + Extension",
+              "topic": 4
+            },
+            {
+              "id": "4-5b-magnetic-force-motors",
+              "file": "4-5b-magnetic-force-motors.html",
+              "number": "4.5b",
+              "title": "Magnetic Force and Motors",
+              "steps": 10,
+              "guide": "c. Electromagnetism",
+              "level": "Core",
+              "topic": 4
+            },
+            {
+              "id": "4-5c-force-on-charges",
+              "file": "4-5c-force-on-charges.html",
+              "number": "4.5c",
+              "title": "Force on Moving Charges",
+              "steps": 9,
+              "guide": "c. Electromagnetism",
+              "level": "Extension",
+              "topic": 4
+            }
+          ]
+        },
+        {
+          "id": "4-6",
+          "chapter": "4.6",
+          "title": "Electromagnetic induction",
+          "titleZh": "電磁感應",
+          "lessons": [
+            {
+              "id": "4-6a-electromagnetic-induction",
+              "file": "4-6a-electromagnetic-induction.html",
+              "number": "4.6a",
+              "title": "Electromagnetic Induction",
+              "steps": 8,
+              "guide": "c. Electromagnetism",
+              "level": "Core",
+              "topic": 4
+            },
+            {
+              "id": "4-6b-faraday-generators",
+              "file": "4-6b-faraday-generators.html",
+              "number": "4.6b",
+              "title": "Faraday Law and Generators",
+              "steps": 13,
+              "guide": "c. Electromagnetism",
+              "level": "Core + Extension",
+              "topic": 4
+            },
+            {
+              "id": "4-6c-alternating-current",
+              "file": "4-6c-alternating-current.html",
+              "number": "4.6c",
+              "title": "Alternating Current",
+              "steps": 9,
+              "guide": "c. Electromagnetism",
+              "level": "Extension",
+              "topic": 4
+            }
+          ]
+        },
+        {
+          "id": "4-7",
+          "chapter": "4.7",
+          "title": "Transformers and transmission",
+          "titleZh": "變壓器與輸電",
+          "lessons": [
+            {
+              "id": "4-7a-transformers",
+              "file": "4-7a-transformers.html",
+              "number": "4.7a",
+              "title": "Transformers",
+              "steps": 10,
+              "guide": "c. Electromagnetism",
+              "level": "Extension",
+              "topic": 4
+            },
+            {
+              "id": "4-7b-power-transmission",
+              "file": "4-7b-power-transmission.html",
+              "number": "4.7b",
+              "title": "High-Voltage Transmission",
+              "steps": 9,
+              "guide": "c. Electromagnetism",
+              "level": "Extension",
+              "topic": 4
+            }
+          ]
+        }
+      ],
+      "lessonCount": 15
     }
   ]
 }

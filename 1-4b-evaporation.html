@@ -159,6 +159,18 @@
     details.teacher{padding:0 .75rem}
   }
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* --- Heat enrichment visuals --- */
+.viz-block{margin:1rem 0 0;padding:0}
+.viz-block .visual{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;padding:.6rem;text-align:center}
+.viz-block .visual img,.viz-block .visual svg{width:100%;height:auto;max-height:340px;display:block;margin:0 auto}
+.viz-block figcaption,.viz-block .caption{margin:.4rem 0 0;font-size:.9rem;color:#5b6170;text-align:center}
+.mini-demo{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;padding:.6rem}
+.mini-demo canvas.demo-canvas{width:100%;height:auto;max-width:640px;display:block;margin:0 auto;background:#fff;border-radius:8px;border:1px solid #e3e5ea}
+.mini-demo .demo-controls{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center;margin-top:.5rem;font-size:.9rem}
+.mini-demo .demo-controls label{font-weight:600;color:#0a2a66}
+.mini-demo .demo-controls input[type=range]{width:min(220px,50vw)}
+
 </style>
 </head>
 <body data-home-flat="index.html" data-home-nested="../../index.html">
@@ -211,6 +223,10 @@
   </div>
   <div class="box warn"><span class="box-title">Common mistakes ⚠️</span><ul class="simple"><li>“Evaporation does not need energy.” ✗ It needs latent heat just like boiling — that is why it cools things.</li><li>“Water only turns into vapour at 100 °C.” ✗ That is boiling. Evaporation happens at room temperature too.</li></ul></div>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/evaporation-surface.svg" alt="Molecules escaping from a liquid surface" loading="lazy"></div><figcaption class="caption">Evaporation occurs at the surface below the boiling point.</figcaption></figure>
+<figure class="viz-block mini-demo" data-demo="evaporation"><canvas class="demo-canvas" width="640" height="200" role="img" aria-label="Molecules escaping from liquid surface"></canvas><div class="demo-controls"><label>Relative surface / airflow <input type="range" data-param="area" min="20" max="100" value="50"></label></div><figcaption class="caption">Only the faster molecules escape.</figcaption></figure>
 </section>
 <section class="step step-learn" data-id="micro" data-name="Molecular Explanation" data-kind="learn"><span class="step-kind learn">Learn</span>
 <span class="tag">Idea 2</span>
@@ -243,6 +259,9 @@
   </div>
   <div class="box warn"><span class="box-title">🥵 Heat stroke — reading &amp; discussion</span>On hot, <b>humid</b> days sweat evaporates <b>slowly</b>, so the body cannot lose heat effectively; body temperature can rise above 40 °C (heat stroke, a medical emergency).<br><b>Precautions:</b> drink plenty of water, wear loose light-coloured clothing, avoid strenuous exercise under strong sun, rest in shade; watch for the Very Hot Weather Warning.<br><b>Care:</b> move the person to a cool place, loosen clothing, sponge with water and fan them (increases evaporation), and call 999.</div>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/cooling-by-evaporation.svg" alt="Liquid cools after fast molecules leave" loading="lazy"></div><figcaption class="caption">Average KE of remaining molecules falls → temperature falls.</figcaption></figure>
 </section>
 <section class="step step-practice" data-id="p1" data-name="Practice: Evaporation" data-kind="practice"><span class="step-kind practice">Practice</span>
 <span class="tag quiz">Practice 1</span>
@@ -258,6 +277,9 @@
   <tr><td>humidity of the air</td><td>lower</td><td>fewer vapour molecules above the liquid → fewer return to the liquid</td></tr>
   <tr><td>air movement (wind)</td><td>windier</td><td>escaped vapour molecules are blown away, so fewer return</td></tr></table>
 <div class="box eg"><span class="box-title">🔬 Investigation: a fair test</span>Put equal masses of water in dishes on electronic balances and record the mass every 10 minutes. Change <b>one factor only</b> (e.g. dish area, or a fan on/off), keeping the others the same (same starting temperature, same room, same initial mass). The rate of mass loss measures the rate of evaporation.</div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/evaporation-factors.svg" alt="Factors that increase evaporation rate" loading="lazy"></div><figcaption class="caption">Higher T, larger area, airflow, and drier air all speed evaporation.</figcaption></figure>
 </section>
 <section class="step step-sim" data-id="sim" data-name="Simulation" data-kind="sim"><span class="step-kind sim">Try it</span>
 <span class="tag sim">Try it!</span>
@@ -301,6 +323,9 @@
 <h2 tabindex="-1">How much does sweating cool you?</h2>
 <div class="box eg worked"><span class="box-title">✏️ Example</span>A 60 kg runner evaporates 1.2 kg of sweat in 1.0 hour. Take ℓ<sub>v</sub> of water at body temperature = 2.43 × 10⁶ J kg⁻¹ and the specific heat capacity of the body = 3470 J kg⁻¹ °C⁻¹.<br>(a) Average rate of heat loss by evaporation = mℓ<sub>v</sub>/t = 1.2 × 2.43 × 10⁶ ÷ 3600 = <b>810 W</b><br>(b) If this energy could not escape, how long would it take to raise the body temperature from 37 °C to 40 °C?<br>E = mcΔT = 60 × 3470 × 3 = 624 600 J ⇒ t = 624 600 ÷ 810 = <b>771 s</b> (about 13 minutes!)</div>
 <div class="box warn"><span class="box-title">Notes ⚠️</span>ℓ<sub>v</sub> at body temperature (2.43 × 10⁶ J kg⁻¹) is a little larger than at 100 °C (2.26 × 10⁶ J kg⁻¹). Use the value given in the question.</div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/cooling-by-evaporation.svg" alt="Cooling by evaporation in calculations" loading="lazy"></div><figcaption class="caption">Energy removed ≈ mℓ for the evaporated mass.</figcaption></figure>
 </section>
 <section class="step step-practice" data-id="p2" data-name="Practice: Factors &amp; Calculations" data-kind="practice"><span class="step-kind practice">Practice</span>
 <span class="tag quiz">Practice 3</span>
@@ -333,6 +358,8 @@
 <div class="kbd-tip">Tip: use Tab to move, Enter/Space to press, ← → to change step.</div>
 <details class="teacher">
 <summary>👩‍🏫 Teacher notes: curriculum outcome map (click to open)</summary>
+<p class="caption"><b>Visuals:</b> This lesson includes SVG diagrams under <code>images/heat/</code> and optional canvas mini-demos (<code>heat-demos.js</code>) on selected Learn steps. Teaching text and outcome maps are unchanged.</p>
+
 <div class="tn-body">
 <p><b>Source:</b> HKDSE Physics Curriculum and Assessment Guide (S4–6), 2015 update — Compulsory Part, <b>I Heat and Gases</b>, subtopic <b>c. Change of state</b>, “Students should be able to” column, printed page 20 (PDF page 30). Outcome text is quoted from the guide.</p>
 <p><b>Core.</b> Nothing in this sub-topic is underlined in the guide, so all of it is in the <b>core</b> of the Compulsory Part.</p>
@@ -1080,5 +1107,6 @@ window.__lesson = {go:go, sim:sim, qState:qState, allQ:allQ, parseNum:parseNum, 
 })();
 
 </script>
+<script src="images/heat/heat-demos.js" defer></script>
 </body>
 </html>

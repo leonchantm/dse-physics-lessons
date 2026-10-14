@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" role="img" aria-label="Conduction: vibrating particles pass kinetic energy to neighbours along a rod.">
+  <rect width="480" height="200" fill="#fff"/>
+  <text x="240" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#0a2a66">Conduction: particle-to-particle energy handoff</text>
+  <rect x="30" y="50" width="420" height="90" rx="8" fill="#f1f5f9" stroke="#e3e5ea"/>
+  <!-- particles hotter on left -->
+  <circle cx="70" cy="95" r="14" fill="#ef4444"/><circle cx="70" cy="95" r="6" fill="#fecaca"/>
+  <circle cx="120" cy="95" r="13" fill="#f97316"/><circle cx="120" cy="95" r="5" fill="#ffedd5"/>
+  <circle cx="170" cy="95" r="12" fill="#eab308"/><circle cx="170" cy="95" r="5" fill="#fef9c3"/>
+  <circle cx="220" cy="95" r="11" fill="#84cc16"/><circle cx="220" cy="95" r="4" fill="#ecfccb"/>
+  <circle cx="270" cy="95" r="10" fill="#22c55e"/><circle cx="270" cy="95" r="4" fill="#dcfce7"/>
+  <circle cx="320" cy="95" r="9" fill="#3b82f6"/><circle cx="320" cy="95" r="4" fill="#dbeafe"/>
+  <circle cx="370" cy="95" r="8" fill="#6366f1"/><circle cx="370" cy="95" r="3" fill="#e0e7ff"/>
+  <circle cx="420" cy="95" r="7" fill="#94a3b8"/>
+  <defs><marker id="a2" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L5,3 L0,6 Z" fill="#5b6170"/></marker></defs>
+  <path d="M85 70 Q95 55 110 70" fill="none" stroke="#5b6170" stroke-width="1.5" marker-end="url(#a2)"/>
+  <path d="M135 70 Q145 55 160 70" fill="none" stroke="#5b6170" stroke-width="1.5" marker-end="url(#a2)"/>
+  <text x="70" y="165" text-anchor="middle" font-size="12" font-weight="700" fill="#b91c1c">HOT</text>
+  <text x="420" y="165" text-anchor="middle" font-size="12" font-weight="700" fill="#1865f2">COOL</text>
+  <text x="240" y="185" text-anchor="middle" font-size="12" fill="#5b6170">In metals, free electrons also carry energy quickly</text>
+</svg>

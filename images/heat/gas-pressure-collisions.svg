@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" role="img" aria-label="Gas molecules colliding with container walls produce pressure.">
+  <rect width="400" height="220" fill="#fff"/>
+  <text x="200" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#0a2a66">Gas pressure = wall collisions</text>
+  <rect x="80" y="50" width="240" height="140" rx="6" fill="#f8fafc" stroke="#0a2a66" stroke-width="3"/>
+  <circle cx="130" cy="90" r="6" fill="#1865f2"/><circle cx="200" cy="120" r="6" fill="#1865f2"/>
+  <circle cx="260" cy="80" r="6" fill="#1865f2"/><circle cx="180" cy="160" r="6" fill="#1865f2"/>
+  <circle cx="280" cy="150" r="6" fill="#1865f2"/>
+  <path d="M280 80 L310 70" stroke="#e3780c" stroke-width="2"/>
+  <path d="M310 120 L330 120" stroke="#e3780c" stroke-width="2"/>
+  <text x="200" y="210" text-anchor="middle" font-size="12" fill="#5b6170">Momentum change at walls → force → pressure</text>
+</svg>

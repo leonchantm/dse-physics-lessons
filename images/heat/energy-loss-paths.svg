@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 200" role="img" aria-label="Energy from a heater can heat the sample or be lost to the surroundings.">
+  <rect width="440" height="200" fill="#fff"/>
+  <text x="220" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#0a2a66">Where heater energy goes</text>
+  <rect x="20" y="70" width="100" height="50" rx="6" fill="#eef3fe" stroke="#1865f2"/>
+  <text x="70" y="100" text-anchor="middle" font-size="12" font-weight="700" fill="#0a2a66">E from heater</text>
+  <path d="M130 95 H170" stroke="#5b6170" stroke-width="2"/>
+  <rect x="180" y="40" width="120" height="45" rx="6" fill="#dcfce7" stroke="#186d32"/>
+  <text x="240" y="67" text-anchor="middle" font-size="11" font-weight="700">→ sample (mcΔT)</text>
+  <rect x="180" y="110" width="120" height="45" rx="6" fill="#fee2e2" stroke="#b91c1c"/>
+  <text x="240" y="137" text-anchor="middle" font-size="11" font-weight="700">→ losses</text>
+  <text x="340" y="55" font-size="11" fill="#5b6170">wanted</text>
+  <text x="340" y="125" font-size="11" fill="#5b6170">conduction,</text>
+  <text x="340" y="140" font-size="11" fill="#5b6170">convection,</text>
+  <text x="340" y="155" font-size="11" fill="#5b6170">evaporation</text>
+  <text x="220" y="185" text-anchor="middle" font-size="12" fill="#5b6170">Lag, lid, and short heating time reduce losses</text>
+</svg>

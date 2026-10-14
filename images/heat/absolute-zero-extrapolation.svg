@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 240" role="img" aria-label="P-T graph extrapolated to zero pressure meets absolute zero at about minus 273 degrees Celsius.">
+  <rect width="440" height="240" fill="#fff"/>
+  <text x="220" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#0a2a66">Absolute zero from P–T extrapolation</text>
+  <line x1="80" y1="200" x2="400" y2="200" stroke="#5b6170"/>
+  <line x1="80" y1="200" x2="80" y2="40" stroke="#5b6170"/>
+  <text x="400" y="215" font-size="11" fill="#5b6170">θ / °C</text>
+  <text x="50" y="50" font-size="11" fill="#5b6170">P</text>
+  <line x1="80" y1="200" x2="360" y2="60" stroke="#1865f2" stroke-width="2"/>
+  <circle cx="80" cy="200" r="5" fill="#b91c1c"/>
+  <text x="95" y="220" font-size="11" font-weight="700" fill="#b91c1c">−273 °C</text>
+  <text x="95" y="190" font-size="11" fill="#b91c1c">P→0</text>
+  <circle cx="220" cy="130" r="4" fill="#1865f2"/>
+  <circle cx="300" cy="90" r="4" fill="#1865f2"/>
+  <text x="220" y="215" text-anchor="middle" font-size="10" fill="#5b6170">0</text>
+  <text x="300" y="215" text-anchor="middle" font-size="10" fill="#5b6170">100</text>
+  <text x="220" y="55" text-anchor="middle" font-size="12" fill="#5b6170">Ideal-gas extrapolation of measured P–T data</text>
+</svg>

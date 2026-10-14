@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 220" role="img" aria-label="Bar chart comparing specific heat capacities of water, aluminium, and copper.">
+  <rect width="480" height="220" fill="#fff"/>
+  <text x="240" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#0a2a66">Specific heat capacity c (J kg⁻¹ °C⁻¹)</text>
+  <!-- axis -->
+  <line x1="60" y1="180" x2="440" y2="180" stroke="#5b6170"/>
+  <!-- water 4200 -->
+  <rect x="90" y="50" width="70" height="130" fill="#1865f2"/>
+  <text x="125" y="45" text-anchor="middle" font-size="12" font-weight="700" fill="#0a2a66">4200</text>
+  <text x="125" y="198" text-anchor="middle" font-size="12">water</text>
+  <!-- Al 900 -->
+  <rect x="210" y="152" width="70" height="28" fill="#84cc16"/>
+  <text x="245" y="148" text-anchor="middle" font-size="12" font-weight="700" fill="#0a2a66">900</text>
+  <text x="245" y="198" text-anchor="middle" font-size="12">aluminium</text>
+  <!-- Cu 400 -->
+  <rect x="330" y="168" width="70" height="12" fill="#e3780c"/>
+  <text x="365" y="164" text-anchor="middle" font-size="12" font-weight="700" fill="#0a2a66">385</text>
+  <text x="365" y="198" text-anchor="middle" font-size="12">copper</text>
+  <text x="240" y="215" text-anchor="middle" font-size="11" fill="#5b6170">Same energy → water’s temperature rises least</text>
+</svg>

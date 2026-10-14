@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-label="Convection current loop in a heated fluid: warm fluid rises, cool fluid sinks.">
+  <rect width="400" height="260" fill="#fff"/>
+  <text x="200" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#0a2a66">Convection current</text>
+  <rect x="60" y="40" width="280" height="180" rx="8" fill="#e0f2fe" stroke="#1865f2"/>
+  <!-- heater -->
+  <rect x="150" y="190" width="100" height="18" rx="3" fill="#ef4444"/>
+  <text x="200" y="203" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">heater</text>
+  <!-- loop arrows -->
+  <path d="M200 175 C200 100 280 100 280 130 C280 170 200 160 200 175" fill="none" stroke="#e3780c" stroke-width="3"/>
+  <path d="M200 175 C200 100 120 100 120 130 C120 170 200 160 200 175" fill="none" stroke="#1865f2" stroke-width="3"/>
+  <text x="255" y="90" font-size="12" font-weight="700" fill="#e3780c">warm rises</text>
+  <text x="85" y="90" font-size="12" font-weight="700" fill="#1865f2">cool sinks</text>
+  <text x="200" y="245" text-anchor="middle" font-size="12" fill="#5b6170">Density falls when heated → buoyant rise → circulation</text>
+</svg>

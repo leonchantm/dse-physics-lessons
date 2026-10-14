@@ -159,6 +159,18 @@
     details.teacher{padding:0 .75rem}
   }
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* --- Heat enrichment visuals --- */
+.viz-block{margin:1rem 0 0;padding:0}
+.viz-block .visual{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;padding:.6rem;text-align:center}
+.viz-block .visual img,.viz-block .visual svg{width:100%;height:auto;max-height:340px;display:block;margin:0 auto}
+.viz-block figcaption,.viz-block .caption{margin:.4rem 0 0;font-size:.9rem;color:#5b6170;text-align:center}
+.mini-demo{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;padding:.6rem}
+.mini-demo canvas.demo-canvas{width:100%;height:auto;max-width:640px;display:block;margin:0 auto;background:#fff;border-radius:8px;border:1px solid #e3e5ea}
+.mini-demo .demo-controls{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center;margin-top:.5rem;font-size:.9rem}
+.mini-demo .demo-controls label{font-weight:600;color:#0a2a66}
+.mini-demo .demo-controls input[type=range]{width:min(220px,50vw)}
+
 </style>
 </head>
 <body data-home-flat="index.html" data-home-nested="../../index.html">
@@ -209,6 +221,9 @@
   </div>
   <div class="box eg"><span class="box-title">🔬 Mechanical model</span>A tube contains small beads with a light piston on top; a vibrator at the bottom makes the beads move randomly.<table class="t"><tr><th>Model</th><th>Gas</th></tr><tr><td>beads</td><td>molecules</td></tr><tr><td>height of piston</td><td>volume</td></tr><tr><td>weight on piston</td><td>pressure</td></tr><tr><td>speed of vibrator (beads)</td><td>temperature</td></tr></table>Faster vibrator → piston pushed higher (gas expands when heated). More weight → piston lower (higher pressure, smaller volume).</div>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/brownian-smoke-cell.svg" alt="Smoke cell showing random zigzag paths" loading="lazy"></div><figcaption class="caption">Evidence that air molecules move randomly and collide.</figcaption></figure>
 </section>
 <section class="step step-learn" data-id="bombard" data-name="Pressure from Bombardment" data-kind="learn"><span class="step-kind learn">Learn</span>
 <span class="tag">Idea 2</span>
@@ -223,6 +238,10 @@
     <tr><td>heated at constant P → V increases (expansion)</td><td>faster molecules hit the walls more frequently and vigorously and <b>push the walls (piston) outwards</b> until the collision rate falls enough for the pressure to match the outside again.</td></tr></table>
 </div>
 <div class="box warn"><span class="box-title">Common mistakes ⚠️</span><ul class="simple"><li>“When a gas is compressed at constant temperature the molecules move faster.” ✗ Same temperature → same average speed; they only hit <b>more often</b>.</li><li>“The molecules expand when the gas is heated.” ✗ The molecules don’t get bigger; the <b>spaces between them</b> increase.</li></ul></div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/gas-pressure-collisions.svg" alt="Molecular bombardment of container walls" loading="lazy"></div><figcaption class="caption">More / harder collisions → greater pressure.</figcaption></figure>
+<figure class="viz-block mini-demo" data-demo="moleculeBox"><canvas class="demo-canvas" width="640" height="220" role="img" aria-label="Molecules in a box colliding with walls"></canvas><div class="demo-controls"><label>Relative temperature <input type="range" data-param="t" min="100" max="600" value="300"></label></div><figcaption class="caption">Higher T → faster molecules → higher collision rate.</figcaption></figure>
 </section>
 <section class="step step-practice" data-id="p1" data-name="Practice: Molecular Explanations" data-kind="practice"><span class="step-kind practice">Practice</span>
 <span class="tag quiz">Practice 1</span>
@@ -240,6 +259,9 @@
   <li>The <b>duration of a collision</b> is negligible compared with the time between collisions.</li>
   <li>The effect of <b>gravity</b> on the molecules is negligible.</li></ol></div>
 <div class="box warn"><span class="box-title">Not an assumption ⚠️</span>The model does <b>not</b> assume that all molecules have the same speed — they have a wide range of speeds (see the speed histogram in the simulation).</div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/ideal-vs-real-gas.svg" alt="Ideal gas assumptions versus real gases" loading="lazy"></div><figcaption class="caption">Ideal-gas model: point particles, no intermolecular forces, elastic hits.</figcaption></figure>
 </section>
 <section class="step step-learn" data-id="eq" data-name="PV = ⅓Nmc̄²" data-kind="learn"><span class="step-kind learn">Learn</span>
 <span class="tag">Idea 4</span>
@@ -253,6 +275,9 @@
   <div class="box eg worked"><span class="box-title">✏️ Example</span>Air at 1.0 × 10⁵ Pa has density 1.2 kg m⁻³. Find the r.m.s. speed of its molecules.<br>c̄² = 3P/ρ = 3(1.0 × 10⁵)/1.2 = 2.5 × 10⁵ m² s⁻²<br>c<sub>rms</sub> = √(2.5 × 10⁵) = <b>500 m s⁻¹</b></div>
 </div>
 <div class="box warn"><span class="box-title">Common mistakes ⚠️</span><ul class="simple"><li>m is the mass of <b>one molecule</b> (M/N<sub>A</sub>); Nm is the total mass.</li><li>c̄² is the mean of the squares, <b>not</b> the square of the mean speed.</li></ul></div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/pv-nrt-micro-macro.svg" alt="Microscopic PV equals one third Nmc-bar squared linked to PV equals nRT" loading="lazy"></div><figcaption class="caption">Kinetic theory bridges particle motion and measurable P, V, T.</figcaption></figure>
 </section>
 <section class="step step-learn" data-id="ke" data-name="Temperature &amp; Molecular K.E." data-kind="learn"><span class="step-kind learn">Learn</span>
 <span class="tag">Idea 5</span>
@@ -264,6 +289,10 @@
   </div>
   <div class="box key"><span class="box-title">Interpretation ⭐</span><ul class="simple"><li>The <b>absolute temperature T</b> of an ideal gas is <b>directly proportional to the average K.E.</b> of its molecules.</li><li>Different gases at the same temperature have the <b>same average K.E.</b>; lighter molecules (smaller M) move <b>faster</b>.</li><li>c<sub>rms</sub> depends only on <b>T and M</b> — <b>not</b> on the pressure or volume on their own.</li><li>At absolute zero (0 K) the average K.E. of an ideal gas would be zero.</li></ul></div>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/maxwell-speed-qualitative.svg" alt="Qualitative molecular speed distribution" loading="lazy"></div><figcaption class="caption">Molecules have a spread of speeds; average KE rises with T.</figcaption></figure>
+<figure class="viz-block"><div class="visual"><img src="images/heat/pv-nrt-micro-macro.svg" alt="Average molecular KE proportional to absolute temperature" loading="lazy"></div><figcaption class="caption">Absolute temperature measures random molecular kinetic energy.</figcaption></figure>
 </section>
 <section class="step step-learn" data-id="worked" data-name="Worked Examples" data-kind="learn"><span class="step-kind learn">Learn</span>
 <span class="tag">Worked examples</span>
@@ -272,6 +301,9 @@
   <div class="box eg worked"><span class="box-title">✏️ Example 1 (helium and oxygen)</span>1 mol of helium (M = 0.004 kg mol⁻¹) and 1 mol of oxygen (M = 0.032 kg mol⁻¹), both at 27 °C.<br>K.E.<sub>avg</sub> = 3(8.31)(300) ÷ [2(6.02 × 10²³)] = <b>6.21 × 10⁻²¹ J</b> — the same for both gases.<br>c<sub>rms</sub>(He) = √(3 × 8.31 × 300 ÷ 0.004) = <b>1370 m s⁻¹</b>; c<sub>rms</sub>(O₂) = √(3 × 8.31 × 300 ÷ 0.032) = <b>483 m s⁻¹</b><br>Ratio = √(32/4) = √8 = 2.83</div>
   <div class="box eg worked"><span class="box-title">✏️ Example 2 (changing temperature)</span>The r.m.s. speed of a gas is 500 m s⁻¹ at 25 °C. Find it at 40 °C.<br>c<sub>rms</sub> ∝ √T ⇒ c' = 500 × √(313/298) = <b>512 m s⁻¹</b><br><br><b>✏️ Example 3 (internal energy)</b> 1 mol of an ideal gas is heated by 40 K at constant volume. Increase in total K.E. = (3/2)nRΔT = 1.5 × 8.31 × 40 = <b>499 J</b></div>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/pv-nrt-micro-macro.svg" alt="Micro-macro formulae" loading="lazy"></div><figcaption class="caption">Connect ⅓Nmc̄² with nRT when needed.</figcaption></figure>
 </section>
 <section class="step step-sim" data-id="sim" data-name="Simulation" data-kind="sim"><span class="step-kind sim">Try it</span>
 <span class="tag sim">Try it!</span>
@@ -318,6 +350,9 @@
     <tr><td>volume of molecules</td><td>negligible</td><td>small but finite</td></tr></table>
   <div class="box key"><span class="box-title">When does a real gas behave like an ideal gas? ⭐</span>At <b>high temperature</b> and <b>low pressure</b>. Then the molecules are fast and far apart, so the attractive forces and the molecules’ own volume are negligible. At low temperature or high pressure, real gases deviate from PV = nRT (and may liquefy).</div>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/ideal-vs-real-gas.svg" alt="Real gases deviate at high pressure or low temperature" loading="lazy"></div><figcaption class="caption">Particle size and attractions matter when molecules are close / slow.</figcaption></figure>
 </section>
 <section class="step step-practice" data-id="p2" data-name="Practice: Kinetic Theory" data-kind="practice"><span class="step-kind practice">Practice</span>
 <span class="tag quiz">Practice 3</span>
@@ -352,6 +387,8 @@
 <div class="kbd-tip">Tip: use Tab to move, Enter/Space to press, ← → to change step.</div>
 <details class="teacher">
 <summary>👩‍🏫 Teacher notes: curriculum outcome map (click to open)</summary>
+<p class="caption"><b>Visuals:</b> This lesson includes SVG diagrams under <code>images/heat/</code> and optional canvas mini-demos (<code>heat-demos.js</code>) on selected Learn steps. Teaching text and outcome maps are unchanged.</p>
+
 <div class="tn-body">
 <p><b>Source:</b> HKDSE Physics Curriculum and Assessment Guide (S4–6), 2015 update — Compulsory Part, <b>I Heat and Gases</b>, subtopic <b>d. Gases</b>, “Students should be able to” column, printed pages 20–21 (PDF pages 30–31). Outcome text is quoted from the guide.</p>
 <p class="box warn" style="margin:.5rem 0"><b>⚠ Extension component.</b> In the guide the whole of this sub-topic is <u>underlined</u>, i.e. it belongs to the <b>extension component</b> of the Compulsory Part (“Note: The underlined text represents the extension component”, printed p.{sub.get("notepage", 28)}). It is not part of the core.</p>
@@ -1099,5 +1136,6 @@ window.__lesson = {go:go, sim:sim, qState:qState, allQ:allQ, parseNum:parseNum, 
 })();
 
 </script>
+<script src="images/heat/heat-demos.js" defer></script>
 </body>
 </html>

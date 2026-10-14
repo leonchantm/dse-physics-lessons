@@ -159,6 +159,18 @@
     details.teacher{padding:0 .75rem}
   }
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* --- Heat enrichment visuals --- */
+.viz-block{margin:1rem 0 0;padding:0}
+.viz-block .visual{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;padding:.6rem;text-align:center}
+.viz-block .visual img,.viz-block .visual svg{width:100%;height:auto;max-height:340px;display:block;margin:0 auto}
+.viz-block figcaption,.viz-block .caption{margin:.4rem 0 0;font-size:.9rem;color:#5b6170;text-align:center}
+.mini-demo{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;padding:.6rem}
+.mini-demo canvas.demo-canvas{width:100%;height:auto;max-width:640px;display:block;margin:0 auto;background:#fff;border-radius:8px;border:1px solid #e3e5ea}
+.mini-demo .demo-controls{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center;margin-top:.5rem;font-size:.9rem}
+.mini-demo .demo-controls label{font-weight:600;color:#0a2a66}
+.mini-demo .demo-controls input[type=range]{width:min(220px,50vw)}
+
 </style>
 </head>
 <body data-home-flat="index.html" data-home-nested="../../index.html">
@@ -214,6 +226,9 @@
   </div>
 </div>
 <div class="box warn"><span class="box-title">Common mistake ⚠️</span>Forgetting to convert cm² to m² (1 cm² = 10⁻⁴ m²) and cm³ to m³ (1 cm³ = 10⁻⁶ m³).</div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/gas-pressure-collisions.svg" alt="Gas molecules hitting walls cause pressure" loading="lazy"></div><figcaption class="caption">Pressure comes from momentum change in wall collisions.</figcaption></figure>
 </section>
 <section class="step step-learn" data-id="boyle" data-name="Boyle’s Law" data-kind="learn"><span class="step-kind learn">Learn</span>
 <span class="tag">Idea 2</span>
@@ -236,6 +251,10 @@
     <div class="box eg worked"><span class="box-title">✏️ Example</span>A sealed bottle holds air at 76 kPa in an aircraft cabin. On landing the pressure is 100 kPa (same temperature). V<sub>after</sub>/V<sub>before</sub> = 76/100 = <b>0.76</b> — the bottle is squashed.</div>
   </div>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/boyle-piston.svg" alt="Piston compresses gas at constant temperature" loading="lazy"></div><figcaption class="caption">Halving V roughly doubles P when T is fixed.</figcaption></figure>
+<figure class="viz-block mini-demo" data-demo="boyle"><canvas class="demo-canvas" width="640" height="220" role="img" aria-label="Interactive Boyle law piston with molecules"></canvas><div class="demo-controls"><label>Volume <input type="range" data-param="v" min="25" max="100" value="70"> <span data-readout></span></label></div><figcaption class="caption">Squeeze the volume and watch collision rate (pressure) rise.</figcaption></figure>
 </section>
 <section class="step step-practice" data-id="p1" data-name="Practice: Pressure &amp; Boyle" data-kind="practice"><span class="step-kind practice">Practice</span>
 <span class="tag quiz">Practice 1</span>
@@ -264,6 +283,9 @@
     <div class="box warn"><span class="box-title">Common mistakes ⚠️</span><ul class="simple"><li>Using °C: heating a gas from 20 °C to 40 °C does <b>not</b> double its pressure (293 K → 313 K: only about 7% more).</li><li>Converting wrongly: 27 °C = <b>300 K</b>, not 246 K; 0 K = −273 °C.</li></ul></div>
   </div>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/absolute-zero-extrapolation.svg" alt="P-T graph extrapolated to absolute zero" loading="lazy"></div><figcaption class="caption">Extrapolating P→0 gives about −273 °C (0 K).</figcaption></figure>
 </section>
 <section class="step step-learn" data-id="vt" data-name="Charles’ Law" data-kind="learn"><span class="step-kind learn">Learn</span>
 <span class="tag">Idea 4</span>
@@ -276,6 +298,9 @@
   </div>
   <div class="box eg worked"><span class="box-title">✏️ Example</span>A closed soft plastic bottle contains 750 cm³ of air at 25 °C. It is put in a fridge at 4 °C (pressure stays atmospheric).<br>V₂ = V₁ × T₂/T₁ = 750 × (4 + 273)/(25 + 273) = 750 × 277/298 = <b>697 cm³</b> — the bottle shrinks a little.</div>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/charles-law-piston.svg" alt="Piston expands as gas is heated at constant pressure" loading="lazy"></div><figcaption class="caption">At constant P, V ∝ T (kelvin).</figcaption></figure>
 </section>
 <section class="step step-practice" data-id="p2" data-name="Practice: P–T, V–T &amp; Kelvin" data-kind="practice"><span class="step-kind practice">Practice</span>
 <span class="tag quiz">Practice 2</span>
@@ -294,6 +319,9 @@
   </div>
   <div class="box warn"><span class="box-title">Checklist ⚠️</span><ul class="simple"><li>Temperature in <b>kelvin</b> — always add 273.</li><li>Volume in <b>m³</b> (1 L = 10⁻³ m³, 1 cm³ = 10⁻⁶ m³); pressure in <b>Pa</b>.</li><li>Use P₁V₁/T₁ = P₂V₂/T₂ only for a <b>fixed mass</b>. If gas leaks or is pumped in, use PV = nRT to find n before and after.</li><li>Pressure from a Bourdon gauge or a reading “above atmospheric” must be converted to the actual pressure.</li></ul></div>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/general-gas-law.svg" alt="PV over T equals constant and PV equals nRT" loading="lazy"></div><figcaption class="caption">Combine the three laws; always use kelvin for T.</figcaption></figure>
 </section>
 <section class="step step-learn" data-id="worked" data-name="Worked Examples" data-kind="learn"><span class="step-kind learn">Learn</span>
 <span class="tag">Worked examples</span>
@@ -303,6 +331,9 @@
   <div class="box eg worked"><span class="box-title">✏️ Example 2: gas leaking</span>An oxygen cylinder (0.050 m³) at 27 °C: the pressure falls from 5.0 × 10⁵ Pa to 3.0 × 10⁵ Pa. M(O₂) = 0.032 kg mol⁻¹. Mass of oxygen used?<br>Δn = ΔP V/(RT) = (2.0 × 10⁵)(0.050) ÷ (8.31 × 300) = 4.01 mol<br>mass = 4.01 × 0.032 = <b>0.128 kg</b></div>
 </div>
 <div class="box eg worked"><span class="box-title">✏️ Example 3: molecules in a room</span>How many molecules are in 1.0 m³ of air at 1.01 × 10⁵ Pa and 0 °C?<br>n = PV/(RT) = (1.01 × 10⁵)(1.0) ÷ (8.31 × 273) = 44.5 mol ⇒ N = nN<sub>A</sub> = 44.5 × 6.02 × 10²³ = <b>2.68 × 10²⁵</b><br>Units check: Pa × m³ = N m⁻² × m³ = N m = J, and J ÷ (J K⁻¹ mol⁻¹ × K) = mol ✓</div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/general-gas-law.svg" alt="PV=nRT reminder" loading="lazy"></div><figcaption class="caption">Convert °C → K before substituting.</figcaption></figure>
 </section>
 <section class="step step-sim" data-id="sim" data-name="Simulation" data-kind="sim"><span class="step-kind sim">Try it</span>
 <span class="tag sim">Try it!</span>
@@ -374,6 +405,8 @@
 <div class="kbd-tip">Tip: use Tab to move, Enter/Space to press, ← → to change step.</div>
 <details class="teacher">
 <summary>👩‍🏫 Teacher notes: curriculum outcome map (click to open)</summary>
+<p class="caption"><b>Visuals:</b> This lesson includes SVG diagrams under <code>images/heat/</code> and optional canvas mini-demos (<code>heat-demos.js</code>) on selected Learn steps. Teaching text and outcome maps are unchanged.</p>
+
 <div class="tn-body">
 <p><b>Source:</b> HKDSE Physics Curriculum and Assessment Guide (S4–6), 2015 update — Compulsory Part, <b>I Heat and Gases</b>, subtopic <b>d. Gases</b>, “Students should be able to” column, printed pages 20–21 (PDF pages 30–31). Outcome text is quoted from the guide.</p>
 <p class="box warn" style="margin:.5rem 0"><b>⚠ Extension component.</b> In the guide the whole of this sub-topic is <u>underlined</u>, i.e. it belongs to the <b>extension component</b> of the Compulsory Part (“Note: The underlined text represents the extension component”, printed p.{sub.get("notepage", 28)}). It is not part of the core.</p>
@@ -1144,5 +1177,6 @@ window.__lesson = {go:go, sim:sim, qState:qState, allQ:allQ, parseNum:parseNum, 
 })();
 
 </script>
+<script src="images/heat/heat-demos.js" defer></script>
 </body>
 </html>

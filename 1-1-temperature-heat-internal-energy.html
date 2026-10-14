@@ -159,6 +159,18 @@
     details.teacher{padding:0 .75rem}
   }
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* --- Heat enrichment visuals --- */
+.viz-block{margin:1rem 0 0;padding:0}
+.viz-block .visual{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;padding:.6rem;text-align:center}
+.viz-block .visual img,.viz-block .visual svg{width:100%;height:auto;max-height:340px;display:block;margin:0 auto}
+.viz-block figcaption,.viz-block .caption{margin:.4rem 0 0;font-size:.9rem;color:#5b6170;text-align:center}
+.mini-demo{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;padding:.6rem}
+.mini-demo canvas.demo-canvas{width:100%;height:auto;max-width:640px;display:block;margin:0 auto;background:#fff;border-radius:8px;border:1px solid #e3e5ea}
+.mini-demo .demo-controls{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center;margin-top:.5rem;font-size:.9rem}
+.mini-demo .demo-controls label{font-weight:600;color:#0a2a66}
+.mini-demo .demo-controls input[type=range]{width:min(220px,50vw)}
+
 </style>
 </head>
 <body data-home-flat="index.html" data-home-nested="../../index.html">
@@ -233,6 +245,9 @@
 </table>
 <div class="box key"><span class="box-title">A good thermometric property…</span><ul class="simple"><li>changes <b>continuously</b> and by a <b>measurable</b> amount with temperature;</li><li>has <b>one value for each temperature</b> (so a reading gives one temperature);</li><li>ideally changes <b>linearly</b> with temperature (equal steps on the scale).</li></ul></div>
 <div class="box eg"><span class="box-title">🔬 Activity</span>Connect a coil of copper wire to an ohmmeter and put it in water at different temperatures, together with a laboratory thermometer. Plot resistance against temperature: the resistance rises steadily — the coil can be used as a thermometer.</div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/thermometer-types.svg" alt="Three thermometer types and their thermometric properties" loading="lazy"></div><figcaption class="caption">Different thermometers, different thermometric properties.</figcaption></figure>
 </section>
 <section class="step step-learn" data-id="celsius" data-name="The Celsius Scale &amp; Calibration" data-kind="learn"><span class="step-kind learn">Learn</span>
 <span class="tag">Idea 3</span>
@@ -259,6 +274,9 @@
   </div>
 </div>
 <div class="box warn"><span class="box-title">Common mistake ⚠️</span>Using X<sub>θ</sub> ÷ X₁₀₀ × 100. ✗ You must subtract the <b>ice-point value X₀</b> first (the column does not have zero length at 0 °C).</div>
+
+<!-- heat-viz -->
+<figure class="viz-block mini-demo" data-demo="thermoCal"><canvas class="demo-canvas" width="640" height="220" role="img" aria-label="Interactive Celsius thermometer between ice and steam points"></canvas><div class="demo-controls"><label>Temperature <input type="range" data-param="t" min="0" max="100" value="40"> <span data-readout></span></label></div><figcaption class="caption">Calibrate between ice point (0 °C) and steam point (100 °C).</figcaption></figure>
 </section>
 <section class="step step-practice" data-id="p1" data-name="Practice: Thermometers" data-kind="practice"><span class="step-kind practice">Practice</span>
 <span class="tag quiz">Practice 1</span>
@@ -327,6 +345,10 @@
   </div>
 </div>
 <div class="box warn"><span class="box-title">📌 Extension (Lesson 1.5a)</span>The lowest possible temperature, where the random motion is least, is <b>absolute zero</b> (−273 °C). The <b>kelvin</b> scale starts there: T/K = θ/°C + 273.</div>
+
+<!-- heat-viz -->
+<figure class="viz-block mini-demo" data-demo="particleTemp"><canvas class="demo-canvas" width="640" height="220" role="img" aria-label="Particles moving faster at higher temperature"></canvas><div class="demo-controls"><label>Relative temperature <input type="range" data-param="t" min="0" max="80" value="20"> <span data-readout>20 °C (relative KE)</span></label></div><figcaption class="caption">Higher temperature → greater average kinetic energy of random motion.</figcaption></figure>
+<figure class="viz-block"><div class="visual"><img src="images/heat/thermal-expansion-bar.svg" alt="Metal bar expands when heated" loading="lazy"></div><figcaption class="caption">Thermal expansion: particles vibrate more → average spacing increases.</figcaption></figure>
 </section>
 <section class="step step-learn" data-id="internal" data-name="Internal Energy &amp; Heat" data-kind="learn"><span class="step-kind learn">Learn</span>
 <span class="tag">Idea 5</span>
@@ -346,6 +368,9 @@
     <p class="caption">Internal energy can also be increased by <b>doing work</b>, e.g. rubbing your hands together warms them.</p>
   </div>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/heat-vs-internal-energy.svg" alt="Heat as energy in transit versus internal energy stored in an object" loading="lazy"></div><figcaption class="caption">Heat is energy in transit because of a temperature difference; internal energy is stored in the object.</figcaption></figure>
 </section>
 <section class="step step-practice" data-id="p2" data-name="Practice: Internal Energy &amp; Heat" data-kind="practice"><span class="step-kind practice">Practice</span>
 <span class="tag quiz">Practice 3</span>
@@ -379,6 +404,8 @@
 <div class="kbd-tip">Tip: use Tab to move, Enter/Space to press, ← → to change step.</div>
 <details class="teacher">
 <summary>👩‍🏫 Teacher notes: curriculum outcome map (click to open)</summary>
+<p class="caption"><b>Visuals:</b> This lesson includes SVG diagrams under <code>images/heat/</code> and optional canvas mini-demos (<code>heat-demos.js</code>) on selected Learn steps. Teaching text and outcome maps are unchanged.</p>
+
 <div class="tn-body">
 <p><b>Source:</b> HKDSE Physics Curriculum and Assessment Guide (S4–6), 2015 update — Compulsory Part, <b>I Heat and Gases</b>, subtopic <b>a. Temperature, heat and internal energy</b>, “Students should be able to” column, printed page 19 (PDF page 29). Outcome text is quoted from the guide.</p>
 <p><b>Core.</b> Nothing in this sub-topic is underlined in the guide, so all of it is in the <b>core</b> of the Compulsory Part.</p>
@@ -1138,5 +1165,6 @@ window.__lesson = {go:go, sim:sim, qState:qState, allQ:allQ, parseNum:parseNum, 
 })();
 
 </script>
+<script src="images/heat/heat-demos.js" defer></script>
 </body>
 </html>

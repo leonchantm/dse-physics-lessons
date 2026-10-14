@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" role="img" aria-label="Diagram distinguishing heat as energy in transit from internal energy stored in an object.">
+  <rect width="480" height="240" fill="#fff"/>
+  <text x="240" y="24" text-anchor="middle" font-size="14" font-weight="700" fill="#0a2a66">Heat vs internal energy</text>
+  <!-- hot object -->
+  <rect x="40" y="60" width="140" height="100" rx="10" fill="#fee2e2" stroke="#b91c1c"/>
+  <text x="110" y="90" text-anchor="middle" font-size="12" font-weight="700" fill="#b91c1c">Hot object</text>
+  <text x="110" y="115" text-anchor="middle" font-size="11" fill="#5b6170">higher</text>
+  <text x="110" y="132" text-anchor="middle" font-size="11" fill="#5b6170">internal energy</text>
+  <text x="110" y="150" text-anchor="middle" font-size="11" fill="#0a2a66">(KE + PE of</text>
+  <text x="110" y="165" text-anchor="middle" font-size="11" fill="#0a2a66">all particles)</text>
+  <!-- arrow heat -->
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#e3780c"/></marker></defs>
+  <line x1="190" y1="110" x2="270" y2="110" stroke="#e3780c" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="230" y="95" text-anchor="middle" font-size="13" font-weight="800" fill="#e3780c">HEAT</text>
+  <text x="230" y="140" text-anchor="middle" font-size="10" fill="#5b6170">energy in transit</text>
+  <text x="230" y="154" text-anchor="middle" font-size="10" fill="#5b6170">due to ΔT</text>
+  <!-- cold -->
+  <rect x="290" y="60" width="140" height="100" rx="10" fill="#dbeafe" stroke="#1865f2"/>
+  <text x="360" y="105" text-anchor="middle" font-size="12" font-weight="700" fill="#1865f2">Cooler object</text>
+  <text x="360" y="130" text-anchor="middle" font-size="11" fill="#5b6170">gains internal</text>
+  <text x="360" y="147" text-anchor="middle" font-size="11" fill="#5b6170">energy</text>
+  <text x="240" y="210" text-anchor="middle" font-size="12" font-weight="700" fill="#b91c1c">Heat is not “inside” an object — internal energy is.</text>
+  <text x="240" y="228" text-anchor="middle" font-size="11" fill="#5b6170">Heat flows from higher T → lower T until thermal equilibrium</text>
+</svg>

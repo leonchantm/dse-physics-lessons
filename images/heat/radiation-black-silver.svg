@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 220" role="img" aria-label="Black surface absorbs and emits infra-red better than a shiny silver surface.">
+  <rect width="480" height="220" fill="#fff"/>
+  <text x="240" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#0a2a66">Radiation: surface colour and finish</text>
+  <!-- black -->
+  <rect x="40" y="50" width="170" height="120" rx="8" fill="#1e293b" stroke="#0a2a66"/>
+  <text x="125" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Black / dull</text>
+  <text x="125" y="110" text-anchor="middle" font-size="12" fill="#fde68a">good absorber</text>
+  <text x="125" y="130" text-anchor="middle" font-size="12" fill="#fde68a">good emitter</text>
+  <path d="M125 160 l0 25 M115 175 l10 10 10-10" stroke="#fbbf24" stroke-width="2" fill="none"/>
+  <!-- silver -->
+  <rect x="270" y="50" width="170" height="120" rx="8" fill="#e2e8f0" stroke="#5b6170"/>
+  <text x="355" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="#0a2a66">Silver / shiny</text>
+  <text x="355" y="110" text-anchor="middle" font-size="12" fill="#5b6170">poor absorber</text>
+  <text x="355" y="130" text-anchor="middle" font-size="12" fill="#5b6170">poor emitter</text>
+  <text x="355" y="150" text-anchor="middle" font-size="12" fill="#1865f2">good reflector</text>
+  <path d="M300 170 L320 155 L340 170" stroke="#1865f2" stroke-width="2" fill="none"/>
+  <text x="240" y="205" text-anchor="middle" font-size="12" fill="#5b6170">No medium needed — infra-red is electromagnetic</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 160" role="img" aria-label="General gas law PV over T equals constant, and PV equals nRT.">
+  <rect width="400" height="160" fill="#fff"/>
+  <text x="200" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#0a2a66">Combining the gas laws</text>
+  <rect x="40" y="50" width="140" height="60" rx="8" fill="#eef3fe" stroke="#1865f2"/>
+  <text x="110" y="85" text-anchor="middle" font-size="16" font-weight="700" fill="#0a2a66">PV / T = k</text>
+  <text x="210" y="85" font-size="18" fill="#5b6170">→</text>
+  <rect x="240" y="50" width="120" height="60" rx="8" fill="#e8f5e9" stroke="#186d32"/>
+  <text x="300" y="85" text-anchor="middle" font-size="16" font-weight="700" fill="#186d32">PV = nRT</text>
+  <text x="200" y="140" text-anchor="middle" font-size="12" fill="#5b6170">T must be in kelvin</text>
+</svg>

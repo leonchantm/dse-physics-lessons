@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 160" role="img" aria-label="Energy used to raise temperature versus latent heat during a phase change.">
+  <rect width="480" height="160" fill="#fff"/>
+  <text x="240" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#0a2a66">Where energy goes during heating</text>
+  <rect x="40" y="50" width="160" height="50" rx="6" fill="#dbeafe" stroke="#1865f2"/>
+  <text x="120" y="80" text-anchor="middle" font-size="12" font-weight="700" fill="#0a2a66">↑ temperature</text>
+  <text x="120" y="120" text-anchor="middle" font-size="11" fill="#5b6170">increases KE</text>
+  <rect x="240" y="50" width="200" height="50" rx="6" fill="#f3e8f8" stroke="#7f3f98"/>
+  <text x="340" y="80" text-anchor="middle" font-size="12" font-weight="700" fill="#7f3f98">latent heat (phase change)</text>
+  <text x="340" y="120" text-anchor="middle" font-size="11" fill="#5b6170">increases PE / separates particles</text>
+  <text x="240" y="148" text-anchor="middle" font-size="12" fill="#5b6170">T stays constant while state changes (pure substance)</text>
+</svg>

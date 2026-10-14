@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" role="img" aria-label="A metal bar expands in length when heated.">
+  <rect width="480" height="200" fill="#fff"/>
+  <text x="240" y="24" text-anchor="middle" font-size="14" font-weight="700" fill="#0a2a66">Thermal expansion (length)</text>
+  <text x="40" y="60" font-size="12" fill="#5b6170">Cold</text>
+  <rect x="80" y="48" width="280" height="24" rx="4" fill="#93c5fd" stroke="#1865f2"/>
+  <text x="220" y="65" text-anchor="middle" font-size="12" font-weight="700" fill="#0a2a66">L₀</text>
+  <text x="40" y="120" font-size="12" fill="#5b6170">Hot</text>
+  <rect x="80" y="108" width="340" height="24" rx="4" fill="#fca5a5" stroke="#b91c1c"/>
+  <text x="250" y="125" text-anchor="middle" font-size="12" font-weight="700" fill="#0a2a66">L₀ + ΔL</text>
+  <line x1="360" y1="40" x2="360" y2="100" stroke="#5b6170" stroke-dasharray="4 3"/>
+  <line x1="420" y1="100" x2="420" y2="145" stroke="#b91c1c" stroke-dasharray="4 3"/>
+  <text x="390" y="165" text-anchor="middle" font-size="12" font-weight="700" fill="#b91c1c">ΔL</text>
+  <text x="240" y="190" text-anchor="middle" font-size="12" fill="#5b6170">Particles vibrate more → average spacing increases</text>
+</svg>

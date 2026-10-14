@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" role="img" aria-label="Smoke cell shows random zigzag motion of smoke particles hit by air molecules.">
+  <rect width="400" height="200" fill="#fff"/>
+  <text x="200" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#0a2a66">Smoke cell → random motion</text>
+  <rect x="100" y="45" width="200" height="120" rx="6" fill="#0f172a"/>
+  <circle cx="150" cy="90" r="5" fill="#fde68a"/>
+  <path d="M150 90 L165 100 L155 115 L175 110 L170 130" fill="none" stroke="#fbbf24" stroke-width="2"/>
+  <circle cx="250" cy="80" r="5" fill="#fde68a"/>
+  <path d="M250 80 L240 95 L255 105 L245 120" fill="none" stroke="#fbbf24" stroke-width="2"/>
+  <text x="200" y="185" text-anchor="middle" font-size="12" fill="#5b6170">Visible smoke particle jolted by invisible air molecules</text>
+</svg>

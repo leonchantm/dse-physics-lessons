@@ -159,6 +159,18 @@
     details.teacher{padding:0 .75rem}
   }
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* --- Heat enrichment visuals --- */
+.viz-block{margin:1rem 0 0;padding:0}
+.viz-block .visual{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;padding:.6rem;text-align:center}
+.viz-block .visual img,.viz-block .visual svg{width:100%;height:auto;max-height:340px;display:block;margin:0 auto}
+.viz-block figcaption,.viz-block .caption{margin:.4rem 0 0;font-size:.9rem;color:#5b6170;text-align:center}
+.mini-demo{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;padding:.6rem}
+.mini-demo canvas.demo-canvas{width:100%;height:auto;max-width:640px;display:block;margin:0 auto;background:#fff;border-radius:8px;border:1px solid #e3e5ea}
+.mini-demo .demo-controls{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center;margin-top:.5rem;font-size:.9rem}
+.mini-demo .demo-controls label{font-weight:600;color:#0a2a66}
+.mini-demo .demo-controls input[type=range]{width:min(220px,50vw)}
+
 </style>
 </head>
 <body data-home-flat="index.html" data-home-nested="../../index.html">
@@ -214,6 +226,10 @@
     <div class="box warn"><span class="box-title">Common mistakes ⚠️</span><ul class="simple"><li>“The metal is colder.” ✗ Same temperature; it just conducts heat away from your hand faster.</li><li>“A coat keeps us warm because wool is a poor conductor.” Mainly ✗ — it is the <b>trapped air</b> (a very poor conductor) between the fibres that reduces heat loss by conduction (and convection).</li></ul></div>
   </div>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/conduction-particle-handoff.svg" alt="Conduction energy handoff along particles in a rod" loading="lazy"></div><figcaption class="caption">Particles collide and pass on kinetic energy.</figcaption></figure>
+<figure class="viz-block mini-demo" data-demo="conduction"><canvas class="demo-canvas" width="640" height="180" role="img" aria-label="Animated conduction along a rod from hot to cool end"></canvas><div class="demo-controls"></div><figcaption class="caption">Watch KE spread from the hot end (metals also use free electrons).</figcaption></figure>
 </section>
 <section class="step step-practice" data-id="p1" data-name="Practice: Conduction &amp; Convection" data-kind="practice"><span class="step-kind practice">Practice</span>
 <span class="tag quiz">Practice 1</span>
@@ -248,6 +264,10 @@
     <div class="box eg"><span class="box-title">🌱 Values: air-conditioning habits</span>Set the air-conditioner to about 25.5 °C, close windows and doors while it is on, and use a fan to help circulate the air: you save a lot of electricity because less energy has to be transferred.</div>
   </div>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/convection-loop.svg" alt="Convection current loop above a heater" loading="lazy"></div><figcaption class="caption">Warm fluid rises; cooler fluid sinks.</figcaption></figure>
+<figure class="viz-block mini-demo" data-demo="convection"><canvas class="demo-canvas" width="640" height="220" role="img" aria-label="Animated convection currents in a heated container"></canvas><div class="demo-controls"></div><figcaption class="caption">Density change drives the circulation.</figcaption></figure>
 </section>
 <section class="step step-learn" data-id="rad" data-name="Radiation" data-kind="learn"><span class="step-kind learn">Learn</span>
 <span class="tag">Idea 3</span>
@@ -266,6 +286,10 @@
     <div class="box warn"><span class="box-title">Common mistake ⚠️</span>“Wrapping food in shiny aluminium foil helps it absorb radiation from the fire.” ✗ Shiny foil is a <b>poor absorber</b> (good reflector) of radiation.</div>
   </div>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/radiation-black-silver.svg" alt="Black surface absorbs and emits IR better than silver" loading="lazy"></div><figcaption class="caption">Dull black: good absorber/emitter. Shiny silver: good reflector.</figcaption></figure>
+<figure class="viz-block mini-demo" data-demo="radiation"><canvas class="demo-canvas" width="640" height="200" role="img" aria-label="IR lamp heating black versus silver surfaces"></canvas><div class="demo-controls"></div><figcaption class="caption">Black absorbs more infra-red and warms faster.</figcaption></figure>
 </section>
 <section class="step step-sim" data-id="sim" data-name="Simulation" data-kind="sim"><span class="step-kind sim">Try it</span>
 <span class="tag sim">Try it!</span>
@@ -322,6 +346,9 @@
     <div class="box warn"><span class="box-title">⚠️ Safety: radiation heaters</span>Keep clothes, curtains and papers away from radiant heaters, never dry clothes on them, and switch them off before sleeping or going out.</div>
   </div>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/vacuum-flask-layers.svg" alt="Vacuum flask cross-section with silvered walls and stopper" loading="lazy"></div><figcaption class="caption">Vacuum cuts conduction/convection; silvering cuts radiation.</figcaption></figure>
 </section>
 <section class="step step-practice" data-id="p2" data-name="Practice: Radiation &amp; Applications" data-kind="practice"><span class="step-kind practice">Practice</span>
 <span class="tag quiz">Practice 3</span>
@@ -353,6 +380,8 @@
 <div class="kbd-tip">Tip: use Tab to move, Enter/Space to press, ← → to change step.</div>
 <details class="teacher">
 <summary>👩‍🏫 Teacher notes: curriculum outcome map (click to open)</summary>
+<p class="caption"><b>Visuals:</b> This lesson includes SVG diagrams under <code>images/heat/</code> and optional canvas mini-demos (<code>heat-demos.js</code>) on selected Learn steps. Teaching text and outcome maps are unchanged.</p>
+
 <div class="tn-body">
 <p><b>Source:</b> HKDSE Physics Curriculum and Assessment Guide (S4–6), 2015 update — Compulsory Part, <b>I Heat and Gases</b>, subtopic <b>b. Transfer processes</b>, “Students should be able to” column, printed page 19 (PDF page 29). Outcome text is quoted from the guide.</p>
 <p><b>Core.</b> Nothing in this sub-topic is underlined in the guide, so all of it is in the <b>core</b> of the Compulsory Part.</p>
@@ -1103,5 +1132,6 @@ window.__lesson = {go:go, sim:sim, qState:qState, allQ:allQ, parseNum:parseNum, 
 })();
 
 </script>
+<script src="images/heat/heat-demos.js" defer></script>
 </body>
 </html>

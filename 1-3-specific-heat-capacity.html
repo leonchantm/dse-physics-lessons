@@ -159,6 +159,18 @@
     details.teacher{padding:0 .75rem}
   }
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* --- Heat enrichment visuals --- */
+.viz-block{margin:1rem 0 0;padding:0}
+.viz-block .visual{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;padding:.6rem;text-align:center}
+.viz-block .visual img,.viz-block .visual svg{width:100%;height:auto;max-height:340px;display:block;margin:0 auto}
+.viz-block figcaption,.viz-block .caption{margin:.4rem 0 0;font-size:.9rem;color:#5b6170;text-align:center}
+.mini-demo{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;padding:.6rem}
+.mini-demo canvas.demo-canvas{width:100%;height:auto;max-width:640px;display:block;margin:0 auto;background:#fff;border-radius:8px;border:1px solid #e3e5ea}
+.mini-demo .demo-controls{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center;margin-top:.5rem;font-size:.9rem}
+.mini-demo .demo-controls label{font-weight:600;color:#0a2a66}
+.mini-demo .demo-controls input[type=range]{width:min(220px,50vw)}
+
 </style>
 </head>
 <body data-home-flat="index.html" data-home-nested="../../index.html">
@@ -207,6 +219,9 @@
   </div>
   <div class="box eg worked"><span class="box-title">✏️ Example (from the notes)</span>A slice of bread needs 6000 J to warm from 25 °C to 40 °C.<br>(a) C = 6000 ÷ (40 − 25) = <b>400 J °C⁻¹</b><br>(b) A loaf of 8 such slices: C = 8 × 400 = <b>3200 J °C⁻¹</b></div>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/heat-capacity-vs-specific.svg" alt="Heat capacity C versus specific heat capacity c" loading="lazy"></div><figcaption class="caption">C is for the whole object; c is per kilogram. C = mc.</figcaption></figure>
 </section>
 <section class="step step-learn" data-id="shc" data-name="Specific Heat Capacity" data-kind="learn"><span class="step-kind learn">Learn</span>
 <span class="tag">Idea 2</span>
@@ -219,6 +234,9 @@
   <table class="t"><tr><th>Substance</th><th>c / J kg⁻¹ °C⁻¹</th></tr>
     <tr><td>lead</td><td>130</td></tr><tr><td>copper</td><td>390</td></tr><tr><td>iron</td><td>460</td></tr><tr><td>glass</td><td>840</td></tr><tr><td>aluminium</td><td>900</td></tr><tr><td>air</td><td>1000</td></tr><tr><td>ice</td><td>2100</td></tr><tr><td>alcohol</td><td>2500</td></tr><tr><td><b>water</b></td><td><b>4200</b></td></tr></table>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/specific-heat-bars.svg" alt="Bar chart of specific heat capacities for water aluminium copper" loading="lazy"></div><figcaption class="caption">Water’s high c means a large energy change for a small ΔT.</figcaption></figure>
 </section>
 <section class="step step-learn" data-id="worked" data-name="Worked Examples" data-kind="learn"><span class="step-kind learn">Learn</span>
 <span class="tag">Worked examples</span>
@@ -230,6 +248,9 @@
 </div>
 <div class="box eg"><span class="box-title">📏 Check with units (dimension analysis)</span>ΔT = E/(mc) has units J ÷ (kg × J kg⁻¹ °C⁻¹) = <b>°C</b> ✓. If your units do not work out, the formula has been rearranged wrongly.</div>
 <div class="box warn"><span class="box-title">Common mistakes ⚠️</span><ul class="simple"><li>Using minutes instead of seconds in E = Pt.</li><li>Using the final temperature instead of the temperature <b>change</b> ΔT.</li><li>Using g instead of kg.</li></ul></div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/heat-capacity-vs-specific.svg" alt="C and c formulas" loading="lazy"></div><figcaption class="caption">Use C = Q/ΔT or Q = mcΔT carefully with units.</figcaption></figure>
 </section>
 <section class="step step-practice" data-id="p1" data-name="Practice: C and c" data-kind="practice"><span class="step-kind practice">Practice</span>
 <span class="tag quiz">Practice 1</span>
@@ -250,6 +271,10 @@
     <ul class="simple"><li>Why raise the temperature by only about 10 °C? A bigger temperature difference from the room → more heat loss.</li><li>Why wait for the highest temperature? The heater is hotter than the block and keeps giving it energy after it is switched off.</li></ul>
   </div>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/calorimeter-setup.svg" alt="Immersion heater calorimeter with thermometer and joulemeter" loading="lazy"></div><figcaption class="caption">Typical school setup for measuring c.</figcaption></figure>
+<figure class="viz-block"><div class="visual"><img src="images/heat/energy-loss-paths.svg" alt="Heater energy goes to sample or to losses" loading="lazy"></div><figcaption class="caption">Lagging and a lid reduce unwanted energy transfers.</figcaption></figure>
 </section>
 <section class="step step-practice" data-id="p2" data-name="Practice: Experiments" data-kind="practice"><span class="step-kind practice">Practice</span>
 <span class="tag quiz">Practice 2</span>
@@ -271,6 +296,9 @@
     <div class="box warn"><span class="box-title">Common mistake ⚠️</span>Writing “the hot object gives its <i>temperature</i> to the cold one”. Energy is transferred, not temperature; the final temperature is nearer to that of the object with the <b>larger heat capacity</b> (mc).</div>
   </div>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/mixing-temperatures.svg" alt="Hot and cold samples mix to an equilibrium temperature" loading="lazy"></div><figcaption class="caption">Energy conserved (ideal): heat lost = heat gained.</figcaption></figure>
 </section>
 <section class="step step-sim" data-id="sim" data-name="Simulation" data-kind="sim"><span class="step-kind sim">Try it</span>
 <span class="tag sim">Try it!</span>
@@ -325,6 +353,9 @@
   </ul>
   <div class="box eg"><span class="box-title">🌱 Values: saving energy at home</span>Heating water uses a lot of energy because c is large. Boil only the amount of water you need, keep the kettle free of scale, and use a lid when cooking — this saves electricity and money.</div>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/specific-heat-bars.svg" alt="Water has a much higher specific heat capacity than metals" loading="lazy"></div><figcaption class="caption">Lakes and oceans store huge amounts of energy with modest temperature change.</figcaption></figure>
 </section>
 <section class="step step-practice" data-id="p3" data-name="Practice: Mixtures &amp; Water" data-kind="practice"><span class="step-kind practice">Practice</span>
 <span class="tag quiz">Practice 4</span>
@@ -358,6 +389,8 @@
 <div class="kbd-tip">Tip: use Tab to move, Enter/Space to press, ← → to change step.</div>
 <details class="teacher">
 <summary>👩‍🏫 Teacher notes: curriculum outcome map (click to open)</summary>
+<p class="caption"><b>Visuals:</b> This lesson includes SVG diagrams under <code>images/heat/</code> and optional canvas mini-demos (<code>heat-demos.js</code>) on selected Learn steps. Teaching text and outcome maps are unchanged.</p>
+
 <div class="tn-body">
 <p><b>Source:</b> HKDSE Physics Curriculum and Assessment Guide (S4–6), 2015 update — Compulsory Part, <b>I Heat and Gases</b>, subtopic <b>a. Temperature, heat and internal energy</b>, “Students should be able to” column, printed page 19 (PDF page 29). Outcome text is quoted from the guide.</p>
 <p><b>Core.</b> Nothing in this sub-topic is underlined in the guide, so all of it is in the <b>core</b> of the Compulsory Part.</p>
@@ -1122,5 +1155,6 @@ window.__lesson = {go:go, sim:sim, qState:qState, allQ:allQ, parseNum:parseNum, 
 })();
 
 </script>
+<script src="images/heat/heat-demos.js" defer></script>
 </body>
 </html>

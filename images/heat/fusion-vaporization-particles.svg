@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 210" role="img" aria-label="Melting breaks solid structure; boiling separates liquid particles into gas.">
+  <rect width="480" height="210" fill="#fff"/>
+  <text x="240" y="20" text-anchor="middle" font-size="14" font-weight="700" fill="#0a2a66">Fusion and vaporization (particle view)</text>
+  <rect x="30" y="45" width="200" height="130" rx="8" fill="#f8fafc" stroke="#e3e5ea"/>
+  <text x="130" y="68" text-anchor="middle" font-size="12" font-weight="700" fill="#0a2a66">Melting (fusion)</text>
+  <text x="130" y="100" text-anchor="middle" font-size="11" fill="#5b6170">solid → liquid</text>
+  <text x="130" y="125" text-anchor="middle" font-size="11" fill="#5b6170">energy weakens bonds;</text>
+  <text x="130" y="142" text-anchor="middle" font-size="11" fill="#5b6170">particles can slide</text>
+  <text x="130" y="165" text-anchor="middle" font-size="11" font-weight="700" fill="#7f3f98">ℓ_f</text>
+  <rect x="250" y="45" width="200" height="130" rx="8" fill="#f8fafc" stroke="#e3e5ea"/>
+  <text x="350" y="68" text-anchor="middle" font-size="12" font-weight="700" fill="#0a2a66">Boiling (vaporization)</text>
+  <text x="350" y="100" text-anchor="middle" font-size="11" fill="#5b6170">liquid → gas</text>
+  <text x="350" y="125" text-anchor="middle" font-size="11" fill="#5b6170">energy separates particles</text>
+  <text x="350" y="142" text-anchor="middle" font-size="11" fill="#5b6170">widely; PE rises a lot</text>
+  <text x="350" y="165" text-anchor="middle" font-size="11" font-weight="700" fill="#7f3f98">ℓ_v (usually ≫ ℓ_f)</text>
+  <text x="240" y="198" text-anchor="middle" font-size="11" fill="#5b6170">Temperature constant during the change for a pure substance</text>
+</svg>

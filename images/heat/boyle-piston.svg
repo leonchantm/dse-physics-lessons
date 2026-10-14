@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 200" role="img" aria-label="Boyle law: smaller volume at constant temperature means higher pressure.">
+  <rect width="440" height="200" fill="#fff"/>
+  <text x="220" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#0a2a66">Boyle’s law (T constant): P ∝ 1/V</text>
+  <rect x="40" y="50" width="80" height="120" fill="none" stroke="#0a2a66" stroke-width="2"/>
+  <rect x="42" y="100" width="76" height="68" fill="#dbeafe"/>
+  <rect x="40" y="95" width="80" height="8" fill="#94a3b8"/>
+  <text x="80" y="145" text-anchor="middle" font-size="11">V</text>
+  <text x="80" y="55" text-anchor="middle" font-size="11" fill="#5b6170">P</text>
+  <text x="150" y="120" font-size="18">→</text>
+  <rect x="190" y="50" width="80" height="120" fill="none" stroke="#0a2a66" stroke-width="2"/>
+  <rect x="192" y="130" width="76" height="38" fill="#fee2e2"/>
+  <rect x="190" y="125" width="80" height="8" fill="#94a3b8"/>
+  <text x="230" y="155" text-anchor="middle" font-size="11">V/2</text>
+  <text x="230" y="55" text-anchor="middle" font-size="11" fill="#b91c1c">≈2P</text>
+  <text x="220" y="190" text-anchor="middle" font-size="12" fill="#5b6170">Same molecules, smaller volume → more frequent collisions</text>
+</svg>

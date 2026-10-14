@@ -159,6 +159,18 @@
     details.teacher{padding:0 .75rem}
   }
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* --- Heat enrichment visuals --- */
+.viz-block{margin:1rem 0 0;padding:0}
+.viz-block .visual{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;padding:.6rem;text-align:center}
+.viz-block .visual img,.viz-block .visual svg{width:100%;height:auto;max-height:340px;display:block;margin:0 auto}
+.viz-block figcaption,.viz-block .caption{margin:.4rem 0 0;font-size:.9rem;color:#5b6170;text-align:center}
+.mini-demo{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;padding:.6rem}
+.mini-demo canvas.demo-canvas{width:100%;height:auto;max-width:640px;display:block;margin:0 auto;background:#fff;border-radius:8px;border:1px solid #e3e5ea}
+.mini-demo .demo-controls{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center;margin-top:.5rem;font-size:.9rem}
+.mini-demo .demo-controls label{font-weight:600;color:#0a2a66}
+.mini-demo .demo-controls input[type=range]{width:min(220px,50vw)}
+
 </style>
 </head>
 <body data-home-flat="index.html" data-home-nested="../../index.html">
@@ -213,6 +225,9 @@
   </div>
   <div class="box key"><span class="box-title">Reading melting and boiling points ⭐</span>A substance is a <b>solid</b> below its melting point, a <b>liquid</b> between its melting and boiling points, and a <b>gas</b> above its boiling point.<br><br>Example: ethanol melts at −114 °C and boils at 78 °C, so at room temperature (25 °C) it is a <b>liquid</b>.</div>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/states-of-matter-particles.svg" alt="Particle arrangements in solid liquid and gas" loading="lazy"></div><figcaption class="caption">Solid: fixed sites. Liquid: close, sliding. Gas: far apart.</figcaption></figure>
 </section>
 <section class="step step-learn" data-id="curve" data-name="Heating &amp; Cooling Curves" data-kind="learn"><span class="step-kind learn">Learn</span>
 <span class="tag">Idea 2</span>
@@ -248,6 +263,10 @@
     <div class="box eg"><span class="box-title">♨️ Why steam scalds more</span>Steam at 100 °C first <b>condenses</b> on your skin, releasing 2.26 × 10⁶ J per kg, and then the hot water cools. So steam burns are worse than burns from boiling water at the same temperature.</div>
   </div>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/latent-heat-energy-bar.svg" alt="Energy goes into temperature rise or latent heat" loading="lazy"></div><figcaption class="caption">During a pure phase change, temperature stays constant while PE changes.</figcaption></figure>
+<figure class="viz-block"><div class="visual"><img src="images/heat/fusion-vaporization-particles.svg" alt="Fusion and vaporization particle views" loading="lazy"></div><figcaption class="caption">ℓ_v is usually much larger than ℓ_f.</figcaption></figure>
 </section>
 <section class="step step-practice" data-id="p1" data-name="Practice: States &amp; Latent Heat" data-kind="practice"><span class="step-kind practice">Practice</span>
 <span class="tag quiz">Practice 1</span>
@@ -264,6 +283,9 @@
   </div>
   <div class="box key"><span class="box-title">Reading a heating curve (constant power P) ⭐</span><ul class="simple"><li>Sloping parts: Pt = mcΔT ⇒ gradient = P/(mc). <b>Steeper → smaller c</b>.</li><li>Flat parts: Pt = mℓ ⇒ <b>longer flat part → larger ℓ</b>.</li></ul>For water the boiling plateau is about <b>6.8 times</b> as long as the melting plateau (2.26 × 10⁶ ÷ 3.34 × 10⁵).</div>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/latent-heat-energy-bar.svg" alt="Latent heat energy during a phase change" loading="lazy"></div><figcaption class="caption">Q = mℓ for a change of state at constant temperature.</figcaption></figure>
 </section>
 <section class="step step-learn" data-id="worked" data-name="Worked Examples" data-kind="learn"><span class="step-kind learn">Learn</span>
 <span class="tag">Worked examples</span>
@@ -274,6 +296,9 @@
   <div class="box eg worked"><span class="box-title">✏️ Example 2: making ice</span>0.40 kg of water at 30 °C is put in a freezer that removes energy at 200 W. How long until it is all ice at 0 °C?<br>cool to 0 °C: 0.40 × 4200 × 30 = 50 400 J<br>freeze: 0.40 × 3.34 × 10⁵ = 133 600 J<br>E = 184 000 J ⇒ t = 184 000 ÷ 200 = <b>920 s</b></div>
 </div>
 <div class="box eg worked"><span class="box-title">✏️ Example 3: boiling away</span>A 1200 W kettle has just brought 0.80 kg of water to the boil. Assuming no loss, how much water is left after a further 3 minutes of boiling?<br>Energy = 1200 × 180 = 216 000 J ⇒ mass boiled away = 216 000 ÷ 2.26 × 10⁶ = 0.0956 kg ⇒ <b>0.704 kg</b> left. (Units check: J ÷ J kg⁻¹ = kg ✓)</div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/latent-heat-energy-bar.svg" alt="Latent heat versus warming" loading="lazy"></div><figcaption class="caption">Include mℓ when the state changes.</figcaption></figure>
 </section>
 <section class="step step-practice" data-id="p2" data-name="Practice: Specific Latent Heat" data-kind="practice"><span class="step-kind practice">Practice</span>
 <span class="tag quiz">Practice 2</span>
@@ -331,6 +356,9 @@
       <tr><td>(ℓ<sub>f</sub>) no control set, heat from surroundings melts ice</td><td>mass melted too big → <b>lower</b></td></tr></table></div>
   </div>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/calorimeter-setup.svg" alt="Calorimeter-style heating setup also used for latent heat" loading="lazy"></div><figcaption class="caption">Measure mass changed and electrical energy supplied; correct for losses.</figcaption></figure>
 </section>
 <section class="step step-learn" data-id="mix" data-name="Mixtures with Ice" data-kind="learn"><span class="step-kind learn">Learn</span>
 <span class="tag">Idea 5</span>
@@ -342,6 +370,9 @@
     <div class="box warn"><span class="box-title">Common mistakes ⚠️</span><ul class="simple"><li>Forgetting that melted ice must also be <b>warmed</b> from 0 °C to the final temperature.</li><li>Assuming all the ice melts — always <b>check</b> whether there is enough energy first.</li></ul></div>
   </div>
 </div>
+
+<!-- heat-viz -->
+<figure class="viz-block"><div class="visual"><img src="images/heat/mixing-temperatures.svg" alt="Energy balance for mixtures that may include melting" loading="lazy"></div><figcaption class="caption">Include mℓ terms when ice melts (or water freezes).</figcaption></figure>
 </section>
 <section class="step step-practice" data-id="p3" data-name="Practice: Experiments &amp; Mixtures" data-kind="practice"><span class="step-kind practice">Practice</span>
 <span class="tag quiz">Practice 4</span>
@@ -374,6 +405,8 @@
 <div class="kbd-tip">Tip: use Tab to move, Enter/Space to press, ← → to change step.</div>
 <details class="teacher">
 <summary>👩‍🏫 Teacher notes: curriculum outcome map (click to open)</summary>
+<p class="caption"><b>Visuals:</b> This lesson includes SVG diagrams under <code>images/heat/</code> and optional canvas mini-demos (<code>heat-demos.js</code>) on selected Learn steps. Teaching text and outcome maps are unchanged.</p>
+
 <div class="tn-body">
 <p><b>Source:</b> HKDSE Physics Curriculum and Assessment Guide (S4–6), 2015 update — Compulsory Part, <b>I Heat and Gases</b>, subtopic <b>c. Change of state</b>, “Students should be able to” column, printed page 20 (PDF page 30). Outcome text is quoted from the guide.</p>
 <p><b>Core.</b> Nothing in this sub-topic is underlined in the guide, so all of it is in the <b>core</b> of the Compulsory Part.</p>
@@ -1131,5 +1164,6 @@ window.__lesson = {go:go, sim:sim, qState:qState, allQ:allQ, parseNum:parseNum, 
 })();
 
 </script>
+<script src="images/heat/heat-demos.js" defer></script>
 </body>
 </html>

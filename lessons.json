@@ -124,7 +124,9 @@
           ]
         }
       ],
-      "lessonCount": 7
+      "lessonCount": 7,
+      "hash": "heat-gases",
+      "backToUnit": "index.html#heat-gases"
     },
     {
       "id": "force-motion",
@@ -339,7 +341,9 @@
           ]
         }
       ],
-      "lessonCount": 14
+      "lessonCount": 14,
+      "hash": "force-motion",
+      "backToUnit": "index.html#force-motion"
     },
     {
       "id": "wave-motion",
@@ -572,7 +576,9 @@
           ]
         }
       ],
-      "lessonCount": 15
+      "lessonCount": 15,
+      "hash": "wave-motion",
+      "backToUnit": "index.html#wave-motion"
     },
     {
       "id": "electricity-magnetism",
@@ -789,7 +795,9 @@
           ]
         }
       ],
-      "lessonCount": 15
+      "lessonCount": 15,
+      "hash": "electricity-magnetism",
+      "backToUnit": "index.html#electricity-magnetism"
     },
     {
       "id": "radioactivity",
@@ -884,7 +892,9 @@
           ]
         }
       ],
-      "lessonCount": 6
+      "lessonCount": 6,
+      "hash": "radioactivity",
+      "backToUnit": "index.html#radioactivity"
     }
   ]
 }

@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 200" role="img" aria-label="Charles law: volume increases with temperature at constant pressure.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 200" role="img" aria-label="Charles law: volume increases with absolute temperature at constant pressure.">
   <rect width="440" height="200" fill="#fff"/>
-  <text x="220" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#0a2a66">Charles’ law (P constant): V ∝ T</text>
+  <text x="220" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#0a2a66">Charles’ law (P constant): V ∝ T (kelvin)</text>
   <rect x="50" y="60" width="70" height="100" fill="none" stroke="#0a2a66" stroke-width="2"/>
   <rect x="52" y="110" width="66" height="48" fill="#bfdbfe"/>
   <rect x="50" y="105" width="70" height="8" fill="#94a3b8"/>

@@ -274,37 +274,80 @@
     var slA=el.querySelector('[data-param=area]');
     function reset(){
       mols=[]; cool=0;
-      for(var i=0;i<50;i++) mols.push({
-        x:40+Math.random()*(g.w-80),
-        y:g.h*0.55+Math.random()*(g.h*0.35),
-        vx:(Math.random()-0.5)*1.5,
-        vy:(Math.random()-0.5)*1.5,
-        escaped:false
-      });
+      for(var i=0;i<50;i++){
+        var sp = 0.5 + Math.random()*2.0;
+        var ang = Math.random()*Math.PI*2;
+        mols.push({
+          x:40+Math.random()*(g.w-80),
+          y:g.h*0.58+Math.random()*(g.h*0.30),
+          vx:Math.cos(ang)*sp,
+          vy:Math.sin(ang)*sp,
+          escaped:false
+        });
+      }
+      // Seed 2–3 already escaping so students see vapour immediately
+      for(var k=0;k<3;k++){
+        mols[k].escaped = true;
+        mols[k].x = 60 + Math.random()*(g.w-120);
+        mols[k].y = g.h*0.55 - 10 - Math.random()*40;
+        mols[k].vx = (Math.random()-0.5)*1.2;
+        mols[k].vy = -1.5 - Math.random();
+      }
     }
     function frame(){
       if(!el.closest('.step.active')){ requestAnimationFrame(frame); return; }
       var ctx=g.ctx; ctx.clearRect(0,0,g.w,g.h); ctx.fillStyle='#fff'; ctx.fillRect(0,0,g.w,g.h);
       var surfaceY=g.h*0.55;
+      var factor = slA ? Math.max(0.4, (+slA.value)/50) : 1; // relative surface / airflow
+      // vapour (above) and liquid (below)
+      ctx.fillStyle='#f1f5f9'; ctx.fillRect(30, 28, g.w-60, surfaceY-28);
       ctx.fillStyle='#93c5fd'; ctx.fillRect(30, surfaceY, g.w-60, g.h-surfaceY-10);
+      ctx.strokeStyle='#64748b'; ctx.setLineDash([5,4]);
+      ctx.beginPath(); ctx.moveTo(30, surfaceY); ctx.lineTo(g.w-30, surfaceY); ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillStyle='#5b6170'; ctx.font='11px sans-serif';
+      ctx.fillText('vapour', 40, 46);
+      ctx.fillText('liquid surface', g.w/2-40, surfaceY-6);
       ctx.fillStyle='#0a2a66'; ctx.font='13px sans-serif';
       ctx.fillText('Fast molecules leave → liquid cools', 12, 20);
       if(cool>0){ ctx.fillStyle='#1865f2'; ctx.fillText('cooling…', g.w-90, 20); cool--; }
+
       mols.forEach(function(m){
-        if(m.escaped){ m.y-=2; m.x+=m.vx; }
-        else {
-          m.x+=m.vx; m.y+=m.vy;
+        if(m.escaped){
+          // Move clearly through vapour; airflow increases upward/sideways drift
+          m.y -= 1.8 + 0.7*factor;
+          m.x += m.vx + (Math.random()-0.5)*0.6*factor;
+          if(m.y < 6 || m.x < 16 || m.x > g.w-16){
+            // Recycle into bulk liquid so the demo keeps evaporating
+            m.escaped = false;
+            m.x = 40+Math.random()*(g.w-80);
+            m.y = g.h-28-Math.random()*36;
+            var sp = 0.5 + Math.random()*2.0, ang = Math.random()*Math.PI*2;
+            m.vx = Math.cos(ang)*sp; m.vy = Math.sin(ang)*sp;
+          }
+        } else {
+          m.x += m.vx; m.y += m.vy;
           if(m.x<40||m.x>g.w-40) m.vx*=-1;
-          if(m.y>g.h-20) m.vy*=-1;
-          if(m.y<surfaceY) m.vy=Math.abs(m.vy);
-          var speed=Math.hypot(m.vx,m.vy);
-          // Larger surface area → more chance of escape (HKDSE factor)
-          var chance = 0.002 * speed * (slA? (+slA.value)/50 : 1);
-          if(m.y < surfaceY+8 && speed>1.2 && Math.random()<chance){ m.escaped=true; cool=40; }
+          if(m.y>g.h-18){ m.y=g.h-18; m.vy=-Math.abs(m.vy); }
+          var speed = Math.hypot(m.vx, m.vy);
+          // Hit free surface from below: fast molecules escape; slow ones bounce back
+          if (m.y <= surfaceY + 1.5){
+            var thresh = 1.25 - 0.2*Math.min(1, factor*0.8);
+            var chance = 0.12 * factor * (speed / 1.1);
+            if (m.vy < 0 && speed > thresh && Math.random() < Math.min(0.65, chance)){
+              m.escaped = true;
+              m.y = surfaceY - 3;
+              m.vy = -Math.abs(m.vy) - 1.4;
+              cool = 55;
+            } else {
+              m.y = surfaceY + 3;
+              m.vy = Math.abs(m.vy||0.5) * (0.55 + Math.random()*0.5);
+            }
+          }
         }
-        if(m.y<-10){ m.escaped=false; m.y=g.h-30; m.x=40+Math.random()*(g.w-80); m.vx=(Math.random()-0.5)*1.5; m.vy=-Math.random(); }
         ctx.beginPath(); ctx.arc(m.x,m.y,4,0,Math.PI*2);
-        ctx.fillStyle=m.escaped?'#e3780c':'#1865f2'; ctx.fill();
+        ctx.fillStyle = m.escaped ? '#e3780c' : '#1865f2';
+        ctx.fill();
       });
       requestAnimationFrame(frame);
     }

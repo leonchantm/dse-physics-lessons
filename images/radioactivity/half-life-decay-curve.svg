@@ -8,27 +8,28 @@
   <text x="275" y="318" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#111">time t</text>
   <text transform="translate(22 165) rotate(-90)" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#111">N or A</text>
 
-  <!-- curve: exponential-ish using polyline -->
+  <!-- true exponential N = N0·(1/2)^(t/t½); amplitude 210 from y=70 to baseline y=280 -->
   <polyline fill="none" stroke="#1865f2" stroke-width="3.5" stroke-linejoin="round"
-    points="70,70 130,70 160,110 190,145 220,172 250,195 280,213 310,228 340,240 370,250 400,258 430,265 460,270"/>
+    points="70,70.0 85,92.9 100,113.3 115,131.5 130,147.7 145,162.1 160,175.0 175,186.5 190,196.7 205,205.8 220,213.9 235,221.1 250,227.5 265,233.2 280,238.3 295,242.9 310,246.9 325,250.5 340,253.8 355,256.6 370,259.2 385,261.4 400,263.5 415,265.3 430,266.9 445,268.3 460,269.6"/>
 
-  <!-- half markers -->
+  <!-- half markers at true geometric heights -->
   <line x1="70" y1="70" x2="160" y2="70" stroke="#94a3b8" stroke-dasharray="4 3"/>
   <line x1="160" y1="70" x2="160" y2="280" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4 3"/>
-  <line x1="70" y1="145" x2="250" y2="145" stroke="#94a3b8" stroke-dasharray="4 3"/>
-  <line x1="250" y1="145" x2="250" y2="280" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4 3"/>
-  <line x1="70" y1="195" x2="340" y2="195" stroke="#94a3b8" stroke-dasharray="4 3"/>
-  <line x1="340" y1="195" x2="340" y2="280" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="70" y1="175" x2="250" y2="175" stroke="#94a3b8" stroke-dasharray="4 3"/>
+  <line x1="250" y1="175" x2="250" y2="280" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="70" y1="227.5" x2="340" y2="227.5" stroke="#94a3b8" stroke-dasharray="4 3"/>
+  <line x1="340" y1="227.5" x2="340" y2="280" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4 3"/>
 
+  <!-- on-curve dots: (0,N0), (t½,½N0), (2t½,¼N0), (3t½,⅛N0) -->
   <circle cx="70" cy="70" r="5" fill="#dc2626"/>
-  <circle cx="160" cy="145" r="5" fill="#dc2626"/>
-  <circle cx="250" cy="195" r="5" fill="#dc2626"/>
-  <circle cx="340" cy="240" r="5" fill="#dc2626"/>
+  <circle cx="160" cy="175" r="5" fill="#dc2626"/>
+  <circle cx="250" cy="227.5" r="5" fill="#dc2626"/>
+  <circle cx="340" cy="253.8" r="5" fill="#dc2626"/>
 
   <text x="55" y="74" text-anchor="end" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">N₀</text>
-  <text x="55" y="149" text-anchor="end" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">½ N₀</text>
-  <text x="55" y="199" text-anchor="end" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">¼ N₀</text>
-  <text x="55" y="244" text-anchor="end" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">⅛ N₀</text>
+  <text x="55" y="179" text-anchor="end" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">½ N₀</text>
+  <text x="55" y="232" text-anchor="end" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">¼ N₀</text>
+  <text x="55" y="258" text-anchor="end" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">⅛ N₀</text>
 
   <text x="160" y="298" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#92400e">t½</text>
   <text x="250" y="298" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#92400e">2 t½</text>

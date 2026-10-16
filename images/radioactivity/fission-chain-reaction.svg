@@ -1,11 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" aria-label="U-235 fission releases neutrons that can start a chain reaction">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
   <rect width="760" height="340" fill="#f8fafc"/>
   <text x="380" y="26" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#0a2a66">Fission → neutrons → chain reaction</text>
 
   <!-- neutron in -->
   <circle cx="50" cy="120" r="10" fill="#2563eb"/>
   <text x="50" y="100" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#1e3a8a">n</text>
-  <line x1="62" y1="120" x2="110" y2="120" stroke="#2563eb" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="62" y1="120" x2="100" y2="120" stroke="#2563eb" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- arrow tip (also visible if marker unsupported) -->
+  <polygon points="100,114 112,120 100,126" fill="#2563eb"/>
 
   <!-- U-235 -->
   <circle cx="160" cy="120" r="36" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>

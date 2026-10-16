@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 360" role="img" aria-label="Simple d.c. motor: N left S right, I out on left arm and into on right arm, anticlockwise couple, split-ring commutator">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 360" role="img" aria-label="Simple d.c. motor: N left S right, I out on left arm and into on right arm, clockwise couple, split-ring commutator">
   <rect width="680" height="360" fill="#f8fafc"/>
   <!-- magnets -->
   <rect x="30" y="70" width="55" height="180" rx="5" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
@@ -48,5 +48,5 @@
   <rect x="448" y="162" width="6" height="16" fill="#111"/>
   <text x="430" y="175" text-anchor="end" font-size="12" font-weight="700">d.c.</text>
   <text x="240" y="320" text-anchor="middle" font-size="13" fill="#5b6170">Couple of forces turns the coil; split-ring reverses I each half-turn</text>
-  <text x="240" y="342" text-anchor="middle" font-size="12" fill="#7f3f98" font-weight="700">anticlockwise torque in this snapshot</text>
+  <text x="240" y="342" text-anchor="middle" font-size="12" fill="#7f3f98" font-weight="700">clockwise torque in this snapshot</text>
 </svg>

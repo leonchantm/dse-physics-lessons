@@ -200,8 +200,8 @@ Force on a current-carrying conductor; <span class="eq">F = BIl sinθ</span>; tu
 <h2 tabindex="-1">Force on a current-carrying wire <span class="zh">（載流導線所受磁力）</span></h2>
 <p>A current-carrying wire makes its own field (Lesson 4.5a). In an <b>external</b> B-field it feels a <b>magnetic force</b>. Classic demo: a free copper rod on rails between slab magnets rolls when the current is switched on.</p>
 <div class="visual">
-  <img src="images/em/fleming-wire-force.svg" alt="Wire with current into the paper between N and S poles; B to the right; force upward" width="640" height="340" style="max-width:100%;height:auto;border-radius:10px">
-  <p class="caption">B from N to S (right). I into the paper (×). Fleming’s left hand gives F upward.</p>
+  <img src="images/em/fleming-wire-force.svg" alt="Wire with current into the paper between N and S poles; B to the right; force downward" width="640" height="340" style="max-width:100%;height:auto;border-radius:10px">
+  <p class="caption">B from N to S (right). I into the paper (×). Fleming’s left hand gives F downward.</p>
 </div>
 <div class="box key"><span class="box-title">Relative directions (Fleming’s left-hand rule)</span>
 <ul class="simple">
@@ -264,7 +264,7 @@ More turns N, stronger B, larger coil area in the field, larger I, and inserting
 <ul class="simple">
   <li>The commutator is two half-rings fixed to the coil; it rotates with the coil and rubs against the brushes.</li>
   <li>Every <b>half-turn</b>, each half-ring swaps which brush it touches → the current in the coil <b>reverses</b>.</li>
-  <li>Reversing I reverses the force directions on the sides → the couple keeps driving the coil in the <b>same sense</b> (e.g. always anticlockwise).</li>
+  <li>Reversing I reverses the force directions on the sides → the couple keeps driving the coil in the <b>same sense</b> (e.g. always the same sense (clockwise in the diagram)).</li>
   <li>When the coil is vertical, the brushes may briefly leave a gap (no contact) → no current for an instant; the coil continues because of <b>inertia</b>.</li>
 </ul>
 </div>
@@ -544,7 +544,7 @@ p1:[
 {type:"num", text:"B = 0.50 T, I = 3.0 A, ℓ = 0.20 m, θ = 90°. Find F in N.", answer:0.30, unit:"N", tol:0.02, hints:["Formula: F = BIl sinθ. sin90° = 1.", "F = 0.50 × 3.0 × 0.20 = 0.30 N."], explain:"F = BIl = 0.50×3.0×0.20 = 0.30 N."},
 {type:"num", text:"Same B, I, ℓ as above, but θ = 30°. Find F in N.", answer:0.15, unit:"N", tol:0.02, hints:["F = BIl sinθ; sin30° = 0.5.", "F = 0.30 × 0.5 = 0.15 N."], explain:"F = 0.50×3.0×0.20×0.5 = 0.15 N."},
 {type:"mc", text:"Which change alone doubles F on a wire at θ = 90°?", options:["Doubling B (same I and ℓ)", "Halving I", "Setting θ = 0°", "Halving ℓ"], answer:0, hints:["F = BIl when θ = 90°.", "F is proportional to B."], explain:"F ∝ B, so doubling B doubles F."},
-{type:"mc", text:"B points right and I is into the paper (×). By Fleming’s left hand, F is…", options:["upward (toward the top of the page)", "downward", "to the right (along B)", "into the paper (along I)"], answer:0, hints:["First finger right (B), seCond into page (I).", "Thumb then points up."], explain:"Left hand: B →, I × → F ↑ (as in the lesson diagram)."}
+{type:"mc", text:"B points right and I is into the paper (×). By Fleming’s left hand, F is…", options:["upward (toward the top of the page)", "downward", "to the right (along B)", "into the paper (along I)"], answer:1, hints:["First finger right (B), seCond into page (I).", "Thumb then points down."], explain:"Left hand: B →, I × → F ↓ (as in the lesson diagram)."}
 ],
 psim:[
 {type:"num", text:"Sim defaults: B = 0.50 T, I = 3.0 A, ℓ = 20 cm, θ = 90°. F equals … N.", answer:0.30, unit:"N", tol:0.02, hints:["ℓ = 20 cm = 0.20 m.", "F = 0.50×3.0×0.20 = 0.30 N."], explain:"Matches Example 1 / live readout: F = 0.30 N."},
@@ -593,18 +593,18 @@ function makeSim(){
       var yy = y0 + i*((H-100)/3.5);
       kArrow(ctx, 80, yy, W-80, yy, "#7c3aed", 2.5, i===0?"B":"");
     }
-    // wire: show as circle with × (into paper) at centre; F direction from FLH: B right, I into → F up
+    // wire: show as circle with × (into paper) at centre; F direction from FLH: B right, I into → F down
     var cx = W/2, cy = H/2 + 10;
     ctx.beginPath(); ctx.arc(cx, cy, 26, 0, 7); ctx.fillStyle = "#fff"; ctx.fill(); ctx.strokeStyle = "#111"; ctx.lineWidth = 3; ctx.stroke();
     ctx.beginPath(); ctx.moveTo(cx-12, cy-12); ctx.lineTo(cx+12, cy+12); ctx.moveTo(cx+12, cy-12); ctx.lineTo(cx-12, cy+12); ctx.stroke();
     ctx.fillStyle = "#186d32"; ctx.font = "bold 13px Arial"; ctx.textAlign = "center";
-    ctx.fillText("I into paper", cx, cy + 48);
-    // F arrow scaled by sinθ
+    ctx.fillText("I into paper", cx, cy - 40);
+    // F arrow scaled by sinθ (downward: B→, I into → F down)
     var fLen = 20 + Math.min(90, P.F * 120);
     if (P.sin > 0.02){
-      kArrow(ctx, cx, cy - 28, cx, cy - 28 - fLen, "#b91c1c", 4, "F");
+      kArrow(ctx, cx, cy + 28, cx, cy + 28 + fLen, "#b91c1c", 4, "F");
     } else {
-      ctx.fillStyle = "#b91c1c"; ctx.font = "bold 14px Arial"; ctx.fillText("F = 0 (I ∥ B)", cx, cy - 50);
+      ctx.fillStyle = "#b91c1c"; ctx.font = "bold 14px Arial"; ctx.fillText("F = 0 (I ∥ B)", cx, cy + 55);
     }
     // angle note: when θ<90, show dashed I direction tilted (schematic)
     ctx.fillStyle = "#0a2a66"; ctx.font = "bold 15px Arial"; ctx.textAlign = "center";

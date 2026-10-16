@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" aria-label="Mass defect Delta m appears as energy Delta E equals Delta m c squared">
+  <rect width="760" height="340" fill="#f8fafc"/>
+  <text x="380" y="26" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#0a2a66">Mass defect → energy · ΔE = Δm c²</text>
+
+  <!-- reactants -->
+  <rect x="40" y="70" width="200" height="100" rx="12" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="140" y="110" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="800" fill="#1e3a8a">Reactants</text>
+  <text x="140" y="140" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e3a8a">total mass m₁</text>
+
+  <text x="270" y="125" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="28" fill="#64748b">→</text>
+
+  <!-- products -->
+  <rect x="310" y="70" width="200" height="100" rx="12" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="410" y="110" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="800" fill="#166534">Products</text>
+  <text x="410" y="140" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#166534">total mass m₂</text>
+
+  <!-- energy -->
+  <rect x="540" y="70" width="180" height="100" rx="12" fill="#fef3c7" stroke="#ca8a04"/>
+  <text x="630" y="110" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="800" fill="#92400e">Energy</text>
+  <text x="630" y="140" text-anchor="middle" font-family="Cambria Math,Times New Roman,serif" font-size="15" font-weight="700" fill="#92400e">ΔE = Δm c²</text>
+
+  <text x="380" y="210" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" fill="#0a2a66">If m₁ &gt; m₂ (mass defect Δm = m₁ − m₂) → energy <b>released</b></text>
+  <text x="380" y="235" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" fill="#0a2a66">If m₂ &gt; m₁ → energy must be <b>supplied</b> (absorbed)</text>
+
+  <rect x="80" y="260" width="600" height="55" rx="10" fill="#f3e8f8" stroke="#7f3f98"/>
+  <text x="380" y="285" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#5b2178">Handy: 1 u ↔ 931 MeV &nbsp;·&nbsp; 1 eV = 1.60×10⁻¹⁹ J &nbsp;·&nbsp; c = 3.00×10⁸ m s⁻¹</text>
+  <text x="380" y="305" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b2178">E (MeV) ≈ Δm (u) × 931</text>
+</svg>

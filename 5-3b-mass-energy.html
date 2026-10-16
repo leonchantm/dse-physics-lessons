@@ -164,7 +164,7 @@
 <body data-home-flat="index.html#radioactivity" data-home-nested="../../index.html#radioactivity">
 <a href="#main" class="sr-only">Skip to content</a>
 <header class="topbar">
-  <div class="brand">☢️ Lesson 5.3b: Mass–Energy Relationship <span class="badge-ext">Extension</span> <span class="zh">(質能關係)</span></div>
+  <div class="brand">☢️ Lesson 5.3b: Mass–Energy Relationship <span class="zh">（質能關係）</span> <span class="tag ext">Extension</span></div>
   <div class="topbar-actions">
     <a id="homeLink" class="home-link" href="index.html#radioactivity" data-home-flat="index.html#radioactivity" data-home-nested="../../index.html#radioactivity">← Back to unit</a>
     <span class="score-pill" id="scorePill" aria-live="polite">⭐ 0 / 0</span>
@@ -184,34 +184,228 @@
 <main id="main">
 <section class="step step-learn" data-id="welcome" data-name="Welcome" data-kind="learn"><span class="step-kind learn">Learn</span>
 <div class="welcome-hero">
-  <div class="big" aria-hidden="true">ΔE=Δmc²</div>
-  <h2 tabindex="-1">Lesson 5.3b: Mass–Energy Relationship <span class="badge-ext">Extension</span> <span class="zh">(質能關係)</span></h2>
-  <p>A change in mass is linked to a change in energy by <b>ΔE = Δm c²</b>. You will use the atomic mass unit as energy and find energy released in nuclear reactions.</p>
-<p><b>Hong Kong hook:</b> the enormous energy from a tiny mass defect is why a nuclear plant (or the Sun) can power cities from a small amount of fuel.</p>
+  <div class="big" aria-hidden="true">E=mc²</div>
+  <h2 tabindex="-1">Lesson 5.3b: Mass–Energy Relationship <span class="zh">（質能關係）</span> <span class="tag ext">Extension</span></h2>
+  <p>Mass and energy are linked by Einstein’s relation. A tiny <b>mass defect</b> in a nuclear reaction appears as a large energy release (or absorption): <span class="eq">ΔE = Δm c²</span>.</p>
+  <p><b>Hong Kong hook:</b> when news quotes “megawatts from Daya Bay,” the underlying nuclear energy ultimately traces to mass converted in fission — this lesson shows the accounting.</p>
 </div>
-
-<div class="lesson-link">⬅️ Previous: <a href="5-3a-fission-fusion.html">Lesson 5.3a: Nuclear Fission and Fusion</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div>
+<div class="box key"><span class="box-title">In this lesson <span class="tag ext">Extension</span></span>
+Rest-energy idea simply; mass defect; ΔE = Δm c² in SI; eV / MeV and atomic mass unit u; 1 u ↔ 931 MeV; apply to fission/fusion energy release. Chain-reaction detail stayed in <b>5.3a</b>. Keep units consistent at every step.
+</div>
+<div class="lesson-link">⬅️ Previous: <a href="5-3a-fission-fusion.html">Lesson 5.3a: Nuclear Fission and Fusion</a> &nbsp;·&nbsp; ➡️ Next: <a href="index.html" data-home-nav>Unit hub / all lessons</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div>
 </section>
-<section class="step step-learn" data-id="einstein" data-name="Mass–Energy" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 1</span><span class="badge-ext">Extension</span><h2 tabindex="-1">Einstein</h2><div class="box formula">ΔE = Δm c²</div><p>A mass defect Δm appears as released (or absorbed) energy.</p></section>
-<section class="step step-learn" data-id="amu" data-name="Atomic Mass Unit" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 2</span><span class="badge-ext">Extension</span><h2 tabindex="-1">u and MeV</h2><div class="box formula">1 u ≈ 931 MeV/c² &nbsp;⇒&nbsp; energy from Δm (in u) ≈ Δm × 931 MeV</div></section>
-<section class="step step-learn" data-id="release" data-name="Energy Release" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 3</span><span class="badge-ext">Extension</span><h2 tabindex="-1">Nuclear reactions</h2><p>Find total mass before and after. If mass decreases, energy is released: E = Δm c².</p></section>
-<section class="step step-learn" data-id="worked" data-name="Worked Examples" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Worked examples</span><span class="badge-ext">Extension</span><h2 tabindex="-1">Calculate</h2><div class="box eg">Δm = 0.001 u → E ≈ 0.001 × 931 = 0.931 MeV.</div><div class="box eg">Δm = 0.2 u → E ≈ 186 MeV (order of fission energy per event).</div></section>
-<section class="step step-practice" data-id="p1" data-name="Practice: Relation" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 1</span><span class="badge-ext">Extension</span><h2 tabindex="-1">ΔE = Δm c²</h2><div class="quiz" data-quiz="p1"></div></section>
-<section class="step step-sim" data-id="sim" data-name="Try it: Mass defect" data-kind="sim"><span class="step-kind sim">Try it</span><span class="tag sim">Try it!</span><h2 tabindex="-1">Energy</h2><div class="sim-panel"><canvas id="animCanvas" width="640" height="280"></canvas><div class="sim-controls"><div class="slider"><label for="dmSl"><span>Δm (u)</span><span id="dmSlVal"></span></label>
-    <input type="range" id="dmSl" min="0.001" max="0.5" step="0.001" value="0.1"></div><div class="sim-buttons">
-  <button class="btn-primary" id="playBtn" type="button">▶ Play</button>
-  <button class="btn-secondary" id="resetBtn" type="button">↺ Reset</button>
-  <label for="speedSel" style="font-weight:700">Speed:</label>
-  <select id="speedSel"><option value="1">Normal</option><option value="0.5">Slow (½×)</option><option value="0.25">Very slow (¼×)</option></select>
-</div></div><div class="readouts"><div class="ro "><div class="lab">Out1</div><div class="val" id="ro1"></div></div><div class="ro "><div class="lab">Out2</div><div class="val" id="ro2"></div></div></div><p class="caption" id="simMsg">Explore</p></div></section>
-<section class="step step-practice" data-id="psim" data-name="Practice: Simulation" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 2</span><span class="badge-ext">Extension</span><h2 tabindex="-1">Convert</h2><div class="quiz" data-quiz="psim"></div></section>
-<section class="step step-practice" data-id="p2" data-name="Practice: Problems" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 3</span><span class="badge-ext">Extension</span><h2 tabindex="-1">Release</h2><div class="quiz" data-quiz="p2"></div></section>
-<section class="step step-learn" data-id="summary" data-name="Summary" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Summary</span><h2 tabindex="-1">Remember</h2><div style="text-align:center"><div class="stars" id="stars" aria-hidden="true"></div>
-  <p id="finalScore" style="font-size:1.2rem;font-weight:800"></p><p id="finalMsg"></p></div><ul class="simple"><li class="ext">ΔE = Δm c².</li><li class="ext">1 u ↔ 931 MeV; energy release from mass defect.</li></ul><div class="lesson-link">⬅️ Previous: <a href="5-3a-fission-fusion.html">Lesson 5.3a: Nuclear Fission and Fusion</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div><div class="q-actions" style="justify-content:center">
+
+<section class="step step-learn" data-id="einstein" data-name="Mass–Energy" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 1</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Einstein: mass and energy <span class="zh">（質能）</span></h2>
+<p>Special relativity (Einstein, 1905) shows mass and energy are equivalent — different forms of the same thing and can be interchanged.</p>
+<div class="box formula"><span class="box-title">Mass–energy relation ⭐</span>
+<span class="eq">E = m c²</span> &nbsp; (energy equivalent of mass m)<br>
+For a <b>change</b> in mass in a reaction: <span class="eq">ΔE = Δm c²</span>
+</div>
+<ul class="simple">
+  <li><span class="eq">c = 3.00 × 10⁸ m s⁻¹</span> (speed of light in vacuum).</li>
+  <li>Even a tiny mass corresponds to a huge energy because c² is enormous.</li>
+  <li>School note (notes): converting only 1 mg of mass releases enough energy to boil about 3×10⁷ kg of water from 0 °C — intuition for “tiny Δm, big E.”</li>
+</ul>
+<p>You do not need the full special-relativity derivation — only the working relation and careful units. Rest energy of a mass m means the energy equivalent E = mc² tied up in that mass even when the object is at rest.</p>
+<div class="box key"><span class="box-title">Must remember</span>
+ΔE = Δm c². Mass and energy are interchangeable; c = 3.00×10⁸ m s⁻¹.
+</div>
+</section>
+
+<section class="step step-learn" data-id="defect" data-name="Mass Defect" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 2</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Mass defect <span class="zh">（質量虧損）</span></h2>
+<p>In a nuclear reaction that <b>releases</b> energy, the total mass of the product nuclides is a little less than the total mass of the reactants. That loss is the <b>mass defect</b> Δm.</p>
+<div class="visual">
+<img src="images/radioactivity/mass-defect-emc2.svg" alt="Reactants to products with mass defect appearing as energy Delta E equals Delta m c squared" style="width:100%;max-width:760px;height:auto;display:block;margin:.4rem auto">
+<p class="caption">m₁ &gt; m₂ → energy released. m₂ &gt; m₁ → energy must be absorbed (supplied).</p>
+</div>
+<div class="box formula"><span class="box-title">Sign sense</span>
+<span class="eq">Δm = m<sub>reactants</sub> − m<sub>products</sub></span> (when energy is released, Δm &gt; 0)<br>
+Then <span class="eq">ΔE = Δm c²</span> is the energy released.
+</div>
+<div class="box eg"><span class="box-title">Link to 5.3a</span>
+Fission and fusion both release energy when the products are lighter than the reactants — the “missing” mass is the energy you feel as heat / KE of fragments. We do not re-teach the chain reaction here; we calculate the energy scale.
+</div>
+<div class="box eg"><span class="box-title">α-decay intuition</span>
+If a parent emits α and the measured kinetic energies total several MeV, the daughter + α together weigh slightly less than the parent — the difference is exactly that energy via ΔE = Δm c².
+</div>
+<div class="box key"><span class="box-title">Must remember</span>
+Mass defect = mass lost when energy is released. ΔE = Δm c².
+</div>
+</section>
+
+<section class="step step-learn" data-id="si" data-name="SI Calculation" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 3</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">ΔE = Δm c² in SI units</h2>
+<p>Use kilograms for Δm and metres per second for c; then ΔE is in joules.</p>
+<div class="box eg worked"><span class="box-title">Example — SI</span>
+<p>Δm = 1.0 × 10⁻³ kg (1 g). Find ΔE.</p>
+<div class="reveal">
+  <div class="rline"><b class="n">1</b> <span class="eq">c = 3.00 × 10⁸ m s⁻¹</span> → <span class="eq">c² = 9.00 × 10¹⁶ m² s⁻²</span></div>
+  <div class="rline"><b class="n">2</b> <span class="eq">ΔE = Δm c² = (1.0 × 10⁻³)(9.00 × 10¹⁶) = 9.0 × 10¹³ J</span></div>
+  <div class="rline"><b class="n">3</b> That is 90 TJ from only one gram of mass converted — nuclear scale.</div>
+  <div class="q-actions"><button type="button" class="btn-secondary reveal-next">Show next line ▼</button>
+  <button type="button" class="btn-hint reveal-all">Show all</button></div>
+</div>
+</div>
+<div class="box danger"><span class="box-title">Unit trap</span>
+Never mix u with c² in SI without converting u → kg first. Prefer the MeV shortcut (next step) for atomic-scale Δm given in u.
+</div>
+<div class="box key"><span class="box-title">Must remember</span>
+SI: Δm in kg, c = 3.00×10⁸, ΔE in J.
+</div>
+</section>
+
+<section class="step step-learn" data-id="units" data-name="eV MeV and u" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 4</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Practical units: eV, MeV and u</h2>
+<div class="box formula"><span class="box-title">Electron-volt</span>
+<span class="eq">1 eV = 1.60 × 10⁻¹⁹ J</span> &nbsp; (energy gained by an electron across 1 V)<br>
+<span class="eq">1 MeV = 10⁶ eV = 1.60 × 10⁻¹³ J</span>
+</div>
+<div class="box formula"><span class="box-title">Atomic mass unit</span>
+Mass of a <sup>12</sup>C atom is defined as exactly <b>12 u</b>.<br>
+Nuclear masses are quoted in u (much handier than kg). Typical: proton ≈ 1.007 u, neutron ≈ 1.009 u (notes).
+</div>
+<div class="box formula"><span class="box-title">Conversion used in HKDSE ⭐</span>
+<span class="eq">1 u ↔ 931 MeV</span> &nbsp; (energy equivalent)<br>
+So if Δm is given in u: <span class="eq">ΔE / MeV ≈ Δm(u) × 931</span>
+</div>
+<div class="box eg"><span class="box-title">Also useful</span>
+1 u ≈ 1.66 × 10⁻²⁷ kg (for rare SI conversions from u).
+</div>
+<div class="box danger"><span class="box-title">Calculator habit</span>
+Write the unit next to every number in your working (u, MeV, J, kg). Most mass–energy mistakes in exams are unit slips, not algebra slips.
+</div>
+<div class="box key"><span class="box-title">Must remember</span>
+1 eV = 1.60×10⁻¹⁹ J; 1 u ↔ 931 MeV; E(MeV) ≈ Δm(u)×931.
+</div>
+</section>
+
+<section class="step step-learn" data-id="apply" data-name="Fission Fusion Energy" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 5</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Energy release in fission and fusion</h2>
+<p>From 5.3a: fission splits heavy nuclei; fusion joins light ones. Both can show a mass defect.</p>
+<ul class="simple">
+  <li>Typical fission of one U-235 nucleus releases on the order of <b>~200 MeV</b> (roughly Δm ~ 0.2 u × 931).</li>
+  <li>Fusion of light nuclei (e.g. D–T style examples in notes) also releases MeV-scale energy per event — tiny mass change, large E.</li>
+  <li>Method: sum masses before and after (in u) → Δm → multiply by 931 for MeV, or use Δm c² in SI if masses are in kg.</li>
+</ul>
+<div class="box warn"><span class="box-title">Release vs absorb</span>
+If products are heavier, the reaction needs an energy input at least Δm c² (endothermic nuclear process). Exam questions often ask whether mass is less or more after a stated MeV release.
+</div>
+<div class="box eg"><span class="box-title">Per nucleon (extension flavour)</span>
+Comparing energy released per nucleon helps explain why fusion of light nuclei and fission of heavy nuclei are both useful — full binding-energy curves are beyond this lesson’s depth, but the Δm method still works whenever masses are given.
+</div>
+<div class="box key"><span class="box-title">Must remember</span>
+Find Δm from tables/data → ΔE = Δm c² or ×931 MeV/u. Fission ~200 MeV per event (order of magnitude).
+</div>
+</section>
+
+<section class="step step-learn" data-id="worked" data-name="Worked Examples" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Worked examples</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Worked examples</h2>
+<div class="box eg worked"><span class="box-title">Example 1 — u to MeV</span>
+<p>Δm = 0.001 u. Energy released?</p>
+<div class="reveal">
+  <div class="rline"><b class="n">1</b> <span class="eq">ΔE ≈ 0.001 × 931 = 0.931 MeV</span></div>
+  <div class="rline"><b class="n">2</b> In joules: 0.931 × 10⁶ × 1.60×10⁻¹⁹ ≈ 1.49×10⁻¹³ J.</div>
+  <div class="q-actions"><button type="button" class="btn-secondary reveal-next">Show next line ▼</button>
+  <button type="button" class="btn-hint reveal-all">Show all</button></div>
+</div>
+</div>
+<div class="box eg worked"><span class="box-title">Example 2 — fission-scale</span>
+<p>Δm = 0.200 u in one fission. ΔE?</p>
+<div class="reveal">
+  <div class="rline"><b class="n">1</b> <span class="eq">ΔE ≈ 0.200 × 931 = 186 MeV</span> (same order as “~200 MeV”).</div>
+  <div class="q-actions"><button type="button" class="btn-secondary reveal-next">Show next line ▼</button>
+  <button type="button" class="btn-hint reveal-all">Show all</button></div>
+</div>
+</div>
+<div class="box eg worked"><span class="box-title">Example 3 — from energy to mass</span>
+<p>A decay releases 4.9 MeV. Find the mass defect in kg (order).</p>
+<div class="reveal">
+  <div class="rline"><b class="n">1</b> ΔE = 4.9 × 10⁶ × 1.60×10⁻¹⁹ ≈ 7.84×10⁻¹³ J.</div>
+  <div class="rline"><b class="n">2</b> <span class="eq">Δm = ΔE / c² ≈ 7.84×10⁻¹³ / 9.00×10¹⁶ ≈ 8.7×10⁻³⁰ kg</span></div>
+  <div class="rline"><b class="n">3</b> Products are that much <b>lighter</b> than the parent (energy released).</div>
+  <div class="q-actions"><button type="button" class="btn-secondary reveal-next">Show next line ▼</button>
+  <button type="button" class="btn-hint reveal-all">Show all</button></div>
+</div>
+</div>
+</section>
+
+<section class="step step-practice" data-id="p1" data-name="Practice: Relation" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 1</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">ΔE = Δm c² and mass defect</h2>
+<div class="quiz" data-quiz="p1"></div>
+</section>
+
+<section class="step step-sim" data-id="sim" data-name="Try it: Mass defect" data-kind="sim"><span class="step-kind sim">Try it</span><span class="tag sim">Try it!</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Mass–energy calculator <span class="zh">（質能換算）</span></h2>
+<p>Set mass defect Δm in u (or switch to kg scale). Live ΔE in J and MeV must match ΔE = Δm c² and ×931.</p>
+<div class="sim-panel">
+<canvas id="animCanvas" width="640" height="300"></canvas>
+<div class="sim-controls">
+  <label>Mass unit
+    <select id="unitSel">
+      <option value="u">Δm in u</option>
+      <option value="kg">Δm in kg (×10⁻³⁰ scale slider)</option>
+    </select>
+  </label>
+  <div class="slider"><label for="dmSl"><span>Δm</span><span id="dmSlVal"></span></label>
+    <input type="range" id="dmSl" min="1" max="200" step="1" value="100"></div>
+  <div class="sim-buttons">
+    <button class="btn-primary" id="playBtn" type="button">▶ Play</button>
+    <button class="btn-secondary" id="resetBtn" type="button">↺ Reset</button>
+    <label for="speedSel" style="font-weight:700">Speed:</label>
+    <select id="speedSel"><option value="1">Normal</option><option value="0.5">Slow (½×)</option><option value="0.25">Very slow (¼×)</option></select>
+  </div>
+  <div class="readout" style="grid-template-columns:repeat(4,1fr)">
+    <div class="ro"><div class="lab">Δm</div><div class="val" id="ro1">—</div></div>
+    <div class="ro v"><div class="lab">ΔE / J</div><div class="val" id="ro2">—</div></div>
+    <div class="ro a"><div class="lab">ΔE / MeV</div><div class="val" id="ro3">—</div></div>
+    <div class="ro av"><div class="lab">Check ×931</div><div class="val" id="ro4">—</div></div>
+  </div>
+  <p class="sim-msg" id="simMsg">ΔE = Δm c²</p>
+  <div class="panel measure">Constants: c = 3.00×10⁸ m s⁻¹; 1 u = 1.66×10⁻²⁷ kg; 1 MeV = 1.60×10⁻¹³ J; 1 u ↔ 931 MeV.</div>
+</div>
+</div>
+</section>
+
+<section class="step step-practice" data-id="psim" data-name="Practice: Simulation" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 2</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Convert and compute</h2>
+<div class="quiz" data-quiz="psim"></div>
+</section>
+
+<section class="step step-practice" data-id="p2" data-name="Practice: Problems" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 3</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Release, absorb, fission scale</h2>
+<div class="quiz" data-quiz="p2"></div>
+</section>
+
+<section class="step step-learn" data-id="summary" data-name="Summary" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Summary</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Remember</h2>
+<div style="text-align:center"><div class="stars" id="stars" aria-hidden="true"></div>
+  <p id="finalScore" style="font-size:1.2rem;font-weight:800"></p><p id="finalMsg"></p></div>
+<ul class="simple">
+  <li><b>ΔE = Δm c²</b> (c = 3.00×10⁸ m s⁻¹).</li>
+  <li>Mass defect: products lighter → energy released; heavier → energy absorbed.</li>
+  <li><b>1 eV = 1.60×10⁻¹⁹ J</b>; <b>1 u ↔ 931 MeV</b>; E(MeV) ≈ Δm(u)×931.</li>
+  <li>Fission/fusion energy release is the mass-defect story from 5.3a, quantified here.</li>
+</ul>
+<div class="box eg"><span class="box-title">Unit 5 complete</span>
+You have finished Radioactivity and Nuclear Energy: types &amp; detection → nuclides &amp; equations → half-life &amp; safety → exponential law (ext.) → fission/fusion → mass–energy (ext.).
+</div>
+<div class="lesson-link">⬅️ Previous: <a href="5-3a-fission-fusion.html">Lesson 5.3a: Nuclear Fission and Fusion</a> &nbsp;·&nbsp; ➡️ Next: <a href="index.html" data-home-nav>Unit hub / all lessons</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div>
+<div class="q-actions" style="justify-content:center">
   <button class="btn-secondary" id="reviewBtn" type="button">Go to first unfinished question</button>
   <button class="btn-retry" id="restartBtn" type="button">↺ Reset all questions</button>
-</div></section>
+</div>
+</section>
 </main>
+
 <nav class="controls" aria-label="Lesson navigation">
   <button class="btn-secondary" id="backBtn" type="button">◀ Back</button>
   <button class="btn-primary" id="nextBtn" type="button">Next ▶</button>
@@ -220,15 +414,16 @@
 <details class="teacher">
 <summary>👩‍🏫 Teacher notes: curriculum outcome map (click to open)</summary>
 <div class="tn-body">
-<p><b>Source:</b> HKDSE Physics Curriculum and Assessment Guide (S4–6), 2015 update — Compulsory Part, <b>V Radioactivity and Nuclear Energy</b>, subtopic <b>c. Nuclear energy</b>, “Students should be able to” column, printed page 50 (PDF page 60). Outcome text is quoted from the guide.</p>
-<p>This sub-topic is taught in <b>Lesson 5.3a</b> (<a href="5-3a-fission-fusion.html">5-3a-fission-fusion.html</a>): 11 steps; <b>Lesson 5.3b</b> (<a href="5-3b-mass-energy.html">5-3b-mass-energy.html</a>): 10 steps. Links to other lessons open that file at the step.</p>
-<h3>Learning outcomes</h3>
-<div class="table-scroll"><table class="t outcomes"><tr><th>#</th><th>Topic</th><th>Learning outcome (quoted)</th><th>Where it is taught / practised</th></tr>
-<tr><td>1</td><td><i>nuclear fission and fusion</i></td><td>“realise the release of energy in nuclear fission and fusion”</td><td><a href="5-3a-fission-fusion.html#step2">L5.3a Step 2: Nuclear Fission</a><br><a href="5-3a-fission-fusion.html#step4">L5.3a Step 4: Nuclear Fusion</a><br><a href="5-3a-fission-fusion.html#step7">L5.3a Step 7: Practice: Fission/Fusion</a></td></tr><tr><td>2</td><td><i>nuclear fission and fusion</i></td><td>“realise nuclear chain reaction”</td><td><a href="5-3a-fission-fusion.html#step3">L5.3a Step 3: Chain Reaction</a><br><a href="5-3a-fission-fusion.html#step8">L5.3a Step 8: Try it: Chain</a><br><a href="5-3a-fission-fusion.html#step7">L5.3a Step 7: Practice: Fission/Fusion</a></td></tr><tr><td>3</td><td><i>nuclear fission and fusion</i></td><td>“realise nuclear fusion as the source of solar energy”</td><td><a href="5-3a-fission-fusion.html#step4">L5.3a Step 4: Nuclear Fusion</a><br><a href="5-3a-fission-fusion.html#step7">L5.3a Step 7: Practice: Fission/Fusion</a></td></tr><tr><td>4</td><td><i>mass-energy relationship</i></td><td>“state mass-energy relationship ΔE = Δm c²” <span class="tag quiz">Extension</span></td><td><a href="#step2" data-step="2">L5.3b Step 2: Mass–Energy</a><br><a href="#step6" data-step="6">L5.3b Step 6: Practice: Relation</a></td></tr><tr><td>5</td><td><i>mass-energy relationship</i></td><td>“use atomic mass unit as a unit of energy” <span class="tag quiz">Extension</span></td><td><a href="#step3" data-step="3">L5.3b Step 3: Atomic Mass Unit</a><br><a href="#step6" data-step="6">L5.3b Step 6: Practice: Relation</a></td></tr><tr><td>6</td><td><i>mass-energy relationship</i></td><td>“determine the energy release in nuclear reactions” <span class="tag quiz">Extension</span></td><td><a href="#step4" data-step="4">L5.3b Step 4: Energy Release</a><br><a href="#step5" data-step="5">L5.3b Step 5: Worked Examples</a><br><a href="#step7" data-step="7">L5.3b Step 7: Try it: Mass defect</a><br><a href="#step8" data-step="8">L5.3b Step 8: Practice: Simulation</a><br><a href="#step9" data-step="9">L5.3b Step 9: Practice: Problems</a></td></tr><tr><td>7</td><td><i>mass-energy relationship</i></td><td>“apply ΔE = Δm c² to solve problems” <span class="tag quiz">Extension</span></td><td><a href="#step5" data-step="5">L5.3b Step 5: Worked Examples</a><br><a href="#step7" data-step="7">L5.3b Step 7: Try it: Mass defect</a><br><a href="#step8" data-step="8">L5.3b Step 8: Practice: Simulation</a><br><a href="#step9" data-step="9">L5.3b Step 9: Practice: Problems</a></td></tr></table></div>
-<h3>Suggested learning &amp; teaching activities used</h3>
-<div class="table-scroll"><table class="t activities"><tr><th>#</th><th>Activity (from the guide, pp.50–52, incl. Values &amp; Attitudes and STSE)</th><th>Where</th></tr>
-<tr><td>1</td><td>Comparing the relative costs and benefits from the use of nuclear reactors with other methods of producing electrical power</td><td><a href="5-3a-fission-fusion.html#step6">L5.3a Step 6: Risks &amp; Benefits</a></td></tr><tr><td>2</td><td>Searching for information on nuclear accidents and reporting a case study on them</td><td><a href="5-3a-fission-fusion.html#step5">L5.3a Step 5: Nuclear Waste</a><br><a href="5-3a-fission-fusion.html#step6">L5.3a Step 6: Risks &amp; Benefits</a></td></tr><tr><td>3</td><td>Searching for information on the ethics of using nuclear weapons</td><td><a href="5-3a-fission-fusion.html#step6">L5.3a Step 6: Risks &amp; Benefits</a></td></tr><tr><td>4</td><td>Suggesting ways of disposing of radioactive wastes</td><td><a href="5-3a-fission-fusion.html#step5">L5.3a Step 5: Nuclear Waste</a></td></tr></table></div>
-<p><b>Notes:</b> Radioactivity Ch.3 §3.9–3.10. <b>Extension:</b> entire mass–energy topic.</p>
+<p><b>Source:</b> HKDSE Physics Curriculum and Assessment Guide (S4–6), 2015 update — Compulsory Part, <b>V Radioactivity and Nuclear Energy</b>, mass–energy / nuclear energy outcomes (extension where marked). Printed guide pp.48–49 (PDF 58–59).</p>
+<p><b>Extension.</b> Mass–energy relationship is taught here as full content with <span class="tag ext">Extension</span> tags only (no student-facing guide meta).</p>
+<p><b>Lesson 5.3b</b> (<a href="5-3b-mass-energy.html">5-3b-mass-energy.html</a>): 12 steps. Fission/fusion context → <b>5.3a</b>. Constants used: c = 3.00×10⁸ m s⁻¹; 1 eV = 1.60×10⁻¹⁹ J; 1 u = 1.66×10⁻²⁷ kg; <b>1 u ↔ 931 MeV</b>.</p>
+<h3>Learning outcomes (this lesson)</h3>
+<div class="table-scroll"><table class="t outcomes"><tr><th>#</th><th>Focus</th><th>Students should be able to…</th><th>Where</th></tr>
+<tr><td>1</td><td>Mass–energy</td><td>State and use ΔE = Δm c²; interpret mass defect <span class="tag ext">Extension</span></td><td><a href="#step2" data-step="2">Step 2</a>–<a href="#step4" data-step="4">Step 4</a>; <a href="#step8" data-step="8">Practice 1</a></td></tr>
+<tr><td>2</td><td>Units</td><td>Use eV, MeV and u; convert with 1 u ↔ 931 MeV <span class="tag ext">Extension</span></td><td><a href="#step5" data-step="5">Step 5</a>; <a href="#step9" data-step="9">Sim</a>; <a href="#step10" data-step="10">Practice 2</a></td></tr>
+<tr><td>3</td><td>Applications</td><td>Estimate energy release in fission/fusion from given Δm; release vs absorb <span class="tag ext">Extension</span></td><td><a href="#step6" data-step="6">Step 6</a>–<a href="#step7" data-step="7">Step 7</a>; <a href="#step11" data-step="11">Practice 3</a></td></tr>
+</table></div>
+<p><b>Notes:</b> Radioactivity Ch.3 §3.9–3.10. No student-facing C&amp;A Guide meta in Learn steps. Unit 5 deep-write queue ends with this lesson.</p>
 </div></details>
 <script>
 
@@ -343,36 +538,156 @@ function kText(id, t){ var e = document.getElementById(id); if (e) e.textContent
 function kHTML(id, t){ var e = document.getElementById(id); if (e) e.innerHTML = t; }
 var Q = {
 p1:[
-{type:"mc", text:"Mass–energy relation is…", options:["ΔE = Δm c²", "E = mc", "F = qvB", "V = IR"], answer:0, hints:["", ""], explain:"Einstein"},
-{type:"mc", text:"If mass decreases in a reaction…", options:["energy is released", "energy is always absorbed", "nothing happens", "charge is created"], answer:0, hints:["", ""], explain:"release"}
+{type:"mc", text:"The relation between a mass change Δm and the corresponding energy change is…", options:["ΔE = Δm c²", "ΔE = Δm / c²", "ΔE = Δm c", "ΔE = c² / Δm"], answer:0, hints:["Einstein mass–energy.", "c = speed of light."], explain:"ΔE = Δm c²."},
+{type:"mc", text:"If a nuclear reaction releases energy, the total mass of the products is…", options:["slightly less than the reactants (mass defect)", "exactly the same always", "slightly greater than the reactants", "infinite"], answer:0, hints:["Lost mass appears as energy.", "Mass defect."], explain:"Products are lighter — mass defect."},
+{type:"mc", text:"The speed of light used in school calculations is…", options:["3.00 × 10⁸ m s⁻¹", "3.00 × 10⁶ m s⁻¹", "1.60 × 10⁻¹⁹ m s⁻¹", "9.81 m s⁻¹"], answer:0, hints:["c in vacuum.", "Square it for c² = 9.00×10¹⁶."], explain:"c = 3.00×10⁸ m s⁻¹."},
+{type:"mc", text:"1 eV equals…", options:["1.60 × 10⁻¹⁹ J", "1.60 × 10⁻¹³ J", "931 J", "3.00 × 10⁸ J"], answer:0, hints:["Electron across 1 V.", "MeV is 10⁶ eV = 1.60×10⁻¹³ J."], explain:"1 eV = 1.60×10⁻¹⁹ J."},
+{type:"mc", text:"The atomic mass unit u is defined so that a carbon-12 atom has mass…", options:["exactly 12 u", "exactly 1 u", "exactly 12 kg", "exactly 931 MeV"], answer:0, hints:["¹²C reference.", "Notes definition."], explain:"¹²C has mass exactly 12 u."}
 ],
 psim:[
-{type:"num", text:"Δm=0.001 u. E ≈? (MeV, 3 s.f.)", answer:0.931, unit:"MeV", hints:["", ""], explain:"0.931"},
-{type:"num", text:"Δm=0.2 u. E ≈? (MeV)", answer:186.2, unit:"MeV", hints:["", ""], explain:"186"},
-{type:"mc", text:"1 u corresponds to about…", options:["931 MeV", "1 MeV", "931 J only", "c² watts"], answer:0, hints:["", ""], explain:"931"}
+{type:"num", text:"Δm = 0.001 u. Energy released ≈ Δm × 931 = ? MeV (3 s.f.)", answer:0.931, tol:0.005, unit:"MeV", hints:["Multiply by 931.", "0.001 × 931."], explain:"0.001 × 931 = 0.931 MeV."},
+{type:"num", text:"Δm = 0.200 u. ΔE ≈ ? MeV (nearest whole number)", answer:186, tol:2, unit:"MeV", hints:["0.200 × 931.", "Fission-scale order."], explain:"0.200 × 931 = 186 MeV."},
+{type:"num", text:"Δm = 1.0×10⁻³ kg. ΔE = Δm c² with c² = 9.00×10¹⁶. ΔE = ? ×10¹³ J (enter the coefficient, e.g. 9.0 for 9.0×10¹³)", answer:9.0, tol:0.2, unit:"", hints:["(1.0×10⁻³)×(9.00×10¹⁶) = 9.0×10¹³.", "Enter 9 or 9.0."], explain:"9.0 × 10¹³ J."},
+{type:"mc", text:"The HKDSE conversion between u and energy is…", options:["1 u ↔ 931 MeV", "1 u ↔ 1.60×10⁻¹⁹ J only with no MeV link", "1 u ↔ 3.00×10⁸ MeV", "1 u ↔ 12 MeV"], answer:0, hints:["Standard school value.", "E(MeV) ≈ Δm(u)×931."], explain:"1 u ↔ 931 MeV."},
+{type:"num", text:"1 MeV = 10⁶ eV. How many joules is 1 MeV? Enter as X for X×10⁻¹³ J (e.g. 1.6)", answer:1.6, tol:0.05, unit:"", hints:["1 MeV = 10⁶ × 1.60×10⁻¹⁹ J.", "= 1.60×10⁻¹³ J → enter 1.6."], explain:"1.60×10⁻¹³ J."}
 ],
 p2:[
-{type:"num", text:"Δm=0.01 u. E ≈? (MeV)", answer:9.31, unit:"MeV", hints:["", ""], explain:"9.31"},
-{type:"mc", text:"To find energy release…", options:["find mass defect then × c² (or ×931 MeV/u)", "use Ohm only", "ignore masses", "use Snell's law"], answer:0, hints:["", ""], explain:"defect"},
-{type:"mc", text:"Atomic mass unit is used because…", options:["nuclear masses are conveniently near integers in u", "it equals 1 kg", "it replaces the coulomb", "it measures time"], answer:0, hints:["", ""], explain:"convenient"}
+{type:"mc", text:"A reaction releases 4.9 MeV. Compared with the parent, the products’ total mass is…", options:["less (by Δm = ΔE/c²)", "greater by ΔE/c²", "unchanged", "greater by 4.9 kg"], answer:0, hints:["Energy out → mass down.", "Notes-style MC."], explain:"Products lighter by ΔE/c²."},
+{type:"mc", text:"Typical energy released in one U-235 fission is of order…", options:["~200 MeV", "~200 eV only", "~200 J exactly always", "~1 u of energy with no MeV"], answer:0, hints:["~0.2 u × 931 ≈ 186 MeV.", "Order of magnitude."], explain:"About 200 MeV per fission."},
+{type:"mc", text:"If product mass exceeds reactant mass, the nuclear process…", options:["requires energy input (absorbs energy)", "always releases energy", "violates charge conservation only", "cannot be written with u"], answer:0, hints:["Opposite of mass defect release.", "Endothermic nuclear change."], explain:"Energy must be supplied."},
+{type:"num", text:"Δm = 0.010 u. ΔE ≈ ? MeV", answer:9.31, tol:0.05, unit:"MeV", hints:["× 931.", "0.010 × 931 = 9.31."], explain:"9.31 MeV."},
+{type:"mc", text:"Fission/fusion energy release (5.3a) is accounted for here by…", options:["mass defect converted via ΔE = Δm c²", "chemical electron hops only", "Ohm’s law in the turbine", "half-life of the neutron alone"], answer:0, hints:["Link lessons without re-teaching the chain.", "Missing mass → energy."], explain:"Mass defect → ΔE = Δm c²."}
 ]
 };
 function makeSim(){
-  var cv=document.getElementById("animCanvas"), P={};
-  function read(){ P.dm=+kVal("dmSl"); kText("dmSlVal",P.dm.toFixed(3)); P.E=P.dm*931; P.ro1="Δm = "+P.dm.toFixed(3)+" u"; P.ro2="E ≈ "+P.E.toFixed(2)+" MeV"; }
-  function update(){ kText("ro1", P.ro1); kText("ro2", P.ro2); }
-  function draw(){ var g=kSetup(cv),ctx=g.ctx,W=g.w,H=g.h; ctx.clearRect(0,0,W,H); ctx.fillStyle="#fff"; ctx.fillRect(0,0,W,H);
-    ctx.fillStyle="#0a2a66"; ctx.font="16px Arial"; ctx.textAlign="center"; ctx.fillText(P.ro1, W/2, H/2-8); ctx.fillText(P.ro2, W/2, H/2+16); }
-  function reset(){ read(); update(); draw(); kText("simMsg", "mass-energy"); }
-  var pb=document.getElementById("playBtn"); if(pb) pb.style.display="none";
-  var rb=document.getElementById("resetBtn"); if(rb) rb.addEventListener("click", reset);
-  kBind(["dmSl"], function(){ read(); update(); draw(); });
-  return {reset:reset,draw:draw,resize:function(){draw();},pause:function(){},
-    set:function(o){ if(o.dm!=null)kSet("dmSl",o.dm); reset(); },
-    state:function(){ return {dm:P.dm,E:P.E}; }};
+  var cv = document.getElementById("animCanvas");
+  var clock = null;
+  var C = 3.00e8, C2 = 9.00e16;
+  var U_KG = 1.66e-27;
+  var MEV_J = 1.60e-13;
+  var U_MEV = 931;
+  var anim = 0;
+  var P = {mode:"u", dm_u:0.1, dm_kg:0, EJ:0, EMeV:0};
+
+  function sliderToDm(){
+    var v = +kVal("dmSl"); // 1..200
+    if (P.mode === "u"){
+      // map 1..200 → 0.001 .. 0.200 u
+      P.dm_u = v / 1000;
+      P.dm_kg = P.dm_u * U_KG;
+    } else {
+      // map 1..200 → 1..200 × 10⁻³⁰ kg
+      P.dm_kg = v * 1e-30;
+      P.dm_u = P.dm_kg / U_KG;
+    }
+  }
+  function compute(){
+    if (P.mode === "u"){
+      // Prefer school conversion 1 u ↔ 931 MeV for consistency of MeV readout
+      P.EMeV = P.dm_u * U_MEV;
+      P.EJ = P.EMeV * MEV_J;
+      P.dm_kg = P.dm_u * U_KG; // for display / SI link
+    } else {
+      P.EJ = P.dm_kg * C2;
+      P.EMeV = P.EJ / MEV_J;
+      P.dm_u = P.dm_kg / U_KG;
+    }
+  }
+  function read(){
+    var us = document.getElementById("unitSel");
+    P.mode = us ? us.value : "u";
+    sliderToDm();
+    compute();
+    if (P.mode === "u"){
+      kText("dmSlVal", P.dm_u.toFixed(3) + " u");
+    } else {
+      kText("dmSlVal", P.dm_kg.toExponential(2) + " kg");
+    }
+  }
+  function updateRO(){
+    kText("ro1", P.mode==="u" ? (P.dm_u.toFixed(3)+" u") : P.dm_kg.toExponential(2)+" kg");
+    kText("ro2", P.EJ.toExponential(2));
+    kText("ro3", P.EMeV.toFixed(1));
+    var check = P.dm_u * U_MEV;
+    kText("ro4", check.toFixed(1));
+    kText("simMsg", "ΔE = Δm c² = " + P.EJ.toExponential(2) + " J = " + P.EMeV.toFixed(1) + " MeV · (Δm×931 = " + check.toFixed(1) + " MeV)");
+  }
+  function draw(){
+    var g = kSetup(cv), ctx = g.ctx, W = g.w, H = g.h;
+    ctx.clearRect(0,0,W,H);
+    ctx.fillStyle = "#f8fafc"; ctx.fillRect(0,0,W,H);
+    // mass box → energy box
+    var x1 = 80, x2 = W - 120, y = H/2;
+    ctx.fillStyle = "#dbeafe";
+    ctx.fillRect(x1-50, y-40, 100, 80);
+    ctx.strokeStyle = "#2563eb"; ctx.lineWidth = 2; ctx.strokeRect(x1-50, y-40, 100, 80);
+    ctx.fillStyle = "#0a2a66"; ctx.font = "bold 14px Arial"; ctx.textAlign = "center";
+    ctx.fillText("Δm", x1, y-8);
+    ctx.font = "12px Arial";
+    ctx.fillText(P.mode==="u" ? P.dm_u.toFixed(3)+" u" : "kg", x1, y+14);
+
+    var prog = Math.min(1, anim);
+    var xm = x1 + (x2 - x1) * prog;
+    kArrow(ctx, x1+55, y, xm-20, y, "#7f3f98", 4, "", null, null);
+
+    ctx.fillStyle = "#fef3c7";
+    ctx.fillRect(x2-55, y-40, 110, 80);
+    ctx.strokeStyle = "#ca8a04"; ctx.lineWidth = 2; ctx.strokeRect(x2-55, y-40, 110, 80);
+    ctx.fillStyle = "#92400e"; ctx.font = "bold 14px Arial";
+    ctx.fillText("ΔE", x2, y-10);
+    ctx.font = "11px Arial";
+    ctx.fillText(P.EMeV.toFixed(1)+" MeV", x2, y+12);
+
+    ctx.fillStyle = "#5b2178"; ctx.font = "bold 16px Arial";
+    ctx.fillText("ΔE = Δm c²", W/2, 36);
+    ctx.font = "12px Arial"; ctx.fillStyle = "#5b6170";
+    ctx.fillText("c = 3.00×10⁸ m/s · 1 u ↔ 931 MeV", W/2, H - 18);
+  }
+  function tick(dt){
+    anim += dt * 0.8;
+    draw();
+    if (anim >= 1){ anim = 1; draw(); return false; }
+    return true;
+  }
+  function play(){
+    read(); updateRO();
+    anim = 0;
+    if (clock) clock.stop();
+    clock = kClock(tick, function(){});
+    clock.start();
+  }
+  function reset(){
+    if (clock) clock.stop();
+    anim = 1;
+    read(); updateRO(); draw();
+  }
+
+  var pb = document.getElementById("playBtn"); if (pb) pb.addEventListener("click", play);
+  var rb = document.getElementById("resetBtn"); if (rb) rb.addEventListener("click", reset);
+  var us = document.getElementById("unitSel");
+  if (us) us.addEventListener("change", function(){ reset(); });
+  kBind(["dmSl"], function(){ if (clock) clock.stop(); anim = 1; read(); updateRO(); draw(); });
+
+  reset();
+  return {
+    reset: reset, draw: draw,
+    resize: function(){ draw(); },
+    pause: function(){ if (clock) clock.stop(); },
+    set: function(o){
+      if (o.dm != null){
+        // interpret as u value 0.001..0.2 → slider
+        kSet("dmSl", Math.round(o.dm * 1000));
+        var usel = document.getElementById("unitSel");
+        if (usel) usel.value = "u";
+      }
+      reset();
+    },
+    state: function(){ return {dm_u:P.dm_u, dm_kg:P.dm_kg, EJ:P.EJ, EMeV:P.EMeV}; },
+    jumpTo: function(){ reset(); }
+  };
 }
 
-var LESSON = {quizzes:Q, figs:{}, makeSim:makeSim, demo:{set:{"dm": 0.1}}};
+var LESSON = {quizzes:Q, figs:{}, makeSim:makeSim, demo:{set:{dm:0.1}}};
 
 
 (function(){

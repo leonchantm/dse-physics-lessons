@@ -1,29 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 300" role="img" aria-label="Bar magnet field lines from N to S">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 300" role="img" aria-label="Bar magnet: continuous field lines leave N and enter S">
   <rect width="680" height="300" fill="#f8fafc"/>
-  <!-- field lines -->
-  <g fill="none" stroke="#7c3aed" stroke-width="2">
-    <path d="M280,90 C200,40 120,50 90,100 C60,150 120,200 200,210 C240,215 260,200 280,180"/>
-    <path d="M280,110 C220,70 150,80 130,120 C110,160 160,190 230,195 C250,197 265,185 280,170"/>
-    <path d="M280,130 C240,110 200,115 185,140 C170,165 210,175 250,175 C265,175 275,165 280,155"/>
-    <path d="M400,90 C480,40 560,50 590,100 C620,150 560,200 480,210 C440,215 420,200 400,180"/>
-    <path d="M400,110 C460,70 530,80 550,120 C570,160 520,190 450,195 C430,197 415,185 400,170"/>
-    <path d="M400,130 C440,110 480,115 495,140 C510,165 470,175 430,175 C415,175 405,165 400,155"/>
-    <path d="M280,80 C250,30 340,20 400,80"/>
-    <path d="M280,220 C250,270 340,280 400,220"/>
+  <!-- Continuous exterior paths only: each starts on N left face, ends on S right face. No N-only / S-only lobes. -->
+  <g fill="none" stroke="#7c3aed" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- UPPER set (N → above → S) -->
+    <path d="M280,138 C240,100 240,70 300,50 C360,30 420,50 400,138"/>
+    <path d="M280,145 C220,95 210,50 300,30 C390,10 470,50 400,145"/>
+    <path d="M280,150 C190,90 170,25 300,12 C430,-1 520,55 400,150"/>
+    <!-- LOWER set (N → below → S) -->
+    <path d="M280,162 C240,200 240,230 300,250 C360,270 420,250 400,162"/>
+    <path d="M280,155 C220,205 210,250 300,270 C390,290 470,250 400,155"/>
+    <path d="M280,150 C190,210 170,275 300,288 C430,301 520,245 400,150"/>
+    <!-- FULL side loops (still N left face → around → S right face) -->
+    <path d="M280,142 C200,110 100,110 80,150 C60,200 160,270 340,275 C520,280 620,200 600,150 C580,110 480,110 400,142"/>
+    <path d="M280,148 C210,120 130,125 115,150 C100,180 180,235 340,240 C500,245 570,180 555,150 C540,125 460,120 400,148"/>
   </g>
-  <!-- arrows: left leaves N (←), right enters S (← toward magnet), top N→S -->
-  <polygon points="95,105 105,98 105,112" fill="#7c3aed"/>
-  <polygon points="560,105 578,95 578,115" fill="#7c3aed"/>
-  <polygon points="340,45 330,52 350,52" fill="#7c3aed"/>
-  <!-- bar magnet -->
+  <!-- Arrows: tip = first point. Top/bottom → ; leave-N ← ; enter-S ← -->
+  <g fill="#7c3aed">
+    <polygon points="350,42 328,34 328,50"/>
+    <polygon points="350,20 328,12 328,28"/>
+    <polygon points="350,258 328,250 328,266"/>
+    <polygon points="350,280 328,272 328,288"/>
+    <polygon points="165,118 188,110 188,126"/>
+    <polygon points="510,118 533,110 533,126"/>
+  </g>
   <rect x="280" y="120" width="60" height="60" fill="#b91c1c" stroke="#7f1d1d" stroke-width="2"/>
   <rect x="340" y="120" width="60" height="60" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="2"/>
   <text x="310" y="158" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" fill="#fff">N</text>
   <text x="370" y="158" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" fill="#fff">S</text>
-  <!-- compass -->
-  <circle cx="160" cy="70" r="22" fill="#fff" stroke="#334155" stroke-width="2"/>
-  <polygon points="160,52 166,70 154,70" fill="#b91c1c"/>
-  <polygon points="160,88 166,70 154,70" fill="#1e293b"/>
-  <text x="160" y="108" text-anchor="middle" font-family="Arial" font-size="12" fill="#475569">compass</text>
-  <text x="340" y="280" text-anchor="middle" font-family="Arial" font-size="14" fill="#475569">Field lines leave N and enter S · denser = stronger B</text>
+  <!-- Compass on leave-N arc; red tip tangent to B (away from N, up-left ≈ −50°) -->
+  <g transform="translate(148,88) rotate(-50)">
+    <circle cx="0" cy="0" r="20" fill="#fff" stroke="#334155" stroke-width="2"/>
+    <polygon points="0,-16 4.5,2 -4.5,2" fill="#b91c1c"/>
+    <polygon points="0,16 4.5,2 -4.5,2" fill="#1e293b"/>
+  </g>
+  <text x="148" y="122" text-anchor="middle" font-family="Arial" font-size="12" fill="#475569">compass</text>
+  <text x="340" y="295" text-anchor="middle" font-family="Arial" font-size="14" fill="#475569">Field lines leave N and enter S · denser = stronger B</text>
 </svg>

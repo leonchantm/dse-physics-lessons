@@ -185,33 +185,207 @@
 <section class="step step-learn" data-id="welcome" data-name="Welcome" data-kind="learn"><span class="step-kind learn">Learn</span>
 <div class="welcome-hero">
   <div class="big" aria-hidden="true">qvB</div>
-  <h2 tabindex="-1">Lesson 4.5c: Force on Moving Charges <span class="tag ext">Extension</span></h2>
-  <p>A moving charge in a magnetic field also feels a force. The size is given by <b>F = BQv sinθ</b>, and the path can be a circle.</p>
-<p><b>Hong Kong hook:</b> particle beams in research labs (and the deflection idea behind old CRT screens) use this magnetic force on moving charges.</p>
+  <h2 tabindex="-1">Lesson 4.5c: Force on Moving Charges <span class="zh">（帶電粒子所受磁力）</span> <span class="tag ext">Extension</span></h2>
+  <p>A <b>current</b> is a flow of charges. The magnetic force on a wire is really the sum of forces on those moving charges. For one charge the size is <span class="eq">F = BQv sinθ</span>, and if <b>v</b> is perpendicular to <b>B</b> the path can be a <b>circle</b>.</p>
+  <p><b>Hong Kong hook:</b> old CRT TVs and oscilloscopes steered electron beams with magnetic fields; particle labs and school e/m demos use the same idea — bend a charged particle and measure the radius of its path. At CityU / HKU open days you may see a glow of electrons curved by Helmholtz coils — same formula as this lesson.</p>
 </div>
-<div class="box warn"><span class="box-title">📌 Extension</span>The formula <u>F = BQv sinθ</u> is in the <b>extension</b> part of the Compulsory Part. You should be able to represent the force on a moving charge in a magnetic field and solve related problems.</div>
+<div class="box warn"><span class="box-title">📌 Extension</span>
+This lesson is <b>Extension</b> in the Compulsory Part: represent the force on a moving charge by <span class="eq">F = BQv sinθ</span> and solve related problems (including circular paths). Link back to Lesson 4.5b only for Fleming’s left-hand rule and the wire formula F = BIl — motors stay in 4.5b.
+</div>
 <div class="lesson-link">⬅️ Previous: <a href="4-5b-magnetic-force-motors.html">Lesson 4.5b: Magnetic Force and Motors</a> &nbsp;·&nbsp; ➡️ Next: <a href="4-6a-electromagnetic-induction.html">Lesson 4.6a: Electromagnetic Induction</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div>
 </section>
-<section class="step step-learn" data-id="Fq" data-name="Force on a Charge" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 1</span> <span class="tag ext">Extension</span><h2 tabindex="-1">F = BQv sinθ</h2><div class="box formula"><b>F = B Q v sinθ</b></div><p>Perpendicular to both v and B. Left-hand for +q.</p></section>
-<section class="step step-learn" data-id="path" data-name="Circular Path" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 2</span> <span class="tag ext">Extension</span><h2 tabindex="-1">Path</h2><p>If v ⟂ B: circle with <b>r = mv/(BQ)</b>.</p></section>
-<section class="step step-learn" data-id="worked" data-name="Worked Examples" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Worked examples</span> <span class="tag ext">Extension</span><h2 tabindex="-1">Examples</h2><div class="box eg">B=0.20 T, proton, v=1.0×10⁶ m/s → F=3.2×10⁻¹⁴ N.</div></section>
-<section class="step step-practice" data-id="p1" data-name="Practice" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 1</span> <span class="tag ext">Extension</span><h2 tabindex="-1">F=BQv</h2><div class="quiz" data-quiz="p1"></div></section>
-<section class="step step-sim" data-id="sim" data-name="Try it" data-kind="sim"><span class="step-kind sim">Try it</span><span class="tag sim">Try it!</span><h2 tabindex="-1">Force on proton</h2><div class="sim-panel"><canvas id="animCanvas" width="640" height="280"></canvas><div class="sim-controls"><div class="slider"><label for="bSl"><span>B</span><span id="bSlVal"></span></label>
-    <input type="range" id="bSl" min="0.05" max="1" step="0.05" value="0.2"></div><div class="slider"><label for="vSl"><span>v_e6</span><span id="vSlVal"></span></label>
-    <input type="range" id="vSl" min="0.2" max="5" step="0.1" value="1"></div><div class="slider"><label for="thSl"><span>theta</span><span id="thSlVal"></span></label>
-    <input type="range" id="thSl" min="0" max="90" step="5" value="90"></div><div class="sim-buttons">
+
+<section class="step step-learn" data-id="Fq" data-name="Force on a Charge" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 1</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">F = BQv sinθ <span class="zh">（磁力公式）</span></h2>
+<p>From the wire force <span class="eq">F = BIl sinθ</span> (Lesson 4.5b), rewrite the current as moving charges. In time <i>t</i>, charge amount <i>Q</i><sub>total</sub> = <i>I</i><i>t</i> drifts a distance <i>v</i><i>t</i>, so <i>I</i><i>l</i> becomes <i>Q</i><i>v</i> for one particle of charge <i>Q</i>. That gives:</p>
+<div class="box formula"><span class="box-title">Magnetic force on a moving charge</span>
+<span class="eq">F = B Q v sinθ</span><br>
+where θ = angle between <b>v</b> and <b>B</b>. Units: B in T, Q in C, v in m s<sup>−1</sup>, F in N.
+</div>
+<div class="grid2">
+  <div class="box key"><span class="box-title">Direction (Fleming’s left hand)</span>
+  <ul class="simple">
+    <li>Treat the velocity of a <b>positive</b> charge as the “current” direction.</li>
+    <li>First finger → <b>B</b>, second finger → <b>v</b> (for +Q), thumb → <b>F</b>.</li>
+    <li>For an <b>electron</b> (negative), reverse the second finger — or find F for +Q then flip it.</li>
+  </ul>
+  </div>
+  <div class="box danger"><span class="box-title">Must remember</span>
+  <ul class="simple">
+    <li>If the charge is <b>at rest</b> (v = 0) → <b>F = 0</b>. Magnets do not pull stationary charges the way E-fields do.</li>
+    <li>If <b>v ∥ B</b> (θ = 0° or 180°) → sinθ = 0 → <b>F = 0</b>.</li>
+    <li>F is always <b>perpendicular</b> to both v and B → magnetic force does <b>no work</b>; it can change <b>direction</b> but not <b>speed</b> (KE stays the same).</li>
+  </ul>
+  </div>
+</div>
+<div class="box eg"><span class="box-title">Angle check</span>
+θ = 90° → sinθ = 1 → F<sub>max</sub> = BQv.<br>
+θ = 30° → sinθ = ½ → F = ½ BQv.<br>
+θ = 0° → F = 0 (charge streams along the field lines).
+</div>
+
+<div class="box eg"><span class="box-title">Link to the wire (brief)</span>
+In a wire, many charges drift with average speed v. The force on each is BQv sinθ; adding them recovers <span class="eq">F = BIl sinθ</span> for the whole wire. That is why Lesson 4.5b and this lesson share Fleming’s left-hand rule — same physics, one charge vs many.
+</div>
+<p>Exam tip: if a question gives θ between v and B that is not 90°, never skip sinθ. Parallel motion (θ = 0) is a favourite “trap” answer of zero force.</p>
+<p class="caption">Chinese terms: magnetic force <span class="zh">磁力</span>, magnetic field <span class="zh">磁場</span>, charge <span class="zh">電荷</span>, velocity <span class="zh">速度</span>, angle <span class="zh">夾角</span>.</p>
+</section>
+
+<section class="step step-learn" data-id="path" data-name="Circular Path" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 2</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Circular path when v ⊥ B <span class="zh">（圓周運動）</span></h2>
+<p>When a charged particle enters a <b>uniform</b> B-field with velocity <b>perpendicular</b> to B, F is always sideways to v. That is exactly the geometry of <b>uniform circular motion</b>: the magnetic force supplies the <b>centripetal force</b>.</p>
+<div class="visual">
+  <img src="images/em/charge-circular-path.svg" alt="Positive charge in B into the paper: circular orbit with F toward the centre and v tangential" width="640" height="340" style="max-width:100%;height:auto;border-radius:10px">
+  <p class="caption">B into the paper (×). For +q with v upward at the right-hand side, Fleming’s left hand gives F toward the centre.</p>
+</div>
+<div class="box formula"><span class="box-title">Radius of the circular path</span>
+Centripetal: <span class="eq">F = mv²/r</span>. Magnetic: <span class="eq">F = BQv</span> (θ = 90°).<br>
+So <span class="eq">BQv = mv²/r</span> ⇒ <span class="eq">r = mv / (BQ)</span>.
+</div>
+<ul class="simple">
+  <li><b>Faster</b> particle → <b>larger</b> r (harder to bend).</li>
+  <li><b>Stronger B</b> or <b>larger |Q|</b> → <b>smaller</b> r (tighter curve).</li>
+  <li><b>Heavier</b> particle (larger m) → larger r.</li>
+</ul>
+<div class="grid2">
+  <div class="box key"><span class="box-title">Period (independent of v)</span>
+  Speed v = 2πr / T and r = mv/(BQ) give<br>
+  <span class="eq">T = 2πm / (BQ)</span>.<br>
+  Period does <b>not</b> depend on speed or radius — faster particles race on a bigger circle in the same time.
+  </div>
+  <div class="box warn"><span class="box-title">If v is not fully perpendicular</span>
+  Resolve v into v<sub>∥</sub> (along B) and v<sub>⊥</sub>. Only v<sub>⊥</sub> feels F. Result: a <b>helix</b> (corkscrew) along B — circle in the plane ⊥ B, steady drift along B. School problems usually set v ⊥ B so the path is a pure circle.
+  </div>
+</div>
+
+<p>Because F never has a component along v, kinetic energy is constant. In exam wording: “Would the particle emerge with a greater speed?” — <b>No</b>, magnetic force does no work.</p>
+<div class="box eg"><span class="box-title">Comparing two particles</span>
+Same v and B: the one with larger |Q|/m curves more tightly (smaller r). Same Q and m: the faster one has larger r. Mass spectrometers and e/m tubes use this: after selecting speed, radius sorts particles by Q/m.
+</div>
+<div class="box eg"><span class="box-title">Charge-to-mass ratio</span>
+Measuring r in a known B at known v gives <span class="eq">Q/m = v / (Br)</span> — the classic school estimate of e/m for electrons (Curriculum activity).
+</div>
+</section>
+
+<section class="step step-learn" data-id="worked" data-name="Worked Examples" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Worked examples</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Worked examples</h2>
+
+<div class="box eg worked"><span class="box-title">Example 1 — size of F on a proton</span>
+<p>A proton (Q = +1.60 × 10<sup>−19</sup> C) moves at v = 1.0 × 10<sup>6</sup> m s<sup>−1</sup> at 90° to a uniform field B = 0.20 T. Find F.</p>
+<div class="reveal">
+  <div class="rline"><b class="n">1</b> Formula: <span class="eq">F = B Q v sinθ</span>. Here θ = 90°, sinθ = 1.</div>
+  <div class="rline"><b class="n">2</b> Substitute: F = (0.20)(1.60 × 10<sup>−19</sup>)(1.0 × 10<sup>6</sup>).</div>
+  <div class="rline"><b class="n">3</b> F = 0.20 × 1.60 × 10<sup>−13</sup> = <b>3.2 × 10<sup>−14</sup> N</b>.</div>
+  <div class="rline"><b class="n">4</b> Direction: use Fleming’s left hand with “current” = proton velocity. Tiny force — atomic scale — but enough to curve the path in a strong B.</div>
+  <div class="q-actions"><button type="button" class="btn-secondary reveal-next">Show next line ▼</button>
+  <button type="button" class="btn-hint reveal-all">Show all</button></div>
+</div>
+</div>
+
+<div class="box eg worked"><span class="box-title">Example 2 — radius of a proton circle</span>
+<p>Same proton (m = 1.67 × 10<sup>−27</sup> kg) in B = 0.50 T with v = 1.0 × 10<sup>6</sup> m s<sup>−1</sup> perpendicular to B. Find r.</p>
+<ol>
+<li>Use <span class="eq">r = mv / (BQ)</span>.</li>
+<li>r = (1.67 × 10<sup>−27</sup>)(1.0 × 10<sup>6</sup>) / [(0.50)(1.60 × 10<sup>−19</sup>)].</li>
+<li>Numerator = 1.67 × 10<sup>−21</sup>; denominator = 8.0 × 10<sup>−20</sup>.</li>
+<li>r = 1.67 × 10<sup>−21</sup> / 8.0 × 10<sup>−20</sup> = <b>2.09 × 10<sup>−2</sup> m</b> ≈ 2.1 cm.</li>
+</ol>
+</div>
+
+<div class="box eg worked"><span class="box-title">Example 3 — electron circle (notes-style MC)</span>
+<p>An electron (e = 1.60 × 10<sup>−19</sup> C, m<sub>e</sub> = 9.11 × 10<sup>−31</sup> kg) moves in a circle of diameter 0.01 m in B = 0.02 T perpendicular to the plane of the path. Find the speed. (Direction of circling depends on the sense of B and the sign of the charge — use Fleming carefully.)</p>
+<ol>
+<li>Radius r = diameter/2 = 0.005 m.</li>
+<li><span class="eq">r = mv / (Be)</span> ⇒ <span class="eq">v = B e r / m</span>.</li>
+<li>v = (0.02)(1.60 × 10<sup>−19</sup>)(0.005) / (9.11 × 10<sup>−31</sup>).</li>
+<li>Numerator = 1.60 × 10<sup>−23</sup>; v = 1.60 × 10<sup>−23</sup> / 9.11 × 10<sup>−31</sup> = <b>1.76 × 10<sup>7</sup> m s<sup>−1</sup></b>.</li>
+</ol>
+</div>
+
+<div class="box eg worked"><span class="box-title">Example 4 — α-particle radius (notes)</span>
+<p>α-particles with v = 1.63 × 10<sup>7</sup> m s<sup>−1</sup> enter B = 0.50 T (into the paper). Given Q/m = 4.82 × 10<sup>7</sup> C kg<sup>−1</sup>. Find r. Do they leave faster?</p>
+<ol>
+<li><span class="eq">r = mv/(BQ) = v / [B(Q/m)]</span>.</li>
+<li>r = 1.63 × 10<sup>7</sup> / [(0.50)(4.82 × 10<sup>7</sup>)] = 1.63 × 10<sup>7</sup> / 2.41 × 10<sup>7</sup> = <b>0.676 m</b>.</li>
+<li>Speed on exit: <b>same</b> — F ⊥ v so no work; KE unchanged.</li>
+</ol>
+</div>
+
+<div class="box key"><span class="box-title">Method habit</span>
+(1) Write F = BQv sinθ or r = mv/(BQ). (2) Check θ (often 90°). (3) Substitute with consistent SI units. (4) Ask: does speed change? (Magnetic force → no.)
+</div>
+</section>
+
+<section class="step step-practice" data-id="p1" data-name="Practice: Force" data-kind="practice"><span class="step-kind practice">Practice</span>
+<span class="tag quiz">Practice 1</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Practice: F = BQv sinθ</h2>
+<p>Formula → substitute → calculate. Watch the angle and the sign of the charge for direction questions.</p>
+<div class="quiz" data-quiz="p1"></div>
+</section>
+
+<section class="step step-sim" data-id="sim" data-name="Try it" data-kind="sim"><span class="step-kind sim">Try it</span>
+<span class="tag sim">Try it!</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Explore: force and circular path</h2>
+<p>Sliders set B, speed v, and angle θ between v and B for a <b>proton</b>. Readouts show live <span class="eq">F = BQv sinθ</span> and, when θ = 90°, the orbit radius <span class="eq">r = mv/(BQ)</span>. Press ▶ Play to watch the path. If θ ≠ 90°, F shrinks and the path is no longer a simple circle in this view.</p>
+<div class="sim-panel"><canvas id="animCanvas" width="640" height="320"></canvas><div class="sim-controls">
+<div class="slider"><label for="bSl"><span>B (magnetic field)</span><span id="bSlVal"></span></label>
+    <input type="range" id="bSl" min="0.05" max="1" step="0.05" value="0.20"></div>
+<div class="slider"><label for="vSl"><span>v (×10<sup>6</sup> m s<sup>−1</sup>)</span><span id="vSlVal"></span></label>
+    <input type="range" id="vSl" min="0.2" max="5" step="0.1" value="1.0"></div>
+<div class="slider"><label for="thSl"><span>θ (angle between v and B)</span><span id="thSlVal"></span></label>
+    <input type="range" id="thSl" min="0" max="90" step="5" value="90"></div>
+<div class="sim-buttons">
   <button class="btn-primary" id="playBtn" type="button">▶ Play</button>
   <button class="btn-secondary" id="resetBtn" type="button">↺ Reset</button>
   <label for="speedSel" style="font-weight:700">Speed:</label>
   <select id="speedSel"><option value="1">Normal</option><option value="0.5">Slow (½×)</option><option value="0.25">Very slow (¼×)</option></select>
-</div></div><div class="readouts"><div class="ro "><div class="lab">Out1</div><div class="val" id="ro1"></div></div><div class="ro "><div class="lab">Out2</div><div class="val" id="ro2"></div></div></div><p class="caption" id="simMsg">Explore</p></div></section>
-<section class="step step-practice" data-id="psim" data-name="Practice: Simulation" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 2</span> <span class="tag ext">Extension</span><h2 tabindex="-1">Sim</h2><div class="quiz" data-quiz="psim"></div></section>
-<section class="step step-practice" data-id="p2" data-name="Practice: Path" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 3</span> <span class="tag ext">Extension</span><h2 tabindex="-1">Path</h2><div class="quiz" data-quiz="p2"></div></section>
-<section class="step step-learn" data-id="summary" data-name="Summary" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Summary</span> <span class="tag ext">Extension</span><h2 tabindex="-1">Remember</h2><div style="text-align:center"><div class="stars" id="stars" aria-hidden="true"></div>
-  <p id="finalScore" style="font-size:1.2rem;font-weight:800"></p><p id="finalMsg"></p></div><p>F=BQv sinθ; r=mv/(BQ).</p><div class="lesson-link">⬅️ Previous: <a href="4-5b-magnetic-force-motors.html">Lesson 4.5b: Magnetic Force and Motors</a> &nbsp;·&nbsp; ➡️ Next: <a href="4-6a-electromagnetic-induction.html">Lesson 4.6a: Electromagnetic Induction</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div><div class="q-actions" style="justify-content:center">
+</div></div>
+<div class="readout">
+  <div class="ro v"><div class="lab">F</div><div class="val" id="ro1"></div></div>
+  <div class="ro a"><div class="lab">r (θ=90°)</div><div class="val" id="ro2"></div></div>
+  <div class="ro d"><div class="lab">sinθ</div><div class="val" id="ro3"></div></div>
+  <div class="ro"><div class="lab">particle</div><div class="val" id="ro4"></div></div>
+</div>
+<p class="caption" id="simMsg">Set θ = 90° and press Play to see the circular orbit. Crosses = B into the paper.</p></div>
+</section>
+
+<section class="step step-practice" data-id="psim" data-name="Practice: Simulation" data-kind="practice"><span class="step-kind practice">Practice</span>
+<span class="tag quiz">Practice 2</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Practice: reading the sim</h2>
+<p>Use the Try it step (or the formulae) to check these. Set B = 0.20 T, v = 1.0 × 10<sup>6</sup> m s<sup>−1</sup>, θ = 90° for the proton defaults.</p>
+<div class="quiz" data-quiz="psim"></div>
+</section>
+
+<section class="step step-practice" data-id="p2" data-name="Practice: Path" data-kind="practice"><span class="step-kind practice">Practice</span>
+<span class="tag quiz">Practice 3</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Practice: circular path and ideas</h2>
+<p>Radius, period, and “does magnetic force change speed?” — classic exam traps.</p>
+<div class="quiz" data-quiz="p2"></div>
+</section>
+
+<section class="step step-learn" data-id="summary" data-name="Summary" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Summary</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Remember this lesson</h2>
+<div style="text-align:center"><div class="stars" id="stars" aria-hidden="true"></div>
+  <p id="finalScore" style="font-size:1.2rem;font-weight:800"></p><p id="finalMsg"></p></div>
+<div class="box key"><span class="box-title">Key points</span>
+<ul class="simple">
+  <li><span class="eq">F = B Q v sinθ</span> — force on a charge moving in a magnetic field (Extension).</li>
+  <li>F ⊥ v and F ⊥ B → no work → speed (KE) unchanged; direction can change.</li>
+  <li>v ⊥ B in uniform B → circle with <span class="eq">r = mv / (BQ)</span>; period <span class="eq">T = 2πm/(BQ)</span> (independent of v).</li>
+  <li>Direction: Fleming’s left hand for +Q; reverse for electrons.</li>
+  <li>v = 0 or v ∥ B → F = 0.</li>
+</ul>
+</div>
+<div class="lesson-link">⬅️ Previous: <a href="4-5b-magnetic-force-motors.html">Lesson 4.5b: Magnetic Force and Motors</a> &nbsp;·&nbsp; ➡️ Next: <a href="4-6a-electromagnetic-induction.html">Lesson 4.6a: Electromagnetic Induction</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div>
+<div class="q-actions" style="justify-content:center">
   <button class="btn-secondary" id="reviewBtn" type="button">Go to first unfinished question</button>
   <button class="btn-retry" id="restartBtn" type="button">↺ Reset all questions</button>
-</div></section>
+</div>
+</section>
 </main>
 <nav class="controls" aria-label="Lesson navigation">
   <button class="btn-secondary" id="backBtn" type="button">◀ Back</button>
@@ -229,7 +403,7 @@
 <h3>Suggested learning &amp; teaching activities used</h3>
 <div class="table-scroll"><table class="t activities"><tr><th>#</th><th>Activity (from the guide, pp.45–47, incl. Values &amp; Attitudes and STSE)</th><th>Where</th></tr>
 <tr><td>1</td><td>Measuring magnetic field strength by using simple current balance, search coil and Hall probe</td><td><a href="4-5a-magnetic-fields.html#step8">L4.5a Step 8: B Formulas</a><br><a href="4-6b-faraday-generators.html#step4">L4.6b Step 4: Search Coil</a></td></tr><tr><td>2</td><td>Performing demonstrations to show the relative directions of motion, force and field in electromagnetic devices</td><td><a href="4-5b-magnetic-force-motors.html#step2">L4.5b Step 2: Force on a Wire</a><br><a href="4-5b-magnetic-force-motors.html#step7">L4.5b Step 7: Try it</a><br><a href="4-6a-electromagnetic-induction.html#step2">L4.6a Step 2: Induced EMF</a></td></tr><tr><td>3</td><td>Disassembling loudspeakers to determine the functions of individual components</td><td><a href="4-5b-magnetic-force-motors.html#step4">L4.5b Step 4: DC Motor</a></td></tr><tr><td>4</td><td>Investigating the magnetic fields around electric currents (e.g. around a long straight wire, at the centre of a coil, inside and around a slinky solenoid and inside a solenoid)</td><td><a href="4-5a-magnetic-fields.html#step5">L4.5a Step 5: Straight Wire</a><br><a href="4-5a-magnetic-fields.html#step6">L4.5a Step 6: Circular Coil</a><br><a href="4-5a-magnetic-fields.html#step7">L4.5a Step 7: Solenoid</a><br><a href="4-5a-magnetic-fields.html#step12">L4.5a Step 12: Try it: B Explorer</a></td></tr><tr><td>5</td><td>Constructing electric motor kits and generator kits</td><td><a href="4-5b-magnetic-force-motors.html#step4">L4.5b Step 4: DC Motor</a><br><a href="4-6b-faraday-generators.html#step5">L4.6b Step 5: AC Generator</a><br><a href="4-6b-faraday-generators.html#step6">L4.6b Step 6: DC Generator</a></td></tr><tr><td>6</td><td>Measuring the transformation of voltages under step-up or step-down transformers</td><td><a href="4-7a-transformers.html#step3">L4.7a Step 3: Turns Ratio</a><br><a href="4-7a-transformers.html#step7">L4.7a Step 7: Try it</a><br><a href="4-7a-transformers.html#step8">L4.7a Step 8: Practice: Simulation</a></td></tr><tr><td>7</td><td>Estimating the e/m ratio by measuring the radius of curvature in a magnetic field of known strength</td><td><a href="#step3" data-step="3">L4.5c Step 3: Circular Path</a><br><a href="#step6" data-step="6">L4.5c Step 6: Try it</a></td></tr><tr><td>8</td><td>Planning and selecting appropriate equipment or resources to demonstrate the generation of an alternating current</td><td><a href="4-6b-faraday-generators.html#step5">L4.6b Step 5: AC Generator</a><br><a href="4-6c-alternating-current.html#step2">L4.6c Step 2: AC vs DC</a></td></tr><tr><td>9</td><td>Using computer simulations to observe and investigate the electric field and magnetic field</td><td><a href="4-5a-magnetic-fields.html#step12">L4.5a Step 12: Try it: B Explorer</a><br><a href="4-5b-magnetic-force-motors.html#step7">L4.5b Step 7: Try it</a><br><a href="#step6" data-step="6">L4.5c Step 6: Try it</a></td></tr><tr><td>10</td><td>Using dimension analysis to check the results of mathematical solutions</td><td><a href="4-5a-magnetic-fields.html#step8">L4.5a Step 8: B Formulas</a><br><a href="4-5b-magnetic-force-motors.html#step2">L4.5b Step 2: Force on a Wire</a><br><a href="4-6b-faraday-generators.html#step3">L4.6b Step 3: Faraday Law</a></td></tr><tr><td>11</td><td>Reading articles on the possible hazardous effects on residents living near high voltage transmission cables</td><td><a href="4-7b-power-transmission.html#step3">L4.7b Step 3: The Grid</a></td></tr><tr><td>12</td><td>V&amp;A / STSE: inventions related to electricity; save electrical energy; effects of living near high-power cables; electric vehicles</td><td><a href="4-7b-power-transmission.html#step2">L4.7b Step 2: Why High Voltage</a><br><a href="4-7a-transformers.html#step4">L4.7a Step 4: Efficiency</a></td></tr></table></div>
-<p><b>Notes:</b> E&amp;M Ch.5 §5.18–5.19. Extension. Exam: ion paths.</p>
+<p><b>Notes:</b> E&amp;M Ch.5 §5.18–5.19 (F = BQv sinθ; circular path r = mv/(BQ); period independent of v). Extension. Keep motors / F = BIl detail in 4.5b; induction in 4.6a+.</p>
 </div></details>
 <script>
 
@@ -344,35 +518,147 @@ function kText(id, t){ var e = document.getElementById(id); if (e) e.textContent
 function kHTML(id, t){ var e = document.getElementById(id); if (e) e.innerHTML = t; }
 var Q = {
 p1:[
-{type:"mc", text:"F=BQv is…", options:["extension", "core only", "not in guide", "only for wires"], answer:0, hints:["", ""], explain:"extension"},
-{type:"num", text:"B=0.20, Q=1.6e-19, v=1e6, θ=90. F (N)?", answer:3.2e-14, unit:"N", hints:["", ""], explain:"3.2e-14"},
-{type:"mc", text:"If v parallel to B, F is…", options:["zero", "max", "mvB", "infinite"], answer:0, hints:["", ""], explain:"sin0"}
+{type:"mc", text:"The formula F = BQv sinθ for a moving charge is…", options:["Extension in the Compulsory Part", "Core only (everyone must know the formula in exams without Extension)", "Not in the HKDSE guide at all", "Only used for current-carrying wires, never single charges"], answer:0, hints:["Look at the Extension badge on this lesson.", "C&A: represent force on a moving charge by F = BQv sinθ — Extension."], explain:"It is an Extension outcome: F = BQv sinθ and related problems."},
+{type:"num", text:"B = 0.20 T, Q = 1.60×10⁻¹⁹ C (proton), v = 1.0×10⁶ m s⁻¹, θ = 90°. Find F in N. (Enter in scientific form, e.g. 3.2e-14)", answer:3.2e-14, unit:"N", tol:0.15, hints:["Formula: F = BQv sinθ. sin90° = 1.", "F = 0.20 × 1.60e-19 × 1.0e6 = 3.2e-14 N."], explain:"F = BQv = 0.20×1.60×10⁻¹⁹×1.0×10⁶ = 3.2×10⁻¹⁴ N."},
+{type:"mc", text:"If v is parallel to B (θ = 0°), the magnetic force on the charge is…", options:["zero", "maximum (= BQv)", "mv²/r", "infinite"], answer:0, hints:["Look at sinθ in F = BQv sinθ.", "sin0° = 0 ⇒ F = 0."], explain:"sin0° = 0, so F = 0. The charge can stream along field lines."},
+{type:"mc", text:"Magnetic force on a moving charge does work on the charge — true or false?", options:["False — F ⊥ v so no work; speed unchanged", "True — F always increases KE", "True only for electrons", "True only when θ = 90°"], answer:0, hints:["Work needs a force component along the displacement (along v).", "F is always perpendicular to v."], explain:"F ⊥ v ⇒ power F·v = 0 ⇒ KE and speed stay the same; only direction changes."},
+{type:"num", text:"B = 0.40 T, Q = 1.60×10⁻¹⁹ C, v = 2.0×10⁶ m s⁻¹, θ = 30°. Find F in N.", answer:6.4e-14, unit:"N", tol:0.12, hints:["F = BQv sinθ; sin30° = 0.5.", "F = 0.40 × 1.60e-19 × 2.0e6 × 0.5 = 6.4e-14 N."], explain:"F = 0.40×1.60×10⁻¹⁹×2.0×10⁶×0.5 = 6.4×10⁻¹⁴ N."},
+{type:"mc", text:"For Fleming’s left-hand rule on a moving charge, the “current” finger should point along…", options:["the velocity of a positive charge (reverse for electrons)", "the velocity of an electron without reversing", "always from S to N", "the direction of F"], answer:0, hints:["Conventional current = flow of positive charge.", "For electrons, reverse the velocity finger (or find F for +q then flip)."], explain:"Second finger follows +Q velocity; for electrons reverse it."}
 ],
 psim:[
-{type:"num", text:"B=0.20, v=1.0e6, θ=90. F on proton (N)?", answer:3.2e-14, unit:"N", hints:["", ""], explain:"3.2e-14"}
+{type:"num", text:"In the sim defaults (proton, B = 0.20 T, v = 1.0×10⁶ m s⁻¹, θ = 90°), F equals … N.", answer:3.2e-14, unit:"N", tol:0.15, hints:["Open Try it or use F = BQv.", "0.20 × 1.60e-19 × 1.0e6 = 3.2e-14."], explain:"Same as Example 1: F = 3.2×10⁻¹⁴ N."},
+{type:"mc", text:"In the sim, if you keep B and v fixed but lower θ from 90° toward 0°, F…", options:["decreases toward zero", "stays the same", "increases", "becomes infinite"], answer:0, hints:["F ∝ sinθ.", "sinθ falls from 1 to 0 as θ goes 90° → 0°."], explain:"F = BQv sinθ shrinks as sinθ shrinks."},
+{type:"num", text:"Proton m = 1.67×10⁻²⁷ kg, B = 0.50 T, v = 1.0×10⁶ m s⁻¹, θ = 90°. Radius r in m?", answer:0.020875, unit:"m", tol:0.08, hints:["r = mv/(BQ).", "r = 1.67e-27×1e6 / (0.50×1.60e-19) ≈ 0.0209 m."], explain:"r = 1.67×10⁻²¹ / 8.0×10⁻²⁰ ≈ 0.0209 m (≈ 2.1 cm)."}
 ],
 p2:[
-{type:"mc", text:"v perpendicular to B: path is…", options:["circle", "straight", "parabola", "random"], answer:0, hints:["", ""], explain:"circle"},
-{type:"mc", text:"r=mv/(BQ): faster means…", options:["larger r", "smaller r", "same r", "zero r"], answer:0, hints:["", ""], explain:"larger"},
-{type:"num", text:"m=1.67e-27, v=1e6, B=0.50, Q=1.6e-19. r (m)?", answer:0.020875, unit:"m", hints:["", ""], explain:"0.0209"}
+{type:"mc", text:"When v is perpendicular to a uniform B, the path of a charged particle is…", options:["a circle (uniform circular motion)", "a straight line at constant speed", "a parabola like a projectile", "a random zig-zag"], answer:0, hints:["F is always perpendicular to v → centripetal.", "Magnetic force supplies mv²/r."], explain:"F ⊥ v with constant |F| ⇒ uniform circular motion."},
+{type:"mc", text:"From r = mv/(BQ), if you double the particle’s speed (same B, Q, m), the radius…", options:["doubles (larger circle)", "halves", "stays the same", "becomes zero"], answer:0, hints:["r ∝ v.", "Faster ⇒ harder to bend ⇒ larger r."], explain:"r is proportional to v."},
+{type:"mc", text:"The period T = 2πm/(BQ) of the circular motion…", options:["does not depend on speed v", "is proportional to v", "is proportional to v²", "is zero if v is large"], answer:0, hints:["Look at T = 2πm/(BQ) — no v in the formula.", "Faster particles take a bigger circle in the same time."], explain:"T depends on m, B, Q only — not on v or r."},
+{type:"num", text:"Electron: B = 0.02 T, r = 0.005 m, e = 1.60×10⁻¹⁹ C, m = 9.11×10⁻³¹ kg. Speed v in m s⁻¹?", answer:1.756e7, unit:"m/s", tol:0.08, hints:["v = Ber/m from r = mv/(Be).", "v = 0.02×1.60e-19×0.005 / 9.11e-31 ≈ 1.76×10⁷."], explain:"v = Ber/m ≈ 1.76×10⁷ m s⁻¹ (notes MC)."},
+{type:"mc", text:"α-particles leave a uniform B region. Compared with entry, their speed is…", options:["the same (magnetic force does no work)", "always larger", "always smaller", "zero"], answer:0, hints:["F ⊥ v ⇒ no work.", "KE unchanged."], explain:"Speed unchanged; only direction of velocity may change."},
+{type:"mc", text:"A stationary proton sits in a strong uniform B-field. The magnetic force on it is…", options:["zero (needs v ≠ 0)", "BQv with v = c", "mg upward", "infinite"], answer:0, hints:["F = BQv sinθ — if v = 0, F = 0.", "Magnets do not exert magnetic force on charges at rest."], explain:"No motion ⇒ no magnetic force."}
 ]
 };
+
+
 function makeSim(){
-  var cv=document.getElementById("animCanvas"), P={};
-  function read(){ P.B=kVal("bSl"); P.v=kVal("vSl")*1e6; P.th=kVal("thSl")*Math.PI/180; P.Q=1.6e-19; kText("bSlVal",kFmt(P.B,2)+" T"); kText("vSlVal",kFmt(kVal("vSl"),1)+" e6 m/s"); kText("thSlVal",Math.round(kVal("thSl"))+" deg"); P.F=P.B*P.Q*P.v*Math.sin(P.th); P.ro1="F="+P.F.toExponential(2)+" N"; P.ro2="proton"; }
-  function update(){ kText("ro1", P.ro1); kText("ro2", P.ro2); }
-  function draw(){ var g=kSetup(cv),ctx=g.ctx,W=g.w,H=g.h; ctx.clearRect(0,0,W,H); ctx.fillStyle="#fff"; ctx.fillRect(0,0,W,H);
-    ctx.fillStyle="#0a2a66"; ctx.font="16px Arial"; ctx.textAlign="center"; ctx.fillText(P.ro1, W/2, H/2-8); ctx.fillText(P.ro2, W/2, H/2+16); }
-  function reset(){ read(); update(); draw(); kText("simMsg", "Extension F=BQv"); }
-  document.getElementById("playBtn").style.display="none";
+  var cv = document.getElementById("animCanvas"), P = {}, clock = null, ang = 0, trail = [];
+  var Qp = 1.60e-19, mp = 1.67e-27;
+  function read(){
+    P.B = kVal("bSl"); P.v = kVal("vSl") * 1e6; P.thDeg = kVal("thSl"); P.th = P.thDeg * Math.PI / 180;
+    P.sin = Math.sin(P.th); P.F = P.B * Qp * P.v * P.sin;
+    P.r = (P.thDeg >= 89.5) ? (mp * P.v) / (P.B * Qp) : NaN;
+    kText("bSlVal", kFmt(P.B, 2) + " T");
+    kText("vSlVal", kFmt(kVal("vSl"), 1) + " ×10⁶ m/s");
+    kText("thSlVal", Math.round(P.thDeg) + "°");
+  }
+  function update(){
+    kText("ro1", P.F.toExponential(2) + " N");
+    kText("ro2", isFinite(P.r) ? (P.r < 0.01 ? (P.r*100).toFixed(2)+" cm" : P.r.toFixed(3)+" m") : "— (need θ≈90°)");
+    kText("ro3", kFmt(P.sin, 3));
+    kText("ro4", "proton +e");
+  }
+  function draw(){
+    var g = kSetup(cv), ctx = g.ctx, W = g.w, H = g.h;
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = "#f8fafc"; ctx.fillRect(0, 0, W, H);
+    // B into paper crosses
+    ctx.strokeStyle = "#94a3b8"; ctx.lineWidth = 1.4;
+    var step = 36;
+    for (var x = 24; x < W; x += step) for (var y = 24; y < H - 8; y += step){
+      ctx.beginPath(); ctx.moveTo(x-5, y-5); ctx.lineTo(x+5, y+5); ctx.moveTo(x+5, y-5); ctx.lineTo(x-5, y+5); ctx.stroke();
+    }
+    ctx.fillStyle = "#475569"; ctx.font = "bold 12px Arial"; ctx.textAlign = "right";
+    ctx.fillText("B into paper (×)", W - 12, 18);
+
+    var cx = W * 0.48, cy = H * 0.52;
+    var rPix = isFinite(P.r) ? Math.max(28, Math.min(H * 0.38, 40 + P.r * 1800)) : 70;
+
+    if (isFinite(P.r)){
+      ctx.setLineDash([5, 5]); ctx.strokeStyle = "#94a3b8"; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.arc(cx, cy, rPix, 0, Math.PI * 2); ctx.stroke(); ctx.setLineDash([]);
+      // trail
+      if (trail.length > 1){
+        ctx.strokeStyle = "rgba(24,101,242,0.45)"; ctx.lineWidth = 2; ctx.beginPath();
+        for (var i = 0; i < trail.length; i++){ var t = trail[i]; if (i) ctx.lineTo(t.x, t.y); else ctx.moveTo(t.x, t.y); }
+        ctx.stroke();
+      }
+      var px = cx + rPix * Math.cos(ang), py = cy + rPix * Math.sin(ang);
+      // radius
+      ctx.strokeStyle = "#7f3f98"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(px, py); ctx.stroke();
+      ctx.fillStyle = "#7f3f98"; ctx.font = "bold 12px Arial"; ctx.textAlign = "center";
+      ctx.fillText("r", (cx+px)/2 + 10, (cy+py)/2 - 6);
+      // velocity tangent (perp to radius): for ang, tangent is (-sin, cos) for CCW
+      var tx = -Math.sin(ang), ty = Math.cos(ang);
+      var vLen = 36;
+      kArrow(ctx, px, py, px + tx * vLen, py + ty * vLen, "#186d32", 3, "v");
+      // F toward centre
+      var fx = cx - px, fy = cy - py, fL = Math.hypot(fx, fy) || 1;
+      kArrow(ctx, px, py, px + fx / fL * 32, py + fy / fL * 32, "#b91c1c", 3, "F");
+      // charge
+      ctx.beginPath(); ctx.arc(px, py, 11, 0, 7); ctx.fillStyle = "#1865f2"; ctx.fill();
+      ctx.strokeStyle = "#0a2a66"; ctx.lineWidth = 2; ctx.stroke();
+      ctx.fillStyle = "#fff"; ctx.font = "bold 11px Arial"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      ctx.fillText("+", px, py + 1);
+      ctx.fillStyle = "#0a2a66"; ctx.font = "bold 13px Arial"; ctx.textBaseline = "alphabetic";
+      ctx.fillText("F = " + P.F.toExponential(2) + " N", W/2, H - 10);
+    } else {
+      // non-perp: show force magnitude bar and message
+      ctx.fillStyle = "#0a2a66"; ctx.font = "bold 15px Arial"; ctx.textAlign = "center";
+      ctx.fillText("θ = " + Math.round(P.thDeg) + "° → F = BQv sinθ = " + P.F.toExponential(2) + " N", W/2, H/2 - 20);
+      ctx.font = "13px Arial"; ctx.fillStyle = "#5b6170";
+      ctx.fillText("Set θ = 90° for a circular orbit in this view (helix / partial component otherwise).", W/2, H/2 + 8);
+      // force bar
+      var barMax = P.B * Qp * P.v; // max at 90
+      var bw = Math.min(W * 0.6, 280), bh = 16, bx = (W - bw) / 2, by = H/2 + 40;
+      ctx.fillStyle = "#e2e8f0"; ctx.fillRect(bx, by, bw, bh);
+      ctx.fillStyle = "#1865f2"; ctx.fillRect(bx, by, bw * (barMax > 0 ? P.F / barMax : 0), bh);
+      ctx.strokeStyle = "#64748b"; ctx.strokeRect(bx, by, bw, bh);
+      ctx.fillStyle = "#334155"; ctx.font = "12px Arial";
+      ctx.fillText("0", bx, by + 32); ctx.fillText("F_max", bx + bw, by + 32);
+    }
+  }
+  function tick(dt){
+    if (!isFinite(P.r) || P.r <= 0){ return false; }
+    // omega = v/r ; scale for animation (not real-time atomic rates)
+    var omega = (P.v / P.r) * 0.015; // visual scale
+    ang += omega * dt * 60;
+    var g = kSetup(cv), cx = g.w * 0.48, cy = g.h * 0.52;
+    var rPix = Math.max(28, Math.min(g.h * 0.38, 40 + P.r * 1800));
+    var px = cx + rPix * Math.cos(ang), py = cy + rPix * Math.sin(ang);
+    trail.push({x:px, y:py});
+    if (trail.length > 80) trail.shift();
+    update(); draw();
+    return true;
+  }
+  function pause(){ if (clock) clock.stop(); var b = document.getElementById("playBtn"); if (b) b.textContent = "▶ Play"; }
+  function play(){
+    if (!isFinite(P.r)){ kText("simMsg", "Set θ = 90° to play a circular orbit."); return; }
+    if (clock && clock.running()){ pause(); kText("simMsg", "Paused."); return; }
+    if (!clock) clock = kClock(tick, function(){ var b = document.getElementById("playBtn"); if (b) b.textContent = "▶ Play"; });
+    clock.start();
+    var b = document.getElementById("playBtn"); if (b) b.textContent = "⏸ Pause";
+    kText("simMsg", "Orbiting — F toward centre, v tangential. Speed of animation: use Speed menu.");
+  }
+  function reset(){
+    pause(); ang = 0; trail = [];
+    kSet("bSl", 0.20); kSet("vSl", 1.0); kSet("thSl", 90);
+    read(); update(); draw();
+    kText("simMsg", "Reset to B = 0.20 T, v = 1.0×10⁶ m/s, θ = 90°. Press Play for the circle.");
+  }
+  document.getElementById("playBtn").addEventListener("click", play);
   document.getElementById("resetBtn").addEventListener("click", reset);
-  kBind(["bSl","vSl","thSl"], function(){ read(); update(); draw(); });
-  return {reset:reset,draw:draw,resize:function(){draw();},pause:function(){},
-    set:function(o){ if(o.B!=null)kSet("bSl",o.B); if(o.v_e6!=null)kSet("vSl",o.v_e6); if(o.theta!=null)kSet("thSl",o.theta); reset(); },
-    state:function(){ return {F:P.F}; }};
+  kBind(["bSl","vSl","thSl"], function(){ read(); if (!isFinite(P.r)){ trail = []; ang = 0; pause(); } update(); draw(); });
+  read(); update();
+  return {
+    reset: reset, draw: function(){ read(); update(); draw(); }, resize: function(){ draw(); }, pause: pause,
+    set: function(o){ if (o.B != null) kSet("bSl", o.B); if (o.v_e6 != null) kSet("vSl", o.v_e6); if (o.theta != null) kSet("thSl", o.theta); read(); update(); draw(); },
+    jumpTo: function(){ draw(); },
+    state: function(){ return {F:P.F, r:P.r, sin:P.sin}; }
+  };
 }
 
-var LESSON = {quizzes:Q, figs:{}, makeSim:makeSim, demo:{set:{"B": 0.2, "v_e6": 1, "theta": 90}}};
+var LESSON = {quizzes:Q, figs:{}, makeSim:makeSim, demo:{set:{"B": 0.2, "v_e6": 1, "theta": 90}, t:0}};
 
 
 (function(){

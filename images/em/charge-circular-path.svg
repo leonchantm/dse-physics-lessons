@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" role="img" aria-label="Positive charge moving in a uniform B-field into the paper; magnetic force provides centripetal force for a circular path">
+  <rect width="640" height="340" fill="#f8fafc"/>
+  <!-- B into paper (× marks) -->
+  <g stroke="#64748b" stroke-width="1.6" fill="none">
+    <g transform="translate(80,60)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+    <g transform="translate(160,60)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+    <g transform="translate(240,60)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+    <g transform="translate(320,60)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+    <g transform="translate(400,60)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+    <g transform="translate(480,60)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+    <g transform="translate(560,60)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+    <g transform="translate(80,140)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+    <g transform="translate(160,140)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+    <g transform="translate(400,140)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+    <g transform="translate(480,140)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+    <g transform="translate(560,140)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+    <g transform="translate(80,220)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+    <g transform="translate(160,220)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+    <g transform="translate(240,220)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+    <g transform="translate(400,220)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+    <g transform="translate(480,220)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+    <g transform="translate(560,220)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+    <g transform="translate(80,280)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+    <g transform="translate(160,280)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+    <g transform="translate(240,280)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+    <g transform="translate(320,280)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+    <g transform="translate(400,280)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+    <g transform="translate(480,280)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+    <g transform="translate(560,280)"><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="6" y1="-6" x2="-6" y2="6"/></g>
+  </g>
+  <text x="560" y="36" font-size="14" font-weight="700" text-anchor="end" fill="#475569">B into paper (×)</text>
+  <!-- orbit -->
+  <circle cx="320" cy="170" r="95" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 5"/>
+  <circle cx="320" cy="170" r="3" fill="#64748b"/>
+  <text x="328" y="168" font-size="13" fill="#64748b">O</text>
+  <!-- radius -->
+  <line x1="320" y1="170" x2="415" y2="170" stroke="#7f3f98" stroke-width="2.5"/>
+  <text x="365" y="160" font-size="14" font-weight="700" fill="#7f3f98">r = mv/(BQ)</text>
+  <!-- charge at right, v up, F toward centre -->
+  <circle cx="415" cy="170" r="14" fill="#1865f2" stroke="#0a2a66" stroke-width="2"/>
+  <text x="415" y="175" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">+q</text>
+  <!-- v arrow up -->
+  <defs>
+    <marker id="arrV" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#186d32"/></marker>
+    <marker id="arrF" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#b91c1c"/></marker>
+  </defs>
+  <line x1="415" y1="170" x2="415" y2="95" stroke="#186d32" stroke-width="3.5" marker-end="url(#arrV)"/>
+  <text x="430" y="120" font-size="15" font-weight="700" fill="#186d32">v</text>
+  <!-- F toward centre (left) -->
+  <line x1="415" y1="170" x2="345" y2="170" stroke="#b91c1c" stroke-width="3.5" marker-end="url(#arrF)"/>
+  <text x="375" y="195" font-size="15" font-weight="700" fill="#b91c1c">F (= centripetal)</text>
+  <text x="320" y="325" font-size="13" font-weight="600" text-anchor="middle" fill="#334155">v ⊥ B → uniform circular motion · F ⊥ v so speed stays constant</text>
+</svg>

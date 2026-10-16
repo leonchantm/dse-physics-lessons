@@ -185,36 +185,264 @@
 <section class="step step-learn" data-id="welcome" data-name="Welcome" data-kind="learn"><span class="step-kind learn">Learn</span>
 <div class="welcome-hero">
   <div class="big" aria-hidden="true">🏠</div>
-  <h2 tabindex="-1">Lesson 4.4: Domestic Electricity <span class="zh">(家用電)</span></h2>
-  <p>This lesson covers power ratings, the kilowatt-hour on your electricity bill, house wiring, and safety devices such as fuses and earthing.</p>
-<p><b>Hong Kong hook:</b> CLP / HKE bills quote energy in kW h; the live, neutral and earth wires in a 13 A plug follow the same rules you learn here.</p>
+  <h2 tabindex="-1">Lesson 4.4: Domestic Electricity <span class="zh">（家用電）</span></h2>
+  <p><b>Domestic electricity</b> is about using the <b>mains</b> safely at home: power ratings, bills in <b>kilowatt-hours</b>, live / neutral / earth wiring, and choosing fuses and cables.</p>
+  <p><b>Hong Kong hook:</b> CLP Power and HK Electric bill energy in <b>kW h</b>. Wall sockets use the UK-style <b>Type G</b> 13 A plug — the same L / N / E rules you practise here.</p>
 </div>
-
+<div class="box key"><span class="box-title">In this lesson</span>
+(1) Power rating and <span class="eq">I = P/V</span> on 220 V a.c. mains, (2) kW h and cost, (3) parallel household wiring, (4) fuse / MCB / earth protection, (5) choosing a sensible fuse.
+</div>
+<div class="box warn"><span class="box-title">Scope</span>
+Treat “220 V a.c.” as the labelled mains value. Deep a.c. / r.m.s. is Lesson <b>4.6c</b>; transformers/grid are <b>4.7</b>. Formula <span class="eq">P = VI</span> was Lesson <b>4.3c</b> — here we apply it to appliances.
+</div>
 <div class="lesson-link">⬅️ Previous: <a href="4-3c-electrical-power.html">Lesson 4.3c: Electrical Power</a> &nbsp;·&nbsp; ➡️ Next: <a href="4-5a-magnetic-fields.html">Lesson 4.5a: Magnetic Fields and Currents</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div>
 </section>
-<section class="step step-learn" data-id="rating" data-name="Power Rating" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 1</span><h2 tabindex="-1">Power rating</h2><p>Appliances are labelled with power (W or kW) and usually the mains voltage (Hong Kong: 220 V a.c.). Operating current I = P/V.</p></section>
-<section class="step step-learn" data-id="kwh" data-name="Kilowatt-hour" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 2</span><h2 tabindex="-1">kW h and cost</h2><div class="box formula"><b>1 kW h</b> = energy used by 1 kW in 1 hour = 3.6×10⁶ J. Cost = (kW h used) × (price per kW h).</div></section>
-<section class="step step-learn" data-id="wiring" data-name="Household Wiring" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 3</span><h2 tabindex="-1">Wiring</h2><p>Live, neutral and earth. Appliances in parallel across the mains so each gets full voltage. Ring circuits / radial circuits for sockets.</p></section>
-<section class="step step-learn" data-id="safety" data-name="Safety" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 4</span><h2 tabindex="-1">Safety</h2><ul class="simple"><li>Fuse / MCB / RCD (circuit breaker) protect against overcurrent and leakage.</li><li>Earth wire: metal case safe if live touches it.</li><li>Never overload sockets; keep water away; damaged cables hazard.</li></ul></section>
-<section class="step step-learn" data-id="fuse" data-name="Cables and Fuses" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 5</span><h2 tabindex="-1">Choosing fuses</h2><p>Fuse rating slightly above normal operating current. Cable thickness must carry that current safely.</p><div class="box eg">2.0 kW at 220 V → I≈9.1 A → use 13 A fuse (not 3 A).</div></section>
-<section class="step step-learn" data-id="worked" data-name="Worked Examples" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Worked examples</span><h2 tabindex="-1">Examples</h2><div class="box eg">2.2 kW heater × 3.0 h = 6.6 kW h. At $1.2 per kW h → $7.92.</div></section>
-<section class="step step-practice" data-id="p1" data-name="Practice: Rating" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 1</span><h2 tabindex="-1">Rating and kW h</h2><div class="quiz" data-quiz="p1"></div></section>
-<section class="step step-sim" data-id="sim" data-name="Try it: Bill &amp; Fuse" data-kind="sim"><span class="step-kind sim">Try it</span><span class="tag sim">Try it!</span><h2 tabindex="-1">Simulation</h2><div class="sim-panel"><canvas id="animCanvas" width="640" height="280"></canvas><div class="sim-controls"><div class="slider"><label for="pSl"><span>P_kW</span><span id="pSlVal"></span></label>
-    <input type="range" id="pSl" min="0.1" max="3" step="0.1" value="2"></div><div class="slider"><label for="tSl"><span>hours</span><span id="tSlVal"></span></label>
-    <input type="range" id="tSl" min="0.5" max="10" step="0.5" value="3"></div><div class="slider"><label for="cSl"><span>$/kWh</span><span id="cSlVal"></span></label>
-    <input type="range" id="cSl" min="0.5" max="3" step="0.1" value="1.2"></div><div class="sim-buttons">
+
+<section class="step step-learn" data-id="rating" data-name="Power Rating" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 1</span>
+<h2 tabindex="-1">Power rating</h2>
+<p>Every appliance is designed for a supply voltage and a normal power. That designed power is the <b>power rating</b> <span class="zh">（額定功率）</span>. The printed voltage and power are the <b>rated values</b>.</p>
+<p>Hong Kong mains is labelled <b>220 V a.c., 50 Hz</b>. A kettle “220 V, 2000 W” is designed to take about 2000 J each second on that supply.</p>
+<div class="box formula"><span class="box-title">Operating current</span>
+<span class="eq">I = P / V</span>
+<br>For 2000 W on 220 V: <span class="eq">I = 2000/220 ≈ 9.1 A</span>.
+</div>
+<div class="table-scroll"><table class="t">
+<tr><th>Appliance</th><th>Typical P</th><th>I at 220 V</th></tr>
+<tr><td>Fan</td><td>50 W</td><td>0.23 A</td></tr>
+<tr><td>Computer</td><td>100 W</td><td>0.45 A</td></tr>
+<tr><td>Refrigerator</td><td>250 W</td><td>1.1 A</td></tr>
+<tr><td>Iron</td><td>1100 W</td><td>5.0 A</td></tr>
+<tr><td>Kettle / heater</td><td>1800–2000 W</td><td>~8–9 A</td></tr>
+</table></div>
+<div class="grid2">
+  <div class="box eg"><span class="box-title">Heating devices</span>
+  Kettles, irons and heaters have <b>high</b> ratings — they convert energy to heat quickly. Phones and LEDs are usually low power.
+  </div>
+  <div class="box danger"><span class="box-title">Wrong voltage</span>
+  Supply much higher than rated → overheating. Much lower → weak or no operation. Match the label to local mains.
+  </div>
+</div>
+<div class="box key"><span class="box-title">Must remember</span>
+Rating + voltage → operating current. You need I later for fuse and cable choice.
+</div>
+</section>
+
+<section class="step step-learn" data-id="kwh" data-name="Kilowatt-hour" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 2</span>
+<h2 tabindex="-1">kW h and cost</h2>
+<p>The joule is tiny for household bills. CLP Power and HK Electric bill energy in the <b>kilowatt-hour (kW h)</b> <span class="zh">（千瓦時）</span>.</p>
+<div class="box formula"><span class="box-title">Energy in kW h</span>
+<span class="eq">E (kW h) = P (kW) × t (h)</span>
+<br>1 kW h = 1 kW for 1 hour = 1000 W × 3600 s = <b>3.6 × 10<sup>6</sup> J</b>.
+</div>
+<p>A kilowatt-hour meter records energy used. Cost = energy × unit price (sometimes in stepped bands).</p>
+<div class="box formula"><span class="box-title">Cost</span>
+<span class="eq">cost = (kW h) × (price per kW h)</span>
+<br>6.0 kW h at $1.20 / kW h → <b>$7.20</b>.
+</div>
+<div class="box eg"><span class="box-title">Quick estimate</span>
+Five 100 W lamps × 6 h/night: P = 0.50 kW → 3.0 kW h/night → 90 kW h in 30 days → about <b>$108</b> at $1.20/kW h. 15 W LEDs cut that cost by a large factor.
+</div>
+<div class="box warn"><span class="box-title">Units habit</span>
+Convert W → kW (÷1000) before the kW h formula. Use hours, not seconds, for kW h. Use joules only when asked (<span class="eq">E = Pt</span> with W and s).
+</div>
+<div class="box key"><span class="box-title">Must remember</span>
+<span class="eq">E = Pt</span> in kW and hours → kW h; × unit price → bill. Same physics as 4.3c, different energy unit.
+</div>
+</section>
+
+<section class="step step-learn" data-id="wiring" data-name="Household Wiring" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 3</span>
+<h2 tabindex="-1">Household wiring</h2>
+<p>Mains enters through a meter and <b>consumer unit</b>, then branches to lights, sockets and high-power appliances.</p>
+<div class="visual">
+<img src="images/em/hk-plug-wiring.svg" alt="Hong Kong Type G plug with live neutral earth and parallel appliances" style="width:100%;max-width:680px;height:auto;display:block;margin:.4rem auto">
+<p class="caption">Type G plug (facing pins: left = live, right = neutral, top = earth) and parallel loads across L–N.</p>
+</div>
+<h3>Three wires</h3>
+<ul class="simple">
+<li><b>Live (L)</b> <span class="zh">（火線）</span> — brown; changing mains potential; dangerous.</li>
+<li><b>Neutral (N)</b> <span class="zh">（中性線）</span> — blue; near 0 V; completes the circuit.</li>
+<li><b>Earth (E)</b> <span class="zh">（地線）</span> — green/yellow; safety path to ground for metal cases.</li>
+</ul>
+<div class="box key"><span class="box-title">Parallel at home</span>
+Sockets and lamps are in <b>parallel</b> across L–N so each gets ~full mains voltage and switches independently.
+</div>
+<div class="grid2">
+  <div class="box eg"><span class="box-title">Ring circuit</span>
+  Socket wiring often forms a <b>ring</b> of L, N and E. Current can share two paths; a single break may go unnoticed.
+  </div>
+  <div class="box eg"><span class="box-title">Radial / dedicated</span>
+  Lighting is often <b>radial</b>. Air-con, shower heaters etc. usually have their <b>own</b> thick cable and breaker.
+  </div>
+</div>
+<div class="box warn"><span class="box-title">Switches on live</span>
+Switches and fuses sit in the <b>live</b> wire so “off” disconnects the dangerous potential.
+</div>
+</section>
+
+<section class="step step-learn" data-id="safety" data-name="Safety" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 4</span>
+<h2 tabindex="-1">Safety — overcurrent and shock</h2>
+<p>Too much current overheats cables (fire risk). Touching live parts can cause electric shock <span class="zh">（觸電）</span>.</p>
+<h3>Overloading protection</h3>
+<ul class="simple">
+<li><b>Fuse</b> <span class="zh">（保險絲）</span> — melts if I exceeds its rating (common plug sizes: 3 A, 5 A, 13 A).</li>
+<li><b>MCB</b> — trips on overcurrent; can be reset.</li>
+<li><b>RCD</b> — trips on live/neutral imbalance (leakage), helping against some shocks.</li>
+</ul>
+<div class="box formula"><span class="box-title">Fuse idea</span>
+Rating <b>slightly above</b> normal operating current — not far below (nuisance) and not far above (no protection).
+</div>
+<h3>Shock protection</h3>
+<ul class="simple">
+<li><b>Earth</b> on metal case: live-to-case fault → large earth current → fuse/MCB clears; case stays near 0 V.</li>
+<li><b>Double insulation</b> <span class="zh">（雙重絕緣）</span> (□□): plastic/extra insulation; earth may be unused.</li>
+<li><b>Socket shutters</b>: Type G blocks L/N until the longer earth pin opens them.</li>
+</ul>
+<div class="box danger"><span class="box-title">Everyday hazards</span>
+Overloaded multi-plugs, damaged flex, wet hands near sockets, oversized fuse on thin cable.
+</div>
+<div class="box key"><span class="box-title">Must remember</span>
+Fuse/MCB → overcurrent. Earth / double insulation / RCD → shock risk. Breakers in live.
+</div>
+</section>
+
+<section class="step step-learn" data-id="fuse" data-name="Cables and Fuses" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 5</span>
+<h2 tabindex="-1">Choosing fuses and cables</h2>
+<p>Given a rating on 220 V, pick a fuse:</p>
+<ol>
+<li><span class="eq">I = P/V</span> (P in W, V = 220 V unless stated).</li>
+<li>Next standard fuse above I (often 3 A, 5 A or 13 A).</li>
+<li>Cable must be thick enough for that current.</li>
+</ol>
+<div class="box eg"><span class="box-title">Mini-example</span>
+2.0 kW at 220 V → <span class="eq">I ≈ 9.1 A</span> → <b>13 A</b> fuse (not 3 A; not 100 A).
+</div>
+<div class="table-scroll"><table class="t">
+<tr><th>Appliance</th><th>P</th><th>I ≈</th><th>Typical fuse</th></tr>
+<tr><td>LED lamp</td><td>10 W</td><td>0.05 A</td><td>3 A</td></tr>
+<tr><td>Computer</td><td>100 W</td><td>0.45 A</td><td>3 A</td></tr>
+<tr><td>Iron</td><td>1100 W</td><td>5.0 A</td><td>13 A</td></tr>
+<tr><td>Kettle</td><td>2000 W</td><td>9.1 A</td><td>13 A</td></tr>
+</table></div>
+<div class="box warn"><span class="box-title">Cable thickness</span>
+Thicker copper → lower R → less cable heating (<span class="eq">P = I²R</span>). Never put a huge fuse on a thin extension lead.
+</div>
+<div class="box key"><span class="box-title">Must remember</span>
+<span class="eq">I = P/V</span> → fuse just above I → cable matches. HK plugs already contain a fuse.
+</div>
+</section>
+
+<section class="step step-learn" data-id="worked" data-name="Worked Examples" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Worked examples</span>
+<h2 tabindex="-1">Worked examples</h2>
+
+<div class="box eg worked"><span class="box-title">Example 1 — current from rating</span>
+<p>Kettle rated “220 V, 1800 W”.</p>
+<div class="reveal">
+  <div class="rline"><b class="n">1</b> <span class="eq">I = P/V = 1800/220 ≈ 8.2 A</span>.</div>
+  <div class="rline"><b class="n">2</b> Optional: <span class="eq">R = V²/P = 220²/1800 ≈ 27 Ω</span>.</div>
+  <div class="rline"><b class="n">3</b> Fuse: next common size above 8.2 A → <b>13 A</b>.</div>
+  <div class="q-actions"><button type="button" class="btn-secondary reveal-next">Show next line ▼</button>
+  <button type="button" class="btn-hint reveal-all">Show all</button></div>
+</div>
+</div>
+
+<div class="box eg worked"><span class="box-title">Example 2 — monthly lighting cost</span>
+<p>Five 100 W lamps, 6.0 h/night, 30 days, $1.20 / kW h.</p>
+<ol>
+<li>P = 0.50 kW → per day 3.0 kW h → month <b>90 kW h</b>.</li>
+<li>Cost = 90 × 1.20 = <b>$108</b>.</li>
+<li>With 15 W LEDs: P = 0.075 kW → 13.5 kW h/month → $16.20; saving ≈ <b>$91.80</b>.</li>
+</ol>
+</div>
+
+<div class="box eg worked"><span class="box-title">Example 3 — heater bill and fuse</span>
+<p>2.2 kW for 3.0 h at $1.20 / kW h; V = 220 V.</p>
+<ol>
+<li><span class="eq">E = 2.2 × 3.0 = 6.6 kW h</span>; cost = <b>$7.92</b>.</li>
+<li><span class="eq">I = 2200/220 = 10 A</span> → fuse <b>13 A</b> (not 3 A).</li>
+</ol>
+</div>
+
+<div class="box eg worked"><span class="box-title">Example 4 — earth</span>
+<p>Metal washing-machine case: earth provides a low-resistance fault path if live touches the case so the fuse/MCB clears; earth carries <b>no</b> current in normal use.</p>
+</div>
+
+<div class="box key"><span class="box-title">Method habit</span>
+kW + hours for bills; <span class="eq">I = P/V</span> for current; fuse just above I; name what the question asks for.
+</div>
+</section>
+
+<section class="step step-practice" data-id="p1" data-name="Practice: Rating" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 1</span>
+<h2 tabindex="-1">Rating and kW h</h2>
+<p>Formula → substitute → calculate. Use hints if stuck.</p>
+<div class="quiz" data-quiz="p1"></div>
+</section>
+
+<section class="step step-sim" data-id="sim" data-name="Try it: Bill &amp; Fuse" data-kind="sim"><span class="step-kind sim">Try it</span><span class="tag sim">Try it!</span>
+<h2 tabindex="-1">Explore: Bill &amp; Fuse lab</h2>
+<p>Set appliance power (kW), time (h) and unit price ($/kW h). The lab shows energy, cost and operating current at 220 V. Choose a fuse rating and see whether it is safe, marginal or wrong for that current.</p>
+<div class="sim-panel">
+<canvas id="animCanvas" width="640" height="300" aria-label="Bill and fuse lab: energy cost and fuse check"></canvas>
+<div class="sim-controls">
+<div class="slider"><label for="pSl"><span>Power P</span><span id="pSlVal"></span></label>
+    <input type="range" id="pSl" min="0.1" max="3" step="0.1" value="2"></div>
+<div class="slider"><label for="tSl"><span>Time t</span><span id="tSlVal"></span></label>
+    <input type="range" id="tSl" min="0.5" max="10" step="0.5" value="3"></div>
+<div class="slider"><label for="cSl"><span>Price</span><span id="cSlVal"></span></label>
+    <input type="range" id="cSl" min="0.5" max="3" step="0.1" value="1.2"></div>
+<div class="slider"><label for="fuseSl"><span>Fuse rating</span><span id="fuseSlVal"></span></label>
+    <input type="range" id="fuseSl" min="0" max="2" step="1" value="2"></div>
+<div class="sim-buttons">
   <button class="btn-primary" id="playBtn" type="button">▶ Play</button>
   <button class="btn-secondary" id="resetBtn" type="button">↺ Reset</button>
   <label for="speedSel" style="font-weight:700">Speed:</label>
   <select id="speedSel"><option value="1">Normal</option><option value="0.5">Slow (½×)</option><option value="0.25">Very slow (¼×)</option></select>
-</div></div><div class="readouts"><div class="ro "><div class="lab">Out1</div><div class="val" id="ro1"></div></div><div class="ro "><div class="lab">Out2</div><div class="val" id="ro2"></div></div></div><p class="caption" id="simMsg">Energy and cost</p></div></section>
-<section class="step step-practice" data-id="psim" data-name="Practice: Simulation" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 2</span><h2 tabindex="-1">Bill practice</h2><div class="quiz" data-quiz="psim"></div></section>
-<section class="step step-practice" data-id="p2" data-name="Practice: Safety" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 3</span><h2 tabindex="-1">Wiring and safety</h2><div class="quiz" data-quiz="p2"></div></section>
-<section class="step step-learn" data-id="summary" data-name="Summary" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Summary</span><h2 tabindex="-1">Remember</h2><div style="text-align:center"><div class="stars" id="stars" aria-hidden="true"></div>
-  <p id="finalScore" style="font-size:1.2rem;font-weight:800"></p><p id="finalMsg"></p></div><ul class="simple"><li>I=P/V; energy in kW h; cost.</li><li>Parallel household wiring; fuse/earth safety.</li></ul><div class="lesson-link">⬅️ Previous: <a href="4-3c-electrical-power.html">Lesson 4.3c: Electrical Power</a> &nbsp;·&nbsp; ➡️ Next: <a href="4-5a-magnetic-fields.html">Lesson 4.5a: Magnetic Fields and Currents</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div><div class="q-actions" style="justify-content:center">
+</div>
+</div>
+<div class="readout">
+  <div class="ro v"><div class="lab">E = P×t</div><div class="val" id="ro1"></div></div>
+  <div class="ro d"><div class="lab">Cost</div><div class="val" id="ro2"></div></div>
+  <div class="ro a"><div class="lab">I = P/V</div><div class="val" id="ro3"></div></div>
+  <div class="ro av"><div class="lab">Fuse check</div><div class="val" id="ro4"></div></div>
+</div>
+<p class="caption" id="simMsg">Defaults: 2.0 kW × 3.0 h at $1.20/kW h → 6.0 kW h, $7.20; I ≈ 9.1 A → 13 A fuse OK.</p>
+</div>
+</section>
+
+<section class="step step-practice" data-id="psim" data-name="Practice: Simulation" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 2</span>
+<h2 tabindex="-1">Check the Bill &amp; Fuse defaults</h2>
+<p>Defaults: P = 2.0 kW, t = 3.0 h, price = $1.20 per kW h, V = 220 V. Confirm energy, cost and current before exploring further.</p>
+<div class="quiz" data-quiz="psim"></div>
+</section>
+
+<section class="step step-practice" data-id="p2" data-name="Practice: Safety" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 3</span>
+<h2 tabindex="-1">Wiring and safety</h2>
+<div class="quiz" data-quiz="p2"></div>
+</section>
+
+<section class="step step-learn" data-id="summary" data-name="Summary" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Summary</span>
+<h2 tabindex="-1">Remember</h2>
+<div style="text-align:center"><div class="stars" id="stars" aria-hidden="true"></div>
+  <p id="finalScore" style="font-size:1.2rem;font-weight:800"></p><p id="finalMsg"></p></div>
+<ul class="simple">
+<li>Rating + <span class="eq">I = P/V</span> on 220 V → operating current.</li>
+<li><span class="eq">E (kW h) = P (kW) × t (h)</span>; cost = energy × unit price.</li>
+<li>Loads in <b>parallel</b>; L / N / E; switches/fuses in live.</li>
+<li>Fuse/MCB → overcurrent; earth / double insulation / RCD → shock.</li>
+<li>Fuse slightly above I; cable must match.</li>
+</ul>
+<div class="lesson-link">⬅️ Previous: <a href="4-3c-electrical-power.html">Lesson 4.3c: Electrical Power</a> &nbsp;·&nbsp; ➡️ Next: <a href="4-5a-magnetic-fields.html">Lesson 4.5a: Magnetic Fields and Currents</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div>
+<div class="q-actions" style="justify-content:center">
   <button class="btn-secondary" id="reviewBtn" type="button">Go to first unfinished question</button>
   <button class="btn-retry" id="restartBtn" type="button">↺ Reset all questions</button>
-</div></section>
+</div>
+</section>
 </main>
 <nav class="controls" aria-label="Lesson navigation">
   <button class="btn-secondary" id="backBtn" type="button">◀ Back</button>
@@ -349,42 +577,212 @@ function kHTML(id, t){ var e = document.getElementById(id); if (e) e.innerHTML =
 
 var Q = {
 p1:[
-{type:"num", text:"220 V, 1100 W. Operating I (A)?", answer:5, unit:"A", hints:["", ""], explain:"5"},
-{type:"num", text:"2.0 kW for 3.0 h. Energy (kW h)?", answer:6, unit:"kW h", hints:["", ""], explain:"6"},
-{type:"mc", text:"Hong Kong mains is about…", options:["220 V a.c.", "12 V d.c.", "110 V d.c.", "1.5 V"], answer:0, hints:["", ""], explain:"220 V a.c."}
+{type:"mc", text:"A power rating labelled “220 V, 1200 W” on an appliance means…",
+ options:["it is designed to take about 1200 W when used on 220 V mains",
+          "it always draws exactly 1200 A",
+          "its resistance is 1200 Ω at any voltage",
+          "it stores 1200 J of charge"],
+ answer:0,
+ hints:["Rating = designed power at the labelled voltage.", "Hong Kong mains is about 220 V a.c."],
+ explain:"Rated power is the normal power at the rated voltage (here 220 V)."},
+{type:"num", text:"Appliance rated 220 V, 1100 W. Operating current I in A?",
+ answer:5, unit:"A",
+ hints:["I = P/V.", "1100/220 = 5."],
+ explain:"I = P/V = 1100/220 = 5.0 A."},
+{type:"num", text:"A 2.0 kW heater runs for 3.0 h. Energy in kW h?",
+ answer:6, unit:"kW h",
+ hints:["E = P × t with P in kW and t in h.", "2.0 × 3.0 = 6.0."],
+ explain:"E = 2.0 × 3.0 = 6.0 kW h."},
+{type:"num", text:"6.0 kW h at $1.20 per kW h. Cost in dollars?",
+ answer:7.2, unit:"$",
+ hints:["cost = energy × unit price.", "6.0 × 1.20 = 7.2."],
+ explain:"Cost = 6.0 × 1.20 = $7.20."},
+{type:"mc", text:"Hong Kong mains is labelled approximately…",
+ options:["220 V a.c., 50 Hz",
+          "12 V d.c. only",
+          "110 V d.c.",
+          "1.5 V dry cells in series"],
+ answer:0,
+ hints:["Think wall sockets, not batteries.", "CLP / HKE supply alternating mains."],
+ explain:"HK mains: about 220 V a.c. at 50 Hz (use as labelled value here)."}
 ],
 psim:[
-{type:"num", text:"P=2.0 kW, t=3.0 h. Energy (kW h)?", answer:6, unit:"kW h", hints:["", ""], explain:"6"},
-{type:"num", text:"6.0 kW h at $1.20 per kW h. Cost ($)?", answer:7.2, unit:"$", hints:["", ""], explain:"7.2"}
+{type:"num", text:"Sim defaults: P = 2.0 kW, t = 3.0 h. Energy E in kW h?",
+ answer:6, unit:"kW h",
+ hints:["E = P × t.", "2.0 × 3.0."],
+ explain:"E = 2.0 × 3.0 = 6.0 kW h."},
+{type:"num", text:"Same defaults, price $1.20 per kW h. Cost in dollars?",
+ answer:7.2, unit:"$",
+ hints:["Cost = 6.0 × 1.20.", "Match the lab readout."],
+ explain:"Cost = 6.0 × 1.20 = $7.20."},
+{type:"num", text:"Same 2.0 kW on 220 V. Operating current I in A (1 d.p.)?",
+ answer:9.1, unit:"A", tol:0.05,
+ hints:["I = P/V with P in watts.", "2000/220 ≈ 9.09 → 9.1 A."],
+ explain:"I = 2000/220 ≈ 9.1 A."},
+{type:"mc", text:"For I ≈ 9.1 A in a Type G plug, the best fuse among these is…",
+ options:["13 A",
+          "3 A",
+          "1 A",
+          "100 A"],
+ answer:0,
+ hints:["Fuse must be above normal I.", "3 A would blow at once; 100 A is far too large."],
+ explain:"Choose 13 A — just above ~9 A and standard for HK plugs."}
 ],
 p2:[
-{type:"mc", text:"Household lamps are wired…", options:["in parallel", "in series", "mixed randomly", "only on earth"], answer:0, hints:["", ""], explain:"parallel"},
-{type:"mc", text:"Earth wire purpose…", options:["make metal case safe if live touches it", "carry normal current", "replace fuse", "increase power"], answer:0, hints:["", ""], explain:"safety"},
-{type:"mc", text:"2 kW heater at 220 V: best fuse…", options:["13 A", "1 A", "3 A", "100 A"], answer:0, hints:["", ""], explain:"I≈9 A"},
-{type:"mc", text:"A fuse protects mainly against…", options:["overcurrent / fire risk", "low voltage", "static charge", "magnetism"], answer:0, hints:["", ""], explain:"overcurrent"}
+{type:"mc", text:"Household lamps and sockets are normally wired…",
+ options:["in parallel across live and neutral",
+          "all in one long series string",
+          "only on the earth wire",
+          "with no neutral connection"],
+ answer:0,
+ hints:["Each device should get full mains voltage.", "Independent on/off needs parallel."],
+ explain:"Parallel wiring: each load sees ~220 V and works independently."},
+{type:"mc", text:"The main purpose of the earth wire to a metal case is to…",
+ options:["provide a safe path if live touches the case, so the fuse/MCB can trip",
+          "carry the normal operating current instead of neutral",
+          "increase the power rating of the appliance",
+          "replace the need for a fuse"],
+ answer:0,
+ hints:["Earth is a safety conductor.", "Normal current uses live and neutral."],
+ explain:"Earth keeps the case near 0 V under fault and helps clear the fault current."},
+{type:"mc", text:"A fuse protects mainly against…",
+ options:["overcurrent that could overheat cables and cause fire",
+          "low voltage from the power company",
+          "static charge on carpets",
+          "magnetic fields from the Earth"],
+ answer:0,
+ hints:["Fuses melt when I is too large.", "Think cable heating."],
+ explain:"Fuses open the circuit on excessive current (overload/short)."},
+{type:"mc", text:"Switches and fuses should be placed in the…",
+ options:["live wire",
+          "earth wire only",
+          "neutral wire only, never live",
+          "neither live nor neutral"],
+ answer:0,
+ hints:["Disconnect from the dangerous potential.", "Notes: breakers sit in live."],
+ explain:"Breaking live leaves the appliance near 0 V via neutral — safer."},
+{type:"num", text:"Iron rated 220 V, 1100 W. Suitable fuse among 3 or 13: enter 13 (A).",
+ answer:13, unit:"A",
+ hints:["I = 1100/220 = 5 A.", "3 A is too small; 13 A is the usual plug choice."],
+ explain:"I = 5 A → 13 A fuse (3 A would blow under normal use)."},
+{type:"mc", text:"Double-insulated appliances…",
+ options:["use extra insulation / plastic case and may not need an earth connection",
+          "must always use the thickest earth wire available",
+          "cannot be plugged into Type G sockets",
+          "have zero power rating by definition"],
+ answer:0,
+ hints:["Look for the □□ symbol.", "Earth pin may be plastic or unused."],
+ explain:"Double insulation protects without relying on an earth wire."}
 ]
 };
 
 function makeSim(){
-  var cv=document.getElementById("animCanvas"), P={};
-  function read(){ P.Pk=kVal("pSl"); P.t=kVal("tSl"); P.c=kVal("cSl");
-    kText("pSlVal",kFmt(P.Pk,1)+" kW"); kText("tSlVal",kFmt(P.t,1)+" h"); kText("cSlVal","$"+kFmt(P.c,2));
-    P.E=P.Pk*P.t; P.cost=P.E*P.c; P.I=(P.Pk*1000)/220;
-    P.ro1="E="+kFmt(P.E,2)+" kW h; I≈"+kFmt(P.I,2)+" A"; P.ro2="cost=$"+kFmt(P.cost,2); }
-  function update(){ kText("ro1",P.ro1); kText("ro2",P.ro2); }
-  function draw(){ var g=kSetup(cv),ctx=g.ctx,W=g.w,H=g.h; ctx.clearRect(0,0,W,H); ctx.fillStyle="#fff"; ctx.fillRect(0,0,W,H);
-    ctx.fillStyle="#0a2a66"; ctx.font="16px Arial"; ctx.textAlign="center";
-    ctx.fillText("Energy "+kFmt(P.E,2)+" kW h", W/2, H/2-8); ctx.fillText("Cost $"+kFmt(P.cost,2), W/2, H/2+18); }
-  function reset(){ read(); update(); draw(); kText("simMsg","E(kW h)=P(kW)×t(h)"); }
-  document.getElementById("playBtn").style.display="none";
+  var cv=document.getElementById("animCanvas"), P={}, t=0, clock=null;
+  var FUSES=[3,5,13];
+  function fuseVerdict(I, fuse){
+    if(fuse < I) return {status:"BLOWS", ok:false, col:"#b91c1c", tip:"Fuse < I → blows in normal use."};
+    if(fuse === 13 && I < 2) return {status:"HIGH", ok:false, col:"#ca8a04", tip:"13 A is oversized for such a small I."};
+    if(fuse === 5 && I < 0.5) return {status:"HIGH", ok:false, col:"#ca8a04", tip:"Fuse much larger than I → weak protection."};
+    if(fuse === 3 && I <= 3) return {status:"OK", ok:true, col:"#186d32", tip:"Slightly above I — good."};
+    if(fuse === 5 && I <= 5) return {status:"OK", ok:true, col:"#186d32", tip:"Slightly above I — good."};
+    if(fuse === 13 && I <= 13) return {status:"OK", ok:true, col:"#186d32", tip:"Slightly above I — good."};
+    return {status:"CHECK", ok:false, col:"#ca8a04", tip:"Check fuse vs current and cable."};
+  }
+  function read(){
+    P.Pk=kVal("pSl"); P.tHours=kVal("tSl"); P.c=kVal("cSl");
+    P.fuseIdx=Math.round(kVal("fuseSl")); if(P.fuseIdx<0)P.fuseIdx=0; if(P.fuseIdx>2)P.fuseIdx=2;
+    P.fuse=FUSES[P.fuseIdx];
+    kText("pSlVal", kFmt(P.Pk,1)+" kW");
+    kText("tSlVal", kFmt(P.tHours,1)+" h");
+    kText("cSlVal", "$"+kFmt(P.c,2)+"/kW h");
+    kText("fuseSlVal", P.fuse+" A");
+    P.E=P.Pk*P.tHours;
+    P.cost=P.E*P.c;
+    P.I=(P.Pk*1000)/220;
+    P.ro1=kFmt(P.E,2)+" kW h";
+    P.ro2="$"+kFmt(P.cost,2);
+    P.ro3=kFmt(P.I,2)+" A";
+    var v=fuseVerdict(P.I, P.fuse);
+    P.fuseStatus=v.status; P.fuseOk=v.ok; P.fuseCol=v.col; P.fuseTip=v.tip;
+    P.ro4=P.fuseStatus;
+  }
+  function update(){
+    kText("ro1", P.ro1); kText("ro2", P.ro2);
+    var r3=document.getElementById("ro3"); if(r3) r3.textContent=P.ro3;
+    var r4=document.getElementById("ro4"); if(r4){ r4.textContent=P.ro4; r4.style.color=P.fuseCol; }
+  }
+  function draw(){
+    var g=kSetup(cv),ctx=g.ctx,W=g.w,H=g.h;
+    ctx.clearRect(0,0,W,H); ctx.fillStyle="#fff"; ctx.fillRect(0,0,W,H);
+    ctx.fillStyle="#eef3fe"; ctx.strokeStyle="#1865f2"; ctx.lineWidth=2;
+    var leftW=W*0.42;
+    if(ctx.roundRect){ ctx.beginPath(); ctx.roundRect(24,24,leftW,H-48,12); ctx.fill(); ctx.stroke(); }
+    else { ctx.fillRect(24,24,leftW,H-48); ctx.strokeRect(24,24,leftW,H-48); }
+    ctx.fillStyle="#0a2a66"; ctx.font="bold 15px Arial"; ctx.textAlign="left";
+    ctx.fillText("CLP / HKE style bill", 40, 52);
+    ctx.font="13px Arial"; ctx.fillStyle="#334155";
+    ctx.fillText("P = "+kFmt(P.Pk,1)+" kW", 40, 82);
+    ctx.fillText("t = "+kFmt(P.tHours,1)+" h", 40, 104);
+    ctx.fillText("E = P×t = "+kFmt(P.E,2)+" kW h", 40, 132);
+    ctx.font="bold 18px Arial"; ctx.fillStyle="#1865f2";
+    ctx.fillText("Cost $"+kFmt(P.cost,2), 40, 168);
+    ctx.font="12px Arial"; ctx.fillStyle="#5b6170";
+    ctx.fillText("at $"+kFmt(P.c,2)+" / kW h", 40, 190);
+    var frac=Math.min(1, (t%4)/4);
+    var barMax=leftW-32; var barW=barMax*Math.min(1, P.E/12);
+    ctx.fillStyle="#dbeafe"; ctx.fillRect(40, 210, barMax, 18);
+    ctx.fillStyle="#1865f2"; ctx.fillRect(40, 210, Math.max(4, barW*(0.25+0.75*frac)), 18);
+    var fx=W*0.55, fw=W*0.4;
+    ctx.fillStyle="#f8fafc"; ctx.strokeStyle="#94a3b8"; ctx.lineWidth=2;
+    if(ctx.roundRect){ ctx.beginPath(); ctx.roundRect(fx,24,fw,H-48,12); ctx.fill(); ctx.stroke(); }
+    else { ctx.fillRect(fx,24,fw,H-48); ctx.strokeRect(fx,24,fw,H-48); }
+    ctx.fillStyle="#0a2a66"; ctx.font="bold 15px Arial"; ctx.textAlign="left";
+    ctx.fillText("Fuse check (220 V)", fx+16, 52);
+    ctx.font="13px Arial"; ctx.fillStyle="#334155";
+    ctx.fillText("I = P/V = "+kFmt(P.I,2)+" A", fx+16, 82);
+    ctx.fillText("Chosen fuse: "+P.fuse+" A", fx+16, 106);
+    ctx.fillStyle="#fef3c7"; ctx.strokeStyle="#ca8a04"; ctx.lineWidth=2;
+    ctx.fillRect(fx+40, 130, 120, 36); ctx.strokeRect(fx+40, 130, 120, 36);
+    ctx.fillStyle="#92400e"; ctx.font="bold 16px Arial"; ctx.textAlign="center";
+    ctx.fillText(P.fuse+" A", fx+100, 154);
+    ctx.fillStyle=P.fuseCol; ctx.font="bold 22px Arial";
+    ctx.fillText(P.fuseStatus, fx+100, 210);
+    ctx.font="12px Arial"; ctx.fillStyle="#5b6170"; ctx.textAlign="left";
+    ctx.fillText(P.fuseTip, fx+16, 240);
+    ctx.fillText("Cable must also handle I.", fx+16, 260);
+  }
+  function reset(){
+    if(clock) clock.stop();
+    t=0;
+    var pb=document.getElementById("playBtn"); if(pb) pb.textContent="▶ Play";
+    kSet("pSl", 2); kSet("tSl", 3); kSet("cSl", 1.2); kSet("fuseSl", 2);
+    read(); update(); draw();
+    kText("simMsg", "Reset: 2.0 kW × 3.0 h × $1.20 → 6.0 kW h, $7.20; I≈9.1 A; 13 A fuse OK.");
+  }
+  function tick(dt){ t += dt; draw(); }
+  clock = kClock(function(dt){ tick(dt); }, function(){ var pb=document.getElementById("playBtn"); if(pb) pb.textContent="▶ Play"; });
+  document.getElementById("playBtn").addEventListener("click", function(){
+    if(clock.running()){ clock.stop(); this.textContent="▶ Play"; }
+    else { this.textContent="⏸ Pause"; clock.start(); }
+  });
   document.getElementById("resetBtn").addEventListener("click", reset);
-  kBind(["pSl","tSl","cSl"], function(){ read(); update(); draw(); });
-  return {reset:reset,draw:draw,resize:function(){draw();},pause:function(){},
-    set:function(o){ if(o.Pk!=null)kSet("pSl",o.Pk); if(o.t!=null)kSet("tSl",o.t); if(o.c!=null)kSet("cSl",o.c); reset(); },
-    state:function(){ return {E:P.E,cost:P.cost,I:P.I}; }};
+  kBind(["pSl","tSl","cSl","fuseSl"], function(){ read(); update(); draw();
+    kText("simMsg", "E="+kFmt(P.E,2)+" kW h · cost $"+kFmt(P.cost,2)+" · I="+kFmt(P.I,2)+" A · fuse "+P.fuse+" A → "+P.fuseStatus);
+  });
+  return {reset:reset, draw:draw, resize:function(){ draw(); }, pause:function(){ if(clock) clock.stop(); },
+    set:function(o){
+      if(o.Pk!=null) kSet("pSl", o.Pk);
+      if(o.t!=null) kSet("tSl", o.t);
+      if(o.c!=null) kSet("cSl", o.c);
+      if(o.fuseIdx!=null) kSet("fuseSl", o.fuseIdx);
+      read(); update(); draw();
+    },
+    jumpTo:function(T){ if(clock) clock.stop(); t=T; draw(); },
+    state:function(){ return {E:P.E, cost:P.cost, I:P.I, fuse:P.fuse, fuseStatus:P.fuseStatus}; }};
 }
 
-var LESSON = {quizzes:Q, figs:{}, makeSim:makeSim, demo:{set:{"Pk": 2, "t": 3, "c": 1.2}}};
+var LESSON = {quizzes:Q, figs:{}, makeSim:makeSim, demo:{set:{"Pk": 2, "t": 3, "c": 1.2, "fuseIdx": 2}, t:0.5}};
+
 
 
 (function(){

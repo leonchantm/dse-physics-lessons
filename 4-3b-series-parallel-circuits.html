@@ -185,38 +185,258 @@
 <section class="step step-learn" data-id="welcome" data-name="Welcome" data-kind="learn"><span class="step-kind learn">Learn</span>
 <div class="welcome-hero">
   <div class="big" aria-hidden="true">⚡</div>
-  <h2 tabindex="-1">Lesson 4.3b: Series and Parallel Circuits <span class="zh">(串聯與並聯電路)</span></h2>
-  <p>Real circuits combine resistors in series and parallel. You will learn how to find the total resistance and how meters should be connected.</p>
-<p><b>Hong Kong hook:</b> fairy lights on a Christmas tree and the parallel sockets in a flat kitchen use the same series / parallel rules.</p>
+  <h2 tabindex="-1">Lesson 4.3b: Series and Parallel Circuits <span class="zh">（串聯與並聯電路）</span></h2>
+  <p>Real circuits combine resistors in <b>series</b> and <b>parallel</b>. You will compare currents and p.d.s, derive the combination formulas, connect meters correctly, treat earth as 0&nbsp;V, and model a cell’s <b>internal resistance</b>.</p>
+  <p><b>Hong Kong hook:</b> Christmas fairy lights often use series strings; kitchen sockets in a flat are wired in parallel so each appliance gets roughly the same mains p.d. Same physics rules — different everyday layout.</p>
 </div>
-
+<div class="box key"><span class="box-title">In this lesson</span>
+(1) Series: same I, voltages add, <span class="eq">R = R₁+R₂+…</span>. (2) Parallel: same V, currents add, <span class="eq">1/R = 1/R₁+1/R₂+…</span>. (3) Ammeter in series, voltmeter in parallel. (4) Earth = 0&nbsp;V. (5) Terminal p.d. <span class="eq">V = ε − Ir</span>. Power formulas stay light — full treatment is Lesson <b>4.3c</b>.
+</div>
 <div class="lesson-link">⬅️ Previous: <a href="4-3a-current-emf-resistance.html">Lesson 4.3a: Current, e.m.f. and Resistance</a> &nbsp;·&nbsp; ➡️ Next: <a href="4-3c-electrical-power.html">Lesson 4.3c: Electrical Power</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div>
 </section>
-<section class="step step-learn" data-id="series" data-name="Series Circuits" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 1</span><h2 tabindex="-1">Series</h2><ul class="simple"><li>Same current through each component.</li><li>p.d.s add: V = V1+V2+…</li><li><b>R = R1+R2+…</b></li></ul></section>
-<section class="step step-learn" data-id="parallel" data-name="Parallel Circuits" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 2</span><h2 tabindex="-1">Parallel</h2><ul class="simple"><li>Same p.d. across each branch.</li><li>Currents add: I = I1+I2+…</li><li><b>1/R = 1/R1 + 1/R2 + …</b></li></ul></section>
-<section class="step step-learn" data-id="meters" data-name="Meters" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 3</span><h2 tabindex="-1">Ammeters and voltmeters</h2><p>Ammeter in <b>series</b> (ideal R→0). Voltmeter in <b>parallel</b> (ideal R→∞). Real meters disturb the circuit slightly.</p></section>
-<section class="step step-learn" data-id="earth" data-name="Earthing Potential" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 4</span><h2 tabindex="-1">Earth = 0 V</h2><p>Any earthed point is assigned potential <b>zero</b>.</p></section>
-<section class="step step-learn" data-id="internal" data-name="Internal Resistance" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 5</span><h2 tabindex="-1">Internal resistance</h2><div class="box formula">ε = I(R+r) &nbsp; and &nbsp; terminal p.d. V = ε − Ir = IR</div><p>V &lt; ε when current is drawn. Lost volts = Ir.</p></section>
-<section class="step step-learn" data-id="worked" data-name="Worked Examples" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Worked examples</span><h2 tabindex="-1">Examples</h2><div class="box eg">10 Ω and 15 Ω series → 25 Ω. Parallel → 6.0 Ω.</div><div class="box eg">ε=3.0 V, r=0.50 Ω, R=2.5 Ω → I=ε/(R+r)=1.0 A; V=IR=2.5 V.</div></section>
-<section class="step step-practice" data-id="p1" data-name="Practice: Combinations" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 1</span><h2 tabindex="-1">Series and parallel</h2><div class="quiz" data-quiz="p1"></div></section>
-<section class="step step-sim" data-id="sim" data-name="Try it: Circuit Lab" data-kind="sim"><span class="step-kind sim">Try it</span><span class="tag sim">Try it!</span><h2 tabindex="-1">Simulation</h2><div class="sim-panel"><canvas id="animCanvas" width="640" height="280"></canvas><div class="sim-controls"><div class="slider"><label for="r1Sl"><span>R1</span><span id="r1SlVal"></span></label>
-    <input type="range" id="r1Sl" min="1" max="20" step="0.5" value="10"></div><div class="slider"><label for="r2Sl"><span>R2</span><span id="r2SlVal"></span></label>
-    <input type="range" id="r2Sl" min="1" max="20" step="0.5" value="15"></div><div class="slider"><label for="epsSl"><span>ε</span><span id="epsSlVal"></span></label>
-    <input type="range" id="epsSl" min="1" max="12" step="0.1" value="6"></div><div class="slider"><label for="rSl"><span>r_int</span><span id="rSlVal"></span></label>
-    <input type="range" id="rSl" min="0" max="2" step="0.05" value="0.5"></div><label>Mode <select id="modeSel"><option value="series">Series load</option><option value="parallel">Parallel load</option></select></label><div class="sim-buttons">
+
+<section class="step step-learn" data-id="series" data-name="Series Circuits" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 1</span>
+<h2 tabindex="-1">Series circuits — one path</h2>
+<p>Two components are in <b>series</b> <span class="zh">（串聯）</span> if they share <b>one</b> connection point in a chain — charge has only <b>one path</b> through both. Fairy-light strings and many lab “R₁ then R₂” loops are series.</p>
+<div class="visual">
+<img src="images/em/series-parallel-compare.svg" alt="Series circuit with one current path beside a parallel circuit with two branches" style="width:100%;max-width:680px;height:auto;display:block;margin:.4rem auto">
+<p class="caption">Left: series — same I through each. Right: parallel — same V across each branch (next step).</p>
+</div>
+<div class="box key"><span class="box-title">Three series rules</span>
+<ul class="simple">
+<li><b>Current:</b> same through every component (KCL / conservation of charge — nowhere for charge to “pile up”).</li>
+<li><b>p.d.:</b> voltages add: <span class="eq">V = V₁ + V₂ + …</span> (KVL / energy per coulomb around the loop).</li>
+<li><b>Resistance:</b> <span class="eq">R<sub>eq</sub> = R₁ + R₂ + …</span>. Always larger than any single Rᵢ.</li>
+</ul>
+</div>
+<p>Why R adds: same I, so <span class="eq">V₁ = IR₁</span>, <span class="eq">V₂ = IR₂</span>. Total <span class="eq">V = I(R₁+R₂)</span>, so the pair behaves like one resistor <span class="eq">R<sub>eq</sub> = R₁+R₂</span>. Joining wires end-to-end makes a longer wire — higher resistance.</p>
+<div class="box formula"><span class="box-title">Voltage division (two resistors)</span>
+<span class="eq">V₁ / V₂ = R₁ / R₂</span> &nbsp; and &nbsp; <span class="eq">V₁ = V · R₁/(R₁+R₂)</span>. Larger R takes a larger share of the total p.d.
+</div>
+<div class="box eg"><span class="box-title">Quick check</span>
+4.0&nbsp;Ω bulb and 6.0&nbsp;Ω resistor in series on 10&nbsp;V: <span class="eq">R<sub>eq</sub> = 10 Ω</span>, <span class="eq">I = 1.0 A</span>, p.d. across bulb <span class="eq">V = IR = 4.0 V</span>.
+</div>
+<div class="box warn"><span class="box-title">Trap</span>
+If one series lamp blows (open circuit), the whole string goes dark — one path broken. That is why many modern light sets use parallel groups.
+</div>
+</section>
+
+<section class="step step-learn" data-id="parallel" data-name="Parallel Circuits" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 2</span>
+<h2 tabindex="-1">Parallel circuits — shared voltage</h2>
+<p>Two components are in <b>parallel</b> <span class="zh">（並聯）</span> if they share <b>two</b> common points — charge can choose more than one path. Kitchen sockets and most household lamps are parallel so each device sees roughly the same supply p.d.</p>
+<div class="box key"><span class="box-title">Three parallel rules</span>
+<ul class="simple">
+<li><b>p.d.:</b> same across every branch: <span class="eq">V₁ = V₂ = … = V</span>.</li>
+<li><b>Current:</b> branch currents add: <span class="eq">I = I₁ + I₂ + …</span> (KCL at the junction).</li>
+<li><b>Resistance:</b> <span class="eq">1/R<sub>eq</sub> = 1/R₁ + 1/R₂ + …</span>. Always <b>smaller</b> than the smallest branch R.</li>
+</ul>
+</div>
+<p>Derivation: <span class="eq">I₁ = V/R₁</span>, <span class="eq">I₂ = V/R₂</span>, so <span class="eq">I = V(1/R₁+1/R₂)</span>. Comparing with <span class="eq">I = V/R<sub>eq</sub></span> gives the reciprocal sum. Joining wires side-by-side is like a thicker wire — lower resistance.</p>
+<div class="box formula"><span class="box-title">Two resistors only (handy form)</span>
+<span class="eq">R<sub>eq</sub> = R₁R₂ / (R₁+R₂)</span>. Equal resistors: n of value R in parallel → <span class="eq">R<sub>eq</sub> = R/n</span>.
+</div>
+<div class="box formula"><span class="box-title">Current division (two branches)</span>
+<span class="eq">I₁ / I₂ = R₂ / R₁</span> — smaller R takes <b>larger</b> current. Also <span class="eq">I₁ = I · R₂/(R₁+R₂)</span>.
+</div>
+<div class="box eg"><span class="box-title">Quick check</span>
+6.0&nbsp;Ω and 3.0&nbsp;Ω in parallel: <span class="eq">1/R = 1/6 + 1/3 = 1/2</span> → <span class="eq">R<sub>eq</sub> = 2.0 Ω</span>. On 6.0&nbsp;V: <span class="eq">I = 3.0 A</span>; branches 1.0&nbsp;A and 2.0&nbsp;A.
+</div>
+<div class="box danger"><span class="box-title">Scope</span>
+Do not dig into full domestic ring mains or fuse choice here — that is Lesson <b>4.4</b>. Stay with ideal circuit combinations.
+</div>
+</section>
+
+<section class="step step-learn" data-id="meters" data-name="Meters" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 3</span>
+<h2 tabindex="-1">Ammeters and voltmeters</h2>
+<p>To <b>measure</b> what the circuit is doing you need meters connected the right way — otherwise you change the circuit you meant to study.</p>
+<div class="grid2">
+  <div class="box key"><span class="box-title">Ammeter (A)</span>
+  <ul class="simple">
+  <li>Measures <b>current</b> through a path.</li>
+  <li>Connect in <b>series</b> with that path.</li>
+  <li>Ideal ammeter: <span class="eq">R → 0</span> (like a short wire) so it does not reduce I.</li>
+  <li>Real ammeter has small R → measured I slightly <b>less</b> than ideal.</li>
+  </ul>
+  </div>
+  <div class="box key"><span class="box-title">Voltmeter (V)</span>
+  <ul class="simple">
+  <li>Measures <b>p.d.</b> between two points.</li>
+  <li>Connect in <b>parallel</b> across those points.</li>
+  <li>Ideal voltmeter: <span class="eq">R → ∞</span> (like an open circuit) so no extra branch current.</li>
+  <li>Real voltmeter has large but finite R → can slightly load a high-R circuit.</li>
+  </ul>
+  </div>
+</div>
+<div class="box warn"><span class="box-title">Polarity &amp; overload</span>
+Red (+) to higher potential / “upstream”; black (−) to lower. Wrong polarity or overload can damage analogue meters. Digital meters often show a minus sign instead of bending a pointer.
+</div>
+<div class="box eg"><span class="box-title">Lab habit</span>
+To find unknown R: measure V across it and I through it, then <span class="eq">R = V/I</span>. Which meter-connection method is better depends on whether R is large or small compared with the meters’ own resistances (extension in notes §3.31).
+</div>
+</section>
+
+<section class="step step-learn" data-id="earth" data-name="Earthing Potential" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 4</span>
+<h2 tabindex="-1">Earth = 0 V</h2>
+<p><b>Potential</b> is always relative. In circuit problems we need a reference. By definition, any <b>earthed</b> point <span class="zh">（接地）</span> is assigned potential <b>0&nbsp;V</b>.</p>
+<div class="box key"><span class="box-title">Why it matters</span>
+<ul class="simple">
+<li>If <b>no</b> point is earthed, absolute potential values are undefined — only <b>differences</b> (p.d.s) are physical.</li>
+<li>With one point earthed at 0&nbsp;V, you can label every node with a number (e.g. +10&nbsp;V, −5&nbsp;V) relative to earth.</li>
+<li>Touching a live wire that is referenced to earth can complete a path through your body to ground — shock risk. (Household safety detail → Lesson 4.4.)</li>
+</ul>
+</div>
+<div class="box eg"><span class="box-title">Example</span>
+A 10&nbsp;V cell has its negative terminal earthed. Then the negative terminal is 0&nbsp;V and the positive terminal is +10&nbsp;V. If instead the positive terminal is earthed, that point is 0&nbsp;V and the negative terminal is −10&nbsp;V. The <b>p.d.</b> across the cell is still 10&nbsp;V either way.
+</div>
+<div class="box formula"><span class="box-title">Remember</span>
+Earth symbol in a diagram → that node is <b>0&nbsp;V</b>. p.d. between A and B is still <span class="eq">V<sub>A</sub> − V<sub>B</sub></span>.
+</div>
+</section>
+
+<section class="step step-learn" data-id="internal" data-name="Internal Resistance" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 5</span>
+<h2 tabindex="-1">Internal resistance of a cell</h2>
+<p>A real cell is not a perfect ε with zero resistance. Treat it as an ideal e.m.f. <span class="eq">ε</span> in series with a small <b>internal resistance</b> <span class="eq">r</span> <span class="zh">（內阻）</span>. A typical fresh 1.5&nbsp;V dry cell might have r ≈ 0.3&nbsp;Ω.</p>
+<div class="visual">
+<img src="images/em/internal-resistance-cell.svg" alt="Cell modelled as emf epsilon in series with internal r connected to external load R" style="width:100%;max-width:640px;height:auto;display:block;margin:.4rem auto">
+<p class="caption">Lost volts Ir inside the cell; terminal p.d. is what a voltmeter across the terminals reads under load.</p>
+</div>
+<div class="box formula"><span class="box-title">Master links ⭐</span>
+<span class="eq">ε = I(R + r)</span> &nbsp; and &nbsp; terminal p.d. <span class="eq">V = ε − Ir = IR</span>
+<br>Open circuit (I = 0): <span class="eq">V = ε</span> — an ideal voltmeter across the terminals measures e.m.f.
+</div>
+<p>When current is drawn, some of the cell’s energy per coulomb is used driving charge through r (lost volts = Ir). So the useful terminal voltage is less than ε. Larger I or larger r → bigger drop.</p>
+<div class="box eg"><span class="box-title">Numbers</span>
+ε = 3.0&nbsp;V, r = 0.50&nbsp;Ω, R = 2.5&nbsp;Ω → <span class="eq">I = ε/(R+r) = 1.0 A</span>; <span class="eq">V = IR = 2.5 V</span> (also ε − Ir = 3.0 − 0.50 = 2.5&nbsp;V).
+</div>
+<div class="box warn"><span class="box-title">Power note (shallow)</span>
+Power supplied by the cell is <span class="eq">εI</span>; power in the load is <span class="eq">VI</span>; waste in r is <span class="eq">I²r</span>. Full power practice → Lesson <b>4.3c</b>.
+</div>
+</section>
+
+<section class="step step-learn" data-id="worked" data-name="Worked Examples" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Worked examples</span>
+<h2 tabindex="-1">Worked examples</h2>
+
+<div class="box eg worked"><span class="box-title">Example 1 — series and parallel Req</span>
+<p>Find R<sub>eq</sub> of (a) 10&nbsp;Ω and 15&nbsp;Ω in series; (b) the same pair in parallel.</p>
+<div class="reveal">
+  <div class="rline"><b class="n">1</b> Series: <span class="eq">R = 10 + 15 = 25 Ω</span>.</div>
+  <div class="rline"><b class="n">2</b> Parallel: <span class="eq">1/R = 1/10 + 1/15 = 3/30 + 2/30 = 5/30</span>.</div>
+  <div class="rline"><b class="n">3</b> So <span class="eq">R = 30/5 = 6.0 Ω</span>. (Or product/sum: 10×15/(10+15) = 6.0&nbsp;Ω.)</div>
+  <div class="q-actions"><button type="button" class="btn-secondary reveal-next">Show next line ▼</button>
+  <button type="button" class="btn-hint reveal-all">Show all</button></div>
+</div>
+</div>
+
+<div class="box eg worked"><span class="box-title">Example 2 — mixed network</span>
+<p>Two 8.0&nbsp;Ω resistors in parallel, then that combination in series with 4.0&nbsp;Ω. Find R<sub>eq</sub>.</p>
+<ol>
+<li>Parallel pair: <span class="eq">R<sub>p</sub> = 8.0/2 = 4.0 Ω</span> (equal resistors).</li>
+<li>Then series: <span class="eq">R<sub>eq</sub> = 4.0 + 4.0 = 8.0 Ω</span>.</li>
+</ol>
+</div>
+
+<div class="box eg worked"><span class="box-title">Example 3 — internal resistance</span>
+<p>ε = 3.0&nbsp;V, r = 0.50&nbsp;Ω, R = 2.5&nbsp;Ω. Find I and terminal V.</p>
+<ol>
+<li><span class="eq">I = ε/(R+r) = 3.0/(2.5+0.50) = 1.0 A</span>.</li>
+<li><span class="eq">V = IR = 1.0 × 2.5 = 2.5 V</span> (check: ε − Ir = 3.0 − 0.50 = 2.5&nbsp;V).</li>
+</ol>
+</div>
+
+<div class="box eg worked"><span class="box-title">Example 4 — meters</span>
+<p>Where do you put A and V to measure the current through a bulb and the p.d. across it?</p>
+<ol>
+<li>Ammeter <b>in series</b> with the bulb (same path).</li>
+<li>Voltmeter <b>in parallel</b> across the bulb’s two terminals.</li>
+<li>Ideal: A has ~0&nbsp;Ω, V has ~∞&nbsp;Ω so the original circuit is almost undisturbed.</li>
+</ol>
+</div>
+
+<div class="box key"><span class="box-title">Method habit</span>
+(1) Redraw: mark series vs parallel. (2) Collapse parallel groups first, then add series. (3) For cells: write <span class="eq">ε = I(R+r)</span>. (4) Substitute with units. (5) Cross-check with a second form (e.g. V = ε − Ir and V = IR).
+</div>
+</section>
+
+<section class="step step-practice" data-id="p1" data-name="Practice: Combinations" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 1</span>
+<h2 tabindex="-1">Series and parallel</h2>
+<p>Formula → substitute → calculate. Use hints if stuck.</p>
+<div class="quiz" data-quiz="p1"></div>
+</section>
+
+<section class="step step-sim" data-id="sim" data-name="Try it: Circuit Lab" data-kind="sim"><span class="step-kind sim">Try it</span><span class="tag sim">Try it!</span>
+<h2 tabindex="-1">Explore: Circuit Lab</h2>
+<p>Choose series or parallel load. Drag R₁, R₂, ε and internal r. Readouts show <span class="eq">R<sub>eq</sub></span>, total I, terminal V, and (in parallel) branch currents — they should match the formulas. Play animates charge flow.</p>
+<div class="sim-panel">
+<canvas id="animCanvas" width="640" height="300" aria-label="Circuit lab: series or parallel load with internal resistance"></canvas>
+<div class="sim-controls">
+<div class="slider"><label for="r1Sl"><span>R1</span><span id="r1SlVal"></span></label>
+    <input type="range" id="r1Sl" min="1" max="20" step="0.5" value="10"></div>
+<div class="slider"><label for="r2Sl"><span>R2</span><span id="r2SlVal"></span></label>
+    <input type="range" id="r2Sl" min="1" max="20" step="0.5" value="15"></div>
+<div class="slider"><label for="epsSl"><span>ε (e.m.f.)</span><span id="epsSlVal"></span></label>
+    <input type="range" id="epsSl" min="1" max="12" step="0.1" value="6"></div>
+<div class="slider"><label for="rSl"><span>r (internal)</span><span id="rSlVal"></span></label>
+    <input type="range" id="rSl" min="0" max="2" step="0.05" value="0.5"></div>
+<label style="font-weight:700">Mode <select id="modeSel"><option value="series">Series load</option><option value="parallel">Parallel load</option></select></label>
+<div class="sim-buttons">
   <button class="btn-primary" id="playBtn" type="button">▶ Play</button>
   <button class="btn-secondary" id="resetBtn" type="button">↺ Reset</button>
   <label for="speedSel" style="font-weight:700">Speed:</label>
   <select id="speedSel"><option value="1">Normal</option><option value="0.5">Slow (½×)</option><option value="0.25">Very slow (¼×)</option></select>
-</div></div><div class="readouts"><div class="ro "><div class="lab">Out 1</div><div class="val" id="ro1"></div></div><div class="ro "><div class="lab">Out 2</div><div class="val" id="ro2"></div></div></div><p class="caption" id="simMsg">Series/parallel with internal r.</p></div></section>
-<section class="step step-practice" data-id="psim" data-name="Practice: Simulation" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 2</span><h2 tabindex="-1">Circuit practice</h2><div class="quiz" data-quiz="psim"></div></section>
-<section class="step step-practice" data-id="p2" data-name="Practice: Meters &amp; Internal" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 3</span><h2 tabindex="-1">Meters and internal r</h2><div class="quiz" data-quiz="p2"></div></section>
-<section class="step step-practice" data-id="p3" data-name="Practice: Problems" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 4</span><h2 tabindex="-1">More circuit problems</h2><div class="quiz" data-quiz="p3"></div></section>
-<section class="step step-learn" data-id="summary" data-name="Summary" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Summary</span><h2 tabindex="-1">Remember</h2><div style="text-align:center"><div class="stars" id="stars" aria-hidden="true"></div>
-  <p id="finalScore" style="font-size:1.2rem;font-weight:800"></p><p id="finalMsg"></p></div><ul class="simple"><li>Series: same I, R adds; parallel: same V, 1/R adds.</li><li>V = ε − Ir.</li></ul><div class="lesson-link">⬅️ Previous: <a href="4-3a-current-emf-resistance.html">Lesson 4.3a: Current, e.m.f. and Resistance</a> &nbsp;·&nbsp; ➡️ Next: <a href="4-3c-electrical-power.html">Lesson 4.3c: Electrical Power</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div><div class="q-actions" style="justify-content:center">
+</div>
+</div>
+<div class="readout">
+  <div class="ro v"><div class="lab">R<sub>eq</sub> (load)</div><div class="val" id="ro1"></div></div>
+  <div class="ro a"><div class="lab">I total</div><div class="val" id="ro2"></div></div>
+  <div class="ro d"><div class="lab">V terminal</div><div class="val" id="ro3"></div></div>
+  <div class="ro av"><div class="lab">Branches / check</div><div class="val" id="ro4"></div></div>
+</div>
+<p class="caption" id="simMsg">Series: R=R1+R2. Parallel: 1/R=1/R1+1/R2. Then I=ε/(R+r), V=IR.</p>
+</div>
+</section>
+
+<section class="step step-practice" data-id="psim" data-name="Practice: Simulation" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 2</span>
+<h2 tabindex="-1">Check the Circuit Lab defaults</h2>
+<p>Defaults: R1=10&nbsp;Ω, R2=15&nbsp;Ω, ε=6.0&nbsp;V, r=0.50&nbsp;Ω, series mode. Confirm before exploring.</p>
+<div class="quiz" data-quiz="psim"></div>
+</section>
+
+<section class="step step-practice" data-id="p2" data-name="Practice: Meters &amp; Internal" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 3</span>
+<h2 tabindex="-1">Meters, earth, and internal r</h2>
+<div class="quiz" data-quiz="p2"></div>
+</section>
+
+<section class="step step-practice" data-id="p3" data-name="Practice: Problems" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 4</span>
+<h2 tabindex="-1">More circuit problems</h2>
+<div class="quiz" data-quiz="p3"></div>
+</section>
+
+<section class="step step-learn" data-id="summary" data-name="Summary" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Summary</span>
+<h2 tabindex="-1">Remember</h2>
+<div style="text-align:center"><div class="stars" id="stars" aria-hidden="true"></div>
+  <p id="finalScore" style="font-size:1.2rem;font-weight:800"></p><p id="finalMsg"></p></div>
+<ul class="simple">
+  <li><b>Series:</b> one path; same I; <span class="eq">V = V₁+V₂+…</span>; <span class="eq">R = R₁+R₂+…</span>.</li>
+  <li><b>Parallel:</b> shared V; <span class="eq">I = I₁+I₂+…</span>; <span class="eq">1/R = 1/R₁+1/R₂+…</span> (Req smaller than each).</li>
+  <li>Voltage divides with R in series; current divides inversely with R in parallel.</li>
+  <li>Ammeter in <b>series</b> (ideal R→0); voltmeter in <b>parallel</b> (ideal R→∞).</li>
+  <li>Earthed point = <b>0&nbsp;V</b> reference.</li>
+  <li>Cell: <span class="eq">ε = I(R+r)</span>, terminal <span class="eq">V = ε − Ir = IR</span>. Open circuit: V = ε.</li>
+  <li>Power detail → Lesson 4.3c; household wiring → Lesson 4.4.</li>
+</ul>
+<div class="lesson-link">⬅️ Previous: <a href="4-3a-current-emf-resistance.html">Lesson 4.3a: Current, e.m.f. and Resistance</a> &nbsp;·&nbsp; ➡️ Next: <a href="4-3c-electrical-power.html">Lesson 4.3c: Electrical Power</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div>
+<div class="q-actions" style="justify-content:center">
   <button class="btn-secondary" id="reviewBtn" type="button">Go to first unfinished question</button>
   <button class="btn-retry" id="restartBtn" type="button">↺ Reset all questions</button>
-</div></section>
+</div>
+</section>
 </main>
 <nav class="controls" aria-label="Lesson navigation">
   <button class="btn-secondary" id="backBtn" type="button">◀ Back</button>
@@ -228,7 +448,7 @@
 <div class="tn-body">
 <p><b>Source:</b> HKDSE Physics Curriculum and Assessment Guide (S4–6), 2015 update — Compulsory Part, <b>IV Electricity and Magnetism</b>, subtopic <b>b. Circuits and domestic electricity</b>, “Students should be able to” column, printed pages 41–42 (PDF pages 51–52). Outcome text is quoted from the guide.</p>
 <p><b>Core.</b> All outcomes in this sub-topic are in the <b>core</b> of the Compulsory Part.</p>
-<p>This sub-topic is taught in <b>Lesson 4.3a</b> (<a href="4-3a-current-emf-resistance.html">4-3a-current-emf-resistance.html</a>): 17 steps; <b>Lesson 4.3b</b> (<a href="4-3b-series-parallel-circuits.html">4-3b-series-parallel-circuits.html</a>): 13 steps; <b>Lesson 4.3c</b> (<a href="4-3c-electrical-power.html">4-3c-electrical-power.html</a>): 9 steps; <b>Lesson 4.4</b> (<a href="4-4-domestic-electricity.html">4-4-domestic-electricity.html</a>): 12 steps. Links to other lessons open that file at the step.</p>
+<p>This sub-topic is taught in <b>Lesson 4.3a</b> (<a href="4-3a-current-emf-resistance.html">4-3a-current-emf-resistance.html</a>): 17 steps; <b>Lesson 4.3b</b> (<a href="4-3b-series-parallel-circuits.html">4-3b-series-parallel-circuits.html</a>): 13 steps; <b>Lesson 4.3c</b> (<a href="4-3c-electrical-power.html">4-3c-electrical-power.html</a>): 10 steps; <b>Lesson 4.4</b> (<a href="4-4-domestic-electricity.html">4-4-domestic-electricity.html</a>): 12 steps. Links to other lessons open that file at the step.</p>
 <h3>Learning outcomes</h3>
 <div class="table-scroll"><table class="t outcomes"><tr><th>#</th><th>Topic</th><th>Learning outcome (quoted)</th><th>Where it is taught / practised</th></tr>
 <tr><td>1</td><td><i>electric current</i></td><td>“define electric current as the rate of flow of electric charges”</td><td><a href="4-3a-current-emf-resistance.html#step2">L4.3a Step 2: Electric Current</a><br><a href="4-3a-current-emf-resistance.html#step12">L4.3a Step 12: Practice: Current</a></td></tr><tr><td>2</td><td><i>electric current</i></td><td>“state the convention for the direction of electric current”</td><td><a href="4-3a-current-emf-resistance.html#step2">L4.3a Step 2: Electric Current</a><br><a href="4-3a-current-emf-resistance.html#step12">L4.3a Step 12: Practice: Current</a></td></tr><tr><td>3</td><td><i>electrical energy and electromotive force</i></td><td>“describe the energy transformations in electric circuits”</td><td><a href="4-3a-current-emf-resistance.html#step3">L4.3a Step 3: Energy in Circuits</a><br><a href="4-3a-current-emf-resistance.html#step12">L4.3a Step 12: Practice: Current</a></td></tr><tr><td>4</td><td><i>electrical energy and electromotive force</i></td><td>“define the potential difference (p.d.) between two points in a circuit as the electric potential energy converted to other forms per unit charge passing between the points outside the source”</td><td><a href="4-3a-current-emf-resistance.html#step5">L4.3a Step 5: Potential Difference</a><br><a href="4-3a-current-emf-resistance.html#step13">L4.3a Step 13: Practice: V and R</a></td></tr><tr><td>5</td><td><i>electrical energy and electromotive force</i></td><td>“define the electromotive force (e.m.f.) of a source as the energy imparted by the source per unit charge passing through it”</td><td><a href="4-3a-current-emf-resistance.html#step4">L4.3a Step 4: e.m.f.</a><br><a href="4-3a-current-emf-resistance.html#step13">L4.3a Step 13: Practice: V and R</a></td></tr><tr><td>6</td><td><i>resistance</i></td><td>“define resistance R = V/I”</td><td><a href="4-3a-current-emf-resistance.html#step6">L4.3a Step 6: Resistance</a><br><a href="4-3a-current-emf-resistance.html#step13">L4.3a Step 13: Practice: V and R</a></td></tr><tr><td>7</td><td><i>resistance</i></td><td>“describe the variation of current with applied p.d. in metal wires, electrolytes, filament lamps and diodes”</td><td><a href="4-3a-current-emf-resistance.html#step7">L4.3a Step 7: I-V Characteristics</a><br><a href="4-3a-current-emf-resistance.html#step14">L4.3a Step 14: Try it: IV Curves</a><br><a href="4-3a-current-emf-resistance.html#step15">L4.3a Step 15: Practice: Simulation</a></td></tr><tr><td>8</td><td><i>resistance</i></td><td>“realise Ohm’s law as a special case of resistance behaviour”</td><td><a href="4-3a-current-emf-resistance.html#step8">L4.3a Step 8: Ohms Law</a><br><a href="4-3a-current-emf-resistance.html#step14">L4.3a Step 14: Try it: IV Curves</a><br><a href="4-3a-current-emf-resistance.html#step16">L4.3a Step 16: Practice: Resistivity</a></td></tr><tr><td>9</td><td><i>resistance</i></td><td>“determine the factors affecting the resistance of a wire and define its resistivity ρ = RA/l”</td><td><a href="4-3a-current-emf-resistance.html#step9">L4.3a Step 9: Resistivity</a><br><a href="4-3a-current-emf-resistance.html#step11">L4.3a Step 11: Worked Examples</a><br><a href="4-3a-current-emf-resistance.html#step16">L4.3a Step 16: Practice: Resistivity</a></td></tr><tr><td>10</td><td><i>resistance</i></td><td>“describe the effect of temperature on resistance of metals and semiconductors”</td><td><a href="4-3a-current-emf-resistance.html#step10">L4.3a Step 10: Temperature</a><br><a href="4-3a-current-emf-resistance.html#step16">L4.3a Step 16: Practice: Resistivity</a></td></tr><tr><td>11</td><td><i>series and parallel circuits</i></td><td>“compare series and parallel circuits in terms of p.d. across the components of each circuit and the current through them”</td><td><a href="#step2" data-step="2">L4.3b Step 2: Series Circuits</a><br><a href="#step3" data-step="3">L4.3b Step 3: Parallel Circuits</a><br><a href="#step9" data-step="9">L4.3b Step 9: Try it: Circuit Lab</a><br><a href="#step8" data-step="8">L4.3b Step 8: Practice: Combinations</a></td></tr><tr><td>12</td><td><i>series and parallel circuits</i></td><td>“derive the resistance combinations in series and parallel”</td><td><a href="#step2" data-step="2">L4.3b Step 2: Series Circuits</a><br><a href="#step3" data-step="3">L4.3b Step 3: Parallel Circuits</a><br><a href="#step8" data-step="8">L4.3b Step 8: Practice: Combinations</a></td></tr><tr><td>13</td><td><i>simple circuits</i></td><td>“measure I, V and R in simple circuits”</td><td><a href="#step4" data-step="4">L4.3b Step 4: Meters</a><br><a href="#step9" data-step="9">L4.3b Step 9: Try it: Circuit Lab</a></td></tr><tr><td>14</td><td><i>simple circuits</i></td><td>“assign the electrical potential of any earthed points as zero”</td><td><a href="#step5" data-step="5">L4.3b Step 5: Earthing Potential</a><br><a href="#step11" data-step="11">L4.3b Step 11: Practice: Meters &amp; Internal</a></td></tr><tr><td>15</td><td><i>simple circuits</i></td><td>“compare the e.m.f. of a source and the terminal voltage across the source experimentally and relate the difference to the internal resistance of the source”</td><td><a href="#step6" data-step="6">L4.3b Step 6: Internal Resistance</a><br><a href="#step9" data-step="9">L4.3b Step 9: Try it: Circuit Lab</a><br><a href="#step10" data-step="10">L4.3b Step 10: Practice: Simulation</a></td></tr><tr><td>16</td><td><i>simple circuits</i></td><td>“explain the effects of resistance of ammeters and voltmeters on measurements”</td><td><a href="#step4" data-step="4">L4.3b Step 4: Meters</a><br><a href="#step11" data-step="11">L4.3b Step 11: Practice: Meters &amp; Internal</a></td></tr><tr><td>17</td><td><i>simple circuits</i></td><td>“solve problems involving simple circuits”</td><td><a href="#step7" data-step="7">L4.3b Step 7: Worked Examples</a><br><a href="#step10" data-step="10">L4.3b Step 10: Practice: Simulation</a><br><a href="#step11" data-step="11">L4.3b Step 11: Practice: Meters &amp; Internal</a><br><a href="#step12" data-step="12">L4.3b Step 12: Practice: Problems</a></td></tr><tr><td>18</td><td><i>electrical power</i></td><td>“examine the heating effect when a current passes through a conductor”</td><td><a href="4-3c-electrical-power.html#step2">L4.3c Step 2: Heating Effect</a><br><a href="4-3c-electrical-power.html#step5">L4.3c Step 5: Practice: Heating</a></td></tr><tr><td>19</td><td><i>electrical power</i></td><td>“apply P = VI to solve problems”</td><td><a href="4-3c-electrical-power.html#step3">L4.3c Step 3: Power Formulas</a><br><a href="4-3c-electrical-power.html#step4">L4.3c Step 4: Worked Examples</a><br><a href="4-3c-electrical-power.html#step6">L4.3c Step 6: Try it: Power</a><br><a href="4-3c-electrical-power.html#step7">L4.3c Step 7: Practice: Simulation</a><br><a href="4-3c-electrical-power.html#step8">L4.3c Step 8: Practice: Problems</a></td></tr><tr><td>20</td><td><i>domestic electricity</i></td><td>“determine the power rating of electrical appliances”</td><td><a href="4-4-domestic-electricity.html#step2">L4.4 Step 2: Power Rating</a><br><a href="4-4-domestic-electricity.html#step8">L4.4 Step 8: Practice: Rating</a></td></tr><tr><td>21</td><td><i>domestic electricity</i></td><td>“use kilowatt-hour (kW h) as a unit of electrical energy”</td><td><a href="4-4-domestic-electricity.html#step3">L4.4 Step 3: Kilowatt-hour</a><br><a href="4-4-domestic-electricity.html#step7">L4.4 Step 7: Worked Examples</a><br><a href="4-4-domestic-electricity.html#step8">L4.4 Step 8: Practice: Rating</a></td></tr><tr><td>22</td><td><i>domestic electricity</i></td><td>“calculate the costs of running various electrical appliances”</td><td><a href="4-4-domestic-electricity.html#step3">L4.4 Step 3: Kilowatt-hour</a><br><a href="4-4-domestic-electricity.html#step7">L4.4 Step 7: Worked Examples</a><br><a href="4-4-domestic-electricity.html#step11">L4.4 Step 11: Practice: Safety</a></td></tr><tr><td>23</td><td><i>domestic electricity</i></td><td>“understand household wiring and discuss safety aspects of domestic electricity”</td><td><a href="4-4-domestic-electricity.html#step4">L4.4 Step 4: Household Wiring</a><br><a href="4-4-domestic-electricity.html#step5">L4.4 Step 5: Safety</a><br><a href="4-4-domestic-electricity.html#step9">L4.4 Step 9: Try it: Bill &amp; Fuse</a><br><a href="4-4-domestic-electricity.html#step11">L4.4 Step 11: Practice: Safety</a></td></tr><tr><td>24</td><td><i>domestic electricity</i></td><td>“determine the operating current for electrical appliances”</td><td><a href="4-4-domestic-electricity.html#step2">L4.4 Step 2: Power Rating</a><br><a href="4-4-domestic-electricity.html#step6">L4.4 Step 6: Cables and Fuses</a><br><a href="4-4-domestic-electricity.html#step8">L4.4 Step 8: Practice: Rating</a></td></tr><tr><td>25</td><td><i>domestic electricity</i></td><td>“discuss the choice of power cables and fuses for electrical appliances based on the power rating”</td><td><a href="4-4-domestic-electricity.html#step6">L4.4 Step 6: Cables and Fuses</a><br><a href="4-4-domestic-electricity.html#step10">L4.4 Step 10: Practice: Simulation</a><br><a href="4-4-domestic-electricity.html#step11">L4.4 Step 11: Practice: Safety</a></td></tr></table></div>
@@ -351,53 +571,218 @@ function kHTML(id, t){ var e = document.getElementById(id); if (e) e.innerHTML =
 
 var Q = {
 p1:[
-{type:"num", text:"6 Ω and 3 Ω in series. Req (Ω)?", answer:9, unit:"Ω", hints:["", ""], explain:"9"},
-{type:"num", text:"6 Ω and 3 Ω in parallel. Req (Ω)?", answer:2, unit:"Ω", hints:["", ""], explain:"2"},
-{type:"mc", text:"In series, current through each resistor is…", options:["the same", "split by resistance", "zero in one", "larger in larger R"], answer:0, hints:["", ""], explain:"same I"},
-{type:"mc", text:"In parallel, p.d. across each branch is…", options:["the same", "adds up", "zero", "proportional to R only"], answer:0, hints:["", ""], explain:"same V"}
+{type:"num", text:"6.0 Ω and 3.0 Ω in series. What is R<sub>eq</sub>?", answer:9, unit:"Ω",
+ hints:["Series: resistances add.", "R = 6.0 + 3.0."],
+ explain:"R = R₁+R₂ = 6.0+3.0 = <b>9.0 Ω</b>."},
+{type:"num", text:"6.0 Ω and 3.0 Ω in parallel. What is R<sub>eq</sub>?", answer:2, unit:"Ω",
+ hints:["Use 1/R = 1/R₁ + 1/R₂, or product/sum for two resistors.", "1/R = 1/6 + 1/3 = 1/2 → R = 2."],
+ explain:"1/R = 1/6+1/3 = 1/2 ⇒ R = <b>2.0 Ω</b> (also 6×3/(6+3) = 2)."},
+{type:"mc", text:"In a series circuit, the current through each resistor is…",
+ options:["the same", "larger in the larger R", "split in inverse ratio to R", "zero in one resistor"],
+ answer:0, hints:["One path only — charge has nowhere else to go.", "KCL: same I through each."],
+ explain:"Series = one path ⇒ <b>same I</b> through each."},
+{type:"mc", text:"In a parallel circuit, the p.d. across each branch is…",
+ options:["the same", "adds up around the loop only", "proportional to R only", "zero"],
+ answer:0, hints:["Branches share the same two nodes.", "Same V across each branch."],
+ explain:"Parallel branches share nodes ⇒ <b>same V</b>."},
+{type:"num", text:"10 Ω and 15 Ω in parallel. R<sub>eq</sub> (Ω)?", answer:6, unit:"Ω",
+ hints:["1/R = 1/10 + 1/15.", "= 3/30 + 2/30 = 5/30 → R = 6."],
+ explain:"1/R = 1/10+1/15 = 5/30 ⇒ R = <b>6.0 Ω</b>."},
+{type:"num", text:"Voltage division: 4.0 Ω and 6.0 Ω in series on 10 V. p.d. across the 4.0 Ω (V)?", answer:4, unit:"V",
+ hints:["Same I; V₁ = V·R₁/(R₁+R₂).", "I = 10/10 = 1.0 A → V = 1.0×4.0."],
+ explain:"R<sub>eq</sub>=10 Ω, I=1.0 A, V₄ = IR = <b>4.0 V</b> (also 10×4/10)."}
 ],
 psim:[
-{type:"num", text:"Series: R1=10, R2=15, ε=6, r=0. Set I (A) = ε/Rtot", answer:0.24, unit:"A", hints:["", ""], explain:"0.24"},
-{type:"mc", text:"Adding internal r decreases…", options:["terminal voltage under load", "e.m.f.", "open-circuit voltage only", "parallel Req"], answer:0, hints:["", ""], explain:"V=ε-Ir"}
+{type:"num", text:"Series defaults with r=0: R1=10, R2=15, ε=6. I = ε/R<sub>tot</sub> (A)?", answer:0.24, unit:"A", tol:0.005,
+ hints:["R<sub>tot</sub> = 10+15 = 25 Ω.", "I = 6/25 = 0.24 A."],
+ explain:"R=25 Ω, I=6/25 = <b>0.24 A</b>."},
+{type:"num", text:"Same series load but r=0.50 Ω, ε=6.0 V. Terminal V = IR<sub>load</sub> (V)?", answer:5.88, unit:"V", tol:0.02,
+ hints:["I = ε/(R<sub>load</sub>+r) = 6/(25+0.5).", "V = I×25."],
+ explain:"I=6/25.5≈0.2353 A; V=0.2353×25≈<b>5.88 V</b> (also ε−Ir)."},
+{type:"mc", text:"Increasing internal r (fixed ε and R) decreases…",
+ options:["terminal voltage under load", "the open-circuit e.m.f. reading on an ideal voltmeter", "parallel R<sub>eq</sub> of the load", "the meaning of earth = 0 V"],
+ answer:0, hints:["V = ε − Ir.", "Larger r ⇒ larger Ir drop under load."],
+ explain:"Under load, <b>V = ε − Ir</b> falls as r rises. Open-circuit V still = ε."}
 ],
 p2:[
-{type:"mc", text:"Ammeter connects in…", options:["series", "parallel", "either", "across the cell only"], answer:0, hints:["", ""], explain:"series"},
-{type:"mc", text:"Ideal voltmeter resistance is…", options:["very large", "zero", "equal to load", "1 Ω"], answer:0, hints:["", ""], explain:"large"},
-{type:"mc", text:"Earthed point potential is taken as…", options:["0", "ε", "∞", "V/2"], answer:0, hints:["", ""], explain:"0"},
-{type:"num", text:"ε=3.0 V, r=0.50 Ω, R=2.5 Ω. Terminal V (V)?", answer:2.5, unit:"V", hints:["", ""], explain:"2.5"}
+{type:"mc", text:"An ammeter should be connected in…",
+ options:["series with the path whose current you measure", "parallel across the component", "either series or parallel — same reading", "only across the cell terminals"],
+ answer:0, hints:["Current through a path — meter must be on that path.", "Series."],
+ explain:"Ammeter in <b>series</b>."},
+{type:"mc", text:"An ideal voltmeter has resistance that is…",
+ options:["very large (→ ∞)", "zero", "equal to the load", "1 Ω"],
+ answer:0, hints:["Must not draw branch current.", "Open-circuit-like."],
+ explain:"Ideal V: <b>R → ∞</b>."},
+{type:"mc", text:"Any earthed point in a circuit diagram is taken as potential…",
+ options:["0 V", "ε", "∞", "V/2"],
+ answer:0, hints:["Definition of the earth reference.", "0 V."],
+ explain:"Earth = <b>0 V</b>."},
+{type:"num", text:"ε=3.0 V, r=0.50 Ω, R=2.5 Ω. Terminal p.d. V (V)?", answer:2.5, unit:"V",
+ hints:["I = ε/(R+r) = 3/(2.5+0.5) = 1.0 A.", "V = IR = 1.0×2.5 (or ε−Ir)."],
+ explain:"I=1.0 A, V=IR=<b>2.5 V</b>."}
 ],
 p3:[
-{type:"num", text:"Two 8.0 Ω in parallel, then series with 4.0 Ω. Req?", answer:8, unit:"Ω", hints:["", ""], explain:"8"},
-{type:"num", text:"ε=12 V, r=1.0 Ω, draws 2.0 A. Load R (Ω)?", answer:5, unit:"Ω", hints:["", ""], explain:"R=ε/I - r = 5"},
-{type:"mc", text:"Real ammeter has some R, so measured I is…", options:["slightly less than ideal", "larger", "unchanged", "infinite"], answer:0, hints:["", ""], explain:"extra series R"}
+{type:"num", text:"Two 8.0 Ω in parallel, then series with 4.0 Ω. R<sub>eq</sub>?", answer:8, unit:"Ω",
+ hints:["Equal parallel: R<sub>p</sub> = 8/2 = 4 Ω.", "Then 4+4 = 8 Ω."],
+ explain:"R<sub>p</sub>=4.0 Ω; R<sub>eq</sub>=4+4=<b>8.0 Ω</b>."},
+{type:"num", text:"ε=12 V, r=1.0 Ω, draws 2.0 A. External load R (Ω)?", answer:5, unit:"Ω",
+ hints:["ε = I(R+r) ⇒ R = ε/I − r.", "12/2 − 1 = 5."],
+ explain:"R = ε/I − r = 6 − 1 = <b>5.0 Ω</b>."},
+{type:"mc", text:"A real ammeter has some resistance, so compared with an ideal ammeter the measured current is usually…",
+ options:["slightly less", "slightly larger", "exactly unchanged", "infinite"],
+ answer:0, hints:["Extra series R reduces total current.", "Slightly less."],
+ explain:"Extra series R ⇒ I <b>slightly less</b>."},
+{type:"num", text:"Current division: 2.0 Ω and 6.0 Ω in parallel, total I=4.0 A. Current in the 2.0 Ω (A)?", answer:3, unit:"A",
+ hints:["I₁ = I·R₂/(R₁+R₂).", "I₂Ω = 4×6/(2+6) = 3 A."],
+ explain:"Smaller R takes more I: I₂Ω = 4×6/8 = <b>3.0 A</b>."}
 ]
 };
 
 function makeSim(){
-  var cv=document.getElementById("animCanvas"), P={};
+  var cv=document.getElementById("animCanvas"), P={}, t=0, clock=null;
   function read(){
-    P.R1=kVal("r1Sl"); P.R2=kVal("r2Sl"); P.eps=kVal("epsSl"); P.r=kVal("rSl"); P.mode=document.getElementById("modeSel").value;
+    P.R1=kVal("r1Sl"); P.R2=kVal("r2Sl"); P.eps=kVal("epsSl"); P.r=kVal("rSl");
+    P.mode=document.getElementById("modeSel").value;
     kText("r1SlVal", kFmt(P.R1,1)+" Ω"); kText("r2SlVal", kFmt(P.R2,1)+" Ω");
     kText("epsSlVal", kFmt(P.eps,1)+" V"); kText("rSlVal", kFmt(P.r,2)+" Ω");
-    P.Rload = P.mode==="series" ? (P.R1+P.R2) : (1/(1/P.R1+1/P.R2));
-    P.I = P.eps/(P.Rload+P.r); P.V = P.I*P.Rload;
-    P.ro1 = "I = "+kFmt(P.I,3)+" A"; P.ro2 = "V_term = "+kFmt(P.V,3)+" V; Rload="+kFmt(P.Rload,2)+" Ω";
+    if(P.mode==="series"){
+      P.Rload=P.R1+P.R2; P.I1=null; P.I2=null;
+    } else {
+      P.Rload=1/(1/P.R1+1/P.R2);
+    }
+    P.I=P.eps/(P.Rload+P.r);
+    P.V=P.I*P.Rload;
+    if(P.mode==="parallel"){
+      P.I1=P.V/P.R1; P.I2=P.V/P.R2;
+    } else {
+      P.I1=P.I; P.I2=P.I;
+    }
+    P.ro1=kFmt(P.Rload,2)+" Ω";
+    P.ro2=kFmt(P.I,3)+" A";
+    P.ro3=kFmt(P.V,3)+" V";
+    if(P.mode==="series"){
+      P.ro4="V1="+kFmt(P.I*P.R1,2)+" V · V2="+kFmt(P.I*P.R2,2)+" V";
+    } else {
+      P.ro4="I1="+kFmt(P.I1,3)+" A · I2="+kFmt(P.I2,3)+" A";
+    }
   }
-  function update(){ kText("ro1", P.ro1); kText("ro2", P.ro2); }
-  function draw(){ var g=kSetup(cv),ctx=g.ctx,W=g.w,H=g.h; ctx.clearRect(0,0,W,H); ctx.fillStyle="#fff"; ctx.fillRect(0,0,W,H);
-    ctx.fillStyle="#0a2a66"; ctx.font="15px Arial"; ctx.textAlign="center";
-    ctx.fillText(P.mode+" load  R="+kFmt(P.Rload,2)+" Ω", W/2, H/2-10);
-    ctx.fillText("I="+kFmt(P.I,3)+" A   V="+kFmt(P.V,3)+" V", W/2, H/2+16); }
-  function reset(){ read(); update(); draw(); kText("simMsg","ε = I(R+r), V = IR"); }
-  document.getElementById("playBtn").style.display="none";
+  function update(){
+    kText("ro1", P.ro1); kText("ro2", P.ro2);
+    var r3=document.getElementById("ro3"); if(r3) r3.textContent=P.ro3;
+    var r4=document.getElementById("ro4"); if(r4) r4.textContent=P.ro4;
+  }
+  function draw(){
+    var g=kSetup(cv),ctx=g.ctx,W=g.w,H=g.h;
+    ctx.clearRect(0,0,W,H); ctx.fillStyle="#fff"; ctx.fillRect(0,0,W,H);
+    var left=W*0.08, right=W*0.62, midY=H*0.42, botY=H*0.72;
+    // cell at left
+    ctx.strokeStyle="#0a2a66"; ctx.lineWidth=4;
+    ctx.beginPath(); ctx.moveTo(left, midY-22); ctx.lineTo(left, midY+22); ctx.stroke();
+    ctx.lineWidth=8;
+    ctx.beginPath(); ctx.moveTo(left-12, midY-14); ctx.lineTo(left-12, midY+14); ctx.stroke();
+    ctx.fillStyle="#1865f2"; ctx.font="bold 13px Arial"; ctx.textAlign="center";
+    ctx.fillText("ε", left-6, midY-34);
+    // internal r block
+    var rx0=left+24, rx1=left+70;
+    ctx.strokeStyle="#e3780c"; ctx.lineWidth=2.5;
+    ctx.beginPath();
+    ctx.moveTo(left, midY); ctx.lineTo(rx0, midY);
+    var zz=[[rx0,midY],[rx0+8,midY-12],[rx0+20,midY+12],[rx0+32,midY-12],[rx0+44,midY]];
+    zz.forEach(function(p,i){ if(i) ctx.lineTo(p[0],p[1]); else ctx.moveTo(p[0],p[1]); });
+    ctx.lineTo(rx1, midY); ctx.stroke();
+    ctx.fillStyle="#e3780c"; ctx.font="bold 12px Arial";
+    ctx.fillText("r", (rx0+rx1)/2, midY-18);
+    // outer loop
+    ctx.strokeStyle="#334155"; ctx.lineWidth=3;
+    ctx.beginPath();
+    ctx.moveTo(rx1, midY); ctx.lineTo(right, midY);
+    ctx.lineTo(right, botY); ctx.lineTo(left, botY); ctx.lineTo(left, midY);
+    ctx.stroke();
+    function zig(x1,y,x2,col,lab){
+      ctx.strokeStyle=col; ctx.lineWidth=3; ctx.beginPath();
+      var xm=(x1+x2)/2;
+      ctx.moveTo(x1,y);
+      ctx.lineTo(x1+10,y-14); ctx.lineTo(x1+26,y+14); ctx.lineTo(x1+42,y-14); ctx.lineTo(x1+58,y+14); ctx.lineTo(x2,y);
+      ctx.stroke();
+      ctx.fillStyle=col; ctx.font="bold 13px Arial"; ctx.textAlign="center";
+      ctx.fillText(lab, xm, y-20);
+    }
+    if(P.mode==="series"){
+      // R1 on top, R2 on bottom
+      zig(rx1+20, midY, right-20, "#b91c1c", "R1");
+      zig(left+40, botY, right-40, "#7f3f98", "R2");
+    } else {
+      // two parallel branches
+      var y1=midY-28, y2=midY+28;
+      ctx.strokeStyle="#334155"; ctx.lineWidth=3;
+      ctx.beginPath();
+      ctx.moveTo(rx1+10, midY); ctx.lineTo(rx1+10, y1); ctx.lineTo(right-10, y1);
+      ctx.moveTo(rx1+10, midY); ctx.lineTo(rx1+10, y2); ctx.lineTo(right-10, y2);
+      ctx.moveTo(right-10, y1); ctx.lineTo(right-10, midY);
+      ctx.moveTo(right-10, y2); ctx.lineTo(right-10, midY);
+      ctx.stroke();
+      zig(rx1+30, y1, right-30, "#b91c1c", "R1");
+      zig(rx1+30, y2, right-30, "#7f3f98", "R2");
+    }
+    // animated charges on top wire
+    var speed=0.25+0.7*Math.min(1, P.I/0.5);
+    var n=10;
+    for(var i=0;i<n;i++){
+      var u=((t*speed)+i/n)%1;
+      var x=left + u*(right-left);
+      var y=midY-10;
+      ctx.beginPath(); ctx.arc(x,y,3.5,0,7);
+      ctx.fillStyle="#186d32"; ctx.fill();
+    }
+    // side panel
+    var px=W*0.82, py=H*0.18;
+    ctx.fillStyle="#eef3fe"; ctx.strokeStyle="#1865f2"; ctx.lineWidth=2;
+    ctx.beginPath(); ctx.rect(px-78, py-16, 156, 150); ctx.fill(); ctx.stroke();
+    ctx.fillStyle="#0a2a66"; ctx.font="bold 13px Arial"; ctx.textAlign="center";
+    ctx.fillText(P.mode==="series"?"Series load":"Parallel load", px, py+2);
+    ctx.font="12px Arial";
+    ctx.fillText("Req "+kFmt(P.Rload,2)+" Ω", px, py+28);
+    ctx.fillText("I "+kFmt(P.I,3)+" A", px, py+50);
+    ctx.fillText("V "+kFmt(P.V,3)+" V", px, py+72);
+    ctx.fillText("ε=I(R+r)", px, py+98);
+    ctx.fillStyle="#5b6170"; ctx.font="11px Arial";
+    ctx.fillText("check readouts →", px, py+120);
+  }
+  function reset(){
+    if(clock) clock.stop();
+    t=0;
+    var pb=document.getElementById("playBtn"); if(pb) pb.textContent="▶ Play";
+    kSet("r1Sl",10); kSet("r2Sl",15); kSet("epsSl",6); kSet("rSl",0.5);
+    document.getElementById("modeSel").value="series";
+    read(); update(); draw();
+    kText("simMsg","Reset: series R1=10 Ω, R2=15 Ω, ε=6 V, r=0.50 Ω. Play to animate.");
+  }
+  function tick(dt){ t+=dt; draw(); }
+  clock=kClock(function(dt){ tick(dt); }, function(){ var pb=document.getElementById("playBtn"); if(pb) pb.textContent="▶ Play"; });
+  document.getElementById("playBtn").addEventListener("click", function(){
+    if(clock.running()){ clock.stop(); this.textContent="▶ Play"; }
+    else { this.textContent="⏸ Pause"; clock.start(); }
+  });
   document.getElementById("resetBtn").addEventListener("click", reset);
-  kBind(["r1Sl","r2Sl","epsSl","rSl","modeSel"], function(){ read(); update(); draw(); });
-  return {reset:reset,draw:draw,resize:function(){draw();},pause:function(){},
-    set:function(o){ if(o.R1!=null)kSet("r1Sl",o.R1); if(o.R2!=null)kSet("r2Sl",o.R2); if(o.eps!=null)kSet("epsSl",o.eps); if(o.r!=null)kSet("rSl",o.r); if(o.mode) document.getElementById("modeSel").value=o.mode; reset(); },
-    state:function(){ return {I:P.I,V:P.V,Rload:P.Rload}; }};
+  kBind(["r1Sl","r2Sl","epsSl","rSl","modeSel"], function(){
+    read(); update(); draw();
+    kText("simMsg", P.mode==="series"
+      ? ("Series: Req="+kFmt(P.Rload,2)+" Ω · I="+kFmt(P.I,3)+" A · V="+kFmt(P.V,3)+" V")
+      : ("Parallel: Req="+kFmt(P.Rload,2)+" Ω · I="+kFmt(P.I,3)+" A · I1="+kFmt(P.I1,3)+" · I2="+kFmt(P.I2,3)));
+  });
+  return {reset:reset, draw:draw, resize:function(){ draw(); }, pause:function(){ if(clock) clock.stop(); },
+    set:function(o){
+      if(o.R1!=null) kSet("r1Sl",o.R1); if(o.R2!=null) kSet("r2Sl",o.R2);
+      if(o.eps!=null) kSet("epsSl",o.eps); if(o.r!=null) kSet("rSl",o.r);
+      if(o.mode) document.getElementById("modeSel").value=o.mode;
+      read(); update(); draw();
+    },
+    state:function(){ return {I:P.I,V:P.V,Rload:P.Rload,I1:P.I1,I2:P.I2,mode:P.mode}; }};
 }
 
-var LESSON = {quizzes:Q, figs:{}, makeSim:makeSim, demo:{set:{"R1": 10, "R2": 15, "eps": 6, "r": 0, "mode": "series"}}};
+var LESSON = {quizzes:Q, figs:{}, makeSim:makeSim, demo:{set:{"R1": 10, "R2": 15, "eps": 6, "r": 0.5, "mode": "series"}}};
+
+
 
 
 (function(){

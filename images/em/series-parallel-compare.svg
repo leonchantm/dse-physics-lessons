@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 320" role="img" aria-label="Series circuit on the left with one current path; parallel circuit on the right with two branches">
+  <rect width="680" height="320" fill="#f8fafc"/>
+  <text x="340" y="26" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#0a2a66">Series vs parallel — paths for charge</text>
+  <!-- SERIES box -->
+  <rect x="24" y="44" width="300" height="250" rx="12" fill="#fff" stroke="#e3e5ea"/>
+  <text x="174" y="68" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="800" fill="#1865f2">SERIES 串聯</text>
+  <text x="174" y="88" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">one path · same I · V adds</text>
+  <!-- series wires -->
+  <path d="M70 160 H110 M210 160 H250 V210 H70 V160" fill="none" stroke="#334155" stroke-width="3"/>
+  <!-- cell -->
+  <line x1="70" y1="138" x2="70" y2="182" stroke="#0a2a66" stroke-width="4"/>
+  <line x1="58" y1="146" x2="58" y2="174" stroke="#0a2a66" stroke-width="7"/>
+  <text x="52" y="128" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#1865f2">ε</text>
+  <!-- R1 zigzag -->
+  <path d="M110 160 L122 145 L138 175 L154 145 L170 175 L186 145 L210 160" fill="none" stroke="#b91c1c" stroke-width="3" stroke-linejoin="round"/>
+  <text x="160" y="128" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#b91c1c">R₁</text>
+  <!-- R2 on bottom -->
+  <path d="M110 210 L122 195 L138 225 L154 195 L170 225 L186 195 L210 210" fill="none" stroke="#7f3f98" stroke-width="3" stroke-linejoin="round"/>
+  <text x="160" y="248" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#7f3f98">R₂</text>
+  <defs>
+    <marker id="a1" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#186d32"/></marker>
+  </defs>
+  <line x1="80" y1="148" x2="105" y2="148" stroke="#186d32" stroke-width="2.5" marker-end="url(#a1)"/>
+  <text x="92" y="140" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#186d32">I</text>
+  <text x="174" y="278" text-anchor="middle" font-family="Cambria Math,Times New Roman,serif" font-size="14" font-weight="700" fill="#0a2a66">R = R₁ + R₂</text>
+
+  <!-- PARALLEL box -->
+  <rect x="356" y="44" width="300" height="250" rx="12" fill="#fff" stroke="#e3e5ea"/>
+  <text x="506" y="68" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="800" fill="#1865f2">PARALLEL 並聯</text>
+  <text x="506" y="88" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">two paths · same V · I adds</text>
+  <!-- parallel wires -->
+  <path d="M400 160 H430 M540 130 H570 V190 H540 M430 130 V190 H400 V160" fill="none" stroke="#334155" stroke-width="3"/>
+  <line x1="430" y1="130" x2="540" y2="130" stroke="#334155" stroke-width="3"/>
+  <line x1="430" y1="190" x2="540" y2="190" stroke="#334155" stroke-width="3"/>
+  <!-- cell -->
+  <line x1="400" y1="138" x2="400" y2="182" stroke="#0a2a66" stroke-width="4"/>
+  <line x1="388" y1="146" x2="388" y2="174" stroke="#0a2a66" stroke-width="7"/>
+  <text x="382" y="128" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#1865f2">ε</text>
+  <!-- R1 top branch -->
+  <path d="M450 130 L462 115 L478 145 L494 115 L510 145 L526 115 L540 130" fill="none" stroke="#b91c1c" stroke-width="3" stroke-linejoin="round"/>
+  <text x="495" y="108" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#b91c1c">R₁ · I₁</text>
+  <!-- R2 bottom -->
+  <path d="M450 190 L462 175 L478 205 L494 175 L510 205 L526 175 L540 190" fill="none" stroke="#7f3f98" stroke-width="3" stroke-linejoin="round"/>
+  <text x="495" y="228" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#7f3f98">R₂ · I₂</text>
+  <line x1="410" y1="148" x2="428" y2="148" stroke="#186d32" stroke-width="2.5" marker-end="url(#a1)"/>
+  <text x="418" y="140" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#186d32">I</text>
+  <text x="506" y="278" text-anchor="middle" font-family="Cambria Math,Times New Roman,serif" font-size="14" font-weight="700" fill="#0a2a66">1/R = 1/R₁ + 1/R₂</text>
+</svg>

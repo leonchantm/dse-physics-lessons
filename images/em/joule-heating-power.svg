@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" role="img" aria-label="Simple circuit: cell connected to a resistor that heats, with labels V, I, R and P equals V I">
+  <rect width="640" height="280" fill="#f8fafc"/>
+  <text x="320" y="28" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#0a2a66">Joule heating — power as rate of energy transfer</text>
+  <!-- wires -->
+  <path d="M120 140 H220 M360 140 H480 V200 H120 V140" fill="none" stroke="#334155" stroke-width="3"/>
+  <!-- cell -->
+  <line x1="120" y1="118" x2="120" y2="162" stroke="#0a2a66" stroke-width="4"/>
+  <line x1="108" y1="128" x2="108" y2="152" stroke="#0a2a66" stroke-width="8"/>
+  <text x="95" y="108" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#1865f2">ε / V</text>
+  <!-- resistor zigzag -->
+  <path d="M220 140 L235 120 L255 160 L275 120 L295 160 L315 120 L335 160 L360 140" fill="none" stroke="#b91c1c" stroke-width="3.5" stroke-linejoin="round"/>
+  <!-- heat glow -->
+  <ellipse cx="290" cy="140" rx="70" ry="36" fill="#ef4444" opacity="0.18"/>
+  <text x="290" y="88" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#b91c1c">heat (Joule)</text>
+  <text x="290" y="198" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#7f3f98">R</text>
+  <!-- current arrow -->
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#186d32"/>
+    </marker>
+  </defs>
+  <line x1="160" y1="128" x2="200" y2="128" stroke="#186d32" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="180" y="118" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#186d32">I</text>
+  <!-- formula box -->
+  <rect x="400" y="48" width="210" height="100" rx="10" fill="#eef3fe" stroke="#1865f2" stroke-width="2"/>
+  <text x="505" y="78" text-anchor="middle" font-family="Cambria Math,Times New Roman,serif" font-size="18" font-weight="700" fill="#0a2a66">P = V I</text>
+  <text x="505" y="104" text-anchor="middle" font-family="Cambria Math,Times New Roman,serif" font-size="16" fill="#0a2a66">= I²R = V²/R</text>
+  <text x="505" y="130" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">unit: watt (W = J/s)</text>
+  <text x="320" y="250" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#5b6170">Charges flow → electrical energy converts to heat in R at rate P</text>
+</svg>

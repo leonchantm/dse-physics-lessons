@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 300" role="img" aria-label="Two point charges with equal and opposite Coulomb forces along the line joining them">
+  <rect width="680" height="300" fill="#f8fafc"/>
+  <text x="340" y="28" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#0a2a66">Coulomb force between two point charges</text>
+
+  <!-- left charge + -->
+  <circle cx="180" cy="150" r="28" fill="#dc2626" stroke="#7f1d1d" stroke-width="2"/>
+  <text x="180" y="156" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="800" fill="#fff">+</text>
+  <text x="180" y="200" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#b91c1c">Q₁</text>
+
+  <!-- right charge + (same sign → repulsion) -->
+  <circle cx="500" cy="150" r="28" fill="#dc2626" stroke="#7f1d1d" stroke-width="2"/>
+  <text x="500" y="156" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="800" fill="#fff">+</text>
+  <text x="500" y="200" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#b91c1c">Q₂</text>
+
+  <!-- separation -->
+  <line x1="220" y1="150" x2="460" y2="150" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="340" y="140" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#5b6170">r</text>
+
+  <defs>
+    <marker id="arrF" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker>
+  </defs>
+  <!-- F on Q1 leftward (repulsion) -->
+  <line x1="150" y1="110" x2="90" y2="110" stroke="#16a34a" stroke-width="3" marker-end="url(#arrF)"/>
+  <text x="120" y="98" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#166534">F on Q₁</text>
+  <!-- F on Q2 rightward -->
+  <line x1="530" y1="110" x2="590" y2="110" stroke="#16a34a" stroke-width="3" marker-end="url(#arrF)"/>
+  <text x="560" y="98" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#166534">F on Q₂</text>
+
+  <!-- formula card -->
+  <rect x="220" y="220" width="240" height="58" rx="10" fill="#f3e8f8" stroke="#7f3f98" stroke-width="2"/>
+  <text x="340" y="245" text-anchor="middle" font-family="Cambria Math,Times New Roman,serif" font-size="18" font-weight="700" fill="#7f3f98">F = k |Q₁ Q₂| / r²</text>
+  <text x="340" y="268" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">same sign → repulsion · Newton III pair</text>
+</svg>

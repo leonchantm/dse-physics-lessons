@@ -164,7 +164,7 @@
 <body data-home-flat="index.html#electricity-magnetism" data-home-nested="../../index.html#electricity-magnetism">
 <a href="#main" class="sr-only">Skip to content</a>
 <header class="topbar">
-  <div class="brand">⚡ Lesson 4.1: Electrostatics <span class="zh">(靜電學)</span></div>
+  <div class="brand">⚡ Lesson 4.1: Electrostatics <span class="zh">（靜電學）</span></div>
   <div class="topbar-actions">
     <a id="homeLink" class="home-link" href="index.html#electricity-magnetism" data-home-flat="index.html#electricity-magnetism" data-home-nested="../../index.html#electricity-magnetism">← Back to unit</a>
     <span class="score-pill" id="scorePill" aria-live="polite">⭐ 0 / 0</span>
@@ -184,155 +184,224 @@
 <main id="main">
 <section class="step step-learn" data-id="welcome" data-name="Welcome" data-kind="learn"><span class="step-kind learn">Learn</span>
 <div class="welcome-hero">
-  <div class="big" aria-hidden="true">⚡ ⊕ ⊖</div>
-  <h2 tabindex="-1">Lesson 4.1: Electrostatics <span class="zh">(靜電學)</span></h2>
-  <p>Rub a balloon on your hair and it sticks to the wall. Walk on a carpet and you get a spark from a door handle. These are <b>electrostatic</b> effects — forces between electric charges that are not flowing as a current.</p>
+  <div class="big" aria-hidden="true">⊕ ⊖</div>
+  <h2 tabindex="-1">Lesson 4.1: Electrostatics <span class="zh">（靜電學）</span></h2>
+  <p><b>Electrostatics</b> is the study of <b>stationary</b> electric charges and the forces between them. Rub a plastic ruler on your jumper, comb dry hair, or touch a metal railing after walking on carpet — those sparks and sticks are electrostatic effects.</p>
+  <p><b>Hong Kong hook:</b> a plastic comb after brushing hair can pick up paper scraps; touching an MTR metal handrail after shuffling on a dry floor can give a tiny spark. Same physics: charge separation and electron transfer.</p>
 </div>
-<table class="t" aria-label="Key words">
-  <tr><th>Key word</th><th>Short meaning</th></tr>
-  <tr><td>electric charge <span class="zh">(電荷)</span></td><td>Property of matter that causes electrostatic forces. Two kinds: positive and negative.</td></tr>
-  <tr><td>electron / proton</td><td>Carriers of −e and +e. Only <b>electrons</b> move when everyday objects charge.</td></tr>
-  <tr><td>conductor / insulator</td><td>Material that allows / does not allow free charges to move through it.</td></tr>
-  <tr><td>electrostatic induction <span class="zh">(靜電感應)</span></td><td>Redistribution of charge in a conductor by a nearby charged object, without contact.</td></tr>
-  <tr><td>earthing (grounding)</td><td>Connecting a conductor to the Earth so charge can flow to/from Earth.</td></tr>
-</table>
-<div class="lesson-link">⬅️ Previous: <a href="3-9b-musical-notes-noise.html">Lesson 3.9b: Musical Notes and Noise</a> &nbsp;·&nbsp; ➡️ Next: <a href="4-2a-coulombs-law.html">Lesson 4.2a: Coulomb&#x27;s Law</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div>
+<div class="box key"><span class="box-title">In this lesson</span>
+Two kinds of charge; electron transfer and the coulomb; conductors vs insulators; induction and polarisation; sharing and earthing; charging by rubbing, contact, and induction. Force <b>size</b> (Coulomb’s law) and electric fields → Lessons <b>4.2a</b> and <b>4.2b</b>.
+</div>
+<div class="lesson-link">⬅️ Previous: <a href="3-9b-musical-notes-noise.html">Lesson 3.9b: Musical Notes and Noise</a> &nbsp;·&nbsp; ➡️ Next: <a href="4-2a-coulombs-law.html">Lesson 4.2a: Coulomb's Law</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div>
 </section>
+
 <section class="step step-learn" data-id="kinds" data-name="Two Kinds of Charge" data-kind="learn"><span class="step-kind learn">Learn</span>
 <span class="tag">Idea 1</span>
-<h2 tabindex="-1">Evidence for two kinds of charge</h2>
+<h2 tabindex="-1">Two kinds of charge <span class="zh">（兩種電荷）</span></h2>
+<p>There are two kinds of electric charge: <b>positive (+)</b> and <b>negative (−)</b>. The names were chosen historically (Franklin); what matters is the rule:</p>
+<div class="box formula"><span class="box-title">Basic rule ⭐</span>
+<b>Like charges repel; unlike charges attract.</b>
+</div>
+<p>Evidence in class: rub two identical plastic rods with the same cloth — they <b>repel</b> (same kind of charge). Rub a glass rod with silk and bring it near the plastic — they often <b>attract</b> (opposite kinds).</p>
 <div class="grid2">
-  <div>
-    <p>Rub a plastic rod with fur: the rod becomes charged. Bring it near another similarly rubbed rod — they <b>repel</b>. Rub a glass rod with silk and bring it near the plastic rod — they <b>attract</b>.</p>
-    <div class="box key"><span class="box-title">Key idea ⭐</span><ul class="simple">
-      <li>There are <b>two kinds</b> of electric charge: we call them <b>positive (+)</b> and <b>negative (−)</b>.</li>
-      <li><b>Like charges repel; unlike charges attract.</b></li>
-      <li>An uncharged (neutral) object has equal amounts of + and − charge.</li>
-    </ul></div>
+  <div class="box eg"><span class="box-title">Neutral objects</span>
+  A <b>neutral</b> object has equal amounts of + and − charge (equal numbers of protons and electrons overall). It can still be <b>attracted</b> by a charged object through induction — next steps.
   </div>
-  <div>
-    <div class="box eg"><span class="box-title">🔬 Evidence</span>Two identical plastic rods rubbed with the same cloth always repel → same kind of charge. A plastic rod and a glass rod rubbed with different cloths attract → opposite kinds.</div>
-    <div class="box warn"><span class="box-title">Common mistake ⚠️</span>“Charge is created by rubbing.” Rubbing only <b>transfers</b> electrons from one object to another; total charge is conserved.</div>
+  <div class="box warn"><span class="box-title">Conservation</span>
+  Rubbing does <b>not create</b> charge. Electrons move from one object to the other. If one becomes +Q, the other becomes −Q. Net charge of the pair stays the same.
   </div>
 </div>
+<div class="box key"><span class="box-title">Must remember</span>
+Two kinds: + and −. Like repel, unlike attract. Neutral = equal + and −. Charge is conserved in transfers.
+</div>
 </section>
+
 <section class="step step-learn" data-id="origin" data-name="Electrons and Charge" data-kind="learn"><span class="step-kind learn">Learn</span>
 <span class="tag">Idea 2</span>
-<h2 tabindex="-1">Charging means electron transfer</h2>
-<div class="grid2">
-  <div>
-    <p>Atoms contain positively charged <b>protons</b> (in the nucleus) and negatively charged <b>electrons</b> (around the nucleus). The elementary charge is <b>e = 1.60 × 10⁻¹⁹ C</b>.</p>
-    <div class="box key"><span class="box-title">Key idea ⭐</span><ul class="simple">
-      <li>Protons are tightly bound in nuclei and do <b>not</b> move between everyday objects.</li>
-      <li>Only <b>electrons</b> are transferred when objects charge by friction or contact.</li>
-      <li>Losing electrons → object becomes <b>positive</b>. Gaining electrons → object becomes <b>negative</b>.</li>
-    </ul></div>
-  </div>
-  <div>
-    <div class="box formula"><span class="box-title">Charge of n electrons</span>Q = n e &nbsp;&nbsp;(with sign: −ne if electrons gained)</div>
-    <div class="box eg"><span class="box-title">Example</span>A rod gains 5.0 × 10¹² electrons.<br>Q = −(5.0 × 10¹²)(1.60 × 10⁻¹⁹) = <b>−8.0 × 10⁻⁷ C</b>.</div>
-  </div>
+<h2 tabindex="-1">Origin of charge — electrons move <span class="zh">（電子轉移）</span></h2>
+<p>An atom has a nucleus (protons +, neutrons 0) and electrons (−). In a neutral atom, number of protons = number of electrons. Protons are tightly bound in the nucleus and do <b>not</b> hop between everyday objects. <b>Electrons</b> can be transferred.</p>
+<ul class="simple">
+  <li>Object <b>loses</b> electrons → becomes <b>positive</b>.</li>
+  <li>Object <b>gains</b> electrons → becomes <b>negative</b>.</li>
+</ul>
+<div class="box formula"><span class="box-title">Elementary charge &amp; coulomb</span>
+<span class="eq">e = 1.60 × 10⁻¹⁹ C</span> (magnitude of electron / proton charge).<br>
+SI unit of charge: <b>coulomb (C)</b>. Everyday rubbing often transfers only ~nC. Charge of n electrons: <span class="eq">|Q| = n e</span> (sign negative if electrons gained).
+</div>
+<div class="box eg"><span class="box-title">Example</span>
+A rod gains 5.0 × 10¹² electrons.<br>
+<span class="eq">Q = −(5.0 × 10¹²)(1.60 × 10⁻¹⁹) = −8.0 × 10⁻⁷ C</span> (= −0.80 μC).
+</div>
+<div class="box eg"><span class="box-title">Scale sense</span>
+1 C is huge — about 6.25 × 10¹⁸ elementary charges. School rubbing transfers roughly nC (10⁻⁹ C), still enough for clear attraction of paper scraps.
+</div>
+<div class="box key"><span class="box-title">Must remember</span>
+Only electrons move in everyday charging. <span class="eq">e = 1.60 × 10⁻¹⁹ C</span>. Losing e⁻ → +; gaining e⁻ → −. Charge conserved.
 </div>
 </section>
-<section class="step step-learn" data-id="charge" data-name="Conductors, Insulators, Induction" data-kind="learn"><span class="step-kind learn">Learn</span>
+
+<section class="step step-learn" data-id="conductors" data-name="Conductors and Insulators" data-kind="learn"><span class="step-kind learn">Learn</span>
 <span class="tag">Idea 3</span>
-<h2 tabindex="-1">How objects charge — and stay charged</h2>
-<table class="t">
-<tr><th>Material</th><th>What happens to charge</th></tr>
-<tr><td><b>Conductor</b> (metals, graphite, the human body, Earth)</td><td>Free electrons can move through the material. Charge spreads over the surface.</td></tr>
-<tr><td><b>Insulator</b> (plastic, glass, rubber, dry air)</td><td>Charges stay roughly where they are put. Good for holding a static charge.</td></tr>
-</table>
-<div class="grid2">
-  <div>
-    <div class="box key"><span class="box-title">Electrostatic induction ⭐</span>Bring a charged rod near an uncharged metal sphere (no contact). Free electrons in the sphere are attracted or repelled, so the near side and far side become oppositely charged. The sphere is still <b>overall neutral</b>, but charge is separated.</div>
-    <div class="box key"><span class="box-title">Earthing ⭐</span>Connect the sphere to Earth while the charged rod is nearby: electrons flow to or from Earth. Disconnect Earth, then remove the rod — the sphere is left with a net charge <b>opposite</b> to the rod. This is <b>charging by induction</b>.</div>
-  </div>
-  <div>
-    <div class="box eg"><span class="box-title">Charging methods</span><ul class="simple">
-      <li><b>Friction:</b> rub insulator → electron transfer.</li>
-      <li><b>Contact (conduction):</b> touch charged conductor to uncharged conductor → charge shares.</li>
-      <li><b>Induction:</b> charge without contact, using earthing as above.</li>
-    </ul></div>
-    <div class="box warn"><span class="box-title">Exam tip ⚠️</span>In induction explanations, always say <b>which way electrons move</b> and that protons do not. DSE often asks for a step-by-step account (2024 Q9, 2026 Q7).</div>
-  </div>
+<h2 tabindex="-1">Conductors and insulators <span class="zh">（導體與絕緣體）</span></h2>
+<p>All materials contain charges, but not all charges can <b>move freely</b>.</p>
+<div class="table-scroll"><table class="t">
+<tr><th>Type</th><th>What moves</th><th>Examples</th></tr>
+<tr><td><b>Conductor</b></td><td>Free electrons (metals) or ions (solutions)</td><td>Metals, graphite, salt water, human body, Earth</td></tr>
+<tr><td><b>Insulator</b></td><td>Few or no free charges</td><td>Plastic, rubber, glass, dry paper, dry air</td></tr>
+</table></div>
+<p>In metals, outermost electrons form a “sea” of free electrons around positive ions — charge spreads over the surface. Insulators hold charge where you put it, so they are good for “keeping” a static charge on a rod or balloon.</p>
+<div class="box eg"><span class="box-title">HK / body note</span>
+Your body is a fair conductor. Touch a metal railing and any excess charge can flow through you to Earth — that is why you sometimes feel a spark after walking on a dry carpet.
+</div>
+<div class="box key"><span class="box-title">Must remember</span>
+Conductors: free charges move (metals, graphite, salt water, body, Earth). Insulators: charges stay put. Charge carriers = electrons or ions.
 </div>
 </section>
+
+<section class="step step-learn" data-id="induction" data-name="Induction and Polarisation" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 4</span>
+<h2 tabindex="-1">Electrostatic induction <span class="zh">（靜電感應）</span></h2>
+<p>A <b>neutral</b> object can still be <b>attracted</b> by a charged object. That happens by <b>electrostatic induction</b> (conductors) or <b>polarisation</b> (insulators).</p>
+<div class="visual">
+<img src="images/em/electrostatic-induction.svg" alt="Induction on a conductor near a charged rod, and earthing step for charging by induction" style="width:100%;max-width:720px;height:auto;display:block;margin:.4rem auto">
+<p class="caption">Left: induced δ− / δ+ on a still-neutral conductor. Right: earthing while the rod is nearby (charging by induction — next step).</p>
+</div>
+<div class="grid2">
+  <div class="box eg"><span class="box-title">Neutral conductor</span>
+  Bring a + rod near (no touch). Free electrons are attracted to the near end (δ−); the far end is left δ+. Overall still neutral. Near-end attraction &gt; far-end repulsion → <b>net attraction</b>.
+  </div>
+  <div class="box eg"><span class="box-title">Neutral insulator</span>
+  No free electrons to travel far, but molecules distort (polarise). Ends of the object show slight opposite charge → again <b>net attraction</b> to the charged rod.
+  </div>
+</div>
+<div class="box eg"><span class="box-title">Balloon on the wall</span>
+A rubbed balloon sticks to a wall because the wall (insulator / slightly polarisable) develops opposite charge near the balloon — same attraction idea as polarisation.
+</div>
+<div class="box key"><span class="box-title">Must remember</span>
+Induction separates charge on a conductor without contact; object can stay neutral overall. Polarisation does a similar job in insulators. Net force is attraction to a nearby charged object.
+</div>
+</section>
+
+<section class="step step-learn" data-id="sharing" data-name="Sharing and Earthing" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 5</span>
+<h2 tabindex="-1">Sharing of charge and earthing <span class="zh">（電荷分享與接地）</span></h2>
+<p>On an isolated conductor, like charges repel to the <b>outer surface</b>. When two conductors <b>touch</b> or are connected by a wire, charge is <b>shared</b>. Identical conductors share equally; larger surface area tends to take more charge.</p>
+<div class="box formula"><span class="box-title">Earthing (grounding) ⭐</span>
+Connect a conductor to <b>Earth</b>. Earth is a huge conductor, so almost all excess charge leaves the object (electrons flow to or from Earth as needed). The object becomes (nearly) <b>neutral</b>.
+</div>
+<p>Careful language: positive charge does not “run into the ground” as protons. If the object was positive, <b>electrons flow up from Earth</b> to neutralise it. If it was negative, electrons flow <b>down to Earth</b>.</p>
+<div class="box eg"><span class="box-title">Lab tip</span>
+Insulate stands under metal spheres when you want them to keep charge. Touching with your finger is a form of earthing through your body.
+</div>
+<div class="box key"><span class="box-title">Must remember</span>
+Conductors in contact share charge. Earthing → nearly all excess charge leaves; only electrons actually flow.
+</div>
+</section>
+
+<section class="step step-learn" data-id="methods" data-name="Charging Methods" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 6</span>
+<h2 tabindex="-1">How to charge an object</h2>
+<div class="table-scroll"><table class="t">
+<tr><th>Method</th><th>What happens</th><th>Signs / notes</th></tr>
+<tr><td><b>Rubbing</b></td><td>Electron transfer between two materials</td><td>Equal and opposite charges; both change</td></tr>
+<tr><td><b>Sharing / contact</b></td><td>Charged conductor touches neutral conductor</td><td>Same sign on both; total charge conserved</td></tr>
+<tr><td><b>Induction</b></td><td>Bring charged object near → earth briefly → disconnect Earth → remove charged object</td><td>Sphere ends <b>opposite</b> in sign to the rod; charge comes from Earth</td></tr>
+</table></div>
+
+<div class="box eg worked"><span class="box-title">Worked — induction sequence (+ rod)</span>
+<ol>
+<li>Bring + rod near insulated metal sphere (no touch) → near end δ−, far end δ+.</li>
+<li>Earth the sphere (finger / wire) while rod stays nearby → electrons flow from Earth onto sphere; far-end δ+ is neutralised.</li>
+<li>Disconnect Earth <b>before</b> removing the rod.</li>
+<li>Remove the rod → sphere left with net <b>negative</b> charge.</li>
+</ol>
+</div>
+
+<div class="box eg worked"><span class="box-title">Worked — Q = n e</span>
+<p>How many electrons must be removed to give a sphere +3.2 × 10⁻⁹ C?</p>
+<ol>
+<li><span class="eq">n = Q/e = (3.2 × 10⁻⁹)/(1.60 × 10⁻¹⁹) = 2.0 × 10¹⁰</span> electrons removed.</li>
+</ol>
+</div>
+
+<div class="box danger"><span class="box-title">Exam traps</span>
+<ul class="simple">
+  <li>Saying “protons move” in induction or contact charging.</li>
+  <li>Earthing <b>after</b> removing the rod (wrong order) — sphere returns to neutral.</li>
+  <li>Thinking rubbing creates charge from nothing.</li>
+</ul>
+</div>
+<div class="box key"><span class="box-title">Must remember</span>
+Rubbing / contact / induction. Induction needs the earth step in the right order. Always track electron flow.
+</div>
+</section>
+
 <section class="step step-practice" data-id="p1" data-name="Practice: Charges" data-kind="practice"><span class="step-kind practice">Practice</span>
 <span class="tag quiz">Practice 1</span>
 <h2 tabindex="-1">Practice: kinds of charge and forces</h2>
 <div class="quiz" data-quiz="p1"></div>
 </section>
-<section class="step step-sim" data-id="sim" data-name="Try it: Attraction and Repulsion" data-kind="sim"><span class="step-kind sim">Try it</span>
+
+<section class="step step-sim" data-id="sim" data-name="Try it: Induction Lab" data-kind="sim"><span class="step-kind sim">Try it</span>
 <span class="tag sim">Try it!</span>
-<h2 tabindex="-1">Two charges — attract or repel?</h2>
-<p>Change the signs and drag the right-hand charge. The arrow shows the force on each charge (equal size, opposite direction — Newton’s third law).</p>
+<h2 tabindex="-1">Induction lab — live net charge</h2>
+<p>Choose the rod sign. Use <b>Next step</b> or <b>Play</b> to run the induction charging sequence. Readouts show net charge on the rod and on the metal sphere (in units of e⁻ equivalent “charge packets” for the demo). Watch electrons flow when you earth.</p>
 <div class="sim-panel">
-  <canvas id="animCanvas" width="640" height="280" aria-label="Two point charges with force arrows"></canvas>
+  <canvas id="animCanvas" width="640" height="300" aria-label="Charging by induction sequence"></canvas>
   <div class="sim-controls">
-    <label>Left charge <select id="q1Sel"><option value="1">+</option><option value="-1">−</option></select></label>
-    <label>Right charge <select id="q2Sel"><option value="-1" selected>−</option><option value="1">+</option></select></label>
-    <div class="slider"><label for="sepSl"><span>Separation <span class="zh">(間隔)</span></span><span id="sepSlVal"></span></label>
-    <input type="range" id="sepSl" min="40" max="280" step="1" value="160"></div>
+    <label style="font-weight:700">Rod sign
+      <select id="rodSel"><option value="1">Positive (+)</option><option value="-1">Negative (−)</option></select>
+    </label>
     <div class="sim-buttons">
-  <button class="btn-primary" id="playBtn" type="button">▶ Play</button>
-  <button class="btn-secondary" id="resetBtn" type="button">↺ Reset</button>
-  <label for="speedSel" style="font-weight:700">Speed:</label>
-  <select id="speedSel"><option value="1">Normal</option><option value="0.5">Slow (½×)</option><option value="0.25">Very slow (¼×)</option></select>
-</div>
+      <button class="btn-secondary" id="stepBtn" type="button">Next step ▶</button>
+      <button class="btn-primary" id="playBtn" type="button">▶ Play</button>
+      <button class="btn-secondary" id="resetBtn" type="button">↺ Reset</button>
+      <label for="speedSel" style="font-weight:700">Speed:</label>
+      <select id="speedSel"><option value="1">Normal</option><option value="0.5">Slow (½×)</option><option value="0.25">Very slow (¼×)</option></select>
+    </div>
   </div>
-  <div class="readouts"><div class="ro "><div class="lab">Force direction</div><div class="val" id="roForce"></div></div><div class="ro "><div class="lab">Separation</div><div class="val" id="roSep"></div></div></div>
-  <p class="caption" id="simMsg">Like signs → repel; unlike → attract.</p>
+  <div class="readout">
+    <div class="ro v"><div class="lab">Step</div><div class="val" id="roStep"></div></div>
+    <div class="ro a"><div class="lab">Rod net Q</div><div class="val" id="roRod"></div></div>
+    <div class="ro d"><div class="lab">Sphere net Q</div><div class="val" id="roSph"></div></div>
+    <div class="ro av"><div class="lab">Earth link</div><div class="val" id="roEarth"></div></div>
+  </div>
+  <p class="caption" id="simMsg">Step 0: insulated neutral sphere. Bring the charged rod near (no contact).</p>
 </div>
 </section>
+
 <section class="step step-practice" data-id="psim" data-name="Practice: Simulation" data-kind="practice"><span class="step-kind practice">Practice</span>
 <span class="tag quiz">Practice 2</span>
-<h2 tabindex="-1">Practice with the simulation</h2>
+<h2 tabindex="-1">Practice with the induction lab</h2>
+<p>Reset the sim, use a <b>positive</b> rod, and step through once before answering.</p>
 <div class="quiz" data-quiz="psim"></div>
 </section>
-<section class="step step-practice" data-id="p2" data-name="Practice: Electron Transfer" data-kind="practice"><span class="step-kind practice">Practice</span>
+
+<section class="step step-practice" data-id="p2" data-name="Practice: Charging" data-kind="practice"><span class="step-kind practice">Practice</span>
 <span class="tag quiz">Practice 3</span>
-<h2 tabindex="-1">Practice: charging and induction</h2>
+<h2 tabindex="-1">Practice: charging and electrons</h2>
 <div class="quiz" data-quiz="p2"></div>
 </section>
-<section class="step step-learn" data-id="hazards" data-name="Hazards and Applications" data-kind="learn"><span class="step-kind learn">Learn</span>
-<span class="tag">Idea 4</span>
-<h2 tabindex="-1">Why electrostatics matters</h2>
-<div class="grid2">
-  <div>
-    <div class="box warn"><span class="box-title">Hazards</span><ul class="simple">
-      <li>Sparks can ignite flammable vapour (petrol stations: earthing straps).</li>
-      <li>Electrostatic discharge can damage electronic chips.</li>
-      <li>Lightning is a giant electrostatic discharge — buildings use lightning conductors to earth safely.</li>
-    </ul></div>
-  </div>
-  <div>
-    <div class="box eg"><span class="box-title">Applications</span><ul class="simple">
-      <li>Photocopiers and laser printers (toner attracted to charged image).</li>
-      <li>Electrostatic precipitators remove dust from factory exhaust.</li>
-      <li>Spray painting: charged paint droplets coat the object evenly.</li>
-    </ul></div>
-  </div>
-</div>
-</section>
+
 <section class="step step-learn" data-id="summary" data-name="Summary" data-kind="learn"><span class="step-kind learn">Learn</span>
 <span class="tag">Summary</span>
-<h2 tabindex="-1">What you should be able to do</h2>
+<h2 tabindex="-1">Remember</h2>
 <div style="text-align:center"><div class="stars" id="stars" aria-hidden="true"></div>
   <p id="finalScore" style="font-size:1.2rem;font-weight:800"></p><p id="finalMsg"></p></div>
-
 <ul class="simple">
-<li>State evidence for two kinds of charge; like charges repel, unlike attract.</li>
-<li>Explain charging as <b>electron transfer</b>; calculate Q = ±ne.</li>
-<li>Distinguish conductors and insulators; explain induction and earthing.</li>
-<li>Give one hazard and one application of electrostatics.</li>
+  <li>Two kinds of charge: like repel, unlike attract. Charge is conserved.</li>
+  <li>Everyday charging = <b>electron</b> transfer. <span class="eq">e = 1.60 × 10⁻¹⁹ C</span>. Losing e⁻ → +.</li>
+  <li>Conductors (metals, graphite, salt water, body, Earth) vs insulators (plastic, rubber, glass).</li>
+  <li>Induction / polarisation → net attraction of neutrals to a charged object.</li>
+  <li>Sharing on contact; earthing nearly empties excess charge (electrons flow).</li>
+  <li>Charging methods: rubbing, contact/sharing, induction (earth in the right order).</li>
+  <li>Next: size of the force → <b>4.2a</b>; electric field → <b>4.2b</b>.</li>
 </ul>
-<p>Next: <b>Lesson 4.2a</b> — Coulomb’s law (extension) quantifies the force between point charges.</p>
-<div class="lesson-link">⬅️ Previous: <a href="3-9b-musical-notes-noise.html">Lesson 3.9b: Musical Notes and Noise</a> &nbsp;·&nbsp; ➡️ Next: <a href="4-2a-coulombs-law.html">Lesson 4.2a: Coulomb&#x27;s Law</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div>
+<div class="lesson-link">⬅️ Previous: <a href="3-9b-musical-notes-noise.html">Lesson 3.9b: Musical Notes and Noise</a> &nbsp;·&nbsp; ➡️ Next: <a href="4-2a-coulombs-law.html">Lesson 4.2a: Coulomb's Law</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div>
 <div class="q-actions" style="justify-content:center">
   <button class="btn-secondary" id="reviewBtn" type="button">Go to first unfinished question</button>
   <button class="btn-retry" id="restartBtn" type="button">↺ Reset all questions</button>
 </div>
-
 </section>
 </main>
 <nav class="controls" aria-label="Lesson navigation">
@@ -344,14 +413,26 @@
 <summary>👩‍🏫 Teacher notes: curriculum outcome map (click to open)</summary>
 <div class="tn-body">
 <p><b>Source:</b> HKDSE Physics Curriculum and Assessment Guide (S4–6), 2015 update — Compulsory Part, <b>IV Electricity and Magnetism</b>, subtopic <b>a. Electrostatics</b>, “Students should be able to” column, printed pages 40–41 (PDF pages 50–51). Outcome text is quoted from the guide.</p>
-<p>This sub-topic is taught in <b>Lesson 4.1</b> (<a href="4-1-electrostatics.html">4-1-electrostatics.html</a>): 10 steps; <b>Lesson 4.2a</b> (<a href="4-2a-coulombs-law.html">4-2a-coulombs-law.html</a>): 8 steps; <b>Lesson 4.2b</b> (<a href="4-2b-electric-field.html">4-2b-electric-field.html</a>): 12 steps. Links to other lessons open that file at the step.</p>
+<p>This sub-topic is taught in <b>Lesson 4.1</b> (<a href="4-1-electrostatics.html">4-1-electrostatics.html</a>): 12 steps; <b>Lesson 4.2a</b> (<a href="4-2a-coulombs-law.html">4-2a-coulombs-law.html</a>): 10 steps; <b>Lesson 4.2b</b> (<a href="4-2b-electric-field.html">4-2b-electric-field.html</a>): 12 steps.</p>
+<p><b>Core.</b> Outcomes on evidence for two kinds of charge, attraction/repulsion, charging by electron transfer, and induction ideas are core. Coulomb’s law and E-field formulas are taught in 4.2a/4.2b (extension where marked there).</p>
 <h3>Learning outcomes</h3>
 <div class="table-scroll"><table class="t outcomes"><tr><th>#</th><th>Topic</th><th>Learning outcome (quoted)</th><th>Where it is taught / practised</th></tr>
-<tr><td>1</td><td><i>electric charges</i></td><td>“examine the evidence for two kinds of charges in nature”</td><td><a href="#step2" data-step="2">L4.1 Step 2: Two Kinds of Charge</a><br><a href="#step5" data-step="5">L4.1 Step 5: Practice: Charges</a><br><a href="#step6" data-step="6">L4.1 Step 6: Try it: Attraction and Repulsion</a></td></tr><tr><td>2</td><td><i>electric charges</i></td><td>“realise the attraction and repulsion between charges”</td><td><a href="#step2" data-step="2">L4.1 Step 2: Two Kinds of Charge</a><br><a href="#step6" data-step="6">L4.1 Step 6: Try it: Attraction and Repulsion</a><br><a href="#step7" data-step="7">L4.1 Step 7: Practice: Simulation</a><br><a href="#step5" data-step="5">L4.1 Step 5: Practice: Charges</a></td></tr><tr><td>3</td><td><i>electric charges</i></td><td>“state Coulomb’s law F = Q₁Q₂/(4πε₀ r²)” <span class="tag quiz">Extension</span></td><td><a href="4-2a-coulombs-law.html#step2">L4.2a Step 2: Coulomb&#x27;s Law</a><br><a href="4-2a-coulombs-law.html#step5">L4.2a Step 5: Try it: Coulomb Force</a><br><a href="4-2a-coulombs-law.html#step4">L4.2a Step 4: Practice: Law</a></td></tr><tr><td>4</td><td><i>electric charges</i></td><td>“interpret charging in terms of electron transfer”</td><td><a href="#step3" data-step="3">L4.1 Step 3: Electrons and Charge</a><br><a href="#step4" data-step="4">L4.1 Step 4: Conductors, Insulators, Induction</a><br><a href="#step8" data-step="8">L4.1 Step 8: Practice: Electron Transfer</a></td></tr><tr><td>5</td><td><i>electric charges</i></td><td>“solve problems involving forces between point charges” <span class="tag quiz">Extension</span></td><td><a href="4-2a-coulombs-law.html#step3">L4.2a Step 3: Worked Examples</a><br><a href="4-2a-coulombs-law.html#step6">L4.2a Step 6: Practice: Simulation</a><br><a href="4-2a-coulombs-law.html#step7">L4.2a Step 7: Practice: Problems</a></td></tr><tr><td>6</td><td><i>electric field</i></td><td>“describe the electric field around a point charge and between parallel charged plates”</td><td><a href="4-2b-electric-field.html#step2">L4.2b Step 2: What Is an E-field?</a><br><a href="4-2b-electric-field.html#step6">L4.2b Step 6: Parallel Plates</a><br><a href="4-2b-electric-field.html#step9">L4.2b Step 9: Try it: Field Explorer</a></td></tr><tr><td>7</td><td><i>electric field</i></td><td>“represent an electric field using field lines”</td><td><a href="4-2b-electric-field.html#step3">L4.2b Step 3: Field Lines</a><br><a href="4-2b-electric-field.html#step9">L4.2b Step 9: Try it: Field Explorer</a><br><a href="4-2b-electric-field.html#step8">L4.2b Step 8: Practice: Field Ideas</a></td></tr><tr><td>8</td><td><i>electric field</i></td><td>“explain how charges interact via an electric field”</td><td><a href="4-2b-electric-field.html#step2">L4.2b Step 2: What Is an E-field?</a><br><a href="4-2b-electric-field.html#step8">L4.2b Step 8: Practice: Field Ideas</a></td></tr><tr><td>9</td><td><i>electric field</i></td><td>“define electric field strength E at a point as the force per unit charge on a positive test charge placed at that point”</td><td><a href="4-2b-electric-field.html#step4">L4.2b Step 4: Defining E</a><br><a href="4-2b-electric-field.html#step8">L4.2b Step 8: Practice: Field Ideas</a></td></tr><tr><td>10</td><td><i>electric field</i></td><td>“state electric field strength around a point charge by E = Q/(4πε₀ r²) and between parallel plates by E = V/d, and solve problems” <span class="tag quiz">Extension</span></td><td><a href="4-2b-electric-field.html#step5">L4.2b Step 5: E of a Point Charge</a><br><a href="4-2b-electric-field.html#step6">L4.2b Step 6: Parallel Plates</a><br><a href="4-2b-electric-field.html#step7">L4.2b Step 7: Worked Examples</a><br><a href="4-2b-electric-field.html#step10">L4.2b Step 10: Practice: Simulation</a><br><a href="4-2b-electric-field.html#step11">L4.2b Step 11: Practice: Problems</a></td></tr></table></div>
+<tr><td>1</td><td><i>electric charges</i></td><td>“examine the evidence for two kinds of charges in nature”</td><td><a href="#step2" data-step="2">L4.1 Step 2: Two Kinds of Charge</a><br><a href="#step8" data-step="8">L4.1 Step 8: Practice: Charges</a></td></tr>
+<tr><td>2</td><td><i>electric charges</i></td><td>“realise the attraction and repulsion between charges”</td><td><a href="#step2" data-step="2">L4.1 Step 2: Two Kinds of Charge</a><br><a href="#step5" data-step="5">L4.1 Step 5: Induction and Polarisation</a><br><a href="#step8" data-step="8">L4.1 Step 8: Practice: Charges</a></td></tr>
+<tr><td>3</td><td><i>electric charges</i></td><td>“state Coulomb’s law F = Q₁Q₂/(4πε₀ r²)” <span class="tag quiz">Extension</span></td><td><a href="4-2a-coulombs-law.html#step2">L4.2a Step 2: Coulomb's Law</a><br><a href="4-2a-coulombs-law.html#step7">L4.2a Step 7: Try it: Coulomb Force</a></td></tr>
+<tr><td>4</td><td><i>electric charges</i></td><td>“interpret charging in terms of electron transfer”</td><td><a href="#step3" data-step="3">L4.1 Step 3: Electrons and Charge</a><br><a href="#step7" data-step="7">L4.1 Step 7: Charging Methods</a><br><a href="#step9" data-step="9">L4.1 Step 9: Try it: Induction Lab</a><br><a href="#step11" data-step="11">L4.1 Step 11: Practice: Charging</a></td></tr>
+<tr><td>5</td><td><i>electric charges</i></td><td>“solve problems involving forces between point charges” <span class="tag quiz">Extension</span></td><td><a href="4-2a-coulombs-law.html#step5">L4.2a Step 5: Worked Examples</a><br><a href="4-2a-coulombs-law.html#step9">L4.2a Step 9: Practice: Problems</a></td></tr>
+<tr><td>6</td><td><i>electric field</i></td><td>“describe the electric field around a point charge and between parallel charged plates”</td><td><a href="4-2b-electric-field.html#step2">L4.2b Step 2: What Is an E-field?</a></td></tr>
+<tr><td>7</td><td><i>electric field</i></td><td>“represent an electric field using field lines”</td><td><a href="4-2b-electric-field.html#step3">L4.2b Step 3: Field Lines</a></td></tr>
+<tr><td>8</td><td><i>electric field</i></td><td>“explain how charges interact via an electric field”</td><td><a href="4-2b-electric-field.html#step2">L4.2b Step 2: What Is an E-field?</a></td></tr>
+<tr><td>9</td><td><i>electric field</i></td><td>“define electric field strength E at a point as the force per unit charge on a positive test charge placed at that point”</td><td><a href="4-2b-electric-field.html#step4">L4.2b Step 4: Defining E</a></td></tr>
+<tr><td>10</td><td><i>electric field</i></td><td>“state electric field strength around a point charge by E = Q/(4πε₀ r²) and between parallel plates by E = V/d, and solve problems” <span class="tag quiz">Extension</span></td><td><a href="4-2b-electric-field.html#step5">L4.2b Step 5: E of a Point Charge</a><br><a href="4-2b-electric-field.html#step6">L4.2b Step 6: Parallel Plates</a></td></tr>
+</table></div>
 <h3>Suggested learning &amp; teaching activities used</h3>
-<div class="table-scroll"><table class="t activities"><tr><th>#</th><th>Activity (from the guide, pp.45–47, incl. Values &amp; Attitudes and STSE)</th><th>Where</th></tr>
-<tr><td>1</td><td>Showing the nature of attraction and repulsion using simple electrostatic generation and testing equipment</td><td><a href="#step2" data-step="2">L4.1 Step 2: Two Kinds of Charge</a><br><a href="#step4" data-step="4">L4.1 Step 4: Conductors, Insulators, Induction</a><br><a href="#step6" data-step="6">L4.1 Step 6: Try it: Attraction and Repulsion</a></td></tr><tr><td>2</td><td>Investigating the nature of the electric field surrounding charges and between parallel plates</td><td><a href="4-2b-electric-field.html#step2">L4.2b Step 2: What Is an E-field?</a><br><a href="4-2b-electric-field.html#step6">L4.2b Step 6: Parallel Plates</a><br><a href="4-2b-electric-field.html#step9">L4.2b Step 9: Try it: Field Explorer</a></td></tr><tr><td>3</td><td>Plotting electric field lines by using simple measurement of equipotentials in the field</td><td><a href="4-2b-electric-field.html#step3">L4.2b Step 3: Field Lines</a><br><a href="4-2b-electric-field.html#step9">L4.2b Step 9: Try it: Field Explorer</a></td></tr><tr><td>4</td><td>Using computer simulations to observe and investigate the electric field and magnetic field</td><td><a href="4-2b-electric-field.html#step9">L4.2b Step 9: Try it: Field Explorer</a><br><a href="4-2a-coulombs-law.html#step5">L4.2a Step 5: Try it: Coulomb Force</a></td></tr><tr><td>5</td><td>Using dimension analysis to check the results of mathematical solutions</td><td><a href="4-2a-coulombs-law.html#step2">L4.2a Step 2: Coulomb&#x27;s Law</a><br><a href="4-2b-electric-field.html#step4">L4.2b Step 4: Defining E</a></td></tr></table></div>
-<p><b>Notes alignment:</b> E&amp;M notes Chapter 1 §1.1–1.10 (kinds of charge, electron transfer, conductors/insulators, electrostatic induction, earthing, charging methods, gold-leaf electroscope, hazards and applications). <b>Left out:</b> detailed gold-leaf electroscope construction beyond detecting charge (guide only needs evidence of two kinds of charge and charging by electron transfer); applications listed in notes that go beyond the guide’s outcomes are mentioned briefly only. Coulomb’s law is in Lesson 4.2a. <b>Exam emphasis:</b> charging by induction / charge separation explanations (Paper 1B 2024 Q9, 2026 Q7); like charges repel, unlike attract; electrons move, protons stay in nuclei. <b>Simulation:</b> two point charges — drag to change separation; force direction follows attraction/repulsion (magnitude qualitative here; Coulomb quantification is 4.2a).</p>
+<div class="table-scroll"><table class="t activities"><tr><th>#</th><th>Activity (from the guide, pp.45–47)</th><th>Where</th></tr>
+<tr><td>1</td><td>Showing the nature of attraction and repulsion using simple electrostatic generation and testing equipment</td><td><a href="#step2" data-step="2">L4.1 Step 2: Two Kinds of Charge</a><br><a href="#step5" data-step="5">L4.1 Step 5: Induction and Polarisation</a><br><a href="#step9" data-step="9">L4.1 Step 9: Try it: Induction Lab</a></td></tr>
+</table></div>
+<p><b>Notes alignment:</b> E&amp;M Ch.1 §1.1–1.7. Coulomb’s law / E-field deferred to 4.2a/4.2b.</p>
 </div></details>
 <script>
 
@@ -467,66 +548,169 @@ function kHTML(id, t){ var e = document.getElementById(id); if (e) e.innerHTML =
 
 var Q = {
 p1:[
- {type:"mc", text:"Two identical plastic rods are rubbed with the same cloth and brought near each other. They…", options:["repel","attract","neither attract nor repel","attract then repel"], answer:0,
-  hints:["Same rubbing → same kind of charge.",""], explain:"Like charges repel."},
- {type:"mc", text:"A glass rod rubbed with silk attracts a plastic rod rubbed with fur. The two rods…", options:["have opposite kinds of charge","have the same kind of charge","are both uncharged","must both be positive"], answer:0,
-  hints:["Attraction means unlike charges.",""], explain:"Unlike charges attract."},
- {type:"mc", text:"Which statement is correct?", options:["There is evidence for exactly two kinds of electric charge","There are three kinds of charge: +, − and neutral","Neutral objects have no protons or electrons","Charge is created when two objects are rubbed"], answer:0,
-  hints:["Neutral means equal + and −.",""], explain:"Two kinds; rubbing transfers electrons; neutral has equal + and −."},
- {type:"mc", text:"An uncharged metal sphere is touched by a negatively charged rod. The sphere…", options:["becomes negative (electrons shared onto it)","becomes positive","stays neutral","becomes positive then negative"], answer:0,
-  hints:["Charge shares by contact on conductors.",""], explain:"Some electrons move onto the sphere; both end negative."},
+ {type:"mc", text:"Two identical plastic rods rubbed with the same cloth are brought near each other. They…", options:["repel","attract","neither attract nor repel","first attract then always stick"], answer:0,
+  hints:["Same treatment → same kind of charge.","Like charges…"], explain:"Like charges repel."},
+ {type:"mc", text:"A glass rod and a plastic rod attract after rubbing with different cloths. They…", options:["have opposite kinds of charge","must both be positive","must both be neutral","have the same kind of charge"], answer:0,
+  hints:["Attraction means unlike."], explain:"Unlike charges attract."},
+ {type:"mc", text:"Which statement is correct?", options:["There is evidence for exactly two kinds of electric charge","There are three kinds: +, − and “neutral charge”","Neutral objects contain no protons or electrons","Rubbing creates charge from nothing"], answer:0,
+  hints:["Neutral means equal + and −. Charge is conserved."], explain:"Two kinds; rubbing transfers electrons."},
  {type:"mc", text:"Like charges ______; unlike charges ______.", options:["repel; attract","attract; repel","repel; repel","attract; attract"], answer:0,
-  hints:["Basic electrostatic rule.",""], explain:"Like repel; unlike attract."}
+  hints:["Basic electrostatic rule."], explain:"Like repel; unlike attract."},
+ {type:"mc", text:"A charged plastic comb attracts small bits of dry paper (neutral insulator). The best explanation is…", options:["polarisation of the paper → net attraction","the paper was already strongly charged the same way","gravity between comb and paper","Coulomb repulsion of like charges"], answer:0,
+  hints:["Neutral insulator near a charge."], explain:"Molecules polarise → net attraction."}
 ],
 psim:[
- {type:"mc", text:"Set both charges to +. The force arrows show…", options:["repulsion (arrows pointing away)","attraction (arrows pointing together)","no force","force on only one charge"], answer:0,
-  hints:["Try it in the simulation.",""], explain:"Like charges repel."},
- {type:"mc", text:"Set left +, right −. The forces on the two charges are…", options:["equal in size and opposite in direction","equal in size and same direction","larger on the positive charge","zero because opposite charges cancel"], answer:0,
-  hints:["Newton’s third law.",""], explain:"Electrostatic forces are an action–reaction pair."},
- {type:"mc", text:"Increase the separation. The force arrows become…", options:["shorter (weaker force)","longer","unchanged","reverse direction"], answer:0,
-  hints:["Force decreases with distance (qualitative here).",""], explain:"Larger separation → weaker force (Coulomb’s law in 4.2a)."}
+ {type:"mc", text:"With a + rod, after induction charging is complete (earth disconnected, rod removed), the sphere’s net charge is…", options:["negative","positive","zero","impossible to tell"], answer:0,
+  hints:["Induction leaves the opposite sign to the rod.","Electrons were pulled onto the sphere from Earth."], explain:"Opposite to the + rod → negative."},
+ {type:"mc", text:"At the “induced only” step (rod near, not earthed), the sphere’s net charge is…", options:["zero (still neutral overall)","equal to the rod","opposite to the rod and large","undefined"], answer:0,
+  hints:["Induction separates charge but does not change net Q until earthing."], explain:"Still neutral overall: δ− near, δ+ far."},
+ {type:"mc", text:"If you earth the sphere only after removing the + rod, the sphere ends…", options:["neutral (or nearly so)","negative","positive","more positive than the rod"], answer:0,
+  hints:["Wrong order — no lasting induced charge to keep."], explain:"Without the rod present, earthing empties any excess → neutral."},
+ {type:"mc", text:"During earthing with a + rod nearby, electrons flow…", options:["from Earth onto the sphere","from the sphere to Earth","from the rod to the sphere by sparks only","nowhere"], answer:0,
+  hints:["+ rod attracts electrons."], explain:"Electrons flow up from Earth onto the sphere."}
 ],
 p2:[
- {type:"mc", text:"When a plastic rod is rubbed with fur and becomes negative, the fur…", options:["becomes positive (lost electrons to the rod)","becomes more negative","stays neutral","loses protons"], answer:0,
-  hints:["Electrons transfer; total charge conserved.",""], explain:"Electrons move from fur to rod."},
- {type:"num", text:"A sphere gains 2.5 × 10¹² electrons. Magnitude of its charge in μC? (e = 1.60 × 10⁻¹⁹ C; give magnitude only)", answer:0.4, unit:"μC",
-  hints:["|Q| = n e","Convert C → μC: ÷ 10⁻⁶"], explain:"|Q| = 2.5e12 × 1.6e-19 = 4.0 × 10⁻⁷ C = 0.40 μC."},
- {type:"mc", text:"Charging by induction leaves a metal sphere with a net charge. Essential step:", options:["earth the sphere while the charged rod is nearby, then disconnect Earth before removing the rod","touch the rod to the sphere","rub the sphere with cloth","earth the sphere after removing the rod"], answer:0,
-  hints:["Standard induction sequence.",""], explain:"Earth while inducing, break earth, then remove rod."},
- {type:"mc", text:"Which particles move when a conductor is charged by contact?", options:["electrons only","protons only","both electrons and protons","neutrons"], answer:0,
-  hints:["Protons stay in nuclei.",""], explain:"Only electrons are free to move in everyday conductors."},
- {type:"mc", text:"A positively charged rod is brought near (not touching) the left side of an earthed metal sphere. Electrons flow…", options:["from Earth onto the sphere","from the sphere to Earth","from the rod to the sphere","nowhere — the sphere is earthed and stays empty"], answer:0,
-  hints:["The + rod attracts electrons.",""], explain:"Electrons are attracted from Earth onto the sphere."},
+ {type:"mc", text:"When a plastic rod rubbed with fur becomes negative, the fur…", options:["becomes positive (lost electrons to the rod)","becomes more negative","stays exactly neutral forever","loses protons to the rod"], answer:0,
+  hints:["Electrons transfer; charge conserved."], explain:"Electrons move from fur → rod."},
+ {type:"num", text:"A sphere gains 2.5 × 10¹² electrons. Magnitude of its charge in μC? (e = 1.60 × 10⁻¹⁹ C)", answer:0.4, tol:0.02, unit:"μC",
+  hints:["|Q| = n e in coulombs.","1 μC = 10⁻⁶ C."], explain:"|Q| = 2.5×10¹² × 1.60×10⁻¹⁹ = 4.0×10⁻⁷ C = 0.40 μC."},
+ {type:"mc", text:"Essential step in charging a metal sphere by induction:", options:["earth the sphere while the charged rod is nearby, then disconnect Earth before removing the rod","touch the rod firmly to the sphere","rub the sphere with the same cloth","earth the sphere only after removing the rod"], answer:0,
+  hints:["Standard induction order."], explain:"Earth while inducing; break earth; then remove rod."},
+ {type:"mc", text:"Which particles move when a metal conductor is charged by contact?", options:["electrons only","protons only","both electrons and protons equally","neutrons"], answer:0,
+  hints:["Protons stay in nuclei."], explain:"Only electrons are free to move in metals."},
  {type:"mc", text:"Which is an insulator?", options:["dry plastic","copper wire","the human body","graphite"], answer:0,
-  hints:["Insulators do not allow free electron flow.",""], explain:"Dry plastic is an insulator; the others are conductors."}
+  hints:["Insulators block free charge flow."], explain:"Dry plastic is an insulator."},
+ {type:"num", text:"How many electrons must be removed to give +3.2 × 10⁻⁹ C? (answer as ×10¹⁰, so enter 2 for 2.0×10¹⁰)", answer:2, tol:0.05, unit:"×10¹⁰",
+  hints:["n = Q/e.","(3.2×10⁻⁹)/(1.60×10⁻¹⁹) = 2.0×10¹⁰."], explain:"n = 2.0 × 10¹⁰ electrons removed."}
 ]};
 
 function makeSim(){
-  var cv = document.getElementById("animCanvas"), P = {q1:1,q2:-1,sep:160};
-  function read(){ P.q1 = +document.getElementById("q1Sel").value; P.q2 = +document.getElementById("q2Sel").value; P.sep = kVal("sepSl");
-    kText("sepSlVal", Math.round(P.sep) + " px"); }
-  function update(){ var atr = P.q1*P.q2 < 0; kText("roForce", atr ? "attraction" : "repulsion"); kText("roSep", Math.round(P.sep) + " px (qualitative)"); }
-  function draw(){
-    var g = kSetup(cv), ctx = g.ctx, W = g.w, H = g.h, yc = H/2, x1 = W/2 - P.sep/2, x2 = W/2 + P.sep/2;
-    ctx.clearRect(0,0,W,H); ctx.fillStyle="#fff"; ctx.fillRect(0,0,W,H);
-    var atr = P.q1*P.q2 < 0, Flen = Math.max(20, 12000/(P.sep*P.sep)*80);
-    function ball(x,q){ ctx.beginPath(); ctx.arc(x,yc,22,0,7); ctx.fillStyle = q>0?"#dc2626":"#2563eb"; ctx.fill(); ctx.fillStyle="#fff"; ctx.font="bold 20px Arial"; ctx.textAlign="center"; ctx.textBaseline="middle"; ctx.fillText(q>0?"+":"−", x, yc+1); }
-    function arrow(x,dir){ var dx = dir*Flen; ctx.strokeStyle="#16a34a"; ctx.fillStyle="#16a34a"; ctx.lineWidth=3; ctx.beginPath(); ctx.moveTo(x,yc-40); ctx.lineTo(x+dx,yc-40); ctx.stroke();
-      ctx.beginPath(); ctx.moveTo(x+dx,yc-40); ctx.lineTo(x+dx-8*dir,yc-46); ctx.lineTo(x+dx-8*dir,yc-34); ctx.fill(); }
-    ball(x1,P.q1); ball(x2,P.q2);
-    if (atr){ arrow(x1,1); arrow(x2,-1); } else { arrow(x1,-1); arrow(x2,1); }
-    ctx.fillStyle="#64748b"; ctx.font="12px Arial"; ctx.textAlign="center"; ctx.fillText("F", (x1+x2)/2, yc-55);
+  var cv = document.getElementById("animCanvas"), P = {step:0, rod:1}, clock = null, tHold = 0;
+  var STEPS = [
+    "0 Neutral sphere (insulated). Bring charged rod near — no contact.",
+    "1 Rod nearby: induced δ on sphere; net Q still 0.",
+    "2 Earth connected: electrons flow; sphere gains net charge opposite to rod.",
+    "3 Disconnect Earth (rod still nearby). Net charge trapped on sphere.",
+    "4 Remove rod. Sphere keeps net charge (opposite to rod)."
+  ];
+  function sphereNet(){
+    // demo units: rod fixed ±3; after earth, sphere ±2 opposite
+    if (P.step <= 1) return 0;
+    return -P.rod * 2;
   }
-  function reset(){ read(); update(); draw(); kText("simMsg","Like signs → repel; unlike → attract. Force size falls as separation rises."); }
-  kBind(["sepSl","q1Sel","q2Sel"], function(){ read(); update(); draw(); });
-  document.getElementById("playBtn").style.display="none";
-  document.getElementById("resetBtn").addEventListener("click", reset);
-  return {reset:reset, draw:draw, resize:function(){draw();}, pause:function(){},
-    set:function(o){ if(o.q1!=null) document.getElementById("q1Sel").value=String(o.q1); if(o.q2!=null) document.getElementById("q2Sel").value=String(o.q2); if(o.sep!=null) kSet("sepSl",o.sep); reset(); },
-    state:function(){ return {q1:P.q1,q2:P.q2,sep:P.sep,attract:P.q1*P.q2<0}; }};
-}
-var LESSON = {quizzes:Q, figs:{}, makeSim:makeSim, demo:{set:{q1:1,q2:-1,sep:160}}};
+  function read(){
+    P.rod = parseInt(document.getElementById("rodSel").value, 10);
+  }
+  function update(){
+    kText("roStep", String(P.step) + " / 4");
+    kText("roRod", (P.rod > 0 ? "+" : "−") + "3");
+    var sn = sphereNet();
+    kText("roSph", sn === 0 ? "0 (neutral)" : ((sn > 0 ? "+" : "−") + Math.abs(sn)));
+    kText("roEarth", P.step === 2 ? "ON" : "OFF");
+    kText("simMsg", STEPS[P.step]);
+  }
+  function draw(){
+    var g = kSetup(cv), ctx = g.ctx, W = g.w, H = g.h;
+    ctx.clearRect(0,0,W,H); ctx.fillStyle = "#fff"; ctx.fillRect(0,0,W,H);
+    // title strip
+    ctx.fillStyle = "#eef3fe"; ctx.fillRect(12, 8, W-24, 32);
+    ctx.strokeStyle = "#1865f2"; ctx.lineWidth = 2; ctx.strokeRect(12, 8, W-24, 32);
+    ctx.fillStyle = "#0a2a66"; ctx.font = "bold 13px Arial"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    ctx.fillText("Charging by induction — live net charge (demo units)", W/2, 24);
 
+    var rodNear = P.step >= 1 && P.step <= 3;
+    var rodX = rodNear ? 110 : 50;
+    var sphX = 360, sphY = H * 0.58;
+
+    // rod
+    ctx.fillStyle = P.rod > 0 ? "#dc2626" : "#2563eb";
+    ctx.strokeStyle = P.rod > 0 ? "#7f1d1d" : "#1e3a8a";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    if (ctx.roundRect){ ctx.roundRect(rodX-18, sphY-70, 36, 140, 8); ctx.fill(); ctx.stroke(); }
+    else { ctx.fillRect(rodX-18, sphY-70, 36, 140); ctx.strokeRect(rodX-18, sphY-70, 36, 140); }
+    ctx.fillStyle = "#fff"; ctx.font = "bold 22px Arial"; ctx.textAlign = "center";
+    ctx.fillText(P.rod > 0 ? "+" : "−", rodX, sphY + 2);
+    ctx.fillStyle = "#5b6170"; ctx.font = "12px Arial";
+    ctx.fillText("rod", rodX, sphY + 90);
+
+    // sphere
+    ctx.beginPath(); ctx.arc(sphX, sphY, 55, 0, 7);
+    ctx.fillStyle = "#eef3fe"; ctx.fill();
+    ctx.strokeStyle = "#1865f2"; ctx.lineWidth = 3; ctx.stroke();
+
+    // induced marks
+    if (P.step === 1 || P.step === 2 || P.step === 3){
+      var nearSign = P.rod > 0 ? "−" : "+";
+      var farSign = P.rod > 0 ? "+" : "−";
+      ctx.font = "bold 18px Arial";
+      ctx.fillStyle = nearSign === "−" ? "#2563eb" : "#dc2626";
+      ctx.fillText("δ" + nearSign, sphX - 28, sphY + 2);
+      if (P.step === 1){
+        ctx.fillStyle = farSign === "+" ? "#dc2626" : "#2563eb";
+        ctx.fillText("δ" + farSign, sphX + 28, sphY + 2);
+      }
+    }
+    var sn = sphereNet();
+    ctx.fillStyle = "#0a2a66"; ctx.font = "bold 14px Arial";
+    ctx.fillText(sn === 0 ? "net 0" : ("net " + (sn > 0 ? "+" : "−") + Math.abs(sn)), sphX, sphY + 78);
+
+    // earth
+    var earthOn = P.step === 2;
+    var ex = sphX, ey = sphY + 55;
+    ctx.strokeStyle = earthOn ? "#16a34a" : "#94a3b8"; ctx.lineWidth = 2.5;
+    ctx.beginPath(); ctx.moveTo(ex, ey); ctx.lineTo(ex, ey + 40); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(ex-22, ey+40); ctx.lineTo(ex+22, ey+40); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(ex-14, ey+48); ctx.lineTo(ex+14, ey+48); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(ex-6, ey+56); ctx.lineTo(ex+6, ey+56); ctx.stroke();
+    ctx.fillStyle = earthOn ? "#166534" : "#94a3b8"; ctx.font = "bold 12px Arial";
+    ctx.fillText(earthOn ? "Earth ON" : "Earth OFF", ex + 50, ey + 48);
+
+    // electron flow arrow when earthing
+    if (earthOn){
+      var flowUp = P.rod > 0; // electrons from earth to sphere for + rod
+      ctx.strokeStyle = "#16a34a"; ctx.fillStyle = "#16a34a";
+      if (flowUp) kArrow(ctx, ex - 40, ey + 50, ex - 40, ey + 10, "#16a34a", 3, "e⁻", ex - 58, ey + 30);
+      else kArrow(ctx, ex - 40, ey + 10, ex - 40, ey + 50, "#16a34a", 3, "e⁻", ex - 58, ey + 30);
+    }
+
+    // stand
+    ctx.strokeStyle = "#78716c"; ctx.lineWidth = 4;
+    ctx.beginPath(); ctx.moveTo(sphX, sphY + 55); ctx.lineTo(sphX, H - 18); ctx.stroke();
+    ctx.fillStyle = "#a8a29e"; ctx.fillRect(sphX - 35, H - 18, 70, 8);
+  }
+  function setStep(s){
+    P.step = Math.max(0, Math.min(4, s));
+    read(); update(); draw();
+  }
+  function nextStep(){ setStep(P.step >= 4 ? 0 : P.step + 1); }
+  function tick(dt){
+    tHold += dt;
+    if (tHold > 1.4){ tHold = 0; if (P.step >= 4){ setStep(0); } else setStep(P.step + 1); }
+    return true;
+  }
+  function play(){
+    if (clock && clock.running()){ clock.stop(); document.getElementById("playBtn").textContent = "▶ Play"; return; }
+    tHold = 0;
+    if (!clock) clock = kClock(tick, function(){ document.getElementById("playBtn").textContent = "▶ Play"; });
+    document.getElementById("playBtn").textContent = "⏸ Pause";
+    clock.start();
+  }
+  function reset(){
+    if (clock) clock.stop();
+    document.getElementById("playBtn").textContent = "▶ Play";
+    document.getElementById("rodSel").value = "1";
+    setStep(0);
+  }
+  document.getElementById("stepBtn").addEventListener("click", function(){ if (clock) clock.stop(); document.getElementById("playBtn").textContent = "▶ Play"; nextStep(); });
+  document.getElementById("playBtn").addEventListener("click", play);
+  document.getElementById("resetBtn").addEventListener("click", reset);
+  document.getElementById("rodSel").addEventListener("change", function(){ read(); update(); draw(); });
+  return {reset:reset, draw:draw, resize:function(){ draw(); }, pause:function(){ if (clock) clock.stop(); document.getElementById("playBtn").textContent = "▶ Play"; },
+    set:function(o){ if (o.rod != null) document.getElementById("rodSel").value = String(o.rod); if (o.step != null) setStep(o.step); else reset(); },
+    state:function(){ return {step:P.step, rod:P.rod, sphere:sphereNet()}; }};
+}
+var LESSON = {quizzes:Q, figs:{}, makeSim:makeSim, demo:{set:{rod:1, step:0}}};
 
 (function(){
 "use strict";

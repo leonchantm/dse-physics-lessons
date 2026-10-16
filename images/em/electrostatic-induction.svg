@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" role="img" aria-label="Electrostatic induction on a neutral conductor and charging by induction with earthing">
+  <rect width="720" height="320" fill="#f8fafc"/>
+  <text x="360" y="26" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#0a2a66">Electrostatic induction &amp; charging by induction</text>
+
+  <!-- Panel A: induction only -->
+  <text x="180" y="52" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#5b6170">A. Nearby + rod (no contact)</text>
+  <rect x="40" y="90" width="36" height="120" rx="6" fill="#dc2626" stroke="#7f1d1d" stroke-width="2"/>
+  <text x="58" y="155" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="800" fill="#fff">+</text>
+  <text x="58" y="230" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#b91c1c">charged rod</text>
+  <ellipse cx="200" cy="150" rx="70" ry="48" fill="#eef3fe" stroke="#1865f2" stroke-width="2.5"/>
+  <text x="165" y="145" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="800" fill="#2563eb">δ−</text>
+  <text x="235" y="145" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="800" fill="#dc2626">δ+</text>
+  <text x="200" y="175" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#5b6170">still neutral overall</text>
+  <text x="200" y="255" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">e⁻ pulled to near end → net attraction</text>
+
+  <!-- Panel B: earth while induced -->
+  <text x="520" y="52" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#5b6170">B. Earth while rod nearby, then disconnect</text>
+  <rect x="380" y="90" width="36" height="120" rx="6" fill="#dc2626" stroke="#7f1d1d" stroke-width="2"/>
+  <text x="398" y="155" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="800" fill="#fff">+</text>
+  <ellipse cx="520" cy="140" rx="55" ry="40" fill="#e8f5e9" stroke="#186d32" stroke-width="2.5"/>
+  <text x="520" y="145" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="800" fill="#166534">e⁻ in</text>
+  <!-- earth symbol -->
+  <line x1="520" y1="180" x2="520" y2="210" stroke="#334155" stroke-width="2"/>
+  <line x1="500" y1="210" x2="540" y2="210" stroke="#334155" stroke-width="2"/>
+  <line x1="505" y1="218" x2="535" y2="218" stroke="#334155" stroke-width="2"/>
+  <line x1="512" y1="226" x2="528" y2="226" stroke="#334155" stroke-width="2"/>
+  <text x="555" y="220" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#5b6170">Earth</text>
+  <text x="520" y="255" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">δ+ electrons leave / e⁻ arrive from Earth</text>
+  <text x="520" y="275" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">Remove earth, then rod → sphere opposite sign</text>
+
+  <rect x="60" y="290" width="600" height="22" rx="6" fill="#f3e8f8"/>
+  <text x="360" y="305" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#7f3f98">Protons stay in nuclei — only electrons move in everyday charging</text>
+</svg>

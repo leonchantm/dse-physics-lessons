@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="Simple a.c. generator with slip rings and brushes">
+  <rect width="640" height="300" fill="#f8fafc"/>
+  <!-- magnets -->
+  <rect x="80" y="40" width="50" height="90" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+  <text x="105" y="95" font-size="22" font-weight="800" text-anchor="middle" fill="#b91c1c">N</text>
+  <rect x="80" y="170" width="50" height="90" rx="6" fill="#e0e7ff" stroke="#3730a3" stroke-width="2"/>
+  <text x="105" y="225" font-size="22" font-weight="800" text-anchor="middle" fill="#3730a3">S</text>
+  <!-- coil rectangle -->
+  <rect x="160" y="95" width="160" height="110" rx="4" fill="none" stroke="#1865f2" stroke-width="3.5"/>
+  <text x="240" y="155" font-size="14" font-weight="700" text-anchor="middle" fill="#1865f2">coil</text>
+  <!-- rotation arrow -->
+  <path d="M250,70 A30,20 0 0 1 290,80" fill="none" stroke="#e3780c" stroke-width="2.5"/>
+  <polygon points="290,80 278,76 282,88" fill="#e3780c"/>
+  <text x="300" y="68" font-size="12" font-weight="700" fill="#e3780c">ω</text>
+  <!-- axle to slip rings -->
+  <line x1="320" y1="150" x2="400" y2="150" stroke="#64748b" stroke-width="3"/>
+  <!-- slip rings -->
+  <circle cx="430" cy="130" r="22" fill="none" stroke="#334155" stroke-width="4"/>
+  <circle cx="430" cy="170" r="22" fill="none" stroke="#334155" stroke-width="4"/>
+  <text x="430" y="210" font-size="12" font-weight="700" text-anchor="middle" fill="#334155">slip rings</text>
+  <!-- brushes -->
+  <rect x="458" y="118" width="28" height="14" rx="2" fill="#78716c"/>
+  <rect x="458" y="168" width="28" height="14" rx="2" fill="#78716c"/>
+  <text x="520" y="130" font-size="12" font-weight="700" fill="#57534e">brushes</text>
+  <!-- load -->
+  <line x1="486" y1="125" x2="560" y2="125" stroke="#0a2a66" stroke-width="2"/>
+  <line x1="486" y1="175" x2="560" y2="175" stroke="#0a2a66" stroke-width="2"/>
+  <rect x="545" y="125" width="50" height="50" rx="6" fill="#e8f5e9" stroke="#186d32" stroke-width="2"/>
+  <text x="570" y="155" font-size="12" font-weight="700" text-anchor="middle" fill="#186d32">load</text>
+  <text x="320" y="280" font-size="13" font-weight="700" text-anchor="middle" fill="#334155">a.c. generator: slip rings keep each brush on one end of the coil → alternating output</text>
+</svg>

@@ -185,34 +185,235 @@
 <section class="step step-learn" data-id="welcome" data-name="Welcome" data-kind="learn"><span class="step-kind learn">Learn</span>
 <div class="welcome-hero">
   <div class="big" aria-hidden="true">Φ</div>
-  <h2 tabindex="-1">Lesson 4.6b: Faraday Law and Generators</h2>
-  <p>Magnetic flux measures “how much field” goes through a loop. Faraday’s law links the rate of change of flux to the induced e.m.f. Generators turn this into electricity.</p>
-<p><b>Hong Kong hook:</b> the a.c. that reaches your flat starts in generators — coils spinning in magnetic fields at power stations.</p>
+  <h2 tabindex="-1">Lesson 4.6b: Faraday’s Law and Generators</h2>
+  <p><b>Magnetic flux</b> <span class="zh">（磁通量）</span> measures how much magnetic field passes through a loop. <b>Faraday’s law</b> <span class="zh">（法拉第定律）</span> links the <b>rate of change</b> of that flux to the induced e.m.f. Generators turn the idea into everyday electricity.</p>
+  <p><b>Hong Kong hook:</b> the a.c. that reaches your flat starts in <b>generators</b> — coils spinning in magnetic fields at power stations. Later steps also cover eddy currents (heating and braking), which show up from induction cookers to MTR-style magnetic brakes.</p>
 </div>
-<div class="box warn"><span class="box-title">📌 Extension</span>Magnetic flux, Faraday’s law and the search coil are in the <b>extension</b> part of the Compulsory Part. You should be able to define Φ = BA cosθ, use ε = −ΔΦ/Δt, and examine fields with a search coil.</div>
+<div class="box warn"><span class="box-title">📌 Extension vs core in this lesson</span>
+<ul class="simple">
+  <li><span class="tag ext">Extension</span> Magnetic flux Φ = BA cosθ, B as flux density, Faraday’s law ε = −ΔΦ/Δt, and the search coil.</li>
+  <li><b>Core</b> Structures of simple a.c. and d.c. generators, and eddy currents (heating, damping/braking, laminations).</li>
+</ul>
+Direction of induced e.m.f. (Lenz’s law) is taught in detail in <a href="4-6a-electromagnetic-induction.html">Lesson 4.6a</a> — here we only use the minus sign as a reminder.
+</div>
 <div class="lesson-link">⬅️ Previous: <a href="4-6a-electromagnetic-induction.html">Lesson 4.6a: Electromagnetic Induction</a> &nbsp;·&nbsp; ➡️ Next: <a href="4-6c-alternating-current.html">Lesson 4.6c: Alternating Current</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div>
 </section>
-<section class="step step-learn" data-id="flux" data-name="Magnetic Flux" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 1</span> <span class="tag ext">Extension</span><h2 tabindex="-1">Flux</h2><div class="box formula"><b>Φ = B A cosθ</b>. Unit weber (Wb). B is flux density (T = Wb m⁻²).</div></section>
-<section class="step step-learn" data-id="faraday" data-name="Faraday Law" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 2</span> <span class="tag ext">Extension</span><h2 tabindex="-1">Faraday</h2><div class="box formula"><b>ε = −ΔΦ/Δt</b> (average). Magnitude = rate of change of flux (linkage NΔΦ/Δt for N turns).</div></section>
-<section class="step step-learn" data-id="search" data-name="Search Coil" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 3</span> <span class="tag ext">Extension</span><h2 tabindex="-1">Search coil</h2><p>Small coil + meter / CRO to probe changing B (induced pulses).</p></section>
-<section class="step step-learn" data-id="acgen" data-name="AC Generator" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 4</span><h2 tabindex="-1">a.c. generator</h2><p>Coil rotates in B; slip rings give alternating e.m.f. ε = ε₀ sinωt.</p></section>
-<section class="step step-learn" data-id="dcgen" data-name="DC Generator" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 5</span><h2 tabindex="-1">d.c. generator</h2><p>Same idea as motor reversed; split-ring gives unidirectional output (pulsating d.c.).</p></section>
-<section class="step step-learn" data-id="eddy" data-name="Eddy Currents" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 6</span><h2 tabindex="-1">Eddy currents</h2><p>Induced loops in bulk metal: heating, damping, braking; reduced by laminations.</p></section>
-<section class="step step-learn" data-id="worked" data-name="Worked Examples" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Worked examples</span> <span class="tag ext">Extension</span><h2 tabindex="-1">Examples</h2><div class="box eg">Φ from 0.80 Wb to 0.20 Wb in 0.10 s → |ε|=6.0 V.</div></section>
-<section class="step step-practice" data-id="p1" data-name="Practice: Flux" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 1</span> <span class="tag ext">Extension</span><h2 tabindex="-1">Flux</h2><div class="quiz" data-quiz="p1"></div></section>
-<section class="step step-sim" data-id="sim" data-name="Try it: Faraday" data-kind="sim"><span class="step-kind sim">Try it</span><span class="tag sim">Try it!</span><h2 tabindex="-1">|ε|=N|ΔΦ|/Δt</h2><div class="sim-panel"><canvas id="animCanvas" width="640" height="280"></canvas><div class="sim-controls"><div class="slider"><label for="dphiSl"><span>dPhi</span><span id="dphiSlVal"></span></label>
-    <input type="range" id="dphiSl" min="0.1" max="2" step="0.1" value="0.6"></div><div class="slider"><label for="dtSl"><span>dt</span><span id="dtSlVal"></span></label>
-    <input type="range" id="dtSl" min="0.05" max="1" step="0.05" value="0.1"></div><div class="slider"><label for="nSl"><span>N</span><span id="nSlVal"></span></label>
-    <input type="range" id="nSl" min="1" max="100" step="1" value="1"></div><div class="sim-buttons">
-  <button class="btn-primary" id="playBtn" type="button">▶ Play</button>
+<section class="step step-learn" data-id="flux" data-name="Magnetic Flux" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 1</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Magnetic flux</h2>
+<p><b>Magnetic flux</b> Φ <span class="zh">（磁通量）</span> measures how much magnetic field “goes through” a surface. For a uniform field through a flat loop of area A:</p>
+<div class="box formula"><span class="box-title">Magnetic flux</span>
+<span class="eq">Φ = B A cosθ</span>
+<br>Unit: <b>weber (Wb)</b>. Also: 1 Wb = 1 T m².
+</div>
+<p>θ is the angle between <b>B</b> and the <b>normal</b> to the loop (the perpendicular sticking out of the plane). When B is straight through the loop, θ = 0 and cosθ = 1, so Φ = BA (maximum). When B lies in the plane of the loop, θ = 90° and Φ = 0 — field lines skim past without crossing the area.</p>
+<div class="visual">
+<img src="images/em/magnetic-flux.svg" alt="Loop of area A with magnetic field B at angle theta to the normal" style="width:100%;max-width:640px;height:auto;display:block;margin:.4rem auto">
+<p class="caption">Only the component of B along the normal counts. Larger B, larger A, or smaller θ (more “head-on”) all increase Φ.</p>
+</div>
+<div class="box key"><span class="box-title">B as magnetic flux density ⭐</span>
+Rearrange for θ = 0: <span class="eq">B = Φ / A</span>. So <b>B</b> is also called <b>magnetic flux density</b> <span class="zh">（磁通量密度）</span> — flux per unit area through a surface normal to the field. Units: T = Wb m⁻².
+</div>
+<div class="grid2">
+  <div class="box eg"><span class="box-title">Flux linkage (N turns)</span>
+  For a coil of N turns in the same flux, the <b>flux linkage</b> is NΦ. Faraday’s law (next step) uses the change in linkage.
+  </div>
+  <div class="box danger"><span class="box-title">Common mistakes</span>
+  <ul class="simple">
+    <li>Calling θ the angle between B and the <b>plane</b> of the coil (wrong — use the normal).</li>
+    <li>Forgetting cosθ when the loop is tilted.</li>
+    <li>Mixing Wb (flux) with T (flux density).</li>
+  </ul>
+  </div>
+</div>
+</section>
+<section class="step step-learn" data-id="faraday" data-name="Faraday Law" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 2</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Faraday’s law</h2>
+<p><b>Faraday’s law</b> says the induced e.m.f. around a closed path equals the <b>rate of change of magnetic flux</b> through the enclosed area. For average values over a time Δt:</p>
+<div class="box formula"><span class="box-title">Faraday’s law (average)</span>
+<span class="eq">ε = − ΔΦ / Δt</span>
+<br>For N turns (flux linkage): <span class="eq">ε = − N ΔΦ / Δt</span>
+<br>Unit: volt (V) = Wb s⁻¹. In calculations we often take the <b>magnitude</b> <span class="eq">|ε| = N |ΔΦ| / Δt</span> and find direction with Lenz’s law separately.
+</div>
+<p>Φ can change if <b>B</b> changes, if <b>A</b> changes (coil expands or shrinks in the field), or if <b>θ</b> changes (coil rotates). A steady flux — magnet held still, no motion — gives <b>zero</b> induced e.m.f.</p>
+<div class="box key"><span class="box-title">What the minus sign means</span>
+The minus sign is Lenz’s law in maths form: the induced e.m.f. (and current, if the circuit is closed) <b>opposes the change</b> in flux. Full direction work lives in Lesson 4.6a — here, remember “magnitude from Faraday, direction from Lenz.”
+</div>
+<div class="grid2">
+  <div class="box eg"><span class="box-title">Faster change → larger |ε|</span>
+  Same ΔΦ in half the time doubles |ε|. More turns (larger N) also multiplies |ε|. That is why generators spin fast and use many-turn coils.
+  </div>
+  <div class="box danger"><span class="box-title">Must remember</span>
+  <ul class="simple">
+    <li>Induced e.m.f. needs a <b>changing</b> flux — not just a strong field.</li>
+    <li>Use |ε| = N|ΔΦ|/Δt for size; use Lenz for sense.</li>
+    <li>ΔΦ is the change in flux through <b>one</b> turn; multiply by N for a multi-turn coil.</li>
+  </ul>
+  </div>
+</div>
+</section>
+<section class="step step-learn" data-id="search" data-name="Search Coil" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 3</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Search coil</h2>
+<p>A <b>search coil</b> <span class="zh">（探測線圈）</span> is a small coil (small area, many turns — often ~1 cm² and thousands of turns) used to <b>probe a changing magnetic field</b>. Connect it to a sensitive meter or a CRO.</p>
+<p>Place it where B is varying (for example near an a.c.-driven solenoid). Changing B means changing Φ through the coil, so Faraday’s law gives an induced e.m.f. For a sinusoidal B-field, the induced e.m.f. also oscillates at the <b>same frequency</b>. Larger N or faster change (higher frequency) gives a larger signal. We keep A small for better spatial resolution — you want to measure “here”, not average over a huge region.</p>
+<div class="box key"><span class="box-title">What it measures</span>
+The search coil does <b>not</b> read a steady B directly. It responds to <b>dB/dt</b> (rate of change). Steady magnets held still give no reading until you move the coil or change the field.
+</div>
+<div class="box eg"><span class="box-title">Lab tip</span>
+Axial and lateral handle designs let you align the coil plane with different field directions. On a CRO with time base off, the trace length often shows the amplitude of the induced alternating voltage.
+</div>
+</section>
+<section class="step step-learn" data-id="acgen" data-name="AC Generator" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 4</span>
+<h2 tabindex="-1">a.c. generator</h2>
+<p>A <b>generator</b> <span class="zh">（發電機）</span> converts kinetic energy to electrical energy. In a simple model, a coil rotates in a magnetic field. As θ between B and the normal changes, Φ = BA cosθ changes continuously, so an e.m.f. is induced.</p>
+<div class="visual">
+<img src="images/em/ac-generator.svg" alt="Simple a.c. generator with coil, magnets, slip rings, brushes and load" style="width:100%;max-width:640px;height:auto;display:block;margin:.4rem auto">
+<p class="caption">Slip rings and carbon brushes connect the spinning coil to the external load without twisting the wires into a knot.</p>
+</div>
+<div class="box key"><span class="box-title">Slip rings → alternating output ⭐</span>
+Each end of the coil stays connected to its own <b>slip ring</b> <span class="zh">（滑環）</span>. The external current therefore reverses every half-turn — that is <b>a.c.</b> Rough form for a simple rotating coil: <span class="eq">ε = ε₀ sinωt</span> (peak ε₀ depends on NBA and angular speed ω).
+</div>
+<div class="grid2">
+  <div class="box eg"><span class="box-title">When is |ε| largest?</span>
+  Flux changes fastest when the coil is roughly “edge-on” to B (Φ near zero but dΦ/dt max). When the coil face is square-on to B, Φ is max but its rate of change is nearly zero — so ε ≈ 0 at that instant.
+  </div>
+  <div class="box eg"><span class="box-title">How to get a larger e.m.f.</span>
+  Spin faster (ω ↑), more turns (N ↑), larger coil area (A ↑), stronger B, or add a soft-iron core. Power stations scale the same physics up hugely.
+  </div>
+</div>
+<div class="box danger"><span class="box-title">Hong Kong link</span>
+HK mains at about <b>50 Hz</b> means the generators (or their rotating fields) complete 50 cycles each second. Lesson 4.6c shows why the label “220 V” is an r.m.s. value — not the peak of this sine wave.
+</div>
+</section>
+<section class="step step-learn" data-id="dcgen" data-name="DC Generator" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 5</span>
+<h2 tabindex="-1">d.c. generator</h2>
+<p>Replace the slip rings with a <b>split-ring commutator</b> <span class="zh">（整流子／裂環）</span> and the same rotating coil becomes a simple <b>d.c. generator</b>. Inside the coil the induced e.m.f. still alternates, but the commutator reverses the connection to the brushes every half-cycle so the <b>external</b> current always flows the same way.</p>
+<div class="box key"><span class="box-title">Pulsating unidirectional output</span>
+The load current does not reverse, but its size still rises and falls each half-turn — <b>pulsating d.c.</b>, not a perfectly flat battery-like current. (Practical machines use more coils or other designs to smooth the output.)
+</div>
+<div class="grid2">
+  <div class="box eg"><span class="box-title">a.c. vs d.c. generator</span>
+  <ul class="simple">
+    <li>a.c. → <b>slip rings</b> → current in the load reverses.</li>
+    <li>d.c. → <b>split ring</b> → current in the load stays one way (pulsating).</li>
+  </ul>
+  </div>
+  <div class="box danger"><span class="box-title">Do not confuse with the motor</span>
+  A simple d.c. motor uses the same split-ring idea but with current <b>supplied</b> to the coil. A generator is the reverse energy story: you supply the rotation and take electrical energy out.
+  </div>
+</div>
+</section>
+<section class="step step-learn" data-id="eddy" data-name="Eddy Currents" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 6</span>
+<h2 tabindex="-1">Eddy currents</h2>
+<p>When a <b>bulk piece of metal</b> (a plate or core) experiences changing flux, induced currents form closed loops inside the metal. They look a bit like swirling water eddies — so we call them <b>eddy currents</b> <span class="zh">（渦電流）</span>. Paths are not neat wires; resistance of a thick plate can be low, so the currents can be large.</p>
+<div class="box key"><span class="box-title">Two main effects</span>
+<ol style="margin:.2rem 0;padding-left:1.2rem">
+  <li><b>Heating</b> — I²R losses warm the metal (used on purpose in induction cookers and furnaces; unwanted in transformer cores).</li>
+  <li><b>Damping / braking</b> — by Lenz’s law the eddy currents oppose the motion that causes them. Faster motion → stronger braking. Used in some roller coasters, vehicles and trains (contactless; little friction wear).</li>
+</ol>
+</div>
+<div class="grid2">
+  <div class="box eg"><span class="box-title">Hong Kong / everyday</span>
+  Induction cookers heat a pan with high-frequency changing B → eddy currents in the pan. Magnetic brakes on some trains and rides use the same opposition idea without rubbing pads.
+  </div>
+  <div class="box eg"><span class="box-title">How to reduce unwanted eddy currents</span>
+  <b>Laminate</b> the metal — thin sheets insulated from each other, with planes parallel to B — so large circulating paths are broken. Or increase resistance of the material. Transformer cores are laminated for this reason (see Lesson 4.7a for efficiency).
+  </div>
+</div>
+<div class="box danger"><span class="box-title">Exam tip</span>
+Name the effect (heating or braking) and the fix (laminations) clearly. A solid core wastes energy as heat; a laminated core cuts the eddy loops.
+</div>
+</section>
+<section class="step step-learn" data-id="worked" data-name="Worked Examples" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Worked examples</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Worked examples</h2>
+
+<div class="box eg worked"><span class="box-title">Example 1 — flux through a loop</span>
+<p>A uniform field B = 0.40 T is perpendicular to a loop of area A = 0.050 m² (θ = 0). Find the magnetic flux Φ.</p>
+<div class="reveal">
+  <div class="rline"><b class="n">1</b> Formula: <span class="eq">Φ = B A cosθ</span>.</div>
+  <div class="rline"><b class="n">2</b> θ = 0 ⇒ cosθ = 1 ⇒ Φ = B A.</div>
+  <div class="rline"><b class="n">3</b> Φ = 0.40 × 0.050 = <b>0.020 Wb</b>.</div>
+  <div class="rline"><b class="n">4</b> Check units: T·m² = Wb ✓</div>
+  <div class="q-actions"><button type="button" class="btn-secondary reveal-next">Show next line ▼</button>
+  <button type="button" class="btn-hint reveal-all">Show all</button></div>
+</div>
+</div>
+
+<div class="box eg worked"><span class="box-title">Example 2 — average induced e.m.f. (Faraday)</span>
+<p>The flux through a single-turn loop falls uniformly from 0.80 Wb to 0.20 Wb in 0.10 s. Find the magnitude of the average induced e.m.f.</p>
+<div class="reveal">
+  <div class="rline"><b class="n">1</b> <span class="eq">|ε| = |ΔΦ| / Δt</span> (N = 1).</div>
+  <div class="rline"><b class="n">2</b> |ΔΦ| = |0.20 − 0.80| = 0.60 Wb.</div>
+  <div class="rline"><b class="n">3</b> |ε| = 0.60 / 0.10 = <b>6.0 V</b>.</div>
+  <div class="rline"><b class="n">4</b> If the coil had N = 50 turns: |ε| = 50 × 6.0 = <b>300 V</b>.</div>
+  <div class="q-actions"><button type="button" class="btn-secondary reveal-next">Show next line ▼</button>
+  <button type="button" class="btn-hint reveal-all">Show all</button></div>
+</div>
+</div>
+
+<div class="box eg worked"><span class="box-title">Example 3 — coil of N turns</span>
+<p>A coil of N = 200 turns has area A = 4.0 × 10⁻³ m². A uniform field B = 0.50 T is perpendicular to the coil (θ = 0). The field is reduced to zero in 0.20 s. Find the average |ε|.</p>
+<ol>
+<li>Initial Φ = BA = 0.50 × 4.0×10⁻³ = 2.0×10⁻³ Wb. Final Φ = 0.</li>
+<li>|ΔΦ| = 2.0×10⁻³ Wb; Δt = 0.20 s.</li>
+<li>|ε| = N|ΔΦ|/Δt = 200 × (2.0×10⁻³) / 0.20 = 200 × 0.010 = <b>2.0 V</b>.</li>
+</ol>
+</div>
+
+<div class="box key"><span class="box-title">Method habit</span>
+Write the formula → substitute numbers with units → check that |ε| rises if N rises or Δt falls. Direction (if asked) comes from Lenz’s law, not from the magnitude formula alone.
+</div>
+</section>
+
+<section class="step step-practice" data-id="p1" data-name="Practice: Flux" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 1</span> <span class="tag ext">Extension</span><h2 tabindex="-1">Practice: magnetic flux</h2><div class="quiz" data-quiz="p1"></div></section>
+<section class="step step-sim" data-id="sim" data-name="Try it: Faraday" data-kind="sim"><span class="step-kind sim">Try it</span><span class="tag sim">Try it!</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">|ε| = N |ΔΦ| / Δt</h2>
+<p>Drag the sliders. The live |ε| must equal <span class="eq">N × |ΔΦ| / Δt</span>. Watch the flux “drain” through the coil on the canvas.</p>
+<div class="sim-panel">
+<canvas id="animCanvas" width="640" height="300" aria-label="Coil with changing magnetic flux"></canvas>
+<div class="sim-controls">
+<div class="slider"><label for="dphiSl"><span>|ΔΦ| (Wb)</span><span id="dphiSlVal"></span></label>
+    <input type="range" id="dphiSl" min="0.1" max="2" step="0.1" value="0.6"></div>
+<div class="slider"><label for="dtSl"><span>Δt (s)</span><span id="dtSlVal"></span></label>
+    <input type="range" id="dtSl" min="0.05" max="1" step="0.05" value="0.1"></div>
+<div class="slider"><label for="nSl"><span>N (turns)</span><span id="nSlVal"></span></label>
+    <input type="range" id="nSl" min="1" max="100" step="1" value="1"></div>
+<div class="sim-buttons">
+  <button class="btn-primary" id="playBtn" type="button">▶ Play change</button>
   <button class="btn-secondary" id="resetBtn" type="button">↺ Reset</button>
   <label for="speedSel" style="font-weight:700">Speed:</label>
   <select id="speedSel"><option value="1">Normal</option><option value="0.5">Slow (½×)</option><option value="0.25">Very slow (¼×)</option></select>
-</div></div><div class="readouts"><div class="ro "><div class="lab">Out1</div><div class="val" id="ro1"></div></div><div class="ro "><div class="lab">Out2</div><div class="val" id="ro2"></div></div></div><p class="caption" id="simMsg">Explore</p></div></section>
-<section class="step step-practice" data-id="psim" data-name="Practice: Simulation" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 2</span> <span class="tag ext">Extension</span><h2 tabindex="-1">Faraday</h2><div class="quiz" data-quiz="psim"></div></section>
-<section class="step step-practice" data-id="p3" data-name="Practice: Generators" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 3</span><h2 tabindex="-1">Generators and eddy</h2><div class="quiz" data-quiz="p3"></div></section>
+</div>
+</div>
+</div>
+<div class="readout">
+  <div class="ro"><div class="lab">|ΔΦ|</div><div class="val" id="ro1"></div></div>
+  <div class="ro a"><div class="lab">Δt</div><div class="val" id="ro2"></div></div>
+  <div class="ro d"><div class="lab">N</div><div class="val" id="ro3"></div></div>
+  <div class="ro v"><div class="lab">|ε| = N|ΔΦ|/Δt</div><div class="val" id="ro4"></div></div>
+</div>
+<p class="caption" id="simMsg">Set |ΔΦ|, Δt and N — |ε| updates live from Faraday’s law.</p>
+</section>
+<section class="step step-practice" data-id="psim" data-name="Practice: Simulation" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 2</span> <span class="tag ext">Extension</span><h2 tabindex="-1">Practice: Faraday’s law</h2><div class="quiz" data-quiz="psim"></div></section>
+<section class="step step-practice" data-id="p3" data-name="Practice: Generators" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 3</span><h2 tabindex="-1">Practice: generators and eddy currents</h2><div class="quiz" data-quiz="p3"></div></section>
 <section class="step step-learn" data-id="summary" data-name="Summary" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Summary</span><h2 tabindex="-1">Remember</h2><div style="text-align:center"><div class="stars" id="stars" aria-hidden="true"></div>
-  <p id="finalScore" style="font-size:1.2rem;font-weight:800"></p><p id="finalMsg"></p></div><p>Extension: Φ, Faraday. Core: generators and eddy uses.</p><div class="lesson-link">⬅️ Previous: <a href="4-6a-electromagnetic-induction.html">Lesson 4.6a: Electromagnetic Induction</a> &nbsp;·&nbsp; ➡️ Next: <a href="4-6c-alternating-current.html">Lesson 4.6c: Alternating Current</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div><div class="q-actions" style="justify-content:center">
+  <p id="finalScore" style="font-size:1.2rem;font-weight:800"></p><p id="finalMsg"></p></div>
+<div class="box key"><span class="box-title">Cheat sheet</span>
+<ul class="simple">
+  <li><span class="tag ext">Extension</span> <span class="eq">Φ = BA cosθ</span> (Wb); B is flux density (T = Wb m⁻²).</li>
+  <li><span class="tag ext">Extension</span> <span class="eq">|ε| = N|ΔΦ|/Δt</span>; minus sign ↔ Lenz (direction in 4.6a).</li>
+  <li><span class="tag ext">Extension</span> Search coil probes <b>changing</b> B → induced pulses.</li>
+  <li><b>Core</b> a.c. generator → slip rings → ε ≈ ε₀ sinωt; d.c. generator → split ring → pulsating unidirectional.</li>
+  <li><b>Core</b> Eddy currents → heating &amp; braking; reduce with <b>laminations</b>.</li>
+</ul>
+</div>
+<div class="lesson-link">⬅️ Previous: <a href="4-6a-electromagnetic-induction.html">Lesson 4.6a: Electromagnetic Induction</a> &nbsp;·&nbsp; ➡️ Next: <a href="4-6c-alternating-current.html">Lesson 4.6c: Alternating Current</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div><div class="q-actions" style="justify-content:center">
   <button class="btn-secondary" id="reviewBtn" type="button">Go to first unfinished question</button>
   <button class="btn-retry" id="restartBtn" type="button">↺ Reset all questions</button>
 </div></section>
@@ -348,37 +549,176 @@ function kText(id, t){ var e = document.getElementById(id); if (e) e.textContent
 function kHTML(id, t){ var e = document.getElementById(id); if (e) e.innerHTML = t; }
 var Q = {
 p1:[
-{type:"mc", text:"Unit of magnetic flux…", options:["weber (Wb)", "tesla only", "ampere", "ohm"], answer:0, hints:["", ""], explain:"Wb"},
-{type:"mc", text:"B as flux density means…", options:["B = Φ/A (for θ=0)", "B = Φ A", "B = I R", "B = V/d"], answer:0, hints:["", ""], explain:"density"},
-{type:"num", text:"B=0.40 T, A=0.050 m², θ=0. Φ (Wb)?", answer:0.02, unit:"Wb", hints:["", ""], explain:"0.020"}
+{type:"mc", text:"The SI unit of magnetic flux Φ is…",
+ options:["weber (Wb)", "tesla only (no Wb)", "ampere (A)", "ohm (Ω)"],
+ answer:0,
+ hints:["Φ = BA cosθ; what unit comes from T·m²?", "1 Wb = 1 T m²."],
+ explain:"Magnetic flux is measured in weber (Wb). Tesla is the unit of B (flux density)."},
+{type:"mc", text:"Calling B “magnetic flux density” means, for a surface normal to the field…",
+ options:["B = Φ / A", "B = Φ A", "B = I R", "B = V / d"],
+ answer:0,
+ hints:["Density = flux per unit area.", "Rearrange Φ = BA when θ = 0."],
+ explain:"B = Φ/A (θ = 0). So B is flux per unit area — flux density. Unit T = Wb m⁻²."},
+{type:"num", text:"B = 0.40 T, A = 0.050 m², θ = 0. What is Φ in Wb?",
+ answer:0.02, unit:"Wb",
+ hints:["Φ = B A cosθ.", "θ = 0 → cosθ = 1 → Φ = 0.40 × 0.050."],
+ explain:"Φ = 0.40 × 0.050 × 1 = 0.020 Wb."},
+{type:"mc", text:"θ in Φ = BA cosθ is the angle between B and…",
+ options:["the normal to the loop", "the plane of the loop (always)", "the current direction", "the Earth’s axis"],
+ answer:0,
+ hints:["When B is straight through the loop, Φ is maximum.", "That means θ = 0 between B and the normal."],
+ explain:"θ is between B and the normal to the area. Plane-of-loop wording is a common trap."},
+{type:"num", text:"B = 0.50 T, A = 0.020 m², θ = 60°. Φ in Wb? (cos60° = 0.5)",
+ answer:0.005, unit:"Wb",
+ hints:["Φ = B A cosθ.", "0.50 × 0.020 × 0.5 = 0.005."],
+ explain:"Φ = 0.50 × 0.020 × 0.5 = 0.0050 Wb."}
 ],
 psim:[
-{type:"num", text:"ΔΦ=0.60 Wb, Δt=0.10 s, N=1. |ε| (V)?", answer:6, unit:"V", hints:["", ""], explain:"6"},
-{type:"num", text:"Same ΔΦ, Δt, N=50. |ε| (V)?", answer:300, unit:"V", hints:["", ""], explain:"300"}
+{type:"num", text:"ΔΦ = 0.60 Wb, Δt = 0.10 s, N = 1. What is |ε| in V?",
+ answer:6, unit:"V",
+ hints:["|ε| = N |ΔΦ| / Δt.", "1 × 0.60 / 0.10 = 6."],
+ explain:"|ε| = 0.60/0.10 = 6.0 V."},
+{type:"num", text:"Same ΔΦ = 0.60 Wb and Δt = 0.10 s, but N = 50. |ε| in V?",
+ answer:300, unit:"V",
+ hints:["Multiply the single-turn result by N.", "50 × 6.0 = 300."],
+ explain:"|ε| = 50 × 0.60 / 0.10 = 300 V."},
+{type:"mc", text:"In the Try it sim, if you keep |ΔΦ| and N fixed but double Δt, |ε|…",
+ options:["halves", "doubles", "stays the same", "becomes zero always"],
+ answer:0,
+ hints:["|ε| = N|ΔΦ|/Δt.", "Larger Δt in the denominator → smaller |ε|."],
+ explain:"Same flux change spread over twice the time → half the average rate → |ε| halves."},
+{type:"mc", text:"A search coil connected to a CRO is mainly sensitive to…",
+ options:["a changing magnetic field (dB/dt)", "only a perfectly steady B with no motion", "temperature alone", "d.c. battery voltage with no coil motion"],
+ answer:0,
+ hints:["Faraday needs changing flux.", "Steady B held still → no induced e.m.f."],
+ explain:"The search coil responds to changing B. Steady fields need motion or change to induce e.m.f."}
 ],
 p3:[
-{type:"mc", text:"a.c. generator uses…", options:["slip rings", "split ring only", "no magnets", "only batteries"], answer:0, hints:["", ""], explain:"slip rings"},
-{type:"mc", text:"d.c. generator output uses…", options:["split-ring commutator", "slip rings for d.c.", "capacitors only", "transformers only"], answer:0, hints:["", ""], explain:"commutator"},
-{type:"mc", text:"Laminating a core reduces…", options:["eddy current losses", "μ₀", "Faraday law", "charge"], answer:0, hints:["", ""], explain:"eddy"},
-{type:"mc", text:"Search coil is…", options:["extension in the guide", "core only", "banned in DSE", "used only for sound"], answer:0, hints:["", ""], explain:"extension"}
+{type:"mc", text:"A simple a.c. generator uses…",
+ options:["slip rings (and brushes)", "a split-ring commutator only", "no magnets at all", "only chemical batteries"],
+ answer:0,
+ hints:["a.c. output must reverse in the external circuit.", "Each coil end stays on its own ring."],
+ explain:"Slip rings keep each brush on one end of the coil → alternating current in the load."},
+{type:"mc", text:"A simple d.c. generator delivers unidirectional current to the load using…",
+ options:["a split-ring commutator", "slip rings for true steady d.c.", "capacitors only", "transformers only"],
+ answer:0,
+ hints:["Compare with the a.c. machine.", "The connection reverses each half-turn so the load current does not."],
+ explain:"The split ring reverses connections each half-cycle → pulsating but one-way output."},
+{type:"mc", text:"Laminating a soft-iron core mainly reduces…",
+ options:["eddy current losses (heating)", "the value of μ₀ in vacuum", "Faraday’s law itself", "the charge of the electron"],
+ answer:0,
+ hints:["Eddy currents are large loops in solid metal.", "Thin insulated sheets break those paths."],
+ explain:"Laminations interrupt eddy current paths and cut unwanted heating."},
+{type:"mc", text:"Eddy-current braking on a metal plate in a magnetic field…",
+ options:["opposes the motion (Lenz) and can heat the metal", "speeds the plate up forever", "only works in a vacuum", "requires a chemical battery in the plate"],
+ answer:0,
+ hints:["Induced currents oppose the change that causes them.", "I²R also means heating."],
+ explain:"Eddy currents oppose the motion (braking) and dissipate energy as heat."},
+{type:"mc", text:"Compared with slip rings, a split-ring commutator in a simple generator makes the load current…",
+ options:["unidirectional but usually pulsating", "perfectly sinusoidal a.c.", "always exactly zero", "independent of rotation"],
+ answer:0,
+ hints:["Direction in the load stays the same.", "Size still rises and falls each half-turn."],
+ explain:"d.c. generator output is one-way but pulsating, not a flat battery curve."}
 ]
 };
 function makeSim(){
-  var cv=document.getElementById("animCanvas"), P={};
-  function read(){ P.dphi=kVal("dphiSl"); P.dt=kVal("dtSl"); P.N=kVal("nSl"); kText("dphiSlVal",kFmt(P.dphi,2)+" Wb"); kText("dtSlVal",kFmt(P.dt,2)+" s"); kText("nSlVal",String(Math.round(P.N))); P.eps=P.N*P.dphi/P.dt; P.ro1="|ε|="+kFmt(P.eps,2)+" V"; P.ro2="N ΔΦ/Δt"; }
-  function update(){ kText("ro1", P.ro1); kText("ro2", P.ro2); }
-  function draw(){ var g=kSetup(cv),ctx=g.ctx,W=g.w,H=g.h; ctx.clearRect(0,0,W,H); ctx.fillStyle="#fff"; ctx.fillRect(0,0,W,H);
-    ctx.fillStyle="#0a2a66"; ctx.font="16px Arial"; ctx.textAlign="center"; ctx.fillText(P.ro1, W/2, H/2-8); ctx.fillText(P.ro2, W/2, H/2+16); }
-  function reset(){ read(); update(); draw(); kText("simMsg", "Faraday"); }
-  document.getElementById("playBtn").style.display="none";
-  document.getElementById("resetBtn").addEventListener("click", reset);
-  kBind(["dphiSl","dtSl","nSl"], function(){ read(); update(); draw(); });
-  return {reset:reset,draw:draw,resize:function(){draw();},pause:function(){},
-    set:function(o){ if(o.dphi!=null)kSet("dphiSl",o.dphi); if(o.dt!=null)kSet("dtSl",o.dt); if(o.N!=null)kSet("nSl",o.N); reset(); },
-    state:function(){ return {eps:P.eps}; }};
+  var cv=document.getElementById("animCanvas"), P={}, clock=null, animT=0, animating=false;
+  function read(){
+    P.dphi=kVal("dphiSl"); P.dt=kVal("dtSl"); P.N=Math.round(kVal("nSl"));
+    kText("dphiSlVal", kFmt(P.dphi,2)+" Wb");
+    kText("dtSlVal", kFmt(P.dt,2)+" s");
+    kText("nSlVal", String(P.N));
+    P.eps = P.N * P.dphi / P.dt;
+  }
+  function update(){
+    kText("ro1", kFmt(P.dphi,2)+" Wb");
+    kText("ro2", kFmt(P.dt,2)+" s");
+    kText("ro3", String(P.N));
+    kText("ro4", kFmt(P.eps,2)+" V");
+  }
+  function fluxFrac(){
+    if (!animating) return 1;
+    var u = Math.min(1, animT / Math.max(P.dt, 1e-6));
+    return 1 - u; // flux falls from full to empty over Δt
+  }
+  function draw(){
+    var g=kSetup(cv), ctx=g.ctx, W=g.w, H=g.h;
+    ctx.clearRect(0,0,W,H);
+    ctx.fillStyle="#f8fafc"; ctx.fillRect(0,0,W,H);
+    var frac = fluxFrac();
+    // coil ellipse
+    var cx=W*0.32, cy=H*0.55, rx=Math.min(110, W*0.22), ry=rx*0.45;
+    ctx.strokeStyle="#1865f2"; ctx.lineWidth=4;
+    ctx.beginPath(); ctx.ellipse(cx,cy,rx,ry,0,0,Math.PI*2); ctx.stroke();
+    // field lines density ~ frac
+    var nLines = Math.max(1, Math.round(8*frac));
+    ctx.strokeStyle="#0a2a66"; ctx.fillStyle="#0a2a66"; ctx.lineWidth=2;
+    for (var i=0;i<nLines;i++){
+      var t = (i+0.5)/Math.max(nLines,1);
+      var x = cx - rx*0.7 + t*rx*1.4;
+      var y1 = cy - ry - 50, y2 = cy + ry + 20;
+      ctx.beginPath(); ctx.moveTo(x,y1); ctx.lineTo(x,y2); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(x,y2); ctx.lineTo(x-5,y2-10); ctx.lineTo(x+5,y2-10); ctx.fill();
+    }
+    ctx.fillStyle="#334155"; ctx.font="bold 13px Arial"; ctx.textAlign="center";
+    ctx.fillText("coil (N="+P.N+")", cx, cy+ry+36);
+    ctx.fillText("B ↓  flux ~ "+Math.round(frac*100)+"%", cx, 28);
+    // formula panel
+    var px=W*0.58, py=40, pw=W*0.38, ph=H-70;
+    ctx.fillStyle="#eef3fe"; ctx.strokeStyle="#1865f2"; ctx.lineWidth=2;
+    roundRect(ctx,px,py,pw,ph,10); ctx.fill(); ctx.stroke();
+    ctx.fillStyle="#0a2a66"; ctx.font="bold 15px Arial"; ctx.textAlign="left";
+    var x0=px+14, y0=py+28;
+    ctx.fillText("|ε| = N |ΔΦ| / Δt", x0, y0);
+    ctx.font="14px Arial"; ctx.fillStyle="#334155";
+    ctx.fillText("N = "+P.N, x0, y0+28);
+    ctx.fillText("|ΔΦ| = "+kFmt(P.dphi,2)+" Wb", x0, y0+52);
+    ctx.fillText("Δt = "+kFmt(P.dt,2)+" s", x0, y0+76);
+    ctx.font="bold 18px Arial"; ctx.fillStyle="#186d32";
+    ctx.fillText("|ε| = "+kFmt(P.eps,2)+" V", x0, y0+112);
+    ctx.font="12px Arial"; ctx.fillStyle="#5b6170";
+    ctx.fillText("check: "+P.N+"×"+kFmt(P.dphi,2)+"/"+kFmt(P.dt,2), x0, y0+136);
+    ctx.fillText("= "+kFmt(P.eps,2)+" V", x0, y0+154);
+  }
+  function roundRect(ctx,x,y,w,h,r){
+    ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r);
+    ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath();
+  }
+  function refresh(){ read(); update(); draw(); }
+  function onTick(dt){
+    animT += dt;
+    draw();
+    if (animT >= P.dt){
+      animating=false; animT=P.dt; draw();
+      kText("simMsg", "Change finished in Δt = "+kFmt(P.dt,2)+" s → |ε| = "+kFmt(P.eps,2)+" V.");
+      return false;
+    }
+    return true;
+  }
+  clock = kClock(onTick, function(){ animating=false; });
+  document.getElementById("playBtn").addEventListener("click", function(){
+    read(); update();
+    animating=true; animT=0;
+    kText("simMsg", "Flux falling over Δt… |ε| stays "+kFmt(P.eps,2)+" V (average).");
+    clock.start();
+  });
+  document.getElementById("resetBtn").addEventListener("click", function(){
+    clock.stop(); animating=false; animT=0; refresh();
+    kText("simMsg", "Set |ΔΦ|, Δt and N — |ε| updates live from Faraday’s law.");
+  });
+  kBind(["dphiSl","dtSl","nSl"], function(){
+    if (animating){ clock.stop(); animating=false; animT=0; }
+    refresh();
+    kText("simMsg", "Live: |ε| = "+P.N+" × "+kFmt(P.dphi,2)+" / "+kFmt(P.dt,2)+" = "+kFmt(P.eps,2)+" V.");
+  });
+  return {reset:function(){ clock.stop(); animating=false; animT=0; refresh(); kText("simMsg","Set |ΔΦ|, Δt and N — |ε| updates live from Faraday’s law."); },
+    draw:draw, resize:function(){ draw(); }, pause:function(){ clock.stop(); },
+    set:function(o){ if(o.dphi!=null)kSet("dphiSl",o.dphi); if(o.dt!=null)kSet("dtSl",o.dt); if(o.N!=null)kSet("nSl",o.N); refresh(); },
+    state:function(){ return {eps:P.eps, dphi:P.dphi, dt:P.dt, N:P.N}; }};
 }
 
 var LESSON = {quizzes:Q, figs:{}, makeSim:makeSim, demo:{set:{"dphi": 0.6, "dt": 0.1, "N": 1}}};
+
 
 
 (function(){

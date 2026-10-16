@@ -184,32 +184,174 @@
 <main id="main">
 <section class="step step-learn" data-id="welcome" data-name="Welcome" data-kind="learn"><span class="step-kind learn">Learn</span>
 <div class="welcome-hero">
-  <div class="big" aria-hidden="true">a.c.</div>
+  <div class="big" aria-hidden="true">∿</div>
   <h2 tabindex="-1">Lesson 4.6c: Alternating Current <span class="tag ext">Extension</span></h2>
-  <p>Alternating current reverses direction many times each second. In Hong Kong the mains frequency is about <b>50 Hz</b>. You will compare a.c. with d.c. and use r.m.s. values.</p>
-<p><b>Hong Kong hook:</b> the 220 V marked on appliances is an r.m.s. value — the peak is higher. That is why a.c. calculations need care.</p>
+  <p><b>Alternating current</b> <span class="zh">（交流電）</span> reverses direction many times each second. In Hong Kong the mains is marked <b>220 V a.c., 50 Hz</b>. That 220 V is an <b>r.m.s.</b> value — the peak is higher.</p>
+  <p><b>Hong Kong hook:</b> your kettle, charger and fluorescent tubes all run on a.c. The light can flicker slightly because power goes to zero twice each cycle — at 50 Hz your eye usually does not notice.</p>
 </div>
-<div class="box warn"><span class="box-title">📌 Extension</span>Alternating current (a.c.) is in the <b>extension</b> part of the Compulsory Part. You should be able to distinguish a.c. from d.c., define r.m.s. value, and relate r.m.s. to peak value.</div>
+<div class="box warn"><span class="box-title">📌 Extension</span>
+The whole a.c. topic here is in the <b>extension</b> part of the Compulsory Part. You should be able to (1) distinguish a.c. from d.c., (2) define the <b>r.m.s.</b> value using equal average heating in a pure resistor, and (3) relate r.m.s. and peak values for a sine wave.
+</div>
 <div class="lesson-link">⬅️ Previous: <a href="4-6b-faraday-generators.html">Lesson 4.6b: Faraday Law and Generators</a> &nbsp;·&nbsp; ➡️ Next: <a href="4-7a-transformers.html">Lesson 4.7a: Transformers</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div>
 </section>
-<section class="step step-learn" data-id="acdc" data-name="AC vs DC" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 1</span> <span class="tag ext">Extension</span><h2 tabindex="-1">a.c. and d.c.</h2><p>d.c. one way; a.c. reverses (HK ~50 Hz).</p></section>
-<section class="step step-learn" data-id="rms" data-name="RMS Value" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 2</span> <span class="tag ext">Extension</span><h2 tabindex="-1">r.m.s.</h2><div class="box formula">Same average power in a resistor as a steady d.c. For sine: I_rms = I0/sqrt(2), V_rms = V0/sqrt(2).</div></section>
-<section class="step step-learn" data-id="worked" data-name="Worked Examples" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Worked examples</span> <span class="tag ext">Extension</span><h2 tabindex="-1">Examples</h2><div class="box eg">V0=311 V → V_rms=220 V.</div></section>
+<section class="step step-learn" data-id="acdc" data-name="AC vs DC" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 1</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">a.c. and d.c.</h2>
+<p>A battery or a steady power pack drives current in <b>one direction only</b>. That is <b>direct current (d.c.)</b> <span class="zh">（直流電）</span>. The size can be steady or varying, but the direction does not reverse.</p>
+<p>Mains electricity drives current <b>back and forth</b>. The direction reverses every half-cycle. That is <b>alternating current (a.c.)</b> <span class="zh">（交流電）</span>.</p>
+<div class="visual">
+<img src="images/em/ac-vs-dc.svg" alt="Graphs of steady d.c., varying d.c., and sinusoidal a.c. against time" style="width:100%;max-width:640px;height:auto;display:block;margin:.4rem auto">
+<p class="caption">Same idea, three sketches: steady d.c., varying d.c. (still one way), and sinusoidal a.c. (direction flips).</p>
+</div>
+<div class="box key"><span class="box-title">Frequency and period ⭐</span>
+A common a.c. is <b>periodic</b>. Frequency <span class="eq">f</span> is how many full cycles happen each second (unit Hz). Period <span class="eq">T = 1/f</span>.
+<br>Hong Kong mains: <b>f ≈ 50 Hz</b> ⇒ <span class="eq">T = 0.02 s</span>. Direction reverses twice per cycle, so about 100 times each second.
+</div>
+<div class="grid2">
+  <div class="box eg"><span class="box-title">Why a.c. terminals are not labelled + / −</span>
+  On a battery, one terminal stays at higher potential. On an a.c. source the higher-potential side <b>swaps</b> each half-cycle. Current needs an <b>alternating e.m.f.</b> — that is what a generator produces.
+  </div>
+  <div class="box danger"><span class="box-title">Must remember</span>
+  <ul class="simple">
+    <li>d.c. → one direction (steady or varying).</li>
+    <li>a.c. → direction reverses periodically.</li>
+    <li>HK mains ≈ <b>220 V a.c., 50 Hz</b> (r.m.s. voltage; see later steps).</li>
+  </ul>
+  </div>
+</div>
+</section>
+<section class="step step-learn" data-id="peak" data-name="Peak &amp; Heating" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 2</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Peak value and why the average is not zero</h2>
+<p>For a sinusoidal supply we write instantaneous voltage as something like <span class="eq">V = V<sub>0</sub> sin(2πft)</span>. The largest value is the <b>peak</b> <span class="zh">（峰值）</span> <span class="eq">V<sub>0</sub></span> (sometimes called amplitude). Instantaneous current in a pure resistor is <span class="eq">I = I<sub>0</sub> sin(2πft)</span> with the same frequency.</p>
+<div class="box eg"><span class="box-title">Puzzle</span>
+Over a full cycle the sine wave is positive half the time and negative half the time. The <b>mean of V</b> (or of I) over a cycle is <b>zero</b>. So why does a kettle still heat water, and why does a bulb still light?
+</div>
+<p>Heating depends on <b>power</b>, not on the signed average of voltage. Instantaneous power in a pure resistor is <span class="eq">P = I²R = V²/R</span>. Squaring makes every value <b>positive</b>. Power goes from a peak down to zero and up again — twice per cycle — so a filament can flicker, but the <b>average</b> power is not zero.</p>
+<div class="box key"><span class="box-title">We need a fair “size” for a.c.</span>
+Saying “the average voltage is zero” is true but useless for heating. We need a single number that matches the heating effect of a steady d.c. That number is the <b>r.m.s. value</b> on the next step.
+</div>
+<div class="box danger"><span class="box-title">Common mistakes</span>
+<ul class="simple">
+  <li>Thinking a mean of zero means “no energy transfer” — heating uses V² and I².</li>
+  <li>Calling the peak “220 V” in Hong Kong — the label 220 V is r.m.s.; the peak is about 311 V.</li>
+  <li>Mixing up period T with the time between direction reversals (half a period).</li>
+</ul>
+</div>
+</section>
+<section class="step step-learn" data-id="rms" data-name="RMS Value" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 3</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Root-mean-square (r.m.s.) value</h2>
+<p>The <b>r.m.s. value</b> <span class="zh">（方均根值）</span> of an alternating current is defined as the <b>steady d.c.</b> which converts electric potential energy to other forms in a given <b>pure resistance</b> at the <b>same average rate</b> as that of the a.c.</p>
+<p>In everyday words: <b>same average heating</b> in the same resistor. That is why appliance ratings and power formulas for a.c. use r.m.s. values.</p>
+<div class="box formula"><span class="box-title">Power with r.m.s. (any regular waveform)</span>
+<span class="eq">P<sub>avg</sub> = I<sub>rms</sub>² R = V<sub>rms</sub>² / R = V<sub>rms</sub> I<sub>rms</sub></span>
+<br>(for a pure resistor; V<sub>rms</sub> and I<sub>rms</sub> are the equivalent steady values).
+</div>
+<div class="box formula"><span class="box-title">Sinusoidal a.c. only</span>
+<span class="eq">V<sub>rms</sub> = V<sub>0</sub> / √2</span>
+&nbsp; and &nbsp;
+<span class="eq">I<sub>rms</sub> = I<sub>0</sub> / √2</span>
+<br>Also: <span class="eq">V<sub>0</sub> = V<sub>rms</sub> × √2</span>, <span class="eq">I<sub>0</sub> = I<sub>rms</sub> × √2</span>.
+</div>
+<div class="grid2">
+  <div class="box eg"><span class="box-title">Hong Kong mains</span>
+  Peak from the supply is about <b>311 V</b>. Then V<sub>rms</sub> = 311 / √2 ≈ <b>220 V</b>. The label “220 V a.c.” means the average power matches a steady 220 V d.c. across the same R — not that the voltage sits at 220 V all the time.
+  </div>
+  <div class="box key"><span class="box-title">Name “root-mean-square”</span>
+  Rough idea (full integration is outside the exam derivation): square the waveform → take the mean over a cycle → take the square root. For a sine that mean of V² is V<sub>0</sub>²/2, so the root is V<sub>0</sub>/√2.
+  </div>
+</div>
+<div class="box danger"><span class="box-title">Exam tip</span>
+Quote the <b>definition</b> with “steady d.c”, “pure resistance”, and “same rate / same average heating”. The sine formulas V<sub>rms</sub> = V<sub>0</sub>/√2 apply only when the wave is sinusoidal.
+</div>
+</section>
+<section class="step step-learn" data-id="worked" data-name="Worked Examples" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Worked examples</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Worked examples</h2>
+
+<div class="box eg worked"><span class="box-title">Example 1 — peak ↔ r.m.s. (HK mains)</span>
+<p>Hong Kong mains is sinusoidal with V<sub>rms</sub> = 220 V. Find the peak voltage V<sub>0</sub>.</p>
+<div class="reveal">
+  <div class="rline"><b class="n">1</b> For sine: <span class="eq">V<sub>0</sub> = V<sub>rms</sub> × √2</span>.</div>
+  <div class="rline"><b class="n">2</b> Substitute: V<sub>0</sub> = 220 × √2.</div>
+  <div class="rline"><b class="n">3</b> √2 ≈ 1.414 ⇒ V<sub>0</sub> ≈ 220 × 1.414 = <b>311 V</b> (3 s.f.).</div>
+  <div class="rline"><b class="n">4</b> Check: peak must be larger than r.m.s. ✓</div>
+  <div class="q-actions"><button type="button" class="btn-secondary reveal-next">Show next line ▼</button>
+  <button type="button" class="btn-hint reveal-all">Show all</button></div>
+</div>
+</div>
+
+<div class="box eg worked"><span class="box-title">Example 2 — average power from r.m.s.</span>
+<p>A heater of resistance R = 48.4 Ω runs from 220 V a.c. (r.m.s.). Find the average power.</p>
+<ol>
+<li>Use <span class="eq">P<sub>avg</sub> = V<sub>rms</sub>² / R</span>.</li>
+<li>P<sub>avg</sub> = (220)² / 48.4 = 48400 / 48.4 = <b>1000 W</b>.</li>
+<li>Same answer as a steady 220 V d.c. across the same R — that is the point of r.m.s.</li>
+</ol>
+</div>
+
+<div class="box eg worked"><span class="box-title">Example 3 — compare heating: d.c. vs sine a.c.</span>
+<p>A heater dissipates power P when connected to a 10 V <b>d.c.</b> supply. When the same heater is connected to a sinusoidal a.c. supply, the average power is only <b>half</b> of that. Find the peak voltage of the a.c. Neglect internal resistance of both supplies.</p>
+<ol>
+<li>d.c.: P = V<sub>dc</sub>² / R ⇒ V<sub>dc</sub>² / R = P with V<sub>dc</sub> = 10 V.</li>
+<li>a.c. average: P<sub>avg</sub> = V<sub>rms</sub>² / R = P/2 ⇒ V<sub>rms</sub>² = V<sub>dc</sub>² / 2 ⇒ V<sub>rms</sub> = 10/√2 = 5√2 V.</li>
+<li>Sine: V<sub>0</sub> = V<sub>rms</sub> × √2 = 5√2 × √2 = <b>10 V</b>.</li>
+<li>So the a.c. peak equals the d.c. voltage here — but average heating is half, because V<sub>rms</sub> = V<sub>0</sub>/√2.</li>
+</ol>
+</div>
+
+<div class="box key"><span class="box-title">Method habit</span>
+(1) State sine or not. (2) Write V<sub>rms</sub> ↔ V<sub>0</sub> or the power formula. (3) Substitute with units. (4) Check peak &gt; r.m.s. for a sine wave.
+</div>
+</section>
 <section class="step step-practice" data-id="p1" data-name="Practice" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 1</span> <span class="tag ext">Extension</span><h2 tabindex="-1">a.c.</h2><div class="quiz" data-quiz="p1"></div></section>
-<section class="step step-sim" data-id="sim" data-name="Try it" data-kind="sim"><span class="step-kind sim">Try it</span><span class="tag sim">Try it!</span><h2 tabindex="-1">V_rms</h2><div class="sim-panel"><canvas id="animCanvas" width="640" height="280"></canvas><div class="sim-controls"><div class="slider"><label for="v0Sl"><span>V0</span><span id="v0SlVal"></span></label>
-    <input type="range" id="v0Sl" min="50" max="400" step="1" value="311"></div><div class="sim-buttons">
+<section class="step step-sim" data-id="sim" data-name="Try it" data-kind="sim"><span class="step-kind sim">Try it</span>
+<span class="tag sim">Try it!</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Explore: sine wave, peak and r.m.s.</h2>
+<p>Adjust peak voltage V<sub>0</sub>, frequency f, and load R. The canvas shows one or two cycles of V(t). Horizontal lines mark ±V<sub>0</sub> and ±V<sub>rms</sub>. Readouts use <span class="eq">V<sub>rms</sub> = V<sub>0</sub>/√2</span> and <span class="eq">I<sub>rms</sub> = V<sub>rms</sub>/R</span>.</p>
+<div class="sim-panel"><canvas id="animCanvas" width="640" height="300"></canvas><div class="sim-controls">
+<div class="slider"><label for="v0Sl"><span>V<sub>0</sub> (peak voltage)</span><span id="v0SlVal"></span></label>
+    <input type="range" id="v0Sl" min="50" max="400" step="1" value="311"></div>
+<div class="slider"><label for="fSl"><span>f (frequency)</span><span id="fSlVal"></span></label>
+    <input type="range" id="fSl" min="10" max="100" step="1" value="50"></div>
+<div class="slider"><label for="rSl"><span>R (load resistance)</span><span id="rSlVal"></span></label>
+    <input type="range" id="rSl" min="20" max="200" step="1" value="100"></div>
+<div class="sim-buttons">
   <button class="btn-primary" id="playBtn" type="button">▶ Play</button>
   <button class="btn-secondary" id="resetBtn" type="button">↺ Reset</button>
   <label for="speedSel" style="font-weight:700">Speed:</label>
   <select id="speedSel"><option value="1">Normal</option><option value="0.5">Slow (½×)</option><option value="0.25">Very slow (¼×)</option></select>
-</div></div><div class="readouts"><div class="ro "><div class="lab">Out1</div><div class="val" id="ro1"></div></div><div class="ro "><div class="lab">Out2</div><div class="val" id="ro2"></div></div></div><p class="caption" id="simMsg">Explore</p></div></section>
+</div></div>
+<div class="readout">
+  <div class="ro v"><div class="lab">V<sub>rms</sub></div><div class="val" id="ro1"></div></div>
+  <div class="ro a"><div class="lab">I<sub>rms</sub></div><div class="val" id="ro2"></div></div>
+  <div class="ro"><div class="lab">P<sub>avg</sub></div><div class="val" id="ro3"></div></div>
+  <div class="ro d"><div class="lab">V<sub>0</sub></div><div class="val" id="ro4"></div></div>
+</div>
+<p class="caption" id="simMsg">Play to animate. Orange = sine V(t); purple dashed = ±V<sub>rms</sub>; blue dashed = ±V<sub>0</sub>.</p></div>
+</section>
 <section class="step step-practice" data-id="psim" data-name="Practice: Simulation" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 2</span> <span class="tag ext">Extension</span><h2 tabindex="-1">r.m.s.</h2><div class="quiz" data-quiz="psim"></div></section>
 <section class="step step-practice" data-id="p2" data-name="Practice: Problems" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 3</span> <span class="tag ext">Extension</span><h2 tabindex="-1">Problems</h2><div class="quiz" data-quiz="p2"></div></section>
-<section class="step step-learn" data-id="summary" data-name="Summary" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Summary</span> <span class="tag ext">Extension</span><h2 tabindex="-1">Remember</h2><div style="text-align:center"><div class="stars" id="stars" aria-hidden="true"></div>
-  <p id="finalScore" style="font-size:1.2rem;font-weight:800"></p><p id="finalMsg"></p></div><p>a.c. vs d.c.; I_rms=I0/sqrt(2).</p><div class="lesson-link">⬅️ Previous: <a href="4-6b-faraday-generators.html">Lesson 4.6b: Faraday Law and Generators</a> &nbsp;·&nbsp; ➡️ Next: <a href="4-7a-transformers.html">Lesson 4.7a: Transformers</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div><div class="q-actions" style="justify-content:center">
+<section class="step step-learn" data-id="summary" data-name="Summary" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Summary</span> <span class="tag ext">Extension</span>
+<h2 tabindex="-1">Remember</h2>
+<div style="text-align:center"><div class="stars" id="stars" aria-hidden="true"></div>
+  <p id="finalScore" style="font-size:1.2rem;font-weight:800"></p><p id="finalMsg"></p></div>
+<ul class="simple">
+  <li><b>d.c.</b>: one direction. <b>a.c.</b>: direction reverses periodically (HK ≈ 50 Hz).</li>
+  <li>Mean of a sine voltage over a cycle is zero, but <b>average heating</b> is not — power uses V² and I².</li>
+  <li><b>r.m.s.</b>: steady d.c. that gives the same average conversion of electric PE in a given pure R as the a.c.</li>
+  <li>Sine: <span class="eq">V<sub>rms</sub> = V<sub>0</sub>/√2</span>, <span class="eq">I<sub>rms</sub> = I<sub>0</sub>/√2</span>. HK: V<sub>0</sub> ≈ 311 V → V<sub>rms</sub> ≈ 220 V.</li>
+  <li>Average power in pure R: <span class="eq">P<sub>avg</sub> = V<sub>rms</sub>²/R = I<sub>rms</sub>² R</span>.</li>
+</ul>
+<div class="lesson-link">⬅️ Previous: <a href="4-6b-faraday-generators.html">Lesson 4.6b: Faraday Law and Generators</a> &nbsp;·&nbsp; ➡️ Next: <a href="4-7a-transformers.html">Lesson 4.7a: Transformers</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div>
+<div class="q-actions" style="justify-content:center">
   <button class="btn-secondary" id="reviewBtn" type="button">Go to first unfinished question</button>
   <button class="btn-retry" id="restartBtn" type="button">↺ Reset all questions</button>
-</div></section>
+</div>
+</section>
+
 </main>
 <nav class="controls" aria-label="Lesson navigation">
   <button class="btn-secondary" id="backBtn" type="button">◀ Back</button>
@@ -220,14 +362,14 @@
 <summary>👩‍🏫 Teacher notes: curriculum outcome map (click to open)</summary>
 <div class="tn-body">
 <p><b>Source:</b> HKDSE Physics Curriculum and Assessment Guide (S4–6), 2015 update — Compulsory Part, <b>IV Electricity and Magnetism</b>, subtopic <b>c. Electromagnetism</b>, “Students should be able to” column, printed pages 43–44 (PDF pages 53–54). Outcome text is quoted from the guide.</p>
-<p>This sub-topic is taught in <b>Lesson 4.5a</b> (<a href="4-5a-magnetic-fields.html">4-5a-magnetic-fields.html</a>): 15 steps; <b>Lesson 4.5b</b> (<a href="4-5b-magnetic-force-motors.html">4-5b-magnetic-force-motors.html</a>): 10 steps; <b>Lesson 4.5c</b> (<a href="4-5c-force-on-charges.html">4-5c-force-on-charges.html</a>): 9 steps; <b>Lesson 4.6a</b> (<a href="4-6a-electromagnetic-induction.html">4-6a-electromagnetic-induction.html</a>): 8 steps; <b>Lesson 4.6b</b> (<a href="4-6b-faraday-generators.html">4-6b-faraday-generators.html</a>): 13 steps; <b>Lesson 4.6c</b> (<a href="4-6c-alternating-current.html">4-6c-alternating-current.html</a>): 9 steps; <b>Lesson 4.7a</b> (<a href="4-7a-transformers.html">4-7a-transformers.html</a>): 10 steps; <b>Lesson 4.7b</b> (<a href="4-7b-power-transmission.html">4-7b-power-transmission.html</a>): 9 steps. Links to other lessons open that file at the step.</p>
+<p>This sub-topic is taught in <b>Lesson 4.5a</b> (<a href="4-5a-magnetic-fields.html">4-5a-magnetic-fields.html</a>): 15 steps; <b>Lesson 4.5b</b> (<a href="4-5b-magnetic-force-motors.html">4-5b-magnetic-force-motors.html</a>): 10 steps; <b>Lesson 4.5c</b> (<a href="4-5c-force-on-charges.html">4-5c-force-on-charges.html</a>): 9 steps; <b>Lesson 4.6a</b> (<a href="4-6a-electromagnetic-induction.html">4-6a-electromagnetic-induction.html</a>): 8 steps; <b>Lesson 4.6b</b> (<a href="4-6b-faraday-generators.html">4-6b-faraday-generators.html</a>): 13 steps; <b>Lesson 4.6c</b> (<a href="4-6c-alternating-current.html">4-6c-alternating-current.html</a>): 10 steps; <b>Lesson 4.7a</b> (<a href="4-7a-transformers.html">4-7a-transformers.html</a>): 10 steps; <b>Lesson 4.7b</b> (<a href="4-7b-power-transmission.html">4-7b-power-transmission.html</a>): 9 steps. Links to other lessons open that file at the step.</p>
 <h3>Learning outcomes</h3>
 <div class="table-scroll"><table class="t outcomes"><tr><th>#</th><th>Topic</th><th>Learning outcome (quoted)</th><th>Where it is taught / practised</th></tr>
-<tr><td>1</td><td><i>magnetic force and magnetic field</i></td><td>“realise the attraction and repulsion between magnetic poles”</td><td><a href="4-5a-magnetic-fields.html#step2">L4.5a Step 2: Magnetic Poles</a><br><a href="4-5a-magnetic-fields.html#step11">L4.5a Step 11: Practice: Magnets</a></td></tr><tr><td>2</td><td><i>magnetic force and magnetic field</i></td><td>“examine the magnetic field in the region around a magnet”</td><td><a href="4-5a-magnetic-fields.html#step3">L4.5a Step 3: Magnetic Field</a><br><a href="4-5a-magnetic-fields.html#step12">L4.5a Step 12: Try it: B Explorer</a></td></tr><tr><td>3</td><td><i>magnetic force and magnetic field</i></td><td>“describe the behaviour of a compass in a magnetic field”</td><td><a href="4-5a-magnetic-fields.html#step3">L4.5a Step 3: Magnetic Field</a><br><a href="4-5a-magnetic-fields.html#step12">L4.5a Step 12: Try it: B Explorer</a><br><a href="4-5a-magnetic-fields.html#step11">L4.5a Step 11: Practice: Magnets</a></td></tr><tr><td>4</td><td><i>magnetic force and magnetic field</i></td><td>“represent magnetic field using field lines”</td><td><a href="4-5a-magnetic-fields.html#step3">L4.5a Step 3: Magnetic Field</a><br><a href="4-5a-magnetic-fields.html#step12">L4.5a Step 12: Try it: B Explorer</a><br><a href="4-5a-magnetic-fields.html#step11">L4.5a Step 11: Practice: Magnets</a></td></tr><tr><td>5</td><td><i>magnetic effect of electric current</i></td><td>“realise the existence of a magnetic field due to moving charges or electric currents”</td><td><a href="4-5a-magnetic-fields.html#step4">L4.5a Step 4: Field from Current</a><br><a href="4-5a-magnetic-fields.html#step12">L4.5a Step 12: Try it: B Explorer</a></td></tr><tr><td>6</td><td><i>magnetic effect of electric current</i></td><td>“examine the magnetic field patterns associated with currents through a long straight wire, a circular coil and a long solenoid”</td><td><a href="4-5a-magnetic-fields.html#step5">L4.5a Step 5: Straight Wire</a><br><a href="4-5a-magnetic-fields.html#step6">L4.5a Step 6: Circular Coil</a><br><a href="4-5a-magnetic-fields.html#step7">L4.5a Step 7: Solenoid</a><br><a href="4-5a-magnetic-fields.html#step12">L4.5a Step 12: Try it: B Explorer</a><br><a href="4-5a-magnetic-fields.html#step13">L4.5a Step 13: Practice: Simulation</a></td></tr><tr><td>7</td><td><i>magnetic effect of electric current</i></td><td>“apply B = μ₀I/(2πr) and B = μ₀NI/l to represent the magnetic fields around a long straight wire, and inside a long solenoid carrying current, and solve related problems” <span class="tag quiz">Extension</span></td><td><a href="4-5a-magnetic-fields.html#step8">L4.5a Step 8: B Formulas</a><br><a href="4-5a-magnetic-fields.html#step10">L4.5a Step 10: Worked Examples</a><br><a href="4-5a-magnetic-fields.html#step13">L4.5a Step 13: Practice: Simulation</a><br><a href="4-5a-magnetic-fields.html#step14">L4.5a Step 14: Practice: Problems</a></td></tr><tr><td>8</td><td><i>magnetic effect of electric current</i></td><td>“examine the factors affecting the strength of an electromagnet”</td><td><a href="4-5a-magnetic-fields.html#step9">L4.5a Step 9: Electromagnet</a><br><a href="4-5a-magnetic-fields.html#step12">L4.5a Step 12: Try it: B Explorer</a><br><a href="4-5a-magnetic-fields.html#step14">L4.5a Step 14: Practice: Problems</a></td></tr><tr><td>9</td><td><i>force due to magnetic field</i></td><td>“examine the existence of a force on a current-carrying conductor in a magnetic field and determine the relative directions of force, field and current”</td><td><a href="4-5b-magnetic-force-motors.html#step2">L4.5b Step 2: Force on a Wire</a><br><a href="4-5b-magnetic-force-motors.html#step7">L4.5b Step 7: Try it</a><br><a href="4-5b-magnetic-force-motors.html#step6">L4.5b Step 6: Practice: Force</a></td></tr><tr><td>10</td><td><i>force due to magnetic field</i></td><td>“determine the factors affecting the force on a straight current-carrying wire in a magnetic field and represent the force by F = BIl sinθ”</td><td><a href="4-5b-magnetic-force-motors.html#step2">L4.5b Step 2: Force on a Wire</a><br><a href="4-5b-magnetic-force-motors.html#step5">L4.5b Step 5: Worked Examples</a><br><a href="4-5b-magnetic-force-motors.html#step7">L4.5b Step 7: Try it</a><br><a href="4-5b-magnetic-force-motors.html#step8">L4.5b Step 8: Practice: Simulation</a><br><a href="4-5b-magnetic-force-motors.html#step6">L4.5b Step 6: Practice: Force</a></td></tr><tr><td>11</td><td><i>force due to magnetic field</i></td><td>“determine the turning effect on a current-carrying coil in a magnetic field”</td><td><a href="4-5b-magnetic-force-motors.html#step3">L4.5b Step 3: Turning Effect</a><br><a href="4-5b-magnetic-force-motors.html#step7">L4.5b Step 7: Try it</a></td></tr><tr><td>12</td><td><i>force due to magnetic field</i></td><td>“describe the structure of a simple d.c. motor and how it works”</td><td><a href="4-5b-magnetic-force-motors.html#step4">L4.5b Step 4: DC Motor</a><br><a href="4-5b-magnetic-force-motors.html#step7">L4.5b Step 7: Try it</a><br><a href="4-5b-magnetic-force-motors.html#step9">L4.5b Step 9: Practice: Motor</a></td></tr><tr><td>13</td><td><i>force due to magnetic field</i></td><td>“solve problems involving current-carrying conductors in a magnetic field”</td><td><a href="4-5b-magnetic-force-motors.html#step5">L4.5b Step 5: Worked Examples</a><br><a href="4-5b-magnetic-force-motors.html#step8">L4.5b Step 8: Practice: Simulation</a><br><a href="4-5b-magnetic-force-motors.html#step9">L4.5b Step 9: Practice: Motor</a></td></tr><tr><td>14</td><td><i>force due to magnetic field</i></td><td>“represent the force on a moving charge in a magnetic field by F = BQv sinθ and solve problems” <span class="tag quiz">Extension</span></td><td><a href="4-5c-force-on-charges.html#step2">L4.5c Step 2: Force on a Charge</a><br><a href="4-5c-force-on-charges.html#step3">L4.5c Step 3: Circular Path</a><br><a href="4-5c-force-on-charges.html#step4">L4.5c Step 4: Worked Examples</a><br><a href="4-5c-force-on-charges.html#step6">L4.5c Step 6: Try it</a><br><a href="4-5c-force-on-charges.html#step7">L4.5c Step 7: Practice: Simulation</a><br><a href="4-5c-force-on-charges.html#step5">L4.5c Step 5: Practice</a><br><a href="4-5c-force-on-charges.html#step8">L4.5c Step 8: Practice: Path</a></td></tr><tr><td>15</td><td><i>electromagnetic induction</i></td><td>“examine induced e.m.f. resulting from a moving conductor in a steady magnetic field or a stationary conductor in a changing magnetic field”</td><td><a href="4-6a-electromagnetic-induction.html#step2">L4.6a Step 2: Induced EMF</a><br><a href="4-6a-electromagnetic-induction.html#step5">L4.6a Step 5: Try it: Lenz</a><br><a href="4-6a-electromagnetic-induction.html#step4">L4.6a Step 4: Practice: Induction</a></td></tr><tr><td>16</td><td><i>electromagnetic induction</i></td><td>“apply Lenz’s law to determine the direction of induced e.m.f./current”</td><td><a href="4-6a-electromagnetic-induction.html#step3">L4.6a Step 3: Lenz Law</a><br><a href="4-6a-electromagnetic-induction.html#step5">L4.6a Step 5: Try it: Lenz</a><br><a href="4-6a-electromagnetic-induction.html#step6">L4.6a Step 6: Practice: Simulation</a><br><a href="4-6a-electromagnetic-induction.html#step7">L4.6a Step 7: Practice: Direction</a></td></tr><tr><td>17</td><td><i>electromagnetic induction</i></td><td>“define magnetic flux Φ = BA cosθ and weber (Wb) as a unit of magnetic flux” <span class="tag quiz">Extension</span></td><td><a href="4-6b-faraday-generators.html#step2">L4.6b Step 2: Magnetic Flux</a><br><a href="4-6b-faraday-generators.html#step9">L4.6b Step 9: Practice: Flux</a></td></tr><tr><td>18</td><td><i>electromagnetic induction</i></td><td>“interpret magnetic field B as magnetic flux density” <span class="tag quiz">Extension</span></td><td><a href="4-6b-faraday-generators.html#step2">L4.6b Step 2: Magnetic Flux</a><br><a href="4-6b-faraday-generators.html#step9">L4.6b Step 9: Practice: Flux</a></td></tr><tr><td>19</td><td><i>electromagnetic induction</i></td><td>“state Faraday’s Law as ε = −ΔΦ/Δt and apply it to calculate the average induced e.m.f.” <span class="tag quiz">Extension</span></td><td><a href="4-6b-faraday-generators.html#step3">L4.6b Step 3: Faraday Law</a><br><a href="4-6b-faraday-generators.html#step8">L4.6b Step 8: Worked Examples</a><br><a href="4-6b-faraday-generators.html#step10">L4.6b Step 10: Try it: Faraday</a><br><a href="4-6b-faraday-generators.html#step11">L4.6b Step 11: Practice: Simulation</a><br><a href="4-6b-faraday-generators.html#step12">L4.6b Step 12: Practice: Generators</a></td></tr><tr><td>20</td><td><i>electromagnetic induction</i></td><td>“examine magnetic fields using a search coil” <span class="tag quiz">Extension</span></td><td><a href="4-6b-faraday-generators.html#step4">L4.6b Step 4: Search Coil</a><br><a href="4-6b-faraday-generators.html#step12">L4.6b Step 12: Practice: Generators</a></td></tr><tr><td>21</td><td><i>electromagnetic induction</i></td><td>“describe the structures of simple d.c. and a.c. generators and how they work”</td><td><a href="4-6b-faraday-generators.html#step5">L4.6b Step 5: AC Generator</a><br><a href="4-6b-faraday-generators.html#step6">L4.6b Step 6: DC Generator</a><br><a href="4-6b-faraday-generators.html#step10">L4.6b Step 10: Try it: Faraday</a><br><a href="4-6b-faraday-generators.html#step12">L4.6b Step 12: Practice: Generators</a></td></tr><tr><td>22</td><td><i>electromagnetic induction</i></td><td>“discuss the occurrence and practical uses of eddy currents”</td><td><a href="4-6b-faraday-generators.html#step7">L4.6b Step 7: Eddy Currents</a><br><a href="4-6b-faraday-generators.html#step12">L4.6b Step 12: Practice: Generators</a></td></tr><tr><td>23</td><td><i>alternating currents (a.c.)</i></td><td>“distinguish between direct currents (d.c.) and alternating currents (a.c.)” <span class="tag quiz">Extension</span></td><td><a href="#step2" data-step="2">L4.6c Step 2: AC vs DC</a><br><a href="#step6" data-step="6">L4.6c Step 6: Try it</a><br><a href="#step5" data-step="5">L4.6c Step 5: Practice</a></td></tr><tr><td>24</td><td><i>alternating currents (a.c.)</i></td><td>“define r.m.s. of an alternating current as the steady d.c. which converts electric potential energy to other forms in a given pure resistance at the same rate as that of the a.c.” <span class="tag quiz">Extension</span></td><td><a href="#step3" data-step="3">L4.6c Step 3: RMS Value</a><br><a href="#step6" data-step="6">L4.6c Step 6: Try it</a><br><a href="#step5" data-step="5">L4.6c Step 5: Practice</a></td></tr><tr><td>25</td><td><i>alternating currents (a.c.)</i></td><td>“relate the r.m.s. and peak values of an a.c.” <span class="tag quiz">Extension</span></td><td><a href="#step3" data-step="3">L4.6c Step 3: RMS Value</a><br><a href="#step4" data-step="4">L4.6c Step 4: Worked Examples</a><br><a href="#step7" data-step="7">L4.6c Step 7: Practice: Simulation</a><br><a href="#step8" data-step="8">L4.6c Step 8: Practice: Problems</a></td></tr><tr><td>26</td><td><i>transformer</i></td><td>“describe the structure of a simple transformer and how it works” <span class="tag quiz">Extension</span></td><td><a href="4-7a-transformers.html#step2">L4.7a Step 2: Structure</a><br><a href="4-7a-transformers.html#step7">L4.7a Step 7: Try it</a><br><a href="4-7a-transformers.html#step6">L4.7a Step 6: Practice</a></td></tr><tr><td>27</td><td><i>transformer</i></td><td>“relate the voltage ratio to turn ratio by Vp/Vs = Np/Ns and apply it to solve problems” <span class="tag quiz">Extension</span></td><td><a href="4-7a-transformers.html#step3">L4.7a Step 3: Turns Ratio</a><br><a href="4-7a-transformers.html#step5">L4.7a Step 5: Worked Examples</a><br><a href="4-7a-transformers.html#step7">L4.7a Step 7: Try it</a><br><a href="4-7a-transformers.html#step8">L4.7a Step 8: Practice: Simulation</a><br><a href="4-7a-transformers.html#step9">L4.7a Step 9: Practice: Problems</a></td></tr><tr><td>28</td><td><i>transformer</i></td><td>“examine methods for improving the efficiency of a transformer” <span class="tag quiz">Extension</span></td><td><a href="4-7a-transformers.html#step4">L4.7a Step 4: Efficiency</a><br><a href="4-7a-transformers.html#step9">L4.7a Step 9: Practice: Problems</a></td></tr><tr><td>29</td><td><i>high voltage transmission of electrical energy</i></td><td>“discuss the advantages of transmission of electrical energy with a.c. at high voltages” <span class="tag quiz">Extension</span></td><td><a href="4-7b-power-transmission.html#step2">L4.7b Step 2: Why High Voltage</a><br><a href="4-7b-power-transmission.html#step4">L4.7b Step 4: Worked Examples</a><br><a href="4-7b-power-transmission.html#step6">L4.7b Step 6: Try it</a><br><a href="4-7b-power-transmission.html#step5">L4.7b Step 5: Practice</a></td></tr><tr><td>30</td><td><i>high voltage transmission of electrical energy</i></td><td>“describe various stages of stepping up and down of the voltage in a grid system for power transmission” <span class="tag quiz">Extension</span></td><td><a href="4-7b-power-transmission.html#step3">L4.7b Step 3: The Grid</a><br><a href="4-7b-power-transmission.html#step6">L4.7b Step 6: Try it</a><br><a href="4-7b-power-transmission.html#step8">L4.7b Step 8: Practice: Grid</a></td></tr></table></div>
+<tr><td>1</td><td><i>magnetic force and magnetic field</i></td><td>“realise the attraction and repulsion between magnetic poles”</td><td><a href="4-5a-magnetic-fields.html#step2">L4.5a Step 2: Magnetic Poles</a><br><a href="4-5a-magnetic-fields.html#step11">L4.5a Step 11: Practice: Magnets</a></td></tr><tr><td>2</td><td><i>magnetic force and magnetic field</i></td><td>“examine the magnetic field in the region around a magnet”</td><td><a href="4-5a-magnetic-fields.html#step3">L4.5a Step 3: Magnetic Field</a><br><a href="4-5a-magnetic-fields.html#step12">L4.5a Step 12: Try it: B Explorer</a></td></tr><tr><td>3</td><td><i>magnetic force and magnetic field</i></td><td>“describe the behaviour of a compass in a magnetic field”</td><td><a href="4-5a-magnetic-fields.html#step3">L4.5a Step 3: Magnetic Field</a><br><a href="4-5a-magnetic-fields.html#step12">L4.5a Step 12: Try it: B Explorer</a><br><a href="4-5a-magnetic-fields.html#step11">L4.5a Step 11: Practice: Magnets</a></td></tr><tr><td>4</td><td><i>magnetic force and magnetic field</i></td><td>“represent magnetic field using field lines”</td><td><a href="4-5a-magnetic-fields.html#step3">L4.5a Step 3: Magnetic Field</a><br><a href="4-5a-magnetic-fields.html#step12">L4.5a Step 12: Try it: B Explorer</a><br><a href="4-5a-magnetic-fields.html#step11">L4.5a Step 11: Practice: Magnets</a></td></tr><tr><td>5</td><td><i>magnetic effect of electric current</i></td><td>“realise the existence of a magnetic field due to moving charges or electric currents”</td><td><a href="4-5a-magnetic-fields.html#step4">L4.5a Step 4: Field from Current</a><br><a href="4-5a-magnetic-fields.html#step12">L4.5a Step 12: Try it: B Explorer</a></td></tr><tr><td>6</td><td><i>magnetic effect of electric current</i></td><td>“examine the magnetic field patterns associated with currents through a long straight wire, a circular coil and a long solenoid”</td><td><a href="4-5a-magnetic-fields.html#step5">L4.5a Step 5: Straight Wire</a><br><a href="4-5a-magnetic-fields.html#step6">L4.5a Step 6: Circular Coil</a><br><a href="4-5a-magnetic-fields.html#step7">L4.5a Step 7: Solenoid</a><br><a href="4-5a-magnetic-fields.html#step12">L4.5a Step 12: Try it: B Explorer</a><br><a href="4-5a-magnetic-fields.html#step13">L4.5a Step 13: Practice: Simulation</a></td></tr><tr><td>7</td><td><i>magnetic effect of electric current</i></td><td>“apply B = μ₀I/(2πr) and B = μ₀NI/l to represent the magnetic fields around a long straight wire, and inside a long solenoid carrying current, and solve related problems” <span class="tag quiz">Extension</span></td><td><a href="4-5a-magnetic-fields.html#step8">L4.5a Step 8: B Formulas</a><br><a href="4-5a-magnetic-fields.html#step10">L4.5a Step 10: Worked Examples</a><br><a href="4-5a-magnetic-fields.html#step13">L4.5a Step 13: Practice: Simulation</a><br><a href="4-5a-magnetic-fields.html#step14">L4.5a Step 14: Practice: Problems</a></td></tr><tr><td>8</td><td><i>magnetic effect of electric current</i></td><td>“examine the factors affecting the strength of an electromagnet”</td><td><a href="4-5a-magnetic-fields.html#step9">L4.5a Step 9: Electromagnet</a><br><a href="4-5a-magnetic-fields.html#step12">L4.5a Step 12: Try it: B Explorer</a><br><a href="4-5a-magnetic-fields.html#step14">L4.5a Step 14: Practice: Problems</a></td></tr><tr><td>9</td><td><i>force due to magnetic field</i></td><td>“examine the existence of a force on a current-carrying conductor in a magnetic field and determine the relative directions of force, field and current”</td><td><a href="4-5b-magnetic-force-motors.html#step2">L4.5b Step 2: Force on a Wire</a><br><a href="4-5b-magnetic-force-motors.html#step7">L4.5b Step 7: Try it</a><br><a href="4-5b-magnetic-force-motors.html#step6">L4.5b Step 6: Practice: Force</a></td></tr><tr><td>10</td><td><i>force due to magnetic field</i></td><td>“determine the factors affecting the force on a straight current-carrying wire in a magnetic field and represent the force by F = BIl sinθ”</td><td><a href="4-5b-magnetic-force-motors.html#step2">L4.5b Step 2: Force on a Wire</a><br><a href="4-5b-magnetic-force-motors.html#step5">L4.5b Step 5: Worked Examples</a><br><a href="4-5b-magnetic-force-motors.html#step7">L4.5b Step 7: Try it</a><br><a href="4-5b-magnetic-force-motors.html#step8">L4.5b Step 8: Practice: Simulation</a><br><a href="4-5b-magnetic-force-motors.html#step6">L4.5b Step 6: Practice: Force</a></td></tr><tr><td>11</td><td><i>force due to magnetic field</i></td><td>“determine the turning effect on a current-carrying coil in a magnetic field”</td><td><a href="4-5b-magnetic-force-motors.html#step3">L4.5b Step 3: Turning Effect</a><br><a href="4-5b-magnetic-force-motors.html#step7">L4.5b Step 7: Try it</a></td></tr><tr><td>12</td><td><i>force due to magnetic field</i></td><td>“describe the structure of a simple d.c. motor and how it works”</td><td><a href="4-5b-magnetic-force-motors.html#step4">L4.5b Step 4: DC Motor</a><br><a href="4-5b-magnetic-force-motors.html#step7">L4.5b Step 7: Try it</a><br><a href="4-5b-magnetic-force-motors.html#step9">L4.5b Step 9: Practice: Motor</a></td></tr><tr><td>13</td><td><i>force due to magnetic field</i></td><td>“solve problems involving current-carrying conductors in a magnetic field”</td><td><a href="4-5b-magnetic-force-motors.html#step5">L4.5b Step 5: Worked Examples</a><br><a href="4-5b-magnetic-force-motors.html#step8">L4.5b Step 8: Practice: Simulation</a><br><a href="4-5b-magnetic-force-motors.html#step9">L4.5b Step 9: Practice: Motor</a></td></tr><tr><td>14</td><td><i>force due to magnetic field</i></td><td>“represent the force on a moving charge in a magnetic field by F = BQv sinθ and solve problems” <span class="tag quiz">Extension</span></td><td><a href="4-5c-force-on-charges.html#step2">L4.5c Step 2: Force on a Charge</a><br><a href="4-5c-force-on-charges.html#step3">L4.5c Step 3: Circular Path</a><br><a href="4-5c-force-on-charges.html#step4">L4.5c Step 4: Worked Examples</a><br><a href="4-5c-force-on-charges.html#step6">L4.5c Step 6: Try it</a><br><a href="4-5c-force-on-charges.html#step7">L4.5c Step 7: Practice: Simulation</a><br><a href="4-5c-force-on-charges.html#step5">L4.5c Step 5: Practice</a><br><a href="4-5c-force-on-charges.html#step8">L4.5c Step 8: Practice: Path</a></td></tr><tr><td>15</td><td><i>electromagnetic induction</i></td><td>“examine induced e.m.f. resulting from a moving conductor in a steady magnetic field or a stationary conductor in a changing magnetic field”</td><td><a href="4-6a-electromagnetic-induction.html#step2">L4.6a Step 2: Induced EMF</a><br><a href="4-6a-electromagnetic-induction.html#step5">L4.6a Step 5: Try it: Lenz</a><br><a href="4-6a-electromagnetic-induction.html#step4">L4.6a Step 4: Practice: Induction</a></td></tr><tr><td>16</td><td><i>electromagnetic induction</i></td><td>“apply Lenz’s law to determine the direction of induced e.m.f./current”</td><td><a href="4-6a-electromagnetic-induction.html#step3">L4.6a Step 3: Lenz Law</a><br><a href="4-6a-electromagnetic-induction.html#step5">L4.6a Step 5: Try it: Lenz</a><br><a href="4-6a-electromagnetic-induction.html#step6">L4.6a Step 6: Practice: Simulation</a><br><a href="4-6a-electromagnetic-induction.html#step7">L4.6a Step 7: Practice: Direction</a></td></tr><tr><td>17</td><td><i>electromagnetic induction</i></td><td>“define magnetic flux Φ = BA cosθ and weber (Wb) as a unit of magnetic flux” <span class="tag quiz">Extension</span></td><td><a href="4-6b-faraday-generators.html#step2">L4.6b Step 2: Magnetic Flux</a><br><a href="4-6b-faraday-generators.html#step9">L4.6b Step 9: Practice: Flux</a></td></tr><tr><td>18</td><td><i>electromagnetic induction</i></td><td>“interpret magnetic field B as magnetic flux density” <span class="tag quiz">Extension</span></td><td><a href="4-6b-faraday-generators.html#step2">L4.6b Step 2: Magnetic Flux</a><br><a href="4-6b-faraday-generators.html#step9">L4.6b Step 9: Practice: Flux</a></td></tr><tr><td>19</td><td><i>electromagnetic induction</i></td><td>“state Faraday’s Law as ε = −ΔΦ/Δt and apply it to calculate the average induced e.m.f.” <span class="tag quiz">Extension</span></td><td><a href="4-6b-faraday-generators.html#step3">L4.6b Step 3: Faraday Law</a><br><a href="4-6b-faraday-generators.html#step8">L4.6b Step 8: Worked Examples</a><br><a href="4-6b-faraday-generators.html#step10">L4.6b Step 10: Try it: Faraday</a><br><a href="4-6b-faraday-generators.html#step11">L4.6b Step 11: Practice: Simulation</a><br><a href="4-6b-faraday-generators.html#step12">L4.6b Step 12: Practice: Generators</a></td></tr><tr><td>20</td><td><i>electromagnetic induction</i></td><td>“examine magnetic fields using a search coil” <span class="tag quiz">Extension</span></td><td><a href="4-6b-faraday-generators.html#step4">L4.6b Step 4: Search Coil</a><br><a href="4-6b-faraday-generators.html#step12">L4.6b Step 12: Practice: Generators</a></td></tr><tr><td>21</td><td><i>electromagnetic induction</i></td><td>“describe the structures of simple d.c. and a.c. generators and how they work”</td><td><a href="4-6b-faraday-generators.html#step5">L4.6b Step 5: AC Generator</a><br><a href="4-6b-faraday-generators.html#step6">L4.6b Step 6: DC Generator</a><br><a href="4-6b-faraday-generators.html#step10">L4.6b Step 10: Try it: Faraday</a><br><a href="4-6b-faraday-generators.html#step12">L4.6b Step 12: Practice: Generators</a></td></tr><tr><td>22</td><td><i>electromagnetic induction</i></td><td>“discuss the occurrence and practical uses of eddy currents”</td><td><a href="4-6b-faraday-generators.html#step7">L4.6b Step 7: Eddy Currents</a><br><a href="4-6b-faraday-generators.html#step12">L4.6b Step 12: Practice: Generators</a></td></tr><tr><td>23</td><td><i>alternating currents (a.c.)</i></td><td>“distinguish between direct currents (d.c.) and alternating currents (a.c.)” <span class="tag quiz">Extension</span></td><td><a href="#step2" data-step="2">L4.6c Step 2: AC vs DC</a><br><a href="#step7" data-step="7">L4.6c Step 7: Try it</a><br><a href="#step6" data-step="6">L4.6c Step 6: Practice</a></td></tr><tr><td>24</td><td><i>alternating currents (a.c.)</i></td><td>“define r.m.s. of an alternating current as the steady d.c. which converts electric potential energy to other forms in a given pure resistance at the same rate as that of the a.c.” <span class="tag quiz">Extension</span></td><td><a href="#step3" data-step="3">L4.6c Step 3: Peak &amp; Heating</a><br><a href="#step4" data-step="4">L4.6c Step 4: RMS Value</a><br><a href="#step7" data-step="7">L4.6c Step 7: Try it</a><br><a href="#step6" data-step="6">L4.6c Step 6: Practice</a></td></tr><tr><td>25</td><td><i>alternating currents (a.c.)</i></td><td>“relate the r.m.s. and peak values of an a.c.” <span class="tag quiz">Extension</span></td><td><a href="#step4" data-step="4">L4.6c Step 4: RMS Value</a><br><a href="#step5" data-step="5">L4.6c Step 5: Worked Examples</a><br><a href="#step8" data-step="8">L4.6c Step 8: Practice: Simulation</a><br><a href="#step9" data-step="9">L4.6c Step 9: Practice: Problems</a></td></tr><tr><td>26</td><td><i>transformer</i></td><td>“describe the structure of a simple transformer and how it works” <span class="tag quiz">Extension</span></td><td><a href="4-7a-transformers.html#step2">L4.7a Step 2: Structure</a><br><a href="4-7a-transformers.html#step7">L4.7a Step 7: Try it</a><br><a href="4-7a-transformers.html#step6">L4.7a Step 6: Practice</a></td></tr><tr><td>27</td><td><i>transformer</i></td><td>“relate the voltage ratio to turn ratio by Vp/Vs = Np/Ns and apply it to solve problems” <span class="tag quiz">Extension</span></td><td><a href="4-7a-transformers.html#step3">L4.7a Step 3: Turns Ratio</a><br><a href="4-7a-transformers.html#step5">L4.7a Step 5: Worked Examples</a><br><a href="4-7a-transformers.html#step7">L4.7a Step 7: Try it</a><br><a href="4-7a-transformers.html#step8">L4.7a Step 8: Practice: Simulation</a><br><a href="4-7a-transformers.html#step9">L4.7a Step 9: Practice: Problems</a></td></tr><tr><td>28</td><td><i>transformer</i></td><td>“examine methods for improving the efficiency of a transformer” <span class="tag quiz">Extension</span></td><td><a href="4-7a-transformers.html#step4">L4.7a Step 4: Efficiency</a><br><a href="4-7a-transformers.html#step9">L4.7a Step 9: Practice: Problems</a></td></tr><tr><td>29</td><td><i>high voltage transmission of electrical energy</i></td><td>“discuss the advantages of transmission of electrical energy with a.c. at high voltages” <span class="tag quiz">Extension</span></td><td><a href="4-7b-power-transmission.html#step2">L4.7b Step 2: Why High Voltage</a><br><a href="4-7b-power-transmission.html#step4">L4.7b Step 4: Worked Examples</a><br><a href="4-7b-power-transmission.html#step6">L4.7b Step 6: Try it</a><br><a href="4-7b-power-transmission.html#step5">L4.7b Step 5: Practice</a></td></tr><tr><td>30</td><td><i>high voltage transmission of electrical energy</i></td><td>“describe various stages of stepping up and down of the voltage in a grid system for power transmission” <span class="tag quiz">Extension</span></td><td><a href="4-7b-power-transmission.html#step3">L4.7b Step 3: The Grid</a><br><a href="4-7b-power-transmission.html#step6">L4.7b Step 6: Try it</a><br><a href="4-7b-power-transmission.html#step8">L4.7b Step 8: Practice: Grid</a></td></tr></table></div>
 <h3>Suggested learning &amp; teaching activities used</h3>
 <div class="table-scroll"><table class="t activities"><tr><th>#</th><th>Activity (from the guide, pp.45–47, incl. Values &amp; Attitudes and STSE)</th><th>Where</th></tr>
 <tr><td>1</td><td>Measuring magnetic field strength by using simple current balance, search coil and Hall probe</td><td><a href="4-5a-magnetic-fields.html#step8">L4.5a Step 8: B Formulas</a><br><a href="4-6b-faraday-generators.html#step4">L4.6b Step 4: Search Coil</a></td></tr><tr><td>2</td><td>Performing demonstrations to show the relative directions of motion, force and field in electromagnetic devices</td><td><a href="4-5b-magnetic-force-motors.html#step2">L4.5b Step 2: Force on a Wire</a><br><a href="4-5b-magnetic-force-motors.html#step7">L4.5b Step 7: Try it</a><br><a href="4-6a-electromagnetic-induction.html#step2">L4.6a Step 2: Induced EMF</a></td></tr><tr><td>3</td><td>Disassembling loudspeakers to determine the functions of individual components</td><td><a href="4-5b-magnetic-force-motors.html#step4">L4.5b Step 4: DC Motor</a></td></tr><tr><td>4</td><td>Investigating the magnetic fields around electric currents (e.g. around a long straight wire, at the centre of a coil, inside and around a slinky solenoid and inside a solenoid)</td><td><a href="4-5a-magnetic-fields.html#step5">L4.5a Step 5: Straight Wire</a><br><a href="4-5a-magnetic-fields.html#step6">L4.5a Step 6: Circular Coil</a><br><a href="4-5a-magnetic-fields.html#step7">L4.5a Step 7: Solenoid</a><br><a href="4-5a-magnetic-fields.html#step12">L4.5a Step 12: Try it: B Explorer</a></td></tr><tr><td>5</td><td>Constructing electric motor kits and generator kits</td><td><a href="4-5b-magnetic-force-motors.html#step4">L4.5b Step 4: DC Motor</a><br><a href="4-6b-faraday-generators.html#step5">L4.6b Step 5: AC Generator</a><br><a href="4-6b-faraday-generators.html#step6">L4.6b Step 6: DC Generator</a></td></tr><tr><td>6</td><td>Measuring the transformation of voltages under step-up or step-down transformers</td><td><a href="4-7a-transformers.html#step3">L4.7a Step 3: Turns Ratio</a><br><a href="4-7a-transformers.html#step7">L4.7a Step 7: Try it</a><br><a href="4-7a-transformers.html#step8">L4.7a Step 8: Practice: Simulation</a></td></tr><tr><td>7</td><td>Estimating the e/m ratio by measuring the radius of curvature in a magnetic field of known strength</td><td><a href="4-5c-force-on-charges.html#step3">L4.5c Step 3: Circular Path</a><br><a href="4-5c-force-on-charges.html#step6">L4.5c Step 6: Try it</a></td></tr><tr><td>8</td><td>Planning and selecting appropriate equipment or resources to demonstrate the generation of an alternating current</td><td><a href="4-6b-faraday-generators.html#step5">L4.6b Step 5: AC Generator</a><br><a href="#step2" data-step="2">L4.6c Step 2: AC vs DC</a></td></tr><tr><td>9</td><td>Using computer simulations to observe and investigate the electric field and magnetic field</td><td><a href="4-5a-magnetic-fields.html#step12">L4.5a Step 12: Try it: B Explorer</a><br><a href="4-5b-magnetic-force-motors.html#step7">L4.5b Step 7: Try it</a><br><a href="4-5c-force-on-charges.html#step6">L4.5c Step 6: Try it</a></td></tr><tr><td>10</td><td>Using dimension analysis to check the results of mathematical solutions</td><td><a href="4-5a-magnetic-fields.html#step8">L4.5a Step 8: B Formulas</a><br><a href="4-5b-magnetic-force-motors.html#step2">L4.5b Step 2: Force on a Wire</a><br><a href="4-6b-faraday-generators.html#step3">L4.6b Step 3: Faraday Law</a></td></tr><tr><td>11</td><td>Reading articles on the possible hazardous effects on residents living near high voltage transmission cables</td><td><a href="4-7b-power-transmission.html#step3">L4.7b Step 3: The Grid</a></td></tr><tr><td>12</td><td>V&amp;A / STSE: inventions related to electricity; save electrical energy; effects of living near high-power cables; electric vehicles</td><td><a href="4-7b-power-transmission.html#step2">L4.7b Step 2: Why High Voltage</a><br><a href="4-7a-transformers.html#step4">L4.7a Step 4: Efficiency</a></td></tr></table></div>
-<p>Notes Ch.4 a.c./rms. Extension.</p>
+<p>Notes Ch.4 §§4.1–4.2, 4.10–4.12 (a.c., HK mains, average power, r.m.s.). Whole topic Extension.</p>
 </div></details>
 <script>
 
@@ -342,36 +484,175 @@ function kText(id, t){ var e = document.getElementById(id); if (e) e.textContent
 function kHTML(id, t){ var e = document.getElementById(id); if (e) e.innerHTML = t; }
 var Q = {
 p1:[
-{type:"mc", text:"a.c. means…", options:["current reverses periodically", "always one way", "zero frequency", "only static"], answer:0, hints:["", ""], explain:"reverses"},
-{type:"mc", text:"r.m.s. equals…", options:["d.c. giving same average heating in a resistor", "peak value", "random average", "zero"], answer:0, hints:["", ""], explain:"heating"},
-{type:"mc", text:"This topic is…", options:["extension", "core only", "out of syllabus", "chemistry"], answer:0, hints:["", ""], explain:"extension"}
+{type:"mc", text:"Alternating current (a.c.) means the current…",
+ options:["reverses direction periodically",
+          "always flows in one direction only",
+          "has zero frequency by definition",
+          "can only be produced by a battery"],
+ answer:0,
+ hints:["Compare with d.c. from a battery.", "a.c. goes back and forth each cycle."],
+ explain:"a.c. reverses direction periodically. d.c. stays one way (steady or varying)."},
+{type:"mc", text:"Hong Kong mains is usually quoted as…",
+ options:["220 V a.c., about 50 Hz (220 V is r.m.s.)",
+          "311 V steady d.c.",
+          "12 V a.c. only",
+          "zero frequency d.c."],
+ answer:0,
+ hints:["Look at appliance labels.", "220 V is the r.m.s. value; peak is higher."],
+ explain:"HK mains ≈ 220 V a.c., 50 Hz. The 220 V is r.m.s.; peak ≈ 311 V."},
+{type:"mc", text:"Why are a.c. supply terminals usually not labelled + and −?",
+ options:["Which side is at higher potential swaps each half-cycle",
+          "a.c. never needs a complete circuit",
+          "a.c. has no potential difference at all",
+          "Only d.c. can heat a resistor"],
+ answer:0,
+ hints:["Potential is higher on one side, then the other.", "Current still flows — the direction flips."],
+ explain:"An alternating e.m.f. swaps which terminal is at higher potential."},
+{type:"mc", text:"In this HKDSE topic, a.c. / r.m.s. outcomes are treated as…",
+ options:["an extension topic in the Compulsory Part",
+          "core only, with no extension tag",
+          "out of the physics syllabus",
+          "chemistry, not physics"],
+ answer:0,
+ hints:["Look at the Extension tags on this lesson.", "Distinguish a.c./d.c., define r.m.s., relate r.m.s. and peak."],
+ explain:"Distinguishing a.c./d.c., defining r.m.s., and relating r.m.s. to peak are extension outcomes."}
 ],
 psim:[
-{type:"num", text:"V0=311 V. V_rms (V)?", answer:220.0, unit:"V", hints:["", ""], explain:"220"},
-{type:"num", text:"I0=2.0 A. I_rms (A)?", answer:1.414213562, unit:"A", hints:["", ""], explain:"1.41"}
+{type:"num", text:"Sinusoidal a.c. with peak V<sub>0</sub> = 311 V. What is V<sub>rms</sub> in V? (Use V<sub>rms</sub> = V<sub>0</sub>/√2.)",
+ answer:220, unit:"V",
+ hints:["V<sub>rms</sub> = V<sub>0</sub> / √2.", "311 / 1.414 ≈ 220."],
+ explain:"V<sub>rms</sub> = 311/√2 ≈ 220 V (HK mains)."},
+{type:"num", text:"Sinusoidal current with peak I<sub>0</sub> = 2.0 A. What is I<sub>rms</sub> in A?",
+ answer:1.414213562, unit:"A",
+ hints:["I<sub>rms</sub> = I<sub>0</sub> / √2.", "2.0 / √2 = √2 ≈ 1.41 A."],
+ explain:"I<sub>rms</sub> = 2/√2 = √2 ≈ 1.41 A."},
+{type:"mc", text:"In the Try it sim, if you increase V<sub>0</sub> but keep R fixed, V<sub>rms</sub>…",
+ options:["increases in proportion (still V<sub>0</sub>/√2)",
+          "stays exactly 220 V always",
+          "falls to zero",
+          "becomes equal to the mean of the sine (zero)"],
+ answer:0,
+ hints:["The formula V<sub>rms</sub> = V<sub>0</sub>/√2 does not change.", "Larger peak → larger r.m.s."],
+ explain:"For a sine, V<sub>rms</sub> scales with V<sub>0</sub>. The mean of the sine itself stays zero."}
 ],
 p2:[
-{type:"num", text:"V_rms=12 V. Peak V0 (V)?", answer:16.97056275, unit:"V", hints:["", ""], explain:"17.0"},
-{type:"mc", text:"Average power in R uses…", options:["V_rms and I_rms", "peaks only", "only frequency", "only charge"], answer:0, hints:["", ""], explain:"rms"},
-{type:"num", text:"V_rms=220 V, R=100 ohm. P_avg (W)?", answer:484, unit:"W", hints:["", ""], explain:"484"}
+{type:"num", text:"V<sub>rms</sub> = 12 V (sine). What is the peak V<sub>0</sub> in V?",
+ answer:16.97056275, unit:"V",
+ hints:["V<sub>0</sub> = V<sub>rms</sub> × √2.", "12 × 1.414 ≈ 17.0 V."],
+ explain:"V<sub>0</sub> = 12√2 ≈ 17.0 V."},
+{type:"mc", text:"Average power in a pure resistor connected to a.c. is calculated with…",
+ options:["V<sub>rms</sub> and I<sub>rms</sub> (e.g. P = V<sub>rms</sub>²/R)",
+          "peak values only, never r.m.s.",
+          "frequency alone, ignoring voltage",
+          "the mean of the sine voltage (which is zero)"],
+ answer:0,
+ hints:["r.m.s. was defined via equal average heating.", "P_avg = V_rms²/R = I_rms² R."],
+ explain:"Use r.m.s. values so a.c. power matches the equivalent steady d.c. heating."},
+{type:"num", text:"V<sub>rms</sub> = 220 V, R = 100 Ω. Average power P<sub>avg</sub> in W?",
+ answer:484, unit:"W",
+ hints:["P<sub>avg</sub> = V<sub>rms</sub>² / R.", "(220)² / 100 = 48400/100."],
+ explain:"P<sub>avg</sub> = 48400/100 = 484 W."},
+{type:"mc", text:"The r.m.s. value of an alternating current is defined as the steady d.c. which…",
+ options:["converts electric PE to other forms in a given pure R at the same average rate as the a.c.",
+          "equals the peak value for every waveform",
+          "is always half the peak for any wave",
+          "makes the mean of V over a cycle equal to the peak"],
+ answer:0,
+ hints:["Same average heating in the same pure resistor.", "That is the curriculum definition."],
+ explain:"r.m.s. ↔ steady d.c. with the same average rate of energy conversion in a given pure R."}
 ]
 };
+
 function makeSim(){
-  var cv=document.getElementById("animCanvas"), P={};
-  function read(){ P.V0=kVal("v0Sl"); kText("v0SlVal",Math.round(P.V0)+" V"); P.Vrms=P.V0/Math.SQRT2; P.ro1="V_rms="+kFmt(P.Vrms,1)+" V"; P.ro2="V0="+Math.round(P.V0)+" V"; }
-  function update(){ kText("ro1", P.ro1); kText("ro2", P.ro2); }
-  function draw(){ var g=kSetup(cv),ctx=g.ctx,W=g.w,H=g.h; ctx.clearRect(0,0,W,H); ctx.fillStyle="#fff"; ctx.fillRect(0,0,W,H);
-    ctx.fillStyle="#0a2a66"; ctx.font="16px Arial"; ctx.textAlign="center"; ctx.fillText(P.ro1, W/2, H/2-8); ctx.fillText(P.ro2, W/2, H/2+16); }
-  function reset(){ read(); update(); draw(); kText("simMsg", "rms"); }
-  document.getElementById("playBtn").style.display="none";
+  var cv=document.getElementById("animCanvas"), P={}, t=0, clock=null;
+  function read(){
+    P.V0=kVal("v0Sl"); P.f=kVal("fSl"); P.R=kVal("rSl");
+    kText("v0SlVal", Math.round(P.V0)+" V");
+    kText("fSlVal", Math.round(P.f)+" Hz");
+    kText("rSlVal", Math.round(P.R)+" Ω");
+    P.Vrms=P.V0/Math.SQRT2;
+    P.Irms=P.Vrms/P.R;
+    P.Pavg=P.Vrms*P.Vrms/P.R;
+    P.ro1=kFmt(P.Vrms,0)+" V";
+    P.ro2=kFmt(P.Irms,3)+" A";
+    P.ro3=kFmt(P.Pavg,0)+" W";
+    P.ro4=Math.round(P.V0)+" V";
+  }
+  function update(){
+    kText("ro1", P.ro1); kText("ro2", P.ro2);
+    var r3=document.getElementById("ro3"); if(r3) r3.textContent=P.ro3;
+    var r4=document.getElementById("ro4"); if(r4) r4.textContent=P.ro4;
+  }
+  function draw(){
+    var g=kSetup(cv),ctx=g.ctx,W=g.w,H=g.h;
+    ctx.clearRect(0,0,W,H); ctx.fillStyle="#fff"; ctx.fillRect(0,0,W,H);
+    var padL=48, padR=16, padT=28, padB=36;
+    var plotW=W-padL-padR, plotH=H-padT-padB;
+    var yMid=padT+plotH/2;
+    var vmax=Math.max(P.V0, 50);
+    function X(tt){ return padL + (tt/(2/P.f))*plotW; }
+    function Y(v){ return yMid - (v/vmax)*(plotH*0.42); }
+    // axes
+    ctx.strokeStyle="#94a3b8"; ctx.lineWidth=1.5;
+    ctx.beginPath(); ctx.moveTo(padL, padT); ctx.lineTo(padL, padT+plotH); ctx.lineTo(padL+plotW, padT+plotH); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(padL, yMid); ctx.lineTo(padL+plotW, yMid); ctx.stroke();
+    // peak lines
+    ctx.setLineDash([6,4]); ctx.strokeStyle="#1865f2"; ctx.lineWidth=1.5;
+    ctx.beginPath(); ctx.moveTo(padL, Y(P.V0)); ctx.lineTo(padL+plotW, Y(P.V0)); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(padL, Y(-P.V0)); ctx.lineTo(padL+plotW, Y(-P.V0)); ctx.stroke();
+    // rms lines
+    ctx.strokeStyle="#7f3f98";
+    ctx.beginPath(); ctx.moveTo(padL, Y(P.Vrms)); ctx.lineTo(padL+plotW, Y(P.Vrms)); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(padL, Y(-P.Vrms)); ctx.lineTo(padL+plotW, Y(-P.Vrms)); ctx.stroke();
+    ctx.setLineDash([]);
+    // sine
+    ctx.strokeStyle="#e3780c"; ctx.lineWidth=3;
+    ctx.beginPath();
+    var n=180, Tshow=2/P.f;
+    for(var i=0;i<=n;i++){
+      var tt=i/n*Tshow;
+      var v=P.V0*Math.sin(2*Math.PI*P.f*(tt+t));
+      var x=X(tt), y=Y(v);
+      if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+    }
+    ctx.stroke();
+    // labels
+    ctx.fillStyle="#0a2a66"; ctx.font="bold 12px Arial"; ctx.textAlign="left";
+    ctx.fillText("V / V", padL+4, padT+12);
+    ctx.textAlign="center"; ctx.fillText("t (2 cycles)", padL+plotW/2, H-8);
+    ctx.fillStyle="#1865f2"; ctx.textAlign="right";
+    ctx.fillText("±V0", padL-4, Y(P.V0)+4);
+    ctx.fillStyle="#7f3f98";
+    ctx.fillText("±Vrms", padL-4, Y(P.Vrms)+4);
+    ctx.fillStyle="#5b6170"; ctx.font="11px Arial"; ctx.textAlign="left";
+    ctx.fillText("f="+Math.round(P.f)+" Hz", padL+8, H-22);
+  }
+  function reset(){
+    if(clock) clock.stop();
+    t=0;
+    var pb=document.getElementById("playBtn"); if(pb) pb.textContent="▶ Play";
+    kSet("v0Sl", 311); kSet("fSl", 50); kSet("rSl", 100);
+    read(); update(); draw();
+    kText("simMsg", "Reset to HK-like values: V0=311 V, f=50 Hz. Play to animate the sine.");
+  }
+  function tick(dt){
+    t += dt * 0.15; // slow visual phase advance
+    draw();
+  }
+  clock = kClock(function(dt){ tick(dt); }, function(){ var pb=document.getElementById("playBtn"); if(pb) pb.textContent="▶ Play"; });
+  document.getElementById("playBtn").addEventListener("click", function(){
+    if(clock.running()){ clock.stop(); this.textContent="▶ Play"; }
+    else { this.textContent="⏸ Pause"; clock.start(); }
+  });
   document.getElementById("resetBtn").addEventListener("click", reset);
-  kBind(["v0Sl"], function(){ read(); update(); draw(); });
-  return {reset:reset,draw:draw,resize:function(){draw();},pause:function(){},
-    set:function(o){ if(o.V0!=null)kSet("v0Sl",o.V0); reset(); },
-    state:function(){ return {Vrms:P.Vrms,V0:P.V0}; }};
+  kBind(["v0Sl","fSl","rSl"], function(){ read(); update(); draw(); });
+  return {reset:reset, draw:draw, resize:function(){ draw(); }, pause:function(){ if(clock) clock.stop(); },
+    set:function(o){ if(o.V0!=null) kSet("v0Sl", o.V0); if(o.f!=null) kSet("fSl", o.f); if(o.R!=null) kSet("rSl", o.R); read(); update(); draw(); },
+    jumpTo:function(T){ if(clock) clock.stop(); t=T; draw(); },
+    state:function(){ return {V0:P.V0, Vrms:P.Vrms, Irms:P.Irms, Pavg:P.Pavg, f:P.f, R:P.R}; }};
 }
 
-var LESSON = {quizzes:Q, figs:{}, makeSim:makeSim, demo:{set:{"V0": 311}}};
+var LESSON = {quizzes:Q, figs:{}, makeSim:makeSim, demo:{set:{"V0": 311, "f": 50, "R": 100}, t:0.5}};
 
 
 (function(){

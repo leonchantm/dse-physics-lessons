@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" role="img" aria-label="Steady d.c., varying d.c., and sinusoidal a.c. against time">
+  <rect width="640" height="280" fill="#f8fafc"/>
+  <text x="320" y="28" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#0a2a66">Current I against time t</text>
+  <!-- DC steady -->
+  <g transform="translate(20,50)">
+    <rect width="190" height="200" rx="10" fill="#fff" stroke="#e3e5ea"/>
+    <text x="95" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#1865f2">Steady d.c.</text>
+    <line x1="30" y1="160" x2="170" y2="160" stroke="#94a3b8" stroke-width="1.5"/>
+    <line x1="30" y1="50" x2="30" y2="170" stroke="#94a3b8" stroke-width="1.5"/>
+    <line x1="40" y1="90" x2="160" y2="90" stroke="#1865f2" stroke-width="3"/>
+    <text x="100" y="190" text-anchor="middle" font-size="12" fill="#5b6170">one direction, constant</text>
+  </g>
+  <!-- DC varying -->
+  <g transform="translate(225,50)">
+    <rect width="190" height="200" rx="10" fill="#fff" stroke="#e3e5ea"/>
+    <text x="95" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#7f3f98">Varying d.c.</text>
+    <line x1="30" y1="160" x2="170" y2="160" stroke="#94a3b8" stroke-width="1.5"/>
+    <line x1="30" y1="50" x2="30" y2="170" stroke="#94a3b8" stroke-width="1.5"/>
+    <path d="M40 140 C70 60,100 60,130 100 S160 140,160 120" fill="none" stroke="#7f3f98" stroke-width="3"/>
+    <text x="100" y="190" text-anchor="middle" font-size="12" fill="#5b6170">one way, size changes</text>
+  </g>
+  <!-- AC -->
+  <g transform="translate(430,50)">
+    <rect width="190" height="200" rx="10" fill="#fff" stroke="#e3e5ea"/>
+    <text x="95" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#e3780c">a.c. (sine)</text>
+    <line x1="30" y1="110" x2="170" y2="110" stroke="#94a3b8" stroke-width="1.5"/>
+    <line x1="30" y1="50" x2="30" y2="170" stroke="#94a3b8" stroke-width="1.5"/>
+    <path d="M40 110 Q60 50 80 110 Q100 170 120 110 Q140 50 160 110" fill="none" stroke="#e3780c" stroke-width="3"/>
+    <text x="100" y="190" text-anchor="middle" font-size="12" fill="#5b6170">reverses each half-cycle</text>
+  </g>
+</svg>

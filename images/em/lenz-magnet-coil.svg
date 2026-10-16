@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="Bar magnet approaching a coil: Lenz law makes facing end a north pole to repel">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="Bar magnet with N pole approaching a coil: Lenz law makes facing end a north pole to repel">
   <rect width="640" height="300" fill="#f8fafc"/>
-  <!-- magnet moving right -->
-  <rect x="40" y="110" width="70" height="80" rx="4" fill="#b91c1c"/>
-  <rect x="110" y="110" width="70" height="80" rx="4" fill="#1d4ed8"/>
-  <text x="75" y="158" font-size="22" font-weight="800" text-anchor="middle" fill="#fff">N</text>
-  <text x="145" y="158" font-size="22" font-weight="800" text-anchor="middle" fill="#fff">S</text>
+  <!-- magnet moving right: S left, N right so N faces the coil -->
+  <rect x="40" y="110" width="70" height="80" rx="4" fill="#1d4ed8"/>
+  <rect x="110" y="110" width="70" height="80" rx="4" fill="#b91c1c"/>
+  <text x="75" y="158" font-size="22" font-weight="800" text-anchor="middle" fill="#fff">S</text>
+  <text x="145" y="158" font-size="22" font-weight="800" text-anchor="middle" fill="#fff">N</text>
   <text x="110" y="100" font-size="13" font-weight="700" text-anchor="middle" fill="#334155">magnet</text>
   <!-- motion arrow -->
   <line x1="200" y1="150" x2="260" y2="150" stroke="#e3780c" stroke-width="4"/>

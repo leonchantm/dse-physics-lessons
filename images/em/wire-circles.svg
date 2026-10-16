@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-label="Concentric B-field circles around a straight wire with current out of paper">
+  <rect width="640" height="320" fill="#f8fafc"/>
+  <g fill="none" stroke="#7c3aed" stroke-width="2">
+    <circle cx="320" cy="160" r="40"/>
+    <circle cx="320" cy="160" r="70"/>
+    <circle cx="320" cy="160" r="100"/>
+    <circle cx="320" cy="160" r="130"/>
+  </g>
+  <!-- anticlockwise arrows (current out of paper) -->
+  <polygon points="358,145 372,160 358,155" fill="#7c3aed"/>
+  <polygon points="385,130 402,148 388,145" fill="#7c3aed"/>
+  <polygon points="415,115 435,135 420,132" fill="#7c3aed"/>
+  <!-- wire end-on: dot = out -->
+  <circle cx="320" cy="160" r="18" fill="#fff" stroke="#111" stroke-width="3"/>
+  <circle cx="320" cy="160" r="6" fill="#111"/>
+  <text x="320" y="200" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700" fill="#166534">I out of paper (·)</text>
+  <text x="320" y="30" text-anchor="middle" font-family="Arial" font-size="15" font-weight="700" fill="#0a2a66">Right-hand grip: thumb = I, fingers curl = B</text>
+  <text x="320" cy="0" y="300" text-anchor="middle" font-family="Arial" font-size="13" fill="#475569">Circles denser near the wire → B stronger closer in</text>
+</svg>

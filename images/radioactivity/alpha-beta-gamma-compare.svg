@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 340" role="img" aria-label="Compare alpha beta gamma: nature, absorbers, ionizing vs penetrating power">
+  <rect width="740" height="340" fill="#f8fafc"/>
+  <text x="370" y="26" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#0a2a66">α, β and γ — compare at a glance</text>
+
+  <!-- headers -->
+  <text x="90" y="58" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#5b6170">Type</text>
+  <text x="250" y="58" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#5b6170">Nature / charge</text>
+  <text x="430" y="58" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#5b6170">Stopped by</text>
+  <text x="600" y="58" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#5b6170">Ionizing ↔ penetrate</text>
+
+  <!-- alpha row -->
+  <rect x="30" y="70" width="680" height="70" rx="10" fill="#fee2e2"/>
+  <circle cx="90" cy="105" r="22" fill="#dc2626"/>
+  <text x="90" y="111" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="800" fill="#fff">α</text>
+  <text x="250" y="100" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#7f1d1d">He-4 nucleus</text>
+  <text x="250" y="120" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#7f1d1d">charge +2e · heavy</text>
+  <text x="430" y="105" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#7f1d1d">paper / ~few cm air</text>
+  <text x="600" y="100" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#7f1d1d">strongest ionizing</text>
+  <text x="600" y="120" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#7f1d1d">weakest penetrate</text>
+
+  <!-- beta row -->
+  <rect x="30" y="150" width="680" height="70" rx="10" fill="#dbeafe"/>
+  <circle cx="90" cy="185" r="22" fill="#2563eb"/>
+  <text x="90" y="191" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="800" fill="#fff">β</text>
+  <text x="250" y="180" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#1e3a8a">fast electron (β⁻)</text>
+  <text x="250" y="200" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#1e3a8a">charge −e · light</text>
+  <text x="430" y="185" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#1e3a8a">~5 mm aluminium</text>
+  <text x="600" y="180" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#1e3a8a">medium ionizing</text>
+  <text x="600" y="200" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#1e3a8a">medium penetrate</text>
+
+  <!-- gamma row -->
+  <rect x="30" y="230" width="680" height="70" rx="10" fill="#f3e8f8"/>
+  <circle cx="90" cy="265" r="22" fill="#7f3f98"/>
+  <text x="90" y="271" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="800" fill="#fff">γ</text>
+  <text x="250" y="260" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#5b2178">EM photon</text>
+  <text x="250" y="280" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b2178">charge 0 · mass 0</text>
+  <text x="430" y="265" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#5b2178">thick lead / concrete</text>
+  <text x="600" y="260" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#5b2178">weakest ionizing</text>
+  <text x="600" y="280" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b2178">strongest penetrate</text>
+
+  <text x="370" y="325" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">α &amp; β deflect in E/B fields (β more); γ does not · stronger ionizing ⇒ weaker penetrating</text>
+</svg>

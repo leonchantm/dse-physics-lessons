@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-label="Simple transformer: primary and secondary coils on a soft-iron core">
+  <rect width="640" height="320" fill="#f8fafc"/>
+  <!-- soft-iron core (laminated look) -->
+  <rect x="200" y="70" width="240" height="180" rx="8" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <line x1="220" y1="90" x2="220" y2="230" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="240" y1="90" x2="240" y2="230" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="260" y1="90" x2="260" y2="230" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="280" y1="90" x2="280" y2="230" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="360" y1="90" x2="360" y2="230" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="380" y1="90" x2="380" y2="230" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="400" y1="90" x2="400" y2="230" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="420" y1="90" x2="420" y2="230" stroke="#94a3b8" stroke-width="2"/>
+  <text x="320" y="55" font-size="14" font-weight="700" text-anchor="middle" fill="#334155">soft-iron core (軟鐵芯)</text>
+  <!-- primary coil -->
+  <g stroke="#1865f2" stroke-width="3" fill="none">
+    <path d="M170,95 q-28,10 -28,22 q0,12 28,22"/>
+    <path d="M170,139 q-28,10 -28,22 q0,12 28,22"/>
+    <path d="M170,183 q-28,10 -28,22 q0,12 28,22"/>
+  </g>
+  <line x1="170" y1="95" x2="120" y2="95" stroke="#1865f2" stroke-width="2.5"/>
+  <line x1="170" y1="227" x2="120" y2="227" stroke="#1865f2" stroke-width="2.5"/>
+  <circle cx="100" cy="95" r="8" fill="none" stroke="#1865f2" stroke-width="2.5"/>
+  <circle cx="100" cy="227" r="8" fill="none" stroke="#1865f2" stroke-width="2.5"/>
+  <text x="100" y="80" font-size="13" font-weight="700" text-anchor="middle" fill="#1865f2">Vp</text>
+  <text x="145" y="280" font-size="13" font-weight="700" text-anchor="middle" fill="#1865f2">primary (初級)</text>
+  <text x="145" y="298" font-size="12" text-anchor="middle" fill="#64748b">Np turns · a.c. in</text>
+  <!-- secondary coil -->
+  <g stroke="#e3780c" stroke-width="3" fill="none">
+    <path d="M470,95 q28,10 28,22 q0,12 -28,22"/>
+    <path d="M470,139 q28,10 28,22 q0,12 -28,22"/>
+    <path d="M470,183 q28,10 28,22 q0,12 -28,22"/>
+    <path d="M470,205 q28,8 28,16 q0,8 -28,16" opacity="0.5"/>
+  </g>
+  <line x1="470" y1="95" x2="520" y2="95" stroke="#e3780c" stroke-width="2.5"/>
+  <line x1="470" y1="237" x2="520" y2="237" stroke="#e3780c" stroke-width="2.5"/>
+  <circle cx="540" cy="95" r="8" fill="none" stroke="#e3780c" stroke-width="2.5"/>
+  <circle cx="540" cy="237" r="8" fill="none" stroke="#e3780c" stroke-width="2.5"/>
+  <text x="540" y="80" font-size="13" font-weight="700" text-anchor="middle" fill="#e3780c">Vs</text>
+  <text x="495" y="280" font-size="13" font-weight="700" text-anchor="middle" fill="#e3780c">secondary (次級)</text>
+  <text x="495" y="298" font-size="12" text-anchor="middle" fill="#64748b">Ns turns · a.c. out</text>
+  <!-- flux arrow -->
+  <path d="M250,160 L390,160" stroke="#7f3f98" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="320" y="150" font-size="12" font-weight="700" text-anchor="middle" fill="#7f3f98">changing Φ</text>
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#7f3f98"/>
+    </marker>
+  </defs>
+  <text x="320" y="310" font-size="11" text-anchor="middle" fill="#64748b">No electrical connection between coils — energy via changing magnetic flux</text>
+</svg>

@@ -184,36 +184,229 @@
 <main id="main">
 <section class="step step-learn" data-id="welcome" data-name="Welcome" data-kind="learn"><span class="step-kind learn">Learn</span>
 <div class="welcome-hero">
-  <div class="big" aria-hidden="true">F</div>
-  <h2 tabindex="-1">Lesson 4.5b: Magnetic Force and Motors <span class="zh">(磁力與電動機)</span></h2>
-  <p>A current in a magnetic field feels a force. That force turns the coil in a simple d.c. motor.</p>
-<p><b>Hong Kong hook:</b> the motor that spins a fan, a hairdryer, or an electric minibus wheel uses the same idea: F on a current in B.</p>
+  <div class="big" aria-hidden="true">BIl</div>
+  <h2 tabindex="-1">Lesson 4.5b: Magnetic Force and Motors <span class="zh">（磁力與電動機）</span></h2>
+  <p>A <b>current-carrying wire</b> in a magnetic field feels a force. The size is <span class="eq">F = B I ℓ sinθ</span>. That force on opposite sides of a coil makes a <b>turning couple</b> — and with a <b>split-ring commutator</b>, you have a simple <b>d.c. motor</b>.</p>
+  <p><b>Hong Kong hook:</b> the motor in a desk fan, a hairdryer, an MTR escalator drive, or an electric minibus wheel all use the same idea: force on currents in a magnetic field. School kits with a coil, magnets, and carbon brushes are the same physics in miniature.</p>
 </div>
-
+<div class="box key"><span class="box-title">This lesson (core)</span>
+Force on a current-carrying conductor; <span class="eq">F = BIl sinθ</span>; turning effect on a coil; structure and operation of a simple d.c. motor; related problems. The force on a <b>single moving charge</b> (<span class="eq">F = BQv sinθ</span>) is Extension — that is Lesson 4.5c.
+</div>
 <div class="lesson-link">⬅️ Previous: <a href="4-5a-magnetic-fields.html">Lesson 4.5a: Magnetic Fields and Currents</a> &nbsp;·&nbsp; ➡️ Next: <a href="4-5c-force-on-charges.html">Lesson 4.5c: Force on Moving Charges</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div>
 </section>
-<section class="step step-learn" data-id="force" data-name="Force on a Wire" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 1</span><h2 tabindex="-1">Force on a wire</h2><div class="box formula"><b>F = B I ℓ sinθ</b></div><p>Fleming left-hand rule: First finger = B, seCond = I, thuMb = force.</p></section>
-<section class="step step-learn" data-id="torque" data-name="Turning Effect" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 2</span><h2 tabindex="-1">Coil</h2><p>A current-carrying coil in uniform B feels a turning couple.</p></section>
-<section class="step step-learn" data-id="motor" data-name="DC Motor" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Idea 3</span><h2 tabindex="-1">Simple d.c. motor</h2><p>Coil, magnets, split-ring commutator reverses I each half-turn; brushes connect supply.</p></section>
-<section class="step step-learn" data-id="worked" data-name="Worked Examples" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Worked examples</span><h2 tabindex="-1">Examples</h2><div class="box eg">B=0.50 T, I=3.0 A, L=0.20 m, θ=90° → F=0.30 N.</div></section>
-<section class="step step-practice" data-id="p1" data-name="Practice: Force" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 1</span><h2 tabindex="-1">Force</h2><div class="quiz" data-quiz="p1"></div></section>
-<section class="step step-sim" data-id="sim" data-name="Try it" data-kind="sim"><span class="step-kind sim">Try it</span><span class="tag sim">Try it!</span><h2 tabindex="-1">F = BIl sinθ</h2><div class="sim-panel"><canvas id="animCanvas" width="640" height="280"></canvas><div class="sim-controls"><div class="slider"><label for="bSl"><span>B</span><span id="bSlVal"></span></label>
-    <input type="range" id="bSl" min="0.1" max="2" step="0.05" value="0.5"></div><div class="slider"><label for="iSl"><span>I</span><span id="iSlVal"></span></label>
-    <input type="range" id="iSl" min="0.5" max="10" step="0.5" value="3"></div><div class="slider"><label for="lSl"><span>L_cm</span><span id="lSlVal"></span></label>
-    <input type="range" id="lSl" min="5" max="50" step="1" value="20"></div><div class="slider"><label for="thSl"><span>theta</span><span id="thSlVal"></span></label>
-    <input type="range" id="thSl" min="0" max="90" step="5" value="90"></div><div class="sim-buttons">
+
+<section class="step step-learn" data-id="force" data-name="Force on a Wire" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 1</span>
+<h2 tabindex="-1">Force on a current-carrying wire <span class="zh">（載流導線所受磁力）</span></h2>
+<p>A current-carrying wire makes its own field (Lesson 4.5a). In an <b>external</b> B-field it feels a <b>magnetic force</b>. Classic demo: a free copper rod on rails between slab magnets rolls when the current is switched on.</p>
+<div class="visual">
+  <img src="images/em/fleming-wire-force.svg" alt="Wire with current into the paper between N and S poles; B to the right; force upward" width="640" height="340" style="max-width:100%;height:auto;border-radius:10px">
+  <p class="caption">B from N to S (right). I into the paper (×). Fleming’s left hand gives F upward.</p>
+</div>
+<div class="box key"><span class="box-title">Relative directions (Fleming’s left-hand rule)</span>
+<ul class="simple">
+  <li><b>First</b> finger → magnetic field <b>B</b></li>
+  <li>se<b>C</b>ond finger → conventional <b>current I</b></li>
+  <li>thu<b>M</b>b → magnetic <b>force F</b></li>
+</ul>
+Hold the three fingers of your <b>left</b> hand at right angles. Align First with B and seCond with I; the thumb then shows F. Reverse B or reverse I → F reverses. If I is parallel to B, F is zero (see next step).
+</div>
+<div class="grid2">
+  <div class="box eg"><span class="box-title">Remember</span>
+  Electric force on a charge is <b>parallel</b> to E. Magnetic force on a current is <b>perpendicular</b> to both B and I — never invent a force along the wire or along B.
+  </div>
+  <div class="box warn"><span class="box-title">Symbols into / out of paper</span>
+  <b>×</b> = into the paper (arrow tail). <b>·</b> (dot) = out of the paper (arrow tip). Useful when B or I is drawn on the page face-on.
+  </div>
+</div>
+<p class="caption">Chinese: magnetic force <span class="zh">磁力</span>, current-carrying conductor <span class="zh">載流導體</span>, Fleming’s left-hand rule <span class="zh">弗萊明左手定則</span>. Tip: left hand for motors; right hand later for generators.</p>
+</section>
+
+<section class="step step-learn" data-id="torque" data-name="Turning Effect" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 2</span>
+<h2 tabindex="-1">F = BIl sinθ and turning effect on a coil <span class="zh">（公式與線圈轉矩）</span></h2>
+<p>A <b>current balance</b> shows F grows with B, I, and the length ℓ of wire <b>inside</b> the field. The angle between I and B also matters.</p>
+<div class="box formula"><span class="box-title">Force on a straight wire</span>
+<span class="eq">F = B I ℓ sinθ</span><br>
+θ = angle between the directions of <b>I</b> and <b>B</b>. Units: B in T, I in A, ℓ in m, F in N.<br>
+Definition link: <b>1 T</b> is the field that gives 1 N on a 1 m wire carrying 1 A when θ = 90°.
+</div>
+<ul class="simple">
+  <li>θ = 90° (I ⊥ B) → sinθ = 1 → <b>F<sub>max</sub> = BIl</b></li>
+  <li>θ = 0° or 180° (I ∥ B) → sinθ = 0 → <b>F = 0</b></li>
+  <li>θ = 30° → sinθ = ½ → F = ½ BIl</li>
+</ul>
+<div class="box eg"><span class="box-title">Factors (keep these clear)</span>
+F increases if you use a stronger magnet (↑B), a larger current (↑I), a longer active length in the field (↑ℓ), or an angle closer to 90°. Doubling B doubles F; halving θ from 90° to 30° does <b>not</b> halve F — use sinθ.
+</div>
+<h3>Turning effect on a coil</h3>
+<p>Place a rectangular coil PQRT in a uniform B with the plane of the coil parallel to B. Current on side PQ is opposite to current on side RT. Fleming’s left hand gives equal forces on PQ and RT in <b>opposite</b> directions — a <b>couple</b>. That couple produces a <b>turning moment</b> (torque) about the coil’s axis.</p>
+<ul class="simple">
+  <li>Sides parallel to B feel <b>no</b> force (I ∥ B).</li>
+  <li>As the coil turns, the moment arm changes. When the coil’s normal is parallel to B, the turning moment is <b>zero</b> — inertia can carry it past.</li>
+  <li>Without reversing I, the couple later reverses sense — the coil only rocks. Continuous rotation needs a commutator (next step).</li>
+</ul>
+<div class="box key"><span class="box-title">What strengthens the turning effect?</span>
+More turns N, stronger B, larger coil area in the field, larger I, and inserting a soft-iron core (concentrates flux). Practical motors also use curved magnets for a radial field so the torque stays healthier through the turn.
+</div>
+<p class="caption">Chinese: turning effect / torque <span class="zh">轉矩／力矩</span>, couple <span class="zh">力偶</span>, current balance <span class="zh">電流天平</span>.</p>
+</section>
+
+<section class="step step-learn" data-id="motor" data-name="DC Motor" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Idea 3</span>
+<h2 tabindex="-1">Simple d.c. motor <span class="zh">（直流電動機）</span></h2>
+<p>A motor converts <b>electrical → kinetic</b> energy using the coil’s turning effect. A simple motor has magnets, a coil, a <b>split-ring commutator</b>, and two <b>carbon brushes</b> to a d.c. supply.</p>
+<div class="visual">
+  <img src="images/em/dc-motor-simple.svg" alt="Simple d.c. motor: coil between N and S, split-ring commutator and brushes, force couple" width="680" height="360" style="max-width:100%;height:auto;border-radius:10px">
+  <p class="caption">Snapshot: forces on opposite sides form a couple. The split ring and brushes reverse I every half-turn.</p>
+</div>
+<div class="box key"><span class="box-title">Role of the split-ring commutator</span>
+<ul class="simple">
+  <li>The commutator is two half-rings fixed to the coil; it rotates with the coil and rubs against the brushes.</li>
+  <li>Every <b>half-turn</b>, each half-ring swaps which brush it touches → the current in the coil <b>reverses</b>.</li>
+  <li>Reversing I reverses the force directions on the sides → the couple keeps driving the coil in the <b>same sense</b> (e.g. always anticlockwise).</li>
+  <li>When the coil is vertical, the brushes may briefly leave a gap (no contact) → no current for an instant; the coil continues because of <b>inertia</b>.</li>
+</ul>
+</div>
+<div class="grid2">
+  <div class="box eg"><span class="box-title">Why not just leave I fixed?</span>
+  Without reversing I, after half a turn the couple would reverse sense and the coil would swing back. The split ring is the trick that makes continuous rotation with a d.c. supply.
+  </div>
+  <div class="box warn"><span class="box-title">Brushes</span>
+  Carbon brushes slide on the commutator and wear out over time. Brushless motors reverse currents electronically instead — same physics of F on currents, different switching method.
+  </div>
+</div>
+<div class="box formula"><span class="box-title">Energy picture (brief)</span>
+Electrical power in: <span class="eq">P<sub>in</sub> = VI</span>. Useful mechanical power out: force × speed (or torque × angular speed). Losses: heating in the coil (I²R) and friction. Efficiency = P<sub>out</sub> / P<sub>in</sub>.
+</div>
+<p class="caption">Chinese: d.c. motor <span class="zh">直流電動機</span>, commutator / split ring <span class="zh">整流子／半環</span>, brush <span class="zh">電刷</span>. Generators (4.6b) look similar but use the right-hand rule.</p>
+</section>
+
+<section class="step step-learn" data-id="worked" data-name="Worked Examples" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Worked examples</span>
+<h2 tabindex="-1">Worked examples</h2>
+
+<div class="box eg worked"><span class="box-title">Example 1 — F at 90°</span>
+<p>B = 0.50 T, I = 3.0 A, ℓ = 0.20 m, θ = 90°. Find F.</p>
+<div class="reveal">
+  <div class="rline"><b class="n">1</b> Formula: <span class="eq">F = B I ℓ sinθ</span>.</div>
+  <div class="rline"><b class="n">2</b> sin 90° = 1 → F = BIl.</div>
+  <div class="rline"><b class="n">3</b> F = 0.50 × 3.0 × 0.20 = <b>0.30 N</b>.</div>
+  <div class="rline"><b class="n">4</b> Direction: use Fleming’s left hand once B and I directions are given on a diagram.</div>
+  <div class="q-actions"><button type="button" class="btn-secondary reveal-next">Show next line ▼</button>
+  <button type="button" class="btn-hint reveal-all">Show all</button></div>
+</div>
+</div>
+
+<div class="box eg worked"><span class="box-title">Example 2 — angle not 90°</span>
+<p>Same B, I, ℓ as Example 1, but θ = 30°. Find F.</p>
+<div class="reveal">
+  <div class="rline"><b class="n">1</b> F = BIl sinθ.</div>
+  <div class="rline"><b class="n">2</b> sin 30° = 0.50.</div>
+  <div class="rline"><b class="n">3</b> F = 0.50 × 3.0 × 0.20 × 0.50 = <b>0.15 N</b>.</div>
+  <div class="rline"><b class="n">4</b> Check: half of the 90° result — because sin 30° = ½, not because θ itself is half.</div>
+  <div class="q-actions"><button type="button" class="btn-secondary reveal-next">Show next line ▼</button>
+  <button type="button" class="btn-hint reveal-all">Show all</button></div>
+</div>
+</div>
+
+<div class="box eg worked"><span class="box-title">Example 3 — Earth’s field on a vertical wire</span>
+<p>A vertical wire ℓ = 0.50 m carries I = 8.0 A. Earth’s B dips at 20° to the horizontal. The magnetic force is 7.5 × 10<sup>−5</sup> N. Find B.</p>
+<div class="reveal">
+  <div class="rline"><b class="n">1</b> Vertical I; B dips 20° to horizontal → angle between I and B is θ = 70°.</div>
+  <div class="rline"><b class="n">2</b> F = BIl sinθ ⇒ B = F / (I ℓ sinθ).</div>
+  <div class="rline"><b class="n">3</b> B = 7.5×10<sup>−5</sup> / (8.0 × 0.50 × sin 70°).</div>
+  <div class="rline"><b class="n">4</b> sin 70° ≈ 0.940 → B ≈ <b>2.0 × 10<sup>−5</sup> T</b> (Earth’s order).</div>
+  <div class="q-actions"><button type="button" class="btn-secondary reveal-next">Show next line ▼</button>
+  <button type="button" class="btn-hint reveal-all">Show all</button></div>
+</div>
+</div>
+
+<div class="box eg worked"><span class="box-title">Example 4 — why the motor keeps turning</span>
+<p>In a simple d.c. motor, the coil reaches the vertical position where the magnetic couple is briefly zero. Why does the coil not stop?</p>
+<ol>
+<li>At that instant brushes may lose contact → I = 0 → no magnetic torque.</li>
+<li>The coil already has angular speed → <b>inertia</b> carries it past the vertical.</li>
+<li>After the half-turn, the split ring has reversed I → the couple again drives in the same rotational sense.</li>
+<li>So continuous rotation needs both the commutator (correct sense of couple) and inertia (through the dead point).</li>
+</ol>
+</div>
+
+<div class="box key"><span class="box-title">Method habit</span>
+(1) Write <span class="eq">F = BIl sinθ</span>. (2) Check θ — is I really perpendicular to B? (3) Substitute with units in SI. (4) For direction, draw B and I, then apply Fleming’s left hand. For motors, explain split ring + inertia separately.
+</div>
+</section>
+
+<section class="step step-practice" data-id="p1" data-name="Practice: Force" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 1</span>
+<h2 tabindex="-1">Practice: force on a wire</h2>
+<p>Use <span class="eq">F = BIl sinθ</span> and Fleming’s left-hand rule. Hints follow formula → substitute → calculate.</p>
+<div class="quiz" data-quiz="p1"></div>
+</section>
+
+<section class="step step-sim" data-id="sim" data-name="Try it" data-kind="sim"><span class="step-kind sim">Try it</span><span class="tag sim">Try it!</span>
+<h2 tabindex="-1">Try it: F on a wire / motor couple</h2>
+<p>Mode <b>Wire force</b>: set B, I, ℓ and θ. Live F matches <span class="eq">F = BIl sinθ</span>. Mode <b>Motor couple</b>: watch opposite forces on a coil and the idea of torque; press Play to spin with a commutator-style reverse each half-turn.</p>
+<div class="sim-modes">
+  <button type="button" class="btn-primary" id="modeWire" aria-pressed="true">Wire force</button>
+  <button type="button" class="btn-secondary" id="modeMotor" aria-pressed="false">Motor couple</button>
+</div>
+<div class="sim-panel">
+<canvas id="animCanvas" width="640" height="300" aria-label="Magnetic force and motor simulation"></canvas>
+<div class="sim-controls">
+<div class="slider"><label for="bSl"><span>B</span><span id="bSlVal"></span></label>
+    <input type="range" id="bSl" min="0.1" max="2" step="0.05" value="0.5"></div>
+<div class="slider"><label for="iSl"><span>I</span><span id="iSlVal"></span></label>
+    <input type="range" id="iSl" min="0.5" max="10" step="0.5" value="3"></div>
+<div class="slider" id="lSlWrap"><label for="lSl"><span>ℓ</span><span id="lSlVal"></span></label>
+    <input type="range" id="lSl" min="5" max="50" step="1" value="20"></div>
+<div class="slider" id="thSlWrap"><label for="thSl"><span>θ</span><span id="thSlVal"></span></label>
+    <input type="range" id="thSl" min="0" max="90" step="5" value="90"></div>
+<div class="sim-buttons">
   <button class="btn-primary" id="playBtn" type="button">▶ Play</button>
   <button class="btn-secondary" id="resetBtn" type="button">↺ Reset</button>
   <label for="speedSel" style="font-weight:700">Speed:</label>
   <select id="speedSel"><option value="1">Normal</option><option value="0.5">Slow (½×)</option><option value="0.25">Very slow (¼×)</option></select>
-</div></div><div class="readouts"><div class="ro "><div class="lab">Out1</div><div class="val" id="ro1"></div></div><div class="ro "><div class="lab">Out2</div><div class="val" id="ro2"></div></div></div><p class="caption" id="simMsg">Explore</p></div></section>
-<section class="step step-practice" data-id="psim" data-name="Practice: Simulation" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 2</span><h2 tabindex="-1">Sim</h2><div class="quiz" data-quiz="psim"></div></section>
-<section class="step step-practice" data-id="p2" data-name="Practice: Motor" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 3</span><h2 tabindex="-1">Motor</h2><div class="quiz" data-quiz="p2"></div></section>
-<section class="step step-learn" data-id="summary" data-name="Summary" data-kind="learn"><span class="step-kind learn">Learn</span><span class="tag">Summary</span><h2 tabindex="-1">Remember</h2><div style="text-align:center"><div class="stars" id="stars" aria-hidden="true"></div>
-  <p id="finalScore" style="font-size:1.2rem;font-weight:800"></p><p id="finalMsg"></p></div><p>F=BIl sinθ; left-hand rule; commutator.</p><div class="lesson-link">⬅️ Previous: <a href="4-5a-magnetic-fields.html">Lesson 4.5a: Magnetic Fields and Currents</a> &nbsp;·&nbsp; ➡️ Next: <a href="4-5c-force-on-charges.html">Lesson 4.5c: Force on Moving Charges</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div><div class="q-actions" style="justify-content:center">
+</div>
+</div>
+</div>
+<div class="readout">
+  <div class="ro"><div class="lab">F</div><div class="val" id="ro1">—</div></div>
+  <div class="ro v"><div class="lab">sinθ</div><div class="val" id="ro2">—</div></div>
+  <div class="ro a"><div class="lab">BIl</div><div class="val" id="ro3">—</div></div>
+  <div class="ro av"><div class="lab">Mode</div><div class="val" id="ro4">wire</div></div>
+</div>
+<p class="sim-msg" id="simMsg">Drag sliders — F updates live from F = BIl sinθ.</p>
+</section>
+
+<section class="step step-practice" data-id="psim" data-name="Practice: Simulation" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 2</span>
+<h2 tabindex="-1">Practice: check the simulation</h2>
+<p>Defaults: B = 0.50 T, I = 3.0 A, ℓ = 20 cm, θ = 90°. Confirm the live readouts.</p>
+<div class="quiz" data-quiz="psim"></div>
+</section>
+
+<section class="step step-practice" data-id="p2" data-name="Practice: Motor" data-kind="practice"><span class="step-kind practice">Practice</span><span class="tag quiz">Practice 3</span>
+<h2 tabindex="-1">Practice: motors and more force problems</h2>
+<div class="quiz" data-quiz="p2"></div>
+</section>
+
+<section class="step step-learn" data-id="summary" data-name="Summary" data-kind="learn"><span class="step-kind learn">Learn</span>
+<span class="tag">Summary</span>
+<h2 tabindex="-1">Remember</h2>
+<div style="text-align:center"><div class="stars" id="stars" aria-hidden="true"></div>
+  <p id="finalScore" style="font-size:1.2rem;font-weight:800"></p><p id="finalMsg"></p></div>
+<ul class="simple">
+  <li><span class="eq">F = B I ℓ sinθ</span> — force on a straight current-carrying wire; max when I ⊥ B.</li>
+  <li>Fleming’s <b>left</b> hand: First = B, seCond = I, thuMb = F.</li>
+  <li>A coil in uniform B feels a <b>couple</b> → turning effect; soft-iron core / more turns / larger B or I strengthen it.</li>
+  <li>Simple d.c. motor: magnets + coil + <b>split-ring commutator</b> + brushes; commutator reverses I each half-turn; inertia carries past the dead point.</li>
+  <li>Single-charge formula F = BQv is Lesson 4.5c (Extension).</li>
+</ul>
+<div class="lesson-link">⬅️ Previous: <a href="4-5a-magnetic-fields.html">Lesson 4.5a: Magnetic Fields and Currents</a> &nbsp;·&nbsp; ➡️ Next: <a href="4-5c-force-on-charges.html">Lesson 4.5c: Force on Moving Charges</a> &nbsp;·&nbsp; 🏠 <a href="index.html" data-home-nav>All lessons</a></div>
+<div class="q-actions" style="justify-content:center">
   <button class="btn-secondary" id="reviewBtn" type="button">Go to first unfinished question</button>
   <button class="btn-retry" id="restartBtn" type="button">↺ Reset all questions</button>
-</div></section>
+</div>
+</section>
 </main>
 <nav class="controls" aria-label="Lesson navigation">
   <button class="btn-secondary" id="backBtn" type="button">◀ Back</button>
@@ -231,7 +424,7 @@
 <h3>Suggested learning &amp; teaching activities used</h3>
 <div class="table-scroll"><table class="t activities"><tr><th>#</th><th>Activity (from the guide, pp.45–47, incl. Values &amp; Attitudes and STSE)</th><th>Where</th></tr>
 <tr><td>1</td><td>Measuring magnetic field strength by using simple current balance, search coil and Hall probe</td><td><a href="4-5a-magnetic-fields.html#step8">L4.5a Step 8: B Formulas</a><br><a href="4-6b-faraday-generators.html#step4">L4.6b Step 4: Search Coil</a></td></tr><tr><td>2</td><td>Performing demonstrations to show the relative directions of motion, force and field in electromagnetic devices</td><td><a href="#step2" data-step="2">L4.5b Step 2: Force on a Wire</a><br><a href="#step7" data-step="7">L4.5b Step 7: Try it</a><br><a href="4-6a-electromagnetic-induction.html#step2">L4.6a Step 2: Induced EMF</a></td></tr><tr><td>3</td><td>Disassembling loudspeakers to determine the functions of individual components</td><td><a href="#step4" data-step="4">L4.5b Step 4: DC Motor</a></td></tr><tr><td>4</td><td>Investigating the magnetic fields around electric currents (e.g. around a long straight wire, at the centre of a coil, inside and around a slinky solenoid and inside a solenoid)</td><td><a href="4-5a-magnetic-fields.html#step5">L4.5a Step 5: Straight Wire</a><br><a href="4-5a-magnetic-fields.html#step6">L4.5a Step 6: Circular Coil</a><br><a href="4-5a-magnetic-fields.html#step7">L4.5a Step 7: Solenoid</a><br><a href="4-5a-magnetic-fields.html#step12">L4.5a Step 12: Try it: B Explorer</a></td></tr><tr><td>5</td><td>Constructing electric motor kits and generator kits</td><td><a href="#step4" data-step="4">L4.5b Step 4: DC Motor</a><br><a href="4-6b-faraday-generators.html#step5">L4.6b Step 5: AC Generator</a><br><a href="4-6b-faraday-generators.html#step6">L4.6b Step 6: DC Generator</a></td></tr><tr><td>6</td><td>Measuring the transformation of voltages under step-up or step-down transformers</td><td><a href="4-7a-transformers.html#step3">L4.7a Step 3: Turns Ratio</a><br><a href="4-7a-transformers.html#step7">L4.7a Step 7: Try it</a><br><a href="4-7a-transformers.html#step8">L4.7a Step 8: Practice: Simulation</a></td></tr><tr><td>7</td><td>Estimating the e/m ratio by measuring the radius of curvature in a magnetic field of known strength</td><td><a href="4-5c-force-on-charges.html#step3">L4.5c Step 3: Circular Path</a><br><a href="4-5c-force-on-charges.html#step6">L4.5c Step 6: Try it</a></td></tr><tr><td>8</td><td>Planning and selecting appropriate equipment or resources to demonstrate the generation of an alternating current</td><td><a href="4-6b-faraday-generators.html#step5">L4.6b Step 5: AC Generator</a><br><a href="4-6c-alternating-current.html#step2">L4.6c Step 2: AC vs DC</a></td></tr><tr><td>9</td><td>Using computer simulations to observe and investigate the electric field and magnetic field</td><td><a href="4-5a-magnetic-fields.html#step12">L4.5a Step 12: Try it: B Explorer</a><br><a href="#step7" data-step="7">L4.5b Step 7: Try it</a><br><a href="4-5c-force-on-charges.html#step6">L4.5c Step 6: Try it</a></td></tr><tr><td>10</td><td>Using dimension analysis to check the results of mathematical solutions</td><td><a href="4-5a-magnetic-fields.html#step8">L4.5a Step 8: B Formulas</a><br><a href="#step2" data-step="2">L4.5b Step 2: Force on a Wire</a><br><a href="4-6b-faraday-generators.html#step3">L4.6b Step 3: Faraday Law</a></td></tr><tr><td>11</td><td>Reading articles on the possible hazardous effects on residents living near high voltage transmission cables</td><td><a href="4-7b-power-transmission.html#step3">L4.7b Step 3: The Grid</a></td></tr><tr><td>12</td><td>V&amp;A / STSE: inventions related to electricity; save electrical energy; effects of living near high-power cables; electric vehicles</td><td><a href="4-7b-power-transmission.html#step2">L4.7b Step 2: Why High Voltage</a><br><a href="4-7a-transformers.html#step4">L4.7a Step 4: Efficiency</a></td></tr></table></div>
-<p><b>Notes:</b> E&amp;M Ch.5 §5.12–5.17.</p>
+<p><b>Notes alignment:</b> E&amp;M Ch.5 §5.12–5.17 (force on current-carrying wire, Fleming left hand, F = BIl sinθ, turning effect on a coil, simple d.c. motor with split-ring commutator). Parallel-wire force magnitude / ampere definition and F = BQv are not expanded here (4.5a / 4.5c). Loudspeaker mentioned only as related activity.</p>
 </div></details>
 <script>
 
@@ -346,36 +539,167 @@ function kText(id, t){ var e = document.getElementById(id); if (e) e.textContent
 function kHTML(id, t){ var e = document.getElementById(id); if (e) e.innerHTML = t; }
 var Q = {
 p1:[
-{type:"mc", text:"Left-hand thumb means…", options:["force", "B field", "current", "voltage"], answer:0, hints:["", ""], explain:"force"},
-{type:"num", text:"B=0.50, I=3.0, L=0.20, θ=90°. F (N)?", answer:0.3, unit:"N", hints:["", ""], explain:"0.30"},
-{type:"mc", text:"If I parallel to B, F is…", options:["zero", "maximum", "infinite", "BIl/2"], answer:0, hints:["", ""], explain:"sin0=0"}
+{type:"mc", text:"Fleming’s left-hand rule: the thumb points in the direction of…", options:["the magnetic force F on the wire", "the magnetic field B", "the conventional current I", "the velocity of electrons only"], answer:0, hints:["First finger = B, seCond = I, thuMb = force.", "Motor rule: thumb is motion/force."], explain:"Thumb = F (force / motion for a motor)."},
+{type:"mc", text:"If the current in a wire is parallel to B (θ = 0°), the magnetic force is…", options:["zero", "maximum (= BIl)", "BIl/2", "infinite"], answer:0, hints:["Look at sinθ in F = BIl sinθ.", "sin0° = 0 ⇒ F = 0."], explain:"sin0° = 0, so F = 0 when I ∥ B."},
+{type:"num", text:"B = 0.50 T, I = 3.0 A, ℓ = 0.20 m, θ = 90°. Find F in N.", answer:0.30, unit:"N", tol:0.02, hints:["Formula: F = BIl sinθ. sin90° = 1.", "F = 0.50 × 3.0 × 0.20 = 0.30 N."], explain:"F = BIl = 0.50×3.0×0.20 = 0.30 N."},
+{type:"num", text:"Same B, I, ℓ as above, but θ = 30°. Find F in N.", answer:0.15, unit:"N", tol:0.02, hints:["F = BIl sinθ; sin30° = 0.5.", "F = 0.30 × 0.5 = 0.15 N."], explain:"F = 0.50×3.0×0.20×0.5 = 0.15 N."},
+{type:"mc", text:"Which change alone doubles F on a wire at θ = 90°?", options:["Doubling B (same I and ℓ)", "Halving I", "Setting θ = 0°", "Halving ℓ"], answer:0, hints:["F = BIl when θ = 90°.", "F is proportional to B."], explain:"F ∝ B, so doubling B doubles F."},
+{type:"mc", text:"B points right and I is into the paper (×). By Fleming’s left hand, F is…", options:["upward (toward the top of the page)", "downward", "to the right (along B)", "into the paper (along I)"], answer:0, hints:["First finger right (B), seCond into page (I).", "Thumb then points up."], explain:"Left hand: B →, I × → F ↑ (as in the lesson diagram)."}
 ],
 psim:[
-{type:"num", text:"B=0.5, I=3, L=20 cm, θ=90. F?", answer:0.3, unit:"N", hints:["", ""], explain:"0.3"},
-{type:"num", text:"θ=30°. F?", answer:0.15, unit:"N", hints:["", ""], explain:"0.15"}
+{type:"num", text:"Sim defaults: B = 0.50 T, I = 3.0 A, ℓ = 20 cm, θ = 90°. F equals … N.", answer:0.30, unit:"N", tol:0.02, hints:["ℓ = 20 cm = 0.20 m.", "F = 0.50×3.0×0.20 = 0.30 N."], explain:"Matches Example 1 / live readout: F = 0.30 N."},
+{type:"num", text:"Keep B = 0.50 T, I = 3.0 A, ℓ = 20 cm, set θ = 30°. F equals … N.", answer:0.15, unit:"N", tol:0.02, hints:["sin30° = 0.5.", "F = 0.30 × 0.5 = 0.15."], explain:"F = BIl sin30° = 0.15 N."},
+{type:"mc", text:"In Wire-force mode, if you lower θ from 90° toward 0° with B, I, ℓ fixed, the live F…", options:["decreases toward zero", "stays constant", "increases", "becomes negative"], answer:0, hints:["F ∝ sinθ.", "sinθ falls from 1 to 0."], explain:"F = BIl sinθ shrinks as θ → 0°."},
+{type:"num", text:"B = 0.20 T, I = 5.0 A, ℓ = 0.40 m, θ = 90°. Find F in N.", answer:0.40, unit:"N", tol:0.02, hints:["F = BIl.", "F = 0.20×5.0×0.40 = 0.40 N."], explain:"F = 0.40 N."}
 ],
 p2:[
-{type:"mc", text:"Split-ring commutator…", options:["reverses current each half-turn", "makes a.c. in supply", "removes brushes", "measures B"], answer:0, hints:["", ""], explain:"commutator"},
-{type:"mc", text:"Larger B or I…", options:["increases torque", "decreases torque", "stops motor", "removes commutator need"], answer:0, hints:["", ""], explain:"torque"},
-{type:"num", text:"B=0.20, I=5.0, L=0.40, θ=90. F?", answer:0.4, unit:"N", hints:["", ""], explain:"0.40"}
+{type:"mc", text:"The split-ring commutator in a simple d.c. motor…", options:["reverses the current in the coil every half-turn", "converts the supply into a.c.", "removes the need for magnets", "measures B with a Hall probe"], answer:0, hints:["Half-rings swap brush contacts each half-turn.", "Reversing I keeps the couple in the same rotational sense."], explain:"Commutator reverses I each half-turn so torque keeps the same sense."},
+{type:"mc", text:"When the coil of a simple d.c. motor is vertical (dead point), it usually continues rotating because of…", options:["inertia (and then the reversed current after the half-turn)", "a larger magnetic force at that instant", "gravity alone", "eddy currents only"], answer:0, hints:["Magnetic couple can be zero / brushes may lose contact.", "Angular momentum carries the coil past; commutator then drives again."], explain:"Inertia carries past the dead point; commutator restores driving couple."},
+{type:"mc", text:"Which change increases the turning effect on a motor coil?", options:["Using a stronger magnet (larger B)", "Using fewer turns on the coil", "Reducing the current to nearly zero", "Removing the soft-iron core if one is present"], answer:0, hints:["Torque grows with B, I, N, and area.", "Stronger magnet → larger forces on the sides."], explain:"Larger B increases the couple / turning effect."},
+{type:"mc", text:"Carbon brushes in a simple d.c. motor…", options:["connect the rotating commutator to the fixed d.c. supply", "reverse the magnetic field every half-turn", "store charge like a capacitor", "are only decorative"], answer:0, hints:["Brushes slide on the split ring.", "They feed current from the stationary wires into the rotating commutator."], explain:"Brushes are the sliding contacts to the supply."},
+{type:"num", text:"A wire ℓ = 0.50 m, I = 8.0 A, θ = 90°, F = 7.5×10⁻⁵ N. Find B in T. (Enter e.g. 1.9e-5)", answer:1.875e-5, unit:"T", tol:0.08, hints:["B = F/(Iℓ) when θ = 90°.", "B = 7.5e-5/(8.0×0.50) = 1.875e-5 T."], explain:"B = F/(Il) = 7.5×10⁻⁵/4.0 = 1.875×10⁻⁵ T (≈ Earth’s order if θ were adjusted)."},
+{type:"mc", text:"A coil in a uniform B without a commutator (steady I) will…", options:["at most rock / turn about half a turn then reverse, not spin continuously", "spin forever at constant speed", "produce a.c. in the battery", "feel no forces on any side"], answer:0, hints:["Without reversing I, the couple later reverses sense.", "Continuous rotation needs the split ring."], explain:"Without commutator the coil cannot sustain continuous rotation in one sense."},
+{type:"mc", text:"The force on a single moving charge F = BQv sinθ is…", options:["Extension — taught in Lesson 4.5c, not the core focus of this motor lesson", "Core in this lesson and required for every motor calculation", "Not in the HKDSE guide", "Only for transformers"], answer:0, hints:["This lesson is wires, coils, motors.", "F = BQv is Extension in 4.5c."], explain:"F = BQv is Extension (4.5c). Core here is F = BIl and the d.c. motor."}
 ]
 };
+
 function makeSim(){
-  var cv=document.getElementById("animCanvas"), P={};
-  function read(){ P.B=kVal("bSl"); P.I=kVal("iSl"); P.L=kVal("lSl")/100; P.th=kVal("thSl")*Math.PI/180; kText("bSlVal",kFmt(P.B,2)+" T"); kText("iSlVal",kFmt(P.I,1)+" A"); kText("lSlVal",kFmt(kVal("lSl"),1)+" cm"); kText("thSlVal",Math.round(kVal("thSl"))+" deg"); P.F=P.B*P.I*P.L*Math.sin(P.th); P.ro1="F="+kFmt(P.F,3)+" N"; P.ro2="sin theta="+kFmt(Math.sin(P.th),3); }
-  function update(){ kText("ro1", P.ro1); kText("ro2", P.ro2); }
-  function draw(){ var g=kSetup(cv),ctx=g.ctx,W=g.w,H=g.h; ctx.clearRect(0,0,W,H); ctx.fillStyle="#fff"; ctx.fillRect(0,0,W,H);
-    ctx.fillStyle="#0a2a66"; ctx.font="16px Arial"; ctx.textAlign="center"; ctx.fillText(P.ro1, W/2, H/2-8); ctx.fillText(P.ro2, W/2, H/2+16); }
-  function reset(){ read(); update(); draw(); kText("simMsg", "F=BIl sin theta"); }
-  document.getElementById("playBtn").style.display="none";
+  var cv = document.getElementById("animCanvas"), P = {}, clock = null, ang = 0, mode = "wire";
+  function read(){
+    P.B = kVal("bSl"); P.I = kVal("iSl"); P.L = kVal("lSl")/100; P.thDeg = kVal("thSl"); P.th = P.thDeg * Math.PI/180;
+    P.sin = Math.sin(P.th); P.BIl = P.B * P.I * P.L; P.F = P.BIl * P.sin;
+    kText("bSlVal", kFmt(P.B, 2) + " T");
+    kText("iSlVal", kFmt(P.I, 1) + " A");
+    kText("lSlVal", Math.round(kVal("lSl")) + " cm");
+    kText("thSlVal", Math.round(P.thDeg) + "°");
+  }
+  function update(){
+    kText("ro1", kFmt(P.F, 3) + " N");
+    kText("ro2", kFmt(P.sin, 3));
+    kText("ro3", kFmt(P.BIl, 3) + " N");
+    kText("ro4", mode === "wire" ? "wire" : "motor");
+  }
+  function drawWire(){
+    var g = kSetup(cv), ctx = g.ctx, W = g.w, H = g.h;
+    ctx.clearRect(0,0,W,H); ctx.fillStyle = "#f8fafc"; ctx.fillRect(0,0,W,H);
+    // N / S poles
+    ctx.fillStyle = "#fee2e2"; ctx.fillRect(16, 40, 50, H-80);
+    ctx.fillStyle = "#b91c1c"; ctx.font = "bold 22px Arial"; ctx.textAlign = "center";
+    ctx.fillText("N", 41, 70);
+    ctx.fillStyle = "#dbeafe"; ctx.fillRect(W-66, 40, 50, H-80);
+    ctx.fillStyle = "#1d4ed8"; ctx.fillText("S", W-41, 70);
+    // B arrows
+    var y0 = 70; for (var i=0;i<4;i++){
+      var yy = y0 + i*((H-100)/3.5);
+      kArrow(ctx, 80, yy, W-80, yy, "#7c3aed", 2.5, i===0?"B":"");
+    }
+    // wire: show as circle with × (into paper) at centre; F direction from FLH: B right, I into → F up
+    var cx = W/2, cy = H/2 + 10;
+    ctx.beginPath(); ctx.arc(cx, cy, 26, 0, 7); ctx.fillStyle = "#fff"; ctx.fill(); ctx.strokeStyle = "#111"; ctx.lineWidth = 3; ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(cx-12, cy-12); ctx.lineTo(cx+12, cy+12); ctx.moveTo(cx+12, cy-12); ctx.lineTo(cx-12, cy+12); ctx.stroke();
+    ctx.fillStyle = "#186d32"; ctx.font = "bold 13px Arial"; ctx.textAlign = "center";
+    ctx.fillText("I into paper", cx, cy + 48);
+    // F arrow scaled by sinθ
+    var fLen = 20 + Math.min(90, P.F * 120);
+    if (P.sin > 0.02){
+      kArrow(ctx, cx, cy - 28, cx, cy - 28 - fLen, "#b91c1c", 4, "F");
+    } else {
+      ctx.fillStyle = "#b91c1c"; ctx.font = "bold 14px Arial"; ctx.fillText("F = 0 (I ∥ B)", cx, cy - 50);
+    }
+    // angle note: when θ<90, show dashed I direction tilted (schematic)
+    ctx.fillStyle = "#0a2a66"; ctx.font = "bold 15px Arial"; ctx.textAlign = "center";
+    ctx.fillText("F = BIl sinθ = " + kFmt(P.F, 3) + " N", W/2, H - 14);
+  }
+  function drawMotor(){
+    var g = kSetup(cv), ctx = g.ctx, W = g.w, H = g.h;
+    ctx.clearRect(0,0,W,H); ctx.fillStyle = "#f8fafc"; ctx.fillRect(0,0,W,H);
+    ctx.fillStyle = "#fee2e2"; ctx.fillRect(20, 50, 44, H-100);
+    ctx.fillStyle = "#b91c1c"; ctx.font = "bold 18px Arial"; ctx.textAlign = "center"; ctx.fillText("N", 42, 78);
+    ctx.fillStyle = "#dbeafe"; ctx.fillRect(W-64, 50, 44, H-100);
+    ctx.fillStyle = "#1d4ed8"; ctx.fillText("S", W-42, 78);
+    var cx = W*0.42, cy = H/2;
+    var hw = 70, hh = 40;
+    ctx.save(); ctx.translate(cx, cy); ctx.rotate(ang);
+    // coil
+    ctx.strokeStyle = "#0a2a66"; ctx.lineWidth = 4; ctx.strokeRect(-hw, -hh, 2*hw, 2*hh);
+    // forces on left/right sides: after commutator, keep couple sense using sign from half-turn
+    // Forces in coil frame: always a couple of fixed sense (models commutator keeping drive direction)
+    kArrow(ctx, -hw, 0, -hw, -55, "#b91c1c", 3, "F");
+    kArrow(ctx, hw, 0, hw, 55, "#b91c1c", 3, "F");
+    ctx.fillStyle = "#186d32"; ctx.font = "bold 12px Arial"; ctx.textAlign = "center";
+    ctx.fillText("I", 0, 4);
+    ctx.restore();
+    // axle + commutator sketch
+    ctx.strokeStyle = "#94a3b8"; ctx.setLineDash([4,3]); ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(W-100, cy); ctx.stroke(); ctx.setLineDash([]);
+    ctx.strokeStyle = "#ca8a04"; ctx.lineWidth = 8;
+    ctx.beginPath(); ctx.arc(W-110, cy, 18, -Math.PI/2 + ang, Math.PI/2 + ang); ctx.stroke();
+    ctx.strokeStyle = "#a16207";
+    ctx.beginPath(); ctx.arc(W-110, cy, 18, Math.PI/2 + ang, 3*Math.PI/2 + ang); ctx.stroke();
+    ctx.fillStyle = "#334155"; ctx.fillRect(W-122, cy-40, 20, 14); ctx.fillRect(W-122, cy+26, 20, 14);
+    ctx.fillStyle = "#0a2a66"; ctx.font = "bold 13px Arial"; ctx.textAlign = "left";
+    ctx.fillText("split ring + brushes", W-160, H-18);
+    ctx.textAlign = "center";
+    ctx.fillText("Couple τ ~ B I (area) — Play spins; F arrows show turning sense", W/2, 22);
+    // live F on one side using ℓ ~ coil height
+    var sideL = 0.08; // illustrative
+    var Fside = P.B * P.I * sideL;
+    kText("ro1", kFmt(Fside, 3) + " N/side");
+    kText("ro2", "couple");
+    kText("ro3", "B="+kFmt(P.B,2)+" I="+kFmt(P.I,1));
+  }
+  function draw(){
+    if (mode === "wire"){ read(); update(); drawWire(); }
+    else { read(); drawMotor(); update(); kText("ro4","motor"); }
+  }
+  function tick(dt){
+    if (mode !== "motor") return false;
+    var omega = 0.9 * (0.3 + P.B * P.I * 0.15);
+    ang += omega * dt * (document.getElementById("speedSel") ? 1 : 1);
+    draw();
+    return true;
+  }
+  function pause(){ if (clock) clock.stop(); var b = document.getElementById("playBtn"); if (b) b.textContent = "▶ Play"; }
+  function play(){
+    if (mode !== "motor"){ kText("simMsg", "Switch to Motor couple mode to Play rotation."); return; }
+    if (clock && clock.running()){ pause(); kText("simMsg", "Paused."); return; }
+    if (!clock) clock = kClock(function(dt){ ang += (0.9*(0.3+P.B*P.I*0.15)) * dt; draw(); return true; }, function(){ var b=document.getElementById("playBtn"); if(b) b.textContent="▶ Play"; });
+    clock.start();
+    var b = document.getElementById("playBtn"); if (b) b.textContent = "⏸ Pause";
+    kText("simMsg", "Spinning — split ring idea: couple keeps one sense. Use Speed menu.");
+  }
+  function setMode(m){
+    pause(); mode = m; ang = 0;
+    var w = document.getElementById("modeWire"), mo = document.getElementById("modeMotor");
+    if (w){ w.className = m==="wire"?"btn-primary":"btn-secondary"; w.setAttribute("aria-pressed", m==="wire"?"true":"false"); }
+    if (mo){ mo.className = m==="motor"?"btn-primary":"btn-secondary"; mo.setAttribute("aria-pressed", m==="motor"?"true":"false"); }
+    var showTh = m==="wire";
+    ["thSlWrap","lSlWrap"].forEach(function(id){ var e=document.getElementById(id); if(e) e.style.opacity = (id==="thSlWrap" && !showTh) ? "0.35" : "1"; });
+    draw();
+    kText("simMsg", m==="wire" ? "Wire mode: F = BIl sinθ updates live." : "Motor mode: Press Play to spin. Sliders change B and I (stronger couple → faster).");
+  }
+  function reset(){
+    pause(); ang = 0;
+    kSet("bSl", 0.50); kSet("iSl", 3); kSet("lSl", 20); kSet("thSl", 90);
+    setMode(mode);
+    kText("simMsg", "Reset to B = 0.50 T, I = 3.0 A, ℓ = 20 cm, θ = 90°.");
+  }
+  document.getElementById("playBtn").addEventListener("click", play);
   document.getElementById("resetBtn").addEventListener("click", reset);
+  document.getElementById("modeWire").addEventListener("click", function(){ setMode("wire"); });
+  document.getElementById("modeMotor").addEventListener("click", function(){ setMode("motor"); });
   kBind(["bSl","iSl","lSl","thSl"], function(){ read(); update(); draw(); });
-  return {reset:reset,draw:draw,resize:function(){draw();},pause:function(){},
-    set:function(o){ if(o.B!=null)kSet("bSl",o.B); if(o.I!=null)kSet("iSl",o.I); if(o.L_cm!=null)kSet("lSl",o.L_cm); if(o.theta!=null)kSet("thSl",o.theta); reset(); },
-    state:function(){ return {F:P.F}; }};
+  setMode("wire");
+  return {
+    reset: reset, draw: function(){ read(); update(); draw(); }, resize: function(){ draw(); }, pause: pause,
+    set: function(o){ if (o.B != null) kSet("bSl", o.B); if (o.I != null) kSet("iSl", o.I); if (o.L_cm != null) kSet("lSl", o.L_cm); if (o.theta != null) kSet("thSl", o.theta); if (o.mode) setMode(o.mode); else { read(); update(); draw(); } },
+    jumpTo: function(){ draw(); },
+    state: function(){ return {F:P.F, sin:P.sin, BIl:P.BIl, mode:mode}; }
+  };
 }
 
 var LESSON = {quizzes:Q, figs:{}, makeSim:makeSim, demo:{set:{"B": 0.5, "I": 3, "L_cm": 20, "theta": 90}}};
+
+
 
 
 (function(){

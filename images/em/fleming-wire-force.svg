@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" role="img" aria-label="Current-carrying wire in magnetic field with force">
+  <rect width="640" height="340" fill="#f8fafc"/>
+  <!-- magnets -->
+  <rect x="40" y="40" width="70" height="260" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+  <text x="75" y="80" text-anchor="middle" font-size="22" font-weight="800" fill="#b91c1c">N</text>
+  <rect x="530" y="40" width="70" height="260" rx="6" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="565" y="80" text-anchor="middle" font-size="22" font-weight="800" fill="#1d4ed8">S</text>
+  <!-- B arrows left to right -->
+  <defs>
+    <marker id="aB" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#7c3aed"/></marker>
+    <marker id="aI" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#186d32"/></marker>
+    <marker id="aF" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker>
+  </defs>
+  <line x1="120" y1="100" x2="510" y2="100" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#aB)"/>
+  <line x1="120" y1="170" x2="510" y2="170" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#aB)"/>
+  <line x1="120" y1="240" x2="510" y2="240" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#aB)"/>
+  <text x="320" y="88" text-anchor="middle" font-size="14" font-weight="700" fill="#7c3aed">B (N → S)</text>
+  <!-- wire into page? use horizontal wire with I upward for side view: wire across page with I to the right of perpendicular - classic: wire left-right with I out? 
+       Use: B right, I into paper (cross), F up by FLH -->
+  <!-- Actually: B →, I into paper (×), F up -->
+  <circle cx="320" cy="170" r="22" fill="#fff" stroke="#111" stroke-width="3"/>
+  <line x1="308" y1="158" x2="332" y2="182" stroke="#111" stroke-width="3"/>
+  <line x1="332" y1="158" x2="308" y2="182" stroke="#111" stroke-width="3"/>
+  <text x="320" y="210" text-anchor="middle" font-size="13" font-weight="700" fill="#186d32">I into paper (×)</text>
+  <!-- F upward -->
+  <line x1="320" y1="148" x2="320" y2="55" stroke="#b91c1c" stroke-width="4" marker-end="url(#aF)"/>
+  <text x="345" y="90" font-size="18" font-weight="800" fill="#b91c1c">F</text>
+  <text x="320" y="320" text-anchor="middle" font-size="13" fill="#5b6170">Fleming left hand: First finger B →, seCond I into page, thuMb F ↑</text>
+</svg>

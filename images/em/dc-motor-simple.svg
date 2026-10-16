@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 360" role="img" aria-label="Simple d.c. motor with split-ring commutator and brushes">
+  <rect width="680" height="360" fill="#f8fafc"/>
+  <!-- magnets -->
+  <rect x="30" y="70" width="55" height="180" rx="5" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+  <text x="57" y="110" text-anchor="middle" font-size="20" font-weight="800" fill="#b91c1c">N</text>
+  <rect x="400" y="70" width="55" height="180" rx="5" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="427" y="110" text-anchor="middle" font-size="20" font-weight="800" fill="#1d4ed8">S</text>
+  <!-- coil rectangle -->
+  <rect x="120" y="110" width="240" height="100" fill="none" stroke="#0a2a66" stroke-width="4" rx="2"/>
+  <text x="145" y="100" font-size="13" font-weight="700" fill="#0a2a66">PQ</text>
+  <text x="320" y="230" font-size="13" font-weight="700" fill="#0a2a66">RT</text>
+  <!-- force arrows on sides -->
+  <defs>
+    <marker id="mF" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#b91c1c"/></marker>
+    <marker id="mI" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#186d32"/></marker>
+  </defs>
+  <line x1="120" y1="160" x2="120" y2="70" stroke="#b91c1c" stroke-width="3" marker-end="url(#mF)"/>
+  <text x="95" y="95" font-size="14" font-weight="800" fill="#b91c1c">F</text>
+  <line x1="360" y1="160" x2="360" y2="250" stroke="#b91c1c" stroke-width="3" marker-end="url(#mF)"/>
+  <text x="375" y="235" font-size="14" font-weight="800" fill="#b91c1c">F</text>
+  <text x="240" y="155" text-anchor="middle" font-size="12" fill="#186d32" font-weight="700">I →</text>
+  <!-- axle -->
+  <line x1="240" y1="160" x2="520" y2="160" stroke="#64748b" stroke-width="3" stroke-dasharray="4 3"/>
+  <!-- commutator half-rings -->
+  <path d="M500 130 A30 30 0 0 1 500 190" fill="none" stroke="#ca8a04" stroke-width="10" stroke-linecap="butt"/>
+  <path d="M500 190 A30 30 0 0 1 500 130" fill="none" stroke="#a16207" stroke-width="10" stroke-linecap="butt"/>
+  <text x="535" y="125" font-size="12" font-weight="700" fill="#a16207">split ring</text>
+  <!-- brushes -->
+  <rect x="488" y="100" width="24" height="18" rx="2" fill="#334155"/>
+  <rect x="488" y="202" width="24" height="18" rx="2" fill="#334155"/>
+  <text x="560" y="114" font-size="12" font-weight="700" fill="#334155">brush</text>
+  <text x="560" y="216" font-size="12" font-weight="700" fill="#334155">brush</text>
+  <!-- battery -->
+  <line x1="500" y1="80" x2="500" y2="100" stroke="#111" stroke-width="2"/>
+  <line x1="500" y1="220" x2="500" y2="280" stroke="#111" stroke-width="2"/>
+  <line x1="470" y1="280" x2="560" y2="280" stroke="#111" stroke-width="2"/>
+  <line x1="470" y1="280" x2="470" y2="60" stroke="#111" stroke-width="2"/>
+  <line x1="470" y1="60" x2="500" y2="60" stroke="#111" stroke-width="2"/>
+  <line x1="500" y1="60" x2="500" y2="80" stroke="#111" stroke-width="2"/>
+  <rect x="455" y="155" width="14" height="30" fill="#111"/>
+  <rect x="448" y="162" width="6" height="16" fill="#111"/>
+  <text x="430" y="175" text-anchor="end" font-size="12" font-weight="700">d.c.</text>
+  <text x="240" y="320" text-anchor="middle" font-size="13" fill="#5b6170">Couple of forces turns the coil; split-ring reverses I each half-turn</text>
+  <text x="240" y="342" text-anchor="middle" font-size="12" fill="#7f3f98" font-weight="700">anticlockwise torque in this snapshot</text>
+</svg>

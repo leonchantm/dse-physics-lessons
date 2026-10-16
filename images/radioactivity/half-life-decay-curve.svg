@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" aria-label="Decay curve: N or A halves every half-life; read T half from the graph">
+  <rect width="760" height="340" fill="#f8fafc"/>
+  <text x="380" y="26" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#0a2a66">Decay curve — read t½ from when N (or A) halves</text>
+
+  <!-- axes -->
+  <line x1="70" y1="280" x2="480" y2="280" stroke="#111" stroke-width="2"/>
+  <line x1="70" y1="280" x2="70" y2="50" stroke="#111" stroke-width="2"/>
+  <text x="275" y="318" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#111">time t</text>
+  <text transform="translate(22 165) rotate(-90)" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#111">N or A</text>
+
+  <!-- curve: exponential-ish using polyline -->
+  <polyline fill="none" stroke="#1865f2" stroke-width="3.5" stroke-linejoin="round"
+    points="70,70 130,70 160,110 190,145 220,172 250,195 280,213 310,228 340,240 370,250 400,258 430,265 460,270"/>
+
+  <!-- half markers -->
+  <line x1="70" y1="70" x2="160" y2="70" stroke="#94a3b8" stroke-dasharray="4 3"/>
+  <line x1="160" y1="70" x2="160" y2="280" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="70" y1="145" x2="250" y2="145" stroke="#94a3b8" stroke-dasharray="4 3"/>
+  <line x1="250" y1="145" x2="250" y2="280" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="70" y1="195" x2="340" y2="195" stroke="#94a3b8" stroke-dasharray="4 3"/>
+  <line x1="340" y1="195" x2="340" y2="280" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <circle cx="70" cy="70" r="5" fill="#dc2626"/>
+  <circle cx="160" cy="145" r="5" fill="#dc2626"/>
+  <circle cx="250" cy="195" r="5" fill="#dc2626"/>
+  <circle cx="340" cy="240" r="5" fill="#dc2626"/>
+
+  <text x="55" y="74" text-anchor="end" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">N₀</text>
+  <text x="55" y="149" text-anchor="end" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">½ N₀</text>
+  <text x="55" y="199" text-anchor="end" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">¼ N₀</text>
+  <text x="55" y="244" text-anchor="end" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">⅛ N₀</text>
+
+  <text x="160" y="298" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#92400e">t½</text>
+  <text x="250" y="298" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#92400e">2 t½</text>
+  <text x="340" y="298" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#92400e">3 t½</text>
+
+  <!-- side panel -->
+  <rect x="500" y="55" width="230" height="230" rx="12" fill="#eef3fe" stroke="#1865f2"/>
+  <text x="615" y="82" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="800" fill="#0a2a66">After n half-lives</text>
+  <text x="520" y="112" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#0a2a66">n = 0 → N₀</text>
+  <text x="520" y="138" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#0a2a66">n = 1 → ½ N₀</text>
+  <text x="520" y="164" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#0a2a66">n = 2 → ¼ N₀</text>
+  <text x="520" y="190" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#0a2a66">n = 3 → ⅛ N₀</text>
+  <text x="520" y="216" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#0a2a66">n = 4 → 1/16 N₀</text>
+  <text x="615" y="255" text-anchor="middle" font-family="Cambria Math,Times New Roman,serif" font-size="15" font-weight="700" fill="#1865f2">N = N₀ (½)ⁿ</text>
+  <text x="615" y="275" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">same for A = A₀ (½)ⁿ</text>
+</svg>

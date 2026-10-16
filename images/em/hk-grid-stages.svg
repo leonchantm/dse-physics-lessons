@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 260" role="img" aria-label="Hong Kong grid stages from power station through HV lines to 220 V buildings">
+  <rect width="760" height="260" fill="#f8fafc"/>
+  <text x="380" y="28" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#0a2a66">HK grid stages (typical)</text>
+  <defs>
+    <marker id="arrB" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#1865f2"/></marker>
+  </defs>
+  <!-- station -->
+  <rect x="20" y="70" width="100" height="80" rx="8" fill="#334155"/>
+  <rect x="40" y="50" width="16" height="28" fill="#64748b"/>
+  <rect x="72" y="40" width="16" height="38" fill="#64748b"/>
+  <text x="70" y="115" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#fff">Power</text>
+  <text x="70" y="132" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#fff">station</text>
+  <text x="70" y="175" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">~11–23 kV</text>
+  <line x1="125" y1="110" x2="155" y2="110" stroke="#1865f2" stroke-width="3" marker-end="url(#arrB)"/>
+  <!-- step up -->
+  <rect x="160" y="75" width="90" height="70" rx="8" fill="#dbeafe" stroke="#1865f2" stroke-width="2"/>
+  <text x="205" y="105" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#0a2a66">Step-up</text>
+  <text x="205" y="123" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#1865f2">transformer</text>
+  <text x="205" y="175" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#5b6170">→ HV</text>
+  <line x1="255" y1="110" x2="285" y2="110" stroke="#1865f2" stroke-width="3" marker-end="url(#arrB)"/>
+  <!-- HV -->
+  <rect x="290" y="70" width="150" height="80" rx="8" fill="#f3e8f8" stroke="#7f3f98" stroke-width="2"/>
+  <line x1="305" y1="95" x2="425" y2="95" stroke="#0a2a66" stroke-width="3"/>
+  <line x1="305" y1="110" x2="425" y2="110" stroke="#0a2a66" stroke-width="3"/>
+  <line x1="305" y1="125" x2="425" y2="125" stroke="#0a2a66" stroke-width="3"/>
+  <text x="365" y="55" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#7f3f98">HV transmission</text>
+  <text x="365" y="175" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#5b6170">CLP ~400 kV</text>
+  <text x="365" y="192" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#5b6170">HK Electric ~275 kV</text>
+  <line x1="445" y1="110" x2="475" y2="110" stroke="#1865f2" stroke-width="3" marker-end="url(#arrB)"/>
+  <!-- step down -->
+  <rect x="480" y="75" width="100" height="70" rx="8" fill="#fef3c7" stroke="#ca8a04" stroke-width="2"/>
+  <text x="530" y="105" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#92400e">Step-down</text>
+  <text x="530" y="123" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#92400e">(stages)</text>
+  <text x="530" y="175" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#5b6170">substations</text>
+  <line x1="585" y1="110" x2="615" y2="110" stroke="#1865f2" stroke-width="3" marker-end="url(#arrB)"/>
+  <!-- homes -->
+  <path d="M625 130 L655 90 L685 130 Z" fill="#bbf7d0" stroke="#186d32" stroke-width="2"/>
+  <rect x="640" y="130" width="30" height="30" fill="#86efac" stroke="#186d32"/>
+  <text x="655" y="180" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#186d32">Flats / schools</text>
+  <text x="655" y="198" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#186d32">220 V</text>
+  <rect x="80" y="220" width="600" height="28" rx="8" fill="#eef3fe"/>
+  <text x="380" y="239" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#0a2a66">High V → low I → low I²R loss · a.c. so transformers can step V up / down</text>
+</svg>

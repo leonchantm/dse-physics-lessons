@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 300" role="img" aria-label="Closed circuit: cell with emf epsilon, current I conventional from positive to negative, load with p.d. V and resistance R">
+  <rect width="680" height="300" fill="#f8fafc"/>
+  <text x="340" y="28" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#0a2a66">Current, e.m.f. and resistance in one loop</text>
+  <!-- outer wires -->
+  <path d="M140 150 H240 M400 150 H520 V220 H140 V150" fill="none" stroke="#334155" stroke-width="3"/>
+  <!-- cell -->
+  <line x1="140" y1="128" x2="140" y2="172" stroke="#0a2a66" stroke-width="4"/>
+  <line x1="128" y1="138" x2="128" y2="162" stroke="#0a2a66" stroke-width="8"/>
+  <text x="112" y="118" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#1865f2">ε</text>
+  <text x="95" y="198" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">source</text>
+  <!-- resistor -->
+  <path d="M240 150 L255 130 L275 170 L295 130 L315 170 L335 130 L355 170 L380 150" fill="none" stroke="#b91c1c" stroke-width="3.5" stroke-linejoin="round"/>
+  <text x="310" y="112" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#b91c1c">R · p.d. V</text>
+  <text x="310" y="198" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">load</text>
+  <!-- conventional I arrow -->
+  <defs>
+    <marker id="arrG" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#186d32"/></marker>
+    <marker id="arrO" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#e3780c"/></marker>
+  </defs>
+  <line x1="165" y1="138" x2="220" y2="138" stroke="#186d32" stroke-width="2.5" marker-end="url(#arrG)"/>
+  <text x="192" y="128" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#186d32">I (conventional)</text>
+  <!-- electron opposite -->
+  <line x1="220" y1="168" x2="165" y2="168" stroke="#e3780c" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrO)"/>
+  <text x="192" y="186" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#e3780c">e⁻ drift</text>
+  <!-- formula cards -->
+  <rect x="540" y="55" width="120" height="70" rx="10" fill="#eef3fe" stroke="#1865f2" stroke-width="2"/>
+  <text x="600" y="85" text-anchor="middle" font-family="Cambria Math,Times New Roman,serif" font-size="18" font-weight="700" fill="#0a2a66">I = Q/t</text>
+  <text x="600" y="108" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">ampere</text>
+  <rect x="540" y="140" width="120" height="70" rx="10" fill="#f3e8f8" stroke="#7f3f98" stroke-width="2"/>
+  <text x="600" y="170" text-anchor="middle" font-family="Cambria Math,Times New Roman,serif" font-size="18" font-weight="700" fill="#7f3f98">R = V/I</text>
+  <text x="600" y="193" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">ohm</text>
+  <text x="340" y="270" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#5b6170">ε = energy given per coulomb by the source · V = energy used per coulomb in the load</text>
+</svg>

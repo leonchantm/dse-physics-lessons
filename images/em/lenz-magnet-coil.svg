@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="Bar magnet approaching a coil: Lenz law makes facing end a north pole to repel">
+  <rect width="640" height="300" fill="#f8fafc"/>
+  <!-- magnet moving right -->
+  <rect x="40" y="110" width="70" height="80" rx="4" fill="#b91c1c"/>
+  <rect x="110" y="110" width="70" height="80" rx="4" fill="#1d4ed8"/>
+  <text x="75" y="158" font-size="22" font-weight="800" text-anchor="middle" fill="#fff">N</text>
+  <text x="145" y="158" font-size="22" font-weight="800" text-anchor="middle" fill="#fff">S</text>
+  <text x="110" y="100" font-size="13" font-weight="700" text-anchor="middle" fill="#334155">magnet</text>
+  <!-- motion arrow -->
+  <line x1="200" y1="150" x2="260" y2="150" stroke="#e3780c" stroke-width="4"/>
+  <polygon points="268,150 250,140 250,160" fill="#e3780c"/>
+  <text x="234" y="138" font-size="13" font-weight="700" fill="#e3780c">motion</text>
+  <!-- coil -->
+  <ellipse cx="360" cy="150" rx="28" ry="55" fill="none" stroke="#1865f2" stroke-width="5"/>
+  <ellipse cx="390" cy="150" rx="28" ry="55" fill="none" stroke="#1865f2" stroke-width="5"/>
+  <ellipse cx="420" cy="150" rx="28" ry="55" fill="none" stroke="#1865f2" stroke-width="5"/>
+  <ellipse cx="450" cy="150" rx="28" ry="55" fill="none" stroke="#1865f2" stroke-width="5"/>
+  <text x="405" y="230" font-size="14" font-weight="700" text-anchor="middle" fill="#1865f2">coil / solenoid</text>
+  <!-- induced pole label -->
+  <rect x="300" y="70" width="90" height="36" rx="8" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+  <text x="345" y="94" font-size="14" font-weight="800" text-anchor="middle" fill="#b91c1c">face → N</text>
+  <!-- galvanometer -->
+  <circle cx="540" cy="150" r="42" fill="#fff" stroke="#0a2a66" stroke-width="3"/>
+  <line x1="540" y1="150" x2="560" y2="125" stroke="#b91c1c" stroke-width="3"/>
+  <circle cx="540" cy="150" r="4" fill="#0a2a66"/>
+  <text x="540" y="205" font-size="13" font-weight="700" text-anchor="middle" fill="#0a2a66">G</text>
+  <!-- wires -->
+  <path d="M450 105 Q500 80 510 120" fill="none" stroke="#64748b" stroke-width="2"/>
+  <path d="M450 195 Q500 220 510 180" fill="none" stroke="#64748b" stroke-width="2"/>
+  <!-- caption box -->
+  <rect x="40" y="250" width="560" height="40" rx="8" fill="#eef3fe" stroke="#1865f2" stroke-width="1.5"/>
+  <text x="320" y="275" font-size="13" font-weight="700" text-anchor="middle" fill="#0a2a66">N approaching → induced face is N (repels) — Lenz: oppose the change</text>
+</svg>

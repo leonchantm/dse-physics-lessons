@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" role="img" aria-label="How A and Z change in alpha, beta-minus and gamma decay">
+  <rect width="760" height="360" fill="#f8fafc"/>
+  <text x="380" y="28" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#0a2a66">Decay equations — watch A and Z</text>
+
+  <!-- nuclide legend -->
+  <rect x="40" y="44" width="200" height="70" rx="10" fill="#eef3fe" stroke="#1865f2"/>
+  <text x="70" y="72" font-family="Cambria Math,Times New Roman,serif" font-size="28" font-weight="700" fill="#0a2a66">A</text>
+  <text x="70" y="98" font-family="Cambria Math,Times New Roman,serif" font-size="22" fill="#0a2a66">Z</text>
+  <text x="100" y="88" font-family="Segoe UI,Arial,sans-serif" font-size="32" font-weight="800" fill="#0a2a66">X</text>
+  <text x="160" y="72" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">A = mass number</text>
+  <text x="160" y="92" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#5b6170">Z = atomic number</text>
+
+  <text x="280" y="78" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#5b6170">N = A − Z (neutrons)</text>
+  <text x="280" y="98" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#5b6170">Conserve A and charge (Z) in every decay</text>
+
+  <!-- alpha -->
+  <rect x="40" y="130" width="680" height="60" rx="10" fill="#fee2e2"/>
+  <circle cx="70" cy="160" r="18" fill="#dc2626"/>
+  <text x="70" y="166" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="800" fill="#fff">α</text>
+  <text x="110" y="155" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#7f1d1d">A → A−4 &nbsp;·&nbsp; Z → Z−2</text>
+  <text x="110" y="176" font-family="Cambria Math,Times New Roman,serif" font-size="15" fill="#7f1d1d">ᴬ_Z X → ᴬ⁻⁴_{Z−2} Y + ⁴₂He</text>
+  <text x="560" y="166" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#7f1d1d">loses 2p + 2n</text>
+
+  <!-- beta -->
+  <rect x="40" y="202" width="680" height="60" rx="10" fill="#dbeafe"/>
+  <circle cx="70" cy="232" r="18" fill="#2563eb"/>
+  <text x="70" y="238" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="800" fill="#fff">β⁻</text>
+  <text x="110" y="227" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#1e3a8a">A → A &nbsp;·&nbsp; Z → Z+1</text>
+  <text x="110" y="248" font-family="Cambria Math,Times New Roman,serif" font-size="15" fill="#1e3a8a">ᴬ_Z X → ᴬ_{Z+1} Y + ⁰₋₁e</text>
+  <text x="560" y="238" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e3a8a">n → p + e⁻</text>
+
+  <!-- gamma -->
+  <rect x="40" y="274" width="680" height="60" rx="10" fill="#f3e8f8"/>
+  <circle cx="70" cy="304" r="18" fill="#7f3f98"/>
+  <text x="70" y="310" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="800" fill="#fff">γ</text>
+  <text x="110" y="299" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#5b2178">A → A &nbsp;·&nbsp; Z → Z</text>
+  <text x="110" y="320" font-family="Cambria Math,Times New Roman,serif" font-size="15" fill="#5b2178">ᴬ_Z X* → ᴬ_Z X + γ</text>
+  <text x="560" y="310" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#5b2178">energy only</text>
+</svg>

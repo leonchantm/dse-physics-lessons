@@ -7,18 +7,18 @@
   <rect x="130" y="28" width="40" height="55" rx="4" fill="#16a34a" stroke="#14532d" stroke-width="2"/>
   <text x="150" y="95" text-anchor="middle" font-family="Arial" font-size="13" font-weight="700" fill="#14532d">E</text>
   <text x="150" y="112" text-anchor="middle" font-family="Arial" font-size="11" fill="#166534">green/yellow</text>
-  <!-- Live pin (left when facing pins = bottom-left in this view facing pins from front) -->
-  <!-- Facing pins: left=L, right=N, top=E -->
-  <rect x="70" y="175" width="40" height="50" rx="4" fill="#b45309" stroke="#78350f" stroke-width="2"/>
-  <text x="90" y="165" text-anchor="middle" font-family="Arial" font-size="13" font-weight="700" fill="#78350f">L</text>
-  <text x="90" y="240" text-anchor="middle" font-family="Arial" font-size="11" fill="#92400e">brown</text>
-  <!-- Neutral -->
-  <rect x="190" y="175" width="40" height="50" rx="4" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="2"/>
-  <text x="210" y="165" text-anchor="middle" font-family="Arial" font-size="13" font-weight="700" fill="#1e3a8a">N</text>
-  <text x="210" y="240" text-anchor="middle" font-family="Arial" font-size="11" fill="#1e40af">blue</text>
-  <!-- Fuse cartridge -->
-  <rect x="115" y="125" width="70" height="28" rx="6" fill="#fef3c7" stroke="#ca8a04" stroke-width="2"/>
-  <text x="150" y="144" text-anchor="middle" font-family="Arial" font-size="12" font-weight="700" fill="#92400e">13 A fuse</text>
+  <!-- Facing pins (looking at pin face): left = N (blue), right = L (brown + fuse), top = E -->
+  <!-- Neutral pin (left) -->
+  <rect x="70" y="175" width="40" height="50" rx="4" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="2"/>
+  <text x="90" y="165" text-anchor="middle" font-family="Arial" font-size="13" font-weight="700" fill="#1e3a8a">N</text>
+  <text x="90" y="240" text-anchor="middle" font-family="Arial" font-size="11" fill="#1e40af">blue</text>
+  <!-- Live pin (right) -->
+  <rect x="190" y="175" width="40" height="50" rx="4" fill="#b45309" stroke="#78350f" stroke-width="2"/>
+  <text x="210" y="165" text-anchor="middle" font-family="Arial" font-size="13" font-weight="700" fill="#78350f">L</text>
+  <text x="210" y="240" text-anchor="middle" font-family="Arial" font-size="11" fill="#92400e">brown</text>
+  <!-- Fuse cartridge (in live path; shown near live / right) -->
+  <rect x="155" y="125" width="70" height="28" rx="6" fill="#fef3c7" stroke="#ca8a04" stroke-width="2"/>
+  <text x="190" y="144" text-anchor="middle" font-family="Arial" font-size="12" font-weight="700" fill="#92400e">13 A fuse</text>
   <!-- Wiring diagram right -->
   <text x="480" y="50" text-anchor="middle" font-family="Arial" font-size="16" font-weight="700" fill="#0a2a66">To appliance (parallel)</text>
   <!-- Consumer unit box -->
@@ -45,5 +45,5 @@
   <line x1="520" y1="130" x2="560" y2="185" stroke="#16a34a" stroke-width="2" stroke-dasharray="4 3"/>
   <text x="480" y="250" text-anchor="middle" font-family="Arial" font-size="13" fill="#5b6170">Sockets / lamps share L–N in parallel → each gets ~220 V</text>
   <text x="480" y="275" text-anchor="middle" font-family="Arial" font-size="13" fill="#5b6170">Earth keeps metal case at 0 V if live touches it</text>
-  <text x="150" y="290" text-anchor="middle" font-family="Arial" font-size="12" fill="#5b6170">Facing pins: left = Live, right = Neutral, top = Earth (longer)</text>
+  <text x="150" y="290" text-anchor="middle" font-family="Arial" font-size="12" fill="#5b6170">Facing pins: left = Neutral, right = Live (+fuse), top = Earth (longer)</text>
 </svg>

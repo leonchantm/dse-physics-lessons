@@ -632,12 +632,12 @@ function makeSim(){
     kText("vSlVal", kFmt(P.v,1));
     var L=lenzFace(P.pol);
     P.face=L.face; P.change=L.change; P.deflect=L.deflect; P.msg=L.msg;
-    P.eps = animating ? P.v : (animT>0 ? P.v*0.15 : 0);
+    P.eps = animating ? P.v : 0;  // Faraday/Lenz: ε=0 when flux not changing (magnet stopped)
   }
   function update(){
     kText("ro1", P.face+" pole");
-    kText("ro2", animating || animT>0 ? kFmt(P.v,1) : "0");
-    kText("ro3", P.deflect>0 ? "→ right" : "← left");
+    kText("ro2", animating ? kFmt(P.v,1) : "0");
+    kText("ro3", animating ? (P.deflect>0 ? "→ right" : "← left") : "0 (centre)");
     kText("ro4", P.change);
     kText("simMsg", P.msg + (animating ? " · moving…" : ""));
   }
@@ -688,7 +688,7 @@ function makeSim(){
     ctx.strokeStyle="#e3780c"; ctx.fillStyle="#e3780c"; ctx.lineWidth=3;
     var ax1=magX+mw+8, ax2=magX+mw+40;
     if (!approaching()){ ax1=magX-8; ax2=magX-40; }
-    if (animating || animT>0){
+    if (animating){
       ctx.beginPath(); ctx.moveTo(ax1, cy-40); ctx.lineTo(ax2, cy-40); ctx.stroke();
       ctx.beginPath();
       if (approaching()){ ctx.moveTo(ax2,cy-40); ctx.lineTo(ax2-10,cy-46); ctx.lineTo(ax2-10,cy-34); }
@@ -699,7 +699,7 @@ function makeSim(){
     var gx=W*0.88, gy=cy;
     ctx.strokeStyle="#0a2a66"; ctx.lineWidth=3; ctx.fillStyle="#fff";
     ctx.beginPath(); ctx.arc(gx,gy,36,0,Math.PI*2); ctx.fill(); ctx.stroke();
-    var ang = -Math.PI/2 + P.deflect * 0.55 * (animating || animT>0 ? Math.min(1, P.v/10)*1.2 : 0.15);
+    var ang = -Math.PI/2 + (animating ? P.deflect * 0.55 * Math.min(1, P.v/10)*1.2 : 0);
     ctx.strokeStyle="#b91c1c"; ctx.lineWidth=3;
     ctx.beginPath(); ctx.moveTo(gx,gy); ctx.lineTo(gx+28*Math.cos(ang), gy+28*Math.sin(ang)); ctx.stroke();
     ctx.fillStyle="#0a2a66"; ctx.beginPath(); ctx.arc(gx,gy,4,0,7); ctx.fill();
@@ -721,7 +721,7 @@ function makeSim(){
     animT += dt;
     var dur = Math.max(1.0, 6/P.v);
     read(); update(); draw();
-    if (animT >= dur){ animating=false; animT=dur; read(); update(); draw(); return false; }
+    if (animT >= dur){ animating=false; animT=0; read(); update(); kText("simMsg", P.msg + " · magnet stopped → |ε| = 0, G centre"); draw(); return false; }
     return true;
   }
   function play(){

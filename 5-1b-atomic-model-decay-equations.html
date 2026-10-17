@@ -653,7 +653,8 @@ function makeSim(){
   function eqHTML(){
     var decLab = P.dec==="a" ? "⁴₂He" : (P.dec==="b" ? "⁰₋₁e" : "γ");
     var star = P.dec==="g" ? "*" : "";
-    return "<b>Equation:</b> <span class=\"eq\">" + P.A + "/" + P.Z + " X" + star + " → " + P.Ad + "/" + P.Zd + " Y" + (P.dec==="g"?"":" + " + decLab) + (P.dec==="g"?" + γ":"") + "</span>";
+    var dLab = P.dec==="g" ? "X" : "Y";  // γ: same nuclide X* → X + γ (not Y)
+    return "<b>Equation:</b> <span class=\"eq\">" + P.A + "/" + P.Z + " X" + star + " → " + P.Ad + "/" + P.Zd + " " + dLab + (P.dec==="g"?"":" + " + decLab) + (P.dec==="g"?" + γ":"") + "</span>";
   }
   function read(){
     P.A = Math.round(kVal("aSl"));
